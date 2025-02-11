@@ -13,7 +13,8 @@
 
 - Input: 
 
-```int add_digits(int n) { 
+```
+int add_digits(int n) { 
     static int sum = 0; 
     if (n == 0) { return 0; } 
     sum = n%10 + add_digits(n/10); 
