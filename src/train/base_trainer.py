@@ -1,0 +1,51 @@
+import torch
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, Trainer, TrainingArguments
+import datasets
+import os
+from abc import ABC, abstractmethod
+from dotenv import load_dotenv
+
+# Load các biến môi trường từ file .env
+load_dotenv()
+
+MODEL_NAME = os.getenv("MODEL_NAME", "Salesforce/codet5-base")
+DATA_PATH = os.getenv("DATA_PATH", "D:/Code/Aka/data/processed.json")
+MODEL_SAVE_PATH = os.getenv("MODEL_SAVE_PATH", "../model")
+
+class BaseTrainer(ABC):
+    """Lớp cơ sở cho việc huấn luyện mô hình."""
+    def __init__(self, data_path=None):
+        self.model_name = MODEL_NAME
+        self.data_path = data_path if data_path else DATA_PATH  # Nếu không truyền, dùng mặc định
+        self.model_save_path = MODEL_SAVE_PATH
+        self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
+        self.model = self.load_model()
+        self.train_dataset, self.val_dataset = self.load_data()
+
+    def load_model(self):
+        """Tải mô hình gốc để fine-tune."""
+        return AutoModelForSeq2SeqLM.from_pretrained(self.model_name)
+
+    def load_data(self):
+        """Load và xử lý dữ liệu."""
+        dataset = datasets.load_dataset("json", data_files=self.data_path, split="train")
+        train_val = dataset.train_test_split(test_size=0.1)
+        return train_val["train"], train_val["test"]
+
+    def preprocess(self, examples):
+        """Tiền xử lý dữ liệu."""
+        inputs = self.tokenizer(examples["source"], max_length=256, truncation=True, padding="max_length")
+        targets = self.tokenizer(examples["target"], max_length=256, truncation=True, padding="max_length")
+        inputs["labels"] = [(l if l != self.tokenizer.pad_token_id else -100) for l in targets["input_ids"]]
+        return inputs
+
+    @abstractmethod
+    def train(self):
+        """Phương thức train, sẽ được triển khai trong lớp con."""
+        pass
+
+    def save_model(self):
+        """Lưu mô hình đã huấn luyện."""
+        self.model.save_pretrained(self.model_save_path)
+        self.tokenizer.save_pretrained(self.model_save_path)
+        print(" Model saved successfully!")
