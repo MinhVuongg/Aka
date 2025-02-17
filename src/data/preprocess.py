@@ -12,6 +12,27 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 
 
+def extract_target_range(target):
+    lines = target.split(';')
+    code_lines = []
+    capture = False
+
+    for line in lines:
+        if any(x in line for x in ['AKA_mark', 'AKA_EXPECTED_OUTPUT', 'AKA_fCall']):
+            continue
+        if 'AKA_test_case_name' in line:
+            capture = True
+            continue
+        elif 'AKA_ACTUAL_OUTPUT' in line:
+            code_lines.append(line.strip())
+            break
+        if capture:
+            code_lines.append(line.strip())
+
+    result = '; '.join(code_lines) if code_lines else target
+    return result.lstrip(';').strip()
+
+
 # Loại bỏ comment trong code
 def remove_comments_ast(code):
     if isinstance(code, list):  # Nếu là danh sách, chuyển thành chuỗi
@@ -61,7 +82,7 @@ def preprocess_dataset(input_folder, output_file):
 
         for entry in raw_data:
             source = clean_code(remove_comments_ast(entry.get("fm", "")))
-            target = clean_code(remove_comments_ast(entry.get("t", "")))
+            target = clean_code(remove_comments_ast(extract_target_range(entry.get("t", ""))))
 
             if (source, target) not in existing_entries:
                 new_data.append({"source": source, "target": target})
