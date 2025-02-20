@@ -13,24 +13,39 @@ tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 
 
 def extract_target_range(target):
-    lines = target.split(';')
+    """
+    Trích xuất phần code từ target, bỏ các dòng không cần thiết.
+    """
+    # Chia target thành từng dòng bằng dấu `;` hoặc xuống dòng (hỗ trợ PyCharm)
+    lines = re.split(r'[;\n]+', target)
     code_lines = []
     capture = False
 
     for line in lines:
-        if any(x in line for x in ['AKA_mark', 'AKA_EXPECTED_OUTPUT', 'AKA_fCall']):
+        line = line.strip()  # Loại bỏ khoảng trắng thừa
+
+        # Bỏ qua các dòng chứa từ khóa không cần thiết
+        if any(keyword in line for keyword in ["AKA_mark", "AKA_EXPECTED_OUTPUT", "AKA_fCall"]):
             continue
-        if 'AKA_test_case_name' in line:
+
+        # Nếu gặp 'AKA_test_case_name', bắt đầu ghi dữ liệu
+        if "AKA_test_case_name" in line:
             capture = True
             continue
-        elif 'AKA_ACTUAL_OUTPUT' in line:
-            code_lines.append(line.strip())
-            break
-        if capture:
-            code_lines.append(line.strip())
 
-    result = '; '.join(code_lines) if code_lines else target
-    return result.lstrip(';').strip()
+        # Nếu gặp 'AKA_ACTUAL_OUTPUT', dừng lại
+        if "AKA_ACTUAL_OUTPUT" in line:
+            break
+
+        if capture:
+            code_lines.append(line)
+
+    # Nếu không có dòng hợp lệ, trả về target ban đầu
+    if not code_lines:
+        return target.strip()
+
+    # Gộp lại thành chuỗi, đảm bảo không còn dấu `;` thừa
+    return " ".join(code_lines).strip("; ")
 
 
 # Loại bỏ comment trong code

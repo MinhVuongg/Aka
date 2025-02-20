@@ -11,21 +11,26 @@ load_dotenv()
 
 # Định nghĩa thư mục log
 LOG_DIR = os.path.join(os.path.dirname(__file__), "log")
-os.makedirs(LOG_DIR, exist_ok=True)
+os.makedirs(LOG_DIR, exist_ok=True)  # Tạo thư mục nếu chưa có
+
+# Cấu hình file log
+LOG_FILE = os.path.join(LOG_DIR, "training.log")
 
 # Cấu hình logging
-LOG_FILE = os.path.join(LOG_DIR, "training.log")
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler(LOG_FILE, encoding="utf-8"),
-        logging.StreamHandler(sys.stdout)  # Ghi log ra console
+        logging.FileHandler(LOG_FILE, encoding="utf-8", mode="a"),  # Append log vào file
+        logging.StreamHandler(sys.stdout)  # Hiển thị log trên console
     ]
 )
 
+# Đảm bảo log được ghi ngay lập tức
 logger = logging.getLogger(__name__)
-
+for handler in logger.handlers:
+    if isinstance(handler, logging.FileHandler):
+        handler.flush = lambda: handler.stream.flush()  # Đảm bảo flush log ngay sau mỗi ghi
 
 class CustomTrainer(BaseTrainer):
     def __init__(self):
@@ -51,20 +56,23 @@ class CustomTrainer(BaseTrainer):
         return model_inputs
 
     def train(self):
-        """Huấn luyện mô hình với logging và masking."""
+        """Huấn luyện mô hình với logging"""
         logger.info("Bắt đầu quá trình huấn luyện...")
+        logger.handlers[0].flush()
 
         try:
             # Kiểm tra dataset có dữ liệu không
             if len(self.train_dataset) == 0 or len(self.val_dataset) == 0:
                 logger.error("Dữ liệu huấn luyện hoặc validation bị rỗng!")
+                logger.handlers[0].flush()
                 return
 
             # Tiền xử lý dữ liệu với Masking
             logger.info("Đang tiền xử lý dữ liệu với Masking...")
             self.train_dataset = self.train_dataset.map(self.preprocess_function_with_masking, batched=True)
             self.val_dataset = self.val_dataset.map(self.preprocess_function_with_masking, batched=True)
-            logger.info(f"Dataset sau tiền xử lý - Train: {len(self.train_dataset)}, Validation: {len(self.val_dataset)}")
+            logger.info(f"Dữ liệu sau tiền xử lý - Train: {len(self.train_dataset)}, Validation: {len(self.val_dataset)}")
+            logger.handlers[0].flush()
 
             # Lấy tham số từ .env (hoặc giá trị mặc định)
             num_epochs = int(os.getenv("NUM_EPOCHS", 5))
@@ -86,6 +94,7 @@ class CustomTrainer(BaseTrainer):
             )
 
             logger.info(f"Training Arguments: {training_args}")
+            logger.handlers[0].flush()
 
             # Bắt đầu train
             trainer = Trainer(
@@ -99,9 +108,11 @@ class CustomTrainer(BaseTrainer):
             trainer.train()
             self.save_model()
             logger.info("Huấn luyện hoàn tất!")
+            logger.handlers[0].flush()
 
         except Exception as e:
             logger.error(f"Lỗi trong quá trình huấn luyện: {str(e)}", exc_info=True)
+            logger.handlers[0].flush()
 
 
 if __name__ == "__main__":
