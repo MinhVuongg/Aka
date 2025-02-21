@@ -7,7 +7,7 @@ from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 from tqdm import tqdm
 
 # Cấu hình đường dẫn
-MODEL_PATH = "model/codet5-finetuned"  # Thay bằng nơi lưu mô hình
+MODEL_PATH = "D:\Code\Aka\codet5"  # Thay bằng nơi lưu mô hình
 DATA_PATH = "data/processed.json"
 OUTPUT_CSV = "output/evaluation_results.csv"
 
