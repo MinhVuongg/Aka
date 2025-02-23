@@ -3,12 +3,15 @@ import glob
 import json
 import re
 import sys
-from clang.cindex import Index, TokenKind
+from clang.cindex import Index, TokenKind, Config
 from transformers import AutoTokenizer
 from src.train.base_trainer import MODEL_NAME
 
 # Đảm bảo module có thể tìm thấy đúng thư mục
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+
+# Config clang path
+Config.set_library_path(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..", "clang+llvm-19.1.7-x86_64-pc-windows-msvc/bin")))
 
 # Load tokenizer của mô hình
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
@@ -19,23 +22,27 @@ def extract_target_range(target):
     Trích xuất đoạn mã cần thiết từ target, bỏ qua các dòng không liên quan.
     """
     try:
+        if isinstance(target, list):
+            target = " ".join(map(str, target))
+
         lines = re.split(r'[;\n]+', target)
         code_lines = []
         capture = False
 
         for line in lines:
             line = line.strip()
-            if any(keyword in line for keyword in ["AKA_mark", "AKA_EXPECTED_OUTPUT", "AKA_fCall"]):
+            if any(keyword in line for keyword in ["set up", "AKA_mark", "AKA_EXPECTED_OUTPUT", "AKA_fCall"]):
                 continue
             if "AKA_test_case_name" in line:
                 capture = True
                 continue
             if "AKA_ACTUAL_OUTPUT" in line:
+                code_lines.append(line)
                 break
             if capture:
                 code_lines.append(line)
 
-        return " ".join(code_lines).strip("; ") if code_lines else target.strip()
+        return ";".join(code_lines).strip(";") if code_lines else target.strip()
     except Exception as e:
         print(f"[ERROR] extract_target_range: {e}")
         return target
@@ -67,7 +74,7 @@ def remove_comments_ast(code):
             last_end = end
         result.append(code[last_end:])
 
-        return "".join(result)
+        return re.sub(r';+', '; ', "".join(result).strip(";")) + ";"
     except Exception as e:
         print(f"[ERROR] remove_comments_ast: {e}")
         return code
@@ -94,13 +101,13 @@ def preprocess_dataset(input_folder, output_file, overwrite=False):
     Xử lý tập dữ liệu từ thư mục đầu vào và lưu kết quả vào file JSON đầu ra.
     """
     try:
-        json_files = glob.glob(os.path.join(input_folder, "*.json"))
+        json_files = glob.glob(os.path.join("../..", input_folder, "*.json"))
         new_data = []
 
         # Kiểm tra nếu file đầu ra đã tồn tại
         all_data = []
-        if not overwrite and os.path.exists(output_file):
-            with open(output_file, "r", encoding="utf-8") as f:
+        if not overwrite and os.path.exists(os.path.join("../..", output_file)):
+            with open(os.path.join("../..", output_file), "r", encoding="utf-8") as f:
                 try:
                     all_data = json.load(f)
                 except json.JSONDecodeError as e:
@@ -134,7 +141,7 @@ def preprocess_dataset(input_folder, output_file, overwrite=False):
 
         if new_data:
             all_data = new_data if overwrite else all_data + new_data
-            with open(output_file, "w", encoding="utf-8") as f:
+            with open(os.path.join("../..", output_file), "w", encoding="utf-8") as f:
                 json.dump(all_data, f, ensure_ascii=False, indent=4)
             print(f"Processed {len(new_data)} new samples. Total samples: {len(all_data)}")
         else:
