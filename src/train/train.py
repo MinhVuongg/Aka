@@ -10,7 +10,7 @@ from transformers import AutoTokenizer
 load_dotenv()
 
 # Định nghĩa thư mục log
-LOG_DIR = os.path.join(os.path.dirname(__file__), "log")
+LOG_DIR = os.path.join(os.path.dirname(__file__), "../..", "log")
 os.makedirs(LOG_DIR, exist_ok=True)  # Tạo thư mục nếu chưa có
 
 # Cấu hình file log
