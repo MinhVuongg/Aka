@@ -3,12 +3,13 @@ import peft
 from transformers import Trainer, TrainingArguments
 import os
 from dotenv import load_dotenv
+from src.train.callbacks.accuracy_callback import AccuracyCallback
 
 # Load biến môi trường
 load_dotenv()
 
-EPOCHS = int(os.getenv("EPOCHS", 5))
-BATCH_SIZE = int(os.getenv("BATCH_SIZE", 16))
+EPOCHS = int(os.getenv("EPOCHS", 3))
+BATCH_SIZE = int(os.getenv("BATCH_SIZE", 8))
 FP16 = os.getenv("FP16", "False").lower() == "true"
 
 class LoRATrainer(BaseTrainer):
@@ -38,6 +39,7 @@ class LoRATrainer(BaseTrainer):
             save_total_limit=2,
             logging_dir="./logs",
             logging_steps=50,
+            logging_strategy="epoch",
             fp16=FP16,
             report_to="none"
         )
@@ -52,3 +54,5 @@ class LoRATrainer(BaseTrainer):
 
         trainer.train()
         self.save_model()
+        self.plot_loss(trainer)
+
