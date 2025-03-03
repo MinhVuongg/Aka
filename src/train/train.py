@@ -16,6 +16,10 @@ os.makedirs(LOG_DIR, exist_ok=True)  # Tạo thư mục nếu chưa có
 # Cấu hình file log
 LOG_FILE = os.path.join(LOG_DIR, "training.log")
 
+# Xoá nội dung file training.log
+with open(LOG_FILE, encoding="utf-8", mode="w") as f:
+    pass
+
 # Cấu hình logging
 logging.basicConfig(
     level=logging.INFO,
@@ -36,9 +40,8 @@ for handler in logger.handlers:
 class CustomLoggingCallback(TrainerCallback):
     def on_log(self, args, state, control, logs=None, **kwargs):
         if logs is not None:
-            with open("training.log", "a", encoding="utf8") as f:
-                f.write(f"{logs}\n")
-                f.flush()
+            logger.info(f"{logs}")
+            logger.handlers[0].flush()
 
 class CustomTrainer(BaseTrainer):
     def __init__(self):
