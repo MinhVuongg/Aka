@@ -2,7 +2,7 @@ import logging
 import os
 import sys
 from dotenv import load_dotenv
-from transformers import Trainer, TrainingArguments
+from transformers import Trainer, TrainingArguments, TrainerCallback
 from base_trainer import BaseTrainer
 from transformers import AutoTokenizer
 
@@ -27,9 +27,18 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger(__name__)
+logger.addHandler(logging.FileHandler(LOG_FILE, encoding="utf-8", mode="a"))
+logger.addHandler(logging.StreamHandler(sys.stdout))
 for handler in logger.handlers:
     if isinstance(handler, logging.FileHandler):
         handler.flush = lambda: handler.stream.flush()  # Đảm bảo flush log ngay sau mỗi ghi
+
+class CustomLoggingCallback(TrainerCallback):
+    def on_log(self, args, state, control, logs=None, **kwargs):
+        if logs is not None:
+            with open("training.log", "a", encoding="utf8") as f:
+                f.write(f"{logs}\n")
+                f.flush()
 
 class CustomTrainer(BaseTrainer):
     def __init__(self):
@@ -97,7 +106,8 @@ class CustomTrainer(BaseTrainer):
                 args=training_args,
                 train_dataset=self.train_dataset,
                 eval_dataset=self.val_dataset,
-                tokenizer=self.tokenizer
+                tokenizer=self.tokenizer,
+                callbacks=[CustomLoggingCallback()]
             )
 
             trainer.train()
