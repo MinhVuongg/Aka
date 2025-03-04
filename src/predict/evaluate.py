@@ -21,10 +21,10 @@ model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_PATH)
 tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
 model.eval()
 
-# Load dataset test
+# Load raw test
 dataset = load_dataset("json", data_files=DATA_PATH, split="train").train_test_split(test_size=0.1)["test"]
 
-# Kiểm tra dataset
+# Kiểm tra raw
 if len(dataset) == 0:
     raise ValueError(" Dataset rỗng! Kiểm tra lại dữ liệu đầu vào.")
 

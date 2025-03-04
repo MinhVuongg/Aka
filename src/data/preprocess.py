@@ -4,8 +4,8 @@ import json
 import re
 import sys
 from clang.cindex import Index, TokenKind, Config
-from transformers import AutoTokenizer
-from src.train.base_trainer import MODEL_NAME
+from transformers import AutoTokenizer, T5ForConditionalGeneration
+# from src.train.base_trainer import Salesforce/codet5-base
 
 # Đảm bảo module có thể tìm thấy đúng thư mục
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
@@ -14,7 +14,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")
 Config.set_library_path(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..", "clang+llvm-19.1.7-x86_64-pc-windows-msvc/bin")))
 
 # Load tokenizer của mô hình
-tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+tokenizer = AutoTokenizer.from_pretrained('Salesforce/codet5-base')
 
 
 def extract_target_range(target):
@@ -101,7 +101,9 @@ def preprocess_dataset(input_folder, output_file, overwrite=False):
     Xử lý tập dữ liệu từ thư mục đầu vào và lưu kết quả vào file JSON đầu ra.
     """
     try:
-        json_files = glob.glob(os.path.join("../..", input_folder, "*.json"))
+        json_files = glob.glob(os.path.join(input_folder, "**", "*.json"), recursive=True)
+        print(os.path.join(input_folder, "**", "*.json"))
+        print(json_files)
         new_data = []
 
         # Kiểm tra nếu file đầu ra đã tồn tại
@@ -152,4 +154,4 @@ def preprocess_dataset(input_folder, output_file, overwrite=False):
 
 
 if __name__ == "__main__":
-    preprocess_dataset("data/raw", "data/processed.json", overwrite=False)  # True nếu ghi đè file cũ
+    preprocess_dataset("/workspace/aka-llm/raw", "data/processed.json", overwrite=False)  # True nếu ghi đè file cũ
