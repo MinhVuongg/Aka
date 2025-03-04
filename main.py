@@ -45,7 +45,7 @@ def main():
     logger.info(f" Bắt đầu huấn luyện mô hình ({trainer_type})...")
 
     if trainer_type == "lora":
-        trainer = LoRATrainer(processed_data_path)
+        trainer = LoRATrainer()
     else:
         trainer = FullFineTuneTrainer(processed_data_path)
 

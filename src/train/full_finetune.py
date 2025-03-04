@@ -35,6 +35,7 @@ class FullFineTuneTrainer(BaseTrainer):
             save_total_limit=2,
             logging_dir=self.log_dir,
             logging_steps=50,
+            logging_strategy="epoch",
             fp16=FP16,
             report_to="none"
         )
@@ -50,3 +51,4 @@ class FullFineTuneTrainer(BaseTrainer):
 
         trainer.train()
         self.save_model()
+        self.plot_loss(trainer)
