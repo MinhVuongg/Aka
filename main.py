@@ -15,7 +15,7 @@ sys.path.insert(0, SRC_DIR)
 from src.data.preprocess import preprocess_dataset
 from src.train.full_finetune import FullFineTuneTrainer
 from src.train.lora_trainer import LoRATrainer
-# from src.predict import evaluate_model
+from src.predict import evaluate_model
 
 logging.basicConfig(
     level=logging.INFO,
@@ -54,7 +54,7 @@ def main():
 
     #  Đánh giá mô hình
     print(" Đánh giá mô hình...")
-#    evaluate_model()
+    evaluate_model()
     print(" Hoàn tất đánh giá!")
 
 
