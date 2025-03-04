@@ -1,5 +1,7 @@
+import logging
+
 from src.train.base_trainer import BaseTrainer
-from transformers import Trainer, TrainingArguments
+from transformers import Trainer, TrainingArguments, TrainerCallback
 import os
 from dotenv import load_dotenv
 
@@ -9,6 +11,13 @@ load_dotenv()
 EPOCHS = int(os.getenv("EPOCHS", 5))
 BATCH_SIZE = int(os.getenv("BATCH_SIZE", 16))
 FP16 = os.getenv("FP16", "False").lower() == "true"
+
+logger = logging.getLogger(__name__)
+
+class CustomLoggingCallback(TrainerCallback):
+    def on_log(self, args, state, control, logs=None, **kwargs):
+        if logs is not None:
+            logger.info(f"{logs}")
 
 class FullFineTuneTrainer(BaseTrainer):
     def train(self):
@@ -20,10 +29,11 @@ class FullFineTuneTrainer(BaseTrainer):
             output_dir=self.model_save_path,
             per_device_train_batch_size=BATCH_SIZE,
             per_device_eval_batch_size=BATCH_SIZE,
+            logging_strategy="epoch",
             evaluation_strategy="epoch",
             num_train_epochs=EPOCHS,
             save_total_limit=2,
-            logging_dir="./logs",
+            logging_dir=self.log_dir,
             logging_steps=50,
             fp16=FP16,
             report_to="none"
@@ -34,7 +44,8 @@ class FullFineTuneTrainer(BaseTrainer):
             args=training_args,
             train_dataset=self.train_dataset,
             eval_dataset=self.val_dataset,
-            tokenizer=self.tokenizer
+            tokenizer=self.tokenizer,
+            callbacks=[CustomLoggingCallback()]
         )
 
         trainer.train()

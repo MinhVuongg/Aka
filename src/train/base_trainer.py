@@ -9,8 +9,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 MODEL_NAME = os.getenv("MODEL_NAME", "Salesforce/codet5-base")
-DATA_PATH = os.getenv("DATA_PATH", "D:/Code/Aka/data/processed.json")
-MODEL_SAVE_PATH = os.getenv("MODEL_SAVE_PATH", "../model")
+DATA_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)), "../..", "data/processed.json")
+MODEL_SAVE_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)), "../..", "model")
+LOG_DIR = os.path.join(os.path.abspath(os.path.dirname(__file__)), "../..", "log")
 
 class BaseTrainer(ABC):
     """Lớp cơ sở cho việc huấn luyện mô hình."""
@@ -18,6 +19,7 @@ class BaseTrainer(ABC):
         self.model_name = MODEL_NAME
         self.data_path = data_path if data_path else DATA_PATH  # Nếu không truyền, dùng mặc định
         self.model_save_path = MODEL_SAVE_PATH
+        self.log_dir = LOG_DIR
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         self.model = self.load_model()
         self.train_dataset, self.val_dataset = self.load_data()
