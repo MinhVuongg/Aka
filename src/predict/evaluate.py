@@ -38,6 +38,19 @@ def load_model():
     tokenizer = AutoTokenizer.from_pretrained(MODEL_SAVE_PATH)
     logger.info(f"[UET] Load Tokenizer from %s- done", MODEL_SAVE_PATH)
 
+    # Thêm đoạn code chuyển mô hình sang GPU/CPU ở đây
+    logger.info(f"[UET] Moving model to GPU/CPU - start")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model = model.to(device)
+    logger.info(f"[UET] Moving model to GPU/CPU - done, using: {device}")
+    
+    # Có thể thêm chuyển sang half-precision để tăng tốc (nếu dùng GPU)
+    if torch.cuda.is_available():
+        logger.info(f"[UET] Converting model to half precision (float16) - start")
+        model = model.half()
+        logger.info(f"[UET] Converting model to half precision (float16) - done")
+
+    
     logger.info(f"[UET] Run model.eval() - start")
     model.eval()
     logger.info(f"[UET] Run model.eval() - done")
@@ -60,9 +73,10 @@ def generate_target_from_sample(sample, tokenizer, model):
     inputs = tokenizer(source_text, return_tensors="pt", max_length=max_source_length, truncation=True)
     inputs = {key: value.to(model.device) for key, value in inputs.items()}
 
+    #print("\t with torch.no_grad(): - before")
     with torch.no_grad():
         outputs = model.generate(inputs=inputs["input_ids"], max_length=max_target_length)
-
+    #print("\t with torch.no_grad(): - after")
     return source_text, tokenizer.decode(outputs[0], skip_special_tokens=True)
 
 def compute_bleu(generated, ground_truth):
@@ -87,11 +101,15 @@ def evaluate_model(dataset,  tokenizer,model):
 
         pbar = tqdm(dataset, desc="Evaluating", unit="sample")
         for sample in pbar:
+            #print("generate_target_from_sample - before");
             source_text, predicted = generate_target_from_sample(sample, tokenizer, model)
+            #print("generate_target_from_sample - after");
             ground_truth = str(sample["target"])
 
             em_score = int(predicted.strip() == ground_truth.strip())  # Exact Match (0 hoặc 1)
+            #print("compute_bleu - before");
             bleu_score = compute_bleu(predicted, ground_truth)
+            #print("compute_bleu - before");
 
             writer.writerow([source_text, ground_truth, predicted, bleu_score, em_score])
             f.flush()
