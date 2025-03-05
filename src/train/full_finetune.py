@@ -1,16 +1,17 @@
 import logging
 
+from src.config.config import BATCH_SIZE, EPOCHS, FP16
 from src.train.base_trainer import BaseTrainer
 from transformers import Trainer, TrainingArguments, TrainerCallback
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 # Load biến môi trường
-load_dotenv()
-
-EPOCHS = int(os.getenv("EPOCHS", 5))
-BATCH_SIZE = int(os.getenv("BATCH_SIZE", 16))
-FP16 = os.getenv("FP16", "False").lower() == "true"
+# load_dotenv()
+#
+# EPOCHS = int(os.getenv("EPOCHS", 5))
+# BATCH_SIZE = int(os.getenv("BATCH_SIZE", 16))
+# FP16 = os.getenv("FP16", "False").lower() == "true"
 
 logger = logging.getLogger(__name__)
 
@@ -35,7 +36,6 @@ class FullFineTuneTrainer(BaseTrainer):
             save_total_limit=2,
             logging_dir=self.log_dir,
             logging_steps=50,
-            logging_strategy="epoch",
             fp16=FP16,
             report_to="none"
         )

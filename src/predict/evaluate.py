@@ -6,35 +6,39 @@ from datasets import load_dataset
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 from tqdm import tqdm
 
+from src.config.config import DATA_PATH_PROCESS, MODEL_SAVE_PATH, OUTPUT_CSV
+
 # Cấu hình đường dẫn
-MODEL_PATH = "D:\Code\Aka\codet5"  # Thay bằng nơi lưu mô hình
-DATA_PATH = "data/processed.json"
-OUTPUT_CSV = "output/evaluation_results.csv"
+# MODEL_PATH = "D:\Code\Aka\codet5"  # Thay bằng nơi lưu mô hình
+# DATA_PATH = "data/processed.json"
+# OUTPUT_CSV = "output/evaluation_results.csv"
 
 # Kiểm tra file dữ liệu
-if not os.path.exists(DATA_PATH):
-    raise FileNotFoundError(f" Không tìm thấy file dữ liệu: {DATA_PATH}")
+# if not os.path.exists(DATA_PATH_PROCESS):
+#     raise FileNotFoundError(f" Không tìm thấy file dữ liệu: {DATA_PATH_PROCESS}")
 
 # Load model đã train
-print("Đang tải mô hình...")
-model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_PATH)
-tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
-model.eval()
+def load_model():
+    print("Đang tải mô hình...")
+    model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_SAVE_PATH)
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_SAVE_PATH)
+    model.eval()
 
-# Load raw test
-dataset = load_dataset("json", data_files=DATA_PATH, split="train").train_test_split(test_size=0.1)["test"]
+    # Load raw test
+    dataset = load_dataset("json", data_files=DATA_PATH_PROCESS, split="train").train_test_split(test_size=0.1)["test"]
 
-# Kiểm tra raw
-if len(dataset) == 0:
-    raise ValueError(" Dataset rỗng! Kiểm tra lại dữ liệu đầu vào.")
+    # Kiểm tra raw
+    if len(dataset) == 0:
+        raise ValueError(" Dataset rỗng! Kiểm tra lại dữ liệu đầu vào.")
 
-# Tham số đánh giá
-max_source_length = 256
-max_target_length = 256
+    # Tham số đánh giá
+    max_source_length = 256
+    max_target_length = 256
+    return model,dataset, tokenizer, max_source_length, max_target_length
 
 
 # Hàm sinh dự đoán từ mô hình
-def generate_target_from_sample(sample):
+def generate_target_from_sample(sample, tokenizer, max_source_length, max_target_length,model):
     source_text = str(sample["source"]) + " <SEP>"
     inputs = tokenizer(source_text, return_tensors="pt", max_length=max_source_length, truncation=True)
     inputs = {key: value.to(model.device) for key, value in inputs.items()}
@@ -44,17 +48,13 @@ def generate_target_from_sample(sample):
 
     return source_text, tokenizer.decode(outputs[0], skip_special_tokens=True)
 
-
-# Hàm tính BLEU Score
-smoothie = SmoothingFunction().method4
-
-
 def compute_bleu(generated, ground_truth):
-    return sentence_bleu([ground_truth.split()], generated.split(), smoothing_function=smoothie)
+    return sentence_bleu([ground_truth.split()], generated.split(),
+                         smoothing_function=SmoothingFunction().method4)
 
 
 # Hàm đánh giá mô hình
-def evaluate_model():
+def evaluate_model(dataset,  tokenizer, max_source_length, max_target_length,model):
     print(" Đang đánh giá mô hình...")
 
     # Xóa file cũ nếu có
@@ -70,7 +70,7 @@ def evaluate_model():
 
         pbar = tqdm(dataset, desc="Evaluating", unit="sample")
         for sample in pbar:
-            source_text, predicted = generate_target_from_sample(sample)
+            source_text, predicted = generate_target_from_sample(sample,  tokenizer, max_source_length, max_target_length,model)
             ground_truth = str(sample["target"])
 
             em_score = int(predicted.strip() == ground_truth.strip())  # Exact Match (0 hoặc 1)
@@ -96,4 +96,5 @@ def evaluate_model():
 
 # Chạy đánh giá
 if __name__ == "__main__":
-    evaluate_model()
+    model, dataset, tokenizer, max_source_length, max_target_length = load_model()
+    evaluate_model(dataset,  tokenizer, max_source_length, max_target_length,model)

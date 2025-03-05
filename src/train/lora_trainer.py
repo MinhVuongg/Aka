@@ -1,16 +1,17 @@
+from src.config.config import BATCH_SIZE, EPOCHS, FP16
 from src.train.base_trainer import BaseTrainer
 import peft
 from transformers import Trainer, TrainingArguments
 import os
-from dotenv import load_dotenv
-from src.train.callbacks.accuracy_callback import AccuracyCallback
+# from dotenv import load_dotenv
+# from src.train.callbacks.accuracy_callback import AccuracyCallback
 
 # Load biến môi trường
-load_dotenv()
+# load_dotenv()
 
-EPOCHS = int(os.getenv("EPOCHS", 3))
-BATCH_SIZE = int(os.getenv("BATCH_SIZE", 8))
-FP16 = os.getenv("FP16", "False").lower() == "true"
+# EPOCHS = int(os.getenv("EPOCHS", 3))
+# BATCH_SIZE = int(os.getenv("BATCH_SIZE", 8))
+# FP16 = os.getenv("FP16", "False").lower() == "true"
 
 class LoRATrainer(BaseTrainer):
     def __init__(self):

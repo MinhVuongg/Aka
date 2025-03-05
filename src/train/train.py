@@ -1,16 +1,18 @@
 import logging
 import os
 import sys
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from transformers import Trainer, TrainingArguments, TrainerCallback
 from base_trainer import BaseTrainer
 from transformers import AutoTokenizer
 
+from src.config.config import BATCH_SIZE, EPOCHS, TRAIN_TYPE, LOG_DIR
+
 # Load biến môi trường từ file .env
-load_dotenv()
+# load_dotenv()
 
 # Định nghĩa thư mục log
-LOG_DIR = os.path.join(os.path.dirname(__file__), "../..", "log")
+# LOG_DIR = os.path.join(os.path.dirname(__file__), "../..", "log")
 os.makedirs(LOG_DIR, exist_ok=True)  # Tạo thư mục nếu chưa có
 
 # Cấu hình file log
@@ -83,21 +85,17 @@ class CustomTrainer(BaseTrainer):
             logger.info(f"Dữ liệu sau tiền xử lý - Train: {len(self.train_dataset)}, Validation: {len(self.val_dataset)}")
             logger.handlers[0].flush()
 
-            num_epochs = int(os.getenv("NUM_EPOCHS", 5))
-            batch_size = int(os.getenv("BATCH_SIZE", 16))
-            train_type = os.getenv("TRAIN_TYPE", "full")
-
             training_args = TrainingArguments(
                 output_dir=self.model_save_path,
-                per_device_train_batch_size=batch_size,
-                per_device_eval_batch_size=batch_size,
+                per_device_train_batch_size=BATCH_SIZE,
+                per_device_eval_batch_size=BATCH_SIZE,
                 evaluation_strategy="epoch",
                 logging_strategy="epoch",
-                num_train_epochs=num_epochs,
+                num_train_epochs=EPOCHS,
                 save_total_limit=2,
                 logging_dir=LOG_DIR,
                 logging_steps=5,
-                fp16=False if train_type == "full" else True,
+                fp16=False if TRAIN_TYPE == "full" else True,
                 report_to="none"
             )
 

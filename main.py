@@ -2,6 +2,9 @@ import logging
 import os
 import sys
 
+from src.config.config import DATA_PATH_RAW, DATA_PATH_PROCESS, OUTPUT_PATH, TRAIN_TYPE
+from src.predict.evaluate import load_model
+
 # Xác định đường dẫn thư mục gốc của dự án
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 SRC_DIR = os.path.join(ROOT_DIR, "src")
@@ -32,29 +35,36 @@ def main():
     """Hàm chính để chạy pipeline"""
 
     #  Tiền xử lý dữ liệu
-    raw_data_path = os.path.join(DATA_DIR, "raw")
-    processed_data_path = os.path.join(DATA_DIR, "processed.json")
+    # raw_data_path = os.path.join(DATA_DIR, "raw")
+    # processed_data_path = os.path.join(DATA_DIR, "processed.json")
 
     logger.info(" Bắt đầu tiền xử lý dữ liệu...")
-    preprocess_dataset(raw_data_path, processed_data_path)
+
+    # if os.path.exists(OUTPUT_PATH):
+    #     # os.remove(OUTPUT_PATH)
+    #     os.makedirs(OUTPUT_PATH)
+
+    preprocess_dataset(DATA_PATH_RAW, DATA_PATH_PROCESS)
+    # preprocess_dataset(DATA_PATH_RAW, DATA_PATH_PROCESS, overwrite=False)
     logger.info(" Tiền xử lý hoàn tất!")
 
     #  Huấn luyện mô hình
-    trainer_type = os.getenv("TRAIN_TYPE", "full")  # full hoặc lora
+    # trainer_type = os.getenv("TRAIN_TYPE", "full")  # full hoặc lora
 
-    logger.info(f" Bắt đầu huấn luyện mô hình ({trainer_type})...")
+    logger.info(f" Bắt đầu huấn luyện mô hình ({TRAIN_TYPE})...")
 
-    if trainer_type == "lora":
+    if TRAIN_TYPE == "lora":
         trainer = LoRATrainer()
     else:
-        trainer = FullFineTuneTrainer(processed_data_path)
+        trainer = FullFineTuneTrainer()
 
     trainer.train()
     logger.info(" Huấn luyện hoàn tất!")
 
     #  Đánh giá mô hình
     print(" Đánh giá mô hình...")
-    evaluate_model()
+    model, dataset, tokenizer, max_source_length, max_target_length = load_model()
+    evaluate_model(dataset, tokenizer, max_source_length, max_target_length, model)
     print(" Hoàn tất đánh giá!")
 
 

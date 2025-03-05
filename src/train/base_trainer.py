@@ -4,23 +4,18 @@ import matplotlib.pyplot as plt
 import datasets
 import os
 from abc import ABC, abstractmethod
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
+from src.config.config import MODEL_NAME, DATA_PATH_PROCESS, MODEL_SAVE_PATH, LOG_DIR, OUTPUT_PATH
 
 # Load các biến môi trường từ file .env
-load_dotenv()
+# load_dotenv()
 
-MODEL_NAME = os.getenv("MODEL_NAME", "Salesforce/codet5-base")
-DATA_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)), "../..", "data/processed.json")
-MODEL_SAVE_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)), "../..", "model")
-LOG_DIR = os.path.join(os.path.abspath(os.path.dirname(__file__)), "../..", "log")
-
-DATA_PATH = os.getenv("DATA_PATH", "E:\AKA_AI\aka-llm\data\processed1.json")
 class BaseTrainer(ABC):
     """Lớp cơ sở cho việc huấn luyện mô hình."""
     def __init__(self, data_path=None):
         self.model_name = MODEL_NAME
-        self.data_path = data_path if data_path else DATA_PATH  # Nếu không truyền, dùng mặc định
+        self.data_path = DATA_PATH_PROCESS
         self.model_save_path = MODEL_SAVE_PATH
         self.log_dir = LOG_DIR
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
@@ -33,7 +28,8 @@ class BaseTrainer(ABC):
 
     def load_data(self):
         """Load và xử lý dữ liệu."""
-        dataset = datasets.load_dataset("json", data_files=self.data_path, split="train")
+        dataset = datasets.load_dataset(path=OUTPUT_PATH, split="train")
+        # dataset = datasets.load_dataset("json", data_files=self.data_path, split="train")
         train_val = dataset.train_test_split(test_size=0.1)
         return train_val["train"], train_val["test"]
 
