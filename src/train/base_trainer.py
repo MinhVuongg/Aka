@@ -6,7 +6,7 @@ import os
 from abc import ABC, abstractmethod
 # from dotenv import load_dotenv
 
-from src.config.config import MODEL_NAME, DATA_PATH_PROCESS, MODEL_SAVE_PATH, LOG_DIR, OUTPUT_PATH
+from src.config.config import MODEL_NAME, TRAINSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, LOG_DIR, OUTPUT_PATH
 
 # Load các biến môi trường từ file .env
 # load_dotenv()
@@ -15,7 +15,7 @@ class BaseTrainer(ABC):
     """Lớp cơ sở cho việc huấn luyện mô hình."""
     def __init__(self, data_path=None):
         self.model_name = MODEL_NAME
-        self.data_path = DATA_PATH_PROCESS
+        self.data_path = TRAINSET_DATA_PATH_PROCESS
         self.model_save_path = MODEL_SAVE_PATH
         self.log_dir = LOG_DIR
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)

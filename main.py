@@ -3,7 +3,8 @@ import logging
 import os
 import sys
 
-from src.config.config import DATA_PATH_RAW, DATA_PATH_PROCESS, OUTPUT_PATH, TRAIN_TYPE, LOG_DIR
+from src.config.config import TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS, OUTPUT_PATH, TRAIN_TYPE, LOG_DIR, TESTSET_RAW, \
+    TESTSET_DATA_PATH_PROCESS
 from src.predict.evaluate import load_model
 
 # Xác định đường dẫn thư mục gốc của dự án
@@ -34,26 +35,18 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 def main():
-    """Hàm chính để chạy pipeline"""
-    #  Tiền xử lý dữ liệu
-    # raw_data_path = os.path.join(DATA_DIR, "raw")
-    # processed_data_path = os.path.join(DATA_DIR, "processed.json")
-
-    logger.info("[UET] Bắt đầu tiền xử lý dữ liệu...")
-
-    # if os.path.exists(OUTPUT_PATH):
-    #     # os.remove(OUTPUT_PATH)
-    #     os.makedirs(OUTPUT_PATH)
-    history = {"train_loss": []}
-
-    preprocess_dataset(DATA_PATH_RAW, DATA_PATH_PROCESS)
-    # preprocess_dataset(DATA_PATH_RAW, DATA_PATH_PROCESS, overwrite=False)
+    # TIEN XU LY DU LIEU
+    logger.info("[UET] Bắt đầu tiền xử lý dữ liệu cho training set và test set.")
+    logger.info(f"\t[UET] Training set path = {TRAINSET_RAW}")
+    preprocess_dataset(TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS)
+    logger.info(f"\t[UET] Test set path = {TESTSET_RAW}")
+    preprocess_dataset(TESTSET_RAW, TESTSET_DATA_PATH_PROCESS)
     logger.info("[UET] Tiền xử lý hoàn tất!")
 
-    #  Huấn luyện mô hình
-    # trainer_type = os.getenv("TRAIN_TYPE", "full")  # full hoặc lora
-
     logger.info(f"[UET] Bắt đầu huấn luyện mô hình ({TRAIN_TYPE})...")
+
+    # TRAIN MODEL
+    history = {"train_loss": []}
 
     if TRAIN_TYPE == "lora":
         logger.info("[UET] LoRATrainer")
@@ -61,6 +54,7 @@ def main():
     else:
         logger.info("[UET] FullFineTuneTrainer")
         trainer = FullFineTuneTrainer()
+
 
     trainer.train()
     logger.info("[UET] Huấn luyện hoàn tất!")

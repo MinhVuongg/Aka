@@ -9,7 +9,8 @@ from datasets import load_dataset
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 from tqdm import tqdm
 
-from src.config.config import DATA_PATH_PROCESS, MODEL_SAVE_PATH, OUTPUT_CSV, LOG_DIR, TEST_SIZE, max_source_length, \
+from src.config.config import TESTSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, OUTPUT_CSV, LOG_DIR, TEST_SIZE, \
+    max_source_length, \
     max_target_length
 
 # Cấu hình đường dẫn
@@ -28,6 +29,7 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
+
 # Load model đã train
 def load_model():
     logger.info(f"[UET] Download model from %s - start", MODEL_SAVE_PATH)
@@ -43,28 +45,29 @@ def load_model():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = model.to(device)
     logger.info(f"[UET] Moving model to GPU/CPU - done, using: {device}")
-    
+
     # Có thể thêm chuyển sang half-precision để tăng tốc (nếu dùng GPU)
     if torch.cuda.is_available():
         logger.info(f"[UET] Converting model to half precision (float16) - start")
         model = model.half()
         logger.info(f"[UET] Converting model to half precision (float16) - done")
 
-    
     logger.info(f"[UET] Run model.eval() - start")
     model.eval()
     logger.info(f"[UET] Run model.eval() - done")
 
     # Load raw test
-    logger.info(f"[UET] load_dataset from %s, test size = %s - start", DATA_PATH_PROCESS, TEST_SIZE)
-    dataset = load_dataset("json", data_files=DATA_PATH_PROCESS, split="train").train_test_split(test_size=TEST_SIZE)["test"]
+    logger.info(f"[UET] load_dataset from %s - start", TESTSET_DATA_PATH_PROCESS)
+    dataset = load_dataset("json", data_files=TESTSET_DATA_PATH_PROCESS, split="train")
+    num_samples = len(dataset)
+    print(f"Số lượng mẫu trong dataset: {num_samples}")
     logger.info(f"[UET] load_dataset - done")
 
     # Kiểm tra raw
     if len(dataset) == 0:
         raise ValueError("[UET] Dataset rỗng! Kiểm tra lại dữ liệu đầu vào.")
 
-    return model,dataset, tokenizer
+    return model, dataset, tokenizer
 
 
 # Hàm sinh dự đoán từ mô hình
@@ -73,19 +76,20 @@ def generate_target_from_sample(sample, tokenizer, model):
     inputs = tokenizer(source_text, return_tensors="pt", max_length=max_source_length, truncation=True)
     inputs = {key: value.to(model.device) for key, value in inputs.items()}
 
-    #print("\t with torch.no_grad(): - before")
+    # print("\t with torch.no_grad(): - before")
     with torch.no_grad():
         outputs = model.generate(inputs=inputs["input_ids"], max_length=max_target_length)
-    #print("\t with torch.no_grad(): - after")
+    # print("\t with torch.no_grad(): - after")
     return source_text, tokenizer.decode(outputs[0], skip_special_tokens=True)
+
 
 def compute_bleu(generated, ground_truth):
     return sentence_bleu([ground_truth.split()], generated.split(),
-                         smoothing_function = SmoothingFunction().method4)
+                         smoothing_function=SmoothingFunction().method4)
 
 
 # Hàm đánh giá mô hình
-def evaluate_model(dataset,  tokenizer,model):
+def evaluate_model(dataset, tokenizer, model):
     logger.info("[UET] Đang đánh giá mô hình...")
 
     # Xóa file cũ nếu có
@@ -101,15 +105,15 @@ def evaluate_model(dataset,  tokenizer,model):
 
         pbar = tqdm(dataset, desc="Evaluating", unit="sample")
         for sample in pbar:
-            #print("generate_target_from_sample - before");
+            # print("generate_target_from_sample - before");
             source_text, predicted = generate_target_from_sample(sample, tokenizer, model)
-            #print("generate_target_from_sample - after");
+            # print("generate_target_from_sample - after");
             ground_truth = str(sample["target"])
 
             em_score = int(predicted.strip() == ground_truth.strip())  # Exact Match (0 hoặc 1)
-            #print("compute_bleu - before");
+            # print("compute_bleu - before");
             bleu_score = compute_bleu(predicted, ground_truth)
-            #print("compute_bleu - before");
+            # print("compute_bleu - before");
 
             writer.writerow([source_text, ground_truth, predicted, bleu_score, em_score])
             f.flush()
@@ -132,4 +136,4 @@ def evaluate_model(dataset,  tokenizer,model):
 # Chạy đánh giá
 if __name__ == "__main__":
     model, dataset, tokenizer = load_model()
-    evaluate_model(dataset,  tokenizer,model)
+    evaluate_model(dataset, tokenizer, model)

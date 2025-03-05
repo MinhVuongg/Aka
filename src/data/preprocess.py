@@ -6,7 +6,7 @@ import sys
 from clang.cindex import Index, TokenKind, Config
 from transformers import AutoTokenizer, T5ForConditionalGeneration
 
-from src.config.config import MODEL_NAME, DATA_PATH_RAW, DATA_PATH_PROCESS
+from src.config.config import MODEL_NAME, TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS
 
 # from src.train.base_trainer import Salesforce/codet5-base
 #
@@ -180,4 +180,4 @@ def preprocess_dataset(input_folder, output_file, overwrite=False):
 
 
 if __name__ == "__main__":
-    preprocess_dataset(DATA_PATH_RAW, DATA_PATH_PROCESS, overwrite=False)  # True nếu ghi đè file cũ
+    preprocess_dataset(TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS, overwrite=False)  # True nếu ghi đè file cũ
