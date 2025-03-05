@@ -34,8 +34,8 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger(__name__)
-logger.addHandler(logging.FileHandler(LOG_FILE, encoding="utf-8", mode="a"))
-logger.addHandler(logging.StreamHandler(sys.stdout))
+# logger.addHandler(logging.FileHandler(LOG_FILE, encoding="utf-8", mode="a"))
+# logger.addHandler(logging.StreamHandler(sys.stdout))
 for handler in logger.handlers:
     if isinstance(handler, logging.FileHandler):
         handler.flush = lambda: handler.stream.flush()  # Đảm bảo flush log ngay sau mỗi ghi

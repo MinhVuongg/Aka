@@ -102,6 +102,14 @@ def clean_code(code):
         logger.error(f"[ERROR] clean_code: {e}")
         return code
 
+def extract_class_declaration(focal_class):
+    match = re.search(r'\b(?:final\s+)?(?:class)\s+\w+\s*{', focal_class)
+
+    if match:
+        return match.group(0).strip(" {")
+    else:
+        return ""
+
 
 def preprocess_dataset(input_folder, output_file, overwrite=False):
     """
@@ -138,7 +146,18 @@ def preprocess_dataset(input_folder, output_file, overwrite=False):
 
             for entry in raw_data:
                 try:
-                    source = clean_code(remove_comments_ast(entry.get("fm", "")))
+                    focal_method = clean_code(remove_comments_ast(entry.get("fm", "")))
+                    focal_class = entry.get("fc", "")
+                    focal_class_name = ""
+                    if focal_class != "":
+                        focal_class_name = extract_class_declaration(focal_class)
+
+                    constructor_signatures = clean_code(remove_comments_ast(entry.get("c", "")))
+                    method_signatures = clean_code(remove_comments_ast(entry.get("m", "")))
+                    fields = clean_code(remove_comments_ast(entry.get("f", "")))
+                    source = "\n".join(
+                        ["FC:", focal_class_name, "FM:", focal_method, "C:", constructor_signatures, "M:", method_signatures,
+                         "F:", fields])
                     target = clean_code(remove_comments_ast(extract_target_range(entry.get("t", ""))))
 
                     if (source, target) and (source, target) not in existing_entries:
@@ -152,7 +171,7 @@ def preprocess_dataset(input_folder, output_file, overwrite=False):
             all_data = new_data if overwrite else all_data + new_data
             with open(os.path.join("../..", output_file), "w", encoding="utf-8") as f:
                 json.dump(all_data, f, ensure_ascii=False, indent=4)
-            logging.info("[UET] Processed {len(new_data)} new samples. Total samples: {len(all_data)}")
+            logging.info(f"[UET] Processed {len(new_data)} new samples. Total samples: {len(all_data)}")
         else:
             logging.info("[UET] No new data added.")
 
