@@ -13,6 +13,9 @@ from src.config.config import MODEL_NAME, DATA_PATH_RAW, DATA_PATH_PROCESS
 # # Đảm bảo module có thể tìm thấy đúng thư mục
 # sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 
+import logging
+logger = logging.getLogger(__name__)
+
 # Config clang path
 Config.set_library_path(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..", "clang+llvm-19.1.7-x86_64-pc-windows-msvc/bin")))
 
@@ -47,7 +50,8 @@ def extract_target_range(target):
 
         return ";".join(code_lines).strip(";") if code_lines else target.strip()
     except Exception as e:
-        print(f"[ERROR] extract_target_range: {e}")
+        logger.error(f"[ERROR] extract_target_range: {e}")
+        logger.error(f"[ERROR] extract_target_range: {e}")
         return target
 
 
@@ -79,7 +83,7 @@ def remove_comments_ast(code):
 
         return re.sub(r';+', '; ', "".join(result).strip(";")) + ";"
     except Exception as e:
-        print(f"[ERROR] remove_comments_ast: {e}")
+        logger.error(f"[ERROR] remove_comments_ast: {e}")
         return code
 
 
@@ -95,7 +99,7 @@ def clean_code(code):
         code = re.sub(r'\s+', ' ', code).strip()
         return code
     except Exception as e:
-        print(f"[ERROR] clean_code: {e}")
+        logger.error(f"[ERROR] clean_code: {e}")
         return code
 
 
@@ -105,8 +109,8 @@ def preprocess_dataset(input_folder, output_file, overwrite=False):
     """
     try:
         json_files = glob.glob(os.path.join(input_folder, "**", "*.json"), recursive=True)
-        print(os.path.join(input_folder, "**", "*.json"))
-        print(json_files)
+        # logger.info(os.path.join(input_folder, "**", "*.json"))
+        logger.info("[UET] Total json files: {}".format(len(json_files)))
         new_data = []
 
         # Kiểm tra nếu file đầu ra đã tồn tại
@@ -116,8 +120,8 @@ def preprocess_dataset(input_folder, output_file, overwrite=False):
                 try:
                     all_data = json.load(f)
                 except json.JSONDecodeError as e:
-                    print(f"[ERROR] JSONDecodeError in {output_file}: {e}")
-                    print("Warning: Output file contains invalid JSON, starting fresh.")
+                    logger.error(f"[UET] [ERROR] JSONDecodeError in {output_file}: {e}")
+                    logger.error("[UET] Warning: Output file contains invalid JSON, starting fresh.")
 
         existing_entries = {(entry["source"], entry["target"]) for entry in all_data}
 
@@ -126,10 +130,10 @@ def preprocess_dataset(input_folder, output_file, overwrite=False):
                 with open(file, "r", encoding="utf-8") as f:
                     raw_data = json.load(f)
             except json.JSONDecodeError as e:
-                print(f"[ERROR] JSONDecodeError in {file}: {e}")
+                logger.error(f"[UET] [ERROR] JSONDecodeError in {file}: {e}")
                 continue
             except Exception as e:
-                print(f"[ERROR] Failed to read file {file}: {e}")
+                logger.error(f"[UET] [ERROR] Failed to read file {file}: {e}")
                 continue
 
             for entry in raw_data:
@@ -141,19 +145,19 @@ def preprocess_dataset(input_folder, output_file, overwrite=False):
                         new_data.append({"source": source, "target": target})
                         existing_entries.add((source, target))
                 except Exception as e:
-                    print(f"[ERROR] Processing entry in {file}: {e}")
+                    logger.error(f"[UET] [ERROR] Processing entry in {file}: {e}")
                     continue
 
         if new_data:
             all_data = new_data if overwrite else all_data + new_data
             with open(os.path.join("../..", output_file), "w", encoding="utf-8") as f:
                 json.dump(all_data, f, ensure_ascii=False, indent=4)
-            print(f"Processed {len(new_data)} new samples. Total samples: {len(all_data)}")
+            logging.info("[UET] Processed {len(new_data)} new samples. Total samples: {len(all_data)}")
         else:
-            print("No new data added.")
+            logging.info("[UET] No new data added.")
 
     except Exception as e:
-        print(f"[ERROR] preprocess_dataset: {e}")
+        logger.error(f"[UET] [ERROR] preprocess_dataset: {e}")
 
 
 if __name__ == "__main__":

@@ -21,6 +21,7 @@ class BaseTrainer(ABC):
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         self.model = self.load_model()
         self.train_dataset, self.val_dataset = self.load_data()
+        self.loss_history = []
 
     def load_model(self):
         """Tải mô hình gốc để fine-tune."""

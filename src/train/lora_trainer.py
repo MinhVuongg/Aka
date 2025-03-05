@@ -54,6 +54,8 @@ class LoRATrainer(BaseTrainer):
         )
 
         trainer.train()
+        self.loss_history = [log["loss"] for log in trainer.state.log_history if "loss" in log]
+        self.val_loss_history = [log["eval_loss"] for log in trainer.state.log_history if "eval_loss" in log]
         self.save_model()
         self.plot_loss(trainer)
 

@@ -1,4 +1,7 @@
+import logging
 import os
+import sys
+
 import torch
 import csv
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
@@ -6,7 +9,8 @@ from datasets import load_dataset
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 from tqdm import tqdm
 
-from src.config.config import DATA_PATH_PROCESS, MODEL_SAVE_PATH, OUTPUT_CSV
+from src.config.config import DATA_PATH_PROCESS, MODEL_SAVE_PATH, OUTPUT_CSV, LOG_DIR, TEST_SIZE, max_source_length, \
+    max_target_length
 
 # Cấu hình đường dẫn
 # MODEL_PATH = "D:\Code\Aka\codet5"  # Thay bằng nơi lưu mô hình
@@ -17,28 +21,41 @@ from src.config.config import DATA_PATH_PROCESS, MODEL_SAVE_PATH, OUTPUT_CSV
 # if not os.path.exists(DATA_PATH_PROCESS):
 #     raise FileNotFoundError(f" Không tìm thấy file dữ liệu: {DATA_PATH_PROCESS}")
 
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
+logger = logging.getLogger(__name__)
+
 # Load model đã train
 def load_model():
-    print("Đang tải mô hình...")
+    logger.info(f"[UET] Download model from %s - start", MODEL_SAVE_PATH)
     model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_SAVE_PATH)
+    logger.info(f"[UET] Download model from %s - done", MODEL_SAVE_PATH)
+
+    logger.info(f"[UET] Load Tokenizer from %s- start", MODEL_SAVE_PATH)
     tokenizer = AutoTokenizer.from_pretrained(MODEL_SAVE_PATH)
+    logger.info(f"[UET] Load Tokenizer from %s- done", MODEL_SAVE_PATH)
+
+    logger.info(f"[UET] Run model.eval() - start")
     model.eval()
+    logger.info(f"[UET] Run model.eval() - done")
 
     # Load raw test
-    dataset = load_dataset("json", data_files=DATA_PATH_PROCESS, split="train").train_test_split(test_size=0.1)["test"]
+    logger.info(f"[UET] load_dataset from %s, test size = %s - start", DATA_PATH_PROCESS, TEST_SIZE)
+    dataset = load_dataset("json", data_files=DATA_PATH_PROCESS, split="train").train_test_split(test_size=TEST_SIZE)["test"]
+    logger.info(f"[UET] load_dataset - done")
 
     # Kiểm tra raw
     if len(dataset) == 0:
-        raise ValueError(" Dataset rỗng! Kiểm tra lại dữ liệu đầu vào.")
+        raise ValueError("[UET] Dataset rỗng! Kiểm tra lại dữ liệu đầu vào.")
 
-    # Tham số đánh giá
-    max_source_length = 256
-    max_target_length = 256
-    return model,dataset, tokenizer, max_source_length, max_target_length
+    return model,dataset, tokenizer
 
 
 # Hàm sinh dự đoán từ mô hình
-def generate_target_from_sample(sample, tokenizer, max_source_length, max_target_length,model):
+def generate_target_from_sample(sample, tokenizer, model):
     source_text = str(sample["source"]) + " <SEP>"
     inputs = tokenizer(source_text, return_tensors="pt", max_length=max_source_length, truncation=True)
     inputs = {key: value.to(model.device) for key, value in inputs.items()}
@@ -50,12 +67,12 @@ def generate_target_from_sample(sample, tokenizer, max_source_length, max_target
 
 def compute_bleu(generated, ground_truth):
     return sentence_bleu([ground_truth.split()], generated.split(),
-                         smoothing_function=SmoothingFunction().method4)
+                         smoothing_function = SmoothingFunction().method4)
 
 
 # Hàm đánh giá mô hình
-def evaluate_model(dataset,  tokenizer, max_source_length, max_target_length,model):
-    print(" Đang đánh giá mô hình...")
+def evaluate_model(dataset,  tokenizer,model):
+    logger.info("[UET] Đang đánh giá mô hình...")
 
     # Xóa file cũ nếu có
     if os.path.exists(OUTPUT_CSV):
@@ -70,7 +87,7 @@ def evaluate_model(dataset,  tokenizer, max_source_length, max_target_length,mod
 
         pbar = tqdm(dataset, desc="Evaluating", unit="sample")
         for sample in pbar:
-            source_text, predicted = generate_target_from_sample(sample,  tokenizer, max_source_length, max_target_length,model)
+            source_text, predicted = generate_target_from_sample(sample, tokenizer, model)
             ground_truth = str(sample["target"])
 
             em_score = int(predicted.strip() == ground_truth.strip())  # Exact Match (0 hoặc 1)
@@ -88,13 +105,13 @@ def evaluate_model(dataset,  tokenizer, max_source_length, max_target_length,mod
     avg_em = sum(em_scores) / len(em_scores)
     avg_bleu = sum(bleu_scores) / len(bleu_scores)
 
-    print(f"\n **Kết quả đánh giá:**")
-    print(f" Exact Match: {avg_em * 100:.2f}%")
-    print(f" BLEU Score trung bình: {avg_bleu * 100:.2f}%")
-    print(f" Kết quả được lưu vào: {OUTPUT_CSV}")
+    logger.info(f"\n[UET] **Kết quả đánh giá:**")
+    logger.info(f"[UET] Exact Match: {avg_em * 100:.2f}%")
+    logger.info(f"[UET] BLEU Score trung bình: {avg_bleu * 100:.2f}%")
+    logger.info(f"[UET] Kết quả được lưu vào: {OUTPUT_CSV}")
 
 
 # Chạy đánh giá
 if __name__ == "__main__":
-    model, dataset, tokenizer, max_source_length, max_target_length = load_model()
-    evaluate_model(dataset,  tokenizer, max_source_length, max_target_length,model)
+    model, dataset, tokenizer = load_model()
+    evaluate_model(dataset,  tokenizer,model)

@@ -13,23 +13,24 @@ from src.config.config import BATCH_SIZE, EPOCHS, TRAIN_TYPE, LOG_DIR
 
 # Định nghĩa thư mục log
 # LOG_DIR = os.path.join(os.path.dirname(__file__), "../..", "log")
-os.makedirs(LOG_DIR, exist_ok=True)  # Tạo thư mục nếu chưa có
-
-# Cấu hình file log
-LOG_FILE = os.path.join(LOG_DIR, "training.log")
-
-# Xoá nội dung file training.log
-with open(LOG_FILE, encoding="utf-8", mode="w") as f:
-    pass
+# os.makedirs(LOG_DIR, exist_ok=True)  # Tạo thư mục nếu chưa có
+#
+# # Cấu hình file log
+# LOG_FILE = os.path.join(LOG_DIR, "training.log")
+#
+# # Xoá nội dung file training.log
+# with open(LOG_FILE, encoding="utf-8", mode="w") as f:
+#     pass
 
 # Cấu hình logging
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler(LOG_FILE, encoding="utf-8", mode="a"),  # Append log vào file
-        logging.StreamHandler(sys.stdout)  # Hiển thị log trên console
-    ]
+    format="%(asctime)s - %(levelname)s - %(message)s"
+    # ,
+    # handlers=[
+    #     logging.FileHandler(LOG_FILE, encoding="utf-8", mode="a"),  # Append log vào file
+    #     logging.StreamHandler(sys.stdout)  # Hiển thị log trên console
+    # ]
 )
 
 logger = logging.getLogger(__name__)
@@ -70,19 +71,19 @@ class CustomTrainer(BaseTrainer):
 
     def train(self):
         """Huấn luyện mô hình với logging"""
-        logger.info("Bắt đầu quá trình huấn luyện...")
+        logger.info("[UET] Bắt đầu quá trình huấn luyện...")
         logger.handlers[0].flush()
 
         try:
             if len(self.train_dataset) == 0 or len(self.val_dataset) == 0:
-                logger.error("Dữ liệu huấn luyện hoặc validation bị rỗng!")
+                logger.error("[UET] Dữ liệu huấn luyện hoặc validation bị rỗng!")
                 logger.handlers[0].flush()
                 return
 
-            logger.info("Đang tiền xử lý dữ liệu với Masking...")
+            logger.info("[UET] Đang tiền xử lý dữ liệu với Masking...")
             self.train_dataset = self.train_dataset.map(self.preprocess_function_with_masking, batched=True)
             self.val_dataset = self.val_dataset.map(self.preprocess_function_with_masking, batched=True)
-            logger.info(f"Dữ liệu sau tiền xử lý - Train: {len(self.train_dataset)}, Validation: {len(self.val_dataset)}")
+            logger.info(f"[UET] Dữ liệu sau tiền xử lý - Train: {len(self.train_dataset)}, Validation: {len(self.val_dataset)}")
             logger.handlers[0].flush()
 
             training_args = TrainingArguments(
@@ -94,12 +95,11 @@ class CustomTrainer(BaseTrainer):
                 num_train_epochs=EPOCHS,
                 save_total_limit=2,
                 logging_dir=LOG_DIR,
-                logging_steps=5,
-                fp16=False if TRAIN_TYPE == "full" else True,
+                logging_steps=1,
                 report_to="none"
             )
 
-            logger.info(f"Training Arguments: {training_args}")
+            logger.info(f"[UET] Training Arguments: {training_args}")
             logger.handlers[0].flush()
 
             trainer = Trainer(
@@ -116,15 +116,15 @@ class CustomTrainer(BaseTrainer):
             # Ghi lại train loss sau mỗi epoch
             for log in trainer.state.log_history:
                 if "loss" in log:
-                    logger.info(f"Train loss: {log['loss']} - Epoch: {log.get('epoch', 'N/A')}")
+                    logger.info(f"[UET] Train loss: {log['loss']} - Epoch: {log.get('epoch', 'N/A')}")
                     logger.handlers[0].flush()
 
             self.save_model()
-            logger.info("Huấn luyện hoàn tất!")
+            logger.info("[UET] Huấn luyện hoàn tất!")
             logger.handlers[0].flush()
 
         except Exception as e:
-            logger.error(f"Lỗi trong quá trình huấn luyện: {str(e)}", exc_info=True)
+            logger.error(f"[UET] Lỗi trong quá trình huấn luyện: {str(e)}", exc_info=True)
             logger.handlers[0].flush()
 
 if __name__ == "__main__":

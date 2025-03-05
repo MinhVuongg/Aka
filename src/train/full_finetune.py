@@ -12,13 +12,13 @@ import os
 # EPOCHS = int(os.getenv("EPOCHS", 5))
 # BATCH_SIZE = int(os.getenv("BATCH_SIZE", 16))
 # FP16 = os.getenv("FP16", "False").lower() == "true"
-
+# import logging
 logger = logging.getLogger(__name__)
 
 class CustomLoggingCallback(TrainerCallback):
     def on_log(self, args, state, control, logs=None, **kwargs):
         if logs is not None:
-            logger.info(f"{logs}")
+            logger.info(f"[UET] {logs}")
 
 class FullFineTuneTrainer(BaseTrainer):
     def train(self):
@@ -50,5 +50,7 @@ class FullFineTuneTrainer(BaseTrainer):
         )
 
         trainer.train()
+        self.loss_history = [log["loss"] for log in trainer.state.log_history if "loss" in log]
+        self.val_loss_history = [log["eval_loss"] for log in trainer.state.log_history if "eval_loss" in log]
         self.save_model()
         self.plot_loss(trainer)
