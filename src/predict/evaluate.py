@@ -36,10 +36,10 @@ def load_model():
     model = model.to(device)
     logger.info(f"[UET] Moving model to GPU/CPU - done, using: {device}")
 
-    if torch.cuda.is_available():
-        logger.info(f"[UET] Converting model to half precision (float16) - start")
-        model = model.half()
-        logger.info(f"[UET] Converting model to half precision (float16) - done")
+    # if torch.cuda.is_available():
+    #     logger.info(f"[UET] Converting model to half precision (float16) - start")
+    #     model = model.half()
+    #     logger.info(f"[UET] Converting model to half precision (float16) - done")
 
     logger.info(f"[UET] Run model.eval() - start")
     model.eval()
