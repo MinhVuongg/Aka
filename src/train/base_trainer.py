@@ -28,10 +28,11 @@ class BaseTrainer(ABC):
         self.token_masker = RandomTokenMasker(mask_rate_min=0.10, mask_rate_max=0.15)
 
         if MASKING_SOURCE == MASKING.NONE:
-            logging.info("[UET] Masking")
+            logging.info("[UET] Masking: None")
             self.train_dataset = self.train_dataset.map(self.preprocess, batched=True)
             self.val_dataset = self.val_dataset.map(self.preprocess, batched=True)
         elif MASKING_SOURCE == MASKING.RANDOM:
+            logging.info("[UET] Masking: Random")
             self.train_dataset = self.train_dataset.map(self.preprocess_with_masking, batched=True)
             self.val_dataset = self.val_dataset.map(self.preprocess_with_masking, batched=True)
 
