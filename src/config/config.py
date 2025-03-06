@@ -15,11 +15,16 @@ class COMMENT_REMOVAL(Enum):
     AST = 0
     REGREX = 1
 
+class MASKING(Enum):
+    NONE = 0
+    RANDOM = 1
+
 # --------------------------------------------------------------------------------
 # Môi trường & Tham số huấn luyện (MODIFY HERE)
 # --------------------------------------------------------------------------------
 mode = Mode.VAST  # <= --------------------------------- CHOOSE DEPLOYMENT HERE ---------------------------------
 MODEL_NAME = "Salesforce/codet5-small"
+MASKING = MASKING.NONE
 MODEL_TYPE = ModelType.SEQ2SEQ
 max_source_length = 256
 max_target_length = 256
