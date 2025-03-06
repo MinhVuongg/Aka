@@ -8,7 +8,7 @@ from abc import ABC, abstractmethod
 
 from src.config.config import MODEL_NAME, TRAINSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, LOG_DIR, \
     VALIDATIONSET_DATA_PATH_PROCESS, ModelType, MODEL_TYPE
-from src.utils import utils
+from src.utils.model_utils import load_model_by_type
 
 
 class BaseTrainer(ABC):
@@ -24,7 +24,7 @@ class BaseTrainer(ABC):
 
     def load_model(self):
         """Tải mô hình gốc để fine-tune với khả năng tùy chỉnh loại mô hình sử dụng ENUM."""
-        return utils.load_model(MODEL_NAME, MODEL_TYPE)
+        return load_model_by_type(MODEL_NAME, MODEL_TYPE)
 
     # def load_model(self):
     #     """Tải mô hình gốc để fine-tune."""

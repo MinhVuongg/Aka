@@ -12,7 +12,7 @@ class ModelType(Enum):
     SPEECH = "speech"
 
 
-def load_model(model_name, model_type: ModelType):
+def load_model_by_type(model_name, model_type: ModelType):
     if model_type == ModelType.SEQ2SEQ:
         from transformers import AutoModelForSeq2SeqLM
         return AutoModelForSeq2SeqLM.from_pretrained(
