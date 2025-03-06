@@ -7,8 +7,8 @@ logger = logging.getLogger(__name__)
 
 class RandomTokenMasker:
     """
-    A class to handle random token masking in code snippets.
-    Randomly masks 10-15% of tokens with special mask tokens.
+    handle random token masking in code snippet.
+    Randomly masks 10%-15% of tokens with special mask tokens.
     """
 
     def __init__(self, mask_rate_min=0.10, mask_rate_max=0.15):
@@ -16,7 +16,7 @@ class RandomTokenMasker:
         Initialize the RandomTokenMasker.
 
         Args:
-            mask_rate_min (float): Minimum percentage of tokens to mask (between 0 and 1)
+            mask_rate_min (float): Minimum percentage of token to mask (between 0 and 1)
             mask_rate_max (float): Maximum percentage of tokens to mask (between 0 and 1)
         """
         self.mask_rate_min = mask_rate_min
@@ -40,12 +40,6 @@ class RandomTokenMasker:
     def mask_tokens(self, code):
         """
         Randomly mask tokens in the given code at a rate of 10-15%.
-
-        Args:
-            code (str): The code to mask tokens in.
-
-        Returns:
-            str: The code with randomly masked tokens.
         """
         if not code or not code.strip():
             return ""
@@ -102,13 +96,7 @@ class RandomTokenMasker:
 
     def unmask_tokens(self, masked_code):
         """
-        Restore original tokens from masked code.
-
-        Args:
-            masked_code (str): The masked code.
-
-        Returns:
-            str: The code with original tokens restored.
+        Restore original tokens from masked code
         """
         if not masked_code or not self.reverse_map:
             return masked_code
@@ -124,10 +112,7 @@ class RandomTokenMasker:
 
     def get_masking_statistics(self):
         """
-        Get statistics about the masking operation.
-
-        Returns:
-            dict: Statistics about masked tokens.
+        Get statistics about the masking operation
         """
         return {
             'total_tokens_masked': len(self.masked_map),

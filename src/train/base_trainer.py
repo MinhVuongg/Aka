@@ -10,6 +10,7 @@ from abc import ABC, abstractmethod
 
 from src.config.config import MODEL_NAME, TRAINSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, LOG_DIR, \
     VALIDATIONSET_DATA_PATH_PROCESS, ModelType, MODEL_TYPE, MASKING_SOURCE, MASKING
+from src.data.RandomTokenMasker import RandomTokenMasker
 from src.utils.model_utils import load_model_by_type
 
 
@@ -24,6 +25,7 @@ class BaseTrainer(ABC):
         self.model = self.load_model()
         self.train_dataset, self.val_dataset = self.load_data()
         self.train_loss_history = []
+        self.token_masker = RandomTokenMasker(mask_rate_min=0.10, mask_rate_max=0.15)
 
         if MASKING_SOURCE == MASKING.NONE:
             logging.info("[UET] Masking")

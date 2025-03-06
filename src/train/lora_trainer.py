@@ -1,5 +1,4 @@
 from src.config.config import BATCH_SIZE, EPOCHS, FP16
-from src.data.RandomTokenMasker import RandomTokenMasker
 from src.train.base_trainer import BaseTrainer
 import peft
 from transformers import Trainer, TrainingArguments
@@ -8,7 +7,6 @@ class LoRATrainer(BaseTrainer):
     def __init__(self):
         super().__init__()
         self.add_lora()
-        self.token_masker = RandomTokenMasker(mask_rate_min=0.10, mask_rate_max=0.15)
 
     def add_lora(self):
         """Thêm LoRA vào mô hình"""
