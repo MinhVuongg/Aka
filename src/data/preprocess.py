@@ -6,7 +6,7 @@ import sys
 from clang.cindex import Index, TokenKind, Config
 from transformers import AutoTokenizer, T5ForConditionalGeneration
 
-from src.config.config import MODEL_NAME, TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS
+from src.config.config import MODEL_NAME, TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS, REMOVE_COMMENT_MODE, COMMENT_REMOVAL
 
 # from src.train.base_trainer import Salesforce/codet5-base
 #
@@ -14,10 +14,12 @@ from src.config.config import MODEL_NAME, TRAINSET_RAW, TRAINSET_DATA_PATH_PROCE
 # sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 
 import logging
+
 logger = logging.getLogger(__name__)
 
 # Config clang path
-Config.set_library_path(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..", "clang+llvm-19.1.7-x86_64-pc-windows-msvc/bin")))
+Config.set_library_path(
+    os.path.abspath(os.path.join(os.path.dirname(__file__), "../..", "clang+llvm-19.1.7-x86_64-pc-windows-msvc/bin")))
 
 # Load tokenizer của mô hình
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
@@ -53,6 +55,35 @@ def extract_target_range(target):
         logger.error(f"[ERROR] extract_target_range: {e}")
         logger.error(f"[ERROR] extract_target_range: {e}")
         return target
+
+def remove_comments(code):
+    if REMOVE_COMMENT_MODE == COMMENT_REMOVAL.AST:
+        return remove_comments_ast(code)
+    elif REMOVE_COMMENT_MODE == COMMENT_REMOVAL.REGREX:
+        return remove_comments_regex(code)
+    else:
+        return code;
+
+def remove_comments_regex(code):
+    try:
+        if not code:
+            return ""
+
+        if isinstance(code, list):
+            code = " ".join(map(str, code))
+
+        # Loại bỏ comment dạng /* ... */
+        import re
+        code = re.sub(r'/\*[\s\S]*?\*/', '', code)
+
+        # Loại bỏ comment dạng //
+        code = re.sub(r'//.*?$', '', code, flags=re.MULTILINE)
+
+        # Xu ly dấu chấm phẩy dư thừa
+        return re.sub(r';+', '; ', code.strip(";")) + ";"
+    except Exception as e:
+        logger.error(f"[UET] [ERROR] remove_comments_regex: {e}")
+        return code
 
 
 def remove_comments_ast(code):
@@ -95,12 +126,13 @@ def clean_code(code):
         if not code:
             return ""
 
-        # code = re.sub(r'[\r\n\t]+', ' ', code)
+        code = re.sub(r'[\r\n\t]+', ' ', code)
         code = re.sub(r'\s+', ' ', code).strip()
         return code
     except Exception as e:
         logger.error(f"[ERROR] clean_code: {e}")
         return code
+
 
 def extract_class_declaration(focal_class):
     match = re.search(r'\b(?:final\s+)?(?:class)\s+\w+\s*{', focal_class)
@@ -146,19 +178,20 @@ def preprocess_dataset(input_folder, output_file, overwrite=False):
 
             for entry in raw_data:
                 try:
-                    focal_method = clean_code(remove_comments_ast(entry.get("fm", "")))
+                    focal_method = clean_code(remove_comments(entry.get("fm", "")))
                     focal_class = entry.get("fc", "")
                     focal_class_name = ""
                     if focal_class != "":
                         focal_class_name = extract_class_declaration(focal_class)
 
-                    constructor_signatures = clean_code(remove_comments_ast(entry.get("c", "")))
-                    method_signatures = clean_code(remove_comments_ast(entry.get("m", "")))
-                    fields = clean_code(remove_comments_ast(entry.get("f", "")))
+                    constructor_signatures = clean_code(remove_comments(entry.get("c", "")))
+                    method_signatures = clean_code(remove_comments(entry.get("m", "")))
+                    fields = clean_code(remove_comments(entry.get("f", "")))
                     source = "\n".join(
-                        ["FC:", focal_class_name, "FM:", focal_method, "C:", constructor_signatures, "M:", method_signatures,
+                        ["FC:", focal_class_name, "FM:", focal_method, "C:", constructor_signatures, "M:",
+                         method_signatures,
                          "F:", fields])
-                    target = clean_code(remove_comments_ast(extract_target_range(entry.get("t", ""))))
+                    target = clean_code(remove_comments(extract_target_range(entry.get("t", ""))))
 
                     if (source, target) and (source, target) not in existing_entries:
                         new_data.append({"source": source, "target": target})
