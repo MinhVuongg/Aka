@@ -6,8 +6,9 @@ import os
 from abc import ABC, abstractmethod
 # from dotenv import load_dotenv
 
-from src.config.config import MODEL_NAME, TRAINSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, LOG_DIR,\
-    VALIDATIONSET_DATA_PATH_PROCESS
+from src.config.config import MODEL_NAME, TRAINSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, LOG_DIR, \
+    VALIDATIONSET_DATA_PATH_PROCESS, ModelType, MODEL_TYPE
+from src.utils import utils
 
 
 class BaseTrainer(ABC):
@@ -22,8 +23,12 @@ class BaseTrainer(ABC):
         self.train_loss_history = []
 
     def load_model(self):
-        """Tải mô hình gốc để fine-tune."""
-        return AutoModelForSeq2SeqLM.from_pretrained(self.model_name)
+        """Tải mô hình gốc để fine-tune với khả năng tùy chỉnh loại mô hình sử dụng ENUM."""
+        return utils.load_model(MODEL_NAME, MODEL_TYPE)
+
+    # def load_model(self):
+    #     """Tải mô hình gốc để fine-tune."""
+    #     return AutoModelForSeq2SeqLM.from_pretrained(self.model_name)
 
     def load_data(self):
         """Load và xử lý dữ liệu."""

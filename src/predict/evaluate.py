@@ -10,7 +10,8 @@ from tqdm import tqdm
 
 from src.config.config import VALIDATIONSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, OUTPUT_VALIDATIONSET_CSV, \
     max_source_length, \
-    max_target_length
+    max_target_length, MODEL_NAME, MODEL_TYPE
+from src.utils import utils
 
 logging.basicConfig(
     level=logging.INFO,
@@ -23,7 +24,7 @@ logger = logging.getLogger(__name__)
 # Load model đã train
 def load_model():
     logger.info(f"[UET] Download model from %s - start", MODEL_SAVE_PATH)
-    model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_SAVE_PATH)
+    model = utils.load_model(MODEL_NAME, MODEL_TYPE)
     logger.info(f"[UET] Download model from %s - done", MODEL_SAVE_PATH)
 
     logger.info(f"[UET] Load Tokenizer from %s- start", MODEL_SAVE_PATH)

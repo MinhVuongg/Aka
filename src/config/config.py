@@ -4,6 +4,13 @@ from enum import Enum
 
 from src.utils.utils import normalize_path
 
+class ModelType(Enum):
+    SEQ2SEQ = "seq2seq"
+    CAUSAL = "causal"
+    MASKED = "masked"
+    ENCODER = "encoder"
+    VISION = "vision"
+    SPEECH = "speech"
 
 class Mode(Enum):
     VAST = 0
@@ -20,9 +27,10 @@ class COMMENT_REMOVAL(Enum):
 # --------------------------------------------------------------------------------
 mode = Mode.VAST  # <= --------------------------------- CHOOSE DEPLOYMENT HERE ---------------------------------
 MODEL_NAME = "Salesforce/codet5-small"
+MODEL_TYPE = ModelType.SEQ2SEQ
 max_source_length = 256
 max_target_length = 256
-EPOCHS = 3
+EPOCHS = 1
 BATCH_SIZE = 16
 FP16 = False
 TRAIN_TYPE = "lora"  # full hoặc lora
