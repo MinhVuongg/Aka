@@ -43,6 +43,11 @@ VALIDATIONSET_DATA_PATH_PROCESS = normalize_path(f"{OUTPUT_PATH}/processed_valid
 if not os.path.exists(OUTPUT_PATH):
     os.makedirs(OUTPUT_PATH)
 
-MODEL_SAVE_PATH = normalize_path(f"{OUTPUT_PATH}/model_epoch{EPOCHS}_maxsourcelen{max_source_length}_maxtargetlen{max_target_length}_batch{BATCH_SIZE}")
-OUTPUT_CSV = normalize_path(f"{OUTPUT_PATH}/output.csv")
+model_name_only = MODEL_NAME.split("/")[-1]  # Lấy ten model sau dấu "/"
+
+# Ten model duoc luu cung voi thong tin lien quan.
+MODEL_SAVE_PATH = normalize_path(f"{OUTPUT_PATH}/model{model_name_only}_epoch{EPOCHS}_traintype{TRAIN_TYPE}_maxsourcelen{max_source_length}_maxtargetlen{max_target_length}_batch{BATCH_SIZE}")
+
+OUTPUT_VALIDATIONSET_CSV = normalize_path(f"{OUTPUT_PATH}/output_validationset.csv")
+
 LOG_DIR = normalize_path(f"{OUTPUT_PATH}/training_history.json")

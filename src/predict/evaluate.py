@@ -8,7 +8,7 @@ from datasets import load_dataset
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 from tqdm import tqdm
 
-from src.config.config import VALIDATIONSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, OUTPUT_CSV, \
+from src.config.config import VALIDATIONSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, OUTPUT_VALIDATIONSET_CSV, \
     max_source_length, \
     max_target_length
 
@@ -81,13 +81,13 @@ def evaluate_model(dataset, tokenizer, model):
     logger.info("[UET] Đang đánh giá mô hình...")
 
     # Xóa file cũ nếu có
-    if os.path.exists(OUTPUT_CSV):
-        os.remove(OUTPUT_CSV)
+    if os.path.exists(OUTPUT_VALIDATIONSET_CSV):
+        os.remove(OUTPUT_VALIDATIONSET_CSV)
 
     em_scores = []
     bleu_scores = []
 
-    with open(OUTPUT_CSV, "w", newline="", encoding="utf-8") as f:
+    with open(OUTPUT_VALIDATIONSET_CSV, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         writer.writerow(["Source", "Expected Target", "Predicted Target", "BLEU Score", "Exact Match"])
 
@@ -118,7 +118,7 @@ def evaluate_model(dataset, tokenizer, model):
     logger.info(f"\n[UET] **Kết quả đánh giá:**")
     logger.info(f"[UET] Exact Match: {avg_em * 100:.2f}%")
     logger.info(f"[UET] BLEU Score trung bình: {avg_bleu * 100:.2f}%")
-    logger.info(f"[UET] Kết quả được lưu vào: {OUTPUT_CSV}")
+    logger.info(f"[UET] Kết quả được lưu vào: {OUTPUT_VALIDATIONSET_CSV}")
 
 
 # Chạy đánh giá

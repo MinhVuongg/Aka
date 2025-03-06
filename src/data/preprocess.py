@@ -95,7 +95,7 @@ def clean_code(code):
         if not code:
             return ""
 
-        code = re.sub(r'[\r\n\t]+', ' ', code)
+        # code = re.sub(r'[\r\n\t]+', ' ', code)
         code = re.sub(r'\s+', ' ', code).strip()
         return code
     except Exception as e:
