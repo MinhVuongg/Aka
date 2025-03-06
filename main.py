@@ -3,8 +3,8 @@ import logging
 import os
 import sys
 
-from src.config.config import TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS, OUTPUT_PATH, TRAIN_TYPE, LOG_DIR, TESTSET_RAW, \
-    TESTSET_DATA_PATH_PROCESS
+from src.config.config import TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS, OUTPUT_PATH, TRAIN_TYPE, LOG_DIR, VALIDATIONSET_RAW, \
+    VALIDATIONSET_DATA_PATH_PROCESS
 from src.predict.evaluate import load_model
 
 # Xác định đường dẫn thư mục gốc của dự án
@@ -39,8 +39,8 @@ def main():
     logger.info("[UET] Bắt đầu tiền xử lý dữ liệu cho training set và test set.")
     logger.info(f"\t[UET] Training set path = {TRAINSET_RAW}")
     preprocess_dataset(TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS)
-    logger.info(f"\t[UET] Test set path = {TESTSET_RAW}")
-    preprocess_dataset(TESTSET_RAW, TESTSET_DATA_PATH_PROCESS)
+    logger.info(f"\t[UET] Test set path = {VALIDATIONSET_RAW}")
+    preprocess_dataset(VALIDATIONSET_RAW, VALIDATIONSET_DATA_PATH_PROCESS)
     logger.info("[UET] Tiền xử lý hoàn tất!")
 
     logger.info(f"[UET] Bắt đầu huấn luyện mô hình ({TRAIN_TYPE})...")
@@ -55,11 +55,10 @@ def main():
         logger.info("[UET] FullFineTuneTrainer")
         trainer = FullFineTuneTrainer()
 
-
     trainer.train()
     logger.info("[UET] Huấn luyện hoàn tất!")
 
-    history["train_loss"] = trainer.loss_history
+    history["train_loss"] = trainer.train_loss_history
     history["val_loss"] = trainer.val_loss_history
     logger.info(f"[UET] training log: {json.dumps(history, indent=4)}")
     with open(LOG_DIR, "w") as f:

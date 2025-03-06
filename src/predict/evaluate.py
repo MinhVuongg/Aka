@@ -1,6 +1,5 @@
 import logging
 import os
-import sys
 
 import torch
 import csv
@@ -9,18 +8,9 @@ from datasets import load_dataset
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 from tqdm import tqdm
 
-from src.config.config import TESTSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, OUTPUT_CSV, LOG_DIR, TEST_SIZE, \
+from src.config.config import VALIDATIONSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, OUTPUT_CSV, \
     max_source_length, \
     max_target_length
-
-# Cấu hình đường dẫn
-# MODEL_PATH = "D:\Code\Aka\codet5"  # Thay bằng nơi lưu mô hình
-# DATA_PATH = "data/processed.json"
-# OUTPUT_CSV = "output/evaluation_results.csv"
-
-# Kiểm tra file dữ liệu
-# if not os.path.exists(DATA_PATH_PROCESS):
-#     raise FileNotFoundError(f" Không tìm thấy file dữ liệu: {DATA_PATH_PROCESS}")
 
 logging.basicConfig(
     level=logging.INFO,
@@ -40,13 +30,11 @@ def load_model():
     tokenizer = AutoTokenizer.from_pretrained(MODEL_SAVE_PATH)
     logger.info(f"[UET] Load Tokenizer from %s- done", MODEL_SAVE_PATH)
 
-    # Thêm đoạn code chuyển mô hình sang GPU/CPU ở đây
     logger.info(f"[UET] Moving model to GPU/CPU - start")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = model.to(device)
     logger.info(f"[UET] Moving model to GPU/CPU - done, using: {device}")
 
-    # Có thể thêm chuyển sang half-precision để tăng tốc (nếu dùng GPU)
     if torch.cuda.is_available():
         logger.info(f"[UET] Converting model to half precision (float16) - start")
         model = model.half()
@@ -57,8 +45,8 @@ def load_model():
     logger.info(f"[UET] Run model.eval() - done")
 
     # Load raw test
-    logger.info(f"[UET] load_dataset from %s - start", TESTSET_DATA_PATH_PROCESS)
-    dataset = load_dataset("json", data_files=TESTSET_DATA_PATH_PROCESS, split="train")
+    logger.info(f"[UET] load_dataset from %s - start", VALIDATIONSET_DATA_PATH_PROCESS)
+    dataset = load_dataset("json", data_files=VALIDATIONSET_DATA_PATH_PROCESS, split="train")
     num_samples = len(dataset)
     print(f"Số lượng mẫu trong dataset: {num_samples}")
     logger.info(f"[UET] load_dataset - done")

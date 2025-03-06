@@ -6,22 +6,20 @@ import os
 from abc import ABC, abstractmethod
 # from dotenv import load_dotenv
 
-from src.config.config import MODEL_NAME, TRAINSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, LOG_DIR, OUTPUT_PATH
+from src.config.config import MODEL_NAME, TRAINSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, LOG_DIR,\
+    VALIDATIONSET_DATA_PATH_PROCESS
 
-# Load các biến môi trường từ file .env
-# load_dotenv()
 
 class BaseTrainer(ABC):
     """Lớp cơ sở cho việc huấn luyện mô hình."""
     def __init__(self, data_path=None):
         self.model_name = MODEL_NAME
-        self.data_path = TRAINSET_DATA_PATH_PROCESS
         self.model_save_path = MODEL_SAVE_PATH
         self.log_dir = LOG_DIR
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         self.model = self.load_model()
         self.train_dataset, self.val_dataset = self.load_data()
-        self.loss_history = []
+        self.train_loss_history = []
 
     def load_model(self):
         """Tải mô hình gốc để fine-tune."""
@@ -29,10 +27,13 @@ class BaseTrainer(ABC):
 
     def load_data(self):
         """Load và xử lý dữ liệu."""
-        dataset = datasets.load_dataset(path=OUTPUT_PATH, split="train")
-        # dataset = datasets.load_dataset("json", data_files=self.data_path, split="train")
-        train_val = dataset.train_test_split(test_size=0.1)
-        return train_val["train"], train_val["test"]
+        dataset_trainset = datasets.load_dataset("json", data_files=TRAINSET_DATA_PATH_PROCESS, split="train")
+        print(f"[UET] Số lượng mẫu trong train set: {len(dataset_trainset)}")
+
+        dataset_validationset = datasets.load_dataset("json", data_files=VALIDATIONSET_DATA_PATH_PROCESS, split="train")
+        print(f"[UET] Số lượng mẫu trong validation set: {len(dataset_validationset)}")
+
+        return dataset_trainset, dataset_validationset
 
     def preprocess(self, examples):
         """Tiền xử lý dữ liệu."""

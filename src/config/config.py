@@ -28,7 +28,6 @@ EPOCHS = 3
 BATCH_SIZE = 16
 FP16 = False
 TRAIN_TYPE = "lora"  # full hoặc lora
-TEST_SIZE = 0.2
 
 #--------------------------------------------------------------------------------
 # Đường dẫn
@@ -38,8 +37,8 @@ OUTPUT_PATH = normalize_path(f"{PROJECT_PATH}/aka-output")
 TRAINSET_RAW = normalize_path(f"{PROJECT_PATH}/data/trainset/raw")
 TRAINSET_DATA_PATH_PROCESS = normalize_path(f"{OUTPUT_PATH}/processed_trainset.json")
 
-TESTSET_RAW = normalize_path(f"{PROJECT_PATH}/data/testset/raw")
-TESTSET_DATA_PATH_PROCESS = normalize_path(f"{OUTPUT_PATH}/processed_testset.json")
+VALIDATIONSET_RAW = normalize_path(f"{PROJECT_PATH}/data/validation/raw")
+VALIDATIONSET_DATA_PATH_PROCESS = normalize_path(f"{OUTPUT_PATH}/processed_validationset.json")
 
 if not os.path.exists(OUTPUT_PATH):
     os.makedirs(OUTPUT_PATH)

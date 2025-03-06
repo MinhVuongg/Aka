@@ -3,15 +3,6 @@ from src.train.base_trainer import BaseTrainer
 import peft
 from transformers import Trainer, TrainingArguments
 import os
-# from dotenv import load_dotenv
-# from src.train.callbacks.accuracy_callback import AccuracyCallback
-
-# Load biến môi trường
-# load_dotenv()
-
-# EPOCHS = int(os.getenv("EPOCHS", 3))
-# BATCH_SIZE = int(os.getenv("BATCH_SIZE", 8))
-# FP16 = os.getenv("FP16", "False").lower() == "true"
 
 class LoRATrainer(BaseTrainer):
     def __init__(self):
@@ -54,7 +45,7 @@ class LoRATrainer(BaseTrainer):
         )
 
         trainer.train()
-        self.loss_history = [log["loss"] for log in trainer.state.log_history if "loss" in log]
+        self.train_loss_history = [log["loss"] for log in trainer.state.log_history if "loss" in log]
         self.val_loss_history = [log["eval_loss"] for log in trainer.state.log_history if "eval_loss" in log]
         self.save_model()
         self.plot_loss(trainer)
