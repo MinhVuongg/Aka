@@ -17,7 +17,7 @@ DATA_DIR = os.path.join(ROOT_DIR, "data")
 sys.path.insert(0, SRC_DIR)
 
 # Import các module sau khi đã thêm vào sys.path
-from src.data.preprocess import preprocess_dataset
+from src.data.preprocess import preprocess_dataset, preprocess_dataset2
 from src.train.full_finetune import FullFineTuneTrainer
 from src.train.lora_trainer import LoRATrainer
 from src.predict import evaluate_model
@@ -38,9 +38,9 @@ def main():
     # TIEN XU LY DU LIEU
     logger.info("[UET] Bắt đầu tiền xử lý dữ liệu cho training set và test set.")
     logger.info(f"\t[UET] Training set path = {TRAINSET_RAW}")
-    preprocess_dataset(TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS)
+    preprocess_dataset2(TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS)
     logger.info(f"\t[UET] Test set path = {VALIDATIONSET_RAW}")
-    preprocess_dataset(VALIDATIONSET_RAW, VALIDATIONSET_DATA_PATH_PROCESS)
+    preprocess_dataset2(VALIDATIONSET_RAW, VALIDATIONSET_DATA_PATH_PROCESS)
     logger.info("[UET] Tiền xử lý hoàn tất!")
 
     logger.info(f"[UET] Bắt đầu huấn luyện mô hình ({TRAIN_TYPE})...")

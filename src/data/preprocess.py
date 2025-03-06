@@ -143,6 +143,102 @@ def extract_class_declaration(focal_class):
         return ""
 
 
+"""
+XU LY CAU TRUC TRAINING SET RAW MOI
+"""
+def preprocess_dataset2(input_data, output_file, overwrite=False):
+    try:
+        logger.info("[UET] Processing data: {} items".format(len(input_data)))
+        new_data = []
+
+        # Check if output file already exists
+        all_data = []
+        if not overwrite and os.path.exists(os.path.join("../..", output_file)):
+            with open(os.path.join("../..", output_file), "r", encoding="utf-8") as f:
+                try:
+                    all_data = json.load(f)
+                except json.JSONDecodeError as e:
+                    logger.error(f"[UET] [ERROR] JSONDecodeError in {output_file}: {e}")
+                    logger.error("[UET] Warning: Output file contains invalid JSON, starting fresh.")
+
+        existing_entries = {(entry["source"], entry["target"]) for entry in all_data}
+
+        for entry in input_data:
+            try:
+                focal_method = clean_code(remove_comments(entry.get("fm", "")))
+                focal_class = entry.get("fc", "")
+                focal_class_name = ""
+                if focal_class != "":
+                    focal_class_name = extract_class_declaration(focal_class)
+
+                # Process other fields
+                constructor_signatures = ""
+                if "c" in entry:
+                    if isinstance(entry["c"], list):
+                        constructor_signatures = clean_code(remove_comments(" ".join(entry["c"])))
+                    else:
+                        constructor_signatures = clean_code(remove_comments(entry["c"]))
+
+                method_signatures = ""
+                if "m" in entry:
+                    if isinstance(entry["m"], list):
+                        method_signatures = clean_code(remove_comments(" ".join(entry["m"])))
+                    else:
+                        method_signatures = clean_code(remove_comments(entry["m"]))
+
+                fields = ""
+                if "f" in entry:
+                    if isinstance(entry["f"], list):
+                        fields = clean_code(remove_comments(" ".join(entry["f"])))
+                    else:
+                        fields = clean_code(remove_comments(entry["f"]))
+
+                # Use datatest field for target if available, otherwise use 't' field
+                target = ""
+                if "datatest" in entry and entry["datatest"]:
+                    for test_case in entry["datatest"]:
+                        if "simplified_t" in test_case:
+                            target = clean_code(remove_comments(extract_target_range(test_case["simplified_t"])))
+                            break
+                        elif "td" in test_case:
+                            target = clean_code(remove_comments(extract_target_range(test_case["td"])))
+                            break
+
+                # If no target found in datatest, use 't' if available
+                if not target and "t" in entry:
+                    target = clean_code(remove_comments(extract_target_range(entry.get("t", ""))))
+
+                # Construct source string
+                source = "\n".join([
+                    "FC:", focal_class_name,
+                    "FM:", focal_method,
+                    "C:", constructor_signatures,
+                    "M:", method_signatures,
+                    "F:", fields
+                ])
+
+                # Only add if both source and target exist and this pair hasn't been added before
+                if source and target and (source, target) not in existing_entries:
+                    new_data.append({"source": source, "target": target})
+                    existing_entries.add((source, target))
+            except Exception as e:
+                logger.error(f"[UET] [ERROR] Processing entry: {e}")
+                continue
+
+        if new_data:
+            all_data = new_data if overwrite else all_data + new_data
+            with open(os.path.join("../..", output_file), "w", encoding="utf-8") as f:
+                json.dump(all_data, f, ensure_ascii=False, indent=4)
+            logging.info(f"[UET] Processed {len(new_data)} new samples. Total samples: {len(all_data)}")
+        else:
+            logging.info("[UET] No new data added.")
+
+        return all_data
+
+    except Exception as e:
+        logger.error(f"[UET] [ERROR] preprocess_dataset2: {e}")
+        return []
+
 def preprocess_dataset(input_folder, output_file, overwrite=False):
     """
     Xử lý tập dữ liệu từ thư mục đầu vào và lưu kết quả vào file JSON đầu ra.
@@ -212,5 +308,33 @@ def preprocess_dataset(input_folder, output_file, overwrite=False):
         logger.error(f"[UET] [ERROR] preprocess_dataset: {e}")
 
 
+def main():
+    """
+    Main function to test preprocess_dataset2 with a single file.
+    """
+    # Define input and output files
+    input_file = "/Users/ducanhnguyen/Documents/aka-llm/training-set (1).json"  # Replace with your file path
+    output_file = "/Users/ducanhnguyen/Documents/aka-llm/training-set (1)_pre.json"
+
+    # Check if the input file exists
+    if not os.path.exists(input_file):
+        logger.error(f"Input file {input_file} does not exist.")
+        return
+
+    try:
+        logger.info(f"Processing file: {input_file}")
+        with open(input_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+
+        processed_data = preprocess_dataset2(data, output_file, overwrite=True)
+        logger.info(f"Processed {len(processed_data)} items")
+        logger.info(f"Data has been saved to {os.path.abspath(output_file)}")
+
+    except json.JSONDecodeError as e:
+        logger.error(f"Error parsing JSON from {input_file}: {e}")
+    except Exception as e:
+        logger.error(f"An error occurred: {e}")
+
+
 if __name__ == "__main__":
-    preprocess_dataset(TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS, overwrite=False)  # True nếu ghi đè file cũ
+    main()

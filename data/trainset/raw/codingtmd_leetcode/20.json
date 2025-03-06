@@ -1,0 +1,2313 @@
+[
+  {
+    "fm": "int numDistinct(string S, string T) { \t\tint match[200]; \t\tif (S.size() < T.size()) return 0; \t\tmatch[0] = 1; \t\tfor (int i = 1; i <= T.size(); i++) \t\t\tmatch[i] = 0; \t\tfor (int i = 1; i <= S.size(); i ++) \t\t\tfor (int j = T.size(); j >= 1; j--) \t\t\t\tif (S[i - 1] == T[j - 1]) \t\t\t\t\tmatch[j] += match[j - 1]; \t\treturn match[T.size()]; \t}",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Distinct_Subsequences.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./20/Distinct_Subsequences.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./20/Distinct_Subsequences.cpp/Solution/numDistinct(string,string)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./20/Distinct_Subsequences.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Distinct_Subsequences.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./20/Distinct_Subsequences.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Distinct_Subsequences.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./20/Distinct_Subsequences.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./20/Distinct_Subsequences.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "numDistinct(string,string)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./20/Distinct_Subsequences.cpp/Solution/numDistinct(string,string)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalStringDataNode",
+              "name" : "S",
+              "virtual_name" : "EXPECTED_S",
+              "dataType" : "string",
+              "realType" : "string",
+              "external" : false,
+              "correspondingVar" : "./20/Distinct_Subsequences.cpp/Solution/numDistinct(string,string)/S",
+              "correspondingType" : "string",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalStringDataNode",
+              "name" : "T",
+              "virtual_name" : "EXPECTED_T",
+              "dataType" : "string",
+              "realType" : "string",
+              "external" : false,
+              "correspondingVar" : "./20/Distinct_Subsequences.cpp/Solution/numDistinct(string,string)/T",
+              "correspondingType" : "string",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./20/Distinct_Subsequences.cpp/Solution/numDistinct(string,string)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalStringDataNode",
+              "name" : "S",
+              "virtual_name" : "S",
+              "dataType" : "string",
+              "realType" : "string",
+              "external" : false,
+              "correspondingVar" : "./20/Distinct_Subsequences.cpp/Solution/numDistinct(string,string)/S",
+              "correspondingType" : "string",
+              "value" : "2",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+                "name" : "S[0]",
+                "virtual_name" : "S[0]",
+                "dataType" : "char",
+                "realType" : "char",
+                "external" : false,
+                "correspondingVar" : "./20/Distinct_Subsequences.cpp/Solution/numDistinct(string,string)/S/S[0]",
+                "correspondingType" : "char",
+                "value" : "-67"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalStringDataNode",
+              "name" : "T",
+              "virtual_name" : "T",
+              "dataType" : "string",
+              "realType" : "string",
+              "external" : false,
+              "correspondingVar" : "./20/Distinct_Subsequences.cpp/Solution/numDistinct(string,string)/T",
+              "correspondingType" : "string",
+              "value" : "3",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+                "name" : "T[0]",
+                "virtual_name" : "T[0]",
+                "dataType" : "char",
+                "realType" : "char",
+                "external" : false,
+                "correspondingVar" : "./20/Distinct_Subsequences.cpp/Solution/numDistinct(string,string)/T/T[0]",
+                "correspondingType" : "char",
+                "value" : "-114"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Distinct_Subsequences.cpp/Solution/numDistinct(string,string)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_numDistinct_string_string_random_4(void) {\n{\nAKA_test_case_name=\"Solution_numDistinct_string_string_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Distinct_Subsequences.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName750805 = new char[2];akaRandomName750805[0] = -67;akaRandomName750805[1] = '\\0';string S=akaRandomName750805;\nchar* akaRandomName93168 = new char[2];akaRandomName93168[0] = -114;akaRandomName93168[1] = '\\0';string T=akaRandomName93168;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_numDistinct_string_string_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->numDistinct(S,T);\nAKA_fCall++;AKA_mark(\"Return from: ./20/Distinct_Subsequences.cpp/Solution/numDistinct(string,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Distinct_Subsequences.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName568211 = new char[2];akaRandomName568211[0] = -67;akaRandomName568211[1] = '\\0';string S=akaRandomName568211;\nchar* akaRandomName563949 = new char[2];akaRandomName563949[0] = -114;akaRandomName563949[1] = '\\0';string T=akaRandomName563949;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ ],
+    "fc": "class Solution { public: \tint numDistinct(string S, string T) { \t\tint match[200]; \t\tif (S.size() < T.size()) return 0; \t\tmatch[0] = 1; \t\tfor (int i = 1; i <= T.size(); i++) \t\t\tmatch[i] = 0; \t\tfor (int i = 1; i <= S.size(); i ++) \t\t\tfor (int j = T.size(); j >= 1; j--) \t\t\t\tif (S[i - 1] == T[j - 1]) \t\t\t\t\tmatch[j] += match[j - 1]; \t\treturn match[T.size()]; \t} };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/20/Distinct_Subsequences.cpp/Solution/numDistinct(string,string)",
+    "f": [ ]
+  },
+  {
+    "fm": "int divide(int dividend, int divisor) { \t\tint sign = 1; \t\tif (dividend == 0) return 0; \t\tif (dividend < 0) sign *= -1; \t\tif (divisor < 0) sign *= -1; \t\tunsigned int dvd = dividend > 0 ? dividend : -dividend; \t\tunsigned int dvs = divisor > 0 ? divisor : -divisor; //abs(divisor); \t\tunsigned int inc[32]; \t\tunsigned int migValue = dvs; \t\tint i = 0; \t\twhile (migValue > 0 && migValue <= dvd) \t\t{ \t\t\tinc[i] = migValue; \t\t\tmigValue = migValue << 1; \t\t\ti++; \t\t} \t\ti--; \t\tunsigned int res = 0; \t\twhile (i >= 0 && dvd != 0) \t\t{ \t\t\tif (dvd >= inc[i]) \t\t\t{ \t\t\t\tdvd = dvd - inc[i]; \t\t\t\tres += 1 << i; \t\t\t} \t\t\ti--; \t\t} \t\tres *= sign; \t\treturn res; \t}",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Divide_Two_Integers.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./20/Divide_Two_Integers.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./20/Divide_Two_Integers.cpp/Solution/divide(int,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./20/Divide_Two_Integers.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Divide_Two_Integers.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./20/Divide_Two_Integers.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Divide_Two_Integers.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./20/Divide_Two_Integers.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./20/Divide_Two_Integers.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "divide(int,int)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./20/Divide_Two_Integers.cpp/Solution/divide(int,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "dividend",
+              "virtual_name" : "EXPECTED_dividend",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Divide_Two_Integers.cpp/Solution/divide(int,int)/dividend",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "divisor",
+              "virtual_name" : "EXPECTED_divisor",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Divide_Two_Integers.cpp/Solution/divide(int,int)/divisor",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./20/Divide_Two_Integers.cpp/Solution/divide(int,int)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "dividend",
+              "virtual_name" : "dividend",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Divide_Two_Integers.cpp/Solution/divide(int,int)/dividend",
+              "correspondingType" : "int",
+              "value" : "787865649"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "divisor",
+              "virtual_name" : "divisor",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Divide_Two_Integers.cpp/Solution/divide(int,int)/divisor",
+              "correspondingType" : "int",
+              "value" : "-381420329"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Divide_Two_Integers.cpp/Solution/divide(int,int)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_divide_int_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_divide_int_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Divide_Two_Integers.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint dividend=787865649;\n\n\nint divisor=-381420329;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode dividend */\n/* NormalNumberDataNode divisor */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_divide_int_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->divide(dividend,divisor);\nAKA_fCall++;AKA_mark(\"Return from: ./20/Divide_Two_Integers.cpp/Solution/divide(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Divide_Two_Integers.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint dividend=787865649;\n\n\nint divisor=-381420329;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode dividend */\n/* NormalNumberDataNode divisor */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      },
+      {
+        "id" : 1,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Divide_Two_Integers.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./20/Divide_Two_Integers.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./20/Divide_Two_Integers.cpp/Solution/divide(int,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./20/Divide_Two_Integers.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Divide_Two_Integers.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./20/Divide_Two_Integers.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Divide_Two_Integers.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./20/Divide_Two_Integers.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./20/Divide_Two_Integers.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "divide(int,int)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./20/Divide_Two_Integers.cpp/Solution/divide(int,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "divisor",
+              "virtual_name" : "EXPECTED_divisor",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Divide_Two_Integers.cpp/Solution/divide(int,int)/divisor",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "dividend",
+              "virtual_name" : "EXPECTED_dividend",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Divide_Two_Integers.cpp/Solution/divide(int,int)/dividend",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./20/Divide_Two_Integers.cpp/Solution/divide(int,int)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "dividend",
+              "virtual_name" : "dividend",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Divide_Two_Integers.cpp/Solution/divide(int,int)/dividend",
+              "correspondingType" : "int",
+              "value" : "1904486058"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "divisor",
+              "virtual_name" : "divisor",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Divide_Two_Integers.cpp/Solution/divide(int,int)/divisor",
+              "correspondingType" : "int",
+              "value" : "167655176"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Divide_Two_Integers.cpp/Solution/divide(int,int)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_divide_int_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_divide_int_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Divide_Two_Integers.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint dividend=1904486058;\n\n\nint divisor=167655176;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode dividend */\n/* NormalNumberDataNode divisor */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_divide_int_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->divide(dividend,divisor);\nAKA_fCall++;AKA_mark(\"Return from: ./20/Divide_Two_Integers.cpp/Solution/divide(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Divide_Two_Integers.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint dividend=1904486058;\n\n\nint divisor=167655176;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode dividend */\n/* NormalNumberDataNode divisor */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ ],
+    "fc": "class Solution { public: \tint divide(int dividend, int divisor) { \t\tint sign = 1; \t\tif (dividend == 0) return 0; \t\tif (dividend < 0) sign *= -1; \t\tif (divisor < 0) sign *= -1; \t\tunsigned int dvd = dividend > 0 ? dividend : -dividend; \t\tunsigned int dvs = divisor > 0 ? divisor : -divisor; //abs(divisor); \t\tunsigned int inc[32]; \t\tunsigned int migValue = dvs; \t\tint i = 0; \t\twhile (migValue > 0 && migValue <= dvd) \t\t{ \t\t\tinc[i] = migValue; \t\t\tmigValue = migValue << 1; \t\t\ti++; \t\t} \t\ti--; \t\tunsigned int res = 0; \t\twhile (i >= 0 && dvd != 0) \t\t{ \t\t\tif (dvd >= inc[i]) \t\t\t{ \t\t\t\tdvd = dvd - inc[i]; \t\t\t\tres += 1 << i; \t\t\t} \t\t\ti--; \t\t} \t\tres *= sign; \t\treturn res; \t} };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/20/Divide_Two_Integers.cpp/Solution/divide(int,int)",
+    "f": [ ]
+  },
+  {
+    "fm": "int minDistance(string word1, string word2) { \t\tif (word1.size() < word2.size()) \t\t\tword1.swap(word2); \t\tint * matchUp = new int[20000]; \t\tint* matchDown = new int[20000]; \t\tfor (int i = 0; i <= word2.size(); i++) \t\t{ \t\t\tmatchUp[i] = 0; \t\t\tmatchDown[i] = i; \t\t} \t\tfor (int i = 1; i <= word1.size(); i++) \t\t{ \t\t\tmatchUp[0] = i; \t\t\tfor (int j = 1; j <= word2.size(); j++) \t\t\t{ \t\t\t\tif (word1[i - 1] == word2[j - 1]) \t\t\t\t{ \t\t\t\t\tmatchUp[j] = matchDown[j - 1]; \t\t\t\t} \t\t\t\telse \t\t\t\t{ \t\t\t\t\tmatchUp[j] = min(matchDown[j], matchDown[j - 1]); \t\t\t\t\tmatchUp[j] = min(matchUp[j], matchUp[j - 1]) + 1; \t\t\t\t} \t\t\t} \t\t\tint* temp = matchUp; \t\t\tmatchUp = matchDown; \t\t\tmatchDown = temp; \t\t} \t\treturn matchDown[word2.size()]; \t}",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Edit_Distance.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./20/Edit_Distance.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./20/Edit_Distance.cpp/Solution/minDistance(string,string)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./20/Edit_Distance.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Edit_Distance.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./20/Edit_Distance.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Edit_Distance.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./20/Edit_Distance.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./20/Edit_Distance.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "minDistance(string,string)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./20/Edit_Distance.cpp/Solution/minDistance(string,string)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalStringDataNode",
+              "name" : "word1",
+              "virtual_name" : "EXPECTED_word1",
+              "dataType" : "string",
+              "realType" : "string",
+              "external" : false,
+              "correspondingVar" : "./20/Edit_Distance.cpp/Solution/minDistance(string,string)/word1",
+              "correspondingType" : "string",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalStringDataNode",
+              "name" : "word2",
+              "virtual_name" : "EXPECTED_word2",
+              "dataType" : "string",
+              "realType" : "string",
+              "external" : false,
+              "correspondingVar" : "./20/Edit_Distance.cpp/Solution/minDistance(string,string)/word2",
+              "correspondingType" : "string",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./20/Edit_Distance.cpp/Solution/minDistance(string,string)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalStringDataNode",
+              "name" : "word1",
+              "virtual_name" : "word1",
+              "dataType" : "string",
+              "realType" : "string",
+              "external" : false,
+              "correspondingVar" : "./20/Edit_Distance.cpp/Solution/minDistance(string,string)/word1",
+              "correspondingType" : "string",
+              "value" : "3",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+                "name" : "word1[0]",
+                "virtual_name" : "word1[0]",
+                "dataType" : "char",
+                "realType" : "char",
+                "external" : false,
+                "correspondingVar" : "./20/Edit_Distance.cpp/Solution/minDistance(string,string)/word1/word1[0]",
+                "correspondingType" : "char",
+                "value" : "10"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalStringDataNode",
+              "name" : "word2",
+              "virtual_name" : "word2",
+              "dataType" : "string",
+              "realType" : "string",
+              "external" : false,
+              "correspondingVar" : "./20/Edit_Distance.cpp/Solution/minDistance(string,string)/word2",
+              "correspondingType" : "string",
+              "value" : "3",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+                "name" : "word2[0]",
+                "virtual_name" : "word2[0]",
+                "dataType" : "char",
+                "realType" : "char",
+                "external" : false,
+                "correspondingVar" : "./20/Edit_Distance.cpp/Solution/minDistance(string,string)/word2/word2[0]",
+                "correspondingType" : "char",
+                "value" : "-64"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Edit_Distance.cpp/Solution/minDistance(string,string)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_minDistance_string_string_random_2(void) {\n{\nAKA_test_case_name=\"Solution_minDistance_string_string_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Edit_Distance.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName268070 = new char[2];akaRandomName268070[0] = 10;akaRandomName268070[1] = '\\0';string word1=akaRandomName268070;\nchar* akaRandomName402273 = new char[2];akaRandomName402273[0] = -64;akaRandomName402273[1] = '\\0';string word2=akaRandomName402273;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word1 */\n/* NormalStringDataNode word2 */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minDistance_string_string_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minDistance(word1,word2);\nAKA_fCall++;AKA_mark(\"Return from: ./20/Edit_Distance.cpp/Solution/minDistance(string,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Edit_Distance.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName975303 = new char[2];akaRandomName975303[0] = 10;akaRandomName975303[1] = '\\0';string word1=akaRandomName975303;\nchar* akaRandomName637108 = new char[2];akaRandomName637108[0] = -64;akaRandomName637108[1] = '\\0';string word2=akaRandomName637108;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word1 */\n/* NormalStringDataNode word2 */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ ],
+    "fc": "class Solution { public: \tint minDistance(string word1, string word2) { \t\tif (word1.size() < word2.size()) \t\t\tword1.swap(word2); \t\tint * matchUp = new int[20000]; \t\tint* matchDown = new int[20000]; \t\tfor (int i = 0; i <= word2.size(); i++) \t\t{ \t\t\tmatchUp[i] = 0; \t\t\tmatchDown[i] = i; \t\t} \t\tfor (int i = 1; i <= word1.size(); i++) \t\t{ \t\t\tmatchUp[0] = i; \t\t\tfor (int j = 1; j <= word2.size(); j++) \t\t\t{ \t\t\t\tif (word1[i - 1] == word2[j - 1]) \t\t\t\t{ \t\t\t\t\tmatchUp[j] = matchDown[j - 1]; \t\t\t\t} \t\t\t\telse \t\t\t\t{ \t\t\t\t\tmatchUp[j] = min(matchDown[j], matchDown[j - 1]); \t\t\t\t\tmatchUp[j] = min(matchUp[j], matchUp[j - 1]) + 1; \t\t\t\t} \t\t\t} \t\t\tint* temp = matchUp; \t\t\tmatchUp = matchDown; \t\t\tmatchDown = temp; \t\t} \t\treturn matchDown[word2.size()]; \t} };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/20/Edit_Distance.cpp/Solution/minDistance(string,string)",
+    "f": [ ]
+  },
+  {
+    "fm": "int evalRPN(vector<string> &tokens) { \t\tstack<int> operand; \t\tfor (int i = 0; i < tokens.size(); i++) \t\t{ \t\t\tif ((tokens[i][0] == '-' && tokens[i].size() > 1) \t\t\t        || (tokens[i][0] >= '0' && tokens[i][0] <= '9')) \t\t\t{ \t\t\t\toperand.push(atoi(tokens[i].c_str())); \t\t\t\tcontinue; \t\t\t} \t\t\tint op1 = operand.top(); \t\t\toperand.pop(); \t\t\tint op2 = operand.top(); \t\t\toperand.pop(); \t\t\tif (tokens[i] == \"+\") operand.push(op2 + op1); \t\t\tif (tokens[i] == \"-\") operand.push(op2 - op1); \t\t\tif (tokens[i] == \"*\") operand.push(op2 * op1); \t\t\tif (tokens[i] == \"/\") operand.push(op2 / op1); \t\t} \t\treturn operand.top(); \t}",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Evaluate_Reverse_Polish_Notation.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./20/Evaluate_Reverse_Polish_Notation.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "evalRPN(vector<string>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "tokens",
+              "virtual_name" : "EXPECTED_tokens",
+              "dataType" : "vector<string>",
+              "realType" : "vector<string>&",
+              "external" : false,
+              "correspondingVar" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)/tokens",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "string"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "tokens",
+              "virtual_name" : "tokens",
+              "dataType" : "vector<string>",
+              "realType" : "vector<string>&",
+              "external" : false,
+              "correspondingVar" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)/tokens",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "string",
+              "size" : 2,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalStringDataNode",
+                "name" : "element #0",
+                "virtual_name" : "tokens_element0",
+                "dataType" : "string",
+                "realType" : "string",
+                "external" : false,
+                "correspondingVar" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)/tokens/element #0",
+                "correspondingType" : "string",
+                "value" : "1",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+                  "name" : "element #0[0]",
+                  "virtual_name" : "tokens_element0[0]",
+                  "dataType" : "char",
+                  "realType" : "char",
+                  "external" : false,
+                  "correspondingVar" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)/tokens/element #0/element #0[0]",
+                  "correspondingType" : "char",
+                  "value" : "93"
+                } ]
+              }, {
+                "type" : "com.dse.testdata.object.NormalStringDataNode",
+                "name" : "element #1",
+                "virtual_name" : "tokens_element1",
+                "dataType" : "string",
+                "realType" : "string",
+                "external" : false,
+                "correspondingVar" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)/tokens/element #1",
+                "correspondingType" : "string",
+                "value" : "3",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+                  "name" : "element #1[0]",
+                  "virtual_name" : "tokens_element1[0]",
+                  "dataType" : "char",
+                  "realType" : "char",
+                  "external" : false,
+                  "correspondingVar" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)/tokens/element #1/element #1[0]",
+                  "correspondingType" : "char",
+                  "value" : "90"
+                } ]
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_evalRPN_vector_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_evalRPN_vector_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Evaluate_Reverse_Polish_Notation.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> tokens;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode tokens */\nchar* akaRandomName918317 = new char[2];akaRandomName918317[0] = 93;akaRandomName918317[1] = '\\0';string tokens_element0=akaRandomName918317;\ntokens.push_back(tokens_element0);\nchar* akaRandomName332636 = new char[2];akaRandomName332636[0] = 90;akaRandomName332636[1] = '\\0';string tokens_element1=akaRandomName332636;\ntokens.push_back(tokens_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_evalRPN_vector_string_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->evalRPN(tokens);\nAKA_fCall++;AKA_mark(\"Return from: ./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)\");\n\n\nvector<string> EXPECTED_tokens;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Evaluate_Reverse_Polish_Notation.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> tokens;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode tokens */\nchar* akaRandomName313768 = new char[2];akaRandomName313768[0] = 93;akaRandomName313768[1] = '\\0';string tokens_element0=akaRandomName313768;\ntokens.push_back(tokens_element0);\nchar* akaRandomName795009 = new char[2];akaRandomName795009[0] = 90;akaRandomName795009[1] = '\\0';string tokens_element1=akaRandomName795009;\ntokens.push_back(tokens_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      },
+      {
+        "id" : 1,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Evaluate_Reverse_Polish_Notation.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./20/Evaluate_Reverse_Polish_Notation.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "evalRPN(vector<string>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "tokens",
+              "virtual_name" : "EXPECTED_tokens",
+              "dataType" : "vector<string>",
+              "realType" : "vector<string>&",
+              "external" : false,
+              "correspondingVar" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)/tokens",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "string"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "tokens",
+              "virtual_name" : "tokens",
+              "dataType" : "vector<string>",
+              "realType" : "vector<string>&",
+              "external" : false,
+              "correspondingVar" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)/tokens",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "string",
+              "size" : 1,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalStringDataNode",
+                "name" : "element #0",
+                "virtual_name" : "tokens_element0",
+                "dataType" : "string",
+                "realType" : "string",
+                "external" : false,
+                "correspondingVar" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)/tokens/element #0",
+                "correspondingType" : "string",
+                "value" : "2",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+                  "name" : "element #0[0]",
+                  "virtual_name" : "tokens_element0[0]",
+                  "dataType" : "char",
+                  "realType" : "char",
+                  "external" : false,
+                  "correspondingVar" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)/tokens/element #0/element #0[0]",
+                  "correspondingType" : "char",
+                  "value" : "23"
+                } ]
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_evalRPN_vector_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_evalRPN_vector_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Evaluate_Reverse_Polish_Notation.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> tokens;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode tokens */\nchar* akaRandomName959882 = new char[2];akaRandomName959882[0] = 23;akaRandomName959882[1] = '\\0';string tokens_element0=akaRandomName959882;\ntokens.push_back(tokens_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_evalRPN_vector_string_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->evalRPN(tokens);\nAKA_fCall++;AKA_mark(\"Return from: ./20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)\");\n\n\nvector<string> EXPECTED_tokens;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Evaluate_Reverse_Polish_Notation.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> tokens;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode tokens */\nchar* akaRandomName839196 = new char[2];akaRandomName839196[0] = 23;akaRandomName839196[1] = '\\0';string tokens_element0=akaRandomName839196;\ntokens.push_back(tokens_element0);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ ],
+    "fc": "class Solution { public: \tint evalRPN(vector<string> &tokens) { \t\tstack<int> operand; \t\tfor (int i = 0; i < tokens.size(); i++) \t\t{ \t\t\tif ((tokens[i][0] == '-' && tokens[i].size() > 1) \t\t\t        || (tokens[i][0] >= '0' && tokens[i][0] <= '9')) \t\t\t{ \t\t\t\toperand.push(atoi(tokens[i].c_str())); \t\t\t\tcontinue; \t\t\t} \t\t\tint op1 = operand.top(); \t\t\toperand.pop(); \t\t\tint op2 = operand.top(); \t\t\toperand.pop(); \t\t\tif (tokens[i] == \"+\") operand.push(op2 + op1); \t\t\tif (tokens[i] == \"-\") operand.push(op2 - op1); \t\t\tif (tokens[i] == \"*\") operand.push(op2 * op1); \t\t\tif (tokens[i] == \"/\") operand.push(op2 / op1); \t\t} \t\treturn operand.top(); \t}  };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/20/Evaluate_Reverse_Polish_Notation.cpp/Solution/evalRPN(vector<string>&)",
+    "f": [ ]
+  },
+  {
+    "fm": "int findDuplicate(vector<int>& nums) { \t\tint length = nums.size(); \t\t             \t\tfor(int i =0; i< length; i++) { \t\t\tif(nums[i] == i+1) { \t\t\t\tcontinue; \t\t\t} \t\t\t\t\t\t\t\t\t                 \t\t\tint oldIndex = i; \t\t\tint newIndex = nums[i]-1; \t\t\twhile(nums[oldIndex] != oldIndex +1 ) { \t\t\t\tif(nums[oldIndex] == nums[newIndex] ) { \t\t\t\t\treturn nums[oldIndex]; \t\t\t\t} \t\t\t\tint temp = nums[newIndex]; \t\t\t\tnums[newIndex] = nums[oldIndex]; \t\t\t\tnums[oldIndex] = temp; \t\t\t\t \t\t\t\tnewIndex = nums[oldIndex] -1; \t\t\t} \t\t} \t}",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Find_the_Duplicate_Number.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./20/Find_the_Duplicate_Number.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./20/Find_the_Duplicate_Number.cpp/Solution/findDuplicate(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./20/Find_the_Duplicate_Number.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Find_the_Duplicate_Number.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./20/Find_the_Duplicate_Number.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Find_the_Duplicate_Number.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./20/Find_the_Duplicate_Number.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./20/Find_the_Duplicate_Number.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "findDuplicate(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./20/Find_the_Duplicate_Number.cpp/Solution/findDuplicate(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "EXPECTED_nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./20/Find_the_Duplicate_Number.cpp/Solution/findDuplicate(vector<int>&)/nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./20/Find_the_Duplicate_Number.cpp/Solution/findDuplicate(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./20/Find_the_Duplicate_Number.cpp/Solution/findDuplicate(vector<int>&)/nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 1,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "nums_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./20/Find_the_Duplicate_Number.cpp/Solution/findDuplicate(vector<int>&)/nums/element #0",
+                "correspondingType" : "int",
+                "value" : "-923436140"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Find_the_Duplicate_Number.cpp/Solution/findDuplicate(vector<int>&)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_findDuplicate_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_findDuplicate_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Find_the_Duplicate_Number.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-923436140;\nnums.push_back(nums_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findDuplicate_vector_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findDuplicate(nums);\nAKA_fCall++;AKA_mark(\"Return from: ./20/Find_the_Duplicate_Number.cpp/Solution/findDuplicate(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Find_the_Duplicate_Number.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-923436140;\nnums.push_back(nums_element0);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ ],
+    "fc": "class Solution { public: \tint findDuplicate(vector<int>& nums) { \t\tint length = nums.size(); \t\t             \t\tfor(int i =0; i< length; i++) { \t\t\tif(nums[i] == i+1) { \t\t\t\tcontinue; \t\t\t} \t\t\t\t\t\t\t\t\t                 \t\t\tint oldIndex = i; \t\t\tint newIndex = nums[i]-1; \t\t\twhile(nums[oldIndex] != oldIndex +1 ) { \t\t\t\tif(nums[oldIndex] == nums[newIndex] ) { \t\t\t\t\treturn nums[oldIndex]; \t\t\t\t} \t\t\t\tint temp = nums[newIndex]; \t\t\t\tnums[newIndex] = nums[oldIndex]; \t\t\t\tnums[oldIndex] = temp; \t\t\t\t \t\t\t\tnewIndex = nums[oldIndex] -1; \t\t\t} \t\t} \t} };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/20/Find_the_Duplicate_Number.cpp/Solution/findDuplicate(vector<int>&)",
+    "f": [ ]
+  },
+  {
+    "fm": "int firstMissingPositive(vector<int>& nums) { \t\tint i = 0; \t\tint n = nums.size(); \t\tfor (int i = 0; i < n; i++) \t\t{ \t\t\twhile (nums[i] != i + 1) \t\t\t{ \t\t\t\tif (nums[i] <= 0 || nums[i] > n || nums[i] == nums[nums[i] - 1]) break; \t\t\t\tint temp = nums[i]; \t\t\t\tnums[i] = nums[temp - 1]; \t\t\t\tnums[temp - 1] = temp; \t\t\t} \t\t} \t\tfor (int i = 0; i < n; i++) \t\t\tif (nums[i] != i + 1) \t\t\t\treturn i + 1; \t\treturn n + 1; \t}",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "First_Missing_Positive.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./20/First_Missing_Positive.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./20/First_Missing_Positive.cpp/Solution/firstMissingPositive(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./20/First_Missing_Positive.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/First_Missing_Positive.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./20/First_Missing_Positive.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/First_Missing_Positive.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./20/First_Missing_Positive.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./20/First_Missing_Positive.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "firstMissingPositive(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./20/First_Missing_Positive.cpp/Solution/firstMissingPositive(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "EXPECTED_nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./20/First_Missing_Positive.cpp/Solution/firstMissingPositive(vector<int>&)/nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./20/First_Missing_Positive.cpp/Solution/firstMissingPositive(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./20/First_Missing_Positive.cpp/Solution/firstMissingPositive(vector<int>&)/nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 3,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "nums_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./20/First_Missing_Positive.cpp/Solution/firstMissingPositive(vector<int>&)/nums/element #0",
+                "correspondingType" : "int",
+                "value" : "-1855471353"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "nums_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./20/First_Missing_Positive.cpp/Solution/firstMissingPositive(vector<int>&)/nums/element #1",
+                "correspondingType" : "int",
+                "value" : "-1336249172"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "nums_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./20/First_Missing_Positive.cpp/Solution/firstMissingPositive(vector<int>&)/nums/element #2",
+                "correspondingType" : "int",
+                "value" : "69414847"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/First_Missing_Positive.cpp/Solution/firstMissingPositive(vector<int>&)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_firstMissingPositive_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_firstMissingPositive_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/First_Missing_Positive.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-1855471353;\nnums.push_back(nums_element0);\nint nums_element1=-1336249172;\nnums.push_back(nums_element1);\nint nums_element2=69414847;\nnums.push_back(nums_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_firstMissingPositive_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->firstMissingPositive(nums);\nAKA_fCall++;AKA_mark(\"Return from: ./20/First_Missing_Positive.cpp/Solution/firstMissingPositive(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/First_Missing_Positive.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-1855471353;\nnums.push_back(nums_element0);\nint nums_element1=-1336249172;\nnums.push_back(nums_element1);\nint nums_element2=69414847;\nnums.push_back(nums_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ ],
+    "fc": "class Solution { public: \tint firstMissingPositive(vector<int>& nums) { \t\tint i = 0; \t\tint n = nums.size(); \t\tfor (int i = 0; i < n; i++) \t\t{ \t\t\twhile (nums[i] != i + 1) \t\t\t{ \t\t\t\tif (nums[i] <= 0 || nums[i] > n || nums[i] == nums[nums[i] - 1]) break; \t\t\t\tint temp = nums[i]; \t\t\t\tnums[i] = nums[temp - 1]; \t\t\t\tnums[temp - 1] = temp; \t\t\t} \t\t} \t\tfor (int i = 0; i < n; i++) \t\t\tif (nums[i] != i + 1) \t\t\t\treturn i + 1; \t\treturn n + 1; \t} };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/20/First_Missing_Positive.cpp/Solution/firstMissingPositive(vector<int>&)",
+    "f": [ ]
+  },
+  {
+    "fm": "void flatten(TreeNode *root) { \t\tif (root == NULL) return;  \t\tTreeNode* right = root->right; \t\tif (lastVisitedNode != NULL) \t\t{ \t\t\tlastVisitedNode->left = NULL; \t\t\tlastVisitedNode->right = root; \t\t} \t\tlastVisitedNode = root; \t\tflatten(root->left); \t\tflatten(right); \t}",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Flatten_Binary_Tree_to_Linked_List.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/flatten(TreeNode*)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                }, {
+                  "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                  "name" : "lastVisitedNode",
+                  "virtual_name" : "AKA_INSTANCE___Solution->lastVisitedNode",
+                  "dataType" : "TreeNode*",
+                  "realType" : "TreeNode*",
+                  "external" : false,
+                  "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/lastVisitedNode",
+                  "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                  "level" : 1,
+                  "size" : 3,
+                  "children" : [ {
+                    "type" : "com.dse.testdata.object.StructDataNode",
+                    "name" : "lastVisitedNode[0]",
+                    "virtual_name" : "AKA_INSTANCE___Solution->lastVisitedNode[0]",
+                    "dataType" : "TreeNode",
+                    "realType" : "TreeNode",
+                    "external" : false,
+                    "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/lastVisitedNode/lastVisitedNode[0]",
+                    "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.SubStructDataNode",
+                      "name" : "lastVisitedNode",
+                      "virtual_name" : "AKA_INSTANCE___Solution->lastVisitedNode[0]",
+                      "dataType" : "::TreeNode",
+                      "realType" : "::TreeNode",
+                      "external" : false,
+                      "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/lastVisitedNode/lastVisitedNode",
+                      "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                      "rawType" : "::TreeNode",
+                      "selectedConstructor" : "TreeNode(int)",
+                      "variableType" : "::TreeNode",
+                      "children" : [ {
+                        "type" : "com.dse.testdata.object.ConstructorDataNode",
+                        "name" : "TreeNode(int)",
+                        "virtual_name" : "AKA_INSTANCE___Solution->lastVisitedNode[0]",
+                        "dataType" : "::TreeNode",
+                        "realType" : "::TreeNode",
+                        "functionNode" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)",
+                        "children" : [ {
+                          "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                          "name" : "x",
+                          "virtual_name" : "AKA_INSTANCE___Solution_lastVisitedNode0_x",
+                          "dataType" : "int",
+                          "realType" : "int",
+                          "external" : false,
+                          "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)/x",
+                          "correspondingType" : "int",
+                          "value" : "1114795889"
+                        } ]
+                      }, {
+                        "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                        "name" : "val",
+                        "virtual_name" : "AKA_INSTANCE___Solution->lastVisitedNode[0].val",
+                        "dataType" : "int",
+                        "realType" : "int",
+                        "external" : false,
+                        "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/val",
+                        "correspondingType" : "int",
+                        "value" : "null"
+                      }, {
+                        "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                        "name" : "left",
+                        "virtual_name" : "AKA_INSTANCE___Solution->lastVisitedNode[0].left",
+                        "dataType" : "TreeNode*",
+                        "realType" : "TreeNode*",
+                        "external" : false,
+                        "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/left",
+                        "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                        "level" : 1
+                      }, {
+                        "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                        "name" : "right",
+                        "virtual_name" : "AKA_INSTANCE___Solution->lastVisitedNode[0].right",
+                        "dataType" : "TreeNode*",
+                        "realType" : "TreeNode*",
+                        "external" : false,
+                        "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/right",
+                        "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                        "level" : 1
+                      } ]
+                    } ]
+                  }, {
+                    "type" : "com.dse.testdata.object.StructDataNode",
+                    "name" : "lastVisitedNode[1]",
+                    "virtual_name" : "AKA_INSTANCE___Solution->lastVisitedNode[1]",
+                    "dataType" : "TreeNode",
+                    "realType" : "TreeNode",
+                    "external" : false,
+                    "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/lastVisitedNode/lastVisitedNode[1]",
+                    "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.SubStructDataNode",
+                      "name" : "lastVisitedNode",
+                      "virtual_name" : "AKA_INSTANCE___Solution->lastVisitedNode[1]",
+                      "dataType" : "::TreeNode",
+                      "realType" : "::TreeNode",
+                      "external" : false,
+                      "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/lastVisitedNode/lastVisitedNode",
+                      "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                      "rawType" : "::TreeNode",
+                      "selectedConstructor" : "TreeNode(int)",
+                      "variableType" : "::TreeNode",
+                      "children" : [ {
+                        "type" : "com.dse.testdata.object.ConstructorDataNode",
+                        "name" : "TreeNode(int)",
+                        "virtual_name" : "AKA_INSTANCE___Solution->lastVisitedNode[1]",
+                        "dataType" : "::TreeNode",
+                        "realType" : "::TreeNode",
+                        "functionNode" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)",
+                        "children" : [ {
+                          "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                          "name" : "x",
+                          "virtual_name" : "AKA_INSTANCE___Solution_lastVisitedNode1_x",
+                          "dataType" : "int",
+                          "realType" : "int",
+                          "external" : false,
+                          "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)/x",
+                          "correspondingType" : "int",
+                          "value" : "-1993601462"
+                        } ]
+                      }, {
+                        "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                        "name" : "val",
+                        "virtual_name" : "AKA_INSTANCE___Solution->lastVisitedNode[1].val",
+                        "dataType" : "int",
+                        "realType" : "int",
+                        "external" : false,
+                        "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/val",
+                        "correspondingType" : "int",
+                        "value" : "null"
+                      }, {
+                        "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                        "name" : "left",
+                        "virtual_name" : "AKA_INSTANCE___Solution->lastVisitedNode[1].left",
+                        "dataType" : "TreeNode*",
+                        "realType" : "TreeNode*",
+                        "external" : false,
+                        "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/left",
+                        "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                        "level" : 1
+                      }, {
+                        "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                        "name" : "right",
+                        "virtual_name" : "AKA_INSTANCE___Solution->lastVisitedNode[1].right",
+                        "dataType" : "TreeNode*",
+                        "realType" : "TreeNode*",
+                        "external" : false,
+                        "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/right",
+                        "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                        "level" : 1
+                      } ]
+                    } ]
+                  }, {
+                    "type" : "com.dse.testdata.object.StructDataNode",
+                    "name" : "lastVisitedNode[2]",
+                    "virtual_name" : "AKA_INSTANCE___Solution->lastVisitedNode[2]",
+                    "dataType" : "TreeNode",
+                    "realType" : "TreeNode",
+                    "external" : false,
+                    "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/lastVisitedNode/lastVisitedNode[2]",
+                    "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.SubStructDataNode",
+                      "name" : "lastVisitedNode",
+                      "virtual_name" : "AKA_INSTANCE___Solution->lastVisitedNode[2]",
+                      "dataType" : "::TreeNode",
+                      "realType" : "::TreeNode",
+                      "external" : false,
+                      "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/lastVisitedNode/lastVisitedNode",
+                      "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                      "rawType" : "::TreeNode",
+                      "selectedConstructor" : "TreeNode(int)",
+                      "variableType" : "::TreeNode",
+                      "children" : [ {
+                        "type" : "com.dse.testdata.object.ConstructorDataNode",
+                        "name" : "TreeNode(int)",
+                        "virtual_name" : "AKA_INSTANCE___Solution->lastVisitedNode[2]",
+                        "dataType" : "::TreeNode",
+                        "realType" : "::TreeNode",
+                        "functionNode" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)",
+                        "children" : [ {
+                          "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                          "name" : "x",
+                          "virtual_name" : "AKA_INSTANCE___Solution_lastVisitedNode2_x",
+                          "dataType" : "int",
+                          "realType" : "int",
+                          "external" : false,
+                          "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)/x",
+                          "correspondingType" : "int",
+                          "value" : "-2135627499"
+                        } ]
+                      }, {
+                        "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                        "name" : "val",
+                        "virtual_name" : "AKA_INSTANCE___Solution->lastVisitedNode[2].val",
+                        "dataType" : "int",
+                        "realType" : "int",
+                        "external" : false,
+                        "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/val",
+                        "correspondingType" : "int",
+                        "value" : "null"
+                      }, {
+                        "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                        "name" : "left",
+                        "virtual_name" : "AKA_INSTANCE___Solution->lastVisitedNode[2].left",
+                        "dataType" : "TreeNode*",
+                        "realType" : "TreeNode*",
+                        "external" : false,
+                        "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/left",
+                        "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                        "level" : 1
+                      }, {
+                        "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                        "name" : "right",
+                        "virtual_name" : "AKA_INSTANCE___Solution->lastVisitedNode[2].right",
+                        "dataType" : "TreeNode*",
+                        "realType" : "TreeNode*",
+                        "external" : false,
+                        "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/right",
+                        "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                        "level" : 1
+                      } ]
+                    } ]
+                  } ]
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "flatten(TreeNode*)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "void",
+            "realType" : "void",
+            "functionNode" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/flatten(TreeNode*)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.PointerStructureDataNode",
+              "name" : "root",
+              "virtual_name" : "EXPECTED_root",
+              "dataType" : "TreeNode*",
+              "realType" : "TreeNode*",
+              "external" : false,
+              "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/flatten(TreeNode*)/root",
+              "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+              "level" : 1
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/flatten(TreeNode*)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.PointerStructureDataNode",
+              "name" : "root",
+              "virtual_name" : "root",
+              "dataType" : "TreeNode*",
+              "realType" : "TreeNode*",
+              "external" : false,
+              "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/flatten(TreeNode*)/root",
+              "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+              "level" : 1,
+              "size" : 2,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.StructDataNode",
+                "name" : "root[0]",
+                "virtual_name" : "root[0]",
+                "dataType" : "TreeNode",
+                "realType" : "TreeNode",
+                "external" : false,
+                "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/flatten(TreeNode*)/root/root[0]",
+                "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.SubStructDataNode",
+                  "name" : "root",
+                  "virtual_name" : "root[0]",
+                  "dataType" : "::TreeNode",
+                  "realType" : "::TreeNode",
+                  "external" : false,
+                  "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/flatten(TreeNode*)/root/root",
+                  "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                  "rawType" : "::TreeNode",
+                  "selectedConstructor" : "TreeNode(int)",
+                  "variableType" : "::TreeNode",
+                  "children" : [ {
+                    "type" : "com.dse.testdata.object.ConstructorDataNode",
+                    "name" : "TreeNode(int)",
+                    "virtual_name" : "root[0]",
+                    "dataType" : "::TreeNode",
+                    "realType" : "::TreeNode",
+                    "functionNode" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)",
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "x",
+                      "virtual_name" : "root0_x",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)/x",
+                      "correspondingType" : "int",
+                      "value" : "99881140"
+                    } ]
+                  }, {
+                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                    "name" : "val",
+                    "virtual_name" : "root[0].val",
+                    "dataType" : "int",
+                    "realType" : "int",
+                    "external" : false,
+                    "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/val",
+                    "correspondingType" : "int",
+                    "value" : "null"
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "left",
+                    "virtual_name" : "root[0].left",
+                    "dataType" : "TreeNode*",
+                    "realType" : "TreeNode*",
+                    "external" : false,
+                    "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/left",
+                    "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                    "level" : 1,
+                    "size" : 2,
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.StructDataNode",
+                      "name" : "left[0]",
+                      "virtual_name" : "root[0].left[0]",
+                      "dataType" : "TreeNode",
+                      "realType" : "TreeNode",
+                      "external" : false,
+                      "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/left/left[0]",
+                      "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                      "children" : [ {
+                        "type" : "com.dse.testdata.object.SubStructDataNode",
+                        "name" : "left",
+                        "virtual_name" : "root[0].left[0]",
+                        "dataType" : "::TreeNode",
+                        "realType" : "::TreeNode",
+                        "external" : false,
+                        "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/left/left",
+                        "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                        "rawType" : "::TreeNode",
+                        "selectedConstructor" : "TreeNode(int)",
+                        "variableType" : "::TreeNode",
+                        "children" : [ {
+                          "type" : "com.dse.testdata.object.ConstructorDataNode",
+                          "name" : "TreeNode(int)",
+                          "virtual_name" : "root[0].left[0]",
+                          "dataType" : "::TreeNode",
+                          "realType" : "::TreeNode",
+                          "functionNode" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)",
+                          "children" : [ {
+                            "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                            "name" : "x",
+                            "virtual_name" : "root0_left0_x",
+                            "dataType" : "int",
+                            "realType" : "int",
+                            "external" : false,
+                            "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)/x",
+                            "correspondingType" : "int",
+                            "value" : "293649495"
+                          } ]
+                        }, {
+                          "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                          "name" : "val",
+                          "virtual_name" : "root[0].left[0].val",
+                          "dataType" : "int",
+                          "realType" : "int",
+                          "external" : false,
+                          "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/val",
+                          "correspondingType" : "int",
+                          "value" : "null"
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "left",
+                          "virtual_name" : "root[0].left[0].left",
+                          "dataType" : "TreeNode*",
+                          "realType" : "TreeNode*",
+                          "external" : false,
+                          "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/left",
+                          "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                          "level" : 1
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "right",
+                          "virtual_name" : "root[0].left[0].right",
+                          "dataType" : "TreeNode*",
+                          "realType" : "TreeNode*",
+                          "external" : false,
+                          "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/right",
+                          "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                          "level" : 1
+                        } ]
+                      } ]
+                    }, {
+                      "type" : "com.dse.testdata.object.StructDataNode",
+                      "name" : "left[1]",
+                      "virtual_name" : "root[0].left[1]",
+                      "dataType" : "TreeNode",
+                      "realType" : "TreeNode",
+                      "external" : false,
+                      "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/left/left[1]",
+                      "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                      "children" : [ {
+                        "type" : "com.dse.testdata.object.SubStructDataNode",
+                        "name" : "left",
+                        "virtual_name" : "root[0].left[1]",
+                        "dataType" : "::TreeNode",
+                        "realType" : "::TreeNode",
+                        "external" : false,
+                        "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/left/left",
+                        "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                        "rawType" : "::TreeNode",
+                        "selectedConstructor" : "TreeNode(int)",
+                        "variableType" : "::TreeNode",
+                        "children" : [ {
+                          "type" : "com.dse.testdata.object.ConstructorDataNode",
+                          "name" : "TreeNode(int)",
+                          "virtual_name" : "root[0].left[1]",
+                          "dataType" : "::TreeNode",
+                          "realType" : "::TreeNode",
+                          "functionNode" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)",
+                          "children" : [ {
+                            "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                            "name" : "x",
+                            "virtual_name" : "root0_left1_x",
+                            "dataType" : "int",
+                            "realType" : "int",
+                            "external" : false,
+                            "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)/x",
+                            "correspondingType" : "int",
+                            "value" : "0"
+                          } ]
+                        }, {
+                          "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                          "name" : "val",
+                          "virtual_name" : "root[0].left[1].val",
+                          "dataType" : "int",
+                          "realType" : "int",
+                          "external" : false,
+                          "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/val",
+                          "correspondingType" : "int",
+                          "value" : "null"
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "left",
+                          "virtual_name" : "root[0].left[1].left",
+                          "dataType" : "TreeNode*",
+                          "realType" : "TreeNode*",
+                          "external" : false,
+                          "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/left",
+                          "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                          "level" : 1
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "right",
+                          "virtual_name" : "root[0].left[1].right",
+                          "dataType" : "TreeNode*",
+                          "realType" : "TreeNode*",
+                          "external" : false,
+                          "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/right",
+                          "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                          "level" : 1
+                        } ]
+                      } ]
+                    } ]
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "right",
+                    "virtual_name" : "root[0].right",
+                    "dataType" : "TreeNode*",
+                    "realType" : "TreeNode*",
+                    "external" : false,
+                    "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/right",
+                    "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                    "level" : 1
+                  } ]
+                } ]
+              }, {
+                "type" : "com.dse.testdata.object.StructDataNode",
+                "name" : "root[1]",
+                "virtual_name" : "root[1]",
+                "dataType" : "TreeNode",
+                "realType" : "TreeNode",
+                "external" : false,
+                "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/flatten(TreeNode*)/root/root[1]",
+                "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.SubStructDataNode",
+                  "name" : "root",
+                  "virtual_name" : "root[1]",
+                  "dataType" : "::TreeNode",
+                  "realType" : "::TreeNode",
+                  "external" : false,
+                  "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/flatten(TreeNode*)/root/root",
+                  "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                  "rawType" : "::TreeNode",
+                  "selectedConstructor" : "TreeNode(int)",
+                  "variableType" : "::TreeNode",
+                  "children" : [ {
+                    "type" : "com.dse.testdata.object.ConstructorDataNode",
+                    "name" : "TreeNode(int)",
+                    "virtual_name" : "root[1]",
+                    "dataType" : "::TreeNode",
+                    "realType" : "::TreeNode",
+                    "functionNode" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)",
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "x",
+                      "virtual_name" : "root1_x",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)/x",
+                      "correspondingType" : "int",
+                      "value" : "1992228335"
+                    } ]
+                  }, {
+                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                    "name" : "val",
+                    "virtual_name" : "root[1].val",
+                    "dataType" : "int",
+                    "realType" : "int",
+                    "external" : false,
+                    "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/val",
+                    "correspondingType" : "int",
+                    "value" : "null"
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "left",
+                    "virtual_name" : "root[1].left",
+                    "dataType" : "TreeNode*",
+                    "realType" : "TreeNode*",
+                    "external" : false,
+                    "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/left",
+                    "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                    "level" : 1
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "right",
+                    "virtual_name" : "root[1].right",
+                    "dataType" : "TreeNode*",
+                    "realType" : "TreeNode*",
+                    "external" : false,
+                    "correspondingVar" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/right",
+                    "correspondingType" : "./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode",
+                    "level" : 1
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_flatten_TreeNodemul_random_0(void) {\n{\nAKA_test_case_name=\"Solution_flatten_TreeNodemul_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Flatten_Binary_Tree_to_Linked_List.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* PointerStructureDataNode lastVisitedNode */\nstd::vector<TreeNode*> AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode;\n/* SubStructDataNode lastVisitedNode */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint AKA_INSTANCE___Solution_lastVisitedNode0_x=1114795889;\nAKA_mark(\"Calling: ./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)|ROOT/Flatten_Binary_Tree_to_Linked_List.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/lastVisitedNode/lastVisitedNode[0]/lastVisitedNode/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_0 = new ::TreeNode(AKA_INSTANCE___Solution_lastVisitedNode0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_0).right;\nAKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode.push_back(AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_0);\n/* SubStructDataNode lastVisitedNode */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint AKA_INSTANCE___Solution_lastVisitedNode1_x=-1993601462;\nAKA_mark(\"Calling: ./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)|ROOT/Flatten_Binary_Tree_to_Linked_List.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/lastVisitedNode/lastVisitedNode[1]/lastVisitedNode/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_1 = new ::TreeNode(AKA_INSTANCE___Solution_lastVisitedNode1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_1).right;\nAKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode.push_back(AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_1);\n/* SubStructDataNode lastVisitedNode */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint AKA_INSTANCE___Solution_lastVisitedNode2_x=-2135627499;\nAKA_mark(\"Calling: ./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)|ROOT/Flatten_Binary_Tree_to_Linked_List.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/lastVisitedNode/lastVisitedNode[2]/lastVisitedNode/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_2 = new ::TreeNode(AKA_INSTANCE___Solution_lastVisitedNode2_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_2).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_2).right;\nAKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode.push_back(AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_2);\nAKA_INSTANCE___Solution->lastVisitedNode = AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode[0];\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=99881140;\nAKA_mark(\"Calling: ./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)|ROOT/Flatten_Binary_Tree_to_Linked_List.cpp/flatten(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root_0_DOT_left;\n/* SubStructDataNode left */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_left0_x=293649495;\nAKA_mark(\"Calling: ./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)|ROOT/Flatten_Binary_Tree_to_Linked_List.cpp/flatten(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/left/left[0]/left/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_left_0 = new ::TreeNode(root0_left0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).right;\nAKA_VECTOR_INIT_root_0_DOT_left.push_back(AKA_VECTOR_INIT_root_0_DOT_left_0);\n/* SubStructDataNode left */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_left1_x=0;\nAKA_mark(\"Calling: ./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)|ROOT/Flatten_Binary_Tree_to_Linked_List.cpp/flatten(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/left/left[1]/left/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_left_1 = new ::TreeNode(root0_left1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_left_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_left_1).right;\nAKA_VECTOR_INIT_root_0_DOT_left.push_back(AKA_VECTOR_INIT_root_0_DOT_left_1);\n(*AKA_VECTOR_INIT_root_0).left = AKA_VECTOR_INIT_root_0_DOT_left[0];\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=1992228335;\nAKA_mark(\"Calling: ./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)|ROOT/Flatten_Binary_Tree_to_Linked_List.cpp/flatten(TreeNode*)/root/AKA_VECTOR_INIT_root_1/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_flatten_TreeNodemul_random_0\");AKA_INSTANCE___Solution->flatten(root);\nAKA_fCall++;AKA_mark(\"Return from: ./20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/flatten(TreeNode*)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Flatten_Binary_Tree_to_Linked_List.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* PointerStructureDataNode lastVisitedNode */\nstd::vector<TreeNode*> AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode;\n/* SubStructDataNode lastVisitedNode */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint AKA_INSTANCE___Solution_lastVisitedNode0_x=1114795889;\nAKA_mark(\"Calling: ./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)|ROOT/Flatten_Binary_Tree_to_Linked_List.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/lastVisitedNode/lastVisitedNode[0]/lastVisitedNode/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_0 = new ::TreeNode(AKA_INSTANCE___Solution_lastVisitedNode0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_0).right;\nAKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode.push_back(AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_0);\n/* SubStructDataNode lastVisitedNode */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint AKA_INSTANCE___Solution_lastVisitedNode1_x=-1993601462;\nAKA_mark(\"Calling: ./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)|ROOT/Flatten_Binary_Tree_to_Linked_List.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/lastVisitedNode/lastVisitedNode[1]/lastVisitedNode/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_1 = new ::TreeNode(AKA_INSTANCE___Solution_lastVisitedNode1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_1).right;\nAKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode.push_back(AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_1);\n/* SubStructDataNode lastVisitedNode */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint AKA_INSTANCE___Solution_lastVisitedNode2_x=-2135627499;\nAKA_mark(\"Calling: ./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)|ROOT/Flatten_Binary_Tree_to_Linked_List.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/lastVisitedNode/lastVisitedNode[2]/lastVisitedNode/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_2 = new ::TreeNode(AKA_INSTANCE___Solution_lastVisitedNode2_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_2).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_2).right;\nAKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode.push_back(AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode_2);\nAKA_INSTANCE___Solution->lastVisitedNode = AKA_VECTOR_INIT_AKA_INSTANCE___Solution_POINT_TO_lastVisitedNode[0];\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=99881140;\nAKA_mark(\"Calling: ./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)|ROOT/Flatten_Binary_Tree_to_Linked_List.cpp/flatten(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root_0_DOT_left;\n/* SubStructDataNode left */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_left0_x=293649495;\nAKA_mark(\"Calling: ./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)|ROOT/Flatten_Binary_Tree_to_Linked_List.cpp/flatten(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/left/left[0]/left/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_left_0 = new ::TreeNode(root0_left0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).right;\nAKA_VECTOR_INIT_root_0_DOT_left.push_back(AKA_VECTOR_INIT_root_0_DOT_left_0);\n/* SubStructDataNode left */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_left1_x=0;\nAKA_mark(\"Calling: ./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)|ROOT/Flatten_Binary_Tree_to_Linked_List.cpp/flatten(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/left/left[1]/left/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_left_1 = new ::TreeNode(root0_left1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_left_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_left_1).right;\nAKA_VECTOR_INIT_root_0_DOT_left.push_back(AKA_VECTOR_INIT_root_0_DOT_left_1);\n(*AKA_VECTOR_INIT_root_0).left = AKA_VECTOR_INIT_root_0_DOT_left[0];\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=1992228335;\nAKA_mark(\"Calling: ./20/Flatten_Binary_Tree_to_Linked_List.cpp/TreeNode/TreeNode(int)|ROOT/Flatten_Binary_Tree_to_Linked_List.cpp/flatten(TreeNode*)/root/AKA_VECTOR_INIT_root_1/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ "void flatten(TreeNode *root) {\n\t\tif (root == NULL) return;\n\n\t\tTreeNode* right = root->right;\n\t\tif (lastVisitedNode != NULL)\n\t\t{\n\t\t\tlastVisitedNode->left = NULL;\n\t\t\tlastVisitedNode->right = root;\n\t\t}\n\t\tlastVisitedNode = root;\n\t\tflatten(root->left);\n\t\tflatten(right);\n\t}", "void flatten(TreeNode *root) {\n\t\tif (root == NULL) return;\n\n\t\tTreeNode* right = root->right;\n\t\tif (lastVisitedNode != NULL)\n\t\t{\n\t\t\tlastVisitedNode->left = NULL;\n\t\t\tlastVisitedNode->right = root;\n\t\t}\n\t\tlastVisitedNode = root;\n\t\tflatten(root->left);\n\t\tflatten(right);\n\t}" ],
+    "fc": "class Solution { public: \tTreeNode *lastVisitedNode = NULL; \tvoid flatten(TreeNode *root) { \t\tif (root == NULL) return;  \t\tTreeNode* right = root->right; \t\tif (lastVisitedNode != NULL) \t\t{ \t\t\tlastVisitedNode->left = NULL; \t\t\tlastVisitedNode->right = root; \t\t} \t\tlastVisitedNode = root; \t\tflatten(root->left); \t\tflatten(right); \t} };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/20/Flatten_Binary_Tree_to_Linked_List.cpp/Solution/flatten(TreeNode*)",
+    "f": [ "TreeNode *lastVisitedNode = NULL;" ]
+  },
+  {
+    "fm": "int canCompleteCircuit(vector<int> &gas, vector<int> &cost) { \t\tvector<int> diff(gas.size()); \t\tfor (int i = 0; i < gas.size(); ++i) \t\t{ \t\t\tdiff[i] = gas[i] - cost[i]; \t\t} \t\tint leftGas = 0, sum = 0, startnode = 0; \t\tfor (int i = 0; i < gas.size(); ++i) \t\t{ \t\t\tleftGas += diff[i]; \t\t\tsum += diff[i]; \t\t\tif (sum < 0) //if less than 0, skip it \t\t\t{ \t\t\t\tstartnode = i + 1; \t\t\t\tsum = 0; \t\t\t} \t\t} \t\tif (leftGas < 0) \t\t\treturn -1; \t\telse \t\t\treturn startnode; \t}",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Gas_Station.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./20/Gas_Station.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./20/Gas_Station.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Gas_Station.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./20/Gas_Station.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Gas_Station.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./20/Gas_Station.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./20/Gas_Station.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "canCompleteCircuit(vector<int>&,vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "gas",
+              "virtual_name" : "EXPECTED_gas",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)/gas",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "cost",
+              "virtual_name" : "EXPECTED_cost",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)/cost",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "gas",
+              "virtual_name" : "gas",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)/gas",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 1,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "gas_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)/gas/element #0",
+                "correspondingType" : "int",
+                "value" : "937289850"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "cost",
+              "virtual_name" : "cost",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)/cost",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 2,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "cost_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)/cost/element #0",
+                "correspondingType" : "int",
+                "value" : "-1833201190"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "cost_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)/cost/element #1",
+                "correspondingType" : "int",
+                "value" : "1196860001"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_canCompleteCircuit_vector_int_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_canCompleteCircuit_vector_int_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Gas_Station.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> gas;\nvector<int> cost;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode gas */\nint gas_element0=937289850;\ngas.push_back(gas_element0);\n/* VectorDataNode cost */\nint cost_element0=-1833201190;\ncost.push_back(cost_element0);\nint cost_element1=1196860001;\ncost.push_back(cost_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_canCompleteCircuit_vector_int_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->canCompleteCircuit(gas,cost);\nAKA_fCall++;AKA_mark(\"Return from: ./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)\");\n\n\nvector<int> EXPECTED_gas;\n\nvector<int> EXPECTED_cost;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Gas_Station.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> gas;\nvector<int> cost;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode gas */\nint gas_element0=937289850;\ngas.push_back(gas_element0);\n/* VectorDataNode cost */\nint cost_element0=-1833201190;\ncost.push_back(cost_element0);\nint cost_element1=1196860001;\ncost.push_back(cost_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      },
+      {
+        "id" : 1,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Gas_Station.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./20/Gas_Station.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./20/Gas_Station.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Gas_Station.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./20/Gas_Station.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Gas_Station.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./20/Gas_Station.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./20/Gas_Station.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "canCompleteCircuit(vector<int>&,vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "gas",
+              "virtual_name" : "EXPECTED_gas",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)/gas",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "cost",
+              "virtual_name" : "EXPECTED_cost",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)/cost",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "gas",
+              "virtual_name" : "gas",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)/gas",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 3,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "gas_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)/gas/element #0",
+                "correspondingType" : "int",
+                "value" : "-285605742"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "gas_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)/gas/element #1",
+                "correspondingType" : "int",
+                "value" : "1570242937"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "gas_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)/gas/element #2",
+                "correspondingType" : "int",
+                "value" : "1504881029"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "cost",
+              "virtual_name" : "cost",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)/cost",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 1,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "cost_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)/cost/element #0",
+                "correspondingType" : "int",
+                "value" : "1249469597"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_canCompleteCircuit_vector_int_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_canCompleteCircuit_vector_int_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Gas_Station.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> gas;\nvector<int> cost;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode gas */\nint gas_element0=-285605742;\ngas.push_back(gas_element0);\nint gas_element1=1570242937;\ngas.push_back(gas_element1);\nint gas_element2=1504881029;\ngas.push_back(gas_element2);\n/* VectorDataNode cost */\nint cost_element0=1249469597;\ncost.push_back(cost_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_canCompleteCircuit_vector_int_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->canCompleteCircuit(gas,cost);\nAKA_fCall++;AKA_mark(\"Return from: ./20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)\");\n\n\nvector<int> EXPECTED_gas;\n\nvector<int> EXPECTED_cost;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Gas_Station.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> gas;\nvector<int> cost;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode gas */\nint gas_element0=-285605742;\ngas.push_back(gas_element0);\nint gas_element1=1570242937;\ngas.push_back(gas_element1);\nint gas_element2=1504881029;\ngas.push_back(gas_element2);\n/* VectorDataNode cost */\nint cost_element0=1249469597;\ncost.push_back(cost_element0);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ ],
+    "fc": "class Solution { public: \tint canCompleteCircuit(vector<int> &gas, vector<int> &cost) { \t\tvector<int> diff(gas.size()); \t\tfor (int i = 0; i < gas.size(); ++i) \t\t{ \t\t\tdiff[i] = gas[i] - cost[i]; \t\t} \t\tint leftGas = 0, sum = 0, startnode = 0; \t\tfor (int i = 0; i < gas.size(); ++i) \t\t{ \t\t\tleftGas += diff[i]; \t\t\tsum += diff[i]; \t\t\tif (sum < 0) //if less than 0, skip it \t\t\t{ \t\t\t\tstartnode = i + 1; \t\t\t\tsum = 0; \t\t\t} \t\t} \t\tif (leftGas < 0) \t\t\treturn -1; \t\telse \t\t\treturn startnode; \t} };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/20/Gas_Station.cpp/Solution/canCompleteCircuit(vector<int>&,vector<int>&)",
+    "f": [ ]
+  },
+  {
+    "fm": "vector<string> generateParenthesis(int n) { \t\tvector<string> result; \t\tstring sample; \t\tif (n != 0) \t\t\tCombinationPar(result, sample, 0, n, 0, 0); \t\treturn result; \t}",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Generate_Parentheses.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./20/Generate_Parentheses.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./20/Generate_Parentheses.cpp/Solution/generateParenthesis(int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./20/Generate_Parentheses.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Generate_Parentheses.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./20/Generate_Parentheses.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Generate_Parentheses.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./20/Generate_Parentheses.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./20/Generate_Parentheses.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "generateParenthesis(int)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "vector<string>",
+            "realType" : "vector<string>",
+            "functionNode" : "./20/Generate_Parentheses.cpp/Solution/generateParenthesis(int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "EXPECTED_n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Generate_Parentheses.cpp/Solution/generateParenthesis(int)/n",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./20/Generate_Parentheses.cpp/Solution/generateParenthesis(int)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Generate_Parentheses.cpp/Solution/generateParenthesis(int)/n",
+              "correspondingType" : "int",
+              "value" : "-1231405852"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "vector<string>",
+              "realType" : "vector<string>",
+              "external" : false,
+              "correspondingVar" : "./20/Generate_Parentheses.cpp/Solution/generateParenthesis(int)/RETURN",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "string"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_generateParenthesis_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_generateParenthesis_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Generate_Parentheses.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=-1231405852;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_generateParenthesis_int_random_1\");vector<string> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->generateParenthesis(n);\nAKA_fCall++;AKA_mark(\"Return from: ./20/Generate_Parentheses.cpp/Solution/generateParenthesis(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Generate_Parentheses.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=-1231405852;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n",
+        "isAutomated" : true
+      },
+      {
+        "id" : 1,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Generate_Parentheses.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./20/Generate_Parentheses.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./20/Generate_Parentheses.cpp/Solution/generateParenthesis(int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./20/Generate_Parentheses.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Generate_Parentheses.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./20/Generate_Parentheses.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./20/Generate_Parentheses.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./20/Generate_Parentheses.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./20/Generate_Parentheses.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "generateParenthesis(int)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "vector<string>",
+            "realType" : "vector<string>",
+            "functionNode" : "./20/Generate_Parentheses.cpp/Solution/generateParenthesis(int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "EXPECTED_n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Generate_Parentheses.cpp/Solution/generateParenthesis(int)/n",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./20/Generate_Parentheses.cpp/Solution/generateParenthesis(int)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./20/Generate_Parentheses.cpp/Solution/generateParenthesis(int)/n",
+              "correspondingType" : "int",
+              "value" : "-1460989155"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "vector<string>",
+              "realType" : "vector<string>",
+              "external" : false,
+              "correspondingVar" : "./20/Generate_Parentheses.cpp/Solution/generateParenthesis(int)/RETURN",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "string"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_generateParenthesis_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_generateParenthesis_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Generate_Parentheses.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=-1460989155;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_generateParenthesis_int_random_0\");vector<string> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->generateParenthesis(n);\nAKA_fCall++;AKA_mark(\"Return from: ./20/Generate_Parentheses.cpp/Solution/generateParenthesis(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Generate_Parentheses.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=-1460989155;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ "void CombinationPar(vector<string>& result, string& sample,\n\t                    int deep, int n, int leftNum, int rightNum)\n\t{\n\t\tif (deep == 2 * n)\n\t\t{\n\t\t\tresult.push_back(sample);\n\t\t\treturn;\n\t\t}\n\t\tif (leftNum < n)\n\t\t{\n\t\t\tsample.push_back('(');\n\t\t\tCombinationPar(\n\t\t\t    result, sample, deep + 1, n, leftNum + 1, rightNum);\n\t\t\tsample.resize(sample.size() - 1);\n\t\t}\n\t\tif (rightNum < leftNum)\n\t\t{\n\t\t\tsample.push_back(')');\n\t\t\tCombinationPar(\n\t\t\t    result, sample, deep + 1, n, leftNum, rightNum + 1);\n\t\t\tsample.resize(sample.size() - 1);\n\t\t}\n\t}" ],
+    "fc": "class Solution { public: \tvoid CombinationPar(vector<string>& result, string& sample, \t                    int deep, int n, int leftNum, int rightNum) \t{ \t\tif (deep == 2 * n) \t\t{ \t\t\tresult.push_back(sample); \t\t\treturn; \t\t} \t\tif (leftNum < n) \t\t{ \t\t\tsample.push_back('('); \t\t\tCombinationPar( \t\t\t    result, sample, deep + 1, n, leftNum + 1, rightNum); \t\t\tsample.resize(sample.size() - 1); \t\t} \t\tif (rightNum < leftNum) \t\t{ \t\t\tsample.push_back(')'); \t\t\tCombinationPar( \t\t\t    result, sample, deep + 1, n, leftNum, rightNum + 1); \t\t\tsample.resize(sample.size() - 1); \t\t} \t}  \tvector<string> generateParenthesis(int n) { \t\tvector<string> result; \t\tstring sample; \t\tif (n != 0) \t\t\tCombinationPar(result, sample, 0, n, 0, 0); \t\treturn result; \t} };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/20/Generate_Parentheses.cpp/Solution/generateParenthesis(int)",
+    "f": [ ]
+  }
+]
