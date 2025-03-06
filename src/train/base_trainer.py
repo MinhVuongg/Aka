@@ -1,3 +1,5 @@
+import logging
+
 import torch
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, Trainer, TrainingArguments
 import matplotlib.pyplot as plt
@@ -7,12 +9,13 @@ from abc import ABC, abstractmethod
 # from dotenv import load_dotenv
 
 from src.config.config import MODEL_NAME, TRAINSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, LOG_DIR, \
-    VALIDATIONSET_DATA_PATH_PROCESS, ModelType, MODEL_TYPE
+    VALIDATIONSET_DATA_PATH_PROCESS, ModelType, MODEL_TYPE, MASKING_SOURCE, MASKING
 from src.utils.model_utils import load_model_by_type
 
 
 class BaseTrainer(ABC):
     """Lớp cơ sở cho việc huấn luyện mô hình."""
+
     def __init__(self, data_path=None):
         self.model_name = MODEL_NAME
         self.model_save_path = MODEL_SAVE_PATH
@@ -22,8 +25,13 @@ class BaseTrainer(ABC):
         self.train_dataset, self.val_dataset = self.load_data()
         self.train_loss_history = []
 
-        self.train_dataset = self.train_dataset.map(self.preprocess_with_masking, batched=True)
-        self.val_dataset = self.val_dataset.map(self.preprocess_with_masking, batched=True)
+        if MASKING_SOURCE == MASKING.NONE:
+            logging.info("[UET] Masking")
+            self.train_dataset = self.train_dataset.map(self.preprocess, batched=True)
+            self.val_dataset = self.val_dataset.map(self.preprocess, batched=True)
+        elif MASKING_SOURCE == MASKING.RANDOM:
+            self.train_dataset = self.train_dataset.map(self.preprocess_with_masking, batched=True)
+            self.val_dataset = self.val_dataset.map(self.preprocess_with_masking, batched=True)
 
     def load_model(self):
         """Tải mô hình gốc để fine-tune với khả năng tùy chỉnh loại mô hình sử dụng ENUM."""

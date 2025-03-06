@@ -24,7 +24,7 @@ class MASKING(Enum):
 # --------------------------------------------------------------------------------
 mode = Mode.VAST  # <= --------------------------------- CHOOSE DEPLOYMENT HERE ---------------------------------
 MODEL_NAME = "Salesforce/codet5-small"
-MASKING = MASKING.NONE
+MASKING_SOURCE = MASKING.NONE
 MODEL_TYPE = ModelType.SEQ2SEQ
 max_source_length = 256
 max_target_length = 256
