@@ -1,0 +1,2515 @@
+[
+  {
+    "c": [ "", "" ],
+    "fc": "class Solution {\r public:\r     vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {\r         vector<vector<int>> ans;\r         vector<int> cur;\r         sort(candidates.begin(), candidates.end());\r         backtrack(ans, cur, candidates, 0, target);\r         return ans;\r     }\r     \r private:\r     void backtrack(vector<vector<int>> &ans, vector<int> &cur, vector<int>& candidates, int ci, int target) {\r         if (target  < 0) return;\r         if (target == 0) {\r             ans.push_back(cur);\r             return;\r         }\r         for (int i = ci; i < candidates.size(); i++) {\r             if (i == ci || candidates[i] != candidates[i - 1]) {\r                 cur.push_back(candidates[i]);\r                 backtrack(ans, cur, candidates, i + 1, target - candidates[i]);\r                 cur.pop_back();\r             }\r         }\r     }\r };",
+    "m": [ "void backtrack(vector<vector<int>> &ans, vector<int> &cur, vector<int>& candidates, int ci, int target) {\r\n        if (target  < 0) return;\r\n        if (target == 0) {\r\n            ans.push_back(cur);\r\n            return;\r\n        }\r\n        for (int i = ci; i < candidates.size(); i++) {\r\n            if (i == ci || candidates[i] != candidates[i - 1]) {\r\n                cur.push_back(candidates[i]);\r\n                backtrack(ans, cur, candidates, i + 1, target - candidates[i]);\r\n                cur.pop_back();\r\n            }\r\n        }\r\n    }" ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "LeetCode 40 Combination Sum II.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\json31\\LeetCode 40 Combination Sum II.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\json31\\LeetCode 40 Combination Sum II.cpp\\Solution\\combinationSum2(vector<int>&,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 40 Combination Sum II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 40 Combination Sum II.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\json31\\LeetCode 40 Combination Sum II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 40 Combination Sum II.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 40 Combination Sum II.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\json31\\LeetCode 40 Combination Sum II.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "combinationSum2(vector<int>&,int)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "vector<vector<int>>",
+            "realType" : "vector<vector<int>>",
+            "functionNode" : ".\\json31\\LeetCode 40 Combination Sum II.cpp\\Solution\\combinationSum2(vector<int>&,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "candidates",
+              "virtual_name" : "EXPECTED_candidates",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 40 Combination Sum II.cpp\\Solution\\combinationSum2(vector<int>&,int)\\candidates",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "target",
+              "virtual_name" : "EXPECTED_target",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 40 Combination Sum II.cpp\\Solution\\combinationSum2(vector<int>&,int)\\target",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\json31\\LeetCode 40 Combination Sum II.cpp\\Solution\\combinationSum2(vector<int>&,int)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "candidates",
+              "virtual_name" : "candidates",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 40 Combination Sum II.cpp\\Solution\\combinationSum2(vector<int>&,int)\\candidates",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 3,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "candidates_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 40 Combination Sum II.cpp\\Solution\\combinationSum2(vector<int>&,int)\\candidates\\element #0",
+                "correspondingType" : "int",
+                "value" : "-1552171994"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "candidates_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 40 Combination Sum II.cpp\\Solution\\combinationSum2(vector<int>&,int)\\candidates\\element #1",
+                "correspondingType" : "int",
+                "value" : "-1525843825"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "candidates_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 40 Combination Sum II.cpp\\Solution\\combinationSum2(vector<int>&,int)\\candidates\\element #2",
+                "correspondingType" : "int",
+                "value" : "-746670537"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "target",
+              "virtual_name" : "target",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 40 Combination Sum II.cpp\\Solution\\combinationSum2(vector<int>&,int)\\target",
+              "correspondingType" : "int",
+              "value" : "500818549"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "vector<vector<int>>",
+              "realType" : "vector<vector<int>>",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 40 Combination Sum II.cpp\\Solution\\combinationSum2(vector<int>&,int)\\RETURN",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<int>"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_combinationSum2_vector_int_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_combinationSum2_vector_int_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 40 Combination Sum II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> candidates;\n\n\nint target=500818549;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode candidates */\nint candidates_element0=-1552171994;\ncandidates.push_back(candidates_element0);\nint candidates_element1=-1525843825;\ncandidates.push_back(candidates_element1);\nint candidates_element2=-746670537;\ncandidates.push_back(candidates_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_combinationSum2_vector_int_int_random_1\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->combinationSum2(candidates,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\json31\\\\LeetCode 40 Combination Sum II.cpp\\\\Solution\\\\combinationSum2(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_candidates;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 40 Combination Sum II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> candidates;\n\n\nint target=500818549;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode candidates */\nint candidates_element0=-1552171994;\ncandidates.push_back(candidates_element0);\nint candidates_element1=-1525843825;\ncandidates.push_back(candidates_element1);\nint candidates_element2=-746670537;\ncandidates.push_back(candidates_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "fm": "vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {\r         vector<vector<int>> ans;\r         vector<int> cur;\r         sort(candidates.begin(), candidates.end());\r         backtrack(ans, cur, candidates, 0, target);\r         return ans;\r     }",
+    "f": [ ],
+    "path_fm": "D:\\prj-data\\gremist_LeetCode\\json31\\LeetCode 40 Combination Sum II.cpp\\Solution\\combinationSum2(vector<int>&,int)"
+  },
+  {
+    "c": [ "", "" ],
+    "fc": "class Solution {\r public:\r     vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {\r         vector<vector<int>> ans;\r         vector<int> cur;\r         sort(candidates.begin(), candidates.end());\r         backtrack(ans, cur, candidates, 0, target);\r         return ans;\r     }\r     \r private:\r     void backtrack(vector<vector<int>> &ans, vector<int> &cur, vector<int>& candidates, int ci, int target) {\r         if (target  < 0) return;\r         if (target == 0) {\r             ans.push_back(cur);\r             return;\r         }\r         for (int i = ci; i < candidates.size(); i++) {\r             if (i == ci || candidates[i] != candidates[i - 1]) {\r                 cur.push_back(candidates[i]);\r                 backtrack(ans, cur, candidates, i + 1, target - candidates[i]);\r                 cur.pop_back();\r             }\r         }\r     }\r };",
+    "m": [ "vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {\r\n        vector<vector<int>> ans;\r\n        vector<int> cur;\r\n        sort(candidates.begin(), candidates.end());\r\n        backtrack(ans, cur, candidates, 0, target);\r\n        return ans;\r\n    }", "void backtrack(vector<vector<int>> &ans, vector<int> &cur, vector<int>& candidates, int ci, int target) {\r\n        if (target  < 0) return;\r\n        if (target == 0) {\r\n            ans.push_back(cur);\r\n            return;\r\n        }\r\n        for (int i = ci; i < candidates.size(); i++) {\r\n            if (i == ci || candidates[i] != candidates[i - 1]) {\r\n                cur.push_back(candidates[i]);\r\n                backtrack(ans, cur, candidates, i + 1, target - candidates[i]);\r\n                cur.pop_back();\r\n            }\r\n        }\r\n    }", "void backtrack(vector<vector<int>> &ans, vector<int> &cur, vector<int>& candidates, int ci, int target) {\r\n        if (target  < 0) return;\r\n        if (target == 0) {\r\n            ans.push_back(cur);\r\n            return;\r\n        }\r\n        for (int i = ci; i < candidates.size(); i++) {\r\n            if (i == ci || candidates[i] != candidates[i - 1]) {\r\n                cur.push_back(candidates[i]);\r\n                backtrack(ans, cur, candidates, i + 1, target - candidates[i]);\r\n                cur.pop_back();\r\n            }\r\n        }\r\n    }" ],
+    "datatest": [
+    ],
+    "fm": "void backtrack(vector<vector<int>> &ans, vector<int> &cur, vector<int>& candidates, int ci, int target) {\r         if (target  < 0) return;\r         if (target == 0) {\r             ans.push_back(cur);\r             return;\r         }\r         for (int i = ci; i < candidates.size(); i++) {\r             if (i == ci || candidates[i] != candidates[i - 1]) {\r                 cur.push_back(candidates[i]);\r                 backtrack(ans, cur, candidates, i + 1, target - candidates[i]);\r                 cur.pop_back();\r             }\r         }\r     }",
+    "f": [ ],
+    "path_fm": "D:\\prj-data\\gremist_LeetCode\\json31\\LeetCode 40 Combination Sum II.cpp\\Solution\\backtrack(vector<vector<int>>&,vector<int>&,vector<int>&,int,int)"
+  },
+  {
+    "c": [ "" ],
+    "fc": "class Solution {\r public:\r     int firstMissingPositive(vector<int>& nums) {\r         for (int &n : nums) {\r             while (0 < n && n <= nums.size() && n != nums[n - 1]) {\r                 swap(n, nums[n - 1]);\r             }\r         }\r         for (int i = 0; i < nums.size(); i++) {\r             if (nums[i] != i + 1) {\r                 return i + 1;\r             }\r         }\r         return nums.size() + 1;\r     }\r };",
+    "m": [ ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "LeetCode 41 First Missing Positive.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\json31\\LeetCode 41 First Missing Positive.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\firstMissingPositive(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "firstMissingPositive(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\firstMissingPositive(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "EXPECTED_nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\firstMissingPositive(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\firstMissingPositive(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\firstMissingPositive(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 2,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "nums_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\firstMissingPositive(vector<int>&)\\nums\\element #0",
+                "correspondingType" : "int",
+                "value" : "680307131"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "nums_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\firstMissingPositive(vector<int>&)\\nums\\element #1",
+                "correspondingType" : "int",
+                "value" : "-1768345556"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\firstMissingPositive(vector<int>&)\\RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_firstMissingPositive_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_firstMissingPositive_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 41 First Missing Positive.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=680307131;\nnums.push_back(nums_element0);\nint nums_element1=-1768345556;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_firstMissingPositive_vector_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->firstMissingPositive(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\json31\\\\LeetCode 41 First Missing Positive.cpp\\\\Solution\\\\firstMissingPositive(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 41 First Missing Positive.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=680307131;\nnums.push_back(nums_element0);\nint nums_element1=-1768345556;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      },
+      {
+        "id" : 1,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "LeetCode 41 First Missing Positive.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\json31\\LeetCode 41 First Missing Positive.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\firstMissingPositive(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "firstMissingPositive(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\firstMissingPositive(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "EXPECTED_nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\firstMissingPositive(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\firstMissingPositive(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\firstMissingPositive(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\firstMissingPositive(vector<int>&)\\RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_firstMissingPositive_vector_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_firstMissingPositive_vector_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 41 First Missing Positive.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_firstMissingPositive_vector_int_directed_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->firstMissingPositive(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\json31\\\\LeetCode 41 First Missing Positive.cpp\\\\Solution\\\\firstMissingPositive(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 41 First Missing Positive.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "fm": "int firstMissingPositive(vector<int>& nums) {\r         for (int &n : nums) {\r             while (0 < n && n <= nums.size() && n != nums[n - 1]) {\r                 swap(n, nums[n - 1]);\r             }\r         }\r         for (int i = 0; i < nums.size(); i++) {\r             if (nums[i] != i + 1) {\r                 return i + 1;\r             }\r         }\r         return nums.size() + 1;\r     }",
+    "f": [ ],
+    "path_fm": "D:\\prj-data\\gremist_LeetCode\\json31\\LeetCode 41 First Missing Positive.cpp\\Solution\\firstMissingPositive(vector<int>&)"
+  },
+  {
+    "c": [ "" ],
+    "fc": "class Solution {\r public:\r     int jump(vector<int>& nums) {\r         int step = 0;\r         for (int i = 0, j = 0, k = 0; i < nums.size() - 1; i++) {\r             j = max(j, i + nums[i]);\r             if (i >= k) {\r                 k = j;\r                 step++;\r             }\r         }\r         return step;\r     }\r };",
+    "m": [ ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "LeetCode 45 Jump Game II.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "jump(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "EXPECTED_nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 2,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "nums_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #0",
+                "correspondingType" : "int",
+                "value" : "-286609298"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "nums_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #1",
+                "correspondingType" : "int",
+                "value" : "-1862299317"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_jump_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_jump_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 45 Jump Game II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-286609298;\nnums.push_back(nums_element0);\nint nums_element1=-1862299317;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_jump_vector_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->jump(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\json31\\\\LeetCode 45 Jump Game II.cpp\\\\Solution\\\\jump(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 45 Jump Game II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-286609298;\nnums.push_back(nums_element0);\nint nums_element1=-1862299317;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      },
+      {
+        "id" : 1,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "LeetCode 45 Jump Game II.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "jump(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "EXPECTED_nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 7,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "nums_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #0",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "nums_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #1",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "nums_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #2",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #3",
+                "virtual_name" : "nums_element3",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #3",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #4",
+                "virtual_name" : "nums_element4",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #4",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #5",
+                "virtual_name" : "nums_element5",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #5",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #6",
+                "virtual_name" : "nums_element6",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #6",
+                "correspondingType" : "int",
+                "value" : "null"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_jump_vector_int_directed_1(void) {\n{\nAKA_test_case_name=\"Solution_jump_vector_int_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 45 Jump Game II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\n/* element #0 : null value -> no code */\nnums.push_back(nums_element0);\n/* element #1 : null value -> no code */\nnums.push_back(nums_element1);\n/* element #2 : null value -> no code */\nnums.push_back(nums_element2);\n/* element #3 : null value -> no code */\nnums.push_back(nums_element3);\n/* element #4 : null value -> no code */\nnums.push_back(nums_element4);\n/* element #5 : null value -> no code */\nnums.push_back(nums_element5);\n/* element #6 : null value -> no code */\nnums.push_back(nums_element6);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_jump_vector_int_directed_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->jump(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\json31\\\\LeetCode 45 Jump Game II.cpp\\\\Solution\\\\jump(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 45 Jump Game II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\n/* element #0 : null value -> no code */\nnums.push_back(nums_element0);\n/* element #1 : null value -> no code */\nnums.push_back(nums_element1);\n/* element #2 : null value -> no code */\nnums.push_back(nums_element2);\n/* element #3 : null value -> no code */\nnums.push_back(nums_element3);\n/* element #4 : null value -> no code */\nnums.push_back(nums_element4);\n/* element #5 : null value -> no code */\nnums.push_back(nums_element5);\n/* element #6 : null value -> no code */\nnums.push_back(nums_element6);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      },
+      {
+        "id" : 2,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "LeetCode 45 Jump Game II.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "jump(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "EXPECTED_nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 4,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "nums_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #0",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "nums_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #1",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "nums_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #2",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #3",
+                "virtual_name" : "nums_element3",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #3",
+                "correspondingType" : "int",
+                "value" : "null"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_jump_vector_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_jump_vector_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 45 Jump Game II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\n/* element #0 : null value -> no code */\nnums.push_back(nums_element0);\n/* element #1 : null value -> no code */\nnums.push_back(nums_element1);\n/* element #2 : null value -> no code */\nnums.push_back(nums_element2);\n/* element #3 : null value -> no code */\nnums.push_back(nums_element3);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_jump_vector_int_directed_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->jump(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\json31\\\\LeetCode 45 Jump Game II.cpp\\\\Solution\\\\jump(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 45 Jump Game II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\n/* element #0 : null value -> no code */\nnums.push_back(nums_element0);\n/* element #1 : null value -> no code */\nnums.push_back(nums_element1);\n/* element #2 : null value -> no code */\nnums.push_back(nums_element2);\n/* element #3 : null value -> no code */\nnums.push_back(nums_element3);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      },
+      {
+        "id" : 3,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "LeetCode 45 Jump Game II.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "jump(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "EXPECTED_nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 8,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "nums_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #0",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "nums_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #1",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "nums_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #2",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #3",
+                "virtual_name" : "nums_element3",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #3",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #4",
+                "virtual_name" : "nums_element4",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #4",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #5",
+                "virtual_name" : "nums_element5",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #5",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #6",
+                "virtual_name" : "nums_element6",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #6",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #7",
+                "virtual_name" : "nums_element7",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #7",
+                "correspondingType" : "int",
+                "value" : "null"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_jump_vector_int_directed_5(void) {\n{\nAKA_test_case_name=\"Solution_jump_vector_int_directed_5\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 45 Jump Game II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\n/* element #0 : null value -> no code */\nnums.push_back(nums_element0);\n/* element #1 : null value -> no code */\nnums.push_back(nums_element1);\n/* element #2 : null value -> no code */\nnums.push_back(nums_element2);\n/* element #3 : null value -> no code */\nnums.push_back(nums_element3);\n/* element #4 : null value -> no code */\nnums.push_back(nums_element4);\n/* element #5 : null value -> no code */\nnums.push_back(nums_element5);\n/* element #6 : null value -> no code */\nnums.push_back(nums_element6);\n/* element #7 : null value -> no code */\nnums.push_back(nums_element7);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_jump_vector_int_directed_5\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->jump(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\json31\\\\LeetCode 45 Jump Game II.cpp\\\\Solution\\\\jump(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 45 Jump Game II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\n/* element #0 : null value -> no code */\nnums.push_back(nums_element0);\n/* element #1 : null value -> no code */\nnums.push_back(nums_element1);\n/* element #2 : null value -> no code */\nnums.push_back(nums_element2);\n/* element #3 : null value -> no code */\nnums.push_back(nums_element3);\n/* element #4 : null value -> no code */\nnums.push_back(nums_element4);\n/* element #5 : null value -> no code */\nnums.push_back(nums_element5);\n/* element #6 : null value -> no code */\nnums.push_back(nums_element6);\n/* element #7 : null value -> no code */\nnums.push_back(nums_element7);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      },
+      {
+        "id" : 4,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "LeetCode 45 Jump Game II.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "jump(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "EXPECTED_nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 6,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "nums_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #0",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "nums_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #1",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "nums_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #2",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #3",
+                "virtual_name" : "nums_element3",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #3",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #4",
+                "virtual_name" : "nums_element4",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #4",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #5",
+                "virtual_name" : "nums_element5",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #5",
+                "correspondingType" : "int",
+                "value" : "null"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_jump_vector_int_directed_4(void) {\n{\nAKA_test_case_name=\"Solution_jump_vector_int_directed_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 45 Jump Game II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\n/* element #0 : null value -> no code */\nnums.push_back(nums_element0);\n/* element #1 : null value -> no code */\nnums.push_back(nums_element1);\n/* element #2 : null value -> no code */\nnums.push_back(nums_element2);\n/* element #3 : null value -> no code */\nnums.push_back(nums_element3);\n/* element #4 : null value -> no code */\nnums.push_back(nums_element4);\n/* element #5 : null value -> no code */\nnums.push_back(nums_element5);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_jump_vector_int_directed_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->jump(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\json31\\\\LeetCode 45 Jump Game II.cpp\\\\Solution\\\\jump(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 45 Jump Game II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\n/* element #0 : null value -> no code */\nnums.push_back(nums_element0);\n/* element #1 : null value -> no code */\nnums.push_back(nums_element1);\n/* element #2 : null value -> no code */\nnums.push_back(nums_element2);\n/* element #3 : null value -> no code */\nnums.push_back(nums_element3);\n/* element #4 : null value -> no code */\nnums.push_back(nums_element4);\n/* element #5 : null value -> no code */\nnums.push_back(nums_element5);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      },
+      {
+        "id" : 5,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "LeetCode 45 Jump Game II.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "jump(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "EXPECTED_nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 10,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "nums_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #0",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "nums_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #1",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "nums_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #2",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #3",
+                "virtual_name" : "nums_element3",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #3",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #4",
+                "virtual_name" : "nums_element4",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #4",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #5",
+                "virtual_name" : "nums_element5",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #5",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #6",
+                "virtual_name" : "nums_element6",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #6",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #7",
+                "virtual_name" : "nums_element7",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #7",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #8",
+                "virtual_name" : "nums_element8",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #8",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #9",
+                "virtual_name" : "nums_element9",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #9",
+                "correspondingType" : "int",
+                "value" : "null"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_jump_vector_int_directed_3(void) {\n{\nAKA_test_case_name=\"Solution_jump_vector_int_directed_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 45 Jump Game II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\n/* element #0 : null value -> no code */\nnums.push_back(nums_element0);\n/* element #1 : null value -> no code */\nnums.push_back(nums_element1);\n/* element #2 : null value -> no code */\nnums.push_back(nums_element2);\n/* element #3 : null value -> no code */\nnums.push_back(nums_element3);\n/* element #4 : null value -> no code */\nnums.push_back(nums_element4);\n/* element #5 : null value -> no code */\nnums.push_back(nums_element5);\n/* element #6 : null value -> no code */\nnums.push_back(nums_element6);\n/* element #7 : null value -> no code */\nnums.push_back(nums_element7);\n/* element #8 : null value -> no code */\nnums.push_back(nums_element8);\n/* element #9 : null value -> no code */\nnums.push_back(nums_element9);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_jump_vector_int_directed_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->jump(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\json31\\\\LeetCode 45 Jump Game II.cpp\\\\Solution\\\\jump(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 45 Jump Game II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\n/* element #0 : null value -> no code */\nnums.push_back(nums_element0);\n/* element #1 : null value -> no code */\nnums.push_back(nums_element1);\n/* element #2 : null value -> no code */\nnums.push_back(nums_element2);\n/* element #3 : null value -> no code */\nnums.push_back(nums_element3);\n/* element #4 : null value -> no code */\nnums.push_back(nums_element4);\n/* element #5 : null value -> no code */\nnums.push_back(nums_element5);\n/* element #6 : null value -> no code */\nnums.push_back(nums_element6);\n/* element #7 : null value -> no code */\nnums.push_back(nums_element7);\n/* element #8 : null value -> no code */\nnums.push_back(nums_element8);\n/* element #9 : null value -> no code */\nnums.push_back(nums_element9);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      },
+      {
+        "id" : 6,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "LeetCode 45 Jump Game II.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "jump(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "EXPECTED_nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 11,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "nums_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #0",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "nums_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #1",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "nums_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #2",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #3",
+                "virtual_name" : "nums_element3",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #3",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #4",
+                "virtual_name" : "nums_element4",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #4",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #5",
+                "virtual_name" : "nums_element5",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #5",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #6",
+                "virtual_name" : "nums_element6",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #6",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #7",
+                "virtual_name" : "nums_element7",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #7",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #8",
+                "virtual_name" : "nums_element8",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #8",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #9",
+                "virtual_name" : "nums_element9",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #9",
+                "correspondingType" : "int",
+                "value" : "null"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #10",
+                "virtual_name" : "nums_element10",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\nums\\element #10",
+                "correspondingType" : "int",
+                "value" : "null"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)\\RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_jump_vector_int_directed_2(void) {\n{\nAKA_test_case_name=\"Solution_jump_vector_int_directed_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 45 Jump Game II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\n/* element #0 : null value -> no code */\nnums.push_back(nums_element0);\n/* element #1 : null value -> no code */\nnums.push_back(nums_element1);\n/* element #2 : null value -> no code */\nnums.push_back(nums_element2);\n/* element #3 : null value -> no code */\nnums.push_back(nums_element3);\n/* element #4 : null value -> no code */\nnums.push_back(nums_element4);\n/* element #5 : null value -> no code */\nnums.push_back(nums_element5);\n/* element #6 : null value -> no code */\nnums.push_back(nums_element6);\n/* element #7 : null value -> no code */\nnums.push_back(nums_element7);\n/* element #8 : null value -> no code */\nnums.push_back(nums_element8);\n/* element #9 : null value -> no code */\nnums.push_back(nums_element9);\n/* element #10 : null value -> no code */\nnums.push_back(nums_element10);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_jump_vector_int_directed_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->jump(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\json31\\\\LeetCode 45 Jump Game II.cpp\\\\Solution\\\\jump(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 45 Jump Game II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\n/* element #0 : null value -> no code */\nnums.push_back(nums_element0);\n/* element #1 : null value -> no code */\nnums.push_back(nums_element1);\n/* element #2 : null value -> no code */\nnums.push_back(nums_element2);\n/* element #3 : null value -> no code */\nnums.push_back(nums_element3);\n/* element #4 : null value -> no code */\nnums.push_back(nums_element4);\n/* element #5 : null value -> no code */\nnums.push_back(nums_element5);\n/* element #6 : null value -> no code */\nnums.push_back(nums_element6);\n/* element #7 : null value -> no code */\nnums.push_back(nums_element7);\n/* element #8 : null value -> no code */\nnums.push_back(nums_element8);\n/* element #9 : null value -> no code */\nnums.push_back(nums_element9);\n/* element #10 : null value -> no code */\nnums.push_back(nums_element10);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "fm": "int jump(vector<int>& nums) {\r         int step = 0;\r         for (int i = 0, j = 0, k = 0; i < nums.size() - 1; i++) {\r             j = max(j, i + nums[i]);\r             if (i >= k) {\r                 k = j;\r                 step++;\r             }\r         }\r         return step;\r     }",
+    "f": [ ],
+    "path_fm": "D:\\prj-data\\gremist_LeetCode\\json31\\LeetCode 45 Jump Game II.cpp\\Solution\\jump(vector<int>&)"
+  },
+  {
+    "c": [ "" ],
+    "fc": "class Solution {\r public:\r     vector<vector<int>> permute(vector<int>& nums) {\r         vector<vector<int>> ans;\r         backtrack(ans, nums, 0);\r         return ans;\r     }\r \r private:\r     void backtrack(vector<vector<int>> &ans, vector<int> &nums, int ni) {\r         if (ni >= nums.size()) {\r             ans.push_back(nums);\r             return;\r         }\r         for (int i = ni; i < nums.size(); i++) {\r             swap(nums[ni], nums[i]);\r             backtrack(ans, nums, ni + 1);\r             swap(nums[ni], nums[i]);\r         }\r     }\r };",
+    "m": [ "void backtrack(vector<vector<int>> &ans, vector<int> &nums, int ni) {\r\n        if (ni >= nums.size()) {\r\n            ans.push_back(nums);\r\n            return;\r\n        }\r\n        for (int i = ni; i < nums.size(); i++) {\r\n            swap(nums[ni], nums[i]);\r\n            backtrack(ans, nums, ni + 1);\r\n            swap(nums[ni], nums[i]);\r\n        }\r\n    }" ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "LeetCode 46 Permutations.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\json31\\LeetCode 46 Permutations.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\json31\\LeetCode 46 Permutations.cpp\\Solution\\permute(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 46 Permutations.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 46 Permutations.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\json31\\LeetCode 46 Permutations.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 46 Permutations.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 46 Permutations.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\json31\\LeetCode 46 Permutations.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "permute(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "vector<vector<int>>",
+            "realType" : "vector<vector<int>>",
+            "functionNode" : ".\\json31\\LeetCode 46 Permutations.cpp\\Solution\\permute(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "EXPECTED_nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 46 Permutations.cpp\\Solution\\permute(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\json31\\LeetCode 46 Permutations.cpp\\Solution\\permute(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 46 Permutations.cpp\\Solution\\permute(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 1,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "nums_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 46 Permutations.cpp\\Solution\\permute(vector<int>&)\\nums\\element #0",
+                "correspondingType" : "int",
+                "value" : "-719874844"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "vector<vector<int>>",
+              "realType" : "vector<vector<int>>",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 46 Permutations.cpp\\Solution\\permute(vector<int>&)\\RETURN",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<int>"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_permute_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_permute_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 46 Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-719874844;\nnums.push_back(nums_element0);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_permute_vector_int_random_2\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->permute(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\json31\\\\LeetCode 46 Permutations.cpp\\\\Solution\\\\permute(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 46 Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-719874844;\nnums.push_back(nums_element0);\n/* VectorDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "fm": "vector<vector<int>> permute(vector<int>& nums) {\r         vector<vector<int>> ans;\r         backtrack(ans, nums, 0);\r         return ans;\r     }",
+    "f": [ ],
+    "path_fm": "D:\\prj-data\\gremist_LeetCode\\json31\\LeetCode 46 Permutations.cpp\\Solution\\permute(vector<int>&)"
+  },
+  {
+    "c": [ "" ],
+    "fc": "class Solution {\r public:\r     vector<vector<int>> permute(vector<int>& nums) {\r         vector<vector<int>> ans;\r         backtrack(ans, nums, 0);\r         return ans;\r     }\r \r private:\r     void backtrack(vector<vector<int>> &ans, vector<int> &nums, int ni) {\r         if (ni >= nums.size()) {\r             ans.push_back(nums);\r             return;\r         }\r         for (int i = ni; i < nums.size(); i++) {\r             swap(nums[ni], nums[i]);\r             backtrack(ans, nums, ni + 1);\r             swap(nums[ni], nums[i]);\r         }\r     }\r };",
+    "m": [ "vector<vector<int>> permute(vector<int>& nums) {\r\n        vector<vector<int>> ans;\r\n        backtrack(ans, nums, 0);\r\n        return ans;\r\n    }", "void backtrack(vector<vector<int>> &ans, vector<int> &nums, int ni) {\r\n        if (ni >= nums.size()) {\r\n            ans.push_back(nums);\r\n            return;\r\n        }\r\n        for (int i = ni; i < nums.size(); i++) {\r\n            swap(nums[ni], nums[i]);\r\n            backtrack(ans, nums, ni + 1);\r\n            swap(nums[ni], nums[i]);\r\n        }\r\n    }", "void backtrack(vector<vector<int>> &ans, vector<int> &nums, int ni) {\r\n        if (ni >= nums.size()) {\r\n            ans.push_back(nums);\r\n            return;\r\n        }\r\n        for (int i = ni; i < nums.size(); i++) {\r\n            swap(nums[ni], nums[i]);\r\n            backtrack(ans, nums, ni + 1);\r\n            swap(nums[ni], nums[i]);\r\n        }\r\n    }" ],
+    "datatest": [
+    ],
+    "fm": "void backtrack(vector<vector<int>> &ans, vector<int> &nums, int ni) {\r         if (ni >= nums.size()) {\r             ans.push_back(nums);\r             return;\r         }\r         for (int i = ni; i < nums.size(); i++) {\r             swap(nums[ni], nums[i]);\r             backtrack(ans, nums, ni + 1);\r             swap(nums[ni], nums[i]);\r         }\r     }",
+    "f": [ ],
+    "path_fm": "D:\\prj-data\\gremist_LeetCode\\json31\\LeetCode 46 Permutations.cpp\\Solution\\backtrack(vector<vector<int>>&,vector<int>&,int)"
+  },
+  {
+    "c": [ "" ],
+    "fc": "class Solution {\r public:\r     vector<vector<int>> permuteUnique(vector<int>& nums) {\r         vector<vector<int>> ans;\r         backtrack(ans, nums, 0);\r         return ans;\r     }\r \r private:\r     void backtrack(vector<vector<int>> &ans, vector<int> &nums, int ni) {\r         if (ni >= nums.size()) {\r             ans.push_back(nums);\r             return;\r         }\r         for (int i = ni; i < nums.size(); i++) {\r             if (find(nums.begin() + ni, nums.begin() + i, nums[i]) == nums.begin() + i) {\r                 swap(nums[ni], nums[i]);\r                 backtrack(ans, nums, ni + 1);\r                 swap(nums[ni], nums[i]);\r             }\r         }\r     }\r };",
+    "m": [ "void backtrack(vector<vector<int>> &ans, vector<int> &nums, int ni) {\r\n        if (ni >= nums.size()) {\r\n            ans.push_back(nums);\r\n            return;\r\n        }\r\n        for (int i = ni; i < nums.size(); i++) {\r\n            if (find(nums.begin() + ni, nums.begin() + i, nums[i]) == nums.begin() + i) {\r\n                swap(nums[ni], nums[i]);\r\n                backtrack(ans, nums, ni + 1);\r\n                swap(nums[ni], nums[i]);\r\n            }\r\n        }\r\n    }" ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "LeetCode 47 Permutations II.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\json31\\LeetCode 47 Permutations II.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\json31\\LeetCode 47 Permutations II.cpp\\Solution\\permuteUnique(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 47 Permutations II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 47 Permutations II.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\json31\\LeetCode 47 Permutations II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 47 Permutations II.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 47 Permutations II.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\json31\\LeetCode 47 Permutations II.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "permuteUnique(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "vector<vector<int>>",
+            "realType" : "vector<vector<int>>",
+            "functionNode" : ".\\json31\\LeetCode 47 Permutations II.cpp\\Solution\\permuteUnique(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "EXPECTED_nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 47 Permutations II.cpp\\Solution\\permuteUnique(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\json31\\LeetCode 47 Permutations II.cpp\\Solution\\permuteUnique(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 47 Permutations II.cpp\\Solution\\permuteUnique(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 2,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "nums_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 47 Permutations II.cpp\\Solution\\permuteUnique(vector<int>&)\\nums\\element #0",
+                "correspondingType" : "int",
+                "value" : "1522268578"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "nums_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 47 Permutations II.cpp\\Solution\\permuteUnique(vector<int>&)\\nums\\element #1",
+                "correspondingType" : "int",
+                "value" : "1825568565"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "vector<vector<int>>",
+              "realType" : "vector<vector<int>>",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 47 Permutations II.cpp\\Solution\\permuteUnique(vector<int>&)\\RETURN",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<int>"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_permuteUnique_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_permuteUnique_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 47 Permutations II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1522268578;\nnums.push_back(nums_element0);\nint nums_element1=1825568565;\nnums.push_back(nums_element1);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_permuteUnique_vector_int_random_4\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->permuteUnique(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\json31\\\\LeetCode 47 Permutations II.cpp\\\\Solution\\\\permuteUnique(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 47 Permutations II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1522268578;\nnums.push_back(nums_element0);\nint nums_element1=1825568565;\nnums.push_back(nums_element1);\n/* VectorDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "fm": "vector<vector<int>> permuteUnique(vector<int>& nums) {\r         vector<vector<int>> ans;\r         backtrack(ans, nums, 0);\r         return ans;\r     }",
+    "f": [ ],
+    "path_fm": "D:\\prj-data\\gremist_LeetCode\\json31\\LeetCode 47 Permutations II.cpp\\Solution\\permuteUnique(vector<int>&)"
+  },
+  {
+    "c": [ "" ],
+    "fc": "class Solution {\r public:\r     vector<vector<int>> permuteUnique(vector<int>& nums) {\r         vector<vector<int>> ans;\r         backtrack(ans, nums, 0);\r         return ans;\r     }\r \r private:\r     void backtrack(vector<vector<int>> &ans, vector<int> &nums, int ni) {\r         if (ni >= nums.size()) {\r             ans.push_back(nums);\r             return;\r         }\r         for (int i = ni; i < nums.size(); i++) {\r             if (find(nums.begin() + ni, nums.begin() + i, nums[i]) == nums.begin() + i) {\r                 swap(nums[ni], nums[i]);\r                 backtrack(ans, nums, ni + 1);\r                 swap(nums[ni], nums[i]);\r             }\r         }\r     }\r };",
+    "m": [ "vector<vector<int>> permuteUnique(vector<int>& nums) {\r\n        vector<vector<int>> ans;\r\n        backtrack(ans, nums, 0);\r\n        return ans;\r\n    }", "void backtrack(vector<vector<int>> &ans, vector<int> &nums, int ni) {\r\n        if (ni >= nums.size()) {\r\n            ans.push_back(nums);\r\n            return;\r\n        }\r\n        for (int i = ni; i < nums.size(); i++) {\r\n            if (find(nums.begin() + ni, nums.begin() + i, nums[i]) == nums.begin() + i) {\r\n                swap(nums[ni], nums[i]);\r\n                backtrack(ans, nums, ni + 1);\r\n                swap(nums[ni], nums[i]);\r\n            }\r\n        }\r\n    }", "void backtrack(vector<vector<int>> &ans, vector<int> &nums, int ni) {\r\n        if (ni >= nums.size()) {\r\n            ans.push_back(nums);\r\n            return;\r\n        }\r\n        for (int i = ni; i < nums.size(); i++) {\r\n            if (find(nums.begin() + ni, nums.begin() + i, nums[i]) == nums.begin() + i) {\r\n                swap(nums[ni], nums[i]);\r\n                backtrack(ans, nums, ni + 1);\r\n                swap(nums[ni], nums[i]);\r\n            }\r\n        }\r\n    }" ],
+    "datatest": [
+    ],
+    "fm": "void backtrack(vector<vector<int>> &ans, vector<int> &nums, int ni) {\r         if (ni >= nums.size()) {\r             ans.push_back(nums);\r             return;\r         }\r         for (int i = ni; i < nums.size(); i++) {\r             if (find(nums.begin() + ni, nums.begin() + i, nums[i]) == nums.begin() + i) {\r                 swap(nums[ni], nums[i]);\r                 backtrack(ans, nums, ni + 1);\r                 swap(nums[ni], nums[i]);\r             }\r         }\r     }",
+    "f": [ ],
+    "path_fm": "D:\\prj-data\\gremist_LeetCode\\json31\\LeetCode 47 Permutations II.cpp\\Solution\\backtrack(vector<vector<int>>&,vector<int>&,int)"
+  },
+  {
+    "c": [ "" ],
+    "fc": "class Solution {\r public:\r     void rotate(vector<vector<int>>& matrix) {\r         for (int i = 0; i < matrix.size(); i++) {           // 沿主对角线翻转\r             for (int j = i + 1; j < matrix[0].size(); j++) {\r                 swap(matrix[i][j], matrix[j][i]);\r             }\r             reverse(matrix[i].begin(), matrix[i].end());    // 水平翻转\r         }\r     }\r };",
+    "m": [ ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "LeetCode 48 Rotate Image.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\json31\\LeetCode 48 Rotate Image.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\rotate(vector<vector<int>>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "rotate(vector<vector<int>>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "void",
+            "realType" : "void",
+            "functionNode" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\rotate(vector<vector<int>>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "matrix",
+              "virtual_name" : "EXPECTED_matrix",
+              "dataType" : "vector<vector<int>>",
+              "realType" : "vector<vector<int>>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\rotate(vector<vector<int>>&)\\matrix",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<int>"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\rotate(vector<vector<int>>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "matrix",
+              "virtual_name" : "matrix",
+              "dataType" : "vector<vector<int>>",
+              "realType" : "vector<vector<int>>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\rotate(vector<vector<int>>&)\\matrix",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<int>"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_rotate_vector_vector_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_rotate_vector_vector_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 48 Rotate Image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_rotate_vector_vector_int_directed_0\");AKA_INSTANCE___Solution->rotate(matrix);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\json31\\\\LeetCode 48 Rotate Image.cpp\\\\Solution\\\\rotate(vector<vector<int>>&)\");\n\n/* error assertion */\nvector<vector<int>> EXPECTED_matrix;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 48 Rotate Image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\n\n",
+        "isAutomated" : true
+      },
+      {
+        "id" : 1,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "LeetCode 48 Rotate Image.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\json31\\LeetCode 48 Rotate Image.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\rotate(vector<vector<int>>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "rotate(vector<vector<int>>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "void",
+            "realType" : "void",
+            "functionNode" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\rotate(vector<vector<int>>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "matrix",
+              "virtual_name" : "EXPECTED_matrix",
+              "dataType" : "vector<vector<int>>",
+              "realType" : "vector<vector<int>>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\rotate(vector<vector<int>>&)\\matrix",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<int>"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\rotate(vector<vector<int>>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "matrix",
+              "virtual_name" : "matrix",
+              "dataType" : "vector<vector<int>>",
+              "realType" : "vector<vector<int>>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\rotate(vector<vector<int>>&)\\matrix",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<int>",
+              "size" : 2,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                "name" : "element #0",
+                "virtual_name" : "matrix_element0",
+                "dataType" : "vector<int>",
+                "realType" : "vector<int>",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\rotate(vector<vector<int>>&)\\matrix\\element #0",
+                "correspondingType" : "STLListBaseType",
+                "templateArg" : "int",
+                "size" : 2,
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #0",
+                  "virtual_name" : "matrix_element0_element0",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\rotate(vector<vector<int>>&)\\matrix\\element #0\\element #0",
+                  "correspondingType" : "int",
+                  "value" : "836491711"
+                }, {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #1",
+                  "virtual_name" : "matrix_element0_element1",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\rotate(vector<vector<int>>&)\\matrix\\element #0\\element #1",
+                  "correspondingType" : "int",
+                  "value" : "113374280"
+                } ]
+              }, {
+                "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                "name" : "element #1",
+                "virtual_name" : "matrix_element1",
+                "dataType" : "vector<int>",
+                "realType" : "vector<int>",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\rotate(vector<vector<int>>&)\\matrix\\element #1",
+                "correspondingType" : "STLListBaseType",
+                "templateArg" : "int",
+                "size" : 1,
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #0",
+                  "virtual_name" : "matrix_element1_element0",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : ".\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\rotate(vector<vector<int>>&)\\matrix\\element #1\\element #0",
+                  "correspondingType" : "int",
+                  "value" : "-964132321"
+                } ]
+              } ]
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_rotate_vector_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_rotate_vector_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 48 Rotate Image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=836491711;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=113374280;\nmatrix_element0.push_back(matrix_element0_element1);\nmatrix.push_back(matrix_element0);\nvector<int> matrix_element1;\nint matrix_element1_element0=-964132321;\nmatrix_element1.push_back(matrix_element1_element0);\nmatrix.push_back(matrix_element1);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_rotate_vector_vector_int_random_2\");AKA_INSTANCE___Solution->rotate(matrix);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\json31\\\\LeetCode 48 Rotate Image.cpp\\\\Solution\\\\rotate(vector<vector<int>>&)\");\n\n/* error assertion */\nvector<vector<int>> EXPECTED_matrix;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 48 Rotate Image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=836491711;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=113374280;\nmatrix_element0.push_back(matrix_element0_element1);\nmatrix.push_back(matrix_element0);\nvector<int> matrix_element1;\nint matrix_element1_element0=-964132321;\nmatrix_element1.push_back(matrix_element1_element0);\nmatrix.push_back(matrix_element1);\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "fm": "void rotate(vector<vector<int>>& matrix) {\r         for (int i = 0; i < matrix.size(); i++) {           // 沿主对角线翻转\r             for (int j = i + 1; j < matrix[0].size(); j++) {\r                 swap(matrix[i][j], matrix[j][i]);\r             }\r             reverse(matrix[i].begin(), matrix[i].end());    // 水平翻转\r         }\r     }",
+    "f": [ ],
+    "path_fm": "D:\\prj-data\\gremist_LeetCode\\json31\\LeetCode 48 Rotate Image.cpp\\Solution\\rotate(vector<vector<int>>&)"
+  },
+  {
+    "c": [ "" ],
+    "fc": "class Solution {\r public:\r     vector<vector<string>> groupAnagrams(vector<string>& strs) {\r         unordered_map<string, vector<string>> m;\r         for (string &str : strs) {\r             string k = str;\r             sort(k.begin(), k.end());\r             m[k].push_back(str);\r         }\r         \r         vector<vector<string>> ans;\r         for (auto &[k, v] : m) {\r             ans.push_back(v);\r         }\r         return ans;\r     }\r };",
+    "m": [ ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "LeetCode 49 Group Anagrams.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\json31\\LeetCode 49 Group Anagrams.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\json31\\LeetCode 49 Group Anagrams.cpp\\Solution\\groupAnagrams(vector<string>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 49 Group Anagrams.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 49 Group Anagrams.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\json31\\LeetCode 49 Group Anagrams.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 49 Group Anagrams.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 49 Group Anagrams.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\json31\\LeetCode 49 Group Anagrams.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "groupAnagrams(vector<string>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "vector<vector<string>>",
+            "realType" : "vector<vector<string>>",
+            "functionNode" : ".\\json31\\LeetCode 49 Group Anagrams.cpp\\Solution\\groupAnagrams(vector<string>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "strs",
+              "virtual_name" : "EXPECTED_strs",
+              "dataType" : "vector<string>",
+              "realType" : "vector<string>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 49 Group Anagrams.cpp\\Solution\\groupAnagrams(vector<string>&)\\strs",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "string"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\json31\\LeetCode 49 Group Anagrams.cpp\\Solution\\groupAnagrams(vector<string>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "strs",
+              "virtual_name" : "strs",
+              "dataType" : "vector<string>",
+              "realType" : "vector<string>&",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 49 Group Anagrams.cpp\\Solution\\groupAnagrams(vector<string>&)\\strs",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "string",
+              "size" : 3,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalStringDataNode",
+                "name" : "element #0",
+                "virtual_name" : "strs_element0",
+                "dataType" : "string",
+                "realType" : "string",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 49 Group Anagrams.cpp\\Solution\\groupAnagrams(vector<string>&)\\strs\\element #0",
+                "correspondingType" : "string",
+                "value" : "3",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+                  "name" : "element #0[0]",
+                  "virtual_name" : "strs_element0[0]",
+                  "dataType" : "char",
+                  "realType" : "char",
+                  "external" : false,
+                  "correspondingVar" : ".\\json31\\LeetCode 49 Group Anagrams.cpp\\Solution\\groupAnagrams(vector<string>&)\\strs\\element #0\\element #0[0]",
+                  "correspondingType" : "char",
+                  "value" : "-57"
+                } ]
+              }, {
+                "type" : "com.dse.testdata.object.NormalStringDataNode",
+                "name" : "element #1",
+                "virtual_name" : "strs_element1",
+                "dataType" : "string",
+                "realType" : "string",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 49 Group Anagrams.cpp\\Solution\\groupAnagrams(vector<string>&)\\strs\\element #1",
+                "correspondingType" : "string",
+                "value" : "1",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+                  "name" : "element #1[0]",
+                  "virtual_name" : "strs_element1[0]",
+                  "dataType" : "char",
+                  "realType" : "char",
+                  "external" : false,
+                  "correspondingVar" : ".\\json31\\LeetCode 49 Group Anagrams.cpp\\Solution\\groupAnagrams(vector<string>&)\\strs\\element #1\\element #1[0]",
+                  "correspondingType" : "char",
+                  "value" : "-75"
+                } ]
+              }, {
+                "type" : "com.dse.testdata.object.NormalStringDataNode",
+                "name" : "element #2",
+                "virtual_name" : "strs_element2",
+                "dataType" : "string",
+                "realType" : "string",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 49 Group Anagrams.cpp\\Solution\\groupAnagrams(vector<string>&)\\strs\\element #2",
+                "correspondingType" : "string",
+                "value" : "2",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+                  "name" : "element #2[0]",
+                  "virtual_name" : "strs_element2[0]",
+                  "dataType" : "char",
+                  "realType" : "char",
+                  "external" : false,
+                  "correspondingVar" : ".\\json31\\LeetCode 49 Group Anagrams.cpp\\Solution\\groupAnagrams(vector<string>&)\\strs\\element #2\\element #2[0]",
+                  "correspondingType" : "char",
+                  "value" : "-40"
+                } ]
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "vector<vector<string>>",
+              "realType" : "vector<vector<string>>",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 49 Group Anagrams.cpp\\Solution\\groupAnagrams(vector<string>&)\\RETURN",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<string>"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_groupAnagrams_vector_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_groupAnagrams_vector_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 49 Group Anagrams.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> strs;\nvector<vector<string>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode strs */\nchar* akaRandomName680195 = new char[2];akaRandomName680195[0] = -57;akaRandomName680195[1] = '\\0';string strs_element0=akaRandomName680195;\nstrs.push_back(strs_element0);\nchar* akaRandomName403482 = new char[2];akaRandomName403482[0] = -75;akaRandomName403482[1] = '\\0';string strs_element1=akaRandomName403482;\nstrs.push_back(strs_element1);\nchar* akaRandomName859155 = new char[2];akaRandomName859155[0] = -40;akaRandomName859155[1] = '\\0';string strs_element2=akaRandomName859155;\nstrs.push_back(strs_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_groupAnagrams_vector_string_random_3\");vector<vector<string>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->groupAnagrams(strs);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\json31\\\\LeetCode 49 Group Anagrams.cpp\\\\Solution\\\\groupAnagrams(vector<string>&)\");\n\n\nvector<string> EXPECTED_strs;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 49 Group Anagrams.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> strs;\nvector<vector<string>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode strs */\nchar* akaRandomName714204 = new char[2];akaRandomName714204[0] = -57;akaRandomName714204[1] = '\\0';string strs_element0=akaRandomName714204;\nstrs.push_back(strs_element0);\nchar* akaRandomName5854 = new char[2];akaRandomName5854[0] = -75;akaRandomName5854[1] = '\\0';string strs_element1=akaRandomName5854;\nstrs.push_back(strs_element1);\nchar* akaRandomName944974 = new char[2];akaRandomName944974[0] = -40;akaRandomName944974[1] = '\\0';string strs_element2=akaRandomName944974;\nstrs.push_back(strs_element2);\n/* VectorDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "fm": "vector<vector<string>> groupAnagrams(vector<string>& strs) {\r         unordered_map<string, vector<string>> m;\r         for (string &str : strs) {\r             string k = str;\r             sort(k.begin(), k.end());\r             m[k].push_back(str);\r         }\r         \r         vector<vector<string>> ans;\r         for (auto &[k, v] : m) {\r             ans.push_back(v);\r         }\r         return ans;\r     }",
+    "f": [ ],
+    "path_fm": "D:\\prj-data\\gremist_LeetCode\\json31\\LeetCode 49 Group Anagrams.cpp\\Solution\\groupAnagrams(vector<string>&)"
+  },
+  {
+    "c": [ "" ],
+    "fc": "class Solution {\r public:\r     double myPow(double x, int n) {\r         if (n == 0) return 1;\r         if (n  < 0) {\r             x = 1 / x;\r         }\r         double p = myPow(x, abs(n / 2));\r         return n % 2 ? p * p * x : p * p;\r     }\r };",
+    "m": [ "double myPow(double x, int n) {\r\n        if (n == 0) return 1;\r\n        if (n  < 0) {\r\n            x = 1 / x;\r\n        }\r\n        double p = myPow(x, abs(n / 2));\r\n        return n % 2 ? p * p * x : p * p;\r\n    }", "double myPow(double x, int n) {\r\n        if (n == 0) return 1;\r\n        if (n  < 0) {\r\n            x = 1 / x;\r\n        }\r\n        double p = myPow(x, abs(n / 2));\r\n        return n % 2 ? p * p * x : p * p;\r\n    }" ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "LeetCode 50 Pow(x, n).cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\json31\\LeetCode 50 Pow(x, n).cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\json31\\LeetCode 50 Pow(x, n).cpp\\Solution\\myPow(double,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 50 Pow(x, n).cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 50 Pow(x, n).cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\json31\\LeetCode 50 Pow(x, n).cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\json31\\LeetCode 50 Pow(x, n).cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\json31\\LeetCode 50 Pow(x, n).cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\json31\\LeetCode 50 Pow(x, n).cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "myPow(double,int)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "double",
+            "realType" : "double",
+            "functionNode" : ".\\json31\\LeetCode 50 Pow(x, n).cpp\\Solution\\myPow(double,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "EXPECTED_n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 50 Pow(x, n).cpp\\Solution\\myPow(double,int)\\n",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "x",
+              "virtual_name" : "EXPECTED_x",
+              "dataType" : "double",
+              "realType" : "double",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 50 Pow(x, n).cpp\\Solution\\myPow(double,int)\\x",
+              "correspondingType" : "double",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\json31\\LeetCode 50 Pow(x, n).cpp\\Solution\\myPow(double,int)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "x",
+              "virtual_name" : "x",
+              "dataType" : "double",
+              "realType" : "double",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 50 Pow(x, n).cpp\\Solution\\myPow(double,int)\\x",
+              "correspondingType" : "double",
+              "value" : "0.74"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 50 Pow(x, n).cpp\\Solution\\myPow(double,int)\\n",
+              "correspondingType" : "int",
+              "value" : "-758745007"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "double",
+              "realType" : "double",
+              "external" : false,
+              "correspondingVar" : ".\\json31\\LeetCode 50 Pow(x, n).cpp\\Solution\\myPow(double,int)\\RETURN",
+              "correspondingType" : "double",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_myPow_double_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_myPow_double_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 50 Pow(x, n).cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\ndouble x=0.74;\n\n\nint n=-758745007;\n\n\ndouble AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_myPow_double_int_random_3\");double AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->myPow(x,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\json31\\\\LeetCode 50 Pow(x, n).cpp\\\\Solution\\\\myPow(double,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\LeetCode 50 Pow(x, n).cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\ndouble x=0.74;\n\n\nint n=-758745007;\n\n\ndouble AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "fm": "double myPow(double x, int n) {\r         if (n == 0) return 1;\r         if (n  < 0) {\r             x = 1 / x;\r         }\r         double p = myPow(x, abs(n / 2));\r         return n % 2 ? p * p * x : p * p;\r     }",
+    "f": [ ],
+    "path_fm": "D:\\prj-data\\gremist_LeetCode\\json31\\LeetCode 50 Pow(x, n).cpp\\Solution\\myPow(double,int)"
+  }
+]

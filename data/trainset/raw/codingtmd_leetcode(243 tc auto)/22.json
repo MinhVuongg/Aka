@@ -1,0 +1,2220 @@
+[
+  {
+    "fm": "void connect(TreeLinkNode *root) {\r         TreeLinkNode* cur = root, *next = NULL;\r         while (cur != NULL)\r         {\r             TreeLinkNode *p = cur, *k = NULL;\r             while (p != NULL)\r             {\r                 TreeLinkNode* sub = getLinkedLeftNode(p);\r                 if (sub != NULL)\r                 {\r                     if (next == NULL)\r                     {\r                         next = sub;\r                         k = sub;\r                     }\r                     else\r                         k->next = sub;\r                     while (k->next != NULL) // ietrate to the tail\r                         k = k->next;\r                 }\r                 p = p->next;\r             }\r             cur = next;\r             next = NULL;\r         }\r     }",
+    "f": [ ],
+    "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\connect(TreeLinkNode*)",
+    "c": [ "" ],
+    "fc": "class Solution {\r public:\r     void connect(TreeLinkNode *root) {\r         TreeLinkNode* cur = root, *next = NULL;\r         while (cur != NULL)\r         {\r             TreeLinkNode *p = cur, *k = NULL;\r             while (p != NULL)\r             {\r                 TreeLinkNode* sub = getLinkedLeftNode(p);\r                 if (sub != NULL)\r                 {\r                     if (next == NULL)\r                     {\r                         next = sub;\r                         k = sub;\r                     }\r                     else\r                         k->next = sub;\r                     while (k->next != NULL) // ietrate to the tail\r                         k = k->next;\r                 }\r                 p = p->next;\r             }\r             cur = next;\r             next = NULL;\r         }\r     }\r \r     TreeLinkNode* getLinkedLeftNode(TreeLinkNode * root)\r     {\r         if (root->left != NULL && root->right != NULL)\r             root->left->next = root->right;\r         if (root->left != NULL)\r             return root->left;\r         if (root->right != NULL)\r             return root->right;\r         return NULL;\r     }\r };",
+    "m": [ "TreeLinkNode* getLinkedLeftNode(TreeLinkNode * root)\r\n    {\r\n        if (root->left != NULL && root->right != NULL)\r\n            root->left->next = root->right;\r\n        if (root->left != NULL)\r\n            return root->left;\r\n        if (root->right != NULL)\r\n            return root->right;\r\n        return NULL;\r\n    }", "TreeLinkNode(int x) : val(x), left(NULL), right(NULL), next(NULL) {}" ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Populating_Next_Right_Pointers_in_Each_Node_II.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\connect(TreeLinkNode*)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "connect(TreeLinkNode*)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "void",
+            "realType" : "void",
+            "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\connect(TreeLinkNode*)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.PointerStructureDataNode",
+              "name" : "root",
+              "virtual_name" : "EXPECTED_root",
+              "dataType" : "TreeLinkNode*",
+              "realType" : "TreeLinkNode*",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\connect(TreeLinkNode*)\\root",
+              "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+              "level" : 1
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\connect(TreeLinkNode*)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.PointerStructureDataNode",
+              "name" : "root",
+              "virtual_name" : "root",
+              "dataType" : "TreeLinkNode*",
+              "realType" : "TreeLinkNode*",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\connect(TreeLinkNode*)\\root",
+              "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+              "level" : 1,
+              "size" : 3,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.StructDataNode",
+                "name" : "root[0]",
+                "virtual_name" : "root[0]",
+                "dataType" : "TreeLinkNode",
+                "realType" : "TreeLinkNode",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\connect(TreeLinkNode*)\\root\\root[0]",
+                "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.SubStructDataNode",
+                  "name" : "root",
+                  "virtual_name" : "root[0]",
+                  "dataType" : "::TreeLinkNode",
+                  "realType" : "::TreeLinkNode",
+                  "external" : false,
+                  "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\connect(TreeLinkNode*)\\root\\root",
+                  "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                  "rawType" : "::TreeLinkNode",
+                  "selectedConstructor" : "TreeLinkNode(int)",
+                  "variableType" : "::TreeLinkNode",
+                  "children" : [ {
+                    "type" : "com.dse.testdata.object.ConstructorDataNode",
+                    "name" : "TreeLinkNode(int)",
+                    "virtual_name" : "root[0]",
+                    "dataType" : "::TreeLinkNode",
+                    "realType" : "::TreeLinkNode",
+                    "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)",
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "x",
+                      "virtual_name" : "root0_x",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)\\x",
+                      "correspondingType" : "int",
+                      "value" : "-1318910633"
+                    } ]
+                  }, {
+                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                    "name" : "val",
+                    "virtual_name" : "root[0].val",
+                    "dataType" : "int",
+                    "realType" : "int",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\val",
+                    "correspondingType" : "int",
+                    "value" : "null"
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "left",
+                    "virtual_name" : "root[0].left",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "right",
+                    "virtual_name" : "root[0].right",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\right",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "next",
+                    "virtual_name" : "root[0].next",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\next",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  } ]
+                } ]
+              }, {
+                "type" : "com.dse.testdata.object.StructDataNode",
+                "name" : "root[1]",
+                "virtual_name" : "root[1]",
+                "dataType" : "TreeLinkNode",
+                "realType" : "TreeLinkNode",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\connect(TreeLinkNode*)\\root\\root[1]",
+                "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.SubStructDataNode",
+                  "name" : "root",
+                  "virtual_name" : "root[1]",
+                  "dataType" : "::TreeLinkNode",
+                  "realType" : "::TreeLinkNode",
+                  "external" : false,
+                  "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\connect(TreeLinkNode*)\\root\\root",
+                  "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                  "rawType" : "::TreeLinkNode",
+                  "selectedConstructor" : "TreeLinkNode(int)",
+                  "variableType" : "::TreeLinkNode",
+                  "children" : [ {
+                    "type" : "com.dse.testdata.object.ConstructorDataNode",
+                    "name" : "TreeLinkNode(int)",
+                    "virtual_name" : "root[1]",
+                    "dataType" : "::TreeLinkNode",
+                    "realType" : "::TreeLinkNode",
+                    "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)",
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "x",
+                      "virtual_name" : "root1_x",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)\\x",
+                      "correspondingType" : "int",
+                      "value" : "0"
+                    } ]
+                  }, {
+                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                    "name" : "val",
+                    "virtual_name" : "root[1].val",
+                    "dataType" : "int",
+                    "realType" : "int",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\val",
+                    "correspondingType" : "int",
+                    "value" : "null"
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "left",
+                    "virtual_name" : "root[1].left",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "right",
+                    "virtual_name" : "root[1].right",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\right",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "next",
+                    "virtual_name" : "root[1].next",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\next",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  } ]
+                } ]
+              }, {
+                "type" : "com.dse.testdata.object.StructDataNode",
+                "name" : "root[2]",
+                "virtual_name" : "root[2]",
+                "dataType" : "TreeLinkNode",
+                "realType" : "TreeLinkNode",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\connect(TreeLinkNode*)\\root\\root[2]",
+                "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.SubStructDataNode",
+                  "name" : "root",
+                  "virtual_name" : "root[2]",
+                  "dataType" : "::TreeLinkNode",
+                  "realType" : "::TreeLinkNode",
+                  "external" : false,
+                  "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\connect(TreeLinkNode*)\\root\\root",
+                  "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                  "rawType" : "::TreeLinkNode",
+                  "selectedConstructor" : "TreeLinkNode(int)",
+                  "variableType" : "::TreeLinkNode",
+                  "children" : [ {
+                    "type" : "com.dse.testdata.object.ConstructorDataNode",
+                    "name" : "TreeLinkNode(int)",
+                    "virtual_name" : "root[2]",
+                    "dataType" : "::TreeLinkNode",
+                    "realType" : "::TreeLinkNode",
+                    "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)",
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "x",
+                      "virtual_name" : "root2_x",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)\\x",
+                      "correspondingType" : "int",
+                      "value" : "0"
+                    } ]
+                  }, {
+                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                    "name" : "val",
+                    "virtual_name" : "root[2].val",
+                    "dataType" : "int",
+                    "realType" : "int",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\val",
+                    "correspondingType" : "int",
+                    "value" : "null"
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "left",
+                    "virtual_name" : "root[2].left",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "right",
+                    "virtual_name" : "root[2].right",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\right",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "next",
+                    "virtual_name" : "root[2].next",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\next",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_connect_TreeLinkNodemul_random_4(void) {\n{\nAKA_test_case_name=\"Solution_connect_TreeLinkNodemul_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeLinkNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-1318910633;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\connect(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeLinkNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_0).next;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=0;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\connect(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_1\\\\root\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeLinkNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_1).next;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root2_x=0;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\connect(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_2\\\\root\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_2 = new ::TreeLinkNode(root2_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_2).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_2).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_2).next;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_2);\n\nTreeLinkNode* root = AKA_VECTOR_INIT_root[0];\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_connect_TreeLinkNodemul_random_4\");AKA_INSTANCE___Solution->connect(root);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\Solution\\\\connect(TreeLinkNode*)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeLinkNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-1318910633;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\connect(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeLinkNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_0).next;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=0;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\connect(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_1\\\\root\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeLinkNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_1).next;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root2_x=0;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\connect(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_2\\\\root\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_2 = new ::TreeLinkNode(root2_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_2).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_2).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_2).next;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_2);\n\nTreeLinkNode* root = AKA_VECTOR_INIT_root[0];\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n\n",
+        "isAutomated" : true
+      }
+    ]
+  },
+  {
+    "fm": "TreeLinkNode* getLinkedLeftNode(TreeLinkNode * root)\r     {\r         if (root->left != NULL && root->right != NULL)\r             root->left->next = root->right;\r         if (root->left != NULL)\r             return root->left;\r         if (root->right != NULL)\r             return root->right;\r         return NULL;\r     }",
+    "f": [ ],
+    "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)",
+    "c": [ "" ],
+    "fc": "class Solution {\r public:\r     void connect(TreeLinkNode *root) {\r         TreeLinkNode* cur = root, *next = NULL;\r         while (cur != NULL)\r         {\r             TreeLinkNode *p = cur, *k = NULL;\r             while (p != NULL)\r             {\r                 TreeLinkNode* sub = getLinkedLeftNode(p);\r                 if (sub != NULL)\r                 {\r                     if (next == NULL)\r                     {\r                         next = sub;\r                         k = sub;\r                     }\r                     else\r                         k->next = sub;\r                     while (k->next != NULL) // ietrate to the tail\r                         k = k->next;\r                 }\r                 p = p->next;\r             }\r             cur = next;\r             next = NULL;\r         }\r     }\r \r     TreeLinkNode* getLinkedLeftNode(TreeLinkNode * root)\r     {\r         if (root->left != NULL && root->right != NULL)\r             root->left->next = root->right;\r         if (root->left != NULL)\r             return root->left;\r         if (root->right != NULL)\r             return root->right;\r         return NULL;\r     }\r };",
+    "m": [ "void connect(TreeLinkNode *root) {\r\n        TreeLinkNode* cur = root, *next = NULL;\r\n        while (cur != NULL)\r\n        {\r\n            TreeLinkNode *p = cur, *k = NULL;\r\n            while (p != NULL)\r\n            {\r\n                TreeLinkNode* sub = getLinkedLeftNode(p);\r\n                if (sub != NULL)\r\n                {\r\n                    if (next == NULL)\r\n                    {\r\n                        next = sub;\r\n                        k = sub;\r\n                    }\r\n                    else\r\n                        k->next = sub;\r\n                    while (k->next != NULL) // ietrate to the tail\r\n                        k = k->next;\r\n                }\r\n                p = p->next;\r\n            }\r\n            cur = next;\r\n            next = NULL;\r\n        }\r\n    }" ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Populating_Next_Right_Pointers_in_Each_Node_II.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "getLinkedLeftNode(TreeLinkNode*)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "TreeLinkNode*",
+            "realType" : "TreeLinkNode*",
+            "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.PointerStructureDataNode",
+              "name" : "root",
+              "virtual_name" : "EXPECTED_root",
+              "dataType" : "TreeLinkNode*",
+              "realType" : "TreeLinkNode*",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)\\root",
+              "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+              "level" : 1
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.PointerStructureDataNode",
+              "name" : "root",
+              "virtual_name" : "root",
+              "dataType" : "TreeLinkNode*",
+              "realType" : "TreeLinkNode*",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)\\root",
+              "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+              "level" : 1,
+              "size" : 2,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.StructDataNode",
+                "name" : "root[0]",
+                "virtual_name" : "root[0]",
+                "dataType" : "TreeLinkNode",
+                "realType" : "TreeLinkNode",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)\\root\\root[0]",
+                "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.SubStructDataNode",
+                  "name" : "root",
+                  "virtual_name" : "root[0]",
+                  "dataType" : "::TreeLinkNode",
+                  "realType" : "::TreeLinkNode",
+                  "external" : false,
+                  "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)\\root\\root",
+                  "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                  "rawType" : "::TreeLinkNode",
+                  "selectedConstructor" : "TreeLinkNode(int)",
+                  "variableType" : "::TreeLinkNode",
+                  "children" : [ {
+                    "type" : "com.dse.testdata.object.ConstructorDataNode",
+                    "name" : "TreeLinkNode(int)",
+                    "virtual_name" : "root[0]",
+                    "dataType" : "::TreeLinkNode",
+                    "realType" : "::TreeLinkNode",
+                    "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)",
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "x",
+                      "virtual_name" : "root0_x",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)\\x",
+                      "correspondingType" : "int",
+                      "value" : "-187937927"
+                    } ]
+                  }, {
+                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                    "name" : "val",
+                    "virtual_name" : "root[0].val",
+                    "dataType" : "int",
+                    "realType" : "int",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\val",
+                    "correspondingType" : "int",
+                    "value" : "null"
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "left",
+                    "virtual_name" : "root[0].left",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "right",
+                    "virtual_name" : "root[0].right",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\right",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1,
+                    "size" : 1,
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.StructDataNode",
+                      "name" : "right[0]",
+                      "virtual_name" : "root[0].right[0]",
+                      "dataType" : "TreeLinkNode",
+                      "realType" : "TreeLinkNode",
+                      "external" : false,
+                      "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\right\\right[0]",
+                      "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                      "children" : [ {
+                        "type" : "com.dse.testdata.object.SubStructDataNode",
+                        "name" : "right",
+                        "virtual_name" : "root[0].right[0]",
+                        "dataType" : "::TreeLinkNode",
+                        "realType" : "::TreeLinkNode",
+                        "external" : false,
+                        "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\right\\right",
+                        "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                        "rawType" : "::TreeLinkNode",
+                        "selectedConstructor" : "TreeLinkNode(int)",
+                        "variableType" : "::TreeLinkNode",
+                        "children" : [ {
+                          "type" : "com.dse.testdata.object.ConstructorDataNode",
+                          "name" : "TreeLinkNode(int)",
+                          "virtual_name" : "root[0].right[0]",
+                          "dataType" : "::TreeLinkNode",
+                          "realType" : "::TreeLinkNode",
+                          "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)",
+                          "children" : [ {
+                            "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                            "name" : "x",
+                            "virtual_name" : "root0_right0_x",
+                            "dataType" : "int",
+                            "realType" : "int",
+                            "external" : false,
+                            "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)\\x",
+                            "correspondingType" : "int",
+                            "value" : "2013196568"
+                          } ]
+                        }, {
+                          "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                          "name" : "val",
+                          "virtual_name" : "root[0].right[0].val",
+                          "dataType" : "int",
+                          "realType" : "int",
+                          "external" : false,
+                          "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\val",
+                          "correspondingType" : "int",
+                          "value" : "null"
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "left",
+                          "virtual_name" : "root[0].right[0].left",
+                          "dataType" : "TreeLinkNode*",
+                          "realType" : "TreeLinkNode*",
+                          "external" : false,
+                          "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left",
+                          "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                          "level" : 1
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "right",
+                          "virtual_name" : "root[0].right[0].right",
+                          "dataType" : "TreeLinkNode*",
+                          "realType" : "TreeLinkNode*",
+                          "external" : false,
+                          "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\right",
+                          "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                          "level" : 1
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "next",
+                          "virtual_name" : "root[0].right[0].next",
+                          "dataType" : "TreeLinkNode*",
+                          "realType" : "TreeLinkNode*",
+                          "external" : false,
+                          "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\next",
+                          "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                          "level" : 1
+                        } ]
+                      } ]
+                    } ]
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "next",
+                    "virtual_name" : "root[0].next",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\next",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  } ]
+                } ]
+              }, {
+                "type" : "com.dse.testdata.object.StructDataNode",
+                "name" : "root[1]",
+                "virtual_name" : "root[1]",
+                "dataType" : "TreeLinkNode",
+                "realType" : "TreeLinkNode",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)\\root\\root[1]",
+                "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.SubStructDataNode",
+                  "name" : "root",
+                  "virtual_name" : "root[1]",
+                  "dataType" : "::TreeLinkNode",
+                  "realType" : "::TreeLinkNode",
+                  "external" : false,
+                  "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)\\root\\root",
+                  "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                  "rawType" : "::TreeLinkNode",
+                  "selectedConstructor" : "TreeLinkNode(int)",
+                  "variableType" : "::TreeLinkNode",
+                  "children" : [ {
+                    "type" : "com.dse.testdata.object.ConstructorDataNode",
+                    "name" : "TreeLinkNode(int)",
+                    "virtual_name" : "root[1]",
+                    "dataType" : "::TreeLinkNode",
+                    "realType" : "::TreeLinkNode",
+                    "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)",
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "x",
+                      "virtual_name" : "root1_x",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)\\x",
+                      "correspondingType" : "int",
+                      "value" : "-1934907545"
+                    } ]
+                  }, {
+                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                    "name" : "val",
+                    "virtual_name" : "root[1].val",
+                    "dataType" : "int",
+                    "realType" : "int",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\val",
+                    "correspondingType" : "int",
+                    "value" : "null"
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "left",
+                    "virtual_name" : "root[1].left",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "right",
+                    "virtual_name" : "root[1].right",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\right",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "next",
+                    "virtual_name" : "root[1].next",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\next",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  } ]
+                } ]
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.PointerStructureDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "TreeLinkNode*",
+              "realType" : "TreeLinkNode*",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)\\RETURN",
+              "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+              "level" : 1
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_getLinkedLeftNode_TreeLinkNodemul_random_2(void) {\n{\nAKA_test_case_name=\"Solution_getLinkedLeftNode_TreeLinkNodemul_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeLinkNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-187937927;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\getLinkedLeftNode(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeLinkNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\nstd::vector<TreeLinkNode*> AKA_VECTOR_INIT_root_0_DOT_right;\n/* SubStructDataNode right */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root0_right0_x=2013196568;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\getLinkedLeftNode(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\right\\\\right[0]\\\\right\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_right_0 = new ::TreeLinkNode(root0_right0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_right_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_right_0).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_0_DOT_right_0).next;\nAKA_VECTOR_INIT_root_0_DOT_right.push_back(AKA_VECTOR_INIT_root_0_DOT_right_0);\n(*AKA_VECTOR_INIT_root_0).right = AKA_VECTOR_INIT_root_0_DOT_right[0];\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_0).next;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=-1934907545;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\getLinkedLeftNode(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_1\\\\root\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeLinkNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_1).next;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\nTreeLinkNode* root = AKA_VECTOR_INIT_root[0];\nTreeLinkNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* PointerStructureDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_getLinkedLeftNode_TreeLinkNodemul_random_2\");TreeLinkNode* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->getLinkedLeftNode(root);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\Solution\\\\getLinkedLeftNode(TreeLinkNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeLinkNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-187937927;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\getLinkedLeftNode(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeLinkNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\nstd::vector<TreeLinkNode*> AKA_VECTOR_INIT_root_0_DOT_right;\n/* SubStructDataNode right */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root0_right0_x=2013196568;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\getLinkedLeftNode(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\right\\\\right[0]\\\\right\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_right_0 = new ::TreeLinkNode(root0_right0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_right_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_right_0).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_0_DOT_right_0).next;\nAKA_VECTOR_INIT_root_0_DOT_right.push_back(AKA_VECTOR_INIT_root_0_DOT_right_0);\n(*AKA_VECTOR_INIT_root_0).right = AKA_VECTOR_INIT_root_0_DOT_right[0];\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_0).next;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=-1934907545;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\getLinkedLeftNode(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_1\\\\root\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeLinkNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_1).next;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\nTreeLinkNode* root = AKA_VECTOR_INIT_root[0];\nTreeLinkNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* PointerStructureDataNode RETURN */\n\n",
+        "isAutomated" : true
+      },
+      {
+        "id" : 1,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Populating_Next_Right_Pointers_in_Each_Node_II.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "getLinkedLeftNode(TreeLinkNode*)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "TreeLinkNode*",
+            "realType" : "TreeLinkNode*",
+            "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.PointerStructureDataNode",
+              "name" : "root",
+              "virtual_name" : "EXPECTED_root",
+              "dataType" : "TreeLinkNode*",
+              "realType" : "TreeLinkNode*",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)\\root",
+              "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+              "level" : 1
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.PointerStructureDataNode",
+              "name" : "root",
+              "virtual_name" : "root",
+              "dataType" : "TreeLinkNode*",
+              "realType" : "TreeLinkNode*",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)\\root",
+              "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+              "level" : 1,
+              "size" : 3,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.StructDataNode",
+                "name" : "root[0]",
+                "virtual_name" : "root[0]",
+                "dataType" : "TreeLinkNode",
+                "realType" : "TreeLinkNode",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)\\root\\root[0]",
+                "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.SubStructDataNode",
+                  "name" : "root",
+                  "virtual_name" : "root[0]",
+                  "dataType" : "::TreeLinkNode",
+                  "realType" : "::TreeLinkNode",
+                  "external" : false,
+                  "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)\\root\\root",
+                  "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                  "rawType" : "::TreeLinkNode",
+                  "selectedConstructor" : "TreeLinkNode(int)",
+                  "variableType" : "::TreeLinkNode",
+                  "children" : [ {
+                    "type" : "com.dse.testdata.object.ConstructorDataNode",
+                    "name" : "TreeLinkNode(int)",
+                    "virtual_name" : "root[0]",
+                    "dataType" : "::TreeLinkNode",
+                    "realType" : "::TreeLinkNode",
+                    "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)",
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "x",
+                      "virtual_name" : "root0_x",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)\\x",
+                      "correspondingType" : "int",
+                      "value" : "-2015369652"
+                    } ]
+                  }, {
+                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                    "name" : "val",
+                    "virtual_name" : "root[0].val",
+                    "dataType" : "int",
+                    "realType" : "int",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\val",
+                    "correspondingType" : "int",
+                    "value" : "null"
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "left",
+                    "virtual_name" : "root[0].left",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1,
+                    "size" : 3,
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.StructDataNode",
+                      "name" : "left[0]",
+                      "virtual_name" : "root[0].left[0]",
+                      "dataType" : "TreeLinkNode",
+                      "realType" : "TreeLinkNode",
+                      "external" : false,
+                      "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left\\left[0]",
+                      "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                      "children" : [ {
+                        "type" : "com.dse.testdata.object.SubStructDataNode",
+                        "name" : "left",
+                        "virtual_name" : "root[0].left[0]",
+                        "dataType" : "::TreeLinkNode",
+                        "realType" : "::TreeLinkNode",
+                        "external" : false,
+                        "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left\\left",
+                        "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                        "rawType" : "::TreeLinkNode",
+                        "selectedConstructor" : "TreeLinkNode(int)",
+                        "variableType" : "::TreeLinkNode",
+                        "children" : [ {
+                          "type" : "com.dse.testdata.object.ConstructorDataNode",
+                          "name" : "TreeLinkNode(int)",
+                          "virtual_name" : "root[0].left[0]",
+                          "dataType" : "::TreeLinkNode",
+                          "realType" : "::TreeLinkNode",
+                          "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)",
+                          "children" : [ {
+                            "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                            "name" : "x",
+                            "virtual_name" : "root0_left0_x",
+                            "dataType" : "int",
+                            "realType" : "int",
+                            "external" : false,
+                            "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)\\x",
+                            "correspondingType" : "int",
+                            "value" : "574825661"
+                          } ]
+                        }, {
+                          "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                          "name" : "val",
+                          "virtual_name" : "root[0].left[0].val",
+                          "dataType" : "int",
+                          "realType" : "int",
+                          "external" : false,
+                          "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\val",
+                          "correspondingType" : "int",
+                          "value" : "null"
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "left",
+                          "virtual_name" : "root[0].left[0].left",
+                          "dataType" : "TreeLinkNode*",
+                          "realType" : "TreeLinkNode*",
+                          "external" : false,
+                          "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left",
+                          "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                          "level" : 1
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "right",
+                          "virtual_name" : "root[0].left[0].right",
+                          "dataType" : "TreeLinkNode*",
+                          "realType" : "TreeLinkNode*",
+                          "external" : false,
+                          "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\right",
+                          "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                          "level" : 1
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "next",
+                          "virtual_name" : "root[0].left[0].next",
+                          "dataType" : "TreeLinkNode*",
+                          "realType" : "TreeLinkNode*",
+                          "external" : false,
+                          "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\next",
+                          "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                          "level" : 1
+                        } ]
+                      } ]
+                    }, {
+                      "type" : "com.dse.testdata.object.StructDataNode",
+                      "name" : "left[1]",
+                      "virtual_name" : "root[0].left[1]",
+                      "dataType" : "TreeLinkNode",
+                      "realType" : "TreeLinkNode",
+                      "external" : false,
+                      "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left\\left[1]",
+                      "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                      "children" : [ {
+                        "type" : "com.dse.testdata.object.SubStructDataNode",
+                        "name" : "left",
+                        "virtual_name" : "root[0].left[1]",
+                        "dataType" : "::TreeLinkNode",
+                        "realType" : "::TreeLinkNode",
+                        "external" : false,
+                        "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left\\left",
+                        "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                        "rawType" : "::TreeLinkNode",
+                        "selectedConstructor" : "TreeLinkNode(int)",
+                        "variableType" : "::TreeLinkNode",
+                        "children" : [ {
+                          "type" : "com.dse.testdata.object.ConstructorDataNode",
+                          "name" : "TreeLinkNode(int)",
+                          "virtual_name" : "root[0].left[1]",
+                          "dataType" : "::TreeLinkNode",
+                          "realType" : "::TreeLinkNode",
+                          "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)",
+                          "children" : [ {
+                            "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                            "name" : "x",
+                            "virtual_name" : "root0_left1_x",
+                            "dataType" : "int",
+                            "realType" : "int",
+                            "external" : false,
+                            "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)\\x",
+                            "correspondingType" : "int",
+                            "value" : "0"
+                          } ]
+                        }, {
+                          "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                          "name" : "val",
+                          "virtual_name" : "root[0].left[1].val",
+                          "dataType" : "int",
+                          "realType" : "int",
+                          "external" : false,
+                          "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\val",
+                          "correspondingType" : "int",
+                          "value" : "null"
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "left",
+                          "virtual_name" : "root[0].left[1].left",
+                          "dataType" : "TreeLinkNode*",
+                          "realType" : "TreeLinkNode*",
+                          "external" : false,
+                          "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left",
+                          "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                          "level" : 1
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "right",
+                          "virtual_name" : "root[0].left[1].right",
+                          "dataType" : "TreeLinkNode*",
+                          "realType" : "TreeLinkNode*",
+                          "external" : false,
+                          "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\right",
+                          "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                          "level" : 1
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "next",
+                          "virtual_name" : "root[0].left[1].next",
+                          "dataType" : "TreeLinkNode*",
+                          "realType" : "TreeLinkNode*",
+                          "external" : false,
+                          "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\next",
+                          "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                          "level" : 1
+                        } ]
+                      } ]
+                    }, {
+                      "type" : "com.dse.testdata.object.StructDataNode",
+                      "name" : "left[2]",
+                      "virtual_name" : "root[0].left[2]",
+                      "dataType" : "TreeLinkNode",
+                      "realType" : "TreeLinkNode",
+                      "external" : false,
+                      "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left\\left[2]",
+                      "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                      "children" : [ {
+                        "type" : "com.dse.testdata.object.SubStructDataNode",
+                        "name" : "left",
+                        "virtual_name" : "root[0].left[2]",
+                        "dataType" : "::TreeLinkNode",
+                        "realType" : "::TreeLinkNode",
+                        "external" : false,
+                        "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left\\left",
+                        "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                        "rawType" : "::TreeLinkNode",
+                        "selectedConstructor" : "TreeLinkNode(int)",
+                        "variableType" : "::TreeLinkNode",
+                        "children" : [ {
+                          "type" : "com.dse.testdata.object.ConstructorDataNode",
+                          "name" : "TreeLinkNode(int)",
+                          "virtual_name" : "root[0].left[2]",
+                          "dataType" : "::TreeLinkNode",
+                          "realType" : "::TreeLinkNode",
+                          "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)",
+                          "children" : [ {
+                            "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                            "name" : "x",
+                            "virtual_name" : "root0_left2_x",
+                            "dataType" : "int",
+                            "realType" : "int",
+                            "external" : false,
+                            "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)\\x",
+                            "correspondingType" : "int",
+                            "value" : "0"
+                          } ]
+                        }, {
+                          "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                          "name" : "val",
+                          "virtual_name" : "root[0].left[2].val",
+                          "dataType" : "int",
+                          "realType" : "int",
+                          "external" : false,
+                          "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\val",
+                          "correspondingType" : "int",
+                          "value" : "null"
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "left",
+                          "virtual_name" : "root[0].left[2].left",
+                          "dataType" : "TreeLinkNode*",
+                          "realType" : "TreeLinkNode*",
+                          "external" : false,
+                          "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left",
+                          "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                          "level" : 1
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "right",
+                          "virtual_name" : "root[0].left[2].right",
+                          "dataType" : "TreeLinkNode*",
+                          "realType" : "TreeLinkNode*",
+                          "external" : false,
+                          "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\right",
+                          "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                          "level" : 1
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "next",
+                          "virtual_name" : "root[0].left[2].next",
+                          "dataType" : "TreeLinkNode*",
+                          "realType" : "TreeLinkNode*",
+                          "external" : false,
+                          "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\next",
+                          "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                          "level" : 1
+                        } ]
+                      } ]
+                    } ]
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "right",
+                    "virtual_name" : "root[0].right",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\right",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "next",
+                    "virtual_name" : "root[0].next",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\next",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  } ]
+                } ]
+              }, {
+                "type" : "com.dse.testdata.object.StructDataNode",
+                "name" : "root[1]",
+                "virtual_name" : "root[1]",
+                "dataType" : "TreeLinkNode",
+                "realType" : "TreeLinkNode",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)\\root\\root[1]",
+                "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.SubStructDataNode",
+                  "name" : "root",
+                  "virtual_name" : "root[1]",
+                  "dataType" : "::TreeLinkNode",
+                  "realType" : "::TreeLinkNode",
+                  "external" : false,
+                  "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)\\root\\root",
+                  "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                  "rawType" : "::TreeLinkNode",
+                  "selectedConstructor" : "TreeLinkNode(int)",
+                  "variableType" : "::TreeLinkNode",
+                  "children" : [ {
+                    "type" : "com.dse.testdata.object.ConstructorDataNode",
+                    "name" : "TreeLinkNode(int)",
+                    "virtual_name" : "root[1]",
+                    "dataType" : "::TreeLinkNode",
+                    "realType" : "::TreeLinkNode",
+                    "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)",
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "x",
+                      "virtual_name" : "root1_x",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)\\x",
+                      "correspondingType" : "int",
+                      "value" : "1873468586"
+                    } ]
+                  }, {
+                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                    "name" : "val",
+                    "virtual_name" : "root[1].val",
+                    "dataType" : "int",
+                    "realType" : "int",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\val",
+                    "correspondingType" : "int",
+                    "value" : "null"
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "left",
+                    "virtual_name" : "root[1].left",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "right",
+                    "virtual_name" : "root[1].right",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\right",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "next",
+                    "virtual_name" : "root[1].next",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\next",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  } ]
+                } ]
+              }, {
+                "type" : "com.dse.testdata.object.StructDataNode",
+                "name" : "root[2]",
+                "virtual_name" : "root[2]",
+                "dataType" : "TreeLinkNode",
+                "realType" : "TreeLinkNode",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)\\root\\root[2]",
+                "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.SubStructDataNode",
+                  "name" : "root",
+                  "virtual_name" : "root[2]",
+                  "dataType" : "::TreeLinkNode",
+                  "realType" : "::TreeLinkNode",
+                  "external" : false,
+                  "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)\\root\\root",
+                  "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                  "rawType" : "::TreeLinkNode",
+                  "selectedConstructor" : "TreeLinkNode(int)",
+                  "variableType" : "::TreeLinkNode",
+                  "children" : [ {
+                    "type" : "com.dse.testdata.object.ConstructorDataNode",
+                    "name" : "TreeLinkNode(int)",
+                    "virtual_name" : "root[2]",
+                    "dataType" : "::TreeLinkNode",
+                    "realType" : "::TreeLinkNode",
+                    "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)",
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "x",
+                      "virtual_name" : "root2_x",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)\\x",
+                      "correspondingType" : "int",
+                      "value" : "-2009236606"
+                    } ]
+                  }, {
+                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                    "name" : "val",
+                    "virtual_name" : "root[2].val",
+                    "dataType" : "int",
+                    "realType" : "int",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\val",
+                    "correspondingType" : "int",
+                    "value" : "null"
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "left",
+                    "virtual_name" : "root[2].left",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "right",
+                    "virtual_name" : "root[2].right",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\right",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "next",
+                    "virtual_name" : "root[2].next",
+                    "dataType" : "TreeLinkNode*",
+                    "realType" : "TreeLinkNode*",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\next",
+                    "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                    "level" : 1
+                  } ]
+                } ]
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.PointerStructureDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "TreeLinkNode*",
+              "realType" : "TreeLinkNode*",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\Solution\\getLinkedLeftNode(TreeLinkNode*)\\RETURN",
+              "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+              "level" : 1
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_getLinkedLeftNode_TreeLinkNodemul_random_4(void) {\n{\nAKA_test_case_name=\"Solution_getLinkedLeftNode_TreeLinkNodemul_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeLinkNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-2015369652;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\getLinkedLeftNode(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeLinkNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\nstd::vector<TreeLinkNode*> AKA_VECTOR_INIT_root_0_DOT_left;\n/* SubStructDataNode left */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root0_left0_x=574825661;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\getLinkedLeftNode(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\left\\\\left[0]\\\\left\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_left_0 = new ::TreeLinkNode(root0_left0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).next;\nAKA_VECTOR_INIT_root_0_DOT_left.push_back(AKA_VECTOR_INIT_root_0_DOT_left_0);\n/* SubStructDataNode left */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root0_left1_x=0;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\getLinkedLeftNode(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\left\\\\left[1]\\\\left\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_left_1 = new ::TreeLinkNode(root0_left1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_left_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_left_1).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_0_DOT_left_1).next;\nAKA_VECTOR_INIT_root_0_DOT_left.push_back(AKA_VECTOR_INIT_root_0_DOT_left_1);\n/* SubStructDataNode left */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root0_left2_x=0;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\getLinkedLeftNode(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\left\\\\left[2]\\\\left\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_left_2 = new ::TreeLinkNode(root0_left2_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_left_2).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_left_2).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_0_DOT_left_2).next;\nAKA_VECTOR_INIT_root_0_DOT_left.push_back(AKA_VECTOR_INIT_root_0_DOT_left_2);\n(*AKA_VECTOR_INIT_root_0).left = AKA_VECTOR_INIT_root_0_DOT_left[0];\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_0).next;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=1873468586;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\getLinkedLeftNode(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_1\\\\root\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeLinkNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_1).next;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root2_x=-2009236606;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\getLinkedLeftNode(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_2\\\\root\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_2 = new ::TreeLinkNode(root2_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_2).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_2).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_2).next;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_2);\n\nTreeLinkNode* root = AKA_VECTOR_INIT_root[0];\nTreeLinkNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* PointerStructureDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_getLinkedLeftNode_TreeLinkNodemul_random_4\");TreeLinkNode* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->getLinkedLeftNode(root);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\Solution\\\\getLinkedLeftNode(TreeLinkNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeLinkNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-2015369652;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\getLinkedLeftNode(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeLinkNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\nstd::vector<TreeLinkNode*> AKA_VECTOR_INIT_root_0_DOT_left;\n/* SubStructDataNode left */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root0_left0_x=574825661;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\getLinkedLeftNode(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\left\\\\left[0]\\\\left\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_left_0 = new ::TreeLinkNode(root0_left0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).next;\nAKA_VECTOR_INIT_root_0_DOT_left.push_back(AKA_VECTOR_INIT_root_0_DOT_left_0);\n/* SubStructDataNode left */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root0_left1_x=0;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\getLinkedLeftNode(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\left\\\\left[1]\\\\left\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_left_1 = new ::TreeLinkNode(root0_left1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_left_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_left_1).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_0_DOT_left_1).next;\nAKA_VECTOR_INIT_root_0_DOT_left.push_back(AKA_VECTOR_INIT_root_0_DOT_left_1);\n/* SubStructDataNode left */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root0_left2_x=0;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\getLinkedLeftNode(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\left\\\\left[2]\\\\left\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_left_2 = new ::TreeLinkNode(root0_left2_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_left_2).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_left_2).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_0_DOT_left_2).next;\nAKA_VECTOR_INIT_root_0_DOT_left.push_back(AKA_VECTOR_INIT_root_0_DOT_left_2);\n(*AKA_VECTOR_INIT_root_0).left = AKA_VECTOR_INIT_root_0_DOT_left[0];\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_0).next;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=1873468586;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\getLinkedLeftNode(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_1\\\\root\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeLinkNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_1).next;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint root2_x=-2009236606;\nAKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\getLinkedLeftNode(TreeLinkNode*)\\\\root\\\\AKA_VECTOR_INIT_root_2\\\\root\\\\TreeLinkNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_2 = new ::TreeLinkNode(root2_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_2).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_2).right;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_root_2).next;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_2);\n\nTreeLinkNode* root = AKA_VECTOR_INIT_root[0];\nTreeLinkNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* PointerStructureDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ]
+  },
+  {
+    "fm": "TreeLinkNode(int x) : val(x), left(NULL), right(NULL), next(NULL) {}",
+    "f": [ ],
+    "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)",
+    "c": [ ],
+    "fc": "",
+    "m": [ "void connect(TreeLinkNode *root) {\r\n        TreeLinkNode* cur = root, *next = NULL;\r\n        while (cur != NULL)\r\n        {\r\n            TreeLinkNode *p = cur, *k = NULL;\r\n            while (p != NULL)\r\n            {\r\n                TreeLinkNode* sub = getLinkedLeftNode(p);\r\n                if (sub != NULL)\r\n                {\r\n                    if (next == NULL)\r\n                    {\r\n                        next = sub;\r\n                        k = sub;\r\n                    }\r\n                    else\r\n                        k->next = sub;\r\n                    while (k->next != NULL) // ietrate to the tail\r\n                        k = k->next;\r\n                }\r\n                p = p->next;\r\n            }\r\n            cur = next;\r\n            next = NULL;\r\n        }\r\n    }" ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Populating_Next_Right_Pointers_in_Each_Node_II.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.StructDataNode",
+              "name" : "AKA_INSTANCE___TreeLinkNode",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___TreeLinkNode",
+              "dataType" : "::TreeLinkNode",
+              "realType" : "::TreeLinkNode",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\AKA_INSTANCE___TreeLinkNode",
+              "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubStructDataNode",
+                "name" : "AKA_INSTANCE___TreeLinkNode",
+                "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___TreeLinkNode",
+                "dataType" : "::TreeLinkNode",
+                "realType" : "::TreeLinkNode",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\AKA_INSTANCE___TreeLinkNode",
+                "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                "rawType" : "::TreeLinkNode",
+                "selectedConstructor" : "TreeLinkNode(int)",
+                "variableType" : "::TreeLinkNode",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "TreeLinkNode(int)",
+                  "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___TreeLinkNode",
+                  "dataType" : "::TreeLinkNode",
+                  "realType" : "::TreeLinkNode",
+                  "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)",
+                  "children" : [ {
+                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                    "name" : "x",
+                    "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___TreeLinkNode_x",
+                    "dataType" : "int",
+                    "realType" : "int",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)\\x",
+                    "correspondingType" : "int",
+                    "value" : "null"
+                  } ]
+                }, {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "val",
+                  "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___TreeLinkNode->val",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\val",
+                  "correspondingType" : "int",
+                  "value" : "null"
+                }, {
+                  "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                  "name" : "left",
+                  "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___TreeLinkNode->left",
+                  "dataType" : "TreeLinkNode*",
+                  "realType" : "TreeLinkNode*",
+                  "external" : false,
+                  "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left",
+                  "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                  "level" : 1
+                }, {
+                  "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                  "name" : "right",
+                  "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___TreeLinkNode->right",
+                  "dataType" : "TreeLinkNode*",
+                  "realType" : "TreeLinkNode*",
+                  "external" : false,
+                  "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\right",
+                  "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                  "level" : 1
+                }, {
+                  "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                  "name" : "next",
+                  "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___TreeLinkNode->next",
+                  "dataType" : "TreeLinkNode*",
+                  "realType" : "TreeLinkNode*",
+                  "external" : false,
+                  "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\next",
+                  "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                  "level" : 1
+                } ]
+              } ]
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.StructDataNode",
+              "name" : "AKA_INSTANCE___TreeLinkNode",
+              "virtual_name" : "AKA_INSTANCE___TreeLinkNode",
+              "dataType" : "::TreeLinkNode",
+              "realType" : "::TreeLinkNode",
+              "external" : true,
+              "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\AKA_INSTANCE___TreeLinkNode",
+              "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubStructDataNode",
+                "name" : "AKA_INSTANCE___TreeLinkNode",
+                "virtual_name" : "AKA_INSTANCE___TreeLinkNode",
+                "dataType" : "::TreeLinkNode",
+                "realType" : "::TreeLinkNode",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\AKA_INSTANCE___TreeLinkNode",
+                "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                "rawType" : "::TreeLinkNode",
+                "selectedConstructor" : "TreeLinkNode(int)",
+                "variableType" : "::TreeLinkNode",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "TreeLinkNode(int)",
+                  "virtual_name" : "AKA_INSTANCE___TreeLinkNode",
+                  "dataType" : "::TreeLinkNode",
+                  "realType" : "::TreeLinkNode",
+                  "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)",
+                  "children" : [ {
+                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                    "name" : "x",
+                    "virtual_name" : "AKA_INSTANCE___TreeLinkNode_x",
+                    "dataType" : "int",
+                    "realType" : "int",
+                    "external" : false,
+                    "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)\\x",
+                    "correspondingType" : "int",
+                    "value" : "-1164154997"
+                  } ]
+                }, {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "val",
+                  "virtual_name" : "AKA_INSTANCE___TreeLinkNode->val",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\val",
+                  "correspondingType" : "int",
+                  "value" : "null"
+                }, {
+                  "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                  "name" : "left",
+                  "virtual_name" : "AKA_INSTANCE___TreeLinkNode->left",
+                  "dataType" : "TreeLinkNode*",
+                  "realType" : "TreeLinkNode*",
+                  "external" : false,
+                  "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\left",
+                  "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                  "level" : 1
+                }, {
+                  "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                  "name" : "right",
+                  "virtual_name" : "AKA_INSTANCE___TreeLinkNode->right",
+                  "dataType" : "TreeLinkNode*",
+                  "realType" : "TreeLinkNode*",
+                  "external" : false,
+                  "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\right",
+                  "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                  "level" : 1
+                }, {
+                  "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                  "name" : "next",
+                  "virtual_name" : "AKA_INSTANCE___TreeLinkNode->next",
+                  "dataType" : "TreeLinkNode*",
+                  "realType" : "TreeLinkNode*",
+                  "external" : false,
+                  "correspondingVar" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\next",
+                  "correspondingType" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode",
+                  "level" : 1
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "TreeLinkNode(int)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "",
+            "realType" : "",
+            "functionNode" : ".\\third-teen\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\TreeLinkNode\\TreeLinkNode(int)"
+          } ]
+        },
+        "td" : "void AKA_TEST_TreeLinkNode_int_random_0(void) {\n{\nAKA_test_case_name=\"TreeLinkNode_int_random_0\";\n\n// set up\n;\n\n\n/* SubStructDataNode AKA_INSTANCE___TreeLinkNode */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint AKA_INSTANCE___TreeLinkNode_x=-1164154997;\nAKA_mark(\"<<PRE-CALLING>> Test TreeLinkNode_int_random_0\");AKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___TreeLinkNode\\\\AKA_INSTANCE___TreeLinkNode\\\\TreeLinkNode(int)\");AKA_fCall++;AKA_INSTANCE___TreeLinkNode = new ::TreeLinkNode(AKA_INSTANCE___TreeLinkNode_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\nAKA_INSTANCE___TreeLinkNode->left;\n/* PointerStructureDataNode right */\nAKA_INSTANCE___TreeLinkNode->right;\n/* PointerStructureDataNode next */\nAKA_INSTANCE___TreeLinkNode->next;\n\n\n\n\n\n\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubStructDataNode AKA_INSTANCE___TreeLinkNode */\n/* ConstructorDataNode TreeLinkNode(int) */\n/* NormalNumberDataNode x */\nint AKA_INSTANCE___TreeLinkNode_x=-1164154997;\nAKA_mark(\"<<PRE-CALLING>> Test TreeLinkNode_int_random_0\");AKA_mark(\"Calling: .\\\\third-teen\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\TreeLinkNode\\\\TreeLinkNode(int)|ROOT\\\\Populating_Next_Right_Pointers_in_Each_Node_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___TreeLinkNode\\\\AKA_INSTANCE___TreeLinkNode\\\\TreeLinkNode(int)\");AKA_fCall++;AKA_INSTANCE___TreeLinkNode = new ::TreeLinkNode(AKA_INSTANCE___TreeLinkNode_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\nAKA_INSTANCE___TreeLinkNode->left;\n/* PointerStructureDataNode right */\nAKA_INSTANCE___TreeLinkNode->right;\n/* PointerStructureDataNode next */\nAKA_INSTANCE___TreeLinkNode->next;\n\n\n",
+        "isAutomated" : true
+      }
+    ]
+  },
+  {
+    "fm": "double power(double x, int n)\r     {\r         if (n == 0)\r             return 1;\r         double v = power(x, n / 2);\r         if (n % 2 == 0)\r             return v * v;\r         else\r             return v * v * x;\r     }",
+    "f": [ ],
+    "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\third-teen\\Pow(x, n).cpp\\Solution\\power(double,int)",
+    "c": [ "" ],
+    "fc": "class Solution {\r public:\r     double power(double x, int n)\r     {\r         if (n == 0)\r             return 1;\r         double v = power(x, n / 2);\r         if (n % 2 == 0)\r             return v * v;\r         else\r             return v * v * x;\r     }\r     double myPow(double x, int n) {\r         if (n < 0)\r             return 1.0 / power(x, -n);\r         else\r             return power(x, n);\r     }\r };",
+    "m": [ "double power(double x, int n)\r\n    {\r\n        if (n == 0)\r\n            return 1;\r\n        double v = power(x, n / 2);\r\n        if (n % 2 == 0)\r\n            return v * v;\r\n        else\r\n            return v * v * x;\r\n    }", "double power(double x, int n)\r\n    {\r\n        if (n == 0)\r\n            return 1;\r\n        double v = power(x, n / 2);\r\n        if (n % 2 == 0)\r\n            return v * v;\r\n        else\r\n            return v * v * x;\r\n    }", "double myPow(double x, int n) {\r\n        if (n < 0)\r\n            return 1.0 / power(x, -n);\r\n        else\r\n            return power(x, n);\r\n    }" ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Pow(x, n).cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\third-teen\\Pow(x, n).cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\power(double,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\third-teen\\Pow(x, n).cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\third-teen\\Pow(x, n).cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\third-teen\\Pow(x, n).cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "power(double,int)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "double",
+            "realType" : "double",
+            "functionNode" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\power(double,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "x",
+              "virtual_name" : "EXPECTED_x",
+              "dataType" : "double",
+              "realType" : "double",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\power(double,int)\\x",
+              "correspondingType" : "double",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "EXPECTED_n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\power(double,int)\\n",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\power(double,int)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "x",
+              "virtual_name" : "x",
+              "dataType" : "double",
+              "realType" : "double",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\power(double,int)\\x",
+              "correspondingType" : "double",
+              "value" : "0.12"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\power(double,int)\\n",
+              "correspondingType" : "int",
+              "value" : "-141831913"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "double",
+              "realType" : "double",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\power(double,int)\\RETURN",
+              "correspondingType" : "double",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_power_double_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_power_double_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Pow(x, n).cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\ndouble x=0.12;\n\n\nint n=-141831913;\n\n\ndouble AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_power_double_int_random_0\");double AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->power(x,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\third-teen\\\\Pow(x, n).cpp\\\\Solution\\\\power(double,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Pow(x, n).cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\ndouble x=0.12;\n\n\nint n=-141831913;\n\n\ndouble AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ]
+  },
+  {
+    "fm": "double myPow(double x, int n) {\r         if (n < 0)\r             return 1.0 / power(x, -n);\r         else\r             return power(x, n);\r     }",
+    "f": [ ],
+    "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\third-teen\\Pow(x, n).cpp\\Solution\\myPow(double,int)",
+    "c": [ "" ],
+    "fc": "class Solution {\r public:\r     double power(double x, int n)\r     {\r         if (n == 0)\r             return 1;\r         double v = power(x, n / 2);\r         if (n % 2 == 0)\r             return v * v;\r         else\r             return v * v * x;\r     }\r     double myPow(double x, int n) {\r         if (n < 0)\r             return 1.0 / power(x, -n);\r         else\r             return power(x, n);\r     }\r };",
+    "m": [ "double power(double x, int n)\r\n    {\r\n        if (n == 0)\r\n            return 1;\r\n        double v = power(x, n / 2);\r\n        if (n % 2 == 0)\r\n            return v * v;\r\n        else\r\n            return v * v * x;\r\n    }" ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Pow(x, n).cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\third-teen\\Pow(x, n).cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\myPow(double,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\third-teen\\Pow(x, n).cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\third-teen\\Pow(x, n).cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\third-teen\\Pow(x, n).cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "myPow(double,int)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "double",
+            "realType" : "double",
+            "functionNode" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\myPow(double,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "EXPECTED_n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\myPow(double,int)\\n",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "x",
+              "virtual_name" : "EXPECTED_x",
+              "dataType" : "double",
+              "realType" : "double",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\myPow(double,int)\\x",
+              "correspondingType" : "double",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\myPow(double,int)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "x",
+              "virtual_name" : "x",
+              "dataType" : "double",
+              "realType" : "double",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\myPow(double,int)\\x",
+              "correspondingType" : "double",
+              "value" : "0.18"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\myPow(double,int)\\n",
+              "correspondingType" : "int",
+              "value" : "1830502361"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "double",
+              "realType" : "double",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Pow(x, n).cpp\\Solution\\myPow(double,int)\\RETURN",
+              "correspondingType" : "double",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_myPow_double_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_myPow_double_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Pow(x, n).cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\ndouble x=0.18;\n\n\nint n=1830502361;\n\n\ndouble AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_myPow_double_int_random_1\");double AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->myPow(x,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\third-teen\\\\Pow(x, n).cpp\\\\Solution\\\\myPow(double,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Pow(x, n).cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\ndouble x=0.18;\n\n\nint n=1830502361;\n\n\ndouble AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ]
+  },
+  {
+    "fm": "vector<int> productExceptSelf(vector<int>& nums) {\r         vector<int> products;\r         if(nums.size() == 0) return products;\r \r         int product = 1;\r         products.push_back(1);\r         for(int i =1; i< nums.size(); i++) {\r             product *= nums[i-1];\r             products.push_back(product);\r         }\r         \r         product = 1;\r         for(int i =nums.size()-2; i>=0; i--) {\r             product = product * nums[i+1];\r             products[i] = products[i] * product; \r         }\r         return products;\r     }",
+    "f": [ ],
+    "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\third-teen\\Product of Array Except Self.cpp\\Solution\\productExceptSelf(vector<int>&)",
+    "c": [ "" ],
+    "fc": "class Solution {\r public:\r     vector<int> productExceptSelf(vector<int>& nums) {\r         vector<int> products;\r         if(nums.size() == 0) return products;\r \r         int product = 1;\r         products.push_back(1);\r         for(int i =1; i< nums.size(); i++) {\r             product *= nums[i-1];\r             products.push_back(product);\r         }\r         \r         product = 1;\r         for(int i =nums.size()-2; i>=0; i--) {\r             product = product * nums[i+1];\r             products[i] = products[i] * product; \r         }\r         return products;\r     }\r };",
+    "m": [ ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Product of Array Except Self.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\third-teen\\Product of Array Except Self.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\third-teen\\Product of Array Except Self.cpp\\Solution\\productExceptSelf(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Product of Array Except Self.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\third-teen\\Product of Array Except Self.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\third-teen\\Product of Array Except Self.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\third-teen\\Product of Array Except Self.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Product of Array Except Self.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\third-teen\\Product of Array Except Self.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "productExceptSelf(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "vector<int>",
+            "realType" : "vector<int>",
+            "functionNode" : ".\\third-teen\\Product of Array Except Self.cpp\\Solution\\productExceptSelf(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "EXPECTED_nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Product of Array Except Self.cpp\\Solution\\productExceptSelf(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\third-teen\\Product of Array Except Self.cpp\\Solution\\productExceptSelf(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Product of Array Except Self.cpp\\Solution\\productExceptSelf(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 3,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "nums_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Product of Array Except Self.cpp\\Solution\\productExceptSelf(vector<int>&)\\nums\\element #0",
+                "correspondingType" : "int",
+                "value" : "1296904625"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "nums_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Product of Array Except Self.cpp\\Solution\\productExceptSelf(vector<int>&)\\nums\\element #1",
+                "correspondingType" : "int",
+                "value" : "-684750580"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "nums_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Product of Array Except Self.cpp\\Solution\\productExceptSelf(vector<int>&)\\nums\\element #2",
+                "correspondingType" : "int",
+                "value" : "170676334"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Product of Array Except Self.cpp\\Solution\\productExceptSelf(vector<int>&)\\RETURN",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_productExceptSelf_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_productExceptSelf_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Product of Array Except Self.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1296904625;\nnums.push_back(nums_element0);\nint nums_element1=-684750580;\nnums.push_back(nums_element1);\nint nums_element2=170676334;\nnums.push_back(nums_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_productExceptSelf_vector_int_random_1\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->productExceptSelf(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\third-teen\\\\Product of Array Except Self.cpp\\\\Solution\\\\productExceptSelf(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Product of Array Except Self.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1296904625;\nnums.push_back(nums_element0);\nint nums_element1=-684750580;\nnums.push_back(nums_element1);\nint nums_element2=170676334;\nnums.push_back(nums_element2);\n/* VectorDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ]
+  },
+  {
+    "fm": "int removeDuplicates(vector<int>& A) {\r         int n = A.size();\r         if (n == 0) return 0;\r         int index = 0;\r         for (int i = 0; i < n; i++)\r         {\r             if (A[index] == A[i]) // duplicate, skip\r             {\r                 continue;\r             }\r             index++; // non-duplicate, copy it to second pointer\r             A[index] = A[i];\r         }\r         return index + 1;\r     }",
+    "f": [ ],
+    "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\third-teen\\Remove_Duplicates_from_Sorted_Array.cpp\\Solution\\removeDuplicates(vector<int>&)",
+    "c": [ "" ],
+    "fc": "class Solution {\r public:\r     int removeDuplicates(vector<int>& A) {\r         int n = A.size();\r         if (n == 0) return 0;\r         int index = 0;\r         for (int i = 0; i < n; i++)\r         {\r             if (A[index] == A[i]) // duplicate, skip\r             {\r                 continue;\r             }\r             index++; // non-duplicate, copy it to second pointer\r             A[index] = A[i];\r         }\r         return index + 1;\r     }\r };",
+    "m": [ ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Remove_Duplicates_from_Sorted_Array.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array.cpp\\Solution\\removeDuplicates(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "removeDuplicates(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array.cpp\\Solution\\removeDuplicates(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "A",
+              "virtual_name" : "EXPECTED_A",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array.cpp\\Solution\\removeDuplicates(vector<int>&)\\A",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array.cpp\\Solution\\removeDuplicates(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "A",
+              "virtual_name" : "A",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array.cpp\\Solution\\removeDuplicates(vector<int>&)\\A",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 3,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "A_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array.cpp\\Solution\\removeDuplicates(vector<int>&)\\A\\element #0",
+                "correspondingType" : "int",
+                "value" : "-1987883918"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "A_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array.cpp\\Solution\\removeDuplicates(vector<int>&)\\A\\element #1",
+                "correspondingType" : "int",
+                "value" : "-508527487"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "A_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array.cpp\\Solution\\removeDuplicates(vector<int>&)\\A\\element #2",
+                "correspondingType" : "int",
+                "value" : "1658004656"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array.cpp\\Solution\\removeDuplicates(vector<int>&)\\RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_removeDuplicates_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_removeDuplicates_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Remove_Duplicates_from_Sorted_Array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> A;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode A */\nint A_element0=-1987883918;\nA.push_back(A_element0);\nint A_element1=-508527487;\nA.push_back(A_element1);\nint A_element2=1658004656;\nA.push_back(A_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_removeDuplicates_vector_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->removeDuplicates(A);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\third-teen\\\\Remove_Duplicates_from_Sorted_Array.cpp\\\\Solution\\\\removeDuplicates(vector<int>&)\");\n\n\nvector<int> EXPECTED_A;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Remove_Duplicates_from_Sorted_Array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> A;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode A */\nint A_element0=-1987883918;\nA.push_back(A_element0);\nint A_element1=-508527487;\nA.push_back(A_element1);\nint A_element2=1658004656;\nA.push_back(A_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ]
+  },
+  {
+    "fm": "int removeDuplicates(vector<int>& A) {\r         int n = A.size();\r         if (n == 0) return 0;\r         int occur = 1;\r         int index = 0;\r \r         for (int i = 1; i < n; i++)\r         {\r             if (A[index] == A[i])\r             {\r                 if (occur == 2)\r                 {\r                     continue;\r                 }\r                 occur++;\r             }\r             else\r             {\r                 occur = 1 ;\r             }\r \r             A[++index] = A[i];\r \r         }\r         return index + 1;\r     }",
+    "f": [ ],
+    "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\third-teen\\Remove_Duplicates_from_Sorted_Array_II.cpp\\Solution\\removeDuplicates(vector<int>&)",
+    "c": [ "" ],
+    "fc": "class Solution {\r public:\r     int removeDuplicates(vector<int>& A) {\r         int n = A.size();\r         if (n == 0) return 0;\r         int occur = 1;\r         int index = 0;\r \r         for (int i = 1; i < n; i++)\r         {\r             if (A[index] == A[i])\r             {\r                 if (occur == 2)\r                 {\r                     continue;\r                 }\r                 occur++;\r             }\r             else\r             {\r                 occur = 1 ;\r             }\r \r             A[++index] = A[i];\r \r         }\r         return index + 1;\r     }\r };",
+    "m": [ ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Remove_Duplicates_from_Sorted_Array_II.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array_II.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array_II.cpp\\Solution\\removeDuplicates(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array_II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array_II.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array_II.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array_II.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array_II.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array_II.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "removeDuplicates(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array_II.cpp\\Solution\\removeDuplicates(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "A",
+              "virtual_name" : "EXPECTED_A",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array_II.cpp\\Solution\\removeDuplicates(vector<int>&)\\A",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array_II.cpp\\Solution\\removeDuplicates(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "A",
+              "virtual_name" : "A",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array_II.cpp\\Solution\\removeDuplicates(vector<int>&)\\A",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 3,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "A_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array_II.cpp\\Solution\\removeDuplicates(vector<int>&)\\A\\element #0",
+                "correspondingType" : "int",
+                "value" : "1601381022"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "A_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array_II.cpp\\Solution\\removeDuplicates(vector<int>&)\\A\\element #1",
+                "correspondingType" : "int",
+                "value" : "-317652580"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "A_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array_II.cpp\\Solution\\removeDuplicates(vector<int>&)\\A\\element #2",
+                "correspondingType" : "int",
+                "value" : "263767161"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\third-teen\\Remove_Duplicates_from_Sorted_Array_II.cpp\\Solution\\removeDuplicates(vector<int>&)\\RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_removeDuplicates_vector_int_random_7(void) {\n{\nAKA_test_case_name=\"Solution_removeDuplicates_vector_int_random_7\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Remove_Duplicates_from_Sorted_Array_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> A;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode A */\nint A_element0=1601381022;\nA.push_back(A_element0);\nint A_element1=-317652580;\nA.push_back(A_element1);\nint A_element2=263767161;\nA.push_back(A_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_removeDuplicates_vector_int_random_7\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->removeDuplicates(A);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\third-teen\\\\Remove_Duplicates_from_Sorted_Array_II.cpp\\\\Solution\\\\removeDuplicates(vector<int>&)\");\n\n\nvector<int> EXPECTED_A;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Remove_Duplicates_from_Sorted_Array_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> A;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode A */\nint A_element0=1601381022;\nA.push_back(A_element0);\nint A_element1=-317652580;\nA.push_back(A_element1);\nint A_element2=263767161;\nA.push_back(A_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ]
+  }
+]
