@@ -231,17 +231,25 @@ def preprocess_dataset2(input_folder, output_file, overwrite=False):
                                 fields = clean_code(remove_comments(entry["f"]))
                         
                         # Use datatest field for target if available, otherwise use 't' field
-                        target = ""
+                        # target = ""
+                        # if "datatest" in entry and entry["datatest"]:
+                        #     for test_case in entry["datatest"]:
+                        #         if isinstance(test_case, dict):
+                        #             # if "simplified_t" in test_case and test_case["simplified_t"]:
+                        #             #     target = clean_code(remove_comments(extract_target_range(test_case["simplified_t"])))
+                        #             #     # break
+                        #             if "td" in test_case and test_case["td"]:
+                        #                 target = clean_code(remove_comments(extract_target_range(test_case["td"])))
+                        #             #     break
+
+                        targets = []
                         if "datatest" in entry and entry["datatest"]:
                             for test_case in entry["datatest"]:
-                                if isinstance(test_case, dict):
-                                    # if "simplified_t" in test_case and test_case["simplified_t"]:
-                                    #     target = clean_code(remove_comments(extract_target_range(test_case["simplified_t"])))
-                                    #     # break
-                                    if "td" in test_case and test_case["td"]:
-                                        target = clean_code(remove_comments(extract_target_range(test_case["td"])))
-                                    #     break
-                        
+                                if isinstance(test_case, dict) and "td" in test_case and test_case["td"]:
+                                    test_target = clean_code(remove_comments(extract_target_range(test_case["td"])))
+                                    if test_target:  # Chỉ thêm nếu target không rỗng
+                                        targets.append(test_target)
+
                         # If no target found in datatest, use 't' if available
                         # if not target and "t" in entry:
                         #     target = clean_code(remove_comments(extract_target_range(entry.get("t", ""))))
@@ -255,13 +263,22 @@ def preprocess_dataset2(input_folder, output_file, overwrite=False):
                             "M:", method_signatures,
                             "F:", fields
                         ])
-                        
-                        # Add if both source and target exist
-                        if source and target:
-                            new_data.append({"source": source, "target": target})
-                            total_processed += 1
-                            if total_processed % 100 == 0:
-                                logger.info(f"[UET] Processed {total_processed} entries so far")
+
+                        # Thêm từng cặp (source, target) cho mỗi test case
+                        if source and targets:
+                            for target in targets:
+                                new_data.append({"source": source, "target": target})
+                                total_processed += 1
+
+                            # if total_processed % 100 == 0:
+                            #     logger.info(f"[UET] Processed {total_processed} entries so far")
+
+                        # # Add if both source and target exist
+                        # if source and target:
+                        #     new_data.append({"source": source, "target": target})
+                        #     total_processed += 1
+                        #     if total_processed % 100 == 0:
+                        #         logger.info(f"[UET] Processed {total_processed} entries so far")
                     except Exception as e:
                         logger.error(f"[UET] [ERROR] Processing entry in file {json_file}, index {entry_idx}: {str(e)}")
                         continue
