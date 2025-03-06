@@ -2,15 +2,8 @@
 import os
 from enum import Enum
 
+from src.utils.model_utils import ModelType
 from src.utils.utils import normalize_path
-
-class ModelType(Enum):
-    SEQ2SEQ = "seq2seq"
-    CAUSAL = "causal"
-    MASKED = "masked"
-    ENCODER = "encoder"
-    VISION = "vision"
-    SPEECH = "speech"
 
 class Mode(Enum):
     VAST = 0
