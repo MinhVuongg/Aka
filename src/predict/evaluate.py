@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 
 
 # Load model đã train
-def load_model():
+def load_model(datapath):
     logger.info(f"[UET] Download model from %s - start", MODEL_SAVE_PATH)
     model = load_model_by_type(MODEL_SAVE_PATH, MODEL_TYPE)
     logger.info(f"[UET] Download model from %s - done", MODEL_SAVE_PATH)
@@ -46,8 +46,8 @@ def load_model():
     logger.info(f"[UET] Run model.eval() - done")
 
     # Load raw test
-    logger.info(f"[UET] load_dataset from %s - start", VALIDATIONSET_DATA_PATH_PROCESS)
-    dataset = load_dataset("json", data_files=VALIDATIONSET_DATA_PATH_PROCESS, split="train")
+    logger.info(f"[UET] load_dataset from %s - start", datapath)
+    dataset = load_dataset("json", data_files=datapath, split="train")
     num_samples = len(dataset)
     print(f"Số lượng mẫu trong dataset: {num_samples}")
     logger.info(f"[UET] load_dataset - done")
@@ -78,17 +78,17 @@ def compute_bleu(generated, ground_truth):
 
 
 # Hàm đánh giá mô hình
-def evaluate_model(dataset, tokenizer, model):
+def evaluate_model(dataset,  tokenizer, model, outputFolder):
     logger.info("[UET] Đang đánh giá mô hình...")
 
     # Xóa file cũ nếu có
-    if os.path.exists(OUTPUT_VALIDATIONSET_CSV):
-        os.remove(OUTPUT_VALIDATIONSET_CSV)
+    if os.path.exists(outputFolder):
+        os.remove(outputFolder)
 
     em_scores = []
     bleu_scores = []
 
-    with open(OUTPUT_VALIDATIONSET_CSV, "w", newline="", encoding="utf-8") as f:
+    with open(outputFolder, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         writer.writerow(["Source", "Expected Target", "Predicted Target", "BLEU Score", "Exact Match"])
 
@@ -119,10 +119,10 @@ def evaluate_model(dataset, tokenizer, model):
     logger.info(f"\n[UET] **Kết quả đánh giá:**")
     logger.info(f"[UET] Exact Match: {avg_em * 100:.2f}%")
     logger.info(f"[UET] BLEU Score trung bình: {avg_bleu * 100:.2f}%")
-    logger.info(f"[UET] Kết quả được lưu vào: {OUTPUT_VALIDATIONSET_CSV}")
+    logger.info(f"[UET] Kết quả được lưu vào: {outputFolder}")
 
 
 # Chạy đánh giá
 if __name__ == "__main__":
-    model, dataset, tokenizer = load_model()
-    evaluate_model(dataset, tokenizer, model)
+    model, dataset, tokenizer = load_model(datapath=VALIDATIONSET_DATA_PATH_PROCESS)
+    evaluate_model(dataset, tokenizer, model, outputFolder=OUTPUT_VALIDATIONSET_CSV)

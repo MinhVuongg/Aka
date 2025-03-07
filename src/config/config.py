@@ -74,6 +74,8 @@ elif mode == Mode.DA_LOCAL:
     PROJECT_PATH = "/Users/ducanhnguyen/Documents/aka-llm"
 elif mode == Mode.LINH_LOCAL:
     PROJECT_PATH = "D:/Workspace/AKA/March04/aka-llm"
+elif mode == Mode.FSOFT_SERVER:
+    PROJECT_PATH = r"C:\Users\CuongPN8.IVI\Documents\uet-llm\version0703"
 
 OUTPUT_PATH = normalize_path(f"{PROJECT_PATH}/aka-output")
 
@@ -93,5 +95,6 @@ MODEL_SAVE_PATH = normalize_path(
     f"{OUTPUT_PATH}/model{model_name_only}_epoch{EPOCHS}_traintype{TRAIN_TYPE}_maxsourcelen{max_source_length}_maxtargetlen{max_target_length}_batch{BATCH_SIZE}")
 
 OUTPUT_VALIDATIONSET_CSV = normalize_path(f"{OUTPUT_PATH}/output_validationset.csv")
+OUTPUT_TRAINSET_CSV = normalize_path(f"{OUTPUT_PATH}/output_trainingset.csv")
 
 LOG_DIR = normalize_path(f"{OUTPUT_PATH}/training_history.json")
