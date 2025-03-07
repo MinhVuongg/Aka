@@ -3,9 +3,9 @@ import logging
 import os
 import sys
 
-from src.config.config import TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS, OUTPUT_PATH, TRAIN_TYPE, LOG_DIR, \
+from src.config.config import TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS, TRAIN_TYPE, LOG_DIR, \
     VALIDATIONSET_RAW, \
-    VALIDATIONSET_DATA_PATH_PROCESS, OUTPUT_VALIDATIONSET_CSV, OUTPUT_TRAINSET_CSV
+    VALIDATIONSET_DATA_PATH_PROCESS, OUTPUT_TRAINSET_CSV, TRAIN_MODE
 from src.predict.analysis import analysis_result
 from src.predict.evaluate import load_model
 
@@ -51,10 +51,10 @@ def main():
     # TRAIN MODEL
     history = {"train_loss": []}
 
-    if TRAIN_TYPE == "lora":
+    if TRAIN_TYPE == TRAIN_MODE.LORA:
         logger.info("[UET] LoRATrainer")
         trainer = LoRATrainer()
-    else:
+    elif TRAIN_TYPE == TRAIN_MODE.FULL_FINETUNING:
         logger.info("[UET] FullFineTuneTrainer")
         trainer = FullFineTuneTrainer()
 
@@ -76,7 +76,7 @@ def main():
 
     logger.info("[UET] Đánh giá mô hình tren tap training...")
     model, dataset, tokenizer = load_model(datapath=TRAINSET_DATA_PATH_PROCESS)
-    dataset = dataset[:50] //xxx
+    dataset = dataset[:100]
     evaluate_model(dataset, tokenizer, model, outputFolder=OUTPUT_TRAINSET_CSV)
     analysis_result(OUTPUT_TRAINSET_CSV)
     logger.info("[UET] Hoàn tất đánh giá trên tập training!")

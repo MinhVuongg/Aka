@@ -1,6 +1,6 @@
 import logging
 
-from src.config.config import BATCH_SIZE, EPOCHS, FP16
+from src.config.config import BATCH_SIZE, EPOCHS, LEARNING_RATE
 from src.train.base_trainer import BaseTrainer
 from transformers import Trainer, TrainingArguments, TrainerCallback
 import os
@@ -33,11 +33,12 @@ class FullFineTuneTrainer(BaseTrainer):
             logging_strategy="epoch",
             evaluation_strategy="epoch",
             num_train_epochs=EPOCHS,
-            save_total_limit=2,
+            save_total_limit=1,
             logging_dir=self.log_dir,
             logging_steps=50,
-            fp16=FP16,
-            report_to="none"
+            report_to="none",
+            learning_rate=LEARNING_RATE,
+            optim="adamw_torch"
         )
 
         trainer = Trainer(

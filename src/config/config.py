@@ -19,6 +19,10 @@ class MASKING(Enum):
     NONE = 0
     RANDOM = 1
 
+class TRAIN_MODE(Enum):
+    LORA = 0
+    FULL_FINETUNING = 1
+
 # --------------------------------------------------------------------------------
 # 
 #                           Môi trường & Tham số huấn luyện (MODIFY HERE)
@@ -59,8 +63,8 @@ max_source_length = 512
 max_target_length = 1028
 EPOCHS = 100
 BATCH_SIZE = 2
-FP16 = False
-TRAIN_TYPE = "lora"  # full hoặc lora
+LEARNING_RATE = 0.0005
+TRAIN_TYPE = TRAIN_MODE.LORA
 
 # Mot vai machine ko chay duoc AST option. Neu chay duoc AST thi remove comment tot hon.
 REMOVE_COMMENT_MODE = COMMENT_REMOVAL.REGREX  # <= --------------------------------- CHOOSE COMMENT REMOVAL ---------------------------------
