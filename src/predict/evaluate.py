@@ -77,8 +77,7 @@ def compute_bleu(generated, ground_truth):
                          smoothing_function=SmoothingFunction().method4)
 
 
-# Hàm đánh giá mô hình
-def evaluate_model(dataset,  tokenizer, model, outputFolder):
+def evaluate_model(dataset, tokenizer, model, outputFolder, limit=None):
     logger.info("[UET] Đang đánh giá mô hình...")
 
     # Xóa file cũ nếu có
@@ -92,34 +91,98 @@ def evaluate_model(dataset,  tokenizer, model, outputFolder):
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         writer.writerow(["Source", "Expected Target", "Predicted Target", "BLEU Score", "Exact Match"])
 
-        pbar = tqdm(dataset, desc="Evaluating", unit="sample")
-        for sample in pbar:
-            # print("generate_target_from_sample - before");
-            source_text, predicted = generate_target_from_sample(sample, tokenizer, model)
-            # print("generate_target_from_sample - after");
-            ground_truth = str(sample["target"])
+        # Use enumerate to keep track of processed samples
+        count = 0
 
-            em_score = int(predicted.strip() == ground_truth.strip())  # Exact Match (0 hoặc 1)
-            # print("compute_bleu - before");
-            bleu_score = compute_bleu(predicted, ground_truth)
-            # print("compute_bleu - before");
+        # Create a progress bar - maintain the original functionality with tqdm
+        total = len(dataset) if limit is None else min(limit, len(dataset))
+        pbar = tqdm(total=total, desc="Evaluating", unit="sample")
 
-            writer.writerow([source_text, ground_truth, predicted, bleu_score, em_score])
-            f.flush()
+        for i, sample in enumerate(dataset):
+            # Stop if we've reached the limit
+            if limit is not None and count >= limit:
+                break
 
-            em_scores.append(em_score)
-            bleu_scores.append(bleu_score)
+            try:
+                # Process the sample just like in your original code
+                source_text, predicted = generate_target_from_sample(sample, tokenizer, model)
+                ground_truth = str(sample["target"])
 
-            pbar.set_postfix(EM=f"{100 * sum(em_scores) / len(em_scores):.2f}%",
-                             BLEU=f"{100 * sum(bleu_scores) / len(bleu_scores):.2f}%")
+                em_score = int(predicted.strip() == ground_truth.strip())
+                bleu_score = compute_bleu(predicted, ground_truth)
 
-    avg_em = sum(em_scores) / len(em_scores)
-    avg_bleu = sum(bleu_scores) / len(bleu_scores)
+                writer.writerow([source_text, ground_truth, predicted, bleu_score, em_score])
+                f.flush()
 
-    logger.info(f"\n[UET] **Kết quả đánh giá:**")
-    logger.info(f"[UET] Exact Match: {avg_em * 100:.2f}%")
-    logger.info(f"[UET] BLEU Score trung bình: {avg_bleu * 100:.2f}%")
-    logger.info(f"[UET] Kết quả được lưu vào: {outputFolder}")
+                em_scores.append(em_score)
+                bleu_scores.append(bleu_score)
+
+                count += 1
+                pbar.update(1)
+                pbar.set_postfix(EM=f"{100 * sum(em_scores) / len(em_scores):.2f}%",
+                                 BLEU=f"{100 * sum(bleu_scores) / len(bleu_scores):.2f}%")
+
+            except Exception as e:
+                logger.error(f"Error processing sample at position {i}: {str(e)}")
+                continue
+
+        pbar.close()
+
+    # The rest of your original function remains unchanged
+    if em_scores:  # Only calculate if we have scores
+        avg_em = sum(em_scores) / len(em_scores)
+        avg_bleu = sum(bleu_scores) / len(bleu_scores)
+
+        logger.info(f"\n[UET] **Kết quả đánh giá:**")
+        logger.info(f"[UET] Exact Match: {avg_em * 100:.2f}%")
+        logger.info(f"[UET] BLEU Score trung bình: {avg_bleu * 100:.2f}%")
+        logger.info(f"[UET] Kết quả được lưu vào: {outputFolder}")
+    else:
+        logger.warning("[UET] Không có mẫu nào được đánh giá thành công!")
+
+# # Hàm đánh giá mô hình
+# def evaluate_model(dataset,  tokenizer, model, outputFolder, limit = None):
+#     logger.info("[UET] Đang đánh giá mô hình...")
+#
+#     # Xóa file cũ nếu có
+#     if os.path.exists(outputFolder):
+#         os.remove(outputFolder)
+#
+#     em_scores = []
+#     bleu_scores = []
+#
+#     with open(outputFolder, "w", newline="", encoding="utf-8") as f:
+#         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
+#         writer.writerow(["Source", "Expected Target", "Predicted Target", "BLEU Score", "Exact Match"])
+#
+#         pbar = tqdm(dataset, desc="Evaluating", unit="sample")
+#         for sample in pbar:
+#             # print("generate_target_from_sample - before");
+#             source_text, predicted = generate_target_from_sample(sample, tokenizer, model)
+#             # print("generate_target_from_sample - after");
+#             ground_truth = str(sample["target"])
+#
+#             em_score = int(predicted.strip() == ground_truth.strip())  # Exact Match (0 hoặc 1)
+#             # print("compute_bleu - before");
+#             bleu_score = compute_bleu(predicted, ground_truth)
+#             # print("compute_bleu - before");
+#
+#             writer.writerow([source_text, ground_truth, predicted, bleu_score, em_score])
+#             f.flush()
+#
+#             em_scores.append(em_score)
+#             bleu_scores.append(bleu_score)
+#
+#             pbar.set_postfix(EM=f"{100 * sum(em_scores) / len(em_scores):.2f}%",
+#                              BLEU=f"{100 * sum(bleu_scores) / len(bleu_scores):.2f}%")
+#
+#     avg_em = sum(em_scores) / len(em_scores)
+#     avg_bleu = sum(bleu_scores) / len(bleu_scores)
+#
+#     logger.info(f"\n[UET] **Kết quả đánh giá:**")
+#     logger.info(f"[UET] Exact Match: {avg_em * 100:.2f}%")
+#     logger.info(f"[UET] BLEU Score trung bình: {avg_bleu * 100:.2f}%")
+#     logger.info(f"[UET] Kết quả được lưu vào: {outputFolder}")
 
 
 # Chạy đánh giá
