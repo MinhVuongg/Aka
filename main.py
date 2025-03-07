@@ -3,8 +3,9 @@ import logging
 import os
 import sys
 
-from src.config.config import TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS, OUTPUT_PATH, TRAIN_TYPE, LOG_DIR, VALIDATIONSET_RAW, \
-    VALIDATIONSET_DATA_PATH_PROCESS
+from src.config.config import TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS, OUTPUT_PATH, TRAIN_TYPE, LOG_DIR, \
+    VALIDATIONSET_RAW, \
+    VALIDATIONSET_DATA_PATH_PROCESS, OUTPUT_VALIDATIONSET_CSV, OUTPUT_TRAINSET_CSV
 from src.predict.evaluate import load_model
 
 # Xác định đường dẫn thư mục gốc của dự án
@@ -65,11 +66,16 @@ def main():
         json.dump(history, f, indent=4)
 
     #  Đánh giá mô hình
-    logger.info("[UET] Đánh giá mô hình...")
-    model, dataset, tokenizer = load_model()
-    evaluate_model(dataset, tokenizer, model)
+    logger.info("[UET] Đánh giá mô hình tren tap validation...")
+    model, dataset, tokenizer = load_model(datapath=VALIDATIONSET_DATA_PATH_PROCESS)
+    evaluate_model(dataset, tokenizer, model, outputFolder=OUTPUT_VALIDATIONSET_CSV)
     logger.info("[UET] Hoàn tất đánh giá!")
 
+    logger.info("[UET] Đánh giá mô hình tren tap training...")
+    model, dataset, tokenizer = load_model(datapath=TRAINSET_DATA_PATH_PROCESS)
+    dataset = dataset[:50] //xxx
+    evaluate_model(dataset, tokenizer, model, outputFolder=OUTPUT_TRAINSET_CSV)
+    logger.info("[UET] Hoàn tất đánh giá!")
 
 if __name__ == "__main__":
     main()
