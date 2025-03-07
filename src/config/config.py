@@ -23,13 +23,13 @@ class MASKING(Enum):
 # Môi trường & Tham số huấn luyện (MODIFY HERE)
 # --------------------------------------------------------------------------------
 mode = Mode.VAST  # <= --------------------------------- CHOOSE DEPLOYMENT HERE ---------------------------------
-MODEL_NAME = "Salesforce/codet5-small"
+MODEL_NAME = "Salesforce/codet5-base"
 MASKING_SOURCE = MASKING.NONE
 MODEL_TYPE = ModelType.SEQ2SEQ
-max_source_length = 256
-max_target_length = 256
-EPOCHS = 1
-BATCH_SIZE = 16
+max_source_length = 650
+max_target_length = 1536
+EPOCHS = 100
+BATCH_SIZE = 64
 FP16 = False
 TRAIN_TYPE = "lora"  # full hoặc lora
 

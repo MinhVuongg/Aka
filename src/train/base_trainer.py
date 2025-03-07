@@ -9,7 +9,8 @@ from abc import ABC, abstractmethod
 # from dotenv import load_dotenv
 
 from src.config.config import MODEL_NAME, TRAINSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, LOG_DIR, \
-    VALIDATIONSET_DATA_PATH_PROCESS, ModelType, MODEL_TYPE, MASKING_SOURCE, MASKING
+    VALIDATIONSET_DATA_PATH_PROCESS, ModelType, MODEL_TYPE, MASKING_SOURCE, MASKING, max_target_length, \
+    max_source_length
 from src.data.RandomTokenMasker import RandomTokenMasker
 from src.utils.model_utils import load_model_by_type
 
@@ -71,16 +72,16 @@ class BaseTrainer(ABC):
             self.token_masker.reset()
 
         # Tokenize the masked inputs
-        inputs = self.tokenizer(sources, max_length=256, truncation=True, padding="max_length")
-        outputs = self.tokenizer(targets, max_length=256, truncation=True, padding="max_length")
+        inputs = self.tokenizer(sources, max_length=max_source_length, truncation=True, padding="max_length")
+        outputs = self.tokenizer(targets, max_length=max_target_length, truncation=True, padding="max_length")
 
         inputs["labels"] = [(l if l != self.tokenizer.pad_token_id else -100) for l in outputs["input_ids"]]
         return inputs
 
     def preprocess(self, examples):
         """Tiền xử lý dữ liệu."""
-        inputs = self.tokenizer(examples["source"], max_length=256, truncation=True, padding="max_length")
-        targets = self.tokenizer(examples["target"], max_length=256, truncation=True, padding="max_length")
+        inputs = self.tokenizer(examples["source"], max_length=max_source_length, truncation=True, padding="max_length")
+        targets = self.tokenizer(examples["target"], max_length=max_target_length, truncation=True, padding="max_length")
         inputs["labels"] = [(l if l != self.tokenizer.pad_token_id else -100) for l in targets["input_ids"]]
         return inputs
 

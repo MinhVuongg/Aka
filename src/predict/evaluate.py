@@ -24,7 +24,7 @@ logger = logging.getLogger(__name__)
 # Load model đã train
 def load_model():
     logger.info(f"[UET] Download model from %s - start", MODEL_SAVE_PATH)
-    model = load_model_by_type(MODEL_NAME, MODEL_TYPE)
+    model = load_model_by_type(MODEL_SAVE_PATH, MODEL_TYPE)
     logger.info(f"[UET] Download model from %s - done", MODEL_SAVE_PATH)
 
     logger.info(f"[UET] Load Tokenizer from %s- start", MODEL_SAVE_PATH)
