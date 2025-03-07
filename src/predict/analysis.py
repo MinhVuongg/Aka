@@ -114,6 +114,3 @@ def analysis_result(file_path):
 
     print("Kết quả đã được lưu vào comparison_result.html")
 
-# Chạy đánh giá
-if __name__ == "__main__":
-    analysis_result(OUTPUT_VALIDATIONSET_CSV)
