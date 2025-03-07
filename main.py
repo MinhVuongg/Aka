@@ -70,14 +70,13 @@ def main():
     #  Đánh giá mô hình
     logger.info("[UET] Đánh giá mô hình tren tap validation...")
     model, dataset, tokenizer = load_model(datapath=VALIDATIONSET_DATA_PATH_PROCESS)
-    evaluate_model(dataset, tokenizer, model, outputFolder=OUTPUT_VALIDATIONSET_CSV)
+    evaluate_model(dataset, tokenizer, model, outputFolder=OUTPUT_VALIDATIONSET_CSV, limit=None)
     analysis_result(OUTPUT_VALIDATIONSET_CSV)
     logger.info("[UET] Hoàn tất đánh giá trên tập validation!")
 
     logger.info("[UET] Đánh giá mô hình tren tap training...")
     model, dataset, tokenizer = load_model(datapath=TRAINSET_DATA_PATH_PROCESS)
-    dataset = dataset[:100]
-    evaluate_model(dataset, tokenizer, model, outputFolder=OUTPUT_TRAINSET_CSV)
+    evaluate_model(dataset, tokenizer, model, outputFolder=OUTPUT_TRAINSET_CSV, limit=100)
     analysis_result(OUTPUT_TRAINSET_CSV)
     logger.info("[UET] Hoàn tất đánh giá trên tập training!")
 
