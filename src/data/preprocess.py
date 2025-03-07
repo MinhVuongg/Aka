@@ -57,6 +57,7 @@ def extract_target_range(target):
         logger.error(f"[ERROR] extract_target_range: {e}")
         return target
 
+
 def remove_comments(code):
     if REMOVE_COMMENT_MODE == COMMENT_REMOVAL.AST:
         return remove_comments_ast(code)
@@ -64,6 +65,7 @@ def remove_comments(code):
         return remove_comments_regex(code)
     else:
         return code;
+
 
 def remove_comments_regex(code):
     try:
@@ -144,172 +146,110 @@ def extract_class_declaration(focal_class):
         return ""
 
 
-"""
-XU LY CAU TRUC TRAINING SET RAW MOI
-"""
 def preprocess_dataset2(input_folder, output_file, overwrite=False):
     """
-    Process data from JSON files in input_folder and save results to JSON output file.
-    
-    Args:
-        input_folder (str): Path to the folder containing JSON files to process
-        output_file (str): Path to the output JSON file
-        overwrite (bool): Whether to overwrite existing data or append to it
+    XU LY CAU TRUC TRAINING SET RAW MOI
+    :param input_folder:
+    :param output_file:
+    :param overwrite:
+    :return:
     """
-    try:
-        # Ensure output directory exists
-        output_dir = os.path.dirname(output_file)
-        if output_dir and not os.path.exists(output_dir):
-            os.makedirs(output_dir, exist_ok=True)
-            logger.info(f"[UET] Created output directory: {output_dir}")
+    # Tim json file
+    json_files = glob.glob(os.path.join(input_folder, "**", "*.json"), recursive=True)
+    logger.info(f"[UET] Tìm thấy {len(json_files)} JSON trong {input_folder}")
 
-        # Find all JSON files in the input folder (recursively)
-        json_files = glob.glob(os.path.join(input_folder, "**", "*.json"), recursive=True)
-        logger.info(f"[UET] Found {len(json_files)} JSON files in {input_folder}")
+    new_data = []
+    total_processed = 0
 
-        # Check if output file already exists
-        all_data = []
-        if not overwrite and os.path.exists(output_file):
-            with open(output_file, "r", encoding="utf-8") as f:
-                try:
-                    all_data = json.load(f)
-                    logger.info(f"[UET] Loaded {len(all_data)} existing entries from {output_file}")
-                except json.JSONDecodeError as e:
-                    logger.error(f"[UET] [ERROR] JSONDecodeError in {output_file}: {e}")
-                    logger.error("[UET] Warning: Output file contains invalid JSON, starting fresh.")
+    # Duyet tung json file
+    for file_idx, json_file in enumerate(json_files):
+        logger.info(f"[UET] Phân tích json thứ {file_idx + 1}/{len(json_files)}: {json_file}")
 
-        new_data = []
-        total_processed = 0
-
-        # Process each JSON file
-        for file_idx, json_file in enumerate(json_files):
-            logger.info(f"[UET] Processing file {file_idx + 1}/{len(json_files)}: {json_file}")
-            
-            try:
-                # Read the JSON file
-                with open(json_file, 'r', encoding='utf-8') as f:
-                    file_data = json.load(f)
-                
-                # Ensure file_data is a list
-                if not isinstance(file_data, list):
-                    file_data = [file_data]
-                
-                # Process each entry in the file
-                for entry_idx, entry in enumerate(file_data):
-                    try:
-                        # Skip if entry is not a dict
-                        if not isinstance(entry, dict):
-                            logger.warning(f"[UET] Skipping non-dictionary entry in file {json_file}, index {entry_idx}: {type(entry)}")
-                            continue
-                            
-                        focal_method = clean_code(remove_comments(entry.get("fm", "")))
-                        focal_class = entry.get("fc", "")
-                        focal_class_name = ""
-                        if focal_class != "":
-                            focal_class_name = extract_class_declaration(focal_class)
-
-                        # Process other fields
-                        constructor_signatures = ""
-                        if "c" in entry:
-                            if isinstance(entry["c"], list):
-                                constructor_signatures = clean_code(remove_comments(" ".join(map(str, entry["c"]))))
-                            else:
-                                constructor_signatures = clean_code(remove_comments(entry["c"]))
-                        
-                        method_signatures = ""
-                        if "m" in entry:
-                            if isinstance(entry["m"], list):
-                                method_signatures = clean_code(remove_comments(" ".join(map(str, entry["m"]))))
-                            else:
-                                method_signatures = clean_code(remove_comments(entry["m"]))
-                        
-                        fields = ""
-                        if "f" in entry:
-                            if isinstance(entry["f"], list):
-                                fields = clean_code(remove_comments(" ".join(map(str, entry["f"]))))
-                            else:
-                                fields = clean_code(remove_comments(entry["f"]))
-                        
-                        # Use datatest field for target if available, otherwise use 't' field
-                        # target = ""
-                        # if "datatest" in entry and entry["datatest"]:
-                        #     for test_case in entry["datatest"]:
-                        #         if isinstance(test_case, dict):
-                        #             # if "simplified_t" in test_case and test_case["simplified_t"]:
-                        #             #     target = clean_code(remove_comments(extract_target_range(test_case["simplified_t"])))
-                        #             #     # break
-                        #             if "td" in test_case and test_case["td"]:
-                        #                 target = clean_code(remove_comments(extract_target_range(test_case["td"])))
-                        #             #     break
-
-                        targets = []
-                        if "datatest" in entry and entry["datatest"]:
-                            for test_case in entry["datatest"]:
-                                if isinstance(test_case, dict) and "td" in test_case and test_case["td"]:
-                                    test_target = clean_code(remove_comments(extract_target_range(test_case["td"])))
-                                    if test_target:  # Chỉ thêm nếu target không rỗng
-                                        targets.append(test_target)
-
-                        # If no target found in datatest, use 't' if available
-                        # if not target and "t" in entry:
-                        #     target = clean_code(remove_comments(extract_target_range(entry.get("t", ""))))
-                            # target = extract_target_range(entry.get("t", ""))
-                        
-                        # Construct source string
-                        source = "\n".join([
-                            "FC:", focal_class_name, 
-                            "FM:", focal_method, 
-                            "C:", constructor_signatures, 
-                            "M:", method_signatures,
-                            "F:", fields
-                        ])
-
-                        # Thêm từng cặp (source, target) cho mỗi test case
-                        if source and targets:
-                            for target in targets:
-                                new_data.append({"source": source, "target": target})
-                                total_processed += 1
-
-                            # if total_processed % 100 == 0:
-                            #     logger.info(f"[UET] Processed {total_processed} entries so far")
-
-                        # # Add if both source and target exist
-                        # if source and target:
-                        #     new_data.append({"source": source, "target": target})
-                        #     total_processed += 1
-                        #     if total_processed % 100 == 0:
-                        #         logger.info(f"[UET] Processed {total_processed} entries so far")
-                    except Exception as e:
-                        logger.error(f"[UET] [ERROR] Processing entry in file {json_file}, index {entry_idx}: {str(e)}")
-                        continue
-                
-            except json.JSONDecodeError as e:
-                logger.error(f"[UET] [ERROR] Failed to parse JSON file {json_file}: {e}")
-                continue
-            except Exception as e:
-                logger.error(f"[UET] [ERROR] Failed to process file {json_file}: {e}")
-                continue
-
-        # Combine and save data
-        all_data = new_data if overwrite else all_data + new_data
         try:
-            with open(output_file, "w", encoding="utf-8") as f:
-                json.dump(all_data, f, ensure_ascii=False, indent=4)
-            logger.info(f"[UET] Processed {len(new_data)} new samples. Total samples: {len(all_data)}")
-            logger.info(f"[UET] Data successfully saved to {output_file}")
-        except Exception as e:
-            logger.error(f"[UET] [ERROR] Failed to write to output file {output_file}: {str(e)}")
-            
-        return all_data
+            with open(json_file, 'r', encoding='utf-8') as f:
+                file_data = json.load(f)
+            if not isinstance(file_data, list):
+                file_data = [file_data]
 
-    except Exception as e:
-        logger.error(f"[UET] [ERROR] preprocess_dataset2: {str(e)}")
-        return []
+            for entry_idx, entry in enumerate(file_data):
+                try:
+                    focal_method = clean_code(remove_comments(entry.get("fm", "")))
+                    focal_class = entry.get("fc", "")
+                    focal_class_name = ""
+                    if focal_class != "":
+                        focal_class_name = extract_class_declaration(focal_class)
+
+                    # lay thong tin
+                    constructor_signatures = ""
+                    if "c" in entry:
+                        if isinstance(entry["c"], list):
+                            constructor_signatures = clean_code(remove_comments(" ".join(map(str, entry["c"]))))
+                        else:
+                            constructor_signatures = clean_code(remove_comments(entry["c"]))
+
+                    method_signatures = ""
+                    if "m" in entry:
+                        if isinstance(entry["m"], list):
+                            method_signatures = clean_code(remove_comments(" ".join(map(str, entry["m"]))))
+                        else:
+                            method_signatures = clean_code(remove_comments(entry["m"]))
+
+                    fields = ""
+                    if "f" in entry:
+                        if isinstance(entry["f"], list):
+                            fields = clean_code(remove_comments(" ".join(map(str, entry["f"]))))
+                        else:
+                            fields = clean_code(remove_comments(entry["f"]))
+
+                    targets = []
+                    if "datatest" in entry and entry["datatest"]:
+                        for test_case in entry["datatest"]:
+                            if isinstance(test_case, dict) and "td" in test_case and test_case["td"]:
+                                test_target = clean_code(remove_comments(extract_target_range(test_case["td"])))
+                                if test_target:  # Chỉ thêm nếu target không rỗng
+                                    targets.append(test_target)
+
+                    # Source
+                    source = "\n".join([
+                        "FC:", focal_class_name,
+                        "FM:", focal_method,
+                        "C:", constructor_signatures,
+                        "M:", method_signatures,
+                        "F:", fields
+                    ])
+
+                    # Ghép tất cả target thành một target duy nhất với <TC> làm dấu phân cách
+                    if source and targets:
+                        combined_target = " <TC> ".join(targets)
+                        new_data.append({"source": source, "target": combined_target})
+                        total_processed += 1
+
+                        if total_processed % 100 == 0:
+                            logger.info(f"[UET] Processed {total_processed} entries so far")
+                except Exception as e:
+                    logger.error(f"[UET] [ERROR] Processing entry in file {json_file}, index {entry_idx}: {str(e)}")
+                    continue
+
+        except json.JSONDecodeError as e:
+            logger.error(f"[UET] [ERROR] Failed to parse JSON file {json_file}: {e}")
+            continue
+        except Exception as e:
+            logger.error(f"[UET] [ERROR] Failed to process file {json_file}: {e}")
+            continue
+
+    # Save
+    with open(output_file, "w", encoding="utf-8") as f:
+        json.dump(new_data, f, ensure_ascii=False, indent=4)
+    logger.info(f"[UET] Processed {len(new_data)} new samples. Total samples: {len(new_data)}")
+    logger.info(f"[UET] Data successfully saved to {output_file}")
+
+    return new_data
 
 
 def preprocess_dataset(input_folder, output_file, overwrite=False):
     """
     Xử lý tập dữ liệu từ thư mục đầu vào và lưu kết quả vào file JSON đầu ra.
+    Xử lý với format cũ
     """
     try:
         json_files = glob.glob(os.path.join(input_folder, "**", "*.json"), recursive=True)
