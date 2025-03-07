@@ -5,6 +5,7 @@ import sys
 
 from src.config.config import TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS, OUTPUT_PATH, TRAIN_TYPE, LOG_DIR, VALIDATIONSET_RAW, \
     VALIDATIONSET_DATA_PATH_PROCESS
+from src.predict.analysis import analysis_result
 from src.predict.evaluate import load_model
 
 # Xác định đường dẫn thư mục gốc của dự án
@@ -21,6 +22,7 @@ from src.data.preprocess import preprocess_dataset, preprocess_dataset2
 from src.train.full_finetune import FullFineTuneTrainer
 from src.train.lora_trainer import LoRATrainer
 from src.predict import evaluate_model
+from src.config.config import OUTPUT_VALIDATIONSET_CSV
 
 logging.basicConfig(
     level=logging.INFO,
@@ -68,6 +70,7 @@ def main():
     logger.info("[UET] Đánh giá mô hình...")
     model, dataset, tokenizer = load_model()
     evaluate_model(dataset, tokenizer, model)
+    analysis_result(OUTPUT_VALIDATIONSET_CSV)
     logger.info("[UET] Hoàn tất đánh giá!")
 
 
