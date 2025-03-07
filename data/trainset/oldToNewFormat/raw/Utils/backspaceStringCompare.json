@@ -1,0 +1,49 @@
+[
+  {
+    "fm": "void removeBackspaces(string &s) {\r         int i = 0;\r         for(int i=0; i<s.size(); i++) {\r             if (s[i] == '#') {\r                 int backSteps = i>0 ? 2 : 1;\r                 s.erase(i-backSteps + 1, backSteps);\r                 i -= backSteps;\r             } \r         }\r     }",
+    "f": [],
+    "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\backspaceStringCompare\\BackspaceStringCompare.cpp\\Solution\\removeBackspaces(string&)",
+    "c": [
+      "",
+      ""
+    ],
+    "fc": "class Solution {\r private:    \r     void removeBackspaces(string &s) {\r         int i = 0;\r         for(int i=0; i<s.size(); i++) {\r             if (s[i] == '#') {\r                 int backSteps = i>0 ? 2 : 1;\r                 s.erase(i-backSteps + 1, backSteps);\r                 i -= backSteps;\r             } \r         }\r     }\r     \r public:\r     bool backspaceCompare(string S, string T) {\r         removeBackspaces(S);\r         removeBackspaces(T);\r         return S == T;\r     }\r };",
+    "m": [
+      "bool backspaceCompare(string S, string T) {\r\n        removeBackspaces(S);\r\n        removeBackspaces(T);\r\n        return S == T;\r\n    }"
+    ],
+    "datatest": [
+      {
+        "id": 0,
+        "dt": {},
+        "td": [
+          "void AKA_TEST_Solution_removeBackspaces_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_removeBackspaces_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\BackspaceStringCompare.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName1787 = new char[2];akaRandomName1787[0] = -15;akaRandomName1787[1] = '\\0';string s=akaRandomName1787;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_removeBackspaces_string_random_3\");AKA_INSTANCE___Solution->removeBackspaces(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\backspaceStringCompare\\\\BackspaceStringCompare.cpp\\\\Solution\\\\removeBackspaces(string&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n"
+        ],
+        "simplified_t": [],
+        "isAutomated": true
+      }
+    ]
+  },
+  {
+    "fm": "bool backspaceCompare(string S, string T) {\r         removeBackspaces(S);\r         removeBackspaces(T);\r         return S == T;\r     }",
+    "f": [],
+    "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\backspaceStringCompare\\BackspaceStringCompare.cpp\\Solution\\backspaceCompare(string,string)",
+    "c": [
+      ""
+    ],
+    "fc": "class Solution {\r private:    \r     void removeBackspaces(string &s) {\r         int i = 0;\r         for(int i=0; i<s.size(); i++) {\r             if (s[i] == '#') {\r                 int backSteps = i>0 ? 2 : 1;\r                 s.erase(i-backSteps + 1, backSteps);\r                 i -= backSteps;\r             } \r         }\r     }\r     \r public:\r     bool backspaceCompare(string S, string T) {\r         removeBackspaces(S);\r         removeBackspaces(T);\r         return S == T;\r     }\r };",
+    "m": [
+      "void removeBackspaces(string &s) {\r\n        int i = 0;\r\n        for(int i=0; i<s.size(); i++) {\r\n            if (s[i] == '#') {\r\n                int backSteps = i>0 ? 2 : 1;\r\n                s.erase(i-backSteps + 1, backSteps);\r\n                i -= backSteps;\r\n            } \r\n        }\r\n    }"
+    ],
+    "datatest": [
+      {
+        "id": 0,
+        "dt": {},
+        "td": [
+          "void AKA_TEST_Solution_backspaceCompare_string_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_backspaceCompare_string_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\BackspaceStringCompare.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName116023 = new char[2];akaRandomName116023[0] = 57;akaRandomName116023[1] = '\\0';string S=akaRandomName116023;\nchar* akaRandomName779212 = new char[2];akaRandomName779212[0] = 68;akaRandomName779212[1] = '\\0';string T=akaRandomName779212;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_backspaceCompare_string_string_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->backspaceCompare(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\backspaceStringCompare\\\\BackspaceStringCompare.cpp\\\\Solution\\\\backspaceCompare(string,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n"
+        ],
+        "simplified_t": [],
+        "isAutomated": true
+      }
+    ]
+  }
+]

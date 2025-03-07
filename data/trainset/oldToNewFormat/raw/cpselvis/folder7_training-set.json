@@ -1,0 +1,140 @@
+[
+  {
+    "fm": "vector<int> searchRange(vector<int>& nums, int target) {\r     int l = 0, r = nums.size() - 1;\r \r     vector<int> ret(2, -1);\r     while (nums[l] < nums[r])\r     {\r       int m = (l + r) / 2;\r       if (nums[m] < target)\r       {\r         l = m + 1;\r       }\r       else if (nums[m] > target)\r       {\r         r = m - 1;\r       }\r       else\r       {\r         if (nums[l] == target)\r \t{\r \t  r --;\r \t}\r         else\r \t{\r \t  l ++;\r \t}\r       }\r     }\r \r     if (nums[l] == target || nums[r] == target)\r     {\r       ret[0] = l;\r       ret[1] = r;\r     }\r     return ret;\r   }",
+    "f": [],
+    "path_fm": "D:\\py\\test\\folder_7\\solution034.cpp\\Solution\\searchRange(vector<int>&,int)",
+    "c": [
+      ""
+    ],
+    "fc": "class Solution {\r public:\r   vector<int> searchRange(vector<int>& nums, int target) {\r     int l = 0, r = nums.size() - 1;\r \r     vector<int> ret(2, -1);\r     while (nums[l] < nums[r])\r     {\r       int m = (l + r) / 2;\r       if (nums[m] < target)\r       {\r         l = m + 1;\r       }\r       else if (nums[m] > target)\r       {\r         r = m - 1;\r       }\r       else\r       {\r         if (nums[l] == target)\r \t{\r \t  r --;\r \t}\r         else\r \t{\r \t  l ++;\r \t}\r       }\r     }\r \r     if (nums[l] == target || nums[r] == target)\r     {\r       ret[0] = l;\r       ret[1] = r;\r     }\r     return ret;\r   }\r };",
+    "m": [],
+    "datatest": [
+      {
+        "id": 0,
+        "dt": {},
+        "td": [],
+        "simplified_t": [],
+        "isAutomated": true
+      }
+    ]
+  },
+  {
+    "fm": "int searchInsert(vector<int>& nums, int target) {\r     int lower = 0, upper = nums.size() - 1;\r     \r     while (lower < upper)\r     {\r       int mid = (lower + upper) >> 1;\r       if (nums[mid] < target)\r       {\r \tlower = mid + 1;\r       }\r       else if (nums[mid] > target)\r       {\r \tupper = mid - 1;\r       }\r       else\r       {\r \treturn mid;\r       }\r     }\r     return nums[lower] < target ? lower + 1 : lower;\r   }",
+    "f": [],
+    "path_fm": "D:\\py\\test\\folder_7\\solution035.cpp\\Solution\\searchInsert(vector<int>&,int)",
+    "c": [
+      ""
+    ],
+    "fc": "class Solution {\r public:\r   int searchInsert(vector<int>& nums, int target) {\r     int lower = 0, upper = nums.size() - 1;\r     \r     while (lower < upper)\r     {\r       int mid = (lower + upper) >> 1;\r       if (nums[mid] < target)\r       {\r \tlower = mid + 1;\r       }\r       else if (nums[mid] > target)\r       {\r \tupper = mid - 1;\r       }\r       else\r       {\r \treturn mid;\r       }\r     }\r     return nums[lower] < target ? lower + 1 : lower;\r   }\r };",
+    "m": [],
+    "datatest": [
+      {
+        "id": 0,
+        "dt": {},
+        "td": [],
+        "simplified_t": [],
+        "isAutomated": true
+      }
+    ]
+  },
+  {
+    "fm": "bool isValidSudoku(vector<vector<char> >& board) {\r     unordered_map<int, int> rows[9];\r     unordered_map<int, int> columns[9];\r     unordered_map<int, int> grids[9];\r \r     for (int i = 0; i < board.size(); i ++)\r     {\r       for (int j = 0; j < board[i].size(); j ++)\r       {\r \tif (board[i][j] != '.')\r \t{\r \t  rows[i][board[i][j]] ++;\r \t  if (rows[i][board[i][j]] > 1)\r \t  {\r \t    return false;\r \t  }\r \r \t  columns[j][board[i][j]] ++;\r \t  if (columns[j][board[i][j]] > 1)\r \t  {\r \t    return false;\r \t  }\r \r \t  int p = i/3 * 3 + j/3;\r \t  grids[p][board[i][j]] ++;\r \t  if (grids[p][board[i][j]] > 1)\r \t  {\r \t    return false;\r \t  }\r \t}\r       }\r     }\r     return true;\r   }",
+    "f": [],
+    "path_fm": "D:\\py\\test\\folder_7\\solution036.cpp\\Solution\\isValidSudoku(vector<vector<char>>&)",
+    "c": [
+      ""
+    ],
+    "fc": "class Solution {\r public:\r   bool isValidSudoku(vector<vector<char> >& board) {\r     unordered_map<int, int> rows[9];\r     unordered_map<int, int> columns[9];\r     unordered_map<int, int> grids[9];\r \r     for (int i = 0; i < board.size(); i ++)\r     {\r       for (int j = 0; j < board[i].size(); j ++)\r       {\r \tif (board[i][j] != '.')\r \t{\r \t  rows[i][board[i][j]] ++;\r \t  if (rows[i][board[i][j]] > 1)\r \t  {\r \t    return false;\r \t  }\r \r \t  columns[j][board[i][j]] ++;\r \t  if (columns[j][board[i][j]] > 1)\r \t  {\r \t    return false;\r \t  }\r \r \t  int p = i/3 * 3 + j/3;\r \t  grids[p][board[i][j]] ++;\r \t  if (grids[p][board[i][j]] > 1)\r \t  {\r \t    return false;\r \t  }\r \t}\r       }\r     }\r     return true;\r   }\r };",
+    "m": [],
+    "datatest": [
+      {
+        "id": 0,
+        "dt": {},
+        "td": [
+          "void AKA_TEST_Solution_isValidSudoku_vector_vector_char_random_0(void) {\n{\nAKA_test_case_name=\"Solution_isValidSudoku_vector_vector_char_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\solution036.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<char>> board;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode board */\nvector<char> board_element0;\nchar board_element0_element0=91;\nboard_element0.push_back(board_element0_element0);\nchar board_element0_element1=21;\nboard_element0.push_back(board_element0_element1);\nboard.push_back(board_element0);\nvector<char> board_element1;\nchar board_element1_element0=-23;\nboard_element1.push_back(board_element1_element0);\nchar board_element1_element1=-56;\nboard_element1.push_back(board_element1_element1);\nchar board_element1_element2=-15;\nboard_element1.push_back(board_element1_element2);\nboard.push_back(board_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isValidSudoku_vector_vector_char_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isValidSudoku(board);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_7\\\\solution036.cpp\\\\Solution\\\\isValidSudoku(vector<vector<char>>&)\");\n\n\nvector<vector<char>> EXPECTED_board;\n\n\n\n// tear down\n;\n}\n}\n",
+          "void AKA_TEST_Solution_isValidSudoku_vector_vector_char_random_2(void) {\n{\nAKA_test_case_name=\"Solution_isValidSudoku_vector_vector_char_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\solution036.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<char>> board;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode board */\nvector<char> board_element0;\nchar board_element0_element0=-43;\nboard_element0.push_back(board_element0_element0);\nchar board_element0_element1=-68;\nboard_element0.push_back(board_element0_element1);\nboard.push_back(board_element0);\nvector<char> board_element1;\nchar board_element1_element0=119;\nboard_element1.push_back(board_element1_element0);\nchar board_element1_element1=96;\nboard_element1.push_back(board_element1_element1);\nboard.push_back(board_element1);\nvector<char> board_element2;\nchar board_element2_element0=53;\nboard_element2.push_back(board_element2_element0);\nchar board_element2_element1=-84;\nboard_element2.push_back(board_element2_element1);\nboard.push_back(board_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isValidSudoku_vector_vector_char_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isValidSudoku(board);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_7\\\\solution036.cpp\\\\Solution\\\\isValidSudoku(vector<vector<char>>&)\");\n\n\nvector<vector<char>> EXPECTED_board;\n\n\n\n// tear down\n;\n}\n}\n"
+        ],
+        "simplified_t": [
+          "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\solution036.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<char>> board;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode board */\nvector<char> board_element0;\nchar board_element0_element0=91;\nboard_element0.push_back(board_element0_element0);\nchar board_element0_element1=21;\nboard_element0.push_back(board_element0_element1);\nboard.push_back(board_element0);\nvector<char> board_element1;\nchar board_element1_element0=-23;\nboard_element1.push_back(board_element1_element0);\nchar board_element1_element1=-56;\nboard_element1.push_back(board_element1_element1);\nchar board_element1_element2=-15;\nboard_element1.push_back(board_element1_element2);\nboard.push_back(board_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+          "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\solution036.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<char>> board;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode board */\nvector<char> board_element0;\nchar board_element0_element0=-43;\nboard_element0.push_back(board_element0_element0);\nchar board_element0_element1=-68;\nboard_element0.push_back(board_element0_element1);\nboard.push_back(board_element0);\nvector<char> board_element1;\nchar board_element1_element0=119;\nboard_element1.push_back(board_element1_element0);\nchar board_element1_element1=96;\nboard_element1.push_back(board_element1_element1);\nboard.push_back(board_element1);\nvector<char> board_element2;\nchar board_element2_element0=53;\nboard_element2.push_back(board_element2_element0);\nchar board_element2_element1=-84;\nboard_element2.push_back(board_element2_element1);\nboard.push_back(board_element2);\n/* NormalNumberDataNode RETURN */\n\n"
+        ],
+        "isAutomated": true
+      }
+    ]
+  },
+  {
+    "fm": "string countAndSay(int n) {\r     string ret = \"1\";\r     for (int i = 1; i < n; i ++)\r     {\r       int count = 1;\r       string tmp = \"\";\r       for (int j = 1; j < ret.size(); j ++)\r       {\r \tif (ret[j] == ret[j - 1])\r \t{\r \t  count ++;\r \t}\r \telse\r \t{\r \t  tmp += to_string(count);\r \t  tmp +=  ret[j - 1];\r \t  count = 1;\r \t}\r       }\r       tmp += to_string(count);\r       tmp += ret[ret.size() - 1];\r       ret = tmp;\r     }\r     return ret;\r   }",
+    "f": [],
+    "path_fm": "D:\\py\\test\\folder_7\\solution038.cpp\\Solution\\countAndSay(int)",
+    "c": [
+      ""
+    ],
+    "fc": "class Solution {\r public:\r   string countAndSay(int n) {\r     string ret = \"1\";\r     for (int i = 1; i < n; i ++)\r     {\r       int count = 1;\r       string tmp = \"\";\r       for (int j = 1; j < ret.size(); j ++)\r       {\r \tif (ret[j] == ret[j - 1])\r \t{\r \t  count ++;\r \t}\r \telse\r \t{\r \t  tmp += to_string(count);\r \t  tmp +=  ret[j - 1];\r \t  count = 1;\r \t}\r       }\r       tmp += to_string(count);\r       tmp += ret[ret.size() - 1];\r       ret = tmp;\r     }\r     return ret;\r   }\r };",
+    "m": [],
+    "datatest": [
+      {
+        "id": 0,
+        "dt": {},
+        "td": [
+          "void AKA_TEST_Solution_countAndSay_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_countAndSay_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\solution038.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=6;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countAndSay_int_random_0\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countAndSay(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_7\\\\solution038.cpp\\\\Solution\\\\countAndSay(int)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n"
+        ],
+        "simplified_t": [
+          "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\solution038.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=6;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalStringDataNode RETURN */\n\n"
+        ],
+        "isAutomated": true
+      }
+    ]
+  },
+  {
+    "fm": "vector<vector<int>> combinationSum(vector<int>& candidates, int target) {\r     vector<vector<int> > ret;\r     vector<int> sub;\r     sort(candidates.begin(), candidates.end());\r     backtack(candidates, 0, ret, sub, target);\r     return ret;\r   }",
+    "f": [],
+    "path_fm": "D:\\py\\test\\folder_7\\solution039.cpp\\Solution\\combinationSum(vector<int>&,int)",
+    "c": [
+      ""
+    ],
+    "fc": "class Solution {\r public:\r   vector<vector<int>> combinationSum(vector<int>& candidates, int target) {\r     vector<vector<int> > ret;\r     vector<int> sub;\r     sort(candidates.begin(), candidates.end());\r     backtack(candidates, 0, ret, sub, target);\r     return ret;\r   }\r   void backtack(vector<int> &candidates, int index, vector<vector<int> > &ret, vector<int> &sub, int target)\r   {\r     if (target == 0)\r     {\r       ret.push_back(sub);\r     }\r     for (; index < candidates.size() && candidates[index] <= target; index ++)\r     {\r       int num = candidates[index];\r       sub.push_back(num);\r       backtack(candidates, index, ret, sub, target - num);\r       sub.pop_back();\r     }\r   }\r };",
+    "m": [
+      "void backtack(vector<int> &candidates, int index, vector<vector<int> > &ret, vector<int> &sub, int target)\r\n  {\r\n    if (target == 0)\r\n    {\r\n      ret.push_back(sub);\r\n    }\r\n    for (; index < candidates.size() && candidates[index] <= target; index ++)\r\n    {\r\n      int num = candidates[index];\r\n      sub.push_back(num);\r\n      backtack(candidates, index, ret, sub, target - num);\r\n      sub.pop_back();\r\n    }\r\n  }"
+    ],
+    "datatest": [
+      {
+        "id": 0,
+        "dt": {},
+        "td": [],
+        "simplified_t": [],
+        "isAutomated": true
+      }
+    ]
+  },
+  {
+    "fm": "void backtack(vector<int> &candidates, int index, vector<vector<int> > &ret, vector<int> &sub, int target)\r   {\r     if (target == 0)\r     {\r       ret.push_back(sub);\r     }\r     for (; index < candidates.size() && candidates[index] <= target; index ++)\r     {\r       int num = candidates[index];\r       sub.push_back(num);\r       backtack(candidates, index, ret, sub, target - num);\r       sub.pop_back();\r     }\r   }",
+    "f": [],
+    "path_fm": "D:\\py\\test\\folder_7\\solution039.cpp\\Solution\\backtack(vector<int>&,int,vector<vector<int>>&,vector<int>&,int)",
+    "c": [
+      ""
+    ],
+    "fc": "class Solution {\r public:\r   vector<vector<int>> combinationSum(vector<int>& candidates, int target) {\r     vector<vector<int> > ret;\r     vector<int> sub;\r     sort(candidates.begin(), candidates.end());\r     backtack(candidates, 0, ret, sub, target);\r     return ret;\r   }\r   void backtack(vector<int> &candidates, int index, vector<vector<int> > &ret, vector<int> &sub, int target)\r   {\r     if (target == 0)\r     {\r       ret.push_back(sub);\r     }\r     for (; index < candidates.size() && candidates[index] <= target; index ++)\r     {\r       int num = candidates[index];\r       sub.push_back(num);\r       backtack(candidates, index, ret, sub, target - num);\r       sub.pop_back();\r     }\r   }\r };",
+    "m": [
+      "vector<vector<int>> combinationSum(vector<int>& candidates, int target) {\r\n    vector<vector<int> > ret;\r\n    vector<int> sub;\r\n    sort(candidates.begin(), candidates.end());\r\n    backtack(candidates, 0, ret, sub, target);\r\n    return ret;\r\n  }",
+      "void backtack(vector<int> &candidates, int index, vector<vector<int> > &ret, vector<int> &sub, int target)\r\n  {\r\n    if (target == 0)\r\n    {\r\n      ret.push_back(sub);\r\n    }\r\n    for (; index < candidates.size() && candidates[index] <= target; index ++)\r\n    {\r\n      int num = candidates[index];\r\n      sub.push_back(num);\r\n      backtack(candidates, index, ret, sub, target - num);\r\n      sub.pop_back();\r\n    }\r\n  }",
+      "void backtack(vector<int> &candidates, int index, vector<vector<int> > &ret, vector<int> &sub, int target)\r\n  {\r\n    if (target == 0)\r\n    {\r\n      ret.push_back(sub);\r\n    }\r\n    for (; index < candidates.size() && candidates[index] <= target; index ++)\r\n    {\r\n      int num = candidates[index];\r\n      sub.push_back(num);\r\n      backtack(candidates, index, ret, sub, target - num);\r\n      sub.pop_back();\r\n    }\r\n  }"
+    ],
+    "datatest": [
+      {
+        "id": 0,
+        "dt": {},
+        "td": [
+          "void AKA_TEST_Solution_backtack_vector_int_int_vector_vector_int_vector_int_int_random_6(void) {\n{\nAKA_test_case_name=\"Solution_backtack_vector_int_int_vector_vector_int_vector_int_int_random_6\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\solution039.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> candidates;\n\n\nint index=5;\nvector<vector<int>> ret;\nvector<int> sub;\n\n\nint target=3;\n\n/* RootDataNode STATIC */\n/* VectorDataNode candidates */\nint candidates_element0=420331433;\ncandidates.push_back(candidates_element0);\nint candidates_element1=-20982949;\ncandidates.push_back(candidates_element1);\n/* NormalNumberDataNode index */\n/* VectorDataNode ret */\nvector<int> ret_element0;\nint ret_element0_element0=189020045;\nret_element0.push_back(ret_element0_element0);\nret.push_back(ret_element0);\n/* VectorDataNode sub */\nint sub_element0=181269350;\nsub.push_back(sub_element0);\n/* NormalNumberDataNode target */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_backtack_vector_int_int_vector_vector_int_vector_int_int_random_6\");AKA_INSTANCE___Solution->backtack(candidates,index,ret,sub,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_7\\\\solution039.cpp\\\\Solution\\\\backtack(vector<int>&,int,vector<vector<int>>&,vector<int>&,int)\");\n\n/* error assertion */\nvector<int> EXPECTED_candidates;\n\nvector<vector<int>> EXPECTED_ret;\n\nvector<int> EXPECTED_sub;\n\n\n\n// tear down\n;\n}\n}\n",
+          "void AKA_TEST_Solution_backtack_vector_int_int_vector_vector_int_vector_int_int_random_5(void) {\n{\nAKA_test_case_name=\"Solution_backtack_vector_int_int_vector_vector_int_vector_int_int_random_5\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\solution039.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> candidates;\n\n\nint index=0;\nvector<vector<int>> ret;\nvector<int> sub;\n\n\nint target=0;\n\n/* RootDataNode STATIC */\n/* VectorDataNode candidates */\nint candidates_element0=722690599;\ncandidates.push_back(candidates_element0);\n/* NormalNumberDataNode index */\n/* VectorDataNode ret */\nvector<int> ret_element0;\nint ret_element0_element0=1749199228;\nret_element0.push_back(ret_element0_element0);\nint ret_element0_element1=1142574742;\nret_element0.push_back(ret_element0_element1);\nret.push_back(ret_element0);\nvector<int> ret_element1;\nint ret_element1_element0=-844456196;\nret_element1.push_back(ret_element1_element0);\nret.push_back(ret_element1);\nvector<int> ret_element2;\nint ret_element2_element0=1823003420;\nret_element2.push_back(ret_element2_element0);\nret.push_back(ret_element2);\n/* VectorDataNode sub */\nint sub_element0=1684482321;\nsub.push_back(sub_element0);\nint sub_element1=618863044;\nsub.push_back(sub_element1);\n/* NormalNumberDataNode target */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_backtack_vector_int_int_vector_vector_int_vector_int_int_random_5\");AKA_INSTANCE___Solution->backtack(candidates,index,ret,sub,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_7\\\\solution039.cpp\\\\Solution\\\\backtack(vector<int>&,int,vector<vector<int>>&,vector<int>&,int)\");\n\n/* error assertion */\nvector<int> EXPECTED_candidates;\n\nvector<vector<int>> EXPECTED_ret;\n\nvector<int> EXPECTED_sub;\n\n\n\n// tear down\n;\n}\n}\n",
+          "void AKA_TEST_Solution_backtack_vector_int_int_vector_vector_int_vector_int_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_backtack_vector_int_int_vector_vector_int_vector_int_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\solution039.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> candidates;\n\n\nint index=2;\nvector<vector<int>> ret;\nvector<int> sub;\n\n\nint target=6;\n\n/* RootDataNode STATIC */\n/* VectorDataNode candidates */\nint candidates_element0=-1519966359;\ncandidates.push_back(candidates_element0);\nint candidates_element1=1563144362;\ncandidates.push_back(candidates_element1);\nint candidates_element2=-1992860033;\ncandidates.push_back(candidates_element2);\n/* NormalNumberDataNode index */\n/* VectorDataNode ret */\nvector<int> ret_element0;\nint ret_element0_element0=-1453285843;\nret_element0.push_back(ret_element0_element0);\nint ret_element0_element1=-587244954;\nret_element0.push_back(ret_element0_element1);\nint ret_element0_element2=216663589;\nret_element0.push_back(ret_element0_element2);\nret.push_back(ret_element0);\nvector<int> ret_element1;\nint ret_element1_element0=1243784570;\nret_element1.push_back(ret_element1_element0);\nret.push_back(ret_element1);\n/* VectorDataNode sub */\nint sub_element0=-120222683;\nsub.push_back(sub_element0);\n/* NormalNumberDataNode target */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_backtack_vector_int_int_vector_vector_int_vector_int_int_random_3\");AKA_INSTANCE___Solution->backtack(candidates,index,ret,sub,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_7\\\\solution039.cpp\\\\Solution\\\\backtack(vector<int>&,int,vector<vector<int>>&,vector<int>&,int)\");\n\n/* error assertion */\nvector<int> EXPECTED_candidates;\n\nvector<vector<int>> EXPECTED_ret;\n\nvector<int> EXPECTED_sub;\n\n\n\n// tear down\n;\n}\n}\n"
+        ],
+        "simplified_t": [
+          "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\solution039.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> candidates;\n\n\nint index=5;\nvector<vector<int>> ret;\nvector<int> sub;\n\n\nint target=3;\n\n/* RootDataNode STATIC */\n/* VectorDataNode candidates */\nint candidates_element0=420331433;\ncandidates.push_back(candidates_element0);\nint candidates_element1=-20982949;\ncandidates.push_back(candidates_element1);\n/* NormalNumberDataNode index */\n/* VectorDataNode ret */\nvector<int> ret_element0;\nint ret_element0_element0=189020045;\nret_element0.push_back(ret_element0_element0);\nret.push_back(ret_element0);\n/* VectorDataNode sub */\nint sub_element0=181269350;\nsub.push_back(sub_element0);\n/* NormalNumberDataNode target */\n\n",
+          "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\solution039.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> candidates;\n\n\nint index=0;\nvector<vector<int>> ret;\nvector<int> sub;\n\n\nint target=0;\n\n/* RootDataNode STATIC */\n/* VectorDataNode candidates */\nint candidates_element0=722690599;\ncandidates.push_back(candidates_element0);\n/* NormalNumberDataNode index */\n/* VectorDataNode ret */\nvector<int> ret_element0;\nint ret_element0_element0=1749199228;\nret_element0.push_back(ret_element0_element0);\nint ret_element0_element1=1142574742;\nret_element0.push_back(ret_element0_element1);\nret.push_back(ret_element0);\nvector<int> ret_element1;\nint ret_element1_element0=-844456196;\nret_element1.push_back(ret_element1_element0);\nret.push_back(ret_element1);\nvector<int> ret_element2;\nint ret_element2_element0=1823003420;\nret_element2.push_back(ret_element2_element0);\nret.push_back(ret_element2);\n/* VectorDataNode sub */\nint sub_element0=1684482321;\nsub.push_back(sub_element0);\nint sub_element1=618863044;\nsub.push_back(sub_element1);\n/* NormalNumberDataNode target */\n\n",
+          "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\solution039.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> candidates;\n\n\nint index=2;\nvector<vector<int>> ret;\nvector<int> sub;\n\n\nint target=6;\n\n/* RootDataNode STATIC */\n/* VectorDataNode candidates */\nint candidates_element0=-1519966359;\ncandidates.push_back(candidates_element0);\nint candidates_element1=1563144362;\ncandidates.push_back(candidates_element1);\nint candidates_element2=-1992860033;\ncandidates.push_back(candidates_element2);\n/* NormalNumberDataNode index */\n/* VectorDataNode ret */\nvector<int> ret_element0;\nint ret_element0_element0=-1453285843;\nret_element0.push_back(ret_element0_element0);\nint ret_element0_element1=-587244954;\nret_element0.push_back(ret_element0_element1);\nint ret_element0_element2=216663589;\nret_element0.push_back(ret_element0_element2);\nret.push_back(ret_element0);\nvector<int> ret_element1;\nint ret_element1_element0=1243784570;\nret_element1.push_back(ret_element1_element0);\nret.push_back(ret_element1);\n/* VectorDataNode sub */\nint sub_element0=-120222683;\nsub.push_back(sub_element0);\n/* NormalNumberDataNode target */\n\n"
+        ],
+        "isAutomated": true
+      }
+    ]
+  }
+]

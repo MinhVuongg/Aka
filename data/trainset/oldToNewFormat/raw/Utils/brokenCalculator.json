@@ -1,0 +1,26 @@
+[
+  {
+    "fm": "int brokenCalc(int X, int Y) {\r         if (X >= Y) return X-Y ;\r         if ( Y%2 ==0 ) return brokenCalc(X, Y/2) + 1;\r         return brokenCalc(X, Y+1) + 1;\r     }",
+    "f": [],
+    "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\brokenCalculator\\BrokenCalculator.cpp\\Solution\\brokenCalc(int,int)",
+    "c": [
+      ""
+    ],
+    "fc": "class Solution {\r public:\r     int brokenCalc(int X, int Y) {\r         if (X >= Y) return X-Y ;\r         if ( Y%2 ==0 ) return brokenCalc(X, Y/2) + 1;\r         return brokenCalc(X, Y+1) + 1;\r     }\r };",
+    "m": [
+      "int brokenCalc(int X, int Y) {\r\n        if (X >= Y) return X-Y ;\r\n        if ( Y%2 ==0 ) return brokenCalc(X, Y/2) + 1;\r\n        return brokenCalc(X, Y+1) + 1;\r\n    }",
+      "int brokenCalc(int X, int Y) {\r\n        if (X >= Y) return X-Y ;\r\n        if ( Y%2 ==0 ) return brokenCalc(X, Y/2) + 1;\r\n        return brokenCalc(X, Y+1) + 1;\r\n    }"
+    ],
+    "datatest": [
+      {
+        "id": 0,
+        "dt": {},
+        "td": [
+          "void AKA_TEST_Solution_brokenCalc_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_brokenCalc_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\BrokenCalculator.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint X=1702818497;\n\n\nint Y=-195975482;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode X */\n/* NormalNumberDataNode Y */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_brokenCalc_int_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->brokenCalc(X,Y);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\brokenCalculator\\\\BrokenCalculator.cpp\\\\Solution\\\\brokenCalc(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n"
+        ],
+        "simplified_t": [],
+        "isAutomated": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "fm": "int sum1toN(int n) {\r         return n * (n+1) / 2;\r     }",
+    "f": [],
+    "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\arithmeticSlices\\ArithmeticSlices.cpp\\Solution\\sum1toN(int)",
+    "c": [
+      ""
+    ],
+    "fc": "class Solution {\r public:\r     //\r     // It's easy to find out how many 3-length slices in an arithmetic array with N length.\r     //\r     //   len = 3, then  1 slices, sum(1)\r     //   len = 4, then  3 slices, sum(1,2) - TWO 3-length slices + ONE 4-length slice\r     //   len = 5, then  6 slices, sum(1,2,3) - THREE 3-length slices + TWO 4-length slices + ONE 5-length slice\r     //   len = 6, then 10 slices, sum(1,2,3,4) - ...\r     //   len = 7, then 15 slices, sum(1,2,3,4,5) - ..\r     //\r     // So, with N length arithmetic array, there are Sum[1, N-3+1] 3-length slices\r     //\r     // And, we know the formula sum from 1 to n is:\r     //\r     //                  n * ( n + 1 )\r     //    sum [1, n] = ---------------\r     //                       2\r     // Then, we could have the solution - O(n) Time with O(1) Space\r     //\r     \r     int sum1toN(int n) {\r         return n * (n+1) / 2;\r     }\r \r     int numberOfArithmeticSlices(vector<int>& A) {\r         int result = 0;\r         int len = 0; // the current length of arithmetic\r         for (int i=2; i<A.size(); i++) {\r             if (A[i] - A[i-1] == A[i-1] - A[i-2]) {\r                 len++;\r             }else{\r                 result += sum1toN(len);\r                 len=0;\r             }\r         }\r         return len==0 ? result : result + sum1toN(len);\r     }\r };",
+    "m": [
+      "int numberOfArithmeticSlices(vector<int>& A) {\r\n        int result = 0;\r\n        int len = 0; // the current length of arithmetic\r\n        for (int i=2; i<A.size(); i++) {\r\n            if (A[i] - A[i-1] == A[i-1] - A[i-2]) {\r\n                len++;\r\n            }else{\r\n                result += sum1toN(len);\r\n                len=0;\r\n            }\r\n        }\r\n        return len==0 ? result : result + sum1toN(len);\r\n    }"
+    ],
+    "datatest": [
+      {
+        "id": 0,
+        "dt": {},
+        "td": [
+          "void AKA_TEST_Solution_sum1toN_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_sum1toN_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\ArithmeticSlices.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=-1062502398;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_sum1toN_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->sum1toN(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\arithmeticSlices\\\\ArithmeticSlices.cpp\\\\Solution\\\\sum1toN(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n"
+        ],
+        "simplified_t": [],
+        "isAutomated": true
+      }
+    ]
+  },
+  {
+    "fm": "int numberOfArithmeticSlices(vector<int>& A) {\r         int result = 0;\r         int len = 0; // the current length of arithmetic\r         for (int i=2; i<A.size(); i++) {\r             if (A[i] - A[i-1] == A[i-1] - A[i-2]) {\r                 len++;\r             }else{\r                 result += sum1toN(len);\r                 len=0;\r             }\r         }\r         return len==0 ? result : result + sum1toN(len);\r     }",
+    "f": [],
+    "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\arithmeticSlices\\ArithmeticSlices.cpp\\Solution\\numberOfArithmeticSlices(vector<int>&)",
+    "c": [
+      ""
+    ],
+    "fc": "class Solution {\r public:\r     //\r     // It's easy to find out how many 3-length slices in an arithmetic array with N length.\r     //\r     //   len = 3, then  1 slices, sum(1)\r     //   len = 4, then  3 slices, sum(1,2) - TWO 3-length slices + ONE 4-length slice\r     //   len = 5, then  6 slices, sum(1,2,3) - THREE 3-length slices + TWO 4-length slices + ONE 5-length slice\r     //   len = 6, then 10 slices, sum(1,2,3,4) - ...\r     //   len = 7, then 15 slices, sum(1,2,3,4,5) - ..\r     //\r     // So, with N length arithmetic array, there are Sum[1, N-3+1] 3-length slices\r     //\r     // And, we know the formula sum from 1 to n is:\r     //\r     //                  n * ( n + 1 )\r     //    sum [1, n] = ---------------\r     //                       2\r     // Then, we could have the solution - O(n) Time with O(1) Space\r     //\r     \r     int sum1toN(int n) {\r         return n * (n+1) / 2;\r     }\r \r     int numberOfArithmeticSlices(vector<int>& A) {\r         int result = 0;\r         int len = 0; // the current length of arithmetic\r         for (int i=2; i<A.size(); i++) {\r             if (A[i] - A[i-1] == A[i-1] - A[i-2]) {\r                 len++;\r             }else{\r                 result += sum1toN(len);\r                 len=0;\r             }\r         }\r         return len==0 ? result : result + sum1toN(len);\r     }\r };",
+    "m": [
+      "int sum1toN(int n) {\r\n        return n * (n+1) / 2;\r\n    }"
+    ],
+    "datatest": [
+      {
+        "id": 0,
+        "dt": {},
+        "td": [
+          "void AKA_TEST_Solution_numberOfArithmeticSlices_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_numberOfArithmeticSlices_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\ArithmeticSlices.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> A;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode A */\nint A_element0=1829852369;\nA.push_back(A_element0);\nint A_element1=-2083519136;\nA.push_back(A_element1);\nint A_element2=-211435912;\nA.push_back(A_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_numberOfArithmeticSlices_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->numberOfArithmeticSlices(A);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\arithmeticSlices\\\\ArithmeticSlices.cpp\\\\Solution\\\\numberOfArithmeticSlices(vector<int>&)\");\n\n\nvector<int> EXPECTED_A;\n\n\n\n// tear down\n;\n}\n}\n"
+        ],
+        "simplified_t": [],
+        "isAutomated": true
+      }
+    ]
+  }
+]

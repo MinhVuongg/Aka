@@ -1,0 +1,99 @@
+[
+  {
+    "fm": "ListNode* removeElements(ListNode* head, int val) {\r     if (head == NULL)\r     {\r       return head;\r     }\r \r     ListNode *dummy = new ListNode(-1);\r     dummy -> next = head;\r \r     ListNode *pre;\r     pre = dummy;\r \r     while (head != NULL)\r     {\r       ListNode *pnext = head -> next;\r       if (head -> val == val)\r       {\r \tpre -> next = pnext;\r       }\r       else\r       {\r \tpre = head;\r       }\r       head = head -> next;\r     }\r     \r     return dummy -> next;\r   }",
+    "f": [],
+    "path_fm": "D:\\py\\test\\folder_22\\solution203.cpp\\Solution\\removeElements(ListNode*,int)",
+    "c": [
+      ""
+    ],
+    "fc": "class Solution {\r public:\r   ListNode* removeElements(ListNode* head, int val) {\r     if (head == NULL)\r     {\r       return head;\r     }\r \r     ListNode *dummy = new ListNode(-1);\r     dummy -> next = head;\r \r     ListNode *pre;\r     pre = dummy;\r \r     while (head != NULL)\r     {\r       ListNode *pnext = head -> next;\r       if (head -> val == val)\r       {\r \tpre -> next = pnext;\r       }\r       else\r       {\r \tpre = head;\r       }\r       head = head -> next;\r     }\r     \r     return dummy -> next;\r   }\r };",
+    "m": [
+      "ListNode* removeElements(ListNode* head, int val) {\r\n    if (head == NULL)\r\n    {\r\n      return head;\r\n    }\r\n\r\n    ListNode *dummy = new ListNode(-1);\r\n    dummy -> next = head;\r\n\r\n    ListNode *pre;\r\n    pre = dummy;\r\n\r\n    while (head != NULL)\r\n    {\r\n      ListNode *pnext = head -> next;\r\n      if (head -> val == val)\r\n      {\r\n\tpre -> next = pnext;\r\n      }\r\n      else\r\n      {\r\n\tpre = head;\r\n      }\r\n      head = head -> next;\r\n    }\r\n    \r\n    return dummy -> next;\r\n  }"
+    ],
+    "datatest": [
+      {
+        "id": 0,
+        "dt": {},
+        "td": [],
+        "simplified_t": [],
+        "isAutomated": true
+      }
+    ]
+  },
+  {
+    "fm": "int countPrimes(int n) {\r     vector<bool> isPrime(n, true);\r     int ret = 0;\r \r     for (int i = 2; i * i <= n; i ++)\r     {\r       if (isPrime[i])\r       {\r \tfor (int j = i * i; j <= n; j += i)\r \t{\r \t  isPrime[j] = false;\r \t}\r       }\t\r     }\r \r     for (int i = 2; i < n; i ++)\r     {\r       if (isPrime[i])\r       {\r \tret ++;\r       }\r     }\r     \r     return ret;\r   }",
+    "f": [],
+    "path_fm": "D:\\py\\test\\folder_22\\solution204.cpp\\Solution\\countPrimes(int)",
+    "c": [
+      ""
+    ],
+    "fc": "class Solution {\r public:\r   int countPrimes(int n) {\r     vector<bool> isPrime(n, true);\r     int ret = 0;\r \r     for (int i = 2; i * i <= n; i ++)\r     {\r       if (isPrime[i])\r       {\r \tfor (int j = i * i; j <= n; j += i)\r \t{\r \t  isPrime[j] = false;\r \t}\r       }\t\r     }\r \r     for (int i = 2; i < n; i ++)\r     {\r       if (isPrime[i])\r       {\r \tret ++;\r       }\r     }\r     \r     return ret;\r   }\r };",
+    "m": [],
+    "datatest": [
+      {
+        "id": 0,
+        "dt": {},
+        "td": [],
+        "simplified_t": [],
+        "isAutomated": true
+      }
+    ]
+  },
+  {
+    "fm": "bool isIsomorphic(string s, string t) {\r     unordered_map<char, char> umap1;\r     unordered_map<char, char> umap2;\r \r     for (int i = 0; i < s.size(); i ++)\r     {\r       if (umap1.find(s[i]) != umap1.end() && umap1[s[i]] != t[i])\r       {\r \treturn false;\r       }\r       if (umap2.find(t[i]) != umap2.end() && umap2[t[i]] != s[i])\r       {\r \treturn false;\r       }\r       umap1[s[i]] = t[i];\r       umap2[t[i]] = s[i];\r     }\r     return true;\r   }",
+    "f": [],
+    "path_fm": "D:\\py\\test\\folder_22\\solution205.cpp\\Solution\\isIsomorphic(string,string)",
+    "c": [
+      ""
+    ],
+    "fc": "class Solution {\r public:\r   bool isIsomorphic(string s, string t) {\r     unordered_map<char, char> umap1;\r     unordered_map<char, char> umap2;\r \r     for (int i = 0; i < s.size(); i ++)\r     {\r       if (umap1.find(s[i]) != umap1.end() && umap1[s[i]] != t[i])\r       {\r \treturn false;\r       }\r       if (umap2.find(t[i]) != umap2.end() && umap2[t[i]] != s[i])\r       {\r \treturn false;\r       }\r       umap1[s[i]] = t[i];\r       umap2[t[i]] = s[i];\r     }\r     return true;\r   }\r };",
+    "m": [],
+    "datatest": [
+      {
+        "id": 0,
+        "dt": {},
+        "td": [],
+        "simplified_t": [],
+        "isAutomated": true
+      }
+    ]
+  },
+  {
+    "fm": "ListNode* reverseList(ListNode* head) {\r     if (head == NULL || head -> next == NULL)\r     {\r       return head;\r     }\r \r     ListNode *prev = NULL;\r     while (head != NULL)\r     {\r       ListNode *next = head -> next;\r       head -> next = prev;\r       prev = head;\r       head = next;\r     }\r     return prev;\r   }",
+    "f": [],
+    "path_fm": "D:\\py\\test\\folder_22\\solution206.cpp\\Solution\\reverseList(ListNode*)",
+    "c": [
+      ""
+    ],
+    "fc": "class Solution {\r public:\r   ListNode* reverseList(ListNode* head) {\r     if (head == NULL || head -> next == NULL)\r     {\r       return head;\r     }\r \r     ListNode *prev = NULL;\r     while (head != NULL)\r     {\r       ListNode *next = head -> next;\r       head -> next = prev;\r       prev = head;\r       head = next;\r     }\r     return prev;\r   }\r };",
+    "m": [],
+    "datatest": [
+      {
+        "id": 0,
+        "dt": {},
+        "td": [],
+        "simplified_t": [],
+        "isAutomated": true
+      }
+    ]
+  },
+  {
+    "fm": "int findKthLargest(vector<int>& nums, int k) {\r     sort(nums.begin(), nums.end());\r     return nums[nums.size() - k];\r   }",
+    "f": [],
+    "path_fm": "D:\\py\\test\\folder_22\\solution215.cpp\\Solution\\findKthLargest(vector<int>&,int)",
+    "c": [
+      ""
+    ],
+    "fc": "class Solution {\r public:\r   int findKthLargest(vector<int>& nums, int k) {\r     sort(nums.begin(), nums.end());\r     return nums[nums.size() - k];\r   }\r };",
+    "m": [],
+    "datatest": [
+      {
+        "id": 0,
+        "dt": {},
+        "td": [],
+        "simplified_t": [],
+        "isAutomated": true
+      }
+    ]
+  }
+]
