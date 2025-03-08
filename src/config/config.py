@@ -106,6 +106,8 @@ elif mode == Mode.FSOFT_SERVER:
     PROJECT_PATH = r"C:\Users\CuongPN8.IVI\Documents\uet-llm\version0703"
 
 OUTPUT_PATH = normalize_path(f"{PROJECT_PATH}/aka-output")
+if not os.path.exists(OUTPUT_PATH):
+    os.makedirs(OUTPUT_PATH)
 
 TRAINSET_RAW = normalize_path(f"{PROJECT_PATH}/data/trainset/raw")
 TRAINSET_DATA_PATH_PROCESS = normalize_path(f"{OUTPUT_PATH}/processed_trainset.json")
@@ -113,8 +115,6 @@ TRAINSET_DATA_PATH_PROCESS = normalize_path(f"{OUTPUT_PATH}/processed_trainset.j
 VALIDATIONSET_RAW = normalize_path(f"{PROJECT_PATH}/data/validation/raw")
 VALIDATIONSET_DATA_PATH_PROCESS = normalize_path(f"{OUTPUT_PATH}/processed_validationset.json")
 
-if not os.path.exists(OUTPUT_PATH):
-    os.makedirs(OUTPUT_PATH)
 
 model_name_only = MODEL_TYPE.value[0].split("/")[-1]  # Lấy ten model sau dấu "/"
 
