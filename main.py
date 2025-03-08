@@ -62,8 +62,6 @@ def main():
         trainer = LoRATrainer_CodeT5Base()
     elif TRAIN_TYPE == TRAIN_MODES.LORA and MODEL_TYPE == MODEL_TYPES.CODET5_LARGE:
         trainer = LoRATrainer_CodeT5Large()
-    elif TRAIN_TYPE == TRAIN_MODES.FULL_FINETUNING:
-        trainer = FullFineTuneTrainer()
 
     trainer.train()
     logger.info("[UET] Huấn luyện hoàn tất!")

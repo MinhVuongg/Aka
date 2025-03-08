@@ -12,6 +12,4 @@ def load_model_by_type(train_type, model_type):
         model, tokenizer = LoRATrainer_CodeT5Base.load_model()
     elif train_type == TRAIN_MODES.LORA and model_type == MODEL_TYPES.CODET5_LARGE:
         model, tokenizer = LoRATrainer_CodeT5Large.load_model()
-    elif train_type == TRAIN_MODES.FULL_FINETUNING:
-        model, tokenizer = FullFineTuneTrainer.load_model()
     return model, tokenizer

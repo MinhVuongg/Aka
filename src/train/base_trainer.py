@@ -17,16 +17,17 @@ class BaseTrainer(ABC):
         self.model, self.tokenizer = self.load_model()
         self.train_dataset, self.val_dataset = self.load_data()
         self.train_loss_history = []
+        self.val_loss_history = []
 
         if MASKING_SOURCE == MASKING_STRATEGIES.NONE:
             logging.info("[UET] Masking: None")
-            self.token_masker = RandomTokenMasker(mask_rate_min=0.10, mask_rate_max=0.15)
             self.train_dataset = self.train_dataset.map(self.preprocess, batched=True)
             self.val_dataset = self.val_dataset.map(self.preprocess, batched=True)
         elif MASKING_SOURCE == MASKING_STRATEGIES.RANDOM:
             logging.info("[UET] Masking: Random")
-            self.train_dataset = self.train_dataset.map(self.preprocess_with_masking, batched=True)
-            self.val_dataset = self.val_dataset.map(self.preprocess_with_masking, batched=True)
+            self.token_masker = RandomTokenMasker(mask_rate_min=0.10, mask_rate_max=0.15)
+            self.train_dataset = self.train_dataset.map(self.preprocess_with_random_masking, batched=True)
+            self.val_dataset = self.val_dataset.map(self.preprocess_with_random_masking, batched=True)
 
     @staticmethod
     @abstractmethod
@@ -48,7 +49,7 @@ class BaseTrainer(ABC):
 
         return dataset_trainset, dataset_validationset
 
-    def preprocess_with_masking(self, examples):
+    def preprocess_with_random_masking(self, examples):
         """Preprocess data with random token masking"""
         sources = []
         targets = []
