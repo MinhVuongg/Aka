@@ -116,7 +116,8 @@ VALIDATIONSET_RAW = normalize_path(f"{PROJECT_PATH}/data/validation/raw")
 VALIDATIONSET_DATA_PATH_PROCESS = normalize_path(f"{OUTPUT_PATH}/processed_validationset.json")
 
 
-model_name_only = MODEL_TYPE.value[0].split("/")[-1]  # Lấy ten model sau dấu "/"
+# 'Salesforce/codet5-small' => 'Salesforce-codet5-small'
+model_name_only = str(MODEL_TYPE.value).replace("/", "-")  # Lấy ten model sau dấu "/"
 
 # Ten model duoc luu cung voi thong tin lien quan.
 MODEL_SAVE_PATH = normalize_path(
