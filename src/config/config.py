@@ -28,8 +28,8 @@ class TRAIN_MODES(Enum):
 
 
 class MODEL_TYPES(Enum):
-    CODET5_SMALL = "Salesforce/codet5-small",
-    CODET5_BASE = "Salesforce/codet5-base",
+    CODET5_SMALL = "Salesforce/codet5-small"
+    CODET5_BASE = "Salesforce/codet5-base"
     CODET5_LARGE = "Salesforce/codet5-large"
 
 
@@ -65,7 +65,7 @@ class MODEL_TYPES(Enum):
 # FP16 = False
 # TRAIN_TYPE = "lora"  # full hoặc lora
 
-mode = Mode.DA_LOCAL  # <= --------------------------------- CHOOSE DEPLOYMENT HERE ---------------------------------
+mode = Mode.VAST  # <= --------------------------------- CHOOSE DEPLOYMENT HERE ---------------------------------
 TRAIN_TYPE = TRAIN_MODES.LORA
 
 MODEL_TYPE = MODEL_TYPES.CODET5_SMALL
