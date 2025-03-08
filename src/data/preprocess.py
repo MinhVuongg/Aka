@@ -1,35 +1,22 @@
-import os
 import glob
 import json
-import re
-import sys
-from clang.cindex import Index, TokenKind, Config
-from transformers import AutoTokenizer, T5ForConditionalGeneration
-import glob
-from src.config.config import MODEL_NAME, TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS, REMOVE_COMMENT_MODE, COMMENT_REMOVAL
-
-# from src.train.base_trainer import Salesforce/codet5-base
-#
-# # Đảm bảo module có thể tìm thấy đúng thư mục
-# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
-
 import logging
+import os
+import re
+
+from src.config.config import REMOVE_COMMENT_MODE, COMMENT_REMOVAL
 
 logger = logging.getLogger(__name__)
 
-# Config clang path
-Config.set_library_path(
-    os.path.abspath(os.path.join(os.path.dirname(__file__), "../..", "clang+llvm-19.1.7-x86_64-pc-windows-msvc/bin")))
-
-# Load tokenizer của mô hình
-tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-
+# Config clang path - Khong xoa
+# from clang.cindex import Index, TokenKind, Config
+# Config.set_library_path(
+#     os.path.abspath(os.path.join(os.path.dirname(__file__), "../..", "clang+llvm-19.1.7-x86_64-pc-windows-msvc/bin")))
 
 def extract_target_range(target):
     """
     Trích xuất đoạn mã cần thiết từ target, bỏ qua các dòng không liên quan.
     """
-    # print(target)
     try:
         if isinstance(target, list):
             target = " ".join(map(str, target))
@@ -64,7 +51,7 @@ def remove_comments(code):
     elif REMOVE_COMMENT_MODE == COMMENT_REMOVAL.REGREX:
         return remove_comments_regex(code)
     else:
-        return code;
+        return code
 
 
 def remove_comments_regex(code):
@@ -93,33 +80,35 @@ def remove_comments_ast(code):
     """
     Loại bỏ comment trong mã C++ bằng Clang AST.
     """
-    try:
-        if not code:
-            return ""
+    # Tam thoi comment do ko chay duoc tren VAST
+    # try:
+    #     if not code:
+    #         return ""
+    #
+    #     if isinstance(code, list):
+    #         code = " ".join(map(str, code))
+    #
+    #     index = Index.create()
+    #     tu = index.parse('temp.cpp', unsaved_files=[('temp.cpp', code)], args=['-x', 'c++'])
+    #     comments = [(token.extent.start.offset, token.extent.end.offset) for token in tu.cursor.get_tokens() if
+    #                 token.kind == TokenKind.COMMENT]
+    #
+    #     if not comments:
+    #         return code
+    #
+    #     result = []
+    #     last_end = 0
+    #     for start, end in comments:
+    #         result.append(code[last_end:start])
+    #         last_end = end
+    #     result.append(code[last_end:])
+    #
+    #     return re.sub(r';+', '; ', "".join(result).strip(";")) + ";"
+    # except Exception as e:
+    #     logger.error(f"[ERROR] remove_comments_ast: {e}")
+    #     return code
 
-        if isinstance(code, list):
-            code = " ".join(map(str, code))
-
-        index = Index.create()
-        tu = index.parse('temp.cpp', unsaved_files=[('temp.cpp', code)], args=['-x', 'c++'])
-        comments = [(token.extent.start.offset, token.extent.end.offset) for token in tu.cursor.get_tokens() if
-                    token.kind == TokenKind.COMMENT]
-
-        if not comments:
-            return code
-
-        result = []
-        last_end = 0
-        for start, end in comments:
-            result.append(code[last_end:start])
-            last_end = end
-        result.append(code[last_end:])
-
-        return re.sub(r';+', '; ', "".join(result).strip(";")) + ";"
-    except Exception as e:
-        logger.error(f"[ERROR] remove_comments_ast: {e}")
-        return code
-
+    return code
 
 def clean_code(code):
     """
@@ -146,13 +135,9 @@ def extract_class_declaration(focal_class):
         return ""
 
 
-def preprocess_dataset2(input_folder, output_file, overwrite=False):
+def preprocess_dataset2(input_folder, output_file):
     """
     XU LY CAU TRUC TRAINING SET RAW MOI
-    :param input_folder:
-    :param output_file:
-    :param overwrite:
-    :return:
     """
     # Tim json file
     json_files = glob.glob(os.path.join(input_folder, "**", "*.json"), recursive=True)
@@ -225,7 +210,7 @@ def preprocess_dataset2(input_folder, output_file, overwrite=False):
                         total_processed += 1
 
                         if total_processed % 100 == 0:
-                            logger.info(f"[UET] Processed {total_processed} entries so far")
+                            logger.info(f"[UET] Thu thập được {total_processed} hàm tới lúc này")
                 except Exception as e:
                     logger.error(f"[UET] [ERROR] Processing entry in file {json_file}, index {entry_idx}: {str(e)}")
                     continue

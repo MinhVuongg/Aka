@@ -1,16 +1,12 @@
 import re
 import random
-import logging
-
-logger = logging.getLogger(__name__)
-
+from src.utils.mylogger import logger
 
 class RandomTokenMasker:
     """
     handle random token masking in code snippet.
     Randomly masks 10%-15% of tokens with special mask tokens.
     """
-
     def __init__(self, mask_rate_min=0.10, mask_rate_max=0.15):
         """
         Initialize the RandomTokenMasker.

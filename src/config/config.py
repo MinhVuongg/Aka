@@ -2,8 +2,8 @@
 import os
 from enum import Enum
 
-from src.utils.model_utils import ModelType
 from src.utils.utils import normalize_path
+
 
 class Mode(Enum):
     VAST = 0
@@ -11,17 +11,27 @@ class Mode(Enum):
     LINH_LOCAL = 2
     DA_LOCAL = 3
 
+
 class COMMENT_REMOVAL(Enum):
     AST = 0
     REGREX = 1
 
-class MASKING(Enum):
+
+class MASKING_STRATEGIES(Enum):
     NONE = 0
     RANDOM = 1
 
-class TRAIN_MODE(Enum):
-    LORA = 0
-    FULL_FINETUNING = 1
+
+class TRAIN_MODES(Enum):
+    FULL_FINETUNING = 0
+    LORA = 1
+
+
+class MODEL_TYPES(Enum):
+    CODET5_SMALL = 0,
+    CODET5_BASE = 1,
+    CODET5_LARGE = 2
+
 
 # --------------------------------------------------------------------------------
 # 
@@ -55,16 +65,30 @@ class TRAIN_MODE(Enum):
 # FP16 = False
 # TRAIN_TYPE = "lora"  # full hoặc lora
 
-mode = Mode.VAST  # <= --------------------------------- CHOOSE DEPLOYMENT HERE ---------------------------------
-MODEL_NAME = "Salesforce/codet5-base"
-MASKING_SOURCE = MASKING.NONE
-MODEL_TYPE = ModelType.SEQ2SEQ
-max_source_length = 512
-max_target_length = 1028
+mode = Mode.DA_LOCAL  # <= --------------------------------- CHOOSE DEPLOYMENT HERE ---------------------------------
+TRAIN_TYPE = TRAIN_MODES.LORA
+
+MODEL_NAME = "Salesforce/codet5-small"
+MODEL_TYPE = MODEL_TYPES.CODET5_SMALL
+
+MASKING_SOURCE = MASKING_STRATEGIES.NONE
+
+max_source_length = 32
+max_target_length = 32
 EPOCHS = 1
 BATCH_SIZE = 2
 LEARNING_RATE = 0.0005
-TRAIN_TYPE = TRAIN_MODE.LORA
+LOGGING_STEP = 50
+
+SAVE_TOTAL_LIMIT = 1
+LOGGING_DIR = "./logs"
+
+# Khi train mô hình xong, ta sẽ đánh giá trên tập training set. Nếu set None thì đánh giá toàn bộ. Nếu không, hãy set một số cụ thể.
+TRAININGSET_REPORT_LIMIT = 10
+
+# Khi train mô hình xong, ta sẽ đánh giá trên tập validation set. Nếu set None thì đánh giá toàn bộ. Nếu không, hãy set một số cụ thể.
+VALIDATIONSET_REPORT_LIMIT = 10
+
 
 # Mot vai machine ko chay duoc AST option. Neu chay duoc AST thi remove comment tot hon.
 REMOVE_COMMENT_MODE = COMMENT_REMOVAL.REGREX  # <= --------------------------------- CHOOSE COMMENT REMOVAL ---------------------------------
@@ -96,9 +120,12 @@ model_name_only = MODEL_NAME.split("/")[-1]  # Lấy ten model sau dấu "/"
 
 # Ten model duoc luu cung voi thong tin lien quan.
 MODEL_SAVE_PATH = normalize_path(
-    f"{OUTPUT_PATH}/model{model_name_only}_epoch{EPOCHS}_traintype{TRAIN_TYPE}_maxsourcelen{max_source_length}_maxtargetlen{max_target_length}_batch{BATCH_SIZE}")
+    f"{OUTPUT_PATH}/model{model_name_only}_ep{EPOCHS}_sour{max_source_length}_tar{max_target_length}_bat{BATCH_SIZE}_train{TRAIN_TYPE.name}")
 
 OUTPUT_VALIDATIONSET_CSV = normalize_path(f"{OUTPUT_PATH}/output_validationset.csv")
 OUTPUT_TRAINSET_CSV = normalize_path(f"{OUTPUT_PATH}/output_trainingset.csv")
 
 LOG_DIR = normalize_path(f"{OUTPUT_PATH}/training_history.json")
+
+OUTPUT_VALIDATIONSET_HTML = normalize_path(f"{OUTPUT_PATH}/output_validationset_compare.html")
+OUTPUT_TRAINSET_HTML = normalize_path(f"{OUTPUT_PATH}/output_trainingset_compare.html")

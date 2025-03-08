@@ -2,6 +2,8 @@ import pandas as pd
 import difflib
 import re
 
+from src.utils.mylogger import logger
+
 
 def format_cpp_code(code: str) -> str:
    if isinstance(code, str):
@@ -39,8 +41,8 @@ def highlight_diff(expected, predicted):
     result_predicted = format_newline_for_web(result_predicted)
     return result_expected, result_predicted
 
-def analysis_result(file_path):
-    df = pd.read_csv(file_path)
+def analysis_result(input_path, output_path):
+    df = pd.read_csv(input_path)
     if 'Expected Target' not in df.columns or 'Predicted Target' not in df.columns:
         raise ValueError("File CSV phải có hai cột: 'Expected Target' và 'Predicted Target'")
 
@@ -109,8 +111,8 @@ def analysis_result(file_path):
     </html>
     '''
 
-    with open("comparison_result.html", "w", encoding="utf-8") as f:
+    with open(output_path, "w", encoding="utf-8") as f:
         f.write(html_table)
 
-    print("Kết quả đã được lưu vào comparison_result.html")
+    logger.info(f"[UET] Kết quả đã được lưu vào {output_path}")
 
