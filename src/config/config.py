@@ -28,9 +28,9 @@ class TRAIN_MODES(Enum):
 
 
 class MODEL_TYPES(Enum):
-    CODET5_SMALL = 0,
-    CODET5_BASE = 1,
-    CODET5_LARGE = 2
+    CODET5_SMALL = "Salesforce/codet5-small",
+    CODET5_BASE = "Salesforce/codet5-base",
+    CODET5_LARGE = "Salesforce/codet5-large"
 
 
 # --------------------------------------------------------------------------------
@@ -68,8 +68,8 @@ class MODEL_TYPES(Enum):
 mode = Mode.DA_LOCAL  # <= --------------------------------- CHOOSE DEPLOYMENT HERE ---------------------------------
 TRAIN_TYPE = TRAIN_MODES.LORA
 
-MODEL_NAME = "Salesforce/codet5-small"
 MODEL_TYPE = MODEL_TYPES.CODET5_SMALL
+MODEL_NAME = MODEL_TYPE.value[0]
 
 MASKING_SOURCE = MASKING_STRATEGIES.NONE
 
@@ -116,7 +116,7 @@ VALIDATIONSET_DATA_PATH_PROCESS = normalize_path(f"{OUTPUT_PATH}/processed_valid
 if not os.path.exists(OUTPUT_PATH):
     os.makedirs(OUTPUT_PATH)
 
-model_name_only = MODEL_NAME.split("/")[-1]  # Lấy ten model sau dấu "/"
+model_name_only = MODEL_TYPE.value[0].split("/")[-1]  # Lấy ten model sau dấu "/"
 
 # Ten model duoc luu cung voi thong tin lien quan.
 MODEL_SAVE_PATH = normalize_path(
@@ -129,3 +129,5 @@ LOG_DIR = normalize_path(f"{OUTPUT_PATH}/training_history.json")
 
 OUTPUT_VALIDATIONSET_HTML = normalize_path(f"{OUTPUT_PATH}/output_validationset_compare.html")
 OUTPUT_TRAINSET_HTML = normalize_path(f"{OUTPUT_PATH}/output_trainingset_compare.html")
+
+LOGGER_OUTPUT = normalize_path(f"{OUTPUT_PATH}/log.txt")
