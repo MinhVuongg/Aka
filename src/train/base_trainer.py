@@ -23,6 +23,7 @@ class BaseTrainer(ABC):
             logging.info("[UET] Masking: None")
             self.train_dataset = self.train_dataset.map(self.preprocess, batched=True)
             self.val_dataset = self.val_dataset.map(self.preprocess, batched=True)
+
         elif MASKING_SOURCE == MASKING_STRATEGIES.RANDOM:
             logging.info("[UET] Masking: Random")
             self.token_masker = RandomTokenMasker(mask_rate_min=0.10, mask_rate_max=0.15)
@@ -55,7 +56,9 @@ class BaseTrainer(ABC):
         targets = []
 
         # Apply random token masking to each example
+        i = 0
         for source, target in zip(examples.get("source", []), examples.get("target", [])):
+            i += 1
             # Mask tokens in the source code randomly
             masked_source = self.token_masker.mask_tokens(str(source))
 
@@ -64,6 +67,16 @@ class BaseTrainer(ABC):
 
             # Reset the masker for the next example
             self.token_masker.reset()
+
+            if i == 1:
+                logger.info(f"[UET] Before masking:"
+                            f"\n------------------------------------\n"
+                            f"{source} \n "
+                            f"\n------------------------------------\n"
+                            f"After masking: "
+                            f"\n{masked_source}"
+                            f"\n------------------------------------\n")
+
 
         # Tokenize the masked inputs
         inputs = self.tokenizer(sources, max_length=max_source_length, truncation=True, padding="max_length")
