@@ -1,7 +1,7 @@
 # Mô hình và dữ liệu
 import os
 from enum import Enum
-
+import datetime
 from src.utils.utils import normalize_path
 
 
@@ -105,7 +105,14 @@ elif mode == Mode.LINH_LOCAL:
 elif mode == Mode.FSOFT_SERVER:
     PROJECT_PATH = r"C:\Users\CuongPN8.IVI\Documents\uet-llm\version0703"
 
-OUTPUT_PATH = normalize_path(f"{PROJECT_PATH}/aka-output")
+# Tạo đường dẫn aka-output
+MAIN_OUTPUT_PATH = normalize_path(f"{PROJECT_PATH}/aka-output")
+if not os.path.exists(MAIN_OUTPUT_PATH):
+    os.makedirs(MAIN_OUTPUT_PATH)
+
+timestamp = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M")
+OUTPUT_PATH = normalize_path(f"{MAIN_OUTPUT_PATH}/{timestamp}")
+
 if not os.path.exists(OUTPUT_PATH):
     os.makedirs(OUTPUT_PATH)
 
