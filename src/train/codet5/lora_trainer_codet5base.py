@@ -1,6 +1,6 @@
 import peft
 import torch
-from transformers import AutoModelForSeq2SeqLM
+from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
 from src.config.config import MODEL_NAME
 from src.train.lora_trainer import LoRATrainer
@@ -10,10 +10,12 @@ class LoRATrainer_CodeT5Base(LoRATrainer):
 
     @staticmethod
     def load_model():
-        return AutoModelForSeq2SeqLM.from_pretrained(
+        model = AutoModelForSeq2SeqLM.from_pretrained(
             MODEL_NAME,
             device_map="auto" if torch.cuda.is_available() else None
         )
+        tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+        return model, tokenizer
 
     def add_lora(self):
         lora_config = peft.LoraConfig(

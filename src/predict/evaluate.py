@@ -5,40 +5,25 @@ import torch
 from datasets import load_dataset
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 from tqdm import tqdm
-from transformers import AutoTokenizer
 
 from src.config.config import VALIDATIONSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, OUTPUT_VALIDATIONSET_CSV, \
     max_source_length, \
-    max_target_length, TRAIN_TYPE, TRAIN_MODES, MODEL_TYPES, MODEL_TYPE
-from src.train.codet5.lora_trainer_codet5base import LoRATrainer_CodeT5Base
-from src.train.codet5.lora_trainer_codet5large import LoRATrainer_CodeT5Large
-from src.train.codet5.lora_trainer_codet5small import LoRATrainer_CodeT5Small
-from src.train.full_finetune import FullFineTuneTrainer
+    max_target_length, TRAIN_TYPE, MODEL_TYPE
+from src.utils.model_utils import load_model_by_type
 from src.utils.mylogger import logger
 
 
 # Load model đã train
 def load_model(datapath):
-    logger.info(f"[UET] Download model from %s - start", MODEL_SAVE_PATH)
+    logger.info(f"[UET] Download model and tokenizer from %s - start", MODEL_SAVE_PATH)
 
-    model = None
-    if TRAIN_TYPE == TRAIN_MODES.LORA and MODEL_TYPE == MODEL_TYPES.CODET5_SMALL:
-        model = LoRATrainer_CodeT5Small.load_model()
-    elif TRAIN_TYPE == TRAIN_MODES.LORA and MODEL_TYPE == MODEL_TYPES.CODET5_BASE:
-        model = LoRATrainer_CodeT5Base.load_model()
-    elif TRAIN_TYPE == TRAIN_MODES.LORA and MODEL_TYPE == MODEL_TYPES.CODET5_LARGE:
-        model = LoRATrainer_CodeT5Large.load_model()
-    elif TRAIN_TYPE == TRAIN_MODES.FULL_FINETUNING:
-        model = FullFineTuneTrainer.load_model()
+    model, tokenizer = load_model_by_type(TRAIN_TYPE, MODEL_TYPE)
 
     if model is None:
         logger.error(f"[UET] Chưa support model ở {datapath}")
         return
 
-    logger.info(f"[UET] Download model from %s - done", MODEL_SAVE_PATH)
-
-    logger.info(f"[UET] Load Tokenizer from %s", MODEL_SAVE_PATH)
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_SAVE_PATH)
+    logger.info(f"[UET] Download model and tokenizerfrom %s - done", MODEL_SAVE_PATH)
 
     logger.info(f"[UET] Moving model to GPU/CPU - start")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -134,6 +119,7 @@ def evaluate_model(dataset, tokenizer, model, outputFolder, limit=None):
         logger.info(f"[UET] Kết quả được lưu vào: {outputFolder}")
     else:
         logger.warning("[UET] Không có mẫu nào được đánh giá thành công!")
+
 
 # Chạy đánh giá
 if __name__ == "__main__":

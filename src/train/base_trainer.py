@@ -5,18 +5,16 @@ import matplotlib.pyplot as plt
 import datasets
 from abc import ABC, abstractmethod
 from src.utils.mylogger import logger
-from src.config.config import MODEL_NAME, TRAINSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, LOG_DIR, \
-    VALIDATIONSET_DATA_PATH_PROCESS, MASKING_SOURCE, MASKING_STRATEGIES, max_target_length, \
+from src.config.config import MODEL_NAME, TRAINSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, VALIDATIONSET_DATA_PATH_PROCESS, MASKING_SOURCE, MASKING_STRATEGIES, max_target_length, \
     max_source_length
-from src.data.RandomTokenMasker import RandomTokenMasker
+from src.data.masking.RandomTokenMasker import RandomTokenMasker
 
 
 class BaseTrainer(ABC):
     """Lớp cơ sở cho việc huấn luyện mô hình."""
 
     def __init__(self):
-        self.tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-        self.model = self.load_model()
+        self.model, self.tokenizer = self.load_model()
         self.train_dataset, self.val_dataset = self.load_data()
         self.train_loss_history = []
 

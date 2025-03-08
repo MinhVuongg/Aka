@@ -1,4 +1,5 @@
 # Mô hình và dữ liệu
+import logging
 import os
 from enum import Enum
 import datetime
@@ -65,7 +66,7 @@ class MODEL_TYPES(Enum):
 # FP16 = False
 # TRAIN_TYPE = "lora"  # full hoặc lora
 
-mode = Mode.VAST  # <= --------------------------------- CHOOSE DEPLOYMENT HERE ---------------------------------
+mode = Mode.DA_LOCAL  # <= --------------------------------- CHOOSE DEPLOYMENT HERE ---------------------------------
 TRAIN_TYPE = TRAIN_MODES.LORA
 
 MODEL_TYPE = MODEL_TYPES.CODET5_SMALL

@@ -11,7 +11,9 @@ from src.predict.evaluate import load_model
 from src.train.codet5.lora_trainer_codet5base import LoRATrainer_CodeT5Base
 from src.train.codet5.lora_trainer_codet5large import LoRATrainer_CodeT5Large
 from src.train.codet5.lora_trainer_codet5small import LoRATrainer_CodeT5Small
+from src.utils.model_utils import load_model_by_type
 from src.utils.mylogger import logger
+from src.utils.token_statistics import count_tokens
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 SRC_DIR = os.path.join(ROOT_DIR, "src")
@@ -38,6 +40,17 @@ def main():
 
     logger.info("\n")
     logger.info(f"[UET] Bắt đầu huấn luyện mô hình ({TRAIN_TYPE})...")
+
+    # THONG KE
+    logger.info("\n")
+    logger.info("[UET] STATISTICS")
+    model, tokenizer = load_model_by_type(TRAIN_TYPE, MODEL_TYPE)
+
+    logger.info(f"[UET] Phan tich {TRAINSET_DATA_PATH_PROCESS}")
+    count_tokens(TRAINSET_DATA_PATH_PROCESS, tokenizer)
+
+    logger.info(f"[UET] Phan tich {VALIDATIONSET_DATA_PATH_PROCESS}")
+    count_tokens(VALIDATIONSET_DATA_PATH_PROCESS, tokenizer)
 
     # TRAIN MODEL
     history = {"train_loss": []}
