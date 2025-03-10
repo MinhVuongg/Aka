@@ -35,6 +35,10 @@ class MODEL_TYPES(Enum):
     STARCODER2_3B = "bigcode/starcoder2-3b"
 
 
+class TARGET_SELETCTION_STRATEGIES: # Cấu hình tiền xử lý thuộc tính TD.
+    NONE = "Không " # Không xử lý
+    SORT_BY_TOKEN_AND_CUTOFF = "SORT_BY_TOKEN_AND_CUTOFF"  # Khi tiền xử lý, với một danh sách test case -> sort theo số token tăng dần, và lấy n test case để tổng token <= max_target_length
+
 # --------------------------------------------------------------------------------
 # 
 #                           Môi trường & Tham số huấn luyện (MODIFY HERE)
@@ -75,8 +79,9 @@ MODEL_NAME = str(MODEL_TYPE.value)
 
 MASKING_SOURCE = MASKING_STRATEGIES.NONE
 
-max_source_length = 32
-max_target_length = 32
+OPTIMIZE_TARGET_STRATEGY = TARGET_SELETCTION_STRATEGIES.SORT_BY_TOKEN_AND_CUTOFF
+max_source_length = 512
+max_target_length = 512
 EPOCHS = 1
 BATCH_SIZE = 2
 LEARNING_RATE = 0.0005
@@ -90,7 +95,6 @@ TRAININGSET_REPORT_LIMIT = 10
 
 # Khi train mô hình xong, ta sẽ đánh giá trên tập validation set. Nếu set None thì đánh giá toàn bộ. Nếu không, hãy set một số cụ thể.
 VALIDATIONSET_REPORT_LIMIT = 10
-
 
 # Mot vai machine ko chay duoc AST option. Neu chay duoc AST thi remove comment tot hon.
 REMOVE_COMMENT_MODE = COMMENT_REMOVAL.REGREX  # <= --------------------------------- CHOOSE COMMENT REMOVAL ---------------------------------
@@ -123,7 +127,6 @@ TRAINSET_DATA_PATH_PROCESS = normalize_path(f"{OUTPUT_PATH}/processed_trainset.j
 
 VALIDATIONSET_RAW = normalize_path(f"{PROJECT_PATH}/data/validation/raw")
 VALIDATIONSET_DATA_PATH_PROCESS = normalize_path(f"{OUTPUT_PATH}/processed_validationset.json")
-
 
 # 'Salesforce/codet5-small' => 'Salesforce-codet5-small'
 model_name_only = str(MODEL_TYPE.value).replace("/", "-")  # Lấy ten model sau dấu "/"
