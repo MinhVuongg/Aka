@@ -1,0 +1,1655 @@
+[
+  {
+    "fc": "class Solution {\r public:\r     bool isAdditiveNumber(string num) {\r         int n = num.size();\r         if (n < 3)\r             return false;\r         for (int i = 0; i < n / 2; ++i) {\r             if (num[0] == '0' && i > 0)\r                 break;\r             for (int j = i + 1; n - j > i && j - i <= n - j; ++j) {\r                 if (num[i + 1] == '0' && j - i > 1)\r                     break;\r                 if (Support(stoll(num.substr(0, i + 1)), stoll(num.substr(i + 1, j - i)), num.substr(j + 1)))\r                     return true;\r             }\r         }\r         return false;\r     }\r \r     bool Support(long long x, long long y, string z) {\r         if (z == \"\")\r             return true;\r         for (int i = 0; i < z.size(); ++i) {\r             if ((z[0] == '0' && i > 0) || x + y < stoll(z.substr(0, i + 1)))\r                 return false;\r             if (x + y == stoll(z.substr(0, i + 1)))\r                 return Support(y, x + y, z.substr(i + 1));\r         }\r         return false;\r     }\r };",
+    "m": [ "bool Support(long long x, long long y, string z) {\r\n        if (z == \"\")\r\n            return true;\r\n        for (int i = 0; i < z.size(); ++i) {\r\n            if ((z[0] == '0' && i > 0) || x + y < stoll(z.substr(0, i + 1)))\r\n                return false;\r\n            if (x + y == stoll(z.substr(0, i + 1)))\r\n                return Support(y, x + y, z.substr(i + 1));\r\n        }\r\n        return false;\r\n    }" ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "306.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\folder_32\\306.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\folder_32\\306.cpp\\Solution\\isAdditiveNumber(string)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\306.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\folder_32\\306.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\folder_32\\306.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\folder_32\\306.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\306.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\folder_32\\306.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "isAdditiveNumber(string)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "bool",
+            "realType" : "bool",
+            "functionNode" : ".\\folder_32\\306.cpp\\Solution\\isAdditiveNumber(string)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalStringDataNode",
+              "name" : "num",
+              "virtual_name" : "EXPECTED_num",
+              "dataType" : "string",
+              "realType" : "string",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\306.cpp\\Solution\\isAdditiveNumber(string)\\num",
+              "correspondingType" : "string",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\folder_32\\306.cpp\\Solution\\isAdditiveNumber(string)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalStringDataNode",
+              "name" : "num",
+              "virtual_name" : "num",
+              "dataType" : "string",
+              "realType" : "string",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\306.cpp\\Solution\\isAdditiveNumber(string)\\num",
+              "correspondingType" : "string",
+              "value" : "1",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+                "name" : "num[0]",
+                "virtual_name" : "num[0]",
+                "dataType" : "char",
+                "realType" : "char",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\306.cpp\\Solution\\isAdditiveNumber(string)\\num\\num[0]",
+                "correspondingType" : "char",
+                "value" : "67"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "bool",
+              "realType" : "bool",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\306.cpp\\Solution\\isAdditiveNumber(string)\\RETURN",
+              "correspondingType" : "bool",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_isAdditiveNumber_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_isAdditiveNumber_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\306.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName682741 = new char[2];akaRandomName682741[0] = 67;akaRandomName682741[1] = '\\0';string num=akaRandomName682741;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isAdditiveNumber_string_random_3\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isAdditiveNumber(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_32\\\\306.cpp\\\\Solution\\\\isAdditiveNumber(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\306.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName327242 = new char[2];akaRandomName327242[0] = 67;akaRandomName327242[1] = '\\0';string num=akaRandomName327242;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "fm": "bool isAdditiveNumber(string num) {\r         int n = num.size();\r         if (n < 3)\r             return false;\r         for (int i = 0; i < n / 2; ++i) {\r             if (num[0] == '0' && i > 0)\r                 break;\r             for (int j = i + 1; n - j > i && j - i <= n - j; ++j) {\r                 if (num[i + 1] == '0' && j - i > 1)\r                     break;\r                 if (Support(stoll(num.substr(0, i + 1)), stoll(num.substr(i + 1, j - i)), num.substr(j + 1)))\r                     return true;\r             }\r         }\r         return false;\r     }",
+    "f": [ ],
+    "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_32\\306.cpp\\Solution\\isAdditiveNumber(string)",
+    "c": [ "" ]
+  },
+  {
+    "fc": "class Solution {\r public:\r     bool isAdditiveNumber(string num) {\r         int n = num.size();\r         if (n < 3)\r             return false;\r         for (int i = 0; i < n / 2; ++i) {\r             if (num[0] == '0' && i > 0)\r                 break;\r             for (int j = i + 1; n - j > i && j - i <= n - j; ++j) {\r                 if (num[i + 1] == '0' && j - i > 1)\r                     break;\r                 if (Support(stoll(num.substr(0, i + 1)), stoll(num.substr(i + 1, j - i)), num.substr(j + 1)))\r                     return true;\r             }\r         }\r         return false;\r     }\r \r     bool Support(long long x, long long y, string z) {\r         if (z == \"\")\r             return true;\r         for (int i = 0; i < z.size(); ++i) {\r             if ((z[0] == '0' && i > 0) || x + y < stoll(z.substr(0, i + 1)))\r                 return false;\r             if (x + y == stoll(z.substr(0, i + 1)))\r                 return Support(y, x + y, z.substr(i + 1));\r         }\r         return false;\r     }\r };",
+    "m": [ "bool isAdditiveNumber(string num) {\r\n        int n = num.size();\r\n        if (n < 3)\r\n            return false;\r\n        for (int i = 0; i < n / 2; ++i) {\r\n            if (num[0] == '0' && i > 0)\r\n                break;\r\n            for (int j = i + 1; n - j > i && j - i <= n - j; ++j) {\r\n                if (num[i + 1] == '0' && j - i > 1)\r\n                    break;\r\n                if (Support(stoll(num.substr(0, i + 1)), stoll(num.substr(i + 1, j - i)), num.substr(j + 1)))\r\n                    return true;\r\n            }\r\n        }\r\n        return false;\r\n    }", "bool Support(long long x, long long y, string z) {\r\n        if (z == \"\")\r\n            return true;\r\n        for (int i = 0; i < z.size(); ++i) {\r\n            if ((z[0] == '0' && i > 0) || x + y < stoll(z.substr(0, i + 1)))\r\n                return false;\r\n            if (x + y == stoll(z.substr(0, i + 1)))\r\n                return Support(y, x + y, z.substr(i + 1));\r\n        }\r\n        return false;\r\n    }", "bool Support(long long x, long long y, string z) {\r\n        if (z == \"\")\r\n            return true;\r\n        for (int i = 0; i < z.size(); ++i) {\r\n            if ((z[0] == '0' && i > 0) || x + y < stoll(z.substr(0, i + 1)))\r\n                return false;\r\n            if (x + y == stoll(z.substr(0, i + 1)))\r\n                return Support(y, x + y, z.substr(i + 1));\r\n        }\r\n        return false;\r\n    }" ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "306.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\folder_32\\306.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\folder_32\\306.cpp\\Solution\\Support(long long,long long,string)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\306.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\folder_32\\306.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\folder_32\\306.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\folder_32\\306.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\306.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\folder_32\\306.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "Support(long long,long long,string)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "bool",
+            "realType" : "bool",
+            "functionNode" : ".\\folder_32\\306.cpp\\Solution\\Support(long long,long long,string)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalStringDataNode",
+              "name" : "z",
+              "virtual_name" : "EXPECTED_z",
+              "dataType" : "string",
+              "realType" : "string",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\306.cpp\\Solution\\Support(long long,long long,string)\\z",
+              "correspondingType" : "string",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "x",
+              "virtual_name" : "EXPECTED_x",
+              "dataType" : "long long",
+              "realType" : "long long",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\306.cpp\\Solution\\Support(long long,long long,string)\\x",
+              "correspondingType" : "long long",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "y",
+              "virtual_name" : "EXPECTED_y",
+              "dataType" : "long long",
+              "realType" : "long long",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\306.cpp\\Solution\\Support(long long,long long,string)\\y",
+              "correspondingType" : "long long",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\folder_32\\306.cpp\\Solution\\Support(long long,long long,string)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "x",
+              "virtual_name" : "x",
+              "dataType" : "long long",
+              "realType" : "long long",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\306.cpp\\Solution\\Support(long long,long long,string)\\x",
+              "correspondingType" : "long long",
+              "value" : "5188211828222270751"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "y",
+              "virtual_name" : "y",
+              "dataType" : "long long",
+              "realType" : "long long",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\306.cpp\\Solution\\Support(long long,long long,string)\\y",
+              "correspondingType" : "long long",
+              "value" : "5414516319845206829"
+            }, {
+              "type" : "com.dse.testdata.object.NormalStringDataNode",
+              "name" : "z",
+              "virtual_name" : "z",
+              "dataType" : "string",
+              "realType" : "string",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\306.cpp\\Solution\\Support(long long,long long,string)\\z",
+              "correspondingType" : "string",
+              "value" : "1",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+                "name" : "z[0]",
+                "virtual_name" : "z[0]",
+                "dataType" : "char",
+                "realType" : "char",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\306.cpp\\Solution\\Support(long long,long long,string)\\z\\z[0]",
+                "correspondingType" : "char",
+                "value" : "109"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "bool",
+              "realType" : "bool",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\306.cpp\\Solution\\Support(long long,long long,string)\\RETURN",
+              "correspondingType" : "bool",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_Support_long_long_long_long_string_random_2(void) {\n{\nAKA_test_case_name=\"Solution_Support_long_long_long_long_string_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\306.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nlong long x=5188211828222270751;\n\n\nlong long y=5414516319845206829;\nchar* akaRandomName756008 = new char[2];akaRandomName756008[0] = 109;akaRandomName756008[1] = '\\0';string z=akaRandomName756008;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalStringDataNode z */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_Support_long_long_long_long_string_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->Support(x,y,z);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_32\\\\306.cpp\\\\Solution\\\\Support(long long,long long,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\306.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nlong long x=5188211828222270751;\n\n\nlong long y=5414516319845206829;\nchar* akaRandomName727605 = new char[2];akaRandomName727605[0] = 109;akaRandomName727605[1] = '\\0';string z=akaRandomName727605;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalStringDataNode z */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "fm": "bool Support(long long x, long long y, string z) {\r         if (z == \"\")\r             return true;\r         for (int i = 0; i < z.size(); ++i) {\r             if ((z[0] == '0' && i > 0) || x + y < stoll(z.substr(0, i + 1)))\r                 return false;\r             if (x + y == stoll(z.substr(0, i + 1)))\r                 return Support(y, x + y, z.substr(i + 1));\r         }\r         return false;\r     }",
+    "f": [ ],
+    "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_32\\306.cpp\\Solution\\Support(long long,long long,string)",
+    "c": [ "" ]
+  },
+  {
+    "fc": "class NumArray {\r     vector<int> array;\r public:\r     NumArray(vector<int> nums) {\r         int n = nums.size();\r         array = vector<int>(2 * n, 0);\r         for (int i = n, j = 0; i < 2 * n; ++i, ++j)\r             array[i] = nums[j];\r         for (int i = n - 1; i > 0; --i)\r             array[i] = array[i * 2] + array[i * 2 + 1];\r     }\r \r     void update(int i, int val) {\r         i += array.size() / 2;\r         int prev = array[i];\r         while (i > 0) {\r             array[i] += val - prev;\r             i /= 2;\r         }\r     }\r \r     int sumRange(int i, int j) {\r         int sum = 0;\r         i += array.size() / 2;\r         j += array.size() / 2;\r         while (i <= j) {\r             if (i % 2 == 1) {\r                 sum += array[i];\r                 ++i;\r             }\r             if (j % 2 == 0) {\r                 sum += array[j];\r                 --j;\r             }\r             i /= 2;\r             j /= 2;\r         }\r         return sum;\r     }\r };",
+    "m": [ ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "307.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\folder_32\\307.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___NumArray",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___NumArray",
+              "dataType" : "::NumArray",
+              "realType" : "::NumArray",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\AKA_INSTANCE___NumArray",
+              "correspondingType" : ".\\folder_32\\307.cpp\\NumArray",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___NumArray",
+                "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___NumArray",
+                "dataType" : "::NumArray",
+                "realType" : "::NumArray",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\AKA_INSTANCE___NumArray",
+                "correspondingType" : ".\\folder_32\\307.cpp\\NumArray",
+                "rawType" : "::NumArray",
+                "selectedConstructor" : "NumArray(vector<int>)",
+                "variableType" : "::NumArray",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "NumArray(vector<int>)",
+                  "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___NumArray",
+                  "dataType" : "::NumArray",
+                  "realType" : "::NumArray",
+                  "functionNode" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)",
+                  "children" : [ {
+                    "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                    "name" : "nums",
+                    "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___NumArray_nums",
+                    "dataType" : "vector<int>",
+                    "realType" : "vector<int>",
+                    "external" : false,
+                    "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)\\nums",
+                    "correspondingType" : "STLListBaseType",
+                    "templateArg" : "int"
+                  } ]
+                }, {
+                  "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                  "name" : "array",
+                  "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___NumArray->array",
+                  "dataType" : "vector<int>",
+                  "realType" : "vector<int>",
+                  "external" : false,
+                  "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\array",
+                  "correspondingType" : "STLListBaseType",
+                  "templateArg" : "int"
+                } ]
+              } ]
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___NumArray",
+              "virtual_name" : "AKA_INSTANCE___NumArray",
+              "dataType" : "::NumArray",
+              "realType" : "::NumArray",
+              "external" : true,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\AKA_INSTANCE___NumArray",
+              "correspondingType" : ".\\folder_32\\307.cpp\\NumArray",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___NumArray",
+                "virtual_name" : "AKA_INSTANCE___NumArray",
+                "dataType" : "::NumArray",
+                "realType" : "::NumArray",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\AKA_INSTANCE___NumArray",
+                "correspondingType" : ".\\folder_32\\307.cpp\\NumArray",
+                "rawType" : "::NumArray",
+                "selectedConstructor" : "NumArray(vector<int>)",
+                "variableType" : "::NumArray",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "NumArray(vector<int>)",
+                  "virtual_name" : "AKA_INSTANCE___NumArray",
+                  "dataType" : "::NumArray",
+                  "realType" : "::NumArray",
+                  "functionNode" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)",
+                  "children" : [ {
+                    "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                    "name" : "nums",
+                    "virtual_name" : "AKA_INSTANCE___NumArray_nums",
+                    "dataType" : "vector<int>",
+                    "realType" : "vector<int>",
+                    "external" : false,
+                    "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)\\nums",
+                    "correspondingType" : "STLListBaseType",
+                    "templateArg" : "int",
+                    "size" : 3,
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "element #0",
+                      "virtual_name" : "AKA_INSTANCE___NumArray_nums_element0",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)\\nums\\element #0",
+                      "correspondingType" : "int",
+                      "value" : "1811737603"
+                    }, {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "element #1",
+                      "virtual_name" : "AKA_INSTANCE___NumArray_nums_element1",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)\\nums\\element #1",
+                      "correspondingType" : "int",
+                      "value" : "37706458"
+                    }, {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "element #2",
+                      "virtual_name" : "AKA_INSTANCE___NumArray_nums_element2",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)\\nums\\element #2",
+                      "correspondingType" : "int",
+                      "value" : "53710460"
+                    } ]
+                  } ]
+                }, {
+                  "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                  "name" : "array",
+                  "virtual_name" : "AKA_INSTANCE___NumArray->array",
+                  "dataType" : "vector<int>",
+                  "realType" : "vector<int>",
+                  "external" : false,
+                  "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\array",
+                  "correspondingType" : "STLListBaseType",
+                  "templateArg" : "int"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "NumArray(vector<int>)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "",
+            "realType" : "",
+            "functionNode" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)"
+          } ]
+        },
+        "td" : "void AKA_TEST_NumArray_NumArray_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"NumArray_NumArray_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___NumArray */\n/* ConstructorDataNode NumArray(vector<int>) */\n/* VectorDataNode nums */\nvector<int> AKA_INSTANCE___NumArray_nums;\nint AKA_INSTANCE___NumArray_nums_element0=1811737603;\nAKA_INSTANCE___NumArray_nums.push_back(AKA_INSTANCE___NumArray_nums_element0);\nint AKA_INSTANCE___NumArray_nums_element1=37706458;\nAKA_INSTANCE___NumArray_nums.push_back(AKA_INSTANCE___NumArray_nums_element1);\nint AKA_INSTANCE___NumArray_nums_element2=53710460;\nAKA_INSTANCE___NumArray_nums.push_back(AKA_INSTANCE___NumArray_nums_element2);\nAKA_mark(\"<<PRE-CALLING>> Test NumArray_NumArray_vector_int_random_0\");AKA_mark(\"Calling: .\\\\folder_32\\\\307.cpp\\\\NumArray\\\\NumArray(vector<int>)|ROOT\\\\307.cpp\\\\GLOBAL\\\\AKA_INSTANCE___NumArray\\\\AKA_INSTANCE___NumArray\\\\NumArray(vector<int>)\");AKA_fCall++;AKA_INSTANCE___NumArray = new ::NumArray(AKA_INSTANCE___NumArray_nums);\n/* VectorDataNode array */\n\n\n\n\n\n\n\n/* error assertion */\n\n\n/* SubClassDataNode AKA_INSTANCE___NumArray */\n/* ConstructorDataNode NumArray(vector<int>) */\n/* VectorDataNode nums */\nvector<int> EXPECTED_AKA_GLOBAL_AKA_INSTANCE___NumArray_nums;\nAKA_mark(\"<<PRE-CALLING>>\");AKA_mark(\"Calling: .\\\\folder_32\\\\307.cpp\\\\NumArray\\\\NumArray(vector<int>)|ROOT\\\\307.cpp\\\\GLOBAL\\\\AKA_INSTANCE___NumArray\\\\AKA_INSTANCE___NumArray\\\\NumArray(vector<int>)\");AKA_fCall++;auto EXPECTED_AKA_GLOBAL_AKA_INSTANCE___NumArray = new ::NumArray(EXPECTED_AKA_GLOBAL_AKA_INSTANCE___NumArray_nums);\n/* VectorDataNode array */\n\n\n\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___NumArray */\n/* ConstructorDataNode NumArray(vector<int>) */\n/* VectorDataNode nums */\nvector<int> AKA_INSTANCE___NumArray_nums;\nint AKA_INSTANCE___NumArray_nums_element0=1811737603;\nAKA_INSTANCE___NumArray_nums.push_back(AKA_INSTANCE___NumArray_nums_element0);\nint AKA_INSTANCE___NumArray_nums_element1=37706458;\nAKA_INSTANCE___NumArray_nums.push_back(AKA_INSTANCE___NumArray_nums_element1);\nint AKA_INSTANCE___NumArray_nums_element2=53710460;\nAKA_INSTANCE___NumArray_nums.push_back(AKA_INSTANCE___NumArray_nums_element2);\nAKA_mark(\"<<PRE-CALLING>> Test NumArray_NumArray_vector_int_random_0\");AKA_mark(\"Calling: .\\\\folder_32\\\\307.cpp\\\\NumArray\\\\NumArray(vector<int>)|ROOT\\\\307.cpp\\\\GLOBAL\\\\AKA_INSTANCE___NumArray\\\\AKA_INSTANCE___NumArray\\\\NumArray(vector<int>)\");AKA_fCall++;AKA_INSTANCE___NumArray = new ::NumArray(AKA_INSTANCE___NumArray_nums);\n/* VectorDataNode array */\n\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "fm": "NumArray(vector<int> nums) {\r         int n = nums.size();\r         array = vector<int>(2 * n, 0);\r         for (int i = n, j = 0; i < 2 * n; ++i, ++j)\r             array[i] = nums[j];\r         for (int i = n - 1; i > 0; --i)\r             array[i] = array[i * 2] + array[i * 2 + 1];\r     }",
+    "f": [ "vector<int> array;" ],
+    "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)",
+    "c": [ "NumArray(vector<int> nums) {\r\n        int n = nums.size();\r\n        array = vector<int>(2 * n, 0);\r\n        for (int i = n, j = 0; i < 2 * n; ++i, ++j)\r\n            array[i] = nums[j];\r\n        for (int i = n - 1; i > 0; --i)\r\n            array[i] = array[i * 2] + array[i * 2 + 1];\r\n    }" ]
+  },
+  {
+    "fc": "class NumArray {\r     vector<int> array;\r public:\r     NumArray(vector<int> nums) {\r         int n = nums.size();\r         array = vector<int>(2 * n, 0);\r         for (int i = n, j = 0; i < 2 * n; ++i, ++j)\r             array[i] = nums[j];\r         for (int i = n - 1; i > 0; --i)\r             array[i] = array[i * 2] + array[i * 2 + 1];\r     }\r \r     void update(int i, int val) {\r         i += array.size() / 2;\r         int prev = array[i];\r         while (i > 0) {\r             array[i] += val - prev;\r             i /= 2;\r         }\r     }\r \r     int sumRange(int i, int j) {\r         int sum = 0;\r         i += array.size() / 2;\r         j += array.size() / 2;\r         while (i <= j) {\r             if (i % 2 == 1) {\r                 sum += array[i];\r                 ++i;\r             }\r             if (j % 2 == 0) {\r                 sum += array[j];\r                 --j;\r             }\r             i /= 2;\r             j /= 2;\r         }\r         return sum;\r     }\r };",
+    "m": [ ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "307.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\folder_32\\307.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\folder_32\\307.cpp\\NumArray\\update(int,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___NumArray",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___NumArray",
+              "dataType" : "::NumArray",
+              "realType" : "::NumArray",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\AKA_INSTANCE___NumArray",
+              "correspondingType" : ".\\folder_32\\307.cpp\\NumArray"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___NumArray",
+              "virtual_name" : "AKA_INSTANCE___NumArray",
+              "dataType" : "::NumArray",
+              "realType" : "::NumArray",
+              "external" : true,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\AKA_INSTANCE___NumArray",
+              "correspondingType" : ".\\folder_32\\307.cpp\\NumArray",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___NumArray",
+                "virtual_name" : "AKA_INSTANCE___NumArray",
+                "dataType" : "::NumArray",
+                "realType" : "::NumArray",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\AKA_INSTANCE___NumArray",
+                "correspondingType" : ".\\folder_32\\307.cpp\\NumArray",
+                "rawType" : "::NumArray",
+                "selectedConstructor" : "NumArray(vector<int>)",
+                "variableType" : "::NumArray",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "NumArray(vector<int>)",
+                  "virtual_name" : "AKA_INSTANCE___NumArray",
+                  "dataType" : "::NumArray",
+                  "realType" : "::NumArray",
+                  "functionNode" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)",
+                  "children" : [ {
+                    "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                    "name" : "nums",
+                    "virtual_name" : "AKA_INSTANCE___NumArray_nums",
+                    "dataType" : "vector<int>",
+                    "realType" : "vector<int>",
+                    "external" : false,
+                    "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)\\nums",
+                    "correspondingType" : "STLListBaseType",
+                    "templateArg" : "int",
+                    "size" : 3,
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "element #0",
+                      "virtual_name" : "AKA_INSTANCE___NumArray_nums_element0",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)\\nums\\element #0",
+                      "correspondingType" : "int",
+                      "value" : "-1115595352"
+                    }, {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "element #1",
+                      "virtual_name" : "AKA_INSTANCE___NumArray_nums_element1",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)\\nums\\element #1",
+                      "correspondingType" : "int",
+                      "value" : "-2039937907"
+                    }, {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "element #2",
+                      "virtual_name" : "AKA_INSTANCE___NumArray_nums_element2",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)\\nums\\element #2",
+                      "correspondingType" : "int",
+                      "value" : "648529534"
+                    } ]
+                  } ]
+                }, {
+                  "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                  "name" : "array",
+                  "virtual_name" : "AKA_INSTANCE___NumArray->array",
+                  "dataType" : "vector<int>",
+                  "realType" : "vector<int>",
+                  "external" : false,
+                  "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\array",
+                  "correspondingType" : "STLListBaseType",
+                  "templateArg" : "int"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "update(int,int)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "void",
+            "realType" : "void",
+            "functionNode" : ".\\folder_32\\307.cpp\\NumArray\\update(int,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "i",
+              "virtual_name" : "EXPECTED_i",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\update(int,int)\\i",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "val",
+              "virtual_name" : "EXPECTED_val",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\update(int,int)\\val",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\folder_32\\307.cpp\\NumArray\\update(int,int)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "i",
+              "virtual_name" : "i",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\update(int,int)\\i",
+              "correspondingType" : "int",
+              "value" : "10"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "val",
+              "virtual_name" : "val",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\update(int,int)\\val",
+              "correspondingType" : "int",
+              "value" : "1873879385"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_NumArray_update_int_int_random_0(void) {\n{\nAKA_test_case_name=\"NumArray_update_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___NumArray */\n/* ConstructorDataNode NumArray(vector<int>) */\n/* VectorDataNode nums */\nvector<int> AKA_INSTANCE___NumArray_nums;\nint AKA_INSTANCE___NumArray_nums_element0=-1115595352;\nAKA_INSTANCE___NumArray_nums.push_back(AKA_INSTANCE___NumArray_nums_element0);\nint AKA_INSTANCE___NumArray_nums_element1=-2039937907;\nAKA_INSTANCE___NumArray_nums.push_back(AKA_INSTANCE___NumArray_nums_element1);\nint AKA_INSTANCE___NumArray_nums_element2=648529534;\nAKA_INSTANCE___NumArray_nums.push_back(AKA_INSTANCE___NumArray_nums_element2);\nAKA_mark(\"Calling: .\\\\folder_32\\\\307.cpp\\\\NumArray\\\\NumArray(vector<int>)|ROOT\\\\307.cpp\\\\GLOBAL\\\\AKA_INSTANCE___NumArray\\\\AKA_INSTANCE___NumArray\\\\NumArray(vector<int>)\");AKA_fCall++;AKA_INSTANCE___NumArray = new ::NumArray(AKA_INSTANCE___NumArray_nums);\n/* VectorDataNode array */\n\n\n\n\nint i=10;\n\n\nint val=1873879385;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode val */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test NumArray_update_int_int_random_0\");AKA_INSTANCE___NumArray->update(i,val);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_32\\\\307.cpp\\\\NumArray\\\\update(int,int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___NumArray */\n/* ConstructorDataNode NumArray(vector<int>) */\n/* VectorDataNode nums */\nvector<int> AKA_INSTANCE___NumArray_nums;\nint AKA_INSTANCE___NumArray_nums_element0=-1115595352;\nAKA_INSTANCE___NumArray_nums.push_back(AKA_INSTANCE___NumArray_nums_element0);\nint AKA_INSTANCE___NumArray_nums_element1=-2039937907;\nAKA_INSTANCE___NumArray_nums.push_back(AKA_INSTANCE___NumArray_nums_element1);\nint AKA_INSTANCE___NumArray_nums_element2=648529534;\nAKA_INSTANCE___NumArray_nums.push_back(AKA_INSTANCE___NumArray_nums_element2);\nAKA_mark(\"Calling: .\\\\folder_32\\\\307.cpp\\\\NumArray\\\\NumArray(vector<int>)|ROOT\\\\307.cpp\\\\GLOBAL\\\\AKA_INSTANCE___NumArray\\\\AKA_INSTANCE___NumArray\\\\NumArray(vector<int>)\");AKA_fCall++;AKA_INSTANCE___NumArray = new ::NumArray(AKA_INSTANCE___NumArray_nums);\n/* VectorDataNode array */\n\n\n\n\nint i=10;\n\n\nint val=1873879385;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode val */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "fm": "void update(int i, int val) {\r         i += array.size() / 2;\r         int prev = array[i];\r         while (i > 0) {\r             array[i] += val - prev;\r             i /= 2;\r         }\r     }",
+    "f": [ "vector<int> array;" ],
+    "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_32\\307.cpp\\NumArray\\update(int,int)",
+    "c": [ "NumArray(vector<int> nums) {\r\n        int n = nums.size();\r\n        array = vector<int>(2 * n, 0);\r\n        for (int i = n, j = 0; i < 2 * n; ++i, ++j)\r\n            array[i] = nums[j];\r\n        for (int i = n - 1; i > 0; --i)\r\n            array[i] = array[i * 2] + array[i * 2 + 1];\r\n    }" ]
+  },
+  {
+    "fc": "class NumArray {\r     vector<int> array;\r public:\r     NumArray(vector<int> nums) {\r         int n = nums.size();\r         array = vector<int>(2 * n, 0);\r         for (int i = n, j = 0; i < 2 * n; ++i, ++j)\r             array[i] = nums[j];\r         for (int i = n - 1; i > 0; --i)\r             array[i] = array[i * 2] + array[i * 2 + 1];\r     }\r \r     void update(int i, int val) {\r         i += array.size() / 2;\r         int prev = array[i];\r         while (i > 0) {\r             array[i] += val - prev;\r             i /= 2;\r         }\r     }\r \r     int sumRange(int i, int j) {\r         int sum = 0;\r         i += array.size() / 2;\r         j += array.size() / 2;\r         while (i <= j) {\r             if (i % 2 == 1) {\r                 sum += array[i];\r                 ++i;\r             }\r             if (j % 2 == 0) {\r                 sum += array[j];\r                 --j;\r             }\r             i /= 2;\r             j /= 2;\r         }\r         return sum;\r     }\r };",
+    "m": [ ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "307.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\folder_32\\307.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\folder_32\\307.cpp\\NumArray\\sumRange(int,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___NumArray",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___NumArray",
+              "dataType" : "::NumArray",
+              "realType" : "::NumArray",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\AKA_INSTANCE___NumArray",
+              "correspondingType" : ".\\folder_32\\307.cpp\\NumArray"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___NumArray",
+              "virtual_name" : "AKA_INSTANCE___NumArray",
+              "dataType" : "::NumArray",
+              "realType" : "::NumArray",
+              "external" : true,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\AKA_INSTANCE___NumArray",
+              "correspondingType" : ".\\folder_32\\307.cpp\\NumArray",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___NumArray",
+                "virtual_name" : "AKA_INSTANCE___NumArray",
+                "dataType" : "::NumArray",
+                "realType" : "::NumArray",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\AKA_INSTANCE___NumArray",
+                "correspondingType" : ".\\folder_32\\307.cpp\\NumArray",
+                "rawType" : "::NumArray",
+                "selectedConstructor" : "NumArray(vector<int>)",
+                "variableType" : "::NumArray",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "NumArray(vector<int>)",
+                  "virtual_name" : "AKA_INSTANCE___NumArray",
+                  "dataType" : "::NumArray",
+                  "realType" : "::NumArray",
+                  "functionNode" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)",
+                  "children" : [ {
+                    "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                    "name" : "nums",
+                    "virtual_name" : "AKA_INSTANCE___NumArray_nums",
+                    "dataType" : "vector<int>",
+                    "realType" : "vector<int>",
+                    "external" : false,
+                    "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)\\nums",
+                    "correspondingType" : "STLListBaseType",
+                    "templateArg" : "int",
+                    "size" : 2,
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "element #0",
+                      "virtual_name" : "AKA_INSTANCE___NumArray_nums_element0",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)\\nums\\element #0",
+                      "correspondingType" : "int",
+                      "value" : "-963600395"
+                    }, {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "element #1",
+                      "virtual_name" : "AKA_INSTANCE___NumArray_nums_element1",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)\\nums\\element #1",
+                      "correspondingType" : "int",
+                      "value" : "-771065708"
+                    } ]
+                  } ]
+                }, {
+                  "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                  "name" : "array",
+                  "virtual_name" : "AKA_INSTANCE___NumArray->array",
+                  "dataType" : "vector<int>",
+                  "realType" : "vector<int>",
+                  "external" : false,
+                  "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\array",
+                  "correspondingType" : "STLListBaseType",
+                  "templateArg" : "int"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "sumRange(int,int)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : ".\\folder_32\\307.cpp\\NumArray\\sumRange(int,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "i",
+              "virtual_name" : "EXPECTED_i",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\sumRange(int,int)\\i",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "j",
+              "virtual_name" : "EXPECTED_j",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\sumRange(int,int)\\j",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\folder_32\\307.cpp\\NumArray\\sumRange(int,int)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "i",
+              "virtual_name" : "i",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\sumRange(int,int)\\i",
+              "correspondingType" : "int",
+              "value" : "9"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "j",
+              "virtual_name" : "j",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\sumRange(int,int)\\j",
+              "correspondingType" : "int",
+              "value" : "8"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\sumRange(int,int)\\RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_NumArray_sumRange_int_int_random_0(void) {\n{\nAKA_test_case_name=\"NumArray_sumRange_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___NumArray */\n/* ConstructorDataNode NumArray(vector<int>) */\n/* VectorDataNode nums */\nvector<int> AKA_INSTANCE___NumArray_nums;\nint AKA_INSTANCE___NumArray_nums_element0=-963600395;\nAKA_INSTANCE___NumArray_nums.push_back(AKA_INSTANCE___NumArray_nums_element0);\nint AKA_INSTANCE___NumArray_nums_element1=-771065708;\nAKA_INSTANCE___NumArray_nums.push_back(AKA_INSTANCE___NumArray_nums_element1);\nAKA_mark(\"Calling: .\\\\folder_32\\\\307.cpp\\\\NumArray\\\\NumArray(vector<int>)|ROOT\\\\307.cpp\\\\GLOBAL\\\\AKA_INSTANCE___NumArray\\\\AKA_INSTANCE___NumArray\\\\NumArray(vector<int>)\");AKA_fCall++;AKA_INSTANCE___NumArray = new ::NumArray(AKA_INSTANCE___NumArray_nums);\n/* VectorDataNode array */\n\n\n\n\nint i=9;\n\n\nint j=8;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test NumArray_sumRange_int_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___NumArray->sumRange(i,j);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_32\\\\307.cpp\\\\NumArray\\\\sumRange(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___NumArray */\n/* ConstructorDataNode NumArray(vector<int>) */\n/* VectorDataNode nums */\nvector<int> AKA_INSTANCE___NumArray_nums;\nint AKA_INSTANCE___NumArray_nums_element0=-963600395;\nAKA_INSTANCE___NumArray_nums.push_back(AKA_INSTANCE___NumArray_nums_element0);\nint AKA_INSTANCE___NumArray_nums_element1=-771065708;\nAKA_INSTANCE___NumArray_nums.push_back(AKA_INSTANCE___NumArray_nums_element1);\nAKA_mark(\"Calling: .\\\\folder_32\\\\307.cpp\\\\NumArray\\\\NumArray(vector<int>)|ROOT\\\\307.cpp\\\\GLOBAL\\\\AKA_INSTANCE___NumArray\\\\AKA_INSTANCE___NumArray\\\\NumArray(vector<int>)\");AKA_fCall++;AKA_INSTANCE___NumArray = new ::NumArray(AKA_INSTANCE___NumArray_nums);\n/* VectorDataNode array */\n\n\n\n\nint i=9;\n\n\nint j=8;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      },
+      {
+        "id" : 1,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "307.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\folder_32\\307.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\folder_32\\307.cpp\\NumArray\\sumRange(int,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___NumArray",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___NumArray",
+              "dataType" : "::NumArray",
+              "realType" : "::NumArray",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\AKA_INSTANCE___NumArray",
+              "correspondingType" : ".\\folder_32\\307.cpp\\NumArray"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___NumArray",
+              "virtual_name" : "AKA_INSTANCE___NumArray",
+              "dataType" : "::NumArray",
+              "realType" : "::NumArray",
+              "external" : true,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\AKA_INSTANCE___NumArray",
+              "correspondingType" : ".\\folder_32\\307.cpp\\NumArray",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___NumArray",
+                "virtual_name" : "AKA_INSTANCE___NumArray",
+                "dataType" : "::NumArray",
+                "realType" : "::NumArray",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\AKA_INSTANCE___NumArray",
+                "correspondingType" : ".\\folder_32\\307.cpp\\NumArray",
+                "rawType" : "::NumArray",
+                "selectedConstructor" : "NumArray(vector<int>)",
+                "variableType" : "::NumArray",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "NumArray(vector<int>)",
+                  "virtual_name" : "AKA_INSTANCE___NumArray",
+                  "dataType" : "::NumArray",
+                  "realType" : "::NumArray",
+                  "functionNode" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)",
+                  "children" : [ {
+                    "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                    "name" : "nums",
+                    "virtual_name" : "AKA_INSTANCE___NumArray_nums",
+                    "dataType" : "vector<int>",
+                    "realType" : "vector<int>",
+                    "external" : false,
+                    "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)\\nums",
+                    "correspondingType" : "STLListBaseType",
+                    "templateArg" : "int",
+                    "size" : 1,
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "element #0",
+                      "virtual_name" : "AKA_INSTANCE___NumArray_nums_element0",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\NumArray(vector<int>)\\nums\\element #0",
+                      "correspondingType" : "int",
+                      "value" : "1598959599"
+                    } ]
+                  } ]
+                }, {
+                  "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                  "name" : "array",
+                  "virtual_name" : "AKA_INSTANCE___NumArray->array",
+                  "dataType" : "vector<int>",
+                  "realType" : "vector<int>",
+                  "external" : false,
+                  "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\array",
+                  "correspondingType" : "STLListBaseType",
+                  "templateArg" : "int"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "sumRange(int,int)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : ".\\folder_32\\307.cpp\\NumArray\\sumRange(int,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "j",
+              "virtual_name" : "EXPECTED_j",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\sumRange(int,int)\\j",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "i",
+              "virtual_name" : "EXPECTED_i",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\sumRange(int,int)\\i",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\folder_32\\307.cpp\\NumArray\\sumRange(int,int)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "i",
+              "virtual_name" : "i",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\sumRange(int,int)\\i",
+              "correspondingType" : "int",
+              "value" : "2"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "j",
+              "virtual_name" : "j",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\sumRange(int,int)\\j",
+              "correspondingType" : "int",
+              "value" : "9"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\307.cpp\\NumArray\\sumRange(int,int)\\RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_NumArray_sumRange_int_int_random_2(void) {\n{\nAKA_test_case_name=\"NumArray_sumRange_int_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___NumArray */\n/* ConstructorDataNode NumArray(vector<int>) */\n/* VectorDataNode nums */\nvector<int> AKA_INSTANCE___NumArray_nums;\nint AKA_INSTANCE___NumArray_nums_element0=1598959599;\nAKA_INSTANCE___NumArray_nums.push_back(AKA_INSTANCE___NumArray_nums_element0);\nAKA_mark(\"Calling: .\\\\folder_32\\\\307.cpp\\\\NumArray\\\\NumArray(vector<int>)|ROOT\\\\307.cpp\\\\GLOBAL\\\\AKA_INSTANCE___NumArray\\\\AKA_INSTANCE___NumArray\\\\NumArray(vector<int>)\");AKA_fCall++;AKA_INSTANCE___NumArray = new ::NumArray(AKA_INSTANCE___NumArray_nums);\n/* VectorDataNode array */\n\n\n\n\nint i=2;\n\n\nint j=9;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test NumArray_sumRange_int_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___NumArray->sumRange(i,j);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_32\\\\307.cpp\\\\NumArray\\\\sumRange(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___NumArray */\n/* ConstructorDataNode NumArray(vector<int>) */\n/* VectorDataNode nums */\nvector<int> AKA_INSTANCE___NumArray_nums;\nint AKA_INSTANCE___NumArray_nums_element0=1598959599;\nAKA_INSTANCE___NumArray_nums.push_back(AKA_INSTANCE___NumArray_nums_element0);\nAKA_mark(\"Calling: .\\\\folder_32\\\\307.cpp\\\\NumArray\\\\NumArray(vector<int>)|ROOT\\\\307.cpp\\\\GLOBAL\\\\AKA_INSTANCE___NumArray\\\\AKA_INSTANCE___NumArray\\\\NumArray(vector<int>)\");AKA_fCall++;AKA_INSTANCE___NumArray = new ::NumArray(AKA_INSTANCE___NumArray_nums);\n/* VectorDataNode array */\n\n\n\n\nint i=2;\n\n\nint j=9;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "fm": "int sumRange(int i, int j) {\r         int sum = 0;\r         i += array.size() / 2;\r         j += array.size() / 2;\r         while (i <= j) {\r             if (i % 2 == 1) {\r                 sum += array[i];\r                 ++i;\r             }\r             if (j % 2 == 0) {\r                 sum += array[j];\r                 --j;\r             }\r             i /= 2;\r             j /= 2;\r         }\r         return sum;\r     }",
+    "f": [ "vector<int> array;" ],
+    "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_32\\307.cpp\\NumArray\\sumRange(int,int)",
+    "c": [ "NumArray(vector<int> nums) {\r\n        int n = nums.size();\r\n        array = vector<int>(2 * n, 0);\r\n        for (int i = n, j = 0; i < 2 * n; ++i, ++j)\r\n            array[i] = nums[j];\r\n        for (int i = n - 1; i > 0; --i)\r\n            array[i] = array[i * 2] + array[i * 2 + 1];\r\n    }" ]
+  },
+  {
+    "fc": "class Solution {\r public:\r     int maxProfit(vector<int> &prices) {\r         int n = prices.size();\r         if (n == 0)\r             return 0;\r         else if (n == 1)\r             return prices[1] > prices[0] ? prices[1] - prices[0] : 0;\r         vector<int> purchase(n, 0);\r         vector<int> sell(n, 0);\r         purchase[0] = -prices[0];\r         purchase[1] = -prices[1];\r         sell[1] = prices[1] - prices[0];\r         for (int i = 2; i < n; ++i) {\r             int transact = prices[i] - prices[i - 1];\r             purchase[i] = max(purchase[i - 1] - transact, sell[i - 2] - prices[i]);\r             sell[i] = max(purchase[i - 1] + prices[i], sell[i - 1] + transact);\r         }\r         return *max_element(sell.begin(), sell.end());\r     }\r };",
+    "m": [ ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "309.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\folder_32\\309.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\folder_32\\309.cpp\\Solution\\maxProfit(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\309.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\folder_32\\309.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\folder_32\\309.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\folder_32\\309.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\309.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\folder_32\\309.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "maxProfit(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : ".\\folder_32\\309.cpp\\Solution\\maxProfit(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "prices",
+              "virtual_name" : "EXPECTED_prices",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\309.cpp\\Solution\\maxProfit(vector<int>&)\\prices",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\folder_32\\309.cpp\\Solution\\maxProfit(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "prices",
+              "virtual_name" : "prices",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\309.cpp\\Solution\\maxProfit(vector<int>&)\\prices",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 3,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "prices_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\309.cpp\\Solution\\maxProfit(vector<int>&)\\prices\\element #0",
+                "correspondingType" : "int",
+                "value" : "-579676250"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "prices_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\309.cpp\\Solution\\maxProfit(vector<int>&)\\prices\\element #1",
+                "correspondingType" : "int",
+                "value" : "-602647142"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "prices_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\309.cpp\\Solution\\maxProfit(vector<int>&)\\prices\\element #2",
+                "correspondingType" : "int",
+                "value" : "686250240"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\309.cpp\\Solution\\maxProfit(vector<int>&)\\RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_maxProfit_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_maxProfit_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\309.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> prices;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode prices */\nint prices_element0=-579676250;\nprices.push_back(prices_element0);\nint prices_element1=-602647142;\nprices.push_back(prices_element1);\nint prices_element2=686250240;\nprices.push_back(prices_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maxProfit_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maxProfit(prices);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_32\\\\309.cpp\\\\Solution\\\\maxProfit(vector<int>&)\");\n\n\nvector<int> EXPECTED_prices;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\309.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> prices;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode prices */\nint prices_element0=-579676250;\nprices.push_back(prices_element0);\nint prices_element1=-602647142;\nprices.push_back(prices_element1);\nint prices_element2=686250240;\nprices.push_back(prices_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      },
+      {
+        "id" : 1,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "309.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\folder_32\\309.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\folder_32\\309.cpp\\Solution\\maxProfit(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\309.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\folder_32\\309.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\folder_32\\309.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\folder_32\\309.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\309.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\folder_32\\309.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "maxProfit(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : ".\\folder_32\\309.cpp\\Solution\\maxProfit(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "prices",
+              "virtual_name" : "EXPECTED_prices",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\309.cpp\\Solution\\maxProfit(vector<int>&)\\prices",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\folder_32\\309.cpp\\Solution\\maxProfit(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "prices",
+              "virtual_name" : "prices",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\309.cpp\\Solution\\maxProfit(vector<int>&)\\prices",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 1,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "prices_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\309.cpp\\Solution\\maxProfit(vector<int>&)\\prices\\element #0",
+                "correspondingType" : "int",
+                "value" : "-1188893187"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\309.cpp\\Solution\\maxProfit(vector<int>&)\\RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_maxProfit_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_maxProfit_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\309.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> prices;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode prices */\nint prices_element0=-1188893187;\nprices.push_back(prices_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maxProfit_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maxProfit(prices);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_32\\\\309.cpp\\\\Solution\\\\maxProfit(vector<int>&)\");\n\n\nvector<int> EXPECTED_prices;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\309.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> prices;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode prices */\nint prices_element0=-1188893187;\nprices.push_back(prices_element0);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "fm": "int maxProfit(vector<int> &prices) {\r         int n = prices.size();\r         if (n == 0)\r             return 0;\r         else if (n == 1)\r             return prices[1] > prices[0] ? prices[1] - prices[0] : 0;\r         vector<int> purchase(n, 0);\r         vector<int> sell(n, 0);\r         purchase[0] = -prices[0];\r         purchase[1] = -prices[1];\r         sell[1] = prices[1] - prices[0];\r         for (int i = 2; i < n; ++i) {\r             int transact = prices[i] - prices[i - 1];\r             purchase[i] = max(purchase[i - 1] - transact, sell[i - 2] - prices[i]);\r             sell[i] = max(purchase[i - 1] + prices[i], sell[i - 1] + transact);\r         }\r         return *max_element(sell.begin(), sell.end());\r     }",
+    "f": [ ],
+    "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_32\\309.cpp\\Solution\\maxProfit(vector<int>&)",
+    "c": [ "" ]
+  },
+  {
+    "fc": "class Solution {\r public:\r     void nextPermutation(vector<int> &nums) {\r         int size = nums.size(), n = nums.size() - 2;\r         while (n >= 0) {\r             if (nums[n] < nums[n + 1])\r                 break;\r             --n;\r         }\r         if (n >= 0) {\r             int sub = 0, upper = INT_MAX;\r             for (int i = n + 1; i < size; ++i) {\r                 if (nums[i] > nums[n] && upper > nums[i]) {\r                     sub = i;\r                     upper = nums[i];\r                 }\r             }\r             swap(nums[sub], nums[n]);\r         }\r         std::sort(nums.begin() + n + 1, nums.end());\r     }\r };",
+    "m": [ ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "31.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\folder_32\\31.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\folder_32\\31.cpp\\Solution\\nextPermutation(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\31.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\folder_32\\31.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\folder_32\\31.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\folder_32\\31.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\31.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\folder_32\\31.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "nextPermutation(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "void",
+            "realType" : "void",
+            "functionNode" : ".\\folder_32\\31.cpp\\Solution\\nextPermutation(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "EXPECTED_nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\31.cpp\\Solution\\nextPermutation(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\folder_32\\31.cpp\\Solution\\nextPermutation(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\31.cpp\\Solution\\nextPermutation(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 3,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "nums_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\31.cpp\\Solution\\nextPermutation(vector<int>&)\\nums\\element #0",
+                "correspondingType" : "int",
+                "value" : "1418061399"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "nums_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\31.cpp\\Solution\\nextPermutation(vector<int>&)\\nums\\element #1",
+                "correspondingType" : "int",
+                "value" : "-1992700586"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "nums_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\31.cpp\\Solution\\nextPermutation(vector<int>&)\\nums\\element #2",
+                "correspondingType" : "int",
+                "value" : "603141065"
+              } ]
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_nextPermutation_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_nextPermutation_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\31.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1418061399;\nnums.push_back(nums_element0);\nint nums_element1=-1992700586;\nnums.push_back(nums_element1);\nint nums_element2=603141065;\nnums.push_back(nums_element2);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_nextPermutation_vector_int_random_0\");AKA_INSTANCE___Solution->nextPermutation(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_32\\\\31.cpp\\\\Solution\\\\nextPermutation(vector<int>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\31.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1418061399;\nnums.push_back(nums_element0);\nint nums_element1=-1992700586;\nnums.push_back(nums_element1);\nint nums_element2=603141065;\nnums.push_back(nums_element2);\n\n",
+        "isAutomated" : true
+      },
+      {
+        "id" : 1,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "31.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\folder_32\\31.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\folder_32\\31.cpp\\Solution\\nextPermutation(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\31.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\folder_32\\31.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\folder_32\\31.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\folder_32\\31.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\31.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\folder_32\\31.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "nextPermutation(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "void",
+            "realType" : "void",
+            "functionNode" : ".\\folder_32\\31.cpp\\Solution\\nextPermutation(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "EXPECTED_nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\31.cpp\\Solution\\nextPermutation(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\folder_32\\31.cpp\\Solution\\nextPermutation(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\31.cpp\\Solution\\nextPermutation(vector<int>&)\\nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 2,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "nums_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\31.cpp\\Solution\\nextPermutation(vector<int>&)\\nums\\element #0",
+                "correspondingType" : "int",
+                "value" : "1659202618"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "nums_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\31.cpp\\Solution\\nextPermutation(vector<int>&)\\nums\\element #1",
+                "correspondingType" : "int",
+                "value" : "-247976974"
+              } ]
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_nextPermutation_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_nextPermutation_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\31.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1659202618;\nnums.push_back(nums_element0);\nint nums_element1=-247976974;\nnums.push_back(nums_element1);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_nextPermutation_vector_int_random_1\");AKA_INSTANCE___Solution->nextPermutation(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_32\\\\31.cpp\\\\Solution\\\\nextPermutation(vector<int>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\31.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1659202618;\nnums.push_back(nums_element0);\nint nums_element1=-247976974;\nnums.push_back(nums_element1);\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "fm": "void nextPermutation(vector<int> &nums) {\r         int size = nums.size(), n = nums.size() - 2;\r         while (n >= 0) {\r             if (nums[n] < nums[n + 1])\r                 break;\r             --n;\r         }\r         if (n >= 0) {\r             int sub = 0, upper = INT_MAX;\r             for (int i = n + 1; i < size; ++i) {\r                 if (nums[i] > nums[n] && upper > nums[i]) {\r                     sub = i;\r                     upper = nums[i];\r                 }\r             }\r             swap(nums[sub], nums[n]);\r         }\r         std::sort(nums.begin() + n + 1, nums.end());\r     }",
+    "f": [ ],
+    "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_32\\31.cpp\\Solution\\nextPermutation(vector<int>&)",
+    "c": [ "" ]
+  },
+  {
+    "fc": "class Solution {\r public:\r     int nthSuperUglyNumber(int n, vector<int> &primes) {\r         int m = primes.size();\r         vector<int> factor(primes.size(), 0), res(n, 1);\r         for (int i = 1; i < n; ++i) {\r             res[i] = INT_MAX;\r             for (int j = 0; j < m; ++j)\r                 res[i] = min(res[i], primes[j] * res[factor[j]]);\r             for (int j = 0; j < m; ++j)\r                 if (primes[j] * res[factor[j]] == res[i])\r                     ++factor[j];\r         }\r         return res.back();\r     }\r };",
+    "m": [ ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "313.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : ".\\folder_32\\313.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : ".\\folder_32\\313.cpp\\Solution\\nthSuperUglyNumber(int,vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\313.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\folder_32\\313.cpp\\Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : ".\\folder_32\\313.cpp\\Solution\\AKA_INSTANCE___Solution",
+              "correspondingType" : ".\\folder_32\\313.cpp\\Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\313.cpp\\Solution\\AKA_INSTANCE___Solution",
+                "correspondingType" : ".\\folder_32\\313.cpp\\Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "\\Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "nthSuperUglyNumber(int,vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : ".\\folder_32\\313.cpp\\Solution\\nthSuperUglyNumber(int,vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "primes",
+              "virtual_name" : "EXPECTED_primes",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\313.cpp\\Solution\\nthSuperUglyNumber(int,vector<int>&)\\primes",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "EXPECTED_n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\313.cpp\\Solution\\nthSuperUglyNumber(int,vector<int>&)\\n",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : ".\\folder_32\\313.cpp\\Solution\\nthSuperUglyNumber(int,vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\313.cpp\\Solution\\nthSuperUglyNumber(int,vector<int>&)\\n",
+              "correspondingType" : "int",
+              "value" : "2"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "primes",
+              "virtual_name" : "primes",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\313.cpp\\Solution\\nthSuperUglyNumber(int,vector<int>&)\\primes",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 2,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "primes_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\313.cpp\\Solution\\nthSuperUglyNumber(int,vector<int>&)\\primes\\element #0",
+                "correspondingType" : "int",
+                "value" : "1625330069"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "primes_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : ".\\folder_32\\313.cpp\\Solution\\nthSuperUglyNumber(int,vector<int>&)\\primes\\element #1",
+                "correspondingType" : "int",
+                "value" : "-1972549675"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : ".\\folder_32\\313.cpp\\Solution\\nthSuperUglyNumber(int,vector<int>&)\\RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_nthSuperUglyNumber_int_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_nthSuperUglyNumber_int_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\313.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=2;\nvector<int> primes;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode primes */\nint primes_element0=1625330069;\nprimes.push_back(primes_element0);\nint primes_element1=-1972549675;\nprimes.push_back(primes_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_nthSuperUglyNumber_int_vector_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->nthSuperUglyNumber(n,primes);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_32\\\\313.cpp\\\\Solution\\\\nthSuperUglyNumber(int,vector<int>&)\");\n\n\nvector<int> EXPECTED_primes;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\313.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=2;\nvector<int> primes;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode primes */\nint primes_element0=1625330069;\nprimes.push_back(primes_element0);\nint primes_element1=-1972549675;\nprimes.push_back(primes_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "fm": "int nthSuperUglyNumber(int n, vector<int> &primes) {\r         int m = primes.size();\r         vector<int> factor(primes.size(), 0), res(n, 1);\r         for (int i = 1; i < n; ++i) {\r             res[i] = INT_MAX;\r             for (int j = 0; j < m; ++j)\r                 res[i] = min(res[i], primes[j] * res[factor[j]]);\r             for (int j = 0; j < m; ++j)\r                 if (primes[j] * res[factor[j]] == res[i])\r                     ++factor[j];\r         }\r         return res.back();\r     }",
+    "f": [ ],
+    "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_32\\313.cpp\\Solution\\nthSuperUglyNumber(int,vector<int>&)",
+    "c": [ "" ]
+  }
+]

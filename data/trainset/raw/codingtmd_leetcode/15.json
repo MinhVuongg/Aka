@@ -1,0 +1,2654 @@
+[
+  {
+    "fm": "int numSquares(int n) {         vector<int> dp_nums(1,0);                  while(dp_nums.size() <= n) {             int k = dp_nums.size();             int least_num = INT_MAX;             for(int i =1; i*i <=k; i++){                 least_num = min(least_num, dp_nums[k-i*i] +1);                            }             dp_nums.push_back(least_num);         }         return dp_nums[n];     }",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Perfect_Squares.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./15/Perfect_Squares.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./15/Perfect_Squares.cpp/Solution/numSquares(int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./15/Perfect_Squares.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Perfect_Squares.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./15/Perfect_Squares.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Perfect_Squares.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./15/Perfect_Squares.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./15/Perfect_Squares.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "numSquares(int)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./15/Perfect_Squares.cpp/Solution/numSquares(int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "EXPECTED_n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Perfect_Squares.cpp/Solution/numSquares(int)/n",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./15/Perfect_Squares.cpp/Solution/numSquares(int)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Perfect_Squares.cpp/Solution/numSquares(int)/n",
+              "correspondingType" : "int",
+              "value" : "10"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Perfect_Squares.cpp/Solution/numSquares(int)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_numSquares_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_numSquares_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Perfect_Squares.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=10;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_numSquares_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->numSquares(n);\nAKA_fCall++;AKA_mark(\"Return from: ./15/Perfect_Squares.cpp/Solution/numSquares(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Perfect_Squares.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=10;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ ],
+    "fc": "class Solution { public:     int numSquares(int n) {         vector<int> dp_nums(1,0);                  while(dp_nums.size() <= n) {             int k = dp_nums.size();             int least_num = INT_MAX;             for(int i =1; i*i <=k; i++){                 least_num = min(least_num, dp_nums[k-i*i] +1);                            }             dp_nums.push_back(least_num);         }         return dp_nums[n];     } };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/15/Perfect_Squares.cpp/Solution/numSquares(int)",
+    "f": [ ]
+  },
+  {
+    "fm": "vector<vector<int> > permute(vector<int> &num) {         vector<vector<int> > coll;         vector<int> solution;         if (num.size() == 0) return coll;         vector<int> visited(num.size(), 0);         GeneratePermute(num, 0, visited, solution, coll);         return coll;     }",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Permutations.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./15/Permutations.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./15/Permutations.cpp/Solution/permute(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Permutations.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Permutations.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./15/Permutations.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "permute(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "vector<vector<int>>",
+            "realType" : "vector<vector<int>>",
+            "functionNode" : "./15/Permutations.cpp/Solution/permute(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "num",
+              "virtual_name" : "EXPECTED_num",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/permute(vector<int>&)/num",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./15/Permutations.cpp/Solution/permute(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "num",
+              "virtual_name" : "num",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/permute(vector<int>&)/num",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 2,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "num_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/permute(vector<int>&)/num/element #0",
+                "correspondingType" : "int",
+                "value" : "642289079"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "num_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/permute(vector<int>&)/num/element #1",
+                "correspondingType" : "int",
+                "value" : "542173196"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "vector<vector<int>>",
+              "realType" : "vector<vector<int>>",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/permute(vector<int>&)/RETURN",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<int>"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_permute_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_permute_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Permutations.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=642289079;\nnum.push_back(num_element0);\nint num_element1=542173196;\nnum.push_back(num_element1);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_permute_vector_int_random_4\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->permute(num);\nAKA_fCall++;AKA_mark(\"Return from: ./15/Permutations.cpp/Solution/permute(vector<int>&)\");\n\n\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Permutations.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=642289079;\nnum.push_back(num_element0);\nint num_element1=542173196;\nnum.push_back(num_element1);\n/* VectorDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ "void GeneratePermute(vector<int> & num, int step,\n                         vector<int>& visited,\n                         vector<int>& solution,\n                         vector<vector<int> >& coll)\n    {\n        if (step == num.size())\n        {\n            coll.push_back(solution);\n            return;\n        }\n        for (int i = 0; i < num.size(); i++)\n        {\n            // if this number already used, skip it\n            if (visited[i] == 0)\n            {\n                visited[i] = 1;\n                solution.push_back(num[i]);\n                GeneratePermute(\n                    num, step + 1, visited, solution, coll);\n                solution.pop_back();\n                visited[i] = 0;\n            }\n        }\n    }" ],
+    "fc": "class Solution { public:     vector<vector<int> > permute(vector<int> &num) {         vector<vector<int> > coll;         vector<int> solution;         if (num.size() == 0) return coll;         vector<int> visited(num.size(), 0);         GeneratePermute(num, 0, visited, solution, coll);         return coll;     }      void GeneratePermute(vector<int> & num, int step,                          vector<int>& visited,                          vector<int>& solution,                          vector<vector<int> >& coll)     {         if (step == num.size())         {             coll.push_back(solution);             return;         }         for (int i = 0; i < num.size(); i++)         {             // if this number already used, skip it             if (visited[i] == 0)             {                 visited[i] = 1;                 solution.push_back(num[i]);                 GeneratePermute(                     num, step + 1, visited, solution, coll);                 solution.pop_back();                 visited[i] = 0;             }         }     } };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/15/Permutations.cpp/Solution/permute(vector<int>&)",
+    "f": [ ]
+  },
+  {
+    "fm": "void GeneratePermute(vector<int> & num, int step,                          vector<int>& visited,                          vector<int>& solution,                          vector<vector<int> >& coll)     {         if (step == num.size())         {             coll.push_back(solution);             return;         }         for (int i = 0; i < num.size(); i++)         {             // if this number already used, skip it             if (visited[i] == 0)             {                 visited[i] = 1;                 solution.push_back(num[i]);                 GeneratePermute(                     num, step + 1, visited, solution, coll);                 solution.pop_back();                 visited[i] = 0;             }         }     }",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Permutations.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./15/Permutations.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Permutations.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Permutations.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./15/Permutations.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "void",
+            "realType" : "void",
+            "functionNode" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "num",
+              "virtual_name" : "EXPECTED_num",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/num",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "step",
+              "virtual_name" : "EXPECTED_step",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/step",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "coll",
+              "virtual_name" : "EXPECTED_coll",
+              "dataType" : "vector<vector<int>>",
+              "realType" : "vector<vector<int>>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<int>"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "solution",
+              "virtual_name" : "EXPECTED_solution",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/solution",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "visited",
+              "virtual_name" : "EXPECTED_visited",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/visited",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "num",
+              "virtual_name" : "num",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/num",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 1,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "num_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/num/element #0",
+                "correspondingType" : "int",
+                "value" : "-1838780013"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "step",
+              "virtual_name" : "step",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/step",
+              "correspondingType" : "int",
+              "value" : "-1770280646"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "visited",
+              "virtual_name" : "visited",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/visited",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 2,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "visited_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/visited/element #0",
+                "correspondingType" : "int",
+                "value" : "260017371"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "visited_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/visited/element #1",
+                "correspondingType" : "int",
+                "value" : "1386728417"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "solution",
+              "virtual_name" : "solution",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/solution",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 1,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "solution_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/solution/element #0",
+                "correspondingType" : "int",
+                "value" : "-1751564349"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "coll",
+              "virtual_name" : "coll",
+              "dataType" : "vector<vector<int>>",
+              "realType" : "vector<vector<int>>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<int>",
+              "size" : 3,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                "name" : "element #0",
+                "virtual_name" : "coll_element0",
+                "dataType" : "vector<int>",
+                "realType" : "vector<int>",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #0",
+                "correspondingType" : "STLListBaseType",
+                "templateArg" : "int",
+                "size" : 2,
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #0",
+                  "virtual_name" : "coll_element0_element0",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #0/element #0",
+                  "correspondingType" : "int",
+                  "value" : "386611017"
+                }, {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #1",
+                  "virtual_name" : "coll_element0_element1",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #0/element #1",
+                  "correspondingType" : "int",
+                  "value" : "-1657968301"
+                } ]
+              }, {
+                "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                "name" : "element #1",
+                "virtual_name" : "coll_element1",
+                "dataType" : "vector<int>",
+                "realType" : "vector<int>",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #1",
+                "correspondingType" : "STLListBaseType",
+                "templateArg" : "int",
+                "size" : 2,
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #0",
+                  "virtual_name" : "coll_element1_element0",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #1/element #0",
+                  "correspondingType" : "int",
+                  "value" : "2146307598"
+                }, {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #1",
+                  "virtual_name" : "coll_element1_element1",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #1/element #1",
+                  "correspondingType" : "int",
+                  "value" : "472360838"
+                } ]
+              }, {
+                "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                "name" : "element #2",
+                "virtual_name" : "coll_element2",
+                "dataType" : "vector<int>",
+                "realType" : "vector<int>",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #2",
+                "correspondingType" : "STLListBaseType",
+                "templateArg" : "int",
+                "size" : 2,
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #0",
+                  "virtual_name" : "coll_element2_element0",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #2/element #0",
+                  "correspondingType" : "int",
+                  "value" : "-1736367060"
+                }, {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #1",
+                  "virtual_name" : "coll_element2_element1",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #2/element #1",
+                  "correspondingType" : "int",
+                  "value" : "2065212323"
+                } ]
+              } ]
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_GeneratePermute_vector_int_int_vector_int_vector_int_vector_vector_int_random_10(void) {\n{\nAKA_test_case_name=\"Solution_GeneratePermute_vector_int_int_vector_int_vector_int_vector_vector_int_random_10\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Permutations.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint step=-1770280646;\nvector<int> visited;\nvector<int> solution;\nvector<vector<int>> coll;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-1838780013;\nnum.push_back(num_element0);\n/* NormalNumberDataNode step */\n/* VectorDataNode visited */\nint visited_element0=260017371;\nvisited.push_back(visited_element0);\nint visited_element1=1386728417;\nvisited.push_back(visited_element1);\n/* VectorDataNode solution */\nint solution_element0=-1751564349;\nsolution.push_back(solution_element0);\n/* VectorDataNode coll */\nvector<int> coll_element0;\nint coll_element0_element0=386611017;\ncoll_element0.push_back(coll_element0_element0);\nint coll_element0_element1=-1657968301;\ncoll_element0.push_back(coll_element0_element1);\ncoll.push_back(coll_element0);\nvector<int> coll_element1;\nint coll_element1_element0=2146307598;\ncoll_element1.push_back(coll_element1_element0);\nint coll_element1_element1=472360838;\ncoll_element1.push_back(coll_element1_element1);\ncoll.push_back(coll_element1);\nvector<int> coll_element2;\nint coll_element2_element0=-1736367060;\ncoll_element2.push_back(coll_element2_element0);\nint coll_element2_element1=2065212323;\ncoll_element2.push_back(coll_element2_element1);\ncoll.push_back(coll_element2);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_GeneratePermute_vector_int_int_vector_int_vector_int_vector_vector_int_random_10\");AKA_INSTANCE___Solution->GeneratePermute(num,step,visited,solution,coll);\nAKA_fCall++;AKA_mark(\"Return from: ./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_num;\n\nvector<int> EXPECTED_visited;\n\nvector<int> EXPECTED_solution;\n\nvector<vector<int>> EXPECTED_coll;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Permutations.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint step=-1770280646;\nvector<int> visited;\nvector<int> solution;\nvector<vector<int>> coll;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-1838780013;\nnum.push_back(num_element0);\n/* NormalNumberDataNode step */\n/* VectorDataNode visited */\nint visited_element0=260017371;\nvisited.push_back(visited_element0);\nint visited_element1=1386728417;\nvisited.push_back(visited_element1);\n/* VectorDataNode solution */\nint solution_element0=-1751564349;\nsolution.push_back(solution_element0);\n/* VectorDataNode coll */\nvector<int> coll_element0;\nint coll_element0_element0=386611017;\ncoll_element0.push_back(coll_element0_element0);\nint coll_element0_element1=-1657968301;\ncoll_element0.push_back(coll_element0_element1);\ncoll.push_back(coll_element0);\nvector<int> coll_element1;\nint coll_element1_element0=2146307598;\ncoll_element1.push_back(coll_element1_element0);\nint coll_element1_element1=472360838;\ncoll_element1.push_back(coll_element1_element1);\ncoll.push_back(coll_element1);\nvector<int> coll_element2;\nint coll_element2_element0=-1736367060;\ncoll_element2.push_back(coll_element2_element0);\nint coll_element2_element1=2065212323;\ncoll_element2.push_back(coll_element2_element1);\ncoll.push_back(coll_element2);\n\n",
+        "isAutomated" : true
+      },
+      {
+        "id" : 1,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Permutations.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./15/Permutations.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Permutations.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Permutations.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./15/Permutations.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "void",
+            "realType" : "void",
+            "functionNode" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "coll",
+              "virtual_name" : "EXPECTED_coll",
+              "dataType" : "vector<vector<int>>",
+              "realType" : "vector<vector<int>>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<int>"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "num",
+              "virtual_name" : "EXPECTED_num",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/num",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "step",
+              "virtual_name" : "EXPECTED_step",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/step",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "visited",
+              "virtual_name" : "EXPECTED_visited",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/visited",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "solution",
+              "virtual_name" : "EXPECTED_solution",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/solution",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "num",
+              "virtual_name" : "num",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/num",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 1,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "num_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/num/element #0",
+                "correspondingType" : "int",
+                "value" : "-749619468"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "step",
+              "virtual_name" : "step",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/step",
+              "correspondingType" : "int",
+              "value" : "704902511"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "visited",
+              "virtual_name" : "visited",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/visited",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 1,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "visited_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/visited/element #0",
+                "correspondingType" : "int",
+                "value" : "-1338039855"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "solution",
+              "virtual_name" : "solution",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/solution",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 3,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "solution_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/solution/element #0",
+                "correspondingType" : "int",
+                "value" : "231915053"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "solution_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/solution/element #1",
+                "correspondingType" : "int",
+                "value" : "-2043022186"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "solution_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/solution/element #2",
+                "correspondingType" : "int",
+                "value" : "-2053263215"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "coll",
+              "virtual_name" : "coll",
+              "dataType" : "vector<vector<int>>",
+              "realType" : "vector<vector<int>>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<int>",
+              "size" : 3,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                "name" : "element #0",
+                "virtual_name" : "coll_element0",
+                "dataType" : "vector<int>",
+                "realType" : "vector<int>",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #0",
+                "correspondingType" : "STLListBaseType",
+                "templateArg" : "int",
+                "size" : 2,
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #0",
+                  "virtual_name" : "coll_element0_element0",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #0/element #0",
+                  "correspondingType" : "int",
+                  "value" : "1409831195"
+                }, {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #1",
+                  "virtual_name" : "coll_element0_element1",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #0/element #1",
+                  "correspondingType" : "int",
+                  "value" : "-118376731"
+                } ]
+              }, {
+                "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                "name" : "element #1",
+                "virtual_name" : "coll_element1",
+                "dataType" : "vector<int>",
+                "realType" : "vector<int>",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #1",
+                "correspondingType" : "STLListBaseType",
+                "templateArg" : "int",
+                "size" : 3,
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #0",
+                  "virtual_name" : "coll_element1_element0",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #1/element #0",
+                  "correspondingType" : "int",
+                  "value" : "-2036632801"
+                }, {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #1",
+                  "virtual_name" : "coll_element1_element1",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #1/element #1",
+                  "correspondingType" : "int",
+                  "value" : "-589059025"
+                }, {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #2",
+                  "virtual_name" : "coll_element1_element2",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #1/element #2",
+                  "correspondingType" : "int",
+                  "value" : "1848373235"
+                } ]
+              }, {
+                "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                "name" : "element #2",
+                "virtual_name" : "coll_element2",
+                "dataType" : "vector<int>",
+                "realType" : "vector<int>",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #2",
+                "correspondingType" : "STLListBaseType",
+                "templateArg" : "int",
+                "size" : 3,
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #0",
+                  "virtual_name" : "coll_element2_element0",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #2/element #0",
+                  "correspondingType" : "int",
+                  "value" : "149376407"
+                }, {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #1",
+                  "virtual_name" : "coll_element2_element1",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #2/element #1",
+                  "correspondingType" : "int",
+                  "value" : "-1141430963"
+                }, {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #2",
+                  "virtual_name" : "coll_element2_element2",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #2/element #2",
+                  "correspondingType" : "int",
+                  "value" : "-1566677505"
+                } ]
+              } ]
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_GeneratePermute_vector_int_int_vector_int_vector_int_vector_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_GeneratePermute_vector_int_int_vector_int_vector_int_vector_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Permutations.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint step=704902511;\nvector<int> visited;\nvector<int> solution;\nvector<vector<int>> coll;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-749619468;\nnum.push_back(num_element0);\n/* NormalNumberDataNode step */\n/* VectorDataNode visited */\nint visited_element0=-1338039855;\nvisited.push_back(visited_element0);\n/* VectorDataNode solution */\nint solution_element0=231915053;\nsolution.push_back(solution_element0);\nint solution_element1=-2043022186;\nsolution.push_back(solution_element1);\nint solution_element2=-2053263215;\nsolution.push_back(solution_element2);\n/* VectorDataNode coll */\nvector<int> coll_element0;\nint coll_element0_element0=1409831195;\ncoll_element0.push_back(coll_element0_element0);\nint coll_element0_element1=-118376731;\ncoll_element0.push_back(coll_element0_element1);\ncoll.push_back(coll_element0);\nvector<int> coll_element1;\nint coll_element1_element0=-2036632801;\ncoll_element1.push_back(coll_element1_element0);\nint coll_element1_element1=-589059025;\ncoll_element1.push_back(coll_element1_element1);\nint coll_element1_element2=1848373235;\ncoll_element1.push_back(coll_element1_element2);\ncoll.push_back(coll_element1);\nvector<int> coll_element2;\nint coll_element2_element0=149376407;\ncoll_element2.push_back(coll_element2_element0);\nint coll_element2_element1=-1141430963;\ncoll_element2.push_back(coll_element2_element1);\nint coll_element2_element2=-1566677505;\ncoll_element2.push_back(coll_element2_element2);\ncoll.push_back(coll_element2);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_GeneratePermute_vector_int_int_vector_int_vector_int_vector_vector_int_random_1\");AKA_INSTANCE___Solution->GeneratePermute(num,step,visited,solution,coll);\nAKA_fCall++;AKA_mark(\"Return from: ./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_num;\n\nvector<int> EXPECTED_visited;\n\nvector<int> EXPECTED_solution;\n\nvector<vector<int>> EXPECTED_coll;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Permutations.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint step=704902511;\nvector<int> visited;\nvector<int> solution;\nvector<vector<int>> coll;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-749619468;\nnum.push_back(num_element0);\n/* NormalNumberDataNode step */\n/* VectorDataNode visited */\nint visited_element0=-1338039855;\nvisited.push_back(visited_element0);\n/* VectorDataNode solution */\nint solution_element0=231915053;\nsolution.push_back(solution_element0);\nint solution_element1=-2043022186;\nsolution.push_back(solution_element1);\nint solution_element2=-2053263215;\nsolution.push_back(solution_element2);\n/* VectorDataNode coll */\nvector<int> coll_element0;\nint coll_element0_element0=1409831195;\ncoll_element0.push_back(coll_element0_element0);\nint coll_element0_element1=-118376731;\ncoll_element0.push_back(coll_element0_element1);\ncoll.push_back(coll_element0);\nvector<int> coll_element1;\nint coll_element1_element0=-2036632801;\ncoll_element1.push_back(coll_element1_element0);\nint coll_element1_element1=-589059025;\ncoll_element1.push_back(coll_element1_element1);\nint coll_element1_element2=1848373235;\ncoll_element1.push_back(coll_element1_element2);\ncoll.push_back(coll_element1);\nvector<int> coll_element2;\nint coll_element2_element0=149376407;\ncoll_element2.push_back(coll_element2_element0);\nint coll_element2_element1=-1141430963;\ncoll_element2.push_back(coll_element2_element1);\nint coll_element2_element2=-1566677505;\ncoll_element2.push_back(coll_element2_element2);\ncoll.push_back(coll_element2);\n\n",
+        "isAutomated" : true
+      },
+      {
+        "id" : 2,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Permutations.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./15/Permutations.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Permutations.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Permutations.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./15/Permutations.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "void",
+            "realType" : "void",
+            "functionNode" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "solution",
+              "virtual_name" : "EXPECTED_solution",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/solution",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "visited",
+              "virtual_name" : "EXPECTED_visited",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/visited",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "coll",
+              "virtual_name" : "EXPECTED_coll",
+              "dataType" : "vector<vector<int>>",
+              "realType" : "vector<vector<int>>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<int>"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "step",
+              "virtual_name" : "EXPECTED_step",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/step",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "num",
+              "virtual_name" : "EXPECTED_num",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/num",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "num",
+              "virtual_name" : "num",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/num",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 3,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "num_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/num/element #0",
+                "correspondingType" : "int",
+                "value" : "-2021090275"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "num_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/num/element #1",
+                "correspondingType" : "int",
+                "value" : "-1126974639"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "num_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/num/element #2",
+                "correspondingType" : "int",
+                "value" : "-1927195728"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "step",
+              "virtual_name" : "step",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/step",
+              "correspondingType" : "int",
+              "value" : "-497022367"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "visited",
+              "virtual_name" : "visited",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/visited",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 1,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "visited_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/visited/element #0",
+                "correspondingType" : "int",
+                "value" : "690603433"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "solution",
+              "virtual_name" : "solution",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/solution",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 3,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "solution_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/solution/element #0",
+                "correspondingType" : "int",
+                "value" : "-606665610"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "solution_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/solution/element #1",
+                "correspondingType" : "int",
+                "value" : "-298790012"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "solution_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/solution/element #2",
+                "correspondingType" : "int",
+                "value" : "1722284537"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "coll",
+              "virtual_name" : "coll",
+              "dataType" : "vector<vector<int>>",
+              "realType" : "vector<vector<int>>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<int>",
+              "size" : 2,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                "name" : "element #0",
+                "virtual_name" : "coll_element0",
+                "dataType" : "vector<int>",
+                "realType" : "vector<int>",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #0",
+                "correspondingType" : "STLListBaseType",
+                "templateArg" : "int",
+                "size" : 3,
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #0",
+                  "virtual_name" : "coll_element0_element0",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #0/element #0",
+                  "correspondingType" : "int",
+                  "value" : "-993142505"
+                }, {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #1",
+                  "virtual_name" : "coll_element0_element1",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #0/element #1",
+                  "correspondingType" : "int",
+                  "value" : "-1007106233"
+                }, {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #2",
+                  "virtual_name" : "coll_element0_element2",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #0/element #2",
+                  "correspondingType" : "int",
+                  "value" : "-1644409605"
+                } ]
+              }, {
+                "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                "name" : "element #1",
+                "virtual_name" : "coll_element1",
+                "dataType" : "vector<int>",
+                "realType" : "vector<int>",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #1",
+                "correspondingType" : "STLListBaseType",
+                "templateArg" : "int",
+                "size" : 2,
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #0",
+                  "virtual_name" : "coll_element1_element0",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #1/element #0",
+                  "correspondingType" : "int",
+                  "value" : "-727744359"
+                }, {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #1",
+                  "virtual_name" : "coll_element1_element1",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #1/element #1",
+                  "correspondingType" : "int",
+                  "value" : "-140936613"
+                } ]
+              } ]
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_GeneratePermute_vector_int_int_vector_int_vector_int_vector_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_GeneratePermute_vector_int_int_vector_int_vector_int_vector_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Permutations.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint step=-497022367;\nvector<int> visited;\nvector<int> solution;\nvector<vector<int>> coll;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-2021090275;\nnum.push_back(num_element0);\nint num_element1=-1126974639;\nnum.push_back(num_element1);\nint num_element2=-1927195728;\nnum.push_back(num_element2);\n/* NormalNumberDataNode step */\n/* VectorDataNode visited */\nint visited_element0=690603433;\nvisited.push_back(visited_element0);\n/* VectorDataNode solution */\nint solution_element0=-606665610;\nsolution.push_back(solution_element0);\nint solution_element1=-298790012;\nsolution.push_back(solution_element1);\nint solution_element2=1722284537;\nsolution.push_back(solution_element2);\n/* VectorDataNode coll */\nvector<int> coll_element0;\nint coll_element0_element0=-993142505;\ncoll_element0.push_back(coll_element0_element0);\nint coll_element0_element1=-1007106233;\ncoll_element0.push_back(coll_element0_element1);\nint coll_element0_element2=-1644409605;\ncoll_element0.push_back(coll_element0_element2);\ncoll.push_back(coll_element0);\nvector<int> coll_element1;\nint coll_element1_element0=-727744359;\ncoll_element1.push_back(coll_element1_element0);\nint coll_element1_element1=-140936613;\ncoll_element1.push_back(coll_element1_element1);\ncoll.push_back(coll_element1);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_GeneratePermute_vector_int_int_vector_int_vector_int_vector_vector_int_random_3\");AKA_INSTANCE___Solution->GeneratePermute(num,step,visited,solution,coll);\nAKA_fCall++;AKA_mark(\"Return from: ./15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_num;\n\nvector<int> EXPECTED_visited;\n\nvector<int> EXPECTED_solution;\n\nvector<vector<int>> EXPECTED_coll;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Permutations.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint step=-497022367;\nvector<int> visited;\nvector<int> solution;\nvector<vector<int>> coll;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-2021090275;\nnum.push_back(num_element0);\nint num_element1=-1126974639;\nnum.push_back(num_element1);\nint num_element2=-1927195728;\nnum.push_back(num_element2);\n/* NormalNumberDataNode step */\n/* VectorDataNode visited */\nint visited_element0=690603433;\nvisited.push_back(visited_element0);\n/* VectorDataNode solution */\nint solution_element0=-606665610;\nsolution.push_back(solution_element0);\nint solution_element1=-298790012;\nsolution.push_back(solution_element1);\nint solution_element2=1722284537;\nsolution.push_back(solution_element2);\n/* VectorDataNode coll */\nvector<int> coll_element0;\nint coll_element0_element0=-993142505;\ncoll_element0.push_back(coll_element0_element0);\nint coll_element0_element1=-1007106233;\ncoll_element0.push_back(coll_element0_element1);\nint coll_element0_element2=-1644409605;\ncoll_element0.push_back(coll_element0_element2);\ncoll.push_back(coll_element0);\nvector<int> coll_element1;\nint coll_element1_element0=-727744359;\ncoll_element1.push_back(coll_element1_element0);\nint coll_element1_element1=-140936613;\ncoll_element1.push_back(coll_element1_element1);\ncoll.push_back(coll_element1);\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ "vector<vector<int> > permute(vector<int> &num) {\n        vector<vector<int> > coll;\n        vector<int> solution;\n        if (num.size() == 0) return coll;\n        vector<int> visited(num.size(), 0);\n        GeneratePermute(num, 0, visited, solution, coll);\n        return coll;\n    }", "void GeneratePermute(vector<int> & num, int step,\n                         vector<int>& visited,\n                         vector<int>& solution,\n                         vector<vector<int> >& coll)\n    {\n        if (step == num.size())\n        {\n            coll.push_back(solution);\n            return;\n        }\n        for (int i = 0; i < num.size(); i++)\n        {\n            // if this number already used, skip it\n            if (visited[i] == 0)\n            {\n                visited[i] = 1;\n                solution.push_back(num[i]);\n                GeneratePermute(\n                    num, step + 1, visited, solution, coll);\n                solution.pop_back();\n                visited[i] = 0;\n            }\n        }\n    }", "void GeneratePermute(vector<int> & num, int step,\n                         vector<int>& visited,\n                         vector<int>& solution,\n                         vector<vector<int> >& coll)\n    {\n        if (step == num.size())\n        {\n            coll.push_back(solution);\n            return;\n        }\n        for (int i = 0; i < num.size(); i++)\n        {\n            // if this number already used, skip it\n            if (visited[i] == 0)\n            {\n                visited[i] = 1;\n                solution.push_back(num[i]);\n                GeneratePermute(\n                    num, step + 1, visited, solution, coll);\n                solution.pop_back();\n                visited[i] = 0;\n            }\n        }\n    }" ],
+    "fc": "class Solution { public:     vector<vector<int> > permute(vector<int> &num) {         vector<vector<int> > coll;         vector<int> solution;         if (num.size() == 0) return coll;         vector<int> visited(num.size(), 0);         GeneratePermute(num, 0, visited, solution, coll);         return coll;     }      void GeneratePermute(vector<int> & num, int step,                          vector<int>& visited,                          vector<int>& solution,                          vector<vector<int> >& coll)     {         if (step == num.size())         {             coll.push_back(solution);             return;         }         for (int i = 0; i < num.size(); i++)         {             // if this number already used, skip it             if (visited[i] == 0)             {                 visited[i] = 1;                 solution.push_back(num[i]);                 GeneratePermute(                     num, step + 1, visited, solution, coll);                 solution.pop_back();                 visited[i] = 0;             }         }     } };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/15/Permutations.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)",
+    "f": [ ]
+  },
+  {
+    "fm": "vector<vector<int> > permuteUnique(vector<int> &num) {         vector<vector<int> > coll;         vector<int> solution;         if (num.size() == 0) return coll;         vector<int> visited(num.size(), 0);         sort(num.begin(), num.end());         GeneratePermute(num, 0, visited, solution, coll);         return coll;     }",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Permutations_II.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./15/Permutations_II.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./15/Permutations_II.cpp/Solution/permuteUnique(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations_II.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Permutations_II.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./15/Permutations_II.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Permutations_II.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations_II.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./15/Permutations_II.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "permuteUnique(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "vector<vector<int>>",
+            "realType" : "vector<vector<int>>",
+            "functionNode" : "./15/Permutations_II.cpp/Solution/permuteUnique(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "num",
+              "virtual_name" : "EXPECTED_num",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations_II.cpp/Solution/permuteUnique(vector<int>&)/num",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./15/Permutations_II.cpp/Solution/permuteUnique(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "num",
+              "virtual_name" : "num",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations_II.cpp/Solution/permuteUnique(vector<int>&)/num",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 3,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "num_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations_II.cpp/Solution/permuteUnique(vector<int>&)/num/element #0",
+                "correspondingType" : "int",
+                "value" : "874607010"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "num_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations_II.cpp/Solution/permuteUnique(vector<int>&)/num/element #1",
+                "correspondingType" : "int",
+                "value" : "1822989539"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "num_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations_II.cpp/Solution/permuteUnique(vector<int>&)/num/element #2",
+                "correspondingType" : "int",
+                "value" : "2068386408"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "vector<vector<int>>",
+              "realType" : "vector<vector<int>>",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations_II.cpp/Solution/permuteUnique(vector<int>&)/RETURN",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<int>"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_permuteUnique_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_permuteUnique_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Permutations_II.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=874607010;\nnum.push_back(num_element0);\nint num_element1=1822989539;\nnum.push_back(num_element1);\nint num_element2=2068386408;\nnum.push_back(num_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_permuteUnique_vector_int_random_3\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->permuteUnique(num);\nAKA_fCall++;AKA_mark(\"Return from: ./15/Permutations_II.cpp/Solution/permuteUnique(vector<int>&)\");\n\n\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Permutations_II.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=874607010;\nnum.push_back(num_element0);\nint num_element1=1822989539;\nnum.push_back(num_element1);\nint num_element2=2068386408;\nnum.push_back(num_element2);\n/* VectorDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ "void GeneratePermute(vector<int> & num, int step, vector<int>& visited, vector<int>& solution, vector<vector<int> >& coll)\n    {\n        if (step == num.size())\n        {\n            coll.push_back(solution);\n            return;\n        }\n        for (int i = 0; i < num.size(); i++)\n        {\n            if (visited[i] == 0)\n            {\n\n                visited[i] = 1;\n                solution.push_back(num[i]);\n                GeneratePermute(num, step + 1, visited, solution, coll);\n                solution.pop_back();\n                visited[i] = 0;\n                while (i < num.size() - 1 && num[i] == num[i + 1])\n                    i++;\n            }\n        }\n    }" ],
+    "fc": "class Solution { public:     vector<vector<int> > permuteUnique(vector<int> &num) {         vector<vector<int> > coll;         vector<int> solution;         if (num.size() == 0) return coll;         vector<int> visited(num.size(), 0);         sort(num.begin(), num.end());         GeneratePermute(num, 0, visited, solution, coll);         return coll;     }     void GeneratePermute(vector<int> & num, int step, vector<int>& visited, vector<int>& solution, vector<vector<int> >& coll)     {         if (step == num.size())         {             coll.push_back(solution);             return;         }         for (int i = 0; i < num.size(); i++)         {             if (visited[i] == 0)             {                  visited[i] = 1;                 solution.push_back(num[i]);                 GeneratePermute(num, step + 1, visited, solution, coll);                 solution.pop_back();                 visited[i] = 0;                 while (i < num.size() - 1 && num[i] == num[i + 1])                     i++;             }         }     } };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/15/Permutations_II.cpp/Solution/permuteUnique(vector<int>&)",
+    "f": [ ]
+  },
+  {
+    "fm": "void GeneratePermute(vector<int> & num, int step, vector<int>& visited, vector<int>& solution, vector<vector<int> >& coll)     {         if (step == num.size())         {             coll.push_back(solution);             return;         }         for (int i = 0; i < num.size(); i++)         {             if (visited[i] == 0)             {                  visited[i] = 1;                 solution.push_back(num[i]);                 GeneratePermute(num, step + 1, visited, solution, coll);                 solution.pop_back();                 visited[i] = 0;                 while (i < num.size() - 1 && num[i] == num[i + 1])                     i++;             }         }     }",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Permutations_II.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./15/Permutations_II.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations_II.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Permutations_II.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./15/Permutations_II.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Permutations_II.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations_II.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./15/Permutations_II.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "void",
+            "realType" : "void",
+            "functionNode" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "step",
+              "virtual_name" : "EXPECTED_step",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/step",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "coll",
+              "virtual_name" : "EXPECTED_coll",
+              "dataType" : "vector<vector<int>>",
+              "realType" : "vector<vector<int>>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<int>"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "num",
+              "virtual_name" : "EXPECTED_num",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/num",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "visited",
+              "virtual_name" : "EXPECTED_visited",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/visited",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "solution",
+              "virtual_name" : "EXPECTED_solution",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/solution",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "num",
+              "virtual_name" : "num",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/num",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 3,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "num_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/num/element #0",
+                "correspondingType" : "int",
+                "value" : "-13459852"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "num_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/num/element #1",
+                "correspondingType" : "int",
+                "value" : "-127630445"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "num_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/num/element #2",
+                "correspondingType" : "int",
+                "value" : "-483956345"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "step",
+              "virtual_name" : "step",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/step",
+              "correspondingType" : "int",
+              "value" : "-1904074398"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "visited",
+              "virtual_name" : "visited",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/visited",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 1,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "visited_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/visited/element #0",
+                "correspondingType" : "int",
+                "value" : "-1179997259"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "solution",
+              "virtual_name" : "solution",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/solution",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 2,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "solution_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/solution/element #0",
+                "correspondingType" : "int",
+                "value" : "-980388594"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "solution_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/solution/element #1",
+                "correspondingType" : "int",
+                "value" : "480039457"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "coll",
+              "virtual_name" : "coll",
+              "dataType" : "vector<vector<int>>",
+              "realType" : "vector<vector<int>>&",
+              "external" : false,
+              "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<int>",
+              "size" : 1,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                "name" : "element #0",
+                "virtual_name" : "coll_element0",
+                "dataType" : "vector<int>",
+                "realType" : "vector<int>",
+                "external" : false,
+                "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #0",
+                "correspondingType" : "STLListBaseType",
+                "templateArg" : "int",
+                "size" : 3,
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #0",
+                  "virtual_name" : "coll_element0_element0",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #0/element #0",
+                  "correspondingType" : "int",
+                  "value" : "-539809297"
+                }, {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #1",
+                  "virtual_name" : "coll_element0_element1",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #0/element #1",
+                  "correspondingType" : "int",
+                  "value" : "-1170937304"
+                }, {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #2",
+                  "virtual_name" : "coll_element0_element2",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)/coll/element #0/element #2",
+                  "correspondingType" : "int",
+                  "value" : "1891144399"
+                } ]
+              } ]
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_GeneratePermute_vector_int_int_vector_int_vector_int_vector_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_GeneratePermute_vector_int_int_vector_int_vector_int_vector_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Permutations_II.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint step=-1904074398;\nvector<int> visited;\nvector<int> solution;\nvector<vector<int>> coll;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-13459852;\nnum.push_back(num_element0);\nint num_element1=-127630445;\nnum.push_back(num_element1);\nint num_element2=-483956345;\nnum.push_back(num_element2);\n/* NormalNumberDataNode step */\n/* VectorDataNode visited */\nint visited_element0=-1179997259;\nvisited.push_back(visited_element0);\n/* VectorDataNode solution */\nint solution_element0=-980388594;\nsolution.push_back(solution_element0);\nint solution_element1=480039457;\nsolution.push_back(solution_element1);\n/* VectorDataNode coll */\nvector<int> coll_element0;\nint coll_element0_element0=-539809297;\ncoll_element0.push_back(coll_element0_element0);\nint coll_element0_element1=-1170937304;\ncoll_element0.push_back(coll_element0_element1);\nint coll_element0_element2=1891144399;\ncoll_element0.push_back(coll_element0_element2);\ncoll.push_back(coll_element0);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_GeneratePermute_vector_int_int_vector_int_vector_int_vector_vector_int_random_4\");AKA_INSTANCE___Solution->GeneratePermute(num,step,visited,solution,coll);\nAKA_fCall++;AKA_mark(\"Return from: ./15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_num;\n\nvector<int> EXPECTED_visited;\n\nvector<int> EXPECTED_solution;\n\nvector<vector<int>> EXPECTED_coll;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Permutations_II.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint step=-1904074398;\nvector<int> visited;\nvector<int> solution;\nvector<vector<int>> coll;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-13459852;\nnum.push_back(num_element0);\nint num_element1=-127630445;\nnum.push_back(num_element1);\nint num_element2=-483956345;\nnum.push_back(num_element2);\n/* NormalNumberDataNode step */\n/* VectorDataNode visited */\nint visited_element0=-1179997259;\nvisited.push_back(visited_element0);\n/* VectorDataNode solution */\nint solution_element0=-980388594;\nsolution.push_back(solution_element0);\nint solution_element1=480039457;\nsolution.push_back(solution_element1);\n/* VectorDataNode coll */\nvector<int> coll_element0;\nint coll_element0_element0=-539809297;\ncoll_element0.push_back(coll_element0_element0);\nint coll_element0_element1=-1170937304;\ncoll_element0.push_back(coll_element0_element1);\nint coll_element0_element2=1891144399;\ncoll_element0.push_back(coll_element0_element2);\ncoll.push_back(coll_element0);\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ "vector<vector<int> > permuteUnique(vector<int> &num) {\n        vector<vector<int> > coll;\n        vector<int> solution;\n        if (num.size() == 0) return coll;\n        vector<int> visited(num.size(), 0);\n        sort(num.begin(), num.end());\n        GeneratePermute(num, 0, visited, solution, coll);\n        return coll;\n    }", "void GeneratePermute(vector<int> & num, int step, vector<int>& visited, vector<int>& solution, vector<vector<int> >& coll)\n    {\n        if (step == num.size())\n        {\n            coll.push_back(solution);\n            return;\n        }\n        for (int i = 0; i < num.size(); i++)\n        {\n            if (visited[i] == 0)\n            {\n\n                visited[i] = 1;\n                solution.push_back(num[i]);\n                GeneratePermute(num, step + 1, visited, solution, coll);\n                solution.pop_back();\n                visited[i] = 0;\n                while (i < num.size() - 1 && num[i] == num[i + 1])\n                    i++;\n            }\n        }\n    }", "void GeneratePermute(vector<int> & num, int step, vector<int>& visited, vector<int>& solution, vector<vector<int> >& coll)\n    {\n        if (step == num.size())\n        {\n            coll.push_back(solution);\n            return;\n        }\n        for (int i = 0; i < num.size(); i++)\n        {\n            if (visited[i] == 0)\n            {\n\n                visited[i] = 1;\n                solution.push_back(num[i]);\n                GeneratePermute(num, step + 1, visited, solution, coll);\n                solution.pop_back();\n                visited[i] = 0;\n                while (i < num.size() - 1 && num[i] == num[i + 1])\n                    i++;\n            }\n        }\n    }" ],
+    "fc": "class Solution { public:     vector<vector<int> > permuteUnique(vector<int> &num) {         vector<vector<int> > coll;         vector<int> solution;         if (num.size() == 0) return coll;         vector<int> visited(num.size(), 0);         sort(num.begin(), num.end());         GeneratePermute(num, 0, visited, solution, coll);         return coll;     }     void GeneratePermute(vector<int> & num, int step, vector<int>& visited, vector<int>& solution, vector<vector<int> >& coll)     {         if (step == num.size())         {             coll.push_back(solution);             return;         }         for (int i = 0; i < num.size(); i++)         {             if (visited[i] == 0)             {                  visited[i] = 1;                 solution.push_back(num[i]);                 GeneratePermute(num, step + 1, visited, solution, coll);                 solution.pop_back();                 visited[i] = 0;                 while (i < num.size() - 1 && num[i] == num[i + 1])                     i++;             }         }     } };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/15/Permutations_II.cpp/Solution/GeneratePermute(vector<int>&,int,vector<int>&,vector<int>&,vector<vector<int>>&)",
+    "f": [ ]
+  },
+  {
+    "fm": "string getPermutation(int n, int k) {         vector<int> nums(n);         int permCount = 1;         for (int i = 0; i < n; i++)         {             nums[i] = i + 1;             permCount *= (i + 1);         }         // change K from (1,n) to (0, n-1) to accord to index         k--;         string targetNum;         for (int i = 0; i < n; i++)         {             permCount = permCount / (n - i);             int choosed = k / permCount;             targetNum.push_back(nums[choosed] + '0');             //restruct nums since one num has been picked             for (int j = choosed; j < n - i; j++)             {                 nums[j] = nums[j + 1];             }             k = k % permCount;         }         return targetNum;     }",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Permutation_Sequence.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./15/Permutation_Sequence.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./15/Permutation_Sequence.cpp/Solution/getPermutation(int,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./15/Permutation_Sequence.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Permutation_Sequence.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./15/Permutation_Sequence.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Permutation_Sequence.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./15/Permutation_Sequence.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./15/Permutation_Sequence.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "getPermutation(int,int)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "string",
+            "realType" : "string",
+            "functionNode" : "./15/Permutation_Sequence.cpp/Solution/getPermutation(int,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "EXPECTED_n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Permutation_Sequence.cpp/Solution/getPermutation(int,int)/n",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "k",
+              "virtual_name" : "EXPECTED_k",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Permutation_Sequence.cpp/Solution/getPermutation(int,int)/k",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./15/Permutation_Sequence.cpp/Solution/getPermutation(int,int)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Permutation_Sequence.cpp/Solution/getPermutation(int,int)/n",
+              "correspondingType" : "int",
+              "value" : "9"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "k",
+              "virtual_name" : "k",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Permutation_Sequence.cpp/Solution/getPermutation(int,int)/k",
+              "correspondingType" : "int",
+              "value" : "6"
+            }, {
+              "type" : "com.dse.testdata.object.NormalStringDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "string",
+              "realType" : "string",
+              "external" : false,
+              "correspondingVar" : "./15/Permutation_Sequence.cpp/Solution/getPermutation(int,int)/RETURN",
+              "correspondingType" : "string",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_getPermutation_int_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_getPermutation_int_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Permutation_Sequence.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=9;\n\n\nint k=6;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode k */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_getPermutation_int_int_random_2\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->getPermutation(n,k);\nAKA_fCall++;AKA_mark(\"Return from: ./15/Permutation_Sequence.cpp/Solution/getPermutation(int,int)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Permutation_Sequence.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=9;\n\n\nint k=6;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode k */\n/* NormalStringDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ ],
+    "fc": "class Solution { public:      string getPermutation(int n, int k) {         vector<int> nums(n);         int permCount = 1;         for (int i = 0; i < n; i++)         {             nums[i] = i + 1;             permCount *= (i + 1);         }         // change K from (1,n) to (0, n-1) to accord to index         k--;         string targetNum;         for (int i = 0; i < n; i++)         {             permCount = permCount / (n - i);             int choosed = k / permCount;             targetNum.push_back(nums[choosed] + '0');             //restruct nums since one num has been picked             for (int j = choosed; j < n - i; j++)             {                 nums[j] = nums[j + 1];             }             k = k % permCount;         }         return targetNum;     } };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/15/Permutation_Sequence.cpp/Solution/getPermutation(int,int)",
+    "f": [ ]
+  },
+  {
+    "fm": "vector<int> plusOne(vector<int> &digits) {         vector<int> result(digits.size(), 0);          int carryon = 1;         for (int i = digits.size() - 1; i >= 0; i--)         {             int digit = digits[i];             result[i] = (digit + carryon) % 10;             carryon = (digit + carryon) / 10;         }          if (carryon > 0)         {             result.insert(result.begin(), carryon);         }         return result;     }",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Plus_One.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./15/Plus_One.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./15/Plus_One.cpp/Solution/plusOne(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./15/Plus_One.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Plus_One.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./15/Plus_One.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Plus_One.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./15/Plus_One.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./15/Plus_One.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "plusOne(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "vector<int>",
+            "realType" : "vector<int>",
+            "functionNode" : "./15/Plus_One.cpp/Solution/plusOne(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "digits",
+              "virtual_name" : "EXPECTED_digits",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Plus_One.cpp/Solution/plusOne(vector<int>&)/digits",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./15/Plus_One.cpp/Solution/plusOne(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "digits",
+              "virtual_name" : "digits",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Plus_One.cpp/Solution/plusOne(vector<int>&)/digits",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 2,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "digits_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Plus_One.cpp/Solution/plusOne(vector<int>&)/digits/element #0",
+                "correspondingType" : "int",
+                "value" : "-2013762124"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "digits_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Plus_One.cpp/Solution/plusOne(vector<int>&)/digits/element #1",
+                "correspondingType" : "int",
+                "value" : "115486019"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>",
+              "external" : false,
+              "correspondingVar" : "./15/Plus_One.cpp/Solution/plusOne(vector<int>&)/RETURN",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_plusOne_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_plusOne_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Plus_One.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> digits;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode digits */\nint digits_element0=-2013762124;\ndigits.push_back(digits_element0);\nint digits_element1=115486019;\ndigits.push_back(digits_element1);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_plusOne_vector_int_random_4\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->plusOne(digits);\nAKA_fCall++;AKA_mark(\"Return from: ./15/Plus_One.cpp/Solution/plusOne(vector<int>&)\");\n\n\nvector<int> EXPECTED_digits;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Plus_One.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> digits;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode digits */\nint digits_element0=-2013762124;\ndigits.push_back(digits_element0);\nint digits_element1=115486019;\ndigits.push_back(digits_element1);\n/* VectorDataNode RETURN */\n\n",
+        "isAutomated" : true
+      },
+      {
+        "id" : 1,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Plus_One.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./15/Plus_One.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./15/Plus_One.cpp/Solution/plusOne(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./15/Plus_One.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Plus_One.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./15/Plus_One.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Plus_One.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./15/Plus_One.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./15/Plus_One.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "plusOne(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "vector<int>",
+            "realType" : "vector<int>",
+            "functionNode" : "./15/Plus_One.cpp/Solution/plusOne(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "digits",
+              "virtual_name" : "EXPECTED_digits",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Plus_One.cpp/Solution/plusOne(vector<int>&)/digits",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./15/Plus_One.cpp/Solution/plusOne(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "digits",
+              "virtual_name" : "digits",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Plus_One.cpp/Solution/plusOne(vector<int>&)/digits",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 2,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "digits_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Plus_One.cpp/Solution/plusOne(vector<int>&)/digits/element #0",
+                "correspondingType" : "int",
+                "value" : "-108253588"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "digits_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Plus_One.cpp/Solution/plusOne(vector<int>&)/digits/element #1",
+                "correspondingType" : "int",
+                "value" : "1433427959"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>",
+              "external" : false,
+              "correspondingVar" : "./15/Plus_One.cpp/Solution/plusOne(vector<int>&)/RETURN",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_plusOne_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_plusOne_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Plus_One.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> digits;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode digits */\nint digits_element0=-108253588;\ndigits.push_back(digits_element0);\nint digits_element1=1433427959;\ndigits.push_back(digits_element1);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_plusOne_vector_int_random_1\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->plusOne(digits);\nAKA_fCall++;AKA_mark(\"Return from: ./15/Plus_One.cpp/Solution/plusOne(vector<int>&)\");\n\n\nvector<int> EXPECTED_digits;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Plus_One.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> digits;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode digits */\nint digits_element0=-108253588;\ndigits.push_back(digits_element0);\nint digits_element1=1433427959;\ndigits.push_back(digits_element1);\n/* VectorDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ ],
+    "fc": "class Solution { public:     vector<int> plusOne(vector<int> &digits) {         vector<int> result(digits.size(), 0);          int carryon = 1;         for (int i = digits.size() - 1; i >= 0; i--)         {             int digit = digits[i];             result[i] = (digit + carryon) % 10;             carryon = (digit + carryon) / 10;         }          if (carryon > 0)         {             result.insert(result.begin(), carryon);         }         return result;     } };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/15/Plus_One.cpp/Solution/plusOne(vector<int>&)",
+    "f": [ ]
+  },
+  {
+    "fm": "double power(double x, int n)     {         if (n == 0)             return 1;         double v = power(x, n / 2);         if (n % 2 == 0)             return v * v;         else             return v * v * x;     }",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Pow(x, n).cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./15/Pow(x, n).cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./15/Pow(x, n).cpp/Solution/power(double,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./15/Pow(x, n).cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Pow(x, n).cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./15/Pow(x, n).cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Pow(x, n).cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./15/Pow(x, n).cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./15/Pow(x, n).cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "power(double,int)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "double",
+            "realType" : "double",
+            "functionNode" : "./15/Pow(x, n).cpp/Solution/power(double,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "x",
+              "virtual_name" : "EXPECTED_x",
+              "dataType" : "double",
+              "realType" : "double",
+              "external" : false,
+              "correspondingVar" : "./15/Pow(x, n).cpp/Solution/power(double,int)/x",
+              "correspondingType" : "double",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "EXPECTED_n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Pow(x, n).cpp/Solution/power(double,int)/n",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./15/Pow(x, n).cpp/Solution/power(double,int)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "x",
+              "virtual_name" : "x",
+              "dataType" : "double",
+              "realType" : "double",
+              "external" : false,
+              "correspondingVar" : "./15/Pow(x, n).cpp/Solution/power(double,int)/x",
+              "correspondingType" : "double",
+              "value" : "0.78"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Pow(x, n).cpp/Solution/power(double,int)/n",
+              "correspondingType" : "int",
+              "value" : "-1431685701"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "double",
+              "realType" : "double",
+              "external" : false,
+              "correspondingVar" : "./15/Pow(x, n).cpp/Solution/power(double,int)/RETURN",
+              "correspondingType" : "double",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_power_double_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_power_double_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Pow(x, n).cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\ndouble x=0.78;\n\n\nint n=-1431685701;\n\n\ndouble AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_power_double_int_random_3\");double AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->power(x,n);\nAKA_fCall++;AKA_mark(\"Return from: ./15/Pow(x, n).cpp/Solution/power(double,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Pow(x, n).cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\ndouble x=0.78;\n\n\nint n=-1431685701;\n\n\ndouble AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ "double power(double x, int n)\n    {\n        if (n == 0)\n            return 1;\n        double v = power(x, n / 2);\n        if (n % 2 == 0)\n            return v * v;\n        else\n            return v * v * x;\n    }", "double power(double x, int n)\n    {\n        if (n == 0)\n            return 1;\n        double v = power(x, n / 2);\n        if (n % 2 == 0)\n            return v * v;\n        else\n            return v * v * x;\n    }", "double myPow(double x, int n) {\n        if (n < 0)\n            return 1.0 / power(x, -n);\n        else\n            return power(x, n);\n    }" ],
+    "fc": "class Solution { public:     double power(double x, int n)     {         if (n == 0)             return 1;         double v = power(x, n / 2);         if (n % 2 == 0)             return v * v;         else             return v * v * x;     }     double myPow(double x, int n) {         if (n < 0)             return 1.0 / power(x, -n);         else             return power(x, n);     } };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/15/Pow(x, n).cpp/Solution/power(double,int)",
+    "f": [ ]
+  },
+  {
+    "fm": "double myPow(double x, int n) {         if (n < 0)             return 1.0 / power(x, -n);         else             return power(x, n);     }",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Pow(x, n).cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./15/Pow(x, n).cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./15/Pow(x, n).cpp/Solution/myPow(double,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./15/Pow(x, n).cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Pow(x, n).cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./15/Pow(x, n).cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Pow(x, n).cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./15/Pow(x, n).cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./15/Pow(x, n).cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "myPow(double,int)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "double",
+            "realType" : "double",
+            "functionNode" : "./15/Pow(x, n).cpp/Solution/myPow(double,int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "x",
+              "virtual_name" : "EXPECTED_x",
+              "dataType" : "double",
+              "realType" : "double",
+              "external" : false,
+              "correspondingVar" : "./15/Pow(x, n).cpp/Solution/myPow(double,int)/x",
+              "correspondingType" : "double",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "EXPECTED_n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Pow(x, n).cpp/Solution/myPow(double,int)/n",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./15/Pow(x, n).cpp/Solution/myPow(double,int)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "x",
+              "virtual_name" : "x",
+              "dataType" : "double",
+              "realType" : "double",
+              "external" : false,
+              "correspondingVar" : "./15/Pow(x, n).cpp/Solution/myPow(double,int)/x",
+              "correspondingType" : "double",
+              "value" : "0.1"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Pow(x, n).cpp/Solution/myPow(double,int)/n",
+              "correspondingType" : "int",
+              "value" : "-1861720865"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "double",
+              "realType" : "double",
+              "external" : false,
+              "correspondingVar" : "./15/Pow(x, n).cpp/Solution/myPow(double,int)/RETURN",
+              "correspondingType" : "double",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_myPow_double_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_myPow_double_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Pow(x, n).cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\ndouble x=0.1;\n\n\nint n=-1861720865;\n\n\ndouble AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_myPow_double_int_random_2\");double AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->myPow(x,n);\nAKA_fCall++;AKA_mark(\"Return from: ./15/Pow(x, n).cpp/Solution/myPow(double,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Pow(x, n).cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\ndouble x=0.1;\n\n\nint n=-1861720865;\n\n\ndouble AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ "double power(double x, int n)\n    {\n        if (n == 0)\n            return 1;\n        double v = power(x, n / 2);\n        if (n % 2 == 0)\n            return v * v;\n        else\n            return v * v * x;\n    }" ],
+    "fc": "class Solution { public:     double power(double x, int n)     {         if (n == 0)             return 1;         double v = power(x, n / 2);         if (n % 2 == 0)             return v * v;         else             return v * v * x;     }     double myPow(double x, int n) {         if (n < 0)             return 1.0 / power(x, -n);         else             return power(x, n);     } };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/15/Pow(x, n).cpp/Solution/myPow(double,int)",
+    "f": [ ]
+  },
+  {
+    "fm": "vector<int> productExceptSelf(vector<int>& nums) {         vector<int> products;         if(nums.size() == 0) return products;          int product = 1;         products.push_back(1);         for(int i =1; i< nums.size(); i++) {             product *= nums[i-1];             products.push_back(product);         }                  product = 1;         for(int i =nums.size()-2; i>=0; i--) {             product = product * nums[i+1];             products[i] = products[i] * product;          }         return products;     }",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Product of Array Except Self.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./15/Product of Array Except Self.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./15/Product of Array Except Self.cpp/Solution/productExceptSelf(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./15/Product of Array Except Self.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Product of Array Except Self.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./15/Product of Array Except Self.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Product of Array Except Self.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./15/Product of Array Except Self.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./15/Product of Array Except Self.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "productExceptSelf(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "vector<int>",
+            "realType" : "vector<int>",
+            "functionNode" : "./15/Product of Array Except Self.cpp/Solution/productExceptSelf(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "EXPECTED_nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Product of Array Except Self.cpp/Solution/productExceptSelf(vector<int>&)/nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./15/Product of Array Except Self.cpp/Solution/productExceptSelf(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "nums",
+              "virtual_name" : "nums",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Product of Array Except Self.cpp/Solution/productExceptSelf(vector<int>&)/nums",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 2,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "nums_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Product of Array Except Self.cpp/Solution/productExceptSelf(vector<int>&)/nums/element #0",
+                "correspondingType" : "int",
+                "value" : "794103382"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "nums_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Product of Array Except Self.cpp/Solution/productExceptSelf(vector<int>&)/nums/element #1",
+                "correspondingType" : "int",
+                "value" : "1928571976"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>",
+              "external" : false,
+              "correspondingVar" : "./15/Product of Array Except Self.cpp/Solution/productExceptSelf(vector<int>&)/RETURN",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_productExceptSelf_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_productExceptSelf_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Product of Array Except Self.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=794103382;\nnums.push_back(nums_element0);\nint nums_element1=1928571976;\nnums.push_back(nums_element1);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_productExceptSelf_vector_int_random_2\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->productExceptSelf(nums);\nAKA_fCall++;AKA_mark(\"Return from: ./15/Product of Array Except Self.cpp/Solution/productExceptSelf(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Product of Array Except Self.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=794103382;\nnums.push_back(nums_element0);\nint nums_element1=1928571976;\nnums.push_back(nums_element1);\n/* VectorDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ ],
+    "fc": "class Solution { public:     vector<int> productExceptSelf(vector<int>& nums) {         vector<int> products;         if(nums.size() == 0) return products;          int product = 1;         products.push_back(1);         for(int i =1; i< nums.size(); i++) {             product *= nums[i-1];             products.push_back(product);         }                  product = 1;         for(int i =nums.size()-2; i>=0; i--) {             product = product * nums[i+1];             products[i] = products[i] * product;          }         return products;     } };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/15/Product of Array Except Self.cpp/Solution/productExceptSelf(vector<int>&)",
+    "f": [ ]
+  },
+  {
+    "fm": "int removeDuplicates(vector<int>& A) {         int n = A.size();         if (n == 0) return 0;         int index = 0;         for (int i = 0; i < n; i++)         {             if (A[index] == A[i]) // duplicate, skip             {                 continue;             }             index++; // non-duplicate, copy it to second pointer             A[index] = A[i];         }         return index + 1;     }",
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Remove_Duplicates_from_Sorted_Array.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./15/Remove_Duplicates_from_Sorted_Array.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./15/Remove_Duplicates_from_Sorted_Array.cpp/Solution/removeDuplicates(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./15/Remove_Duplicates_from_Sorted_Array.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Remove_Duplicates_from_Sorted_Array.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./15/Remove_Duplicates_from_Sorted_Array.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./15/Remove_Duplicates_from_Sorted_Array.cpp/Solution",
+              "children" : [ {
+                "type" : "com.dse.testdata.object.SubClassDataNode",
+                "name" : "AKA_INSTANCE___Solution",
+                "virtual_name" : "AKA_INSTANCE___Solution",
+                "dataType" : "::Solution",
+                "realType" : "::Solution",
+                "external" : false,
+                "correspondingVar" : "./15/Remove_Duplicates_from_Sorted_Array.cpp/Solution/AKA_INSTANCE___Solution",
+                "correspondingType" : "./15/Remove_Duplicates_from_Sorted_Array.cpp/Solution",
+                "rawType" : "::Solution",
+                "selectedConstructor" : "Solution()",
+                "variableType" : "::Solution",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.ConstructorDataNode",
+                  "name" : "Solution()",
+                  "virtual_name" : "AKA_INSTANCE___Solution",
+                  "dataType" : "::Solution",
+                  "realType" : "::Solution",
+                  "functionNode" : "/Solution()"
+                } ]
+              } ]
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "removeDuplicates(vector<int>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./15/Remove_Duplicates_from_Sorted_Array.cpp/Solution/removeDuplicates(vector<int>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "A",
+              "virtual_name" : "EXPECTED_A",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Remove_Duplicates_from_Sorted_Array.cpp/Solution/removeDuplicates(vector<int>&)/A",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./15/Remove_Duplicates_from_Sorted_Array.cpp/Solution/removeDuplicates(vector<int>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "A",
+              "virtual_name" : "A",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./15/Remove_Duplicates_from_Sorted_Array.cpp/Solution/removeDuplicates(vector<int>&)/A",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 3,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "A_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Remove_Duplicates_from_Sorted_Array.cpp/Solution/removeDuplicates(vector<int>&)/A/element #0",
+                "correspondingType" : "int",
+                "value" : "1493249696"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #1",
+                "virtual_name" : "A_element1",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Remove_Duplicates_from_Sorted_Array.cpp/Solution/removeDuplicates(vector<int>&)/A/element #1",
+                "correspondingType" : "int",
+                "value" : "-1220165818"
+              }, {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #2",
+                "virtual_name" : "A_element2",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./15/Remove_Duplicates_from_Sorted_Array.cpp/Solution/removeDuplicates(vector<int>&)/A/element #2",
+                "correspondingType" : "int",
+                "value" : "48209794"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./15/Remove_Duplicates_from_Sorted_Array.cpp/Solution/removeDuplicates(vector<int>&)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_removeDuplicates_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_removeDuplicates_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Remove_Duplicates_from_Sorted_Array.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> A;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode A */\nint A_element0=1493249696;\nA.push_back(A_element0);\nint A_element1=-1220165818;\nA.push_back(A_element1);\nint A_element2=48209794;\nA.push_back(A_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_removeDuplicates_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->removeDuplicates(A);\nAKA_fCall++;AKA_mark(\"Return from: ./15/Remove_Duplicates_from_Sorted_Array.cpp/Solution/removeDuplicates(vector<int>&)\");\n\n\nvector<int> EXPECTED_A;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/Remove_Duplicates_from_Sorted_Array.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> A;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode A */\nint A_element0=1493249696;\nA.push_back(A_element0);\nint A_element1=-1220165818;\nA.push_back(A_element1);\nint A_element2=48209794;\nA.push_back(A_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : true
+      }
+    ],
+    "m": [ ],
+    "fc": "class Solution { public:     int removeDuplicates(vector<int>& A) {         int n = A.size();         if (n == 0) return 0;         int index = 0;         for (int i = 0; i < n; i++)         {             if (A[index] == A[i]) // duplicate, skip             {                 continue;             }             index++; // non-duplicate, copy it to second pointer             A[index] = A[i];         }         return index + 1;     } };",
+    "c": [ "" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/15/Remove_Duplicates_from_Sorted_Array.cpp/Solution/removeDuplicates(vector<int>&)",
+    "f": [ ]
+  }
+]

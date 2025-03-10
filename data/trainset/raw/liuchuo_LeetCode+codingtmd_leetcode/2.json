@@ -1,0 +1,1666 @@
+[
+  {
+    "f": [ ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/manual/02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)",
+    "c": [ ],
+    "fc": "class Solution { public: \tint maxPathSum(TreeNode *root) { \t\tint maxAcrossRoot = INT_MIN; \t\tint maxEndByRoot = GetMax(root, maxAcrossRoot); \t\treturn std::max(maxAcrossRoot, maxEndByRoot); \t} \tint GetMax(TreeNode *node, int& maxAcrossRoot) \t{ \t\tif (node == NULL) return 0; \t\tint left = GetMax(node->left, maxAcrossRoot); \t\tint right = GetMax(node->right, maxAcrossRoot); \t\tint cMax = node->val; \t\tif (left > 0) \t\t\tcMax += left; \t\tif (right > 0) \t\t\tcMax += right; \t\tmaxAcrossRoot = std::max(maxAcrossRoot, cMax); \t\treturn std::max( \t\t    node->val, \t\t    std::max(node->val + left, node->val + right)); \t} };",
+    "m": [ "int maxPathSum(TreeNode *root) {\n\t\tint maxAcrossRoot = INT_MIN;\n\t\tint maxEndByRoot = GetMax(root, maxAcrossRoot);\n\t\treturn std::max(maxAcrossRoot, maxEndByRoot);\n\t}", "int GetMax(TreeNode *node, int& maxAcrossRoot)\n\t{\n\t\tif (node == NULL) return 0;\n\t\tint left = GetMax(node->left, maxAcrossRoot);\n\t\tint right = GetMax(node->right, maxAcrossRoot);\n\t\tint cMax = node->val;\n\t\tif (left > 0)\n\t\t\tcMax += left;\n\t\tif (right > 0)\n\t\t\tcMax += right;\n\t\tmaxAcrossRoot = std::max(maxAcrossRoot, cMax);\n\t\treturn std::max(\n\t\t    node->val,\n\t\t    std::max(node->val + left, node->val + right));\n\t}", "int GetMax(TreeNode *node, int& maxAcrossRoot)\n\t{\n\t\tif (node == NULL) return 0;\n\t\tint left = GetMax(node->left, maxAcrossRoot);\n\t\tint right = GetMax(node->right, maxAcrossRoot);\n\t\tint cMax = node->val;\n\t\tif (left > 0)\n\t\t\tcMax += left;\n\t\tif (right > 0)\n\t\t\tcMax += right;\n\t\tmaxAcrossRoot = std::max(maxAcrossRoot, cMax);\n\t\treturn std::max(\n\t\t    node->val,\n\t\t    std::max(node->val + left, node->val + right));\n\t}" ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Binary_Tree_Maximum_Path_Sum.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./02/Binary_Tree_Maximum_Path_Sum.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution"
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "GetMax(TreeNode*,int&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.PointerStructureDataNode",
+              "name" : "node",
+              "virtual_name" : "EXPECTED_node",
+              "dataType" : "TreeNode*",
+              "realType" : "TreeNode*",
+              "external" : false,
+              "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)/node",
+              "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode",
+              "level" : 1
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "maxAcrossRoot",
+              "virtual_name" : "EXPECTED_maxAcrossRoot",
+              "dataType" : "int&",
+              "realType" : "int&",
+              "external" : false,
+              "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)/maxAcrossRoot",
+              "correspondingType" : "int&",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.PointerStructureDataNode",
+              "name" : "node",
+              "virtual_name" : "node",
+              "dataType" : "TreeNode*",
+              "realType" : "TreeNode*",
+              "external" : false,
+              "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)/node",
+              "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode",
+              "level" : 1,
+              "size" : 1,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.StructDataNode",
+                "name" : "node[0]",
+                "virtual_name" : "node[0]",
+                "dataType" : "TreeNode",
+                "realType" : "TreeNode",
+                "external" : false,
+                "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)/node/node[0]",
+                "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode",
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.SubStructDataNode",
+                  "name" : "node",
+                  "virtual_name" : "node[0]",
+                  "dataType" : "::TreeNode",
+                  "realType" : "::TreeNode",
+                  "external" : false,
+                  "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)/node/node",
+                  "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode",
+                  "rawType" : "::TreeNode",
+                  "selectedConstructor" : "TreeNode(int)",
+                  "variableType" : "::TreeNode",
+                  "children" : [ {
+                    "type" : "com.dse.testdata.object.ConstructorDataNode",
+                    "name" : "TreeNode(int)",
+                    "virtual_name" : "node[0]",
+                    "dataType" : "::TreeNode",
+                    "realType" : "::TreeNode",
+                    "functionNode" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/TreeNode(int)",
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                      "name" : "x",
+                      "virtual_name" : "node0_x",
+                      "dataType" : "int",
+                      "realType" : "int",
+                      "external" : false,
+                      "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/TreeNode(int)/x",
+                      "correspondingType" : "int",
+                      "value" : "null"
+                    } ]
+                  }, {
+                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                    "name" : "val",
+                    "virtual_name" : "node[0].val",
+                    "dataType" : "int",
+                    "realType" : "int",
+                    "external" : false,
+                    "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/val",
+                    "correspondingType" : "int",
+                    "value" : "5"
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "left",
+                    "virtual_name" : "node[0].left",
+                    "dataType" : "TreeNode*",
+                    "realType" : "TreeNode*",
+                    "external" : false,
+                    "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/left",
+                    "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode",
+                    "level" : 1,
+                    "size" : 1,
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.StructDataNode",
+                      "name" : "left[0]",
+                      "virtual_name" : "node[0].left[0]",
+                      "dataType" : "TreeNode",
+                      "realType" : "TreeNode",
+                      "external" : false,
+                      "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/left/left[0]",
+                      "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode",
+                      "children" : [ {
+                        "type" : "com.dse.testdata.object.SubStructDataNode",
+                        "name" : "left",
+                        "virtual_name" : "node[0].left[0]",
+                        "dataType" : "::TreeNode",
+                        "realType" : "::TreeNode",
+                        "external" : false,
+                        "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/left/left",
+                        "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode",
+                        "rawType" : "::TreeNode",
+                        "selectedConstructor" : "TreeNode(int)",
+                        "variableType" : "::TreeNode",
+                        "children" : [ {
+                          "type" : "com.dse.testdata.object.ConstructorDataNode",
+                          "name" : "TreeNode(int)",
+                          "virtual_name" : "node[0].left[0]",
+                          "dataType" : "::TreeNode",
+                          "realType" : "::TreeNode",
+                          "functionNode" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/TreeNode(int)",
+                          "children" : [ {
+                            "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                            "name" : "x",
+                            "virtual_name" : "node0_left0_x",
+                            "dataType" : "int",
+                            "realType" : "int",
+                            "external" : false,
+                            "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/TreeNode(int)/x",
+                            "correspondingType" : "int",
+                            "value" : "6"
+                          } ]
+                        }, {
+                          "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                          "name" : "val",
+                          "virtual_name" : "node[0].left[0].val",
+                          "dataType" : "int",
+                          "realType" : "int",
+                          "external" : false,
+                          "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/val",
+                          "correspondingType" : "int",
+                          "value" : "null"
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "left",
+                          "virtual_name" : "node[0].left[0].left",
+                          "dataType" : "TreeNode*",
+                          "realType" : "TreeNode*",
+                          "external" : false,
+                          "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/left",
+                          "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode",
+                          "level" : 1
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "right",
+                          "virtual_name" : "node[0].left[0].right",
+                          "dataType" : "TreeNode*",
+                          "realType" : "TreeNode*",
+                          "external" : false,
+                          "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/right",
+                          "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode",
+                          "level" : 1
+                        } ]
+                      } ]
+                    } ]
+                  }, {
+                    "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                    "name" : "right",
+                    "virtual_name" : "node[0].right",
+                    "dataType" : "TreeNode*",
+                    "realType" : "TreeNode*",
+                    "external" : false,
+                    "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/right",
+                    "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode",
+                    "level" : 1,
+                    "size" : 1,
+                    "children" : [ {
+                      "type" : "com.dse.testdata.object.StructDataNode",
+                      "name" : "right[0]",
+                      "virtual_name" : "node[0].right[0]",
+                      "dataType" : "TreeNode",
+                      "realType" : "TreeNode",
+                      "external" : false,
+                      "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/right/right[0]",
+                      "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode",
+                      "children" : [ {
+                        "type" : "com.dse.testdata.object.SubStructDataNode",
+                        "name" : "right",
+                        "virtual_name" : "node[0].right[0]",
+                        "dataType" : "::TreeNode",
+                        "realType" : "::TreeNode",
+                        "external" : false,
+                        "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/right/right",
+                        "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode",
+                        "rawType" : "::TreeNode",
+                        "selectedConstructor" : "TreeNode(int)",
+                        "variableType" : "::TreeNode",
+                        "children" : [ {
+                          "type" : "com.dse.testdata.object.ConstructorDataNode",
+                          "name" : "TreeNode(int)",
+                          "virtual_name" : "node[0].right[0]",
+                          "dataType" : "::TreeNode",
+                          "realType" : "::TreeNode",
+                          "functionNode" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/TreeNode(int)",
+                          "children" : [ {
+                            "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                            "name" : "x",
+                            "virtual_name" : "node0_right0_x",
+                            "dataType" : "int",
+                            "realType" : "int",
+                            "external" : false,
+                            "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/TreeNode(int)/x",
+                            "correspondingType" : "int",
+                            "value" : "6"
+                          } ]
+                        }, {
+                          "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                          "name" : "val",
+                          "virtual_name" : "node[0].right[0].val",
+                          "dataType" : "int",
+                          "realType" : "int",
+                          "external" : false,
+                          "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/val",
+                          "correspondingType" : "int",
+                          "value" : "null"
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "left",
+                          "virtual_name" : "node[0].right[0].left",
+                          "dataType" : "TreeNode*",
+                          "realType" : "TreeNode*",
+                          "external" : false,
+                          "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/left",
+                          "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode",
+                          "level" : 1
+                        }, {
+                          "type" : "com.dse.testdata.object.PointerStructureDataNode",
+                          "name" : "right",
+                          "virtual_name" : "node[0].right[0].right",
+                          "dataType" : "TreeNode*",
+                          "realType" : "TreeNode*",
+                          "external" : false,
+                          "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/right",
+                          "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode",
+                          "level" : 1
+                        } ]
+                      } ]
+                    } ]
+                  } ]
+                } ]
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "maxAcrossRoot",
+              "virtual_name" : "maxAcrossRoot",
+              "dataType" : "int&",
+              "realType" : "int&",
+              "external" : false,
+              "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)/maxAcrossRoot",
+              "correspondingType" : "int&",
+              "value" : "5"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_GetMax_TreeNodemul_int_manual_1(void) {\n{\nAKA_test_case_name=\"Solution_GetMax_TreeNodemul_int_manual_1\";\n\n// set up\n;\n\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_node;\n\n\n/* SubStructDataNode node */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint node0_x;\nAKA_mark(\"Calling: ./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/TreeNode(int)|ROOT/Binary_Tree_Maximum_Path_Sum.cpp/GetMax(TreeNode*,int&)/node/AKA_VECTOR_INIT_node_0/node/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_node_0 = new ::TreeNode(node0_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_node_0).val=5;\n/* PointerStructureDataNode left */\nstd::vector<TreeNode*> AKA_VECTOR_INIT_node_0_DOT_left;\n/* SubStructDataNode left */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint node0_left0_x=6;\nAKA_mark(\"Calling: ./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/TreeNode(int)|ROOT/Binary_Tree_Maximum_Path_Sum.cpp/GetMax(TreeNode*,int&)/node/AKA_VECTOR_INIT_node_0/node/left/left[0]/left/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_node_0_DOT_left_0 = new ::TreeNode(node0_left0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_node_0_DOT_left_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_node_0_DOT_left_0).right;\nAKA_VECTOR_INIT_node_0_DOT_left.push_back(AKA_VECTOR_INIT_node_0_DOT_left_0);\n(*AKA_VECTOR_INIT_node_0).left = AKA_VECTOR_INIT_node_0_DOT_left[0];\n/* PointerStructureDataNode right */\nstd::vector<TreeNode*> AKA_VECTOR_INIT_node_0_DOT_right;\n/* SubStructDataNode right */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint node0_right0_x=6;\nAKA_mark(\"Calling: ./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/TreeNode(int)|ROOT/Binary_Tree_Maximum_Path_Sum.cpp/GetMax(TreeNode*,int&)/node/AKA_VECTOR_INIT_node_0/node/right/right[0]/right/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_node_0_DOT_right_0 = new ::TreeNode(node0_right0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_node_0_DOT_right_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_node_0_DOT_right_0).right;\nAKA_VECTOR_INIT_node_0_DOT_right.push_back(AKA_VECTOR_INIT_node_0_DOT_right_0);\n(*AKA_VECTOR_INIT_node_0).right = AKA_VECTOR_INIT_node_0_DOT_right[0];\n\nAKA_VECTOR_INIT_node.push_back(AKA_VECTOR_INIT_node_0);\n\nTreeNode* node = AKA_VECTOR_INIT_node[0];\n\n\nint maxAcrossRoot=5;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode node */\n/* NormalNumberDataNode maxAcrossRoot */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_GetMax_TreeNodemul_int_manual_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->GetMax(node,maxAcrossRoot);\nAKA_fCall++;AKA_mark(\"Return from: ./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_node;\n\n\n/* SubStructDataNode node */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint node0_x;\nAKA_mark(\"Calling: ./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/TreeNode(int)|ROOT/Binary_Tree_Maximum_Path_Sum.cpp/GetMax(TreeNode*,int&)/node/AKA_VECTOR_INIT_node_0/node/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_node_0 = new ::TreeNode(node0_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_node_0).val=5;\n/* PointerStructureDataNode left */\nstd::vector<TreeNode*> AKA_VECTOR_INIT_node_0_DOT_left;\n/* SubStructDataNode left */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint node0_left0_x=6;\nAKA_mark(\"Calling: ./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/TreeNode(int)|ROOT/Binary_Tree_Maximum_Path_Sum.cpp/GetMax(TreeNode*,int&)/node/AKA_VECTOR_INIT_node_0/node/left/left[0]/left/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_node_0_DOT_left_0 = new ::TreeNode(node0_left0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_node_0_DOT_left_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_node_0_DOT_left_0).right;\nAKA_VECTOR_INIT_node_0_DOT_left.push_back(AKA_VECTOR_INIT_node_0_DOT_left_0);\n(*AKA_VECTOR_INIT_node_0).left = AKA_VECTOR_INIT_node_0_DOT_left[0];\n/* PointerStructureDataNode right */\nstd::vector<TreeNode*> AKA_VECTOR_INIT_node_0_DOT_right;\n/* SubStructDataNode right */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint node0_right0_x=6;\nAKA_mark(\"Calling: ./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode/TreeNode(int)|ROOT/Binary_Tree_Maximum_Path_Sum.cpp/GetMax(TreeNode*,int&)/node/AKA_VECTOR_INIT_node_0/node/right/right[0]/right/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_node_0_DOT_right_0 = new ::TreeNode(node0_right0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_node_0_DOT_right_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_node_0_DOT_right_0).right;\nAKA_VECTOR_INIT_node_0_DOT_right.push_back(AKA_VECTOR_INIT_node_0_DOT_right_0);\n(*AKA_VECTOR_INIT_node_0).right = AKA_VECTOR_INIT_node_0_DOT_right[0];\n\nAKA_VECTOR_INIT_node.push_back(AKA_VECTOR_INIT_node_0);\n\nTreeNode* node = AKA_VECTOR_INIT_node[0];\n\n\nint maxAcrossRoot=5;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode node */\n/* NormalNumberDataNode maxAcrossRoot */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : false
+      },
+      {
+        "id" : 1,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Binary_Tree_Maximum_Path_Sum.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./02/Binary_Tree_Maximum_Path_Sum.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution"
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "GetMax(TreeNode*,int&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.PointerStructureDataNode",
+              "name" : "node",
+              "virtual_name" : "EXPECTED_node",
+              "dataType" : "TreeNode*",
+              "realType" : "TreeNode*",
+              "external" : false,
+              "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)/node",
+              "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode",
+              "level" : 1
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "maxAcrossRoot",
+              "virtual_name" : "EXPECTED_maxAcrossRoot",
+              "dataType" : "int&",
+              "realType" : "int&",
+              "external" : false,
+              "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)/maxAcrossRoot",
+              "correspondingType" : "int&",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.PointerStructureDataNode",
+              "name" : "node",
+              "virtual_name" : "node",
+              "dataType" : "TreeNode*",
+              "realType" : "TreeNode*",
+              "external" : false,
+              "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)/node",
+              "correspondingType" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/TreeNode",
+              "level" : 1,
+              "size" : 0
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "maxAcrossRoot",
+              "virtual_name" : "maxAcrossRoot",
+              "dataType" : "int&",
+              "realType" : "int&",
+              "external" : false,
+              "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)/maxAcrossRoot",
+              "correspondingType" : "int&",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_GetMax_TreeNodemul_int_manual_0(void) {\n{\nAKA_test_case_name=\"Solution_GetMax_TreeNodemul_int_manual_0\";\n\n// set up\n;\n\n\n\n\nTreeNode* node = nullptr;\n\n\nint maxAcrossRoot;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode node */\n/* NormalNumberDataNode maxAcrossRoot */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_GetMax_TreeNodemul_int_manual_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->GetMax(node,maxAcrossRoot);\nAKA_fCall++;AKA_mark(\"Return from: ./02/Binary_Tree_Maximum_Path_Sum.cpp/Solution/GetMax(TreeNode*,int&)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n\n\nTreeNode* node = nullptr;\n\n\nint maxAcrossRoot;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode node */\n/* NormalNumberDataNode maxAcrossRoot */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : false
+      }
+    ],
+    "fm": "int GetMax(TreeNode *node, int& maxAcrossRoot) \t{ \t\tif (node == NULL) return 0; \t\tint left = GetMax(node->left, maxAcrossRoot); \t\tint right = GetMax(node->right, maxAcrossRoot); \t\tint cMax = node->val; \t\tif (left > 0) \t\t\tcMax += left; \t\tif (right > 0) \t\t\tcMax += right; \t\tmaxAcrossRoot = std::max(maxAcrossRoot, cMax); \t\treturn std::max( \t\t    node->val, \t\t    std::max(node->val + left, node->val + right)); \t}"
+  },
+  {
+    "f": [ ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/manual/02/Climbing_Stairs.cpp/Solution/climbStairs(int)",
+    "c": [ ],
+    "fc": "class Solution { public: \tint climbStairs(int n) { \t\tint fn_2 = 1, fn_1 = 2; \t\tif (n == 1) return fn_2; \t\tif (n == 2) return fn_1; \t\tint fn; \t\tfor (int i = 3; i <= n; i++) \t\t{ \t\t\tfn = fn_2 + fn_1; \t\t\tfn_2 = fn_1; \t\t\tfn_1 = fn; \t\t} \t\treturn fn; \t} };",
+    "m": [ ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Climbing_Stairs.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./02/Climbing_Stairs.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./02/Climbing_Stairs.cpp/Solution/climbStairs(int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./02/Climbing_Stairs.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Climbing_Stairs.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./02/Climbing_Stairs.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Climbing_Stairs.cpp/Solution"
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "climbStairs(int)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./02/Climbing_Stairs.cpp/Solution/climbStairs(int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "EXPECTED_n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Climbing_Stairs.cpp/Solution/climbStairs(int)/n",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./02/Climbing_Stairs.cpp/Solution/climbStairs(int)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Climbing_Stairs.cpp/Solution/climbStairs(int)/n",
+              "correspondingType" : "int",
+              "value" : "3"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Climbing_Stairs.cpp/Solution/climbStairs(int)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_climbStairs_int_manual_2(void) {\n{\nAKA_test_case_name=\"Solution_climbStairs_int_manual_2\";\n\n// set up\n;\n\n\n\n\n\nint n=3;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_climbStairs_int_manual_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->climbStairs(n);\nAKA_fCall++;AKA_mark(\"Return from: ./02/Climbing_Stairs.cpp/Solution/climbStairs(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n\n\n\nint n=3;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : false
+      },
+      {
+        "id" : 1,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Climbing_Stairs.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./02/Climbing_Stairs.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./02/Climbing_Stairs.cpp/Solution/climbStairs(int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./02/Climbing_Stairs.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Climbing_Stairs.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./02/Climbing_Stairs.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Climbing_Stairs.cpp/Solution"
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "climbStairs(int)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./02/Climbing_Stairs.cpp/Solution/climbStairs(int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "EXPECTED_n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Climbing_Stairs.cpp/Solution/climbStairs(int)/n",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./02/Climbing_Stairs.cpp/Solution/climbStairs(int)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Climbing_Stairs.cpp/Solution/climbStairs(int)/n",
+              "correspondingType" : "int",
+              "value" : "2"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Climbing_Stairs.cpp/Solution/climbStairs(int)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_climbStairs_int_manual_1(void) {\n{\nAKA_test_case_name=\"Solution_climbStairs_int_manual_1\";\n\n// set up\n;\n\n\n\n\n\nint n=2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_climbStairs_int_manual_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->climbStairs(n);\nAKA_fCall++;AKA_mark(\"Return from: ./02/Climbing_Stairs.cpp/Solution/climbStairs(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n\n\n\nint n=2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : false
+      },
+      {
+        "id" : 2,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Climbing_Stairs.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./02/Climbing_Stairs.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./02/Climbing_Stairs.cpp/Solution/climbStairs(int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./02/Climbing_Stairs.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Climbing_Stairs.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./02/Climbing_Stairs.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Climbing_Stairs.cpp/Solution"
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "climbStairs(int)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./02/Climbing_Stairs.cpp/Solution/climbStairs(int)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "EXPECTED_n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Climbing_Stairs.cpp/Solution/climbStairs(int)/n",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./02/Climbing_Stairs.cpp/Solution/climbStairs(int)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Climbing_Stairs.cpp/Solution/climbStairs(int)/n",
+              "correspondingType" : "int",
+              "value" : "1"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Climbing_Stairs.cpp/Solution/climbStairs(int)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_climbStairs_int_manual_0(void) {\n{\nAKA_test_case_name=\"Solution_climbStairs_int_manual_0\";\n\n// set up\n;\n\n\n\n\n\nint n=1;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_climbStairs_int_manual_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->climbStairs(n);\nAKA_fCall++;AKA_mark(\"Return from: ./02/Climbing_Stairs.cpp/Solution/climbStairs(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n\n\n\nint n=1;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : false
+      }
+    ],
+    "fm": "int climbStairs(int n) { \t\tint fn_2 = 1, fn_1 = 2; \t\tif (n == 1) return fn_2; \t\tif (n == 2) return fn_1; \t\tint fn; \t\tfor (int i = 3; i <= n; i++) \t\t{ \t\t\tfn = fn_2 + fn_1; \t\t\tfn_2 = fn_1; \t\t\tfn_1 = fn; \t\t} \t\treturn fn; \t}"
+  },
+  {
+    "f": [ ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/manual/02/Combinations.cpp/Solution/GetCombine(int,int,int,vector<int>&,vector<vector<int>>&)",
+    "c": [ ],
+    "fc": "class Solution { public: \tvector<vector<int> > combine(int n, int k) { \t\tvector<vector<int> > result; \t\tvector<int> solution; \t\tGetCombine(n, k, 1, solution, result); \t\treturn result; \t} \tvoid GetCombine( \t    int n, \t    int k, \t    int level, \t    vector<int>& solution, \t    vector<vector<int> >& result) \t{ \t\tif (solution.size() == k) \t\t{ \t\t\tresult.push_back(solution); \t\t\treturn; \t\t} \t\tfor (int i = level; i <= n; i++) \t\t{ \t\t\tsolution.push_back(i); \t\t\tGetCombine(n, k, i + 1, solution, result); \t\t\tsolution.pop_back(); \t\t} \t} };",
+    "m": [ "vector<vector<int> > combine(int n, int k) {\n\t\tvector<vector<int> > result;\n\t\tvector<int> solution;\n\t\tGetCombine(n, k, 1, solution, result);\n\t\treturn result;\n\t}", "void GetCombine(\n\t    int n,\n\t    int k,\n\t    int level,\n\t    vector<int>& solution,\n\t    vector<vector<int> >& result)\n\t{\n\t\tif (solution.size() == k)\n\t\t{\n\t\t\tresult.push_back(solution);\n\t\t\treturn;\n\t\t}\n\t\tfor (int i = level; i <= n; i++)\n\t\t{\n\t\t\tsolution.push_back(i);\n\t\t\tGetCombine(n, k, i + 1, solution, result);\n\t\t\tsolution.pop_back();\n\t\t}\n\t}", "void GetCombine(\n\t    int n,\n\t    int k,\n\t    int level,\n\t    vector<int>& solution,\n\t    vector<vector<int> >& result)\n\t{\n\t\tif (solution.size() == k)\n\t\t{\n\t\t\tresult.push_back(solution);\n\t\t\treturn;\n\t\t}\n\t\tfor (int i = level; i <= n; i++)\n\t\t{\n\t\t\tsolution.push_back(i);\n\t\t\tGetCombine(n, k, i + 1, solution, result);\n\t\t\tsolution.pop_back();\n\t\t}\n\t}" ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Combinations.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./02/Combinations.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./02/Combinations.cpp/Solution/GetCombine(int,int,int,vector<int>&,vector<vector<int>>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./02/Combinations.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Combinations.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./02/Combinations.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Combinations.cpp/Solution"
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "GetCombine(int,int,int,vector<int>&,vector<vector<int>>&)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "void",
+            "realType" : "void",
+            "functionNode" : "./02/Combinations.cpp/Solution/GetCombine(int,int,int,vector<int>&,vector<vector<int>>&)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "result",
+              "virtual_name" : "EXPECTED_result",
+              "dataType" : "vector<vector<int>>",
+              "realType" : "vector<vector<int>>&",
+              "external" : false,
+              "correspondingVar" : "./02/Combinations.cpp/Solution/GetCombine(int,int,int,vector<int>&,vector<vector<int>>&)/result",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<int>"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "solution",
+              "virtual_name" : "EXPECTED_solution",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./02/Combinations.cpp/Solution/GetCombine(int,int,int,vector<int>&,vector<vector<int>>&)/solution",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "EXPECTED_n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Combinations.cpp/Solution/GetCombine(int,int,int,vector<int>&,vector<vector<int>>&)/n",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "level",
+              "virtual_name" : "EXPECTED_level",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Combinations.cpp/Solution/GetCombine(int,int,int,vector<int>&,vector<vector<int>>&)/level",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "k",
+              "virtual_name" : "EXPECTED_k",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Combinations.cpp/Solution/GetCombine(int,int,int,vector<int>&,vector<vector<int>>&)/k",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./02/Combinations.cpp/Solution/GetCombine(int,int,int,vector<int>&,vector<vector<int>>&)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "n",
+              "virtual_name" : "n",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Combinations.cpp/Solution/GetCombine(int,int,int,vector<int>&,vector<vector<int>>&)/n",
+              "correspondingType" : "int",
+              "value" : "2"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "k",
+              "virtual_name" : "k",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Combinations.cpp/Solution/GetCombine(int,int,int,vector<int>&,vector<vector<int>>&)/k",
+              "correspondingType" : "int",
+              "value" : "2"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "level",
+              "virtual_name" : "level",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Combinations.cpp/Solution/GetCombine(int,int,int,vector<int>&,vector<vector<int>>&)/level",
+              "correspondingType" : "int",
+              "value" : "1"
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "solution",
+              "virtual_name" : "solution",
+              "dataType" : "vector<int>",
+              "realType" : "vector<int>&",
+              "external" : false,
+              "correspondingVar" : "./02/Combinations.cpp/Solution/GetCombine(int,int,int,vector<int>&,vector<vector<int>>&)/solution",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "int",
+              "size" : 1,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                "name" : "element #0",
+                "virtual_name" : "solution_element0",
+                "dataType" : "int",
+                "realType" : "int",
+                "external" : false,
+                "correspondingVar" : "./02/Combinations.cpp/Solution/GetCombine(int,int,int,vector<int>&,vector<vector<int>>&)/solution/element #0",
+                "correspondingType" : "int",
+                "value" : "1"
+              } ]
+            }, {
+              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+              "name" : "result",
+              "virtual_name" : "result",
+              "dataType" : "vector<vector<int>>",
+              "realType" : "vector<vector<int>>&",
+              "external" : false,
+              "correspondingVar" : "./02/Combinations.cpp/Solution/GetCombine(int,int,int,vector<int>&,vector<vector<int>>&)/result",
+              "correspondingType" : "STLListBaseType",
+              "templateArg" : "vector<int>",
+              "size" : 1,
+              "children" : [ {
+                "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                "name" : "element #0",
+                "virtual_name" : "result_element0",
+                "dataType" : "vector<int>",
+                "realType" : "vector<int>",
+                "external" : false,
+                "correspondingVar" : "./02/Combinations.cpp/Solution/GetCombine(int,int,int,vector<int>&,vector<vector<int>>&)/result/element #0",
+                "correspondingType" : "STLListBaseType",
+                "templateArg" : "int",
+                "size" : 1,
+                "children" : [ {
+                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
+                  "name" : "element #0",
+                  "virtual_name" : "result_element0_element0",
+                  "dataType" : "int",
+                  "realType" : "int",
+                  "external" : false,
+                  "correspondingVar" : "./02/Combinations.cpp/Solution/GetCombine(int,int,int,vector<int>&,vector<vector<int>>&)/result/element #0/element #0",
+                  "correspondingType" : "int",
+                  "value" : "1"
+                } ]
+              } ]
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_GetCombine_int_int_int_vector_int_vector_vector_int_manual_1(void) {\n{\nAKA_test_case_name=\"Solution_GetCombine_int_int_int_vector_int_vector_vector_int_manual_1\";\n\n// set up\n;\n\n\n\n\n\nint n=2;\n\n\nint k=2;\n\n\nint level=1;\nvector<int> solution;\nvector<vector<int>> result;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode level */\n/* VectorDataNode solution */\nint solution_element0=1;\nsolution.push_back(solution_element0);\n/* VectorDataNode result */\nvector<int> result_element0;\nint result_element0_element0=1;\nresult_element0.push_back(result_element0_element0);\nresult.push_back(result_element0);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_GetCombine_int_int_int_vector_int_vector_vector_int_manual_1\");AKA_INSTANCE___Solution->GetCombine(n,k,level,solution,result);\nAKA_fCall++;AKA_mark(\"Return from: ./02/Combinations.cpp/Solution/GetCombine(int,int,int,vector<int>&,vector<vector<int>>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_solution;\n\nvector<vector<int>> EXPECTED_result;\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n\n\n\nint n=2;\n\n\nint k=2;\n\n\nint level=1;\nvector<int> solution;\nvector<vector<int>> result;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode level */\n/* VectorDataNode solution */\nint solution_element0=1;\nsolution.push_back(solution_element0);\n/* VectorDataNode result */\nvector<int> result_element0;\nint result_element0_element0=1;\nresult_element0.push_back(result_element0_element0);\nresult.push_back(result_element0);\n\n",
+        "isAutomated" : false
+      }
+    ],
+    "fm": "void GetCombine( \t    int n, \t    int k, \t    int level, \t    vector<int>& solution, \t    vector<vector<int> >& result) \t{ \t\tif (solution.size() == k) \t\t{ \t\t\tresult.push_back(solution); \t\t\treturn; \t\t} \t\tfor (int i = level; i <= n; i++) \t\t{ \t\t\tsolution.push_back(i); \t\t\tGetCombine(n, k, i + 1, solution, result); \t\t\tsolution.pop_back(); \t\t} \t}"
+  },
+  {
+    "f": [ "unordered_map<string, vector<int>> memo;" ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/manual/02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)",
+    "c": [ ],
+    "fc": "class Solution { public:     unordered_map<string, vector<int>> memo;     int compute(int a, int b, char op) {         switch(op) {             case '+': return a + b;             case '-': return a - b;             case '*': return a * b;         }     }          string generateKey(int startIndex, int endIndex) {         return to_string(startIndex) + \"-\" + to_string(endIndex);     }      vector<int> diffWaysToCompute(string input) {         return diffWaysToComputeWithMemo(input, 0, input.size()-1);     }     vector<int> diffWaysToComputeWithMemo(string& input, int startIndex, int endIndex) {             string cache_key = generateKey(startIndex, endIndex);         if(memo.find(cache_key) != memo.end()) return memo[cache_key];                  int number = 0, i=startIndex;         for(; i<= endIndex && isdigit(input[i]); ++i) {             number  = number * 10 + input[i]-'0';         }         // if pure number, just return         if(i > endIndex)  return {number};                  vector<int> diffWays, lefts, rights;         for(int i =startIndex; i< endIndex; i++) {             if(isdigit(input[i])) continue;             lefts =                  diffWaysToComputeWithMemo(input, startIndex, i-1);             rights =                  diffWaysToComputeWithMemo(input, i+1, endIndex );             for(int j = 0; j < lefts.size(); ++j)                  for( int k =0; k < rights.size(); ++k)                      diffWays.push_back(compute(lefts[j], rights[k], input[i]));         }         memo[cache_key] = diffWays;         return diffWays;     } };",
+    "m": [ "vector<int> diffWaysToComputeWithMemo(string& input, int startIndex, int endIndex) {    \n        string cache_key = generateKey(startIndex, endIndex);\n        if(memo.find(cache_key) != memo.end()) return memo[cache_key];\n        \n        int number = 0, i=startIndex;\n        for(; i<= endIndex && isdigit(input[i]); ++i) {\n            number  = number * 10 + input[i]-'0';\n        }\n        // if pure number, just return\n        if(i > endIndex)  return {number};\n        \n        vector<int> diffWays, lefts, rights;\n        for(int i =startIndex; i< endIndex; i++) {\n            if(isdigit(input[i])) continue;\n            lefts = \n                diffWaysToComputeWithMemo(input, startIndex, i-1);\n            rights = \n                diffWaysToComputeWithMemo(input, i+1, endIndex );\n            for(int j = 0; j < lefts.size(); ++j) \n                for( int k =0; k < rights.size(); ++k) \n                    diffWays.push_back(compute(lefts[j], rights[k], input[i]));\n        }\n        memo[cache_key] = diffWays;\n        return diffWays;\n    }" ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Different Ways to Add Parentheses(Memoization).cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./02/Different Ways to Add Parentheses(Memoization).cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution"
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "compute(int,int,char)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "b",
+              "virtual_name" : "EXPECTED_b",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/b",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+              "name" : "op",
+              "virtual_name" : "EXPECTED_op",
+              "dataType" : "char",
+              "realType" : "char",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/op",
+              "correspondingType" : "char",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "a",
+              "virtual_name" : "EXPECTED_a",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/a",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "a",
+              "virtual_name" : "a",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/a",
+              "correspondingType" : "int",
+              "value" : "1"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "b",
+              "virtual_name" : "b",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/b",
+              "correspondingType" : "int",
+              "value" : "1"
+            }, {
+              "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+              "name" : "op",
+              "virtual_name" : "op",
+              "dataType" : "char",
+              "realType" : "char",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/op",
+              "correspondingType" : "char",
+              "value" : "43"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_compute_int_int_char_manual_0(void) {\n{\nAKA_test_case_name=\"Solution_compute_int_int_char_manual_0\";\n\n// set up\n;\n\n\n\n\n\nint a=1;\n\n\nint b=1;\n\nchar op=43;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalCharacterDataNode op */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_compute_int_int_char_manual_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->compute(a,b,op);\nAKA_fCall++;AKA_mark(\"Return from: ./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n\n\n\nint a=1;\n\n\nint b=1;\n\nchar op=43;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalCharacterDataNode op */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : false
+      },
+      {
+        "id" : 1,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Different Ways to Add Parentheses(Memoization).cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./02/Different Ways to Add Parentheses(Memoization).cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution"
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "compute(int,int,char)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "b",
+              "virtual_name" : "EXPECTED_b",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/b",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "a",
+              "virtual_name" : "EXPECTED_a",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/a",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+              "name" : "op",
+              "virtual_name" : "EXPECTED_op",
+              "dataType" : "char",
+              "realType" : "char",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/op",
+              "correspondingType" : "char",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "a",
+              "virtual_name" : "a",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/a",
+              "correspondingType" : "int",
+              "value" : "1"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "b",
+              "virtual_name" : "b",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/b",
+              "correspondingType" : "int",
+              "value" : "1"
+            }, {
+              "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+              "name" : "op",
+              "virtual_name" : "op",
+              "dataType" : "char",
+              "realType" : "char",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/op",
+              "correspondingType" : "char",
+              "value" : "45"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_compute_int_int_char_manual_1(void) {\n{\nAKA_test_case_name=\"Solution_compute_int_int_char_manual_1\";\n\n// set up\n;\n\n\n\n\n\nint a=1;\n\n\nint b=1;\n\nchar op=45;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalCharacterDataNode op */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_compute_int_int_char_manual_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->compute(a,b,op);\nAKA_fCall++;AKA_mark(\"Return from: ./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n\n\n\nint a=1;\n\n\nint b=1;\n\nchar op=45;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalCharacterDataNode op */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : false
+      },
+      {
+        "id" : 2,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Different Ways to Add Parentheses(Memoization).cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./02/Different Ways to Add Parentheses(Memoization).cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution"
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "compute(int,int,char)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "a",
+              "virtual_name" : "EXPECTED_a",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/a",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+              "name" : "op",
+              "virtual_name" : "EXPECTED_op",
+              "dataType" : "char",
+              "realType" : "char",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/op",
+              "correspondingType" : "char",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "b",
+              "virtual_name" : "EXPECTED_b",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/b",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "a",
+              "virtual_name" : "a",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/a",
+              "correspondingType" : "int",
+              "value" : "1"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "b",
+              "virtual_name" : "b",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/b",
+              "correspondingType" : "int",
+              "value" : "1"
+            }, {
+              "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+              "name" : "op",
+              "virtual_name" : "op",
+              "dataType" : "char",
+              "realType" : "char",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/op",
+              "correspondingType" : "char",
+              "value" : "42"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_compute_int_int_char_manual_2(void) {\n{\nAKA_test_case_name=\"Solution_compute_int_int_char_manual_2\";\n\n// set up\n;\n\n\n\n\n\nint a=1;\n\n\nint b=1;\n\nchar op=42;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalCharacterDataNode op */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_compute_int_int_char_manual_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->compute(a,b,op);\nAKA_fCall++;AKA_mark(\"Return from: ./02/Different Ways to Add Parentheses(Memoization).cpp/Solution/compute(int,int,char)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n\n\n\nint a=1;\n\n\nint b=1;\n\nchar op=42;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalCharacterDataNode op */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : false
+      }
+    ],
+    "fm": "int compute(int a, int b, char op) {         switch(op) {             case '+': return a + b;             case '-': return a - b;             case '*': return a * b;         }     }"
+  },
+  {
+    "f": [ ],
+    "path_fm": "/mnt/sdb2/LAB/test/2025.03.01/manual/02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)",
+    "c": [ ],
+    "fc": "class Solution { public:     int compute(int a, int b, char op) {         switch(op) {             case '+': return a + b;             case '-': return a - b;             case '*': return a * b;         }     }          vector<int> diffWaysToCompute(string input) {         int number = 0, i=0;         for(; i< input.length() && isdigit(input[i]); ++i) {             number  = number * 10 + input[i]-'0';         }         // if pure number, just return         if(i == input.length())             return {number};                  vector<int> diffWays, lefts, rights;         for(int i =0; i< input.length(); i++) {             if(isdigit(input[i])) continue;             lefts =                  diffWaysToCompute(input.substr(0, i));             rights =                  diffWaysToCompute(input.substr(i + 1, input.length() - i - 1));             for(int j = 0; j < lefts.size(); ++j) {                 for( int k =0; k < rights.size(); ++k) {                     diffWays.push_back(compute(lefts[j], rights[k], input[i]));                 }             }         }         return diffWays;     } };",
+    "m": [ "vector<int> diffWaysToCompute(string input) {\n        int number = 0, i=0;\n        for(; i< input.length() && isdigit(input[i]); ++i) {\n            number  = number * 10 + input[i]-'0';\n        }\n        // if pure number, just return\n        if(i == input.length())\n            return {number};\n        \n        vector<int> diffWays, lefts, rights;\n        for(int i =0; i< input.length(); i++) {\n            if(isdigit(input[i])) continue;\n            lefts = \n                diffWaysToCompute(input.substr(0, i));\n            rights = \n                diffWaysToCompute(input.substr(i + 1, input.length() - i - 1));\n            for(int j = 0; j < lefts.size(); ++j) {\n                for( int k =0; k < rights.size(); ++k) {\n                    diffWays.push_back(compute(lefts[j], rights[k], input[i]));\n                }\n            }\n        }\n        return diffWays;\n    }" ],
+    "datatest": [
+      {
+        "id" : 0,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Different Ways to Add Parentheses.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./02/Different Ways to Add Parentheses.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Different Ways to Add Parentheses.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Different Ways to Add Parentheses.cpp/Solution"
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "compute(int,int,char)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+              "name" : "op",
+              "virtual_name" : "EXPECTED_op",
+              "dataType" : "char",
+              "realType" : "char",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/op",
+              "correspondingType" : "char",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "b",
+              "virtual_name" : "EXPECTED_b",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/b",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "a",
+              "virtual_name" : "EXPECTED_a",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/a",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "a",
+              "virtual_name" : "a",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/a",
+              "correspondingType" : "int",
+              "value" : "2"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "b",
+              "virtual_name" : "b",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/b",
+              "correspondingType" : "int",
+              "value" : "2"
+            }, {
+              "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+              "name" : "op",
+              "virtual_name" : "op",
+              "dataType" : "char",
+              "realType" : "char",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/op",
+              "correspondingType" : "char",
+              "value" : "45"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_compute_int_int_char_manual_4(void) {\n{\nAKA_test_case_name=\"Solution_compute_int_int_char_manual_4\";\n\n// set up\n;\n\n\n\n\n\nint a=2;\n\n\nint b=2;\n\nchar op=45;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalCharacterDataNode op */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_compute_int_int_char_manual_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->compute(a,b,op);\nAKA_fCall++;AKA_mark(\"Return from: ./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n\n\n\nint a=2;\n\n\nint b=2;\n\nchar op=45;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalCharacterDataNode op */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : false
+      },
+      {
+        "id" : 1,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Different Ways to Add Parentheses.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./02/Different Ways to Add Parentheses.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Different Ways to Add Parentheses.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Different Ways to Add Parentheses.cpp/Solution"
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "compute(int,int,char)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "a",
+              "virtual_name" : "EXPECTED_a",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/a",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "b",
+              "virtual_name" : "EXPECTED_b",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/b",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+              "name" : "op",
+              "virtual_name" : "EXPECTED_op",
+              "dataType" : "char",
+              "realType" : "char",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/op",
+              "correspondingType" : "char",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "a",
+              "virtual_name" : "a",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/a",
+              "correspondingType" : "int",
+              "value" : "2"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "b",
+              "virtual_name" : "b",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/b",
+              "correspondingType" : "int",
+              "value" : "2"
+            }, {
+              "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+              "name" : "op",
+              "virtual_name" : "op",
+              "dataType" : "char",
+              "realType" : "char",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/op",
+              "correspondingType" : "char",
+              "value" : "43"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_compute_int_int_char_manual_5(void) {\n{\nAKA_test_case_name=\"Solution_compute_int_int_char_manual_5\";\n\n// set up\n;\n\n\n\n\n\nint a=2;\n\n\nint b=2;\n\nchar op=43;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalCharacterDataNode op */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_compute_int_int_char_manual_5\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->compute(a,b,op);\nAKA_fCall++;AKA_mark(\"Return from: ./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n\n\n\nint a=2;\n\n\nint b=2;\n\nchar op=43;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalCharacterDataNode op */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : false
+      },
+      {
+        "id" : 2,
+        "dt" : {
+          "type" : "com.dse.testdata.object.UnitUnderTestNode",
+          "name" : "Different Ways to Add Parentheses.cpp",
+          "virtual_name" : "NON_VALUE",
+          "sourceNode" : "./02/Different Ways to Add Parentheses.cpp",
+          "children" : [ {
+            "type" : "com.dse.testdata.object.GlobalRootDataNode",
+            "name" : "GLOBAL",
+            "virtual_name" : "NON_VALUE",
+            "functionNode" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Different Ways to Add Parentheses.cpp/Solution"
+            } ],
+            "level" : "GLOBAL",
+            "children" : [ {
+              "type" : "com.dse.testdata.object.ClassDataNode",
+              "name" : "AKA_INSTANCE___Solution",
+              "virtual_name" : "AKA_INSTANCE___Solution",
+              "dataType" : "::Solution",
+              "realType" : "::Solution",
+              "external" : true,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/AKA_INSTANCE___Solution",
+              "correspondingType" : "./02/Different Ways to Add Parentheses.cpp/Solution"
+            } ]
+          }, {
+            "type" : "com.dse.testdata.object.SubprogramNode",
+            "name" : "compute(int,int,char)",
+            "virtual_name" : "NON_VALUE",
+            "dataType" : "int",
+            "realType" : "int",
+            "functionNode" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)",
+            "paramExpectedOuputs" : [ {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "a",
+              "virtual_name" : "EXPECTED_a",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/a",
+              "correspondingType" : "int",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+              "name" : "op",
+              "virtual_name" : "EXPECTED_op",
+              "dataType" : "char",
+              "realType" : "char",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/op",
+              "correspondingType" : "char",
+              "value" : "null"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "b",
+              "virtual_name" : "EXPECTED_b",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/b",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ],
+            "children" : [ {
+              "type" : "com.dse.testdata.object.RootDataNode",
+              "name" : "STATIC",
+              "virtual_name" : "NON_VALUE",
+              "functionNode" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)",
+              "level" : "STATIC"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "a",
+              "virtual_name" : "a",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/a",
+              "correspondingType" : "int",
+              "value" : "1"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "b",
+              "virtual_name" : "b",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/b",
+              "correspondingType" : "int",
+              "value" : "1"
+            }, {
+              "type" : "com.dse.testdata.object.NormalCharacterDataNode",
+              "name" : "op",
+              "virtual_name" : "op",
+              "dataType" : "char",
+              "realType" : "char",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/op",
+              "correspondingType" : "char",
+              "value" : "42"
+            }, {
+              "type" : "com.dse.testdata.object.NormalNumberDataNode",
+              "name" : "RETURN",
+              "virtual_name" : "AKA_EXPECTED_OUTPUT",
+              "dataType" : "int",
+              "realType" : "int",
+              "external" : false,
+              "correspondingVar" : "./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)/RETURN",
+              "correspondingType" : "int",
+              "value" : "null"
+            } ]
+          } ]
+        },
+        "td" : "void AKA_TEST_Solution_compute_int_int_char_manual_3(void) {\n{\nAKA_test_case_name=\"Solution_compute_int_int_char_manual_3\";\n\n// set up\n;\n\n\n\n\n\nint a=1;\n\n\nint b=1;\n\nchar op=42;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalCharacterDataNode op */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_compute_int_int_char_manual_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->compute(a,b,op);\nAKA_fCall++;AKA_mark(\"Return from: ./02/Different Ways to Add Parentheses.cpp/Solution/compute(int,int,char)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+        "simplified_t" : "\n\n\n\n\nint a=1;\n\n\nint b=1;\n\nchar op=42;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalCharacterDataNode op */\n/* NormalNumberDataNode RETURN */\n\n",
+        "isAutomated" : false
+      }
+    ],
+    "fm": "int compute(int a, int b, char op) {         switch(op) {             case '+': return a + b;             case '-': return a - b;             case '*': return a * b;         }     }"
+  }
+]
