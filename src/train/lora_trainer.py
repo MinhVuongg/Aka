@@ -5,8 +5,8 @@ from abc import ABC, abstractmethod
 
 
 class LoRATrainer(BaseTrainer, ABC):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, model_name):
+        super().__init__(model_name)
         self.add_lora()
 
     @abstractmethod

@@ -1,20 +1,21 @@
 import logging
-
-from transformers import AutoTokenizer
-import matplotlib.pyplot as plt
-import datasets
 from abc import ABC, abstractmethod
-from src.utils.mylogger import logger
-from src.config.config import MODEL_NAME, TRAINSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, VALIDATIONSET_DATA_PATH_PROCESS, MASKING_SOURCE, MASKING_STRATEGIES, max_target_length, \
+
+import datasets
+import matplotlib.pyplot as plt
+
+from src.config.config import TRAINSET_DATA_PATH_PROCESS, MODEL_SAVE_PATH, VALIDATIONSET_DATA_PATH_PROCESS, \
+    MASKING_SOURCE, MASKING_STRATEGIES, max_target_length, \
     max_source_length
 from src.data.masking.RandomTokenMasker import RandomTokenMasker
+from src.utils.mylogger import logger
 
 
 class BaseTrainer(ABC):
     """Lớp cơ sở cho việc huấn luyện mô hình."""
 
-    def __init__(self):
-        self.model, self.tokenizer = self.load_model()
+    def __init__(self, model_name):
+        self.model, self.tokenizer = self.load_model(model_name)
         self.train_dataset, self.val_dataset = self.load_data()
         self.train_loss_history = []
         self.val_loss_history = []
@@ -32,7 +33,7 @@ class BaseTrainer(ABC):
 
     @staticmethod
     @abstractmethod
-    def load_model():
+    def load_model(model_name):
         pass
 
     @abstractmethod
@@ -40,13 +41,60 @@ class BaseTrainer(ABC):
         """Phương thức train, sẽ được triển khai trong lớp con."""
         pass
 
+    def remove_long_samples_from_dataset(self, dataset, max_source_length, max_target_length):
+        """
+        Bỏ các phần tử source >= max_source_length và target >= max_target_length
+
+        Args:
+            dataset: Dataset cần lọc
+
+        Returns:
+            filtered_dataset: Dataset sau khi lọc
+        """
+        initial_size = len(dataset)
+        logger.info(f"[UET] Số lượng mẫu ban đầu: {initial_size}")
+
+        def filter_short_samples(example):
+            return len(str(example["source"])) <= max_source_length and len(str(example["target"])) <= max_target_length
+
+        filtered_dataset = dataset.filter(filter_short_samples)
+
+        filtered_size = len(filtered_dataset)
+        logger.info(f"[UET] Số lượng mẫu sau khi lọc: {filtered_size}")
+
+        if initial_size > 0:
+            removal_rate = (initial_size - filtered_size) / initial_size * 100
+            logger.info(f"[UET] Tỷ lệ loại bỏ: {removal_rate:.2f}%")
+
+        return filtered_dataset
+
+    # def load_data(self):
+    #     """Load và xử lý dữ liệu."""
+    #     dataset_trainset = datasets.load_dataset("json", data_files=TRAINSET_DATA_PATH_PROCESS, split="train")
+    #     logger.info(f"[UET] Số lượng mẫu trong train set: {len(dataset_trainset)}")
+    #
+    #     dataset_validationset = datasets.load_dataset("json", data_files=VALIDATIONSET_DATA_PATH_PROCESS, split="train")
+    #     logger.info(f"[UET] Số lượng mẫu trong validation set: {len(dataset_validationset)}")
+    #
+    #     return dataset_trainset, dataset_validationset
+
     def load_data(self):
         """Load và xử lý dữ liệu."""
+
+        # Load datasets
         dataset_trainset = datasets.load_dataset("json", data_files=TRAINSET_DATA_PATH_PROCESS, split="train")
         logger.info(f"[UET] Số lượng mẫu trong train set: {len(dataset_trainset)}")
-
         dataset_validationset = datasets.load_dataset("json", data_files=VALIDATIONSET_DATA_PATH_PROCESS, split="train")
         logger.info(f"[UET] Số lượng mẫu trong validation set: {len(dataset_validationset)}")
+
+        # if OPTIMIZE_TRAININGSET_STRATEGY == TARGET_SELETCTION_STRATEGIES.SORT_BY_TOKEN_AND_CUTOFF:
+        #     logger.info(f"[UET] Đang lọc train set...")
+        #     filtered_trainset = self.remove_long_samples_from_dataset(dataset_trainset, max_source_length, max_target_length)
+        #     logger.info(f"[UET] Số lượng mẫu trong train set: {len(dataset_trainset)}")
+        #
+        #     logger.info(f"[UET] Đang lọc validation set...")
+        #     filtered_validationset = self.remove_long_samples_from_dataset(dataset_validationset, max_source_length, max_target_length)
+        #     logger.info(f"[UET] Số lượng mẫu trong validation set: {len(dataset_validationset)}")
 
         return dataset_trainset, dataset_validationset
 
@@ -84,6 +132,7 @@ class BaseTrainer(ABC):
 
         inputs["labels"] = [(l if l != self.tokenizer.pad_token_id else -100) for l in outputs["input_ids"]]
         return inputs
+
 
     def preprocess(self, examples):
         """Tiền xử lý dữ liệu."""
