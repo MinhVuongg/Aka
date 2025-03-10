@@ -14,8 +14,8 @@ from src.utils.mylogger import logger
 class BaseTrainer(ABC):
     """Lớp cơ sở cho việc huấn luyện mô hình."""
 
-    def __init__(self):
-        self.model, self.tokenizer = self.load_model()
+    def __init__(self, model_name):
+        self.model, self.tokenizer = self.load_model(model_name)
         self.train_dataset, self.val_dataset = self.load_data()
         self.train_loss_history = []
         self.val_loss_history = []
@@ -33,7 +33,7 @@ class BaseTrainer(ABC):
 
     @staticmethod
     @abstractmethod
-    def load_model():
+    def load_model(model_name):
         pass
 
     @abstractmethod

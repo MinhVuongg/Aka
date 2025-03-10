@@ -6,7 +6,7 @@ from src.config.config import TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS, TRAIN_TY
     VALIDATIONSET_RAW, \
     VALIDATIONSET_DATA_PATH_PROCESS, OUTPUT_TRAINSET_CSV, TRAIN_MODES, MODEL_TYPES, MODEL_TYPE, \
     TRAININGSET_REPORT_LIMIT, VALIDATIONSET_REPORT_LIMIT, OUTPUT_VALIDATIONSET_HTML, OUTPUT_TRAINSET_HTML, MODEL_NAME, \
-    OPTIMIZE_TARGET_STRATEGY, TARGET_SELETCTION_STRATEGIES
+    OPTIMIZE_TARGET_STRATEGY, TARGET_SELETCTION_STRATEGIES, MODEL_SAVE_PATH
 from src.predict.analysis import analysis_result
 from src.predict.evaluate import load_model
 from src.train.codet5.lora_trainer_codet5base import LoRATrainer_CodeT5Base
@@ -32,14 +32,14 @@ from src.config.config import OUTPUT_VALIDATIONSET_CSV
 
 def main():
     logger.info(f"[UET] Load mô hình {MODEL_NAME} và tokenizer tương ứng")
-    model, tokenizer = load_model_by_type(TRAIN_TYPE, MODEL_TYPE)
+    model, tokenizer = load_model_by_type(TRAIN_TYPE, MODEL_TYPE, MODEL_NAME)
 
     # TIEN XU LY DU LIEU
     # logger.info("[UET] Bắt đầu tiền xử lý dữ liệu cho training set và test set.")
     logger.info(f"[UET] Phân tích tập học thô {TRAINSET_RAW} để tạo tập học tinh chế. Quá trình này sẽ thực hiện tiền xử lý dữ liệu để mô hình học tốt hơn.", color=BLUE)
     preprocess_dataset2(TRAINSET_RAW, TRAINSET_DATA_PATH_PROCESS, tokenizer, optimize_target_strategy=OPTIMIZE_TARGET_STRATEGY)
 
-    logger.info("");
+    logger.info("")
     logger.info(f"[UET] Phân tích tập test thô {VALIDATIONSET_RAW} để tạo tập test tinh chế", color=BLUE)
     preprocess_dataset2(VALIDATIONSET_RAW, VALIDATIONSET_DATA_PATH_PROCESS, tokenizer, optimize_target_strategy=TARGET_SELETCTION_STRATEGIES.NONE)
     logger.info("[UET] Tiền xử lý hoàn tất!")
@@ -59,11 +59,11 @@ def main():
     logger.info(f"[UET] {TRAIN_TYPE}", color=BLUE)
 
     if TRAIN_TYPE == TRAIN_MODES.LORA and MODEL_TYPE == MODEL_TYPES.CODET5_SMALL:
-        trainer = LoRATrainer_CodeT5Small()
+        trainer = LoRATrainer_CodeT5Small(MODEL_NAME)
     elif TRAIN_TYPE == TRAIN_MODES.LORA and MODEL_TYPE == MODEL_TYPES.CODET5_BASE:
-        trainer = LoRATrainer_CodeT5Base()
+        trainer = LoRATrainer_CodeT5Base(MODEL_NAME)
     elif TRAIN_TYPE == TRAIN_MODES.LORA and MODEL_TYPE == MODEL_TYPES.CODET5_LARGE:
-        trainer = LoRATrainer_CodeT5Large()
+        trainer = LoRATrainer_CodeT5Large(MODEL_NAME)
 
     trainer.train()
     logger.info("[UET] Huấn luyện hoàn tất!")
@@ -77,14 +77,14 @@ def main():
     #  Đánh giá mô hình
     logger.info("\n")
     logger.info("[UET] Đánh giá mô hình tren tap validation...", color=BLUE)
-    model, dataset, tokenizer = load_model(datapath=VALIDATIONSET_DATA_PATH_PROCESS)
+    model, dataset, tokenizer = load_model(datapath=VALIDATIONSET_DATA_PATH_PROCESS, model_name=MODEL_SAVE_PATH)
     evaluate_model(dataset, tokenizer, model, outputFolder=OUTPUT_VALIDATIONSET_CSV, limit=VALIDATIONSET_REPORT_LIMIT)
     analysis_result(OUTPUT_VALIDATIONSET_CSV, OUTPUT_VALIDATIONSET_HTML)
     logger.info("[UET] Hoàn tất đánh giá trên tập validation!")
 
     logger.info("\n")
     logger.info("[UET] Đánh giá mô hình tren tap training...", color=BLUE)
-    model, dataset, tokenizer = load_model(datapath=TRAINSET_DATA_PATH_PROCESS)
+    model, dataset, tokenizer = load_model(datapath=TRAINSET_DATA_PATH_PROCESS, model_name=MODEL_SAVE_PATH)
     evaluate_model(dataset, tokenizer, model, outputFolder=OUTPUT_TRAINSET_CSV, limit=TRAININGSET_REPORT_LIMIT)
     analysis_result(OUTPUT_TRAINSET_CSV, OUTPUT_TRAINSET_HTML)
     logger.info("[UET] Hoàn tất đánh giá trên tập training!")

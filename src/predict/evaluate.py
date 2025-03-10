@@ -14,16 +14,16 @@ from src.utils.mylogger import logger
 
 
 # Load model đã train
-def load_model(datapath):
-    logger.info(f"[UET] Download model and tokenizer from %s - start", MODEL_SAVE_PATH)
+def load_model(datapath, model_name):
+    logger.info(f"[UET] Download model and tokenizer from %s - start", model_name)
 
-    model, tokenizer = load_model_by_type(TRAIN_TYPE, MODEL_TYPE)
+    model, tokenizer = load_model_by_type(TRAIN_TYPE, MODEL_TYPE, model_name)
 
     if model is None:
         logger.error(f"[UET] Chưa support model ở {datapath}")
         return
 
-    logger.info(f"[UET] Download model and tokenizerfrom %s - done", MODEL_SAVE_PATH)
+    logger.info(f"[UET] Download model and tokenizerfrom %s - done", model_name)
 
     logger.info(f"[UET] Moving model to GPU/CPU - start")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -123,5 +123,5 @@ def evaluate_model(dataset, tokenizer, model, outputFolder, limit=None):
 
 # Chạy đánh giá
 if __name__ == "__main__":
-    model, dataset, tokenizer = load_model(datapath=VALIDATIONSET_DATA_PATH_PROCESS)
+    model, dataset, tokenizer = load_model(datapath=VALIDATIONSET_DATA_PATH_PROCESS, model_name=MODEL_SAVE_PATH)
     evaluate_model(dataset, tokenizer, model, outputFolder=OUTPUT_VALIDATIONSET_CSV)
