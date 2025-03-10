@@ -206,11 +206,13 @@ def preprocess_dataset2(input_folder, output_file, tokenizer, optimize_target_st
 
                     # Source
                     source = "\n".join([
-                        "FC:", focal_class_name,
-                        "FM:", focal_method,
-                        "C:", constructor_signatures,
-                        "M:", method_signatures,
-                        "F:", fields
+                        "/*FC*/", focal_class_name,
+                        "\n{",
+                        "/*FM*/ ", focal_method,
+                        "/*C*/", constructor_signatures,
+                        "/*M*/:", method_signatures,
+                        "/*F*/:", fields,
+                        "\n}"
                     ])
 
                     if optimize_target_strategy == TARGET_SELETCTION_STRATEGIES.SORT_BY_TOKEN_AND_CUTOFF:
