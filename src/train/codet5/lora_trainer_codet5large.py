@@ -12,7 +12,7 @@ class LoRATrainer_CodeT5Large(LoRATrainer):
     def load_model(model_name):
         model = AutoModelForSeq2SeqLM.from_pretrained(
             model_name,
-            device_map="auto" if torch.cuda.is_available() else None
+            device_map="cuda" if torch.cuda.is_available() else "cpu"
         )
         tokenizer = AutoTokenizer.from_pretrained(model_name)
         return model, tokenizer
