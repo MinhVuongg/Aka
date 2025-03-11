@@ -1,0 +1,642 @@
+[
+    {
+        "f": [],
+        "fm": "int main() {\r   int N;\r   cin >> N;\r   vector<int> x(N);\r   for (int i = 0; i < N; ++i) cin >> x[i];\r   cout << longestIncreasingSubsequence(x);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_main_random_0(void) {\n{\nAKA_test_case_name=\"main_random_0\";\n\n// set up\n;\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test main_random_0\");int AKA_ACTUAL_OUTPUT=AKA_MAIN();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Longest_Increasing_Subsequence.cpp\\\\main()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\thirdteen\\Longest_Increasing_Subsequence.cpp\\main()"
+    },
+    {
+        "f": [],
+        "fm": "int longestIncreasingSubsequence(const vector<int>& x) {\r   Greater::x = x;  \r   vector<int> M; // M[L - 1] contains index of the smallest tail of a sequence of length L\r   for (int i = 0; i < x.size(); ++i) {\r     int L = M.rend() - upper_bound(M.rbegin(), M.rend(), i, Greater()) + 1; // Length ending here\r     if (L <= M.size()) {\r       if (x[i] < x[M[L - 1]]) M[L - 1] = i;\r     } else {\r       M.push_back(i);\r     }\r   }\r   return M.size();\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_longestIncreasingSubsequence_vector_int_const_directed_1(void) {\n{\nAKA_test_case_name=\"longestIncreasingSubsequence_vector_int_const_directed_1\";\n\n// set up\n;\n Greater::x;\n\nvector<int>x;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode x */\n/* element #0 : null value -> no code */\nx.push_back(x_element0);\n/* element #1 : null value -> no code */\nx.push_back(x_element1);\n/* element #2 : null value -> no code */\nx.push_back(x_element2);\n/* element #3 : null value -> no code */\nx.push_back(x_element3);\n/* element #4 : null value -> no code */\nx.push_back(x_element4);\n/* element #5 : null value -> no code */\nx.push_back(x_element5);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test longestIncreasingSubsequence_vector_int_const_directed_1\");int AKA_ACTUAL_OUTPUT=longestIncreasingSubsequence(x);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Longest_Increasing_Subsequence.cpp\\\\longestIncreasingSubsequence(vector<int>const&)\");\n\n\nvector<int>const EXPECTED_x;\n\nvector<int> EXPECTED_AKA_GLOBAL_Greaterx;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": " Greater::x;\n\nvector<int>x;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode x */\n/* element #0 : null value -> no code */\nx.push_back(x_element0);\n/* element #1 : null value -> no code */\nx.push_back(x_element1);\n/* element #2 : null value -> no code */\nx.push_back(x_element2);\n/* element #3 : null value -> no code */\nx.push_back(x_element3);\n/* element #4 : null value -> no code */\nx.push_back(x_element4);\n/* element #5 : null value -> no code */\nx.push_back(x_element5);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_longestIncreasingSubsequence_vector_int_const_directed_0(void) {\n{\nAKA_test_case_name=\"longestIncreasingSubsequence_vector_int_const_directed_0\";\n\n// set up\n;\n Greater::x;\n\nvector<int>x;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode x */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test longestIncreasingSubsequence_vector_int_const_directed_0\");int AKA_ACTUAL_OUTPUT=longestIncreasingSubsequence(x);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Longest_Increasing_Subsequence.cpp\\\\longestIncreasingSubsequence(vector<int>const&)\");\n\n\nvector<int>const EXPECTED_x;\n\nvector<int> EXPECTED_AKA_GLOBAL_Greaterx;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": " Greater::x;\n\nvector<int>x;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode x */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_longestIncreasingSubsequence_vector_int_const_directed_2(void) {\n{\nAKA_test_case_name=\"longestIncreasingSubsequence_vector_int_const_directed_2\";\n\n// set up\n;\n Greater::x;\n\nvector<int>x;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode x */\n/* element #0 : null value -> no code */\nx.push_back(x_element0);\n/* element #1 : null value -> no code */\nx.push_back(x_element1);\n/* element #2 : null value -> no code */\nx.push_back(x_element2);\n/* element #3 : null value -> no code */\nx.push_back(x_element3);\n/* element #4 : null value -> no code */\nx.push_back(x_element4);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test longestIncreasingSubsequence_vector_int_const_directed_2\");int AKA_ACTUAL_OUTPUT=longestIncreasingSubsequence(x);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Longest_Increasing_Subsequence.cpp\\\\longestIncreasingSubsequence(vector<int>const&)\");\n\n\nvector<int>const EXPECTED_x;\n\nvector<int> EXPECTED_AKA_GLOBAL_Greaterx;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": " Greater::x;\n\nvector<int>x;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode x */\n/* element #0 : null value -> no code */\nx.push_back(x_element0);\n/* element #1 : null value -> no code */\nx.push_back(x_element1);\n/* element #2 : null value -> no code */\nx.push_back(x_element2);\n/* element #3 : null value -> no code */\nx.push_back(x_element3);\n/* element #4 : null value -> no code */\nx.push_back(x_element4);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_longestIncreasingSubsequence_vector_int_const_random_0(void) {\n{\nAKA_test_case_name=\"longestIncreasingSubsequence_vector_int_const_random_0\";\n\n// set up\n;\n Greater::x;\n\n\n/* element #0 : null value -> no code */\n\nGreater::x.push_back(Greaterx_element0);\n\n\n/* element #1 : null value -> no code */\n\nGreater::x.push_back(Greaterx_element1);\n\n\n/* element #2 : null value -> no code */\n\nGreater::x.push_back(Greaterx_element2);\n\nvector<int>x;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode x */\nint x_element0=324992465;\nx.push_back(x_element0);\nint x_element1=-185960668;\nx.push_back(x_element1);\nint x_element2=2040453748;\nx.push_back(x_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test longestIncreasingSubsequence_vector_int_const_random_0\");int AKA_ACTUAL_OUTPUT=longestIncreasingSubsequence(x);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Longest_Increasing_Subsequence.cpp\\\\longestIncreasingSubsequence(vector<int>const&)\");\n\n\nvector<int>const EXPECTED_x;\n\nvector<int> EXPECTED_AKA_GLOBAL_Greaterx;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": " Greater::x;\n\n\n/* element #0 : null value -> no code */\n\nGreater::x.push_back(Greaterx_element0);\n\n\n/* element #1 : null value -> no code */\n\nGreater::x.push_back(Greaterx_element1);\n\n\n/* element #2 : null value -> no code */\n\nGreater::x.push_back(Greaterx_element2);\n\nvector<int>x;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode x */\nint x_element0=324992465;\nx.push_back(x_element0);\nint x_element1=-185960668;\nx.push_back(x_element1);\nint x_element2=2040453748;\nx.push_back(x_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\thirdteen\\Longest_Increasing_Subsequence.cpp\\longestIncreasingSubsequence(vector<int>const&)"
+    },
+    {
+        "f": [],
+        "fm": "int lengthOfLongestSubstring(string s) {\r         vector<bool> exist(256, false);\r         int left = 0, right = 0, max_length = 0;\r         while (right < s.size()) {\r             // Extend to the right as far as possible\r             while (right < s.size() && exist[s[right]] == false) exist[s[right ++]] = true;\r             max_length = max(max_length, right - left);\r             // Move left forward to next possible start\r             if (right < s.size()) {\r                do { exist[s[left ++]] = false; } while (s[left - 1] != s[right]);\r             }\r         }\r         return max_length;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_lengthOfLongestSubstring_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_lengthOfLongestSubstring_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Longest_Substring_Without_Repeating_Characters.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName36931 = new char[2];akaRandomName36931[0] = -122;akaRandomName36931[1] = '\\0';string s=akaRandomName36931;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_lengthOfLongestSubstring_string_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->lengthOfLongestSubstring(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Longest_Substring_Without_Repeating_Characters.cpp\\\\Solution\\\\lengthOfLongestSubstring(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Longest_Substring_Without_Repeating_Characters.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName295447 = new char[2];akaRandomName295447[0] = -122;akaRandomName295447[1] = '\\0';string s=akaRandomName295447;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int lengthOfLongestSubstring(string s) {\r         vector<bool> exist(256, false);\r         int left = 0, right = 0, max_length = 0;\r         while (right < s.size()) {\r             // Extend to the right as far as possible\r             while (right < s.size() && exist[s[right]] == false) exist[s[right ++]] = true;\r             max_length = max(max_length, right - left);\r             // Move left forward to next possible start\r             if (right < s.size()) {\r                do { exist[s[left ++]] = false; } while (s[left - 1] != s[right]);\r             }\r         }\r         return max_length;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\thirdteen\\Longest_Substring_Without_Repeating_Characters.cpp\\Solution\\lengthOfLongestSubstring(string)"
+    },
+    {
+        "f": [],
+        "fm": "int longestValidParentheses(string s) {   \r     int max_length = 0;\r     int start[] = {0, s.length() - 1}, step[] = {1, -1}, end[] = {s.length(), -1}, ok_sign[] = {1, -1};\r     for (int k = 0; k < 2; ++k) {\r       int left = 0, right = 0;\r       for (int i = start[k]; i != end[k]; i += step[k]) {\r \tif (s[i] == '(') left ++;\r \telse right ++;\r \tif (left == right) {\r \t  max_length = max(max_length, left + right);\r \t} else if (ok_sign[k] * (left - right) < 0) {\r \t  left = 0;\r \t  right = 0;\r \t}\r       }\r     }\r     return max_length;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_longestValidParentheses_string_random_2(void) {\n{\nAKA_test_case_name=\"Solution_longestValidParentheses_string_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName563641 = new char[2];akaRandomName563641[0] = -6;akaRandomName563641[1] = '\\0';string s=akaRandomName563641;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_longestValidParentheses_string_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->longestValidParentheses(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Longest_Valid_Parentheses.cpp\\\\Solution\\\\longestValidParentheses(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName66029 = new char[2];akaRandomName66029[0] = -6;akaRandomName66029[1] = '\\0';string s=akaRandomName66029;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_longestValidParentheses_string_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_longestValidParentheses_string_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring s=\"\";\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_longestValidParentheses_string_directed_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->longestValidParentheses(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Longest_Valid_Parentheses.cpp\\\\Solution\\\\longestValidParentheses(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring s=\"\";\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int longestValidParentheses(string s) {   \r     int max_length = 0;\r     int start[] = {0, s.length() - 1}, step[] = {1, -1}, end[] = {s.length(), -1}, ok_sign[] = {1, -1};\r     for (int k = 0; k < 2; ++k) {\r       int left = 0, right = 0;\r       for (int i = start[k]; i != end[k]; i += step[k]) {\r \tif (s[i] == '(') left ++;\r \telse right ++;\r \tif (left == right) {\r \t  max_length = max(max_length, left + right);\r \t} else if (ok_sign[k] * (left - right) < 0) {\r \t  left = 0;\r \t  right = 0;\r \t}\r       }\r     }\r     return max_length;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\thirdteen\\Longest_Valid_Parentheses.cpp\\Solution\\longestValidParentheses(string)"
+    },
+    {
+        "f": [],
+        "fm": "int longestValidParentheses(string s) {    \r     stack<int> S;\r     int max_length = 0, start = s.length();\r     for (int i = 0; i < s.length(); ++i) {\r       if (s[i] == '(') {\r \tS.push(i);\r       } else {\r \tif (S.empty()) {\r \t  start = s.length();\r \t} else {\r \t  start = min(start, S.top());\r \t  S.pop();\r \t  max_length = max(max_length, S.empty() ? i - start + 1 : i - S.top());\r \t}\r       }\r     }\r     return max_length;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStack_longestValidParentheses_string_directed_4(void) {\n{\nAKA_test_case_name=\"SolutionStack_longestValidParentheses_string_directed_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStack */\n/* ConstructorDataNode SolutionStack() */\nAKA_mark(\"Calling: \\\\SolutionStack()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStack\\\\AKA_INSTANCE___SolutionStack\\\\SolutionStack()\");AKA_fCall++;AKA_INSTANCE___SolutionStack = new ::SolutionStack();\n\n\nchar* akaRandomName29032 = new char[2];akaRandomName29032[0] = 40;akaRandomName29032[1] = '\\0';string s=akaRandomName29032;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStack_longestValidParentheses_string_directed_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStack->longestValidParentheses(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Longest_Valid_Parentheses.cpp\\\\SolutionStack\\\\longestValidParentheses(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStack */\n/* ConstructorDataNode SolutionStack() */\nAKA_mark(\"Calling: \\\\SolutionStack()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStack\\\\AKA_INSTANCE___SolutionStack\\\\SolutionStack()\");AKA_fCall++;AKA_INSTANCE___SolutionStack = new ::SolutionStack();\n\n\nchar* akaRandomName804198 = new char[2];akaRandomName804198[0] = 40;akaRandomName804198[1] = '\\0';string s=akaRandomName804198;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStack_longestValidParentheses_string_directed_5(void) {\n{\nAKA_test_case_name=\"SolutionStack_longestValidParentheses_string_directed_5\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStack */\n/* ConstructorDataNode SolutionStack() */\nAKA_mark(\"Calling: \\\\SolutionStack()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStack\\\\AKA_INSTANCE___SolutionStack\\\\SolutionStack()\");AKA_fCall++;AKA_INSTANCE___SolutionStack = new ::SolutionStack();\n\n\nchar* akaRandomName185456 = new char[2];akaRandomName185456[0] = 40;akaRandomName185456[1] = '\\0';string s=akaRandomName185456;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStack_longestValidParentheses_string_directed_5\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStack->longestValidParentheses(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Longest_Valid_Parentheses.cpp\\\\SolutionStack\\\\longestValidParentheses(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStack */\n/* ConstructorDataNode SolutionStack() */\nAKA_mark(\"Calling: \\\\SolutionStack()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStack\\\\AKA_INSTANCE___SolutionStack\\\\SolutionStack()\");AKA_fCall++;AKA_INSTANCE___SolutionStack = new ::SolutionStack();\n\n\nchar* akaRandomName675404 = new char[2];akaRandomName675404[0] = 40;akaRandomName675404[1] = '\\0';string s=akaRandomName675404;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStack_longestValidParentheses_string_directed_6(void) {\n{\nAKA_test_case_name=\"SolutionStack_longestValidParentheses_string_directed_6\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStack */\n/* ConstructorDataNode SolutionStack() */\nAKA_mark(\"Calling: \\\\SolutionStack()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStack\\\\AKA_INSTANCE___SolutionStack\\\\SolutionStack()\");AKA_fCall++;AKA_INSTANCE___SolutionStack = new ::SolutionStack();\n\n\nchar* akaRandomName978720 = new char[2];akaRandomName978720[0] = 40;akaRandomName978720[1] = '\\0';string s=akaRandomName978720;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStack_longestValidParentheses_string_directed_6\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStack->longestValidParentheses(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Longest_Valid_Parentheses.cpp\\\\SolutionStack\\\\longestValidParentheses(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStack */\n/* ConstructorDataNode SolutionStack() */\nAKA_mark(\"Calling: \\\\SolutionStack()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStack\\\\AKA_INSTANCE___SolutionStack\\\\SolutionStack()\");AKA_fCall++;AKA_INSTANCE___SolutionStack = new ::SolutionStack();\n\n\nchar* akaRandomName877703 = new char[2];akaRandomName877703[0] = 40;akaRandomName877703[1] = '\\0';string s=akaRandomName877703;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStack_longestValidParentheses_string_directed_0(void) {\n{\nAKA_test_case_name=\"SolutionStack_longestValidParentheses_string_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStack */\n/* ConstructorDataNode SolutionStack() */\nAKA_mark(\"Calling: \\\\SolutionStack()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStack\\\\AKA_INSTANCE___SolutionStack\\\\SolutionStack()\");AKA_fCall++;AKA_INSTANCE___SolutionStack = new ::SolutionStack();\n\n\nchar* akaRandomName804750 = new char[2];akaRandomName804750[0] = 40;akaRandomName804750[1] = '\\0';string s=akaRandomName804750;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStack_longestValidParentheses_string_directed_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStack->longestValidParentheses(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Longest_Valid_Parentheses.cpp\\\\SolutionStack\\\\longestValidParentheses(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStack */\n/* ConstructorDataNode SolutionStack() */\nAKA_mark(\"Calling: \\\\SolutionStack()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStack\\\\AKA_INSTANCE___SolutionStack\\\\SolutionStack()\");AKA_fCall++;AKA_INSTANCE___SolutionStack = new ::SolutionStack();\n\n\nchar* akaRandomName972832 = new char[2];akaRandomName972832[0] = 40;akaRandomName972832[1] = '\\0';string s=akaRandomName972832;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 4,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStack_longestValidParentheses_string_directed_1(void) {\n{\nAKA_test_case_name=\"SolutionStack_longestValidParentheses_string_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStack */\n/* ConstructorDataNode SolutionStack() */\nAKA_mark(\"Calling: \\\\SolutionStack()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStack\\\\AKA_INSTANCE___SolutionStack\\\\SolutionStack()\");AKA_fCall++;AKA_INSTANCE___SolutionStack = new ::SolutionStack();\n\n\nchar* akaRandomName904577 = new char[2];akaRandomName904577[0] = 40;akaRandomName904577[1] = '\\0';string s=akaRandomName904577;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStack_longestValidParentheses_string_directed_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStack->longestValidParentheses(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Longest_Valid_Parentheses.cpp\\\\SolutionStack\\\\longestValidParentheses(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStack */\n/* ConstructorDataNode SolutionStack() */\nAKA_mark(\"Calling: \\\\SolutionStack()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStack\\\\AKA_INSTANCE___SolutionStack\\\\SolutionStack()\");AKA_fCall++;AKA_INSTANCE___SolutionStack = new ::SolutionStack();\n\n\nchar* akaRandomName357808 = new char[2];akaRandomName357808[0] = 40;akaRandomName357808[1] = '\\0';string s=akaRandomName357808;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 5,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStack_longestValidParentheses_string_directed_2(void) {\n{\nAKA_test_case_name=\"SolutionStack_longestValidParentheses_string_directed_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStack */\n/* ConstructorDataNode SolutionStack() */\nAKA_mark(\"Calling: \\\\SolutionStack()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStack\\\\AKA_INSTANCE___SolutionStack\\\\SolutionStack()\");AKA_fCall++;AKA_INSTANCE___SolutionStack = new ::SolutionStack();\n\n\nchar* akaRandomName123250 = new char[2];akaRandomName123250[0] = 40;akaRandomName123250[1] = '\\0';string s=akaRandomName123250;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStack_longestValidParentheses_string_directed_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStack->longestValidParentheses(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Longest_Valid_Parentheses.cpp\\\\SolutionStack\\\\longestValidParentheses(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStack */\n/* ConstructorDataNode SolutionStack() */\nAKA_mark(\"Calling: \\\\SolutionStack()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStack\\\\AKA_INSTANCE___SolutionStack\\\\SolutionStack()\");AKA_fCall++;AKA_INSTANCE___SolutionStack = new ::SolutionStack();\n\n\nchar* akaRandomName190232 = new char[2];akaRandomName190232[0] = 40;akaRandomName190232[1] = '\\0';string s=akaRandomName190232;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 6,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStack_longestValidParentheses_string_directed_3(void) {\n{\nAKA_test_case_name=\"SolutionStack_longestValidParentheses_string_directed_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStack */\n/* ConstructorDataNode SolutionStack() */\nAKA_mark(\"Calling: \\\\SolutionStack()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStack\\\\AKA_INSTANCE___SolutionStack\\\\SolutionStack()\");AKA_fCall++;AKA_INSTANCE___SolutionStack = new ::SolutionStack();\n\n\nchar* akaRandomName778072 = new char[2];akaRandomName778072[0] = 40;akaRandomName778072[1] = '\\0';string s=akaRandomName778072;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStack_longestValidParentheses_string_directed_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStack->longestValidParentheses(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Longest_Valid_Parentheses.cpp\\\\SolutionStack\\\\longestValidParentheses(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStack */\n/* ConstructorDataNode SolutionStack() */\nAKA_mark(\"Calling: \\\\SolutionStack()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStack\\\\AKA_INSTANCE___SolutionStack\\\\SolutionStack()\");AKA_fCall++;AKA_INSTANCE___SolutionStack = new ::SolutionStack();\n\n\nchar* akaRandomName489010 = new char[2];akaRandomName489010[0] = 40;akaRandomName489010[1] = '\\0';string s=akaRandomName489010;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 7,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStack_longestValidParentheses_string_random_1(void) {\n{\nAKA_test_case_name=\"SolutionStack_longestValidParentheses_string_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStack */\n/* ConstructorDataNode SolutionStack() */\nAKA_mark(\"Calling: \\\\SolutionStack()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStack\\\\AKA_INSTANCE___SolutionStack\\\\SolutionStack()\");AKA_fCall++;AKA_INSTANCE___SolutionStack = new ::SolutionStack();\n\n\nchar* akaRandomName638838 = new char[2];akaRandomName638838[0] = 120;akaRandomName638838[1] = '\\0';string s=akaRandomName638838;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStack_longestValidParentheses_string_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStack->longestValidParentheses(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Longest_Valid_Parentheses.cpp\\\\SolutionStack\\\\longestValidParentheses(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStack */\n/* ConstructorDataNode SolutionStack() */\nAKA_mark(\"Calling: \\\\SolutionStack()|ROOT\\\\Longest_Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStack\\\\AKA_INSTANCE___SolutionStack\\\\SolutionStack()\");AKA_fCall++;AKA_INSTANCE___SolutionStack = new ::SolutionStack();\n\n\nchar* akaRandomName529446 = new char[2];akaRandomName529446[0] = 120;akaRandomName529446[1] = '\\0';string s=akaRandomName529446;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class SolutionStack {\r public:\r   int longestValidParentheses(string s) {    \r     stack<int> S;\r     int max_length = 0, start = s.length();\r     for (int i = 0; i < s.length(); ++i) {\r       if (s[i] == '(') {\r \tS.push(i);\r       } else {\r \tif (S.empty()) {\r \t  start = s.length();\r \t} else {\r \t  start = min(start, S.top());\r \t  S.pop();\r \t  max_length = max(max_length, S.empty() ? i - start + 1 : i - S.top());\r \t}\r       }\r     }\r     return max_length;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\thirdteen\\Longest_Valid_Parentheses.cpp\\SolutionStack\\longestValidParentheses(string)"
+    },
+    {
+        "f": [],
+        "fm": "int largestRectangleArea(vector<int> &height) {\r         int result = 0;\r         stack<pair<int, int> > S;\r         for (int i = 0; i < height.size(); ++i) {\r             int h = height[i];\r             int pos = i;\r             while (!S.empty() && h < S.top().second) {\r                 pos = S.top().first;\r                 result = max(result , S.top().second * (i - pos));\r                 S.pop();\r             }\r             if (S.empty() || h > S.top().second) S.push(make_pair(pos, h));\r         }\r         while (!S.empty()) {\r             result = max(result, S.top().second * ((int)height.size() - S.top().first));\r             S.pop();\r         }\r         return result;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_largestRectangleArea_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_largestRectangleArea_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=214765068;\nheight.push_back(height_element0);\nint height_element1=-496176305;\nheight.push_back(height_element1);\nint height_element2=1001982247;\nheight.push_back(height_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_largestRectangleArea_vector_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->largestRectangleArea(height);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\Solution\\\\largestRectangleArea(vector<int>&)\");\n\n\nvector<int> EXPECTED_height;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=214765068;\nheight.push_back(height_element0);\nint height_element1=-496176305;\nheight.push_back(height_element1);\nint height_element2=1001982247;\nheight.push_back(height_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_largestRectangleArea_vector_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_largestRectangleArea_vector_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_largestRectangleArea_vector_int_directed_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->largestRectangleArea(height);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\Solution\\\\largestRectangleArea(vector<int>&)\");\n\n\nvector<int> EXPECTED_height;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int largestRectangleArea(vector<int> &height) {\r         int result = 0;\r         stack<pair<int, int> > S;\r         for (int i = 0; i < height.size(); ++i) {\r             int h = height[i];\r             int pos = i;\r             while (!S.empty() && h < S.top().second) {\r                 pos = S.top().first;\r                 result = max(result , S.top().second * (i - pos));\r                 S.pop();\r             }\r             if (S.empty() || h > S.top().second) S.push(make_pair(pos, h));\r         }\r         while (!S.empty()) {\r             result = max(result, S.top().second * ((int)height.size() - S.top().first));\r             S.pop();\r         }\r         return result;\r     }\r     int maximalRectangle(vector<vector<char> > &matrix) {\r         int H = matrix.size(), W = H ? matrix[0].size() : 0;\r         if (H == 0) return 0;\r         \r         int max_rect = 0;\r         vector<int> hist(W, 0);\r         for (int i = 0; i < H; ++i) {\r             for (int j = 0; j < W; ++j) {\r                 hist[j] = matrix[i][j] == '1' ? hist[j] + 1 : 0;\r             }\r             max_rect = max(max_rect, largestRectangleArea(hist));\r         }\r         return max_rect;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\thirdteen\\Maximal_Rectangle.cpp\\Solution\\largestRectangleArea(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int maximalRectangle(vector<vector<char> > &matrix) {\r         int H = matrix.size(), W = H ? matrix[0].size() : 0;\r         if (H == 0) return 0;\r         \r         int max_rect = 0;\r         vector<int> hist(W, 0);\r         for (int i = 0; i < H; ++i) {\r             for (int j = 0; j < W; ++j) {\r                 hist[j] = matrix[i][j] == '1' ? hist[j] + 1 : 0;\r             }\r             max_rect = max(max_rect, largestRectangleArea(hist));\r         }\r         return max_rect;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maximalRectangle_vector_vector_char_random_3(void) {\n{\nAKA_test_case_name=\"Solution_maximalRectangle_vector_vector_char_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<char>> matrix;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<char> matrix_element0;\nchar matrix_element0_element0=83;\nmatrix_element0.push_back(matrix_element0_element0);\nchar matrix_element0_element1=47;\nmatrix_element0.push_back(matrix_element0_element1);\nchar matrix_element0_element2=-100;\nmatrix_element0.push_back(matrix_element0_element2);\nmatrix.push_back(matrix_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maximalRectangle_vector_vector_char_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maximalRectangle(matrix);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\Solution\\\\maximalRectangle(vector<vector<char>>&)\");\n\n\nvector<vector<char>> EXPECTED_matrix;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<char>> matrix;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<char> matrix_element0;\nchar matrix_element0_element0=83;\nmatrix_element0.push_back(matrix_element0_element0);\nchar matrix_element0_element1=47;\nmatrix_element0.push_back(matrix_element0_element1);\nchar matrix_element0_element2=-100;\nmatrix_element0.push_back(matrix_element0_element2);\nmatrix.push_back(matrix_element0);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maximalRectangle_vector_vector_char_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_maximalRectangle_vector_vector_char_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<char>> matrix;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maximalRectangle_vector_vector_char_directed_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maximalRectangle(matrix);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\Solution\\\\maximalRectangle(vector<vector<char>>&)\");\n\n\nvector<vector<char>> EXPECTED_matrix;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<char>> matrix;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int largestRectangleArea(vector<int> &height) {\r         int result = 0;\r         stack<pair<int, int> > S;\r         for (int i = 0; i < height.size(); ++i) {\r             int h = height[i];\r             int pos = i;\r             while (!S.empty() && h < S.top().second) {\r                 pos = S.top().first;\r                 result = max(result , S.top().second * (i - pos));\r                 S.pop();\r             }\r             if (S.empty() || h > S.top().second) S.push(make_pair(pos, h));\r         }\r         while (!S.empty()) {\r             result = max(result, S.top().second * ((int)height.size() - S.top().first));\r             S.pop();\r         }\r         return result;\r     }\r     int maximalRectangle(vector<vector<char> > &matrix) {\r         int H = matrix.size(), W = H ? matrix[0].size() : 0;\r         if (H == 0) return 0;\r         \r         int max_rect = 0;\r         vector<int> hist(W, 0);\r         for (int i = 0; i < H; ++i) {\r             for (int j = 0; j < W; ++j) {\r                 hist[j] = matrix[i][j] == '1' ? hist[j] + 1 : 0;\r             }\r             max_rect = max(max_rect, largestRectangleArea(hist));\r         }\r         return max_rect;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\thirdteen\\Maximal_Rectangle.cpp\\Solution\\maximalRectangle(vector<vector<char>>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<char> And(const vector<char>& a, const vector<char>& b) {\r         vector<char> c(a.size(), '0');\r         for (int i = 0; i < c.size(); ++i) {\r             if (a[i] == '1' && b[i] == '1') c[i] = '1';\r         }\r         return c;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionSlow_And_vector_char_const_vector_char_const_directed_1(void) {\n{\nAKA_test_case_name=\"SolutionSlow_And_vector_char_const_vector_char_const_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\na.push_back(a_element0);\na.push_back(a_element1);\na.push_back(a_element2);\na.push_back(a_element3);\na.push_back(a_element4);\n/* VectorDataNode b */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionSlow_And_vector_char_const_vector_char_const_directed_1\");vector<char> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionSlow->And(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\SolutionSlow\\\\And(vector<char>const&,vector<char>const&)\");\n\n\nvector<char>const EXPECTED_a;\n\nvector<char>const EXPECTED_b;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\na.push_back(a_element0);\na.push_back(a_element1);\na.push_back(a_element2);\na.push_back(a_element3);\na.push_back(a_element4);\n/* VectorDataNode b */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionSlow_And_vector_char_const_vector_char_const_directed_0(void) {\n{\nAKA_test_case_name=\"SolutionSlow_And_vector_char_const_vector_char_const_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\na.push_back(a_element0);\na.push_back(a_element1);\na.push_back(a_element2);\na.push_back(a_element3);\na.push_back(a_element4);\na.push_back(a_element5);\na.push_back(a_element6);\na.push_back(a_element7);\na.push_back(a_element8);\na.push_back(a_element9);\n/* VectorDataNode b */\nb.push_back(b_element0);\nb.push_back(b_element1);\nb.push_back(b_element2);\nb.push_back(b_element3);\nb.push_back(b_element4);\nb.push_back(b_element5);\nb.push_back(b_element6);\nb.push_back(b_element7);\nb.push_back(b_element8);\nb.push_back(b_element9);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionSlow_And_vector_char_const_vector_char_const_directed_0\");vector<char> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionSlow->And(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\SolutionSlow\\\\And(vector<char>const&,vector<char>const&)\");\n\n\nvector<char>const EXPECTED_a;\n\nvector<char>const EXPECTED_b;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\na.push_back(a_element0);\na.push_back(a_element1);\na.push_back(a_element2);\na.push_back(a_element3);\na.push_back(a_element4);\na.push_back(a_element5);\na.push_back(a_element6);\na.push_back(a_element7);\na.push_back(a_element8);\na.push_back(a_element9);\n/* VectorDataNode b */\nb.push_back(b_element0);\nb.push_back(b_element1);\nb.push_back(b_element2);\nb.push_back(b_element3);\nb.push_back(b_element4);\nb.push_back(b_element5);\nb.push_back(b_element6);\nb.push_back(b_element7);\nb.push_back(b_element8);\nb.push_back(b_element9);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionSlow_And_vector_char_const_vector_char_const_directed_3(void) {\n{\nAKA_test_case_name=\"SolutionSlow_And_vector_char_const_vector_char_const_directed_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\na.push_back(a_element0);\na.push_back(a_element1);\na.push_back(a_element2);\na.push_back(a_element3);\na.push_back(a_element4);\na.push_back(a_element5);\na.push_back(a_element6);\na.push_back(a_element7);\na.push_back(a_element8);\na.push_back(a_element9);\n/* VectorDataNode b */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionSlow_And_vector_char_const_vector_char_const_directed_3\");vector<char> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionSlow->And(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\SolutionSlow\\\\And(vector<char>const&,vector<char>const&)\");\n\n\nvector<char>const EXPECTED_a;\n\nvector<char>const EXPECTED_b;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\na.push_back(a_element0);\na.push_back(a_element1);\na.push_back(a_element2);\na.push_back(a_element3);\na.push_back(a_element4);\na.push_back(a_element5);\na.push_back(a_element6);\na.push_back(a_element7);\na.push_back(a_element8);\na.push_back(a_element9);\n/* VectorDataNode b */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionSlow_And_vector_char_const_vector_char_const_directed_2(void) {\n{\nAKA_test_case_name=\"SolutionSlow_And_vector_char_const_vector_char_const_directed_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\na.push_back(a_element0);\na.push_back(a_element1);\na.push_back(a_element2);\na.push_back(a_element3);\na.push_back(a_element4);\na.push_back(a_element5);\na.push_back(a_element6);\na.push_back(a_element7);\n/* VectorDataNode b */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionSlow_And_vector_char_const_vector_char_const_directed_2\");vector<char> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionSlow->And(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\SolutionSlow\\\\And(vector<char>const&,vector<char>const&)\");\n\n\nvector<char>const EXPECTED_a;\n\nvector<char>const EXPECTED_b;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\na.push_back(a_element0);\na.push_back(a_element1);\na.push_back(a_element2);\na.push_back(a_element3);\na.push_back(a_element4);\na.push_back(a_element5);\na.push_back(a_element6);\na.push_back(a_element7);\n/* VectorDataNode b */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 4,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionSlow_And_vector_char_const_vector_char_const_random_0(void) {\n{\nAKA_test_case_name=\"SolutionSlow_And_vector_char_const_vector_char_const_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nchar a_element0=64;\na.push_back(a_element0);\n/* VectorDataNode b */\nchar b_element0=55;\nb.push_back(b_element0);\nchar b_element1=-37;\nb.push_back(b_element1);\nchar b_element2=31;\nb.push_back(b_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionSlow_And_vector_char_const_vector_char_const_random_0\");vector<char> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionSlow->And(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\SolutionSlow\\\\And(vector<char>const&,vector<char>const&)\");\n\n\nvector<char>const EXPECTED_a;\n\nvector<char>const EXPECTED_b;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nchar a_element0=64;\na.push_back(a_element0);\n/* VectorDataNode b */\nchar b_element0=55;\nb.push_back(b_element0);\nchar b_element1=-37;\nb.push_back(b_element1);\nchar b_element2=31;\nb.push_back(b_element2);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 5,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionSlow_And_vector_char_const_vector_char_const_directed_5(void) {\n{\nAKA_test_case_name=\"SolutionSlow_And_vector_char_const_vector_char_const_directed_5\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\na.push_back(a_element0);\na.push_back(a_element1);\na.push_back(a_element2);\na.push_back(a_element3);\na.push_back(a_element4);\na.push_back(a_element5);\na.push_back(a_element6);\na.push_back(a_element7);\na.push_back(a_element8);\na.push_back(a_element9);\na.push_back(a_element10);\n/* VectorDataNode b */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionSlow_And_vector_char_const_vector_char_const_directed_5\");vector<char> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionSlow->And(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\SolutionSlow\\\\And(vector<char>const&,vector<char>const&)\");\n\n\nvector<char>const EXPECTED_a;\n\nvector<char>const EXPECTED_b;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\na.push_back(a_element0);\na.push_back(a_element1);\na.push_back(a_element2);\na.push_back(a_element3);\na.push_back(a_element4);\na.push_back(a_element5);\na.push_back(a_element6);\na.push_back(a_element7);\na.push_back(a_element8);\na.push_back(a_element9);\na.push_back(a_element10);\n/* VectorDataNode b */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 6,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionSlow_And_vector_char_const_vector_char_const_directed_4(void) {\n{\nAKA_test_case_name=\"SolutionSlow_And_vector_char_const_vector_char_const_directed_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\na.push_back(a_element0);\na.push_back(a_element1);\na.push_back(a_element2);\na.push_back(a_element3);\n/* VectorDataNode b */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionSlow_And_vector_char_const_vector_char_const_directed_4\");vector<char> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionSlow->And(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\SolutionSlow\\\\And(vector<char>const&,vector<char>const&)\");\n\n\nvector<char>const EXPECTED_a;\n\nvector<char>const EXPECTED_b;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\na.push_back(a_element0);\na.push_back(a_element1);\na.push_back(a_element2);\na.push_back(a_element3);\n/* VectorDataNode b */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 7,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionSlow_And_vector_char_const_vector_char_const_directed_7(void) {\n{\nAKA_test_case_name=\"SolutionSlow_And_vector_char_const_vector_char_const_directed_7\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\na.push_back(a_element0);\na.push_back(a_element1);\na.push_back(a_element2);\na.push_back(a_element3);\n/* VectorDataNode b */\nb.push_back(b_element0);\nb.push_back(b_element1);\nb.push_back(b_element2);\nb.push_back(b_element3);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionSlow_And_vector_char_const_vector_char_const_directed_7\");vector<char> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionSlow->And(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\SolutionSlow\\\\And(vector<char>const&,vector<char>const&)\");\n\n\nvector<char>const EXPECTED_a;\n\nvector<char>const EXPECTED_b;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\na.push_back(a_element0);\na.push_back(a_element1);\na.push_back(a_element2);\na.push_back(a_element3);\n/* VectorDataNode b */\nb.push_back(b_element0);\nb.push_back(b_element1);\nb.push_back(b_element2);\nb.push_back(b_element3);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 8,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionSlow_And_vector_char_const_vector_char_const_directed_6(void) {\n{\nAKA_test_case_name=\"SolutionSlow_And_vector_char_const_vector_char_const_directed_6\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\na.push_back(a_element0);\na.push_back(a_element1);\na.push_back(a_element2);\na.push_back(a_element3);\na.push_back(a_element4);\na.push_back(a_element5);\na.push_back(a_element6);\na.push_back(a_element7);\na.push_back(a_element8);\na.push_back(a_element9);\na.push_back(a_element10);\n/* VectorDataNode b */\nb.push_back(b_element0);\nb.push_back(b_element1);\nb.push_back(b_element2);\nb.push_back(b_element3);\nb.push_back(b_element4);\nb.push_back(b_element5);\nb.push_back(b_element6);\nb.push_back(b_element7);\nb.push_back(b_element8);\nb.push_back(b_element9);\nb.push_back(b_element10);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionSlow_And_vector_char_const_vector_char_const_directed_6\");vector<char> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionSlow->And(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\SolutionSlow\\\\And(vector<char>const&,vector<char>const&)\");\n\n\nvector<char>const EXPECTED_a;\n\nvector<char>const EXPECTED_b;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\na.push_back(a_element0);\na.push_back(a_element1);\na.push_back(a_element2);\na.push_back(a_element3);\na.push_back(a_element4);\na.push_back(a_element5);\na.push_back(a_element6);\na.push_back(a_element7);\na.push_back(a_element8);\na.push_back(a_element9);\na.push_back(a_element10);\n/* VectorDataNode b */\nb.push_back(b_element0);\nb.push_back(b_element1);\nb.push_back(b_element2);\nb.push_back(b_element3);\nb.push_back(b_element4);\nb.push_back(b_element5);\nb.push_back(b_element6);\nb.push_back(b_element7);\nb.push_back(b_element8);\nb.push_back(b_element9);\nb.push_back(b_element10);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 9,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionSlow_And_vector_char_const_vector_char_const_directed_8(void) {\n{\nAKA_test_case_name=\"SolutionSlow_And_vector_char_const_vector_char_const_directed_8\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\na.push_back(a_element0);\na.push_back(a_element1);\na.push_back(a_element2);\na.push_back(a_element3);\na.push_back(a_element4);\na.push_back(a_element5);\n/* VectorDataNode b */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionSlow_And_vector_char_const_vector_char_const_directed_8\");vector<char> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionSlow->And(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\SolutionSlow\\\\And(vector<char>const&,vector<char>const&)\");\n\n\nvector<char>const EXPECTED_a;\n\nvector<char>const EXPECTED_b;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>a;\nvector<char>b;\nvector<char> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\na.push_back(a_element0);\na.push_back(a_element1);\na.push_back(a_element2);\na.push_back(a_element3);\na.push_back(a_element4);\na.push_back(a_element5);\n/* VectorDataNode b */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class SolutionSlow {\r public:\r     vector<char> And(const vector<char>& a, const vector<char>& b) {\r         vector<char> c(a.size(), '0');\r         for (int i = 0; i < c.size(); ++i) {\r             if (a[i] == '1' && b[i] == '1') c[i] = '1';\r         }\r         return c;\r     }\r     int maxRun(const vector<char>& v) {\r         int current_run = 0, max_run = 0;\r         for (int i = 0; i < v.size(); ++i) {\r             if (v[i] == '1') {\r                 max_run = max(max_run, ++current_run);\r             } else {\r                 current_run = 0;\r             }\r         }\r         return max_run;\r     }\r     int maximalRectangle(vector<vector<char> > &matrix) {\r         int H = matrix.size(), W = H ? matrix[0].size() : 0;\r         int max_rect = 0;\r         for (int i = 0; i < H; ++i) {\r             vector<char> all_ones(W, '1');\r             for (int j = i; j < H; ++j) {\r                 all_ones = And(all_ones, matrix[j]);\r                 // Cannot exceed max_rect for this j\r                 if ((j - i + 1) * W <= max_rect) continue;\r                 int max_run = maxRun(all_ones);\r                 // Cannot exceed max_rect for the rest of j for this i\r                 if ((H - i) * max_run < max_rect) break;\r                 max_rect = max(max_rect, (j - i + 1) * max_run);\r             }\r         }\r         return max_rect;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\thirdteen\\Maximal_Rectangle.cpp\\SolutionSlow\\And(vector<char>const&,vector<char>const&)"
+    },
+    {
+        "f": [],
+        "fm": "int maxRun(const vector<char>& v) {\r         int current_run = 0, max_run = 0;\r         for (int i = 0; i < v.size(); ++i) {\r             if (v[i] == '1') {\r                 max_run = max(max_run, ++current_run);\r             } else {\r                 current_run = 0;\r             }\r         }\r         return max_run;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionSlow_maxRun_vector_char_const_directed_2(void) {\n{\nAKA_test_case_name=\"SolutionSlow_maxRun_vector_char_const_directed_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>v;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nv.push_back(v_element0);\nv.push_back(v_element1);\nv.push_back(v_element2);\nv.push_back(v_element3);\nv.push_back(v_element4);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionSlow_maxRun_vector_char_const_directed_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionSlow->maxRun(v);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\SolutionSlow\\\\maxRun(vector<char>const&)\");\n\n\nvector<char>const EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>v;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nv.push_back(v_element0);\nv.push_back(v_element1);\nv.push_back(v_element2);\nv.push_back(v_element3);\nv.push_back(v_element4);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionSlow_maxRun_vector_char_const_directed_1(void) {\n{\nAKA_test_case_name=\"SolutionSlow_maxRun_vector_char_const_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>v;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nv.push_back(v_element0);\nv.push_back(v_element1);\nv.push_back(v_element2);\nv.push_back(v_element3);\nv.push_back(v_element4);\nv.push_back(v_element5);\nv.push_back(v_element6);\nv.push_back(v_element7);\nv.push_back(v_element8);\nv.push_back(v_element9);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionSlow_maxRun_vector_char_const_directed_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionSlow->maxRun(v);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\SolutionSlow\\\\maxRun(vector<char>const&)\");\n\n\nvector<char>const EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>v;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nv.push_back(v_element0);\nv.push_back(v_element1);\nv.push_back(v_element2);\nv.push_back(v_element3);\nv.push_back(v_element4);\nv.push_back(v_element5);\nv.push_back(v_element6);\nv.push_back(v_element7);\nv.push_back(v_element8);\nv.push_back(v_element9);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionSlow_maxRun_vector_char_const_directed_0(void) {\n{\nAKA_test_case_name=\"SolutionSlow_maxRun_vector_char_const_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>v;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nv.push_back(v_element0);\nv.push_back(v_element1);\nv.push_back(v_element2);\nv.push_back(v_element3);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionSlow_maxRun_vector_char_const_directed_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionSlow->maxRun(v);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\SolutionSlow\\\\maxRun(vector<char>const&)\");\n\n\nvector<char>const EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>v;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nv.push_back(v_element0);\nv.push_back(v_element1);\nv.push_back(v_element2);\nv.push_back(v_element3);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionSlow_maxRun_vector_char_const_directed_5(void) {\n{\nAKA_test_case_name=\"SolutionSlow_maxRun_vector_char_const_directed_5\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>v;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nv.push_back(v_element0);\nv.push_back(v_element1);\nv.push_back(v_element2);\nv.push_back(v_element3);\nv.push_back(v_element4);\nv.push_back(v_element5);\nv.push_back(v_element6);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionSlow_maxRun_vector_char_const_directed_5\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionSlow->maxRun(v);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\SolutionSlow\\\\maxRun(vector<char>const&)\");\n\n\nvector<char>const EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>v;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nv.push_back(v_element0);\nv.push_back(v_element1);\nv.push_back(v_element2);\nv.push_back(v_element3);\nv.push_back(v_element4);\nv.push_back(v_element5);\nv.push_back(v_element6);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 4,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionSlow_maxRun_vector_char_const_directed_4(void) {\n{\nAKA_test_case_name=\"SolutionSlow_maxRun_vector_char_const_directed_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>v;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nv.push_back(v_element0);\nv.push_back(v_element1);\nv.push_back(v_element2);\nv.push_back(v_element3);\nv.push_back(v_element4);\nv.push_back(v_element5);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionSlow_maxRun_vector_char_const_directed_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionSlow->maxRun(v);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\SolutionSlow\\\\maxRun(vector<char>const&)\");\n\n\nvector<char>const EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>v;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nv.push_back(v_element0);\nv.push_back(v_element1);\nv.push_back(v_element2);\nv.push_back(v_element3);\nv.push_back(v_element4);\nv.push_back(v_element5);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 5,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionSlow_maxRun_vector_char_const_directed_3(void) {\n{\nAKA_test_case_name=\"SolutionSlow_maxRun_vector_char_const_directed_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>v;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nv.push_back(v_element0);\nv.push_back(v_element1);\nv.push_back(v_element2);\nv.push_back(v_element3);\nv.push_back(v_element4);\nv.push_back(v_element5);\nv.push_back(v_element6);\nv.push_back(v_element7);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionSlow_maxRun_vector_char_const_directed_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionSlow->maxRun(v);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\SolutionSlow\\\\maxRun(vector<char>const&)\");\n\n\nvector<char>const EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>v;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nv.push_back(v_element0);\nv.push_back(v_element1);\nv.push_back(v_element2);\nv.push_back(v_element3);\nv.push_back(v_element4);\nv.push_back(v_element5);\nv.push_back(v_element6);\nv.push_back(v_element7);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 6,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionSlow_maxRun_vector_char_const_random_2(void) {\n{\nAKA_test_case_name=\"SolutionSlow_maxRun_vector_char_const_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>v;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nchar v_element0=95;\nv.push_back(v_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionSlow_maxRun_vector_char_const_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionSlow->maxRun(v);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\SolutionSlow\\\\maxRun(vector<char>const&)\");\n\n\nvector<char>const EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<char>v;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nchar v_element0=95;\nv.push_back(v_element0);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class SolutionSlow {\r public:\r     vector<char> And(const vector<char>& a, const vector<char>& b) {\r         vector<char> c(a.size(), '0');\r         for (int i = 0; i < c.size(); ++i) {\r             if (a[i] == '1' && b[i] == '1') c[i] = '1';\r         }\r         return c;\r     }\r     int maxRun(const vector<char>& v) {\r         int current_run = 0, max_run = 0;\r         for (int i = 0; i < v.size(); ++i) {\r             if (v[i] == '1') {\r                 max_run = max(max_run, ++current_run);\r             } else {\r                 current_run = 0;\r             }\r         }\r         return max_run;\r     }\r     int maximalRectangle(vector<vector<char> > &matrix) {\r         int H = matrix.size(), W = H ? matrix[0].size() : 0;\r         int max_rect = 0;\r         for (int i = 0; i < H; ++i) {\r             vector<char> all_ones(W, '1');\r             for (int j = i; j < H; ++j) {\r                 all_ones = And(all_ones, matrix[j]);\r                 // Cannot exceed max_rect for this j\r                 if ((j - i + 1) * W <= max_rect) continue;\r                 int max_run = maxRun(all_ones);\r                 // Cannot exceed max_rect for the rest of j for this i\r                 if ((H - i) * max_run < max_rect) break;\r                 max_rect = max(max_rect, (j - i + 1) * max_run);\r             }\r         }\r         return max_rect;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\thirdteen\\Maximal_Rectangle.cpp\\SolutionSlow\\maxRun(vector<char>const&)"
+    },
+    {
+        "f": [],
+        "fm": "int maximalRectangle(vector<vector<char> > &matrix) {\r         int H = matrix.size(), W = H ? matrix[0].size() : 0;\r         int max_rect = 0;\r         for (int i = 0; i < H; ++i) {\r             vector<char> all_ones(W, '1');\r             for (int j = i; j < H; ++j) {\r                 all_ones = And(all_ones, matrix[j]);\r                 // Cannot exceed max_rect for this j\r                 if ((j - i + 1) * W <= max_rect) continue;\r                 int max_run = maxRun(all_ones);\r                 // Cannot exceed max_rect for the rest of j for this i\r                 if ((H - i) * max_run < max_rect) break;\r                 max_rect = max(max_rect, (j - i + 1) * max_run);\r             }\r         }\r         return max_rect;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionSlow_maximalRectangle_vector_vector_char_random_3(void) {\n{\nAKA_test_case_name=\"SolutionSlow_maximalRectangle_vector_vector_char_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<vector<char>> matrix;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<char> matrix_element0;\nchar matrix_element0_element0=-97;\nmatrix_element0.push_back(matrix_element0_element0);\nchar matrix_element0_element1=113;\nmatrix_element0.push_back(matrix_element0_element1);\nmatrix.push_back(matrix_element0);\nvector<char> matrix_element1;\nchar matrix_element1_element0=62;\nmatrix_element1.push_back(matrix_element1_element0);\nchar matrix_element1_element1=72;\nmatrix_element1.push_back(matrix_element1_element1);\nmatrix.push_back(matrix_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionSlow_maximalRectangle_vector_vector_char_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionSlow->maximalRectangle(matrix);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximal_Rectangle.cpp\\\\SolutionSlow\\\\maximalRectangle(vector<vector<char>>&)\");\n\n\nvector<vector<char>> EXPECTED_matrix;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionSlow */\n/* ConstructorDataNode SolutionSlow() */\nAKA_mark(\"Calling: \\\\SolutionSlow()|ROOT\\\\Maximal_Rectangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionSlow\\\\AKA_INSTANCE___SolutionSlow\\\\SolutionSlow()\");AKA_fCall++;AKA_INSTANCE___SolutionSlow = new ::SolutionSlow();\n\n\nvector<vector<char>> matrix;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<char> matrix_element0;\nchar matrix_element0_element0=-97;\nmatrix_element0.push_back(matrix_element0_element0);\nchar matrix_element0_element1=113;\nmatrix_element0.push_back(matrix_element0_element1);\nmatrix.push_back(matrix_element0);\nvector<char> matrix_element1;\nchar matrix_element1_element0=62;\nmatrix_element1.push_back(matrix_element1_element0);\nchar matrix_element1_element1=72;\nmatrix_element1.push_back(matrix_element1_element1);\nmatrix.push_back(matrix_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class SolutionSlow {\r public:\r     vector<char> And(const vector<char>& a, const vector<char>& b) {\r         vector<char> c(a.size(), '0');\r         for (int i = 0; i < c.size(); ++i) {\r             if (a[i] == '1' && b[i] == '1') c[i] = '1';\r         }\r         return c;\r     }\r     int maxRun(const vector<char>& v) {\r         int current_run = 0, max_run = 0;\r         for (int i = 0; i < v.size(); ++i) {\r             if (v[i] == '1') {\r                 max_run = max(max_run, ++current_run);\r             } else {\r                 current_run = 0;\r             }\r         }\r         return max_run;\r     }\r     int maximalRectangle(vector<vector<char> > &matrix) {\r         int H = matrix.size(), W = H ? matrix[0].size() : 0;\r         int max_rect = 0;\r         for (int i = 0; i < H; ++i) {\r             vector<char> all_ones(W, '1');\r             for (int j = i; j < H; ++j) {\r                 all_ones = And(all_ones, matrix[j]);\r                 // Cannot exceed max_rect for this j\r                 if ((j - i + 1) * W <= max_rect) continue;\r                 int max_run = maxRun(all_ones);\r                 // Cannot exceed max_rect for the rest of j for this i\r                 if ((H - i) * max_run < max_rect) break;\r                 max_rect = max(max_rect, (j - i + 1) * max_run);\r             }\r         }\r         return max_rect;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\thirdteen\\Maximal_Rectangle.cpp\\SolutionSlow\\maximalRectangle(vector<vector<char>>&)"
+    },
+    {
+        "f": [],
+        "fm": "int maxDepth(TreeNode *root) {\r     if (!root) return 0;\r     return 1 + max(maxDepth(root->left), maxDepth(root->right));        \r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maxDepth_TreeNodemul_random_0(void) {\n{\nAKA_test_case_name=\"Solution_maxDepth_TreeNodemul_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Maximum_Depth_of_Binary_Tree.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=2021719464;\nAKA_mark(\"Calling: .\\\\thirdteen\\\\Maximum_Depth_of_Binary_Tree.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Maximum_Depth_of_Binary_Tree.cpp\\\\maxDepth(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root_0_DOT_left;\n/* SubStructDataNode left */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_left0_x=1399827781;\nAKA_mark(\"Calling: .\\\\thirdteen\\\\Maximum_Depth_of_Binary_Tree.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Maximum_Depth_of_Binary_Tree.cpp\\\\maxDepth(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\left\\\\left[0]\\\\left\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_left_0 = new ::TreeNode(root0_left0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).right;\nAKA_VECTOR_INIT_root_0_DOT_left.push_back(AKA_VECTOR_INIT_root_0_DOT_left_0);\n(*AKA_VECTOR_INIT_root_0).left = AKA_VECTOR_INIT_root_0_DOT_left[0];\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=-1203364174;\nAKA_mark(\"Calling: .\\\\thirdteen\\\\Maximum_Depth_of_Binary_Tree.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Maximum_Depth_of_Binary_Tree.cpp\\\\maxDepth(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_1\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maxDepth_TreeNodemul_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maxDepth(root);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\thirdteen\\\\Maximum_Depth_of_Binary_Tree.cpp\\\\Solution\\\\maxDepth(TreeNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Maximum_Depth_of_Binary_Tree.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=2021719464;\nAKA_mark(\"Calling: .\\\\thirdteen\\\\Maximum_Depth_of_Binary_Tree.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Maximum_Depth_of_Binary_Tree.cpp\\\\maxDepth(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root_0_DOT_left;\n/* SubStructDataNode left */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_left0_x=1399827781;\nAKA_mark(\"Calling: .\\\\thirdteen\\\\Maximum_Depth_of_Binary_Tree.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Maximum_Depth_of_Binary_Tree.cpp\\\\maxDepth(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\left\\\\left[0]\\\\left\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_left_0 = new ::TreeNode(root0_left0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).right;\nAKA_VECTOR_INIT_root_0_DOT_left.push_back(AKA_VECTOR_INIT_root_0_DOT_left_0);\n(*AKA_VECTOR_INIT_root_0).left = AKA_VECTOR_INIT_root_0_DOT_left[0];\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=-1203364174;\nAKA_mark(\"Calling: .\\\\thirdteen\\\\Maximum_Depth_of_Binary_Tree.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Maximum_Depth_of_Binary_Tree.cpp\\\\maxDepth(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_1\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int maxDepth(TreeNode *root) {\r     if (!root) return 0;\r     return 1 + max(maxDepth(root->left), maxDepth(root->right));        \r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\thirdteen\\Maximum_Depth_of_Binary_Tree.cpp\\Solution\\maxDepth(TreeNode*)"
+    }
+]

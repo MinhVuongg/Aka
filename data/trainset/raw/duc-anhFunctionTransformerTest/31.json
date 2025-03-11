@@ -1,0 +1,863 @@
+[
+    {
+        "f": [
+            "char * eeee;"
+        ],
+        "fm": "char* getName(){ return eeee; }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Others_getName_random_0(void) {\n{\nAKA_test_case_name=\"Others_getName_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Others */\n/* ConstructorDataNode Others() */\nAKA_mark(\"Calling: \\\\Others()|ROOT\\\\advanced.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Others\\\\AKA_INSTANCE___Others\\\\Others()\");AKA_fCall++;AKA_INSTANCE___Others = new ::Others();\n/* PointerCharacterDataNode eeee */\nAKA_INSTANCE___Others->eeee;\n\n\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Others_getName_random_0\");char* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Others->getName();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\advanced.cpp\\\\Others\\\\getName()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Others{\r private:\r \tchar* eeee;\r public:\r \tchar* getName(){ return eeee; }\r \tvoid setName(char* name){ this->eeee = name; }\t\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\advanced.cpp\\Others\\getName()"
+    },
+    {
+        "f": [
+            "char * eeee;"
+        ],
+        "fm": "void setName(char* name){ this->eeee = name; }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Others_setName_charmul_random_2(void) {\n{\nAKA_test_case_name=\"Others_setName_charmul_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Others */\n/* ConstructorDataNode Others() */\nAKA_mark(\"Calling: \\\\Others()|ROOT\\\\advanced.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Others\\\\AKA_INSTANCE___Others\\\\Others()\");AKA_fCall++;AKA_INSTANCE___Others = new ::Others();\n/* PointerCharacterDataNode eeee */\nAKA_INSTANCE___Others->eeee;\n\n\nchar AKA_ARRAY_INIT_name[2];\n\nchar AKA_ARRAY_INIT_name_0=111;\nAKA_ARRAY_INIT_name[0] = AKA_ARRAY_INIT_name_0;\n\nchar AKA_ARRAY_INIT_name_1=0;\nAKA_ARRAY_INIT_name[1] = AKA_ARRAY_INIT_name_1;\n\nchar* name = AKA_ARRAY_INIT_name;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode name */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Others_setName_charmul_random_2\");AKA_INSTANCE___Others->setName(name);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\advanced.cpp\\\\Others\\\\setName(char*)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Others{\r private:\r \tchar* eeee;\r public:\r \tchar* getName(){ return eeee; }\r \tvoid setName(char* name){ this->eeee = name; }\t\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\advanced.cpp\\Others\\setName(char*)"
+    },
+    {
+        "f": [
+            "int age;",
+            "char * name;",
+            "Others * other;"
+        ],
+        "fm": "void setAge(int age){ this->age = age; }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_SinhVien_setAge_int_random_0(void) {\n{\nAKA_test_case_name=\"SinhVien_setAge_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SinhVien */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\advanced.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SinhVien\\\\AKA_INSTANCE___SinhVien\\\\SinhVien()\");AKA_fCall++;AKA_INSTANCE___SinhVien = new ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* PointerCharacterDataNode name */\nAKA_INSTANCE___SinhVien->name;\n/* PointerStructureDataNode other */\nAKA_INSTANCE___SinhVien->other;\n\n\n\n\nint age=2089705578;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode age */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SinhVien_setAge_int_random_0\");AKA_INSTANCE___SinhVien->setAge(age);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\advanced.cpp\\\\SinhVien\\\\setAge(int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class SinhVien{\r private:\r \tint age;\r \tchar* name;\r \tOthers* other;\r public:\r \tvoid setAge(int age){ this->age = age; }\r \tvoid setName(char* name){ this->name = name; }\r \tint getAge(){return age;}\r \tchar* getName(){return name;}\r \tOthers* getOther(){ return other; }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\advanced.cpp\\SinhVien\\setAge(int)"
+    },
+    {
+        "f": [
+            "int age;",
+            "char * name;",
+            "Others * other;"
+        ],
+        "fm": "int getAge(){return age;}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_SinhVien_getAge_random_0(void) {\n{\nAKA_test_case_name=\"SinhVien_getAge_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SinhVien */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\advanced.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SinhVien\\\\AKA_INSTANCE___SinhVien\\\\SinhVien()\");AKA_fCall++;AKA_INSTANCE___SinhVien = new ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* PointerCharacterDataNode name */\nAKA_INSTANCE___SinhVien->name;\n/* PointerStructureDataNode other */\nAKA_INSTANCE___SinhVien->other;\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SinhVien_getAge_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SinhVien->getAge();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\advanced.cpp\\\\SinhVien\\\\getAge()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class SinhVien{\r private:\r \tint age;\r \tchar* name;\r \tOthers* other;\r public:\r \tvoid setAge(int age){ this->age = age; }\r \tvoid setName(char* name){ this->name = name; }\r \tint getAge(){return age;}\r \tchar* getName(){return name;}\r \tOthers* getOther(){ return other; }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\advanced.cpp\\SinhVien\\getAge()"
+    },
+    {
+        "f": [
+            "int age;",
+            "char * name;",
+            "Others * other;"
+        ],
+        "fm": "char* getName(){return name;}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_SinhVien_getName_random_0(void) {\n{\nAKA_test_case_name=\"SinhVien_getName_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SinhVien */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\advanced.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SinhVien\\\\AKA_INSTANCE___SinhVien\\\\SinhVien()\");AKA_fCall++;AKA_INSTANCE___SinhVien = new ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* PointerCharacterDataNode name */\nAKA_INSTANCE___SinhVien->name;\n/* PointerStructureDataNode other */\nAKA_INSTANCE___SinhVien->other;\n\n\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SinhVien_getName_random_0\");char* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SinhVien->getName();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\advanced.cpp\\\\SinhVien\\\\getName()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class SinhVien{\r private:\r \tint age;\r \tchar* name;\r \tOthers* other;\r public:\r \tvoid setAge(int age){ this->age = age; }\r \tvoid setName(char* name){ this->name = name; }\r \tint getAge(){return age;}\r \tchar* getName(){return name;}\r \tOthers* getOther(){ return other; }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\advanced.cpp\\SinhVien\\getName()"
+    },
+    {
+        "f": [
+            "int age;",
+            "char * name;",
+            "Others * other;"
+        ],
+        "fm": "Others* getOther(){ return other; }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_SinhVien_getOther_random_0(void) {\n{\nAKA_test_case_name=\"SinhVien_getOther_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SinhVien */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\advanced.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SinhVien\\\\AKA_INSTANCE___SinhVien\\\\SinhVien()\");AKA_fCall++;AKA_INSTANCE___SinhVien = new ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* PointerCharacterDataNode name */\nAKA_INSTANCE___SinhVien->name;\n/* PointerStructureDataNode other */\nAKA_INSTANCE___SinhVien->other;\n\n\nOthers* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SinhVien_getOther_random_0\");Others* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SinhVien->getOther();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\advanced.cpp\\\\SinhVien\\\\getOther()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class SinhVien{\r private:\r \tint age;\r \tchar* name;\r \tOthers* other;\r public:\r \tvoid setAge(int age){ this->age = age; }\r \tvoid setName(char* name){ this->name = name; }\r \tint getAge(){return age;}\r \tchar* getName(){return name;}\r \tOthers* getOther(){ return other; }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\advanced.cpp\\SinhVien\\getOther()"
+    },
+    {
+        "f": [],
+        "fm": "int class_test1(SinhVien sv){\r \tchar c = sv.getName()[2];\r \r \tif (sv.getAge() > 0)\r \tif (c == 'a')\r \t\treturn 0;\r \telse\r \t\treturn 1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_class_test1_SinhVien_random_0(void) {\n{\nAKA_test_case_name=\"class_test1_SinhVien_random_0\";\n\n// set up\n;\n\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* ClassDataNode sv */\n/* SubClassDataNode sv */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\advanced.cpp\\\\class_test1(SinhVien)\\\\sv\\\\sv\\\\SinhVien()\");AKA_fCall++;::SinhVien sv = ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* PointerCharacterDataNode name */\nsv.name;\n/* PointerStructureDataNode other */\nsv.other;\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test class_test1_SinhVien_random_0\");int AKA_ACTUAL_OUTPUT=class_test1(sv);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\advanced.cpp\\\\class_test1(SinhVien)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\advanced.cpp\\class_test1(SinhVien)"
+    },
+    {
+        "f": [],
+        "fm": "int class_test0(SinhVien sv){\r \r \tif (sv.getAge() > 0)\r \tif (sv.getName()[2] == 'a')\r \t\treturn 0;\r \telse\r \t\treturn 1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_class_test0_SinhVien_random_0(void) {\n{\nAKA_test_case_name=\"class_test0_SinhVien_random_0\";\n\n// set up\n;\n\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* ClassDataNode sv */\n/* SubClassDataNode sv */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\advanced.cpp\\\\class_test0(SinhVien)\\\\sv\\\\sv\\\\SinhVien()\");AKA_fCall++;::SinhVien sv = ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* PointerCharacterDataNode name */\nsv.name;\n/* PointerStructureDataNode other */\nsv.other;\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test class_test0_SinhVien_random_0\");int AKA_ACTUAL_OUTPUT=class_test0(sv);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\advanced.cpp\\\\class_test0(SinhVien)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\advanced.cpp\\class_test0(SinhVien)"
+    },
+    {
+        "f": [],
+        "fm": "int class_test2(SinhVien sv){\r \tchar* s = sv.getOther()[0].getName();\r \r \tif (sv.getAge() > 0)\r \tif (s[0] == 'a')\r \t\treturn 0;\r \telse\r \t\treturn 1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_class_test2_SinhVien_random_0(void) {\n{\nAKA_test_case_name=\"class_test2_SinhVien_random_0\";\n\n// set up\n;\n\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* ClassDataNode sv */\n/* SubClassDataNode sv */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\advanced.cpp\\\\class_test2(SinhVien)\\\\sv\\\\sv\\\\SinhVien()\");AKA_fCall++;::SinhVien sv = ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* PointerCharacterDataNode name */\nsv.name;\n/* PointerStructureDataNode other */\nsv.other;\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test class_test2_SinhVien_random_0\");int AKA_ACTUAL_OUTPUT=class_test2(sv);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\advanced.cpp\\\\class_test2(SinhVien)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\advanced.cpp\\class_test2(SinhVien)"
+    },
+    {
+        "f": [],
+        "fm": "SinhVien do_something(SinhVien sv){\r     if (sv.getAge() > 0){\r        int a = 0;\r     }\r     return sv;     \r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_do_something_SinhVien_random_0(void) {\n{\nAKA_test_case_name=\"do_something_SinhVien_random_0\";\n\n// set up\n;\n\n\n\n\n\n\n/* RootDataNode STATIC */\n/* ClassDataNode sv */\n/* SubClassDataNode sv */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\advanced.cpp\\\\do_something(SinhVien)\\\\sv\\\\sv\\\\SinhVien()\");AKA_fCall++;::SinhVien sv = ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* PointerCharacterDataNode name */\nsv.name;\n/* PointerStructureDataNode other */\nsv.other;\n/* ClassDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test do_something_SinhVien_random_0\");SinhVien AKA_ACTUAL_OUTPUT=do_something(sv);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\advanced.cpp\\\\do_something(SinhVien)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\advanced.cpp\\do_something(SinhVien)"
+    },
+    {
+        "f": [],
+        "fm": "int struct_test0(int sv_age,char sv_name_2,SinhVien sv){\r \tif (sv_age > 0) \r \tif (sv_name_2 == 'a')\r \t\treturn 0;\r \telse\r \t\treturn 1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_struct_test0_int_char_SinhVien_random_2(void) {\n{\nAKA_test_case_name=\"struct_test0_int_char_SinhVien_random_2\";\n\n// set up\n;\n\n\n\nint sv_age=-330712544;\n\nchar sv_name_2=118;\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode sv_age */\n/* NormalCharacterDataNode sv_name_2 */\n/* ClassDataNode sv */\n/* SubClassDataNode sv */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\advanced.cpp\\\\struct_test0(int,char,SinhVien)\\\\sv\\\\sv\\\\SinhVien()\");AKA_fCall++;::SinhVien sv = ::SinhVien();\n/* NormalNumberDataNode age */\nsv.age=-330712544;\n/* PointerCharacterDataNode name */\nsv.name;\n/* PointerStructureDataNode other */\nsv.other;\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test struct_test0_int_char_SinhVien_random_2\");int AKA_ACTUAL_OUTPUT=struct_test0(sv_age,sv_name_2,sv);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\advanced.cpp\\\\struct_test0(int,char,SinhVien)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_struct_test0_int_char_SinhVien_random_4(void) {\n{\nAKA_test_case_name=\"struct_test0_int_char_SinhVien_random_4\";\n\n// set up\n;\n\n\n\nint sv_age=851011838;\n\nchar sv_name_2=-104;\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode sv_age */\n/* NormalCharacterDataNode sv_name_2 */\n/* ClassDataNode sv */\n/* SubClassDataNode sv */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\advanced.cpp\\\\struct_test0(int,char,SinhVien)\\\\sv\\\\sv\\\\SinhVien()\");AKA_fCall++;::SinhVien sv = ::SinhVien();\n/* NormalNumberDataNode age */\nsv.age=851011838;\n/* PointerCharacterDataNode name */\nsv.name;\n/* PointerStructureDataNode other */\nsv.other;\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test struct_test0_int_char_SinhVien_random_4\");int AKA_ACTUAL_OUTPUT=struct_test0(sv_age,sv_name_2,sv);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\advanced.cpp\\\\struct_test0(int,char,SinhVien)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___House */\n/* ConstructorDataNode House() */\nAKA_mark(\"Calling: \\\\House()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___House\\\\AKA_INSTANCE___House\\\\House()\");AKA_fCall++;AKA_INSTANCE___House = new ::House();\n/* PointerCharacterDataNode address */\nAKA_INSTANCE___House->address;\n/* PointerStructureDataNode individuals */\nAKA_INSTANCE___House->individuals;\n\n\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\advanced.cpp\\struct_test0(int,char,SinhVien)"
+    },
+    {
+        "f": [
+            "House * houses;"
+        ],
+        "fm": "House* getHouses(){return houses;}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Town_getHouses_random_0(void) {\n{\nAKA_test_case_name=\"Town_getHouses_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Town_getHouses_random_0\");House* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Town->getHouses();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\average.cpp\\\\Town\\\\getHouses()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Town{\r \tprivate:\r \t\tHouse* houses;\r \tpublic:\r \t\tHouse* getHouses(){return houses;}\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\average.cpp\\Town\\getHouses()"
+    },
+    {
+        "f": [
+            "char * address;",
+            "People * individuals;"
+        ],
+        "fm": "char* getAddress(){return address;}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_House_getAddress_random_0(void) {\n{\nAKA_test_case_name=\"House_getAddress_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___House */\n/* ConstructorDataNode House() */\nAKA_mark(\"Calling: \\\\House()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___House\\\\AKA_INSTANCE___House\\\\House()\");AKA_fCall++;AKA_INSTANCE___House = new ::House();\n/* PointerCharacterDataNode address */\nAKA_INSTANCE___House->address;\n/* PointerStructureDataNode individuals */\nAKA_INSTANCE___House->individuals;\n\n\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test House_getAddress_random_0\");char* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___House->getAddress();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\average.cpp\\\\House\\\\getAddress()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class House{\r \tprivate:\r \t\tchar* address;\r \t\tPeople* individuals;\r \tpublic:\r \t\tchar* getAddress(){return address;}\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\average.cpp\\House\\getAddress()"
+    },
+    {
+        "f": [
+            "char * name;",
+            "int age;"
+        ],
+        "fm": "char* getName(){return name;}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_People_getName_random_1(void) {\n{\nAKA_test_case_name=\"People_getName_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___People */\n/* ConstructorDataNode People() */\nAKA_mark(\"Calling: \\\\People()|ROOT\\\\simple.cpp\\\\GLOBAL\\\\AKA_INSTANCE___People\\\\AKA_INSTANCE___People\\\\People()\");AKA_fCall++;AKA_INSTANCE___People = new ::People();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* PointerCharacterDataNode name */\nAKA_INSTANCE___People->name;\n\n\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test People_getName_random_1\");char* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___People->getName();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\simple.cpp\\\\People\\\\getName()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_People_getName_random_0(void) {\n{\nAKA_test_case_name=\"People_getName_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___People */\n/* ConstructorDataNode People() */\nAKA_mark(\"Calling: \\\\People()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___People\\\\AKA_INSTANCE___People\\\\People()\");AKA_fCall++;AKA_INSTANCE___People = new ::People();\n/* PointerCharacterDataNode name */\nAKA_INSTANCE___People->name;\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n\n\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test People_getName_random_0\");char* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___People->getName();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\average.cpp\\\\People\\\\getName()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___House */\n/* ConstructorDataNode House() */\nAKA_mark(\"Calling: \\\\House()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___House\\\\AKA_INSTANCE___House\\\\House()\");AKA_fCall++;AKA_INSTANCE___House = new ::House();\n/* PointerCharacterDataNode address */\nAKA_INSTANCE___House->address;\n/* PointerStructureDataNode individuals */\nAKA_INSTANCE___House->individuals;\n\n\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class People{\r       private:\r               char* name;\r               int age;\r       public:\r              char* getName(){return name;}\r              int getAge(){return age;}\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\average.cpp\\People\\getName()"
+    },
+    {
+        "f": [
+            "char * name;",
+            "int age;"
+        ],
+        "fm": "int getAge(){return age;}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_People_getAge_random_0(void) {\n{\nAKA_test_case_name=\"People_getAge_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___People */\n/* ConstructorDataNode People() */\nAKA_mark(\"Calling: \\\\People()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___People\\\\AKA_INSTANCE___People\\\\People()\");AKA_fCall++;AKA_INSTANCE___People = new ::People();\n/* PointerCharacterDataNode name */\nAKA_INSTANCE___People->name;\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test People_getAge_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___People->getAge();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\average.cpp\\\\People\\\\getAge()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_People_getAge_random_1(void) {\n{\nAKA_test_case_name=\"People_getAge_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___People */\n/* ConstructorDataNode People() */\nAKA_mark(\"Calling: \\\\People()|ROOT\\\\simple.cpp\\\\GLOBAL\\\\AKA_INSTANCE___People\\\\AKA_INSTANCE___People\\\\People()\");AKA_fCall++;AKA_INSTANCE___People = new ::People();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* PointerCharacterDataNode name */\nAKA_INSTANCE___People->name;\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test People_getAge_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___People->getAge();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\simple.cpp\\\\People\\\\getAge()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___House */\n/* ConstructorDataNode House() */\nAKA_mark(\"Calling: \\\\House()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___House\\\\AKA_INSTANCE___House\\\\House()\");AKA_fCall++;AKA_INSTANCE___House = new ::House();\n/* PointerCharacterDataNode address */\nAKA_INSTANCE___House->address;\n/* PointerStructureDataNode individuals */\nAKA_INSTANCE___House->individuals;\n\n\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class People{\r       private:\r               char* name;\r               int age;\r       public:\r              char* getName(){return name;}\r              int getAge(){return age;}\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\average.cpp\\People\\getAge()"
+    },
+    {
+        "f": [],
+        "fm": "void average_test_0(Town town){\r \tchar* firstAddress = town.getHouses()[0].getAddress();\r \r \tif (firstAddress[0] == 'M') \r \t   cout << \"The first house is located at M. street\";\r     else\r \t   cout << \"The first house is not located at M. street\";    \t   \r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_average_test_0_Town_random_0(void) {\n{\nAKA_test_case_name=\"average_test_0_Town_random_0\";\n\n// set up\n;\n\n\n\n\n/* RootDataNode STATIC */\n/* ClassDataNode town */\n/* SubClassDataNode town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\average_test_0(Town)\\\\town\\\\town\\\\Town()\");AKA_fCall++;::Town town = ::Town();\n/* PointerStructureDataNode houses */\ntown.houses;\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test average_test_0_Town_random_0\");average_test_0(town);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\average.cpp\\\\average_test_0(Town)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\average.cpp\\average_test_0(Town)"
+    },
+    {
+        "f": [],
+        "fm": "void average_test_1(Town town){\r \tchar* firstAddress = town.getHouses()[0].getAddress();\r \r \tif (firstAddress != NULL) \r \t   cout << \"The address of first house is set\";\r     else\r \t   cout << \"The address of first house is not set\";    \t   \r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_average_test_1_Town_random_0(void) {\n{\nAKA_test_case_name=\"average_test_1_Town_random_0\";\n\n// set up\n;\n\n\n\n\n/* RootDataNode STATIC */\n/* ClassDataNode town */\n/* SubClassDataNode town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\average_test_1(Town)\\\\town\\\\town\\\\Town()\");AKA_fCall++;::Town town = ::Town();\n/* PointerStructureDataNode houses */\ntown.houses;\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test average_test_1_Town_random_0\");average_test_1(town);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\average.cpp\\\\average_test_1(Town)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\average.cpp\\average_test_1(Town)"
+    },
+    {
+        "f": [],
+        "fm": "void average_test_0(char* town_houses_0_address,Town town){\r \tchar* firstAddress = town_houses_0_address;\r \r \tif (firstAddress[0] == 'M') \r \t   cout << \"The first house is located at M. street\";\r     else\r \t   cout << \"The first house is not located at M. street\";    \t   \r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_average_test_0_charmul_Town_random_4(void) {\n{\nAKA_test_case_name=\"average_test_0_charmul_Town_random_4\";\n\n// set up\n;\n\nchar AKA_ARRAY_INIT_town_houses_0_address[2];\n\nchar AKA_ARRAY_INIT_town_houses_0_address_0=-108;\nAKA_ARRAY_INIT_town_houses_0_address[0] = AKA_ARRAY_INIT_town_houses_0_address_0;\n\nchar AKA_ARRAY_INIT_town_houses_0_address_1=0;\nAKA_ARRAY_INIT_town_houses_0_address[1] = AKA_ARRAY_INIT_town_houses_0_address_1;\n\nchar* town_houses_0_address = AKA_ARRAY_INIT_town_houses_0_address;\n\n\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode town_houses_0_address */\n/* ClassDataNode town */\n/* SubClassDataNode town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\average_test_0(char*,Town)\\\\town\\\\town\\\\Town()\");AKA_fCall++;::Town town = ::Town();\n/* PointerStructureDataNode houses */\ntown.houses;\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test average_test_0_charmul_Town_random_4\");average_test_0(town_houses_0_address,town);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\average.cpp\\\\average_test_0(char*,Town)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\average.cpp\\average_test_0(char*,Town)"
+    },
+    {
+        "f": [
+            "int age;",
+            "char * name;"
+        ],
+        "fm": "int getAge(){\r \t\t\treturn age;\r \t\t}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_People_getAge_random_1(void) {\n{\nAKA_test_case_name=\"People_getAge_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___People */\n/* ConstructorDataNode People() */\nAKA_mark(\"Calling: \\\\People()|ROOT\\\\simple.cpp\\\\GLOBAL\\\\AKA_INSTANCE___People\\\\AKA_INSTANCE___People\\\\People()\");AKA_fCall++;AKA_INSTANCE___People = new ::People();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* PointerCharacterDataNode name */\nAKA_INSTANCE___People->name;\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test People_getAge_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___People->getAge();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\simple.cpp\\\\People\\\\getAge()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class People{\r \tprivate:\r \t\tint age;\r \t\tchar* name;\r \tpublic:\r \t\tint getAge(){\r \t\t\treturn age;\r \t\t}\r \t\tchar* getName(){\r \t\t\treturn name;\r \t\t}\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\simple.cpp\\People\\getAge()"
+    },
+    {
+        "f": [
+            "int age;",
+            "char * name;"
+        ],
+        "fm": "char* getName(){\r \t\t\treturn name;\r \t\t}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_People_getName_random_1(void) {\n{\nAKA_test_case_name=\"People_getName_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___People */\n/* ConstructorDataNode People() */\nAKA_mark(\"Calling: \\\\People()|ROOT\\\\simple.cpp\\\\GLOBAL\\\\AKA_INSTANCE___People\\\\AKA_INSTANCE___People\\\\People()\");AKA_fCall++;AKA_INSTANCE___People = new ::People();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* PointerCharacterDataNode name */\nAKA_INSTANCE___People->name;\n\n\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test People_getName_random_1\");char* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___People->getName();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\simple.cpp\\\\People\\\\getName()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class People{\r \tprivate:\r \t\tint age;\r \t\tchar* name;\r \tpublic:\r \t\tint getAge(){\r \t\t\treturn age;\r \t\t}\r \t\tchar* getName(){\r \t\t\treturn name;\r \t\t}\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\simple.cpp\\People\\getName()"
+    },
+    {
+        "f": [],
+        "fm": "int simple_test0(People p){\r \tif (p.getAge() > 0) \r \t\treturn 0;\r \telse\r \t\treturn 1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_simple_test0_People_random_0(void) {\n{\nAKA_test_case_name=\"simple_test0_People_random_0\";\n\n// set up\n;\n\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* ClassDataNode p */\n/* SubClassDataNode p */\n/* ConstructorDataNode People() */\nAKA_mark(\"Calling: \\\\People()|ROOT\\\\simple.cpp\\\\simple_test0(People)\\\\p\\\\p\\\\People()\");AKA_fCall++;::People p = ::People();\n/* PointerCharacterDataNode name */\np.name;\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simple_test0_People_random_0\");int AKA_ACTUAL_OUTPUT=simple_test0(p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\simple.cpp\\\\simple_test0(People)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\simple.cpp\\simple_test0(People)"
+    },
+    {
+        "f": [],
+        "fm": "int simple_test1(People p){\r \tif (p.getName()[2] == 'a')\r \t\treturn 0;\r \telse\r \t\treturn 1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_simple_test1_People_random_0(void) {\n{\nAKA_test_case_name=\"simple_test1_People_random_0\";\n\n// set up\n;\n\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* ClassDataNode p */\n/* SubClassDataNode p */\n/* ConstructorDataNode People() */\nAKA_mark(\"Calling: \\\\People()|ROOT\\\\simple.cpp\\\\simple_test1(People)\\\\p\\\\p\\\\People()\");AKA_fCall++;::People p = ::People();\n/* PointerCharacterDataNode name */\np.name;\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simple_test1_People_random_0\");int AKA_ACTUAL_OUTPUT=simple_test1(p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\simple.cpp\\\\simple_test1(People)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\simple.cpp\\simple_test1(People)"
+    },
+    {
+        "f": [],
+        "fm": "int simple_test2(People p){\r \tif (p.getAge() > 0) \r \tif (p.getName()[2] == 'a')\r \t\treturn 0;\r \telse\r \t\treturn 1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_simple_test2_People_random_0(void) {\n{\nAKA_test_case_name=\"simple_test2_People_random_0\";\n\n// set up\n;\n\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* ClassDataNode p */\n/* SubClassDataNode p */\n/* ConstructorDataNode People() */\nAKA_mark(\"Calling: \\\\People()|ROOT\\\\simple.cpp\\\\simple_test2(People)\\\\p\\\\p\\\\People()\");AKA_fCall++;::People p = ::People();\n/* PointerCharacterDataNode name */\np.name;\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simple_test2_People_random_0\");int AKA_ACTUAL_OUTPUT=simple_test2(p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\simple.cpp\\\\simple_test2(People)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\simple.cpp\\simple_test2(People)"
+    },
+    {
+        "f": [],
+        "fm": "int simple_test3(People p){\r \tif (p.getAge() > 0 && p.getName()[2] == 'a') \r \t\treturn 0;\r \telse\r \t\treturn 1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_simple_test3_People_random_0(void) {\n{\nAKA_test_case_name=\"simple_test3_People_random_0\";\n\n// set up\n;\n\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* ClassDataNode p */\n/* SubClassDataNode p */\n/* ConstructorDataNode People() */\nAKA_mark(\"Calling: \\\\People()|ROOT\\\\simple.cpp\\\\simple_test3(People)\\\\p\\\\p\\\\People()\");AKA_fCall++;::People p = ::People();\n/* PointerCharacterDataNode name */\np.name;\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simple_test3_People_random_0\");int AKA_ACTUAL_OUTPUT=simple_test3(p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\simple.cpp\\\\simple_test3(People)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\simple.cpp\\simple_test3(People)"
+    },
+    {
+        "f": [],
+        "fm": "int simple_test1(char p_name_2,People p){\r \tif (p_name_2 == 'a')\r \t\treturn 0;\r \telse\r \t\treturn 1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_simple_test1_char_People_random_0(void) {\n{\nAKA_test_case_name=\"simple_test1_char_People_random_0\";\n\n// set up\n;\n\n\nchar p_name_2=14;\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode p_name_2 */\n/* ClassDataNode p */\n/* SubClassDataNode p */\n/* ConstructorDataNode People() */\nAKA_mark(\"Calling: \\\\People()|ROOT\\\\simple.cpp\\\\simple_test1(char,People)\\\\p\\\\p\\\\People()\");AKA_fCall++;::People p = ::People();\n/* PointerCharacterDataNode name */\np.name;\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simple_test1_char_People_random_0\");int AKA_ACTUAL_OUTPUT=simple_test1(p_name_2,p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\simple.cpp\\\\simple_test1(char,People)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\simple.cpp\\simple_test1(char,People)"
+    },
+    {
+        "f": [],
+        "fm": "int simple_test0(int p_age,People p){\r \tif (p_age > 0) \r \t\treturn 0;\r \telse\r \t\treturn 1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_simple_test0_int_People_random_2(void) {\n{\nAKA_test_case_name=\"simple_test0_int_People_random_2\";\n\n// set up\n;\n\n\n\nint p_age=-118984940;\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode p_age */\n/* ClassDataNode p */\n/* SubClassDataNode p */\n/* ConstructorDataNode People() */\nAKA_mark(\"Calling: \\\\People()|ROOT\\\\simple.cpp\\\\simple_test0(int,People)\\\\p\\\\p\\\\People()\");AKA_fCall++;::People p = ::People();\n/* PointerCharacterDataNode name */\np.name;\n/* NormalNumberDataNode age */\np.age=-118984940;\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simple_test0_int_People_random_2\");int AKA_ACTUAL_OUTPUT=simple_test0(p_age,p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\simple.cpp\\\\simple_test0(int,People)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_simple_test0_int_People_random_1(void) {\n{\nAKA_test_case_name=\"simple_test0_int_People_random_1\";\n\n// set up\n;\n\n\n\nint p_age=1030008699;\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode p_age */\n/* ClassDataNode p */\n/* SubClassDataNode p */\n/* ConstructorDataNode People() */\nAKA_mark(\"Calling: \\\\People()|ROOT\\\\simple.cpp\\\\simple_test0(int,People)\\\\p\\\\p\\\\People()\");AKA_fCall++;::People p = ::People();\n/* PointerCharacterDataNode name */\np.name;\n/* NormalNumberDataNode age */\np.age=1030008699;\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simple_test0_int_People_random_1\");int AKA_ACTUAL_OUTPUT=simple_test0(p_age,p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\simple.cpp\\\\simple_test0(int,People)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___House */\n/* ConstructorDataNode House() */\nAKA_mark(\"Calling: \\\\House()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___House\\\\AKA_INSTANCE___House\\\\House()\");AKA_fCall++;AKA_INSTANCE___House = new ::House();\n/* PointerCharacterDataNode address */\nAKA_INSTANCE___House->address;\n/* PointerStructureDataNode individuals */\nAKA_INSTANCE___House->individuals;\n\n\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\simple.cpp\\simple_test0(int,People)"
+    },
+    {
+        "f": [],
+        "fm": "int simple_test2(int p_age,char p_name_2,People p){\r \tif (p_age > 0) \r \tif (p_name_2 == 'a')\r \t\treturn 0;\r \telse\r \t\treturn 1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_simple_test2_int_char_People_random_4(void) {\n{\nAKA_test_case_name=\"simple_test2_int_char_People_random_4\";\n\n// set up\n;\n\n\n\nint p_age=1166647972;\n\nchar p_name_2=75;\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode p_age */\n/* NormalCharacterDataNode p_name_2 */\n/* ClassDataNode p */\n/* SubClassDataNode p */\n/* ConstructorDataNode People() */\nAKA_mark(\"Calling: \\\\People()|ROOT\\\\simple.cpp\\\\simple_test2(int,char,People)\\\\p\\\\p\\\\People()\");AKA_fCall++;::People p = ::People();\n/* PointerCharacterDataNode name */\np.name;\n/* NormalNumberDataNode age */\np.age=1166647972;\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simple_test2_int_char_People_random_4\");int AKA_ACTUAL_OUTPUT=simple_test2(p_age,p_name_2,p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\simple.cpp\\\\simple_test2(int,char,People)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_simple_test2_int_char_People_random_2(void) {\n{\nAKA_test_case_name=\"simple_test2_int_char_People_random_2\";\n\n// set up\n;\n\n\n\nint p_age=-976925973;\n\nchar p_name_2=123;\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode p_age */\n/* NormalCharacterDataNode p_name_2 */\n/* ClassDataNode p */\n/* SubClassDataNode p */\n/* ConstructorDataNode People() */\nAKA_mark(\"Calling: \\\\People()|ROOT\\\\simple.cpp\\\\simple_test2(int,char,People)\\\\p\\\\p\\\\People()\");AKA_fCall++;::People p = ::People();\n/* PointerCharacterDataNode name */\np.name;\n/* NormalNumberDataNode age */\np.age=-976925973;\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simple_test2_int_char_People_random_2\");int AKA_ACTUAL_OUTPUT=simple_test2(p_age,p_name_2,p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\simple.cpp\\\\simple_test2(int,char,People)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___House */\n/* ConstructorDataNode House() */\nAKA_mark(\"Calling: \\\\House()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___House\\\\AKA_INSTANCE___House\\\\House()\");AKA_fCall++;AKA_INSTANCE___House = new ::House();\n/* PointerCharacterDataNode address */\nAKA_INSTANCE___House->address;\n/* PointerStructureDataNode individuals */\nAKA_INSTANCE___House->individuals;\n\n\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\simple.cpp\\simple_test2(int,char,People)"
+    },
+    {
+        "f": [],
+        "fm": "int simple_test3(int p_age,char p_name_2,People p){\r \tif (p_age > 0 && p_name_2 == 'a') \r \t\treturn 0;\r \telse\r \t\treturn 1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_simple_test3_int_char_People_random_4(void) {\n{\nAKA_test_case_name=\"simple_test3_int_char_People_random_4\";\n\n// set up\n;\n\n\n\nint p_age=1803798253;\n\nchar p_name_2=11;\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode p_age */\n/* NormalCharacterDataNode p_name_2 */\n/* ClassDataNode p */\n/* SubClassDataNode p */\n/* ConstructorDataNode People() */\nAKA_mark(\"Calling: \\\\People()|ROOT\\\\simple.cpp\\\\simple_test3(int,char,People)\\\\p\\\\p\\\\People()\");AKA_fCall++;::People p = ::People();\n/* PointerCharacterDataNode name */\np.name;\n/* NormalNumberDataNode age */\np.age=1803798253;\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simple_test3_int_char_People_random_4\");int AKA_ACTUAL_OUTPUT=simple_test3(p_age,p_name_2,p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\simple.cpp\\\\simple_test3(int,char,People)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Town */\n/* ConstructorDataNode Town() */\nAKA_mark(\"Calling: \\\\Town()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Town\\\\AKA_INSTANCE___Town\\\\Town()\");AKA_fCall++;AKA_INSTANCE___Town = new ::Town();\n/* PointerStructureDataNode houses */\nAKA_INSTANCE___Town->houses;\n\n\nHouse* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_simple_test3_int_char_People_random_2(void) {\n{\nAKA_test_case_name=\"simple_test3_int_char_People_random_2\";\n\n// set up\n;\n\n\n\nint p_age=-611222490;\n\nchar p_name_2=73;\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode p_age */\n/* NormalCharacterDataNode p_name_2 */\n/* ClassDataNode p */\n/* SubClassDataNode p */\n/* ConstructorDataNode People() */\nAKA_mark(\"Calling: \\\\People()|ROOT\\\\simple.cpp\\\\simple_test3(int,char,People)\\\\p\\\\p\\\\People()\");AKA_fCall++;::People p = ::People();\n/* PointerCharacterDataNode name */\np.name;\n/* NormalNumberDataNode age */\np.age=-611222490;\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simple_test3_int_char_People_random_2\");int AKA_ACTUAL_OUTPUT=simple_test3(p_age,p_name_2,p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\FunctionTransformerTest\\\\simple.cpp\\\\simple_test3(int,char,People)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___House */\n/* ConstructorDataNode House() */\nAKA_mark(\"Calling: \\\\House()|ROOT\\\\average.cpp\\\\GLOBAL\\\\AKA_INSTANCE___House\\\\AKA_INSTANCE___House\\\\House()\");AKA_fCall++;AKA_INSTANCE___House = new ::House();\n/* PointerCharacterDataNode address */\nAKA_INSTANCE___House->address;\n/* PointerStructureDataNode individuals */\nAKA_INSTANCE___House->individuals;\n\n\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\FunctionTransformerTest\\simple.cpp\\simple_test3(int,char,People)"
+    }
+]

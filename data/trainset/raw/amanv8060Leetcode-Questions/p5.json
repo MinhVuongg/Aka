@@ -1,0 +1,220 @@
+[
+    {
+        "f": [],
+        "fm": "void rotate(vector<int> &nums, int k) {\r     int n = nums.size();\r     for (int i = 0; i < gcd(n, k); ++i) {\r       for (int ii = (i + k) % n; i != ii; ii = (ii + k) % n) {\r         swap(nums[i], nums[ii]);\r       }\r     }\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_rotate_vector_int_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_rotate_vector_int_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\189.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint k=2;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1948824143;\nnums.push_back(nums_element0);\nint nums_element1=-1882643643;\nnums.push_back(nums_element1);\nint nums_element2=1070299568;\nnums.push_back(nums_element2);\n/* NormalNumberDataNode k */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_rotate_vector_int_int_random_4\");AKA_INSTANCE___Solution->rotate(nums,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p5\\\\189.cpp\\\\Solution\\\\rotate(vector<int>&,int)\");\n\n/* error assertion */\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r  public:\r   void rotate(vector<int> &nums, int k) {\r     int n = nums.size();\r     for (int i = 0; i < gcd(n, k); ++i) {\r       for (int ii = (i + k) % n; i != ii; ii = (ii + k) % n) {\r         swap(nums[i], nums[ii]);\r       }\r     }\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p5\\189.cpp\\Solution\\rotate(vector<int>&,int)"
+    },
+    {
+        "f": [],
+        "fm": "int gcd(int a, int b) {\r   return b == 0 ? a : gcd(b, a % b);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_gcd_int_int_random_3(void) {\n{\nAKA_test_case_name=\"gcd_int_int_random_3\";\n\n// set up\n;\n\n\n\nint a=2100826490;\n\n\nint b=222146232;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test gcd_int_int_random_3\");int AKA_ACTUAL_OUTPUT=gcd(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p5\\\\189.cpp\\\\gcd(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p5\\189.cpp\\gcd(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int countPrimes(int n) {\r     if (n < 2) return 0;\r     vector<bool> Prime(n + 1, true);\r \r     Prime[0] = false;\r     Prime[1] = false;\r \r     Prime[n] = false;\r \r     for (int p = 2; p * p <= n; p++) {\r       if (Prime[p] == true) {\r         for (int i = p * p; i <= n; i += p) {\r           Prime[i] = false;\r         }\r       }\r     }\r     int ans = 0;\r     for (auto element : Prime) {\r       if (element) {\r         ans++;\r       }\r     }\r     return ans;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countPrimes_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_countPrimes_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\204.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countPrimes_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countPrimes(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p5\\\\204.cpp\\\\Solution\\\\countPrimes(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countPrimes_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_countPrimes_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\204.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=10;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countPrimes_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countPrimes(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p5\\\\204.cpp\\\\Solution\\\\countPrimes(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=641482278;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=-712205251;\narr.push_back(arr_element0);\nint arr_element1=1818276528;\narr.push_back(arr_element1);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r  public:\r   int countPrimes(int n) {\r     if (n < 2) return 0;\r     vector<bool> Prime(n + 1, true);\r \r     Prime[0] = false;\r     Prime[1] = false;\r \r     Prime[n] = false;\r \r     for (int p = 2; p * p <= n; p++) {\r       if (Prime[p] == true) {\r         for (int i = p * p; i <= n; i += p) {\r           Prime[i] = false;\r         }\r       }\r     }\r     int ans = 0;\r     for (auto element : Prime) {\r       if (element) {\r         ans++;\r       }\r     }\r     return ans;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p5\\204.cpp\\Solution\\countPrimes(int)"
+    },
+    {
+        "f": [],
+        "fm": "bool isUgly(int n) {\r     if (n == 0) {\r       return false;\r     }\r     if (n == 1) {\r       return true;\r     }\r     if (n % 2 == 0) {\r       return isUgly(n / 2);\r     }\r     if (n % 3 == 0) {\r       return isUgly(n / 3);\r     }\r     if (n % 5 == 0) {\r       return isUgly(n / 5);\r     }\r     return false;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isUgly_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_isUgly_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\263.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=123577120;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isUgly_int_random_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isUgly(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p5\\\\263.cpp\\\\Solution\\\\isUgly(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r  public:\r   bool isUgly(int n) {\r     if (n == 0) {\r       return false;\r     }\r     if (n == 1) {\r       return true;\r     }\r     if (n % 2 == 0) {\r       return isUgly(n / 2);\r     }\r     if (n % 3 == 0) {\r       return isUgly(n / 3);\r     }\r     if (n % 5 == 0) {\r       return isUgly(n / 5);\r     }\r     return false;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p5\\263.cpp\\Solution\\isUgly(int)"
+    },
+    {
+        "f": [],
+        "fm": "int countthesetbits(int n) {\r     int c = 0;\r     while (n) {\r       n = n & (n - 1);\r       c++;\r     }\r     return c;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countthesetbits_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_countthesetbits_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\338.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=-1172975318;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countthesetbits_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countthesetbits(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p5\\\\338.cpp\\\\Solution\\\\countthesetbits(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r  public:\r   int countthesetbits(int n) {\r     int c = 0;\r     while (n) {\r       n = n & (n - 1);\r       c++;\r     }\r     return c;\r   }\r   vector<int> countBits(int n) {\r     vector<int> result;\r     for (int i = 0; i <= n; i++) {\r       result.push_back(countthesetbits(i));\r     }\r \r     return result;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p5\\338.cpp\\Solution\\countthesetbits(int)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> countBits(int n) {\r     vector<int> result;\r     for (int i = 0; i <= n; i++) {\r       result.push_back(countthesetbits(i));\r     }\r \r     return result;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countBits_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_countBits_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\338.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=3;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countBits_int_random_1\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countBits(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p5\\\\338.cpp\\\\Solution\\\\countBits(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r  public:\r   int countthesetbits(int n) {\r     int c = 0;\r     while (n) {\r       n = n & (n - 1);\r       c++;\r     }\r     return c;\r   }\r   vector<int> countBits(int n) {\r     vector<int> result;\r     for (int i = 0; i <= n; i++) {\r       result.push_back(countthesetbits(i));\r     }\r \r     return result;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p5\\338.cpp\\Solution\\countBits(int)"
+    },
+    {
+        "f": [],
+        "fm": "bool isPowerOfFour(int n) {\r     if (n <= 0) return false;\r     n = abs(n);\r     while (n % 4 == 0) n = n / 4;\r     return n == 1;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isPowerOfFour_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_isPowerOfFour_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\342.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isPowerOfFour_int_random_3\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isPowerOfFour(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p5\\\\342.cpp\\\\Solution\\\\isPowerOfFour(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isPowerOfFour_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_isPowerOfFour_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\342.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=0;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isPowerOfFour_int_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isPowerOfFour(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p5\\\\342.cpp\\\\Solution\\\\isPowerOfFour(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=641482278;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=-712205251;\narr.push_back(arr_element0);\nint arr_element1=1818276528;\narr.push_back(arr_element1);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r  public:\r   bool isPowerOfFour(int n) {\r     if (n <= 0) return false;\r     n = abs(n);\r     while (n % 4 == 0) n = n / 4;\r     return n == 1;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p5\\342.cpp\\Solution\\isPowerOfFour(int)"
+    }
+]

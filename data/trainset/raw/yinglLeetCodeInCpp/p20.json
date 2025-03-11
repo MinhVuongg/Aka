@@ -1,0 +1,126 @@
+[
+    {
+        "f": [],
+        "fm": "vector<vector<string>> partition(string s) {\r     vector<vector<string> > result;\r     vector<string> solution;\r     int len = s.length();\r \r     if (0 == len) {\r       return result;\r     }\r \r     vector<vector<int> > pal_statuses(len, vector<int>(len, 0));\r \r     _partition(s, 0, solution, result, pal_statuses);\r \r     return result;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_partition_string_random_1(void) {\n{\nAKA_test_case_name=\"Solution_partition_string_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\palindrome_partitioning.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName693447 = new char[2];akaRandomName693447[0] = -7;akaRandomName693447[1] = '\\0';string s=akaRandomName693447;\nvector<vector<string>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_partition_string_random_1\");vector<vector<string>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->partition(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-15\\\\palindrome_partitioning.cpp\\\\Solution\\\\partition(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\next_permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   // 动态规划\r   // 判断s[i, j]是否为回文的方法：\r   //   1. s[i + 1, j - 1]是否为回文\r   //   2. 如果1成了，判断s[i]是否等于s[j]。\r   vector<vector<string>> partition(string s) {\r     vector<vector<string> > result;\r     vector<string> solution;\r     int len = s.length();\r \r     if (0 == len) {\r       return result;\r     }\r \r     vector<vector<int> > pal_statuses(len, vector<int>(len, 0));\r \r     _partition(s, 0, solution, result, pal_statuses);\r \r     return result;\r   }\r \r protected:\r   void _partition(string &s,\r       int start,\r       vector<string> &solution,\r       vector<vector<string> > &result,\r       vector<vector<int> > &pal_statuses) {\r     int len = s.length();\r \r     if (start >= len) {\r       result.push_back(solution);\r     }\r     else {\r       for (int i = start; i < len; ++i) {\r         if (is_palindrome(s, start, i, pal_statuses)) {\r           solution.push_back(s.substr(start, i - start + 1));\r           _partition(s, i + 1, solution, result, pal_statuses);\r           solution.pop_back();\r         }\r       }\r     }\r   }\r \r   bool is_palindrome(string &s,\r       int start,\r       int end,\r       vector<vector<int> > &pal_statuses) {\r     if (start >= end) {\r       if (start == end) {\r         pal_statuses[start][end] = 1;\r       }\r \r       return true;\r     }\r     else {\r       if (pal_statuses[start][end] != 0) {\r         return (pal_statuses[start][end] > 0);\r       }\r       else {\r         if (s[start] != s[end]) {\r           pal_statuses[start][end] = -1;\r \r           return false;\r         }\r         else {\r           if (is_palindrome(s, start + 1, end - 1, pal_statuses)) {\r             pal_statuses[start][end] = 1;\r           }\r           else {\r             pal_statuses[start][end] = -1;\r           }\r         }\r \r         return (pal_statuses[start][end] > 0);\r       }\r     }\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-15\\palindrome_partitioning.cpp\\Solution\\partition(string)"
+    },
+    {
+        "f": [],
+        "fm": "void _partition(string &s,\r       int start,\r       vector<string> &solution,\r       vector<vector<string> > &result,\r       vector<vector<int> > &pal_statuses) {\r     int len = s.length();\r \r     if (start >= len) {\r       result.push_back(solution);\r     }\r     else {\r       for (int i = start; i < len; ++i) {\r         if (is_palindrome(s, start, i, pal_statuses)) {\r           solution.push_back(s.substr(start, i - start + 1));\r           _partition(s, i + 1, solution, result, pal_statuses);\r           solution.pop_back();\r         }\r       }\r     }\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_partition_string_int_vector_string_vector_vector_string_vector_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_partition_string_int_vector_string_vector_vector_string_vector_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\palindrome_partitioning.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName609524 = new char[2];akaRandomName609524[0] = 108;akaRandomName609524[1] = '\\0';string s=akaRandomName609524;\n\n\nint start=1;\nvector<string> solution;\nvector<vector<string>> result;\nvector<vector<int>> pal_statuses;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode start */\n/* VectorDataNode solution */\nchar* akaRandomName697848 = new char[2];akaRandomName697848[0] = 80;akaRandomName697848[1] = '\\0';string solution_element0=akaRandomName697848;\nsolution.push_back(solution_element0);\nchar* akaRandomName427997 = new char[2];akaRandomName427997[0] = -124;akaRandomName427997[1] = '\\0';string solution_element1=akaRandomName427997;\nsolution.push_back(solution_element1);\n/* VectorDataNode result */\nvector<string> result_element0;\nchar* akaRandomName468639 = new char[2];akaRandomName468639[0] = -31;akaRandomName468639[1] = '\\0';string result_element0_element0=akaRandomName468639;\nresult_element0.push_back(result_element0_element0);\nchar* akaRandomName86820 = new char[2];akaRandomName86820[0] = 17;akaRandomName86820[1] = '\\0';string result_element0_element1=akaRandomName86820;\nresult_element0.push_back(result_element0_element1);\nchar* akaRandomName179657 = new char[2];akaRandomName179657[0] = 74;akaRandomName179657[1] = '\\0';string result_element0_element2=akaRandomName179657;\nresult_element0.push_back(result_element0_element2);\nresult.push_back(result_element0);\n/* VectorDataNode pal_statuses */\nvector<int> pal_statuses_element0;\nint pal_statuses_element0_element0=754861506;\npal_statuses_element0.push_back(pal_statuses_element0_element0);\npal_statuses.push_back(pal_statuses_element0);\nvector<int> pal_statuses_element1;\nint pal_statuses_element1_element0=1767267110;\npal_statuses_element1.push_back(pal_statuses_element1_element0);\nint pal_statuses_element1_element1=679267465;\npal_statuses_element1.push_back(pal_statuses_element1_element1);\npal_statuses.push_back(pal_statuses_element1);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_partition_string_int_vector_string_vector_vector_string_vector_vector_int_random_1\");AKA_INSTANCE___Solution->_partition(s,start,solution,result,pal_statuses);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-15\\\\palindrome_partitioning.cpp\\\\Solution\\\\_partition(string&,int,vector<string>&,vector<vector<string>>&,vector<vector<int>>&)\");\n\n/* error assertion */\nvector<string> EXPECTED_solution;\n\nvector<vector<string>> EXPECTED_result;\n\nvector<vector<int>> EXPECTED_pal_statuses;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\next_permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   // 动态规划\r   // 判断s[i, j]是否为回文的方法：\r   //   1. s[i + 1, j - 1]是否为回文\r   //   2. 如果1成了，判断s[i]是否等于s[j]。\r   vector<vector<string>> partition(string s) {\r     vector<vector<string> > result;\r     vector<string> solution;\r     int len = s.length();\r \r     if (0 == len) {\r       return result;\r     }\r \r     vector<vector<int> > pal_statuses(len, vector<int>(len, 0));\r \r     _partition(s, 0, solution, result, pal_statuses);\r \r     return result;\r   }\r \r protected:\r   void _partition(string &s,\r       int start,\r       vector<string> &solution,\r       vector<vector<string> > &result,\r       vector<vector<int> > &pal_statuses) {\r     int len = s.length();\r \r     if (start >= len) {\r       result.push_back(solution);\r     }\r     else {\r       for (int i = start; i < len; ++i) {\r         if (is_palindrome(s, start, i, pal_statuses)) {\r           solution.push_back(s.substr(start, i - start + 1));\r           _partition(s, i + 1, solution, result, pal_statuses);\r           solution.pop_back();\r         }\r       }\r     }\r   }\r \r   bool is_palindrome(string &s,\r       int start,\r       int end,\r       vector<vector<int> > &pal_statuses) {\r     if (start >= end) {\r       if (start == end) {\r         pal_statuses[start][end] = 1;\r       }\r \r       return true;\r     }\r     else {\r       if (pal_statuses[start][end] != 0) {\r         return (pal_statuses[start][end] > 0);\r       }\r       else {\r         if (s[start] != s[end]) {\r           pal_statuses[start][end] = -1;\r \r           return false;\r         }\r         else {\r           if (is_palindrome(s, start + 1, end - 1, pal_statuses)) {\r             pal_statuses[start][end] = 1;\r           }\r           else {\r             pal_statuses[start][end] = -1;\r           }\r         }\r \r         return (pal_statuses[start][end] > 0);\r       }\r     }\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-15\\palindrome_partitioning.cpp\\Solution\\_partition(string&,int,vector<string>&,vector<vector<string>>&,vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "bool is_palindrome(string &s,\r       int start,\r       int end,\r       vector<vector<int> > &pal_statuses) {\r     if (start >= end) {\r       if (start == end) {\r         pal_statuses[start][end] = 1;\r       }\r \r       return true;\r     }\r     else {\r       if (pal_statuses[start][end] != 0) {\r         return (pal_statuses[start][end] > 0);\r       }\r       else {\r         if (s[start] != s[end]) {\r           pal_statuses[start][end] = -1;\r \r           return false;\r         }\r         else {\r           if (is_palindrome(s, start + 1, end - 1, pal_statuses)) {\r             pal_statuses[start][end] = 1;\r           }\r           else {\r             pal_statuses[start][end] = -1;\r           }\r         }\r \r         return (pal_statuses[start][end] > 0);\r       }\r     }\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_is_palindrome_string_int_int_vector_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_is_palindrome_string_int_int_vector_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\palindrome_partitioning.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName556881 = new char[2];akaRandomName556881[0] = 33;akaRandomName556881[1] = '\\0';string s=akaRandomName556881;\n\n\nint start=-1158282656;\n\n\nint end=1479647248;\nvector<vector<int>> pal_statuses;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode start */\n/* NormalNumberDataNode end */\n/* VectorDataNode pal_statuses */\nvector<int> pal_statuses_element0;\nint pal_statuses_element0_element0=1075075755;\npal_statuses_element0.push_back(pal_statuses_element0_element0);\nint pal_statuses_element0_element1=-1588022696;\npal_statuses_element0.push_back(pal_statuses_element0_element1);\npal_statuses.push_back(pal_statuses_element0);\nvector<int> pal_statuses_element1;\nint pal_statuses_element1_element0=619006419;\npal_statuses_element1.push_back(pal_statuses_element1_element0);\nint pal_statuses_element1_element1=-1486451527;\npal_statuses_element1.push_back(pal_statuses_element1_element1);\npal_statuses.push_back(pal_statuses_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_is_palindrome_string_int_int_vector_vector_int_random_4\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->is_palindrome(s,start,end,pal_statuses);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-15\\\\palindrome_partitioning.cpp\\\\Solution\\\\is_palindrome(string&,int,int,vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_pal_statuses;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\next_permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_is_palindrome_string_int_int_vector_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_is_palindrome_string_int_int_vector_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\palindrome_partitioning.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName596218 = new char[2];akaRandomName596218[0] = -51;akaRandomName596218[1] = '\\0';string s=akaRandomName596218;\n\n\nint start=641962262;\n\n\nint end=535376902;\nvector<vector<int>> pal_statuses;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode start */\n/* NormalNumberDataNode end */\n/* VectorDataNode pal_statuses */\nvector<int> pal_statuses_element0;\nint pal_statuses_element0_element0=-1994471098;\npal_statuses_element0.push_back(pal_statuses_element0_element0);\nint pal_statuses_element0_element1=-2096775250;\npal_statuses_element0.push_back(pal_statuses_element0_element1);\nint pal_statuses_element0_element2=-855077074;\npal_statuses_element0.push_back(pal_statuses_element0_element2);\npal_statuses.push_back(pal_statuses_element0);\nvector<int> pal_statuses_element1;\nint pal_statuses_element1_element0=-2018556415;\npal_statuses_element1.push_back(pal_statuses_element1_element0);\nint pal_statuses_element1_element1=-246250100;\npal_statuses_element1.push_back(pal_statuses_element1_element1);\npal_statuses.push_back(pal_statuses_element1);\nvector<int> pal_statuses_element2;\nint pal_statuses_element2_element0=675915365;\npal_statuses_element2.push_back(pal_statuses_element2_element0);\nint pal_statuses_element2_element1=535460907;\npal_statuses_element2.push_back(pal_statuses_element2_element1);\nint pal_statuses_element2_element2=574981116;\npal_statuses_element2.push_back(pal_statuses_element2_element2);\npal_statuses.push_back(pal_statuses_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_is_palindrome_string_int_int_vector_vector_int_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->is_palindrome(s,start,end,pal_statuses);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-15\\\\palindrome_partitioning.cpp\\\\Solution\\\\is_palindrome(string&,int,int,vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_pal_statuses;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\next_permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=1996984750;\nnum.push_back(num_element0);\nint num_element1=1494981791;\nnum.push_back(num_element1);\nint num_element2=-156524180;\nnum.push_back(num_element2);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   // 动态规划\r   // 判断s[i, j]是否为回文的方法：\r   //   1. s[i + 1, j - 1]是否为回文\r   //   2. 如果1成了，判断s[i]是否等于s[j]。\r   vector<vector<string>> partition(string s) {\r     vector<vector<string> > result;\r     vector<string> solution;\r     int len = s.length();\r \r     if (0 == len) {\r       return result;\r     }\r \r     vector<vector<int> > pal_statuses(len, vector<int>(len, 0));\r \r     _partition(s, 0, solution, result, pal_statuses);\r \r     return result;\r   }\r \r protected:\r   void _partition(string &s,\r       int start,\r       vector<string> &solution,\r       vector<vector<string> > &result,\r       vector<vector<int> > &pal_statuses) {\r     int len = s.length();\r \r     if (start >= len) {\r       result.push_back(solution);\r     }\r     else {\r       for (int i = start; i < len; ++i) {\r         if (is_palindrome(s, start, i, pal_statuses)) {\r           solution.push_back(s.substr(start, i - start + 1));\r           _partition(s, i + 1, solution, result, pal_statuses);\r           solution.pop_back();\r         }\r       }\r     }\r   }\r \r   bool is_palindrome(string &s,\r       int start,\r       int end,\r       vector<vector<int> > &pal_statuses) {\r     if (start >= end) {\r       if (start == end) {\r         pal_statuses[start][end] = 1;\r       }\r \r       return true;\r     }\r     else {\r       if (pal_statuses[start][end] != 0) {\r         return (pal_statuses[start][end] > 0);\r       }\r       else {\r         if (s[start] != s[end]) {\r           pal_statuses[start][end] = -1;\r \r           return false;\r         }\r         else {\r           if (is_palindrome(s, start + 1, end - 1, pal_statuses)) {\r             pal_statuses[start][end] = 1;\r           }\r           else {\r             pal_statuses[start][end] = -1;\r           }\r         }\r \r         return (pal_statuses[start][end] > 0);\r       }\r     }\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-15\\palindrome_partitioning.cpp\\Solution\\is_palindrome(string&,int,int,vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "int minCut(string s) {\r     int len = s.length();\r \r     vector<int> cuts(len + 1);\r     vector<vector<bool> > pal_statuses(len, vector<bool>(len, false));\r \r     for (int i = 0; i <= len; ++i) {\r       // 从第i个元素开始后面最多可以切几次\r       cuts[i] = len - i;\r     }\r \r     for (int i = len - 1; i >= 0; --i) {\r       for (int j = i; j < len; ++j) {\r         if ((s[i] == s[j]) && \r             (((j - i) <= 1) || (pal_statuses[i + 1][j - 1]))) {\r           pal_statuses[i][j] = true;\r           // 因为s[i, j]是回文，所以1 + cuts[j + 1]有可能是更好选择\r           cuts[i] = min(cuts[i], 1 + cuts[j + 1]);\r         }\r       }\r     }\r \r     return cuts[0] - 1;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minCut_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_minCut_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\palindrome_partitioning_ii.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName274791 = new char[2];akaRandomName274791[0] = -59;akaRandomName274791[1] = '\\0';string s=akaRandomName274791;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minCut_string_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minCut(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-15\\\\palindrome_partitioning_ii.cpp\\\\Solution\\\\minCut(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\next_permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int minCut(string s) {\r     int len = s.length();\r \r     vector<int> cuts(len + 1);\r     vector<vector<bool> > pal_statuses(len, vector<bool>(len, false));\r \r     for (int i = 0; i <= len; ++i) {\r       // 从第i个元素开始后面最多可以切几次\r       cuts[i] = len - i;\r     }\r \r     for (int i = len - 1; i >= 0; --i) {\r       for (int j = i; j < len; ++j) {\r         if ((s[i] == s[j]) && \r             (((j - i) <= 1) || (pal_statuses[i + 1][j - 1]))) {\r           pal_statuses[i][j] = true;\r           // 因为s[i, j]是回文，所以1 + cuts[j + 1]有可能是更好选择\r           cuts[i] = min(cuts[i], 1 + cuts[j + 1]);\r         }\r       }\r     }\r \r     return cuts[0] - 1;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-15\\palindrome_partitioning_ii.cpp\\Solution\\minCut(string)"
+    }
+]

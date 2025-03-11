@@ -1,0 +1,132 @@
+[
+    {
+        "f": [],
+        "fm": "void swap(int *xp, int *yp) {\r \tint temp = *xp;\r \t*xp = *yp;\r \t*yp = temp;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Sort.cpp\\Algorithm\\Sort\\swap(int*,int*)"
+    },
+    {
+        "f": [],
+        "fm": "void selectionSort(int arr[], int n) {\r \tint i, j, min_idx;\r \r \t// One by one move boundary of unsorted subarray\r \tfor (i = 0; i < n - 1; i++) {\r \t\t// Find the minimum element in unsorted array\r \t\tmin_idx = i;\r \t\tfor (j = i + 1; j < n; j++)\r \t\t\tif (arr[j] < arr[min_idx])\r \t\t\t\tmin_idx = j;\r \r \t\t// Swap the found minimum element with the first element\r \t\tswap(&arr[min_idx], &arr[i]);\r \t}\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Sort.cpp\\Algorithm\\Sort\\selectionSort(int[],int)"
+    },
+    {
+        "f": [],
+        "fm": "void bubbleSort2(int arr[], int n) {\r \tint i, j;\r \tbool swapped;\r \tfor (i = 0; i < n - 1; i++) {\r \t\tswapped = false;\r \t\tfor (j = 0; j < n - i - 1; j++) {\r \t\t\tif (arr[j] > arr[j + 1]) {\r \t\t\t\tswap(&arr[j], &arr[j + 1]);\r \t\t\t\tswapped = true;\r \t\t\t}\r \t\t}\r \r \t\t// IF no two elements were swapped by inner loop, then break\r \t\tif (swapped == false)\r \t\t\tbreak;\r \t}\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Sort.cpp\\Algorithm\\Sort\\bubbleSort2(int[],int)"
+    },
+    {
+        "f": [],
+        "fm": "void quickSort(int arr[], int low, int high) {\r \tif (low < high) {\r \t\t/* pi is partitioning index, arr[p] is now\r \t\t at right place */\r \t\tint pi = partition(arr, low, high);\r \r \t\t// Separately sort elements before\r \t\t// partition and after partition\r \t\tint x = pi - 1;\r \t\tquickSort(arr, low, x);\r \t\t\r \t\tint y = pi + 1;\r \t\tquickSort(arr, y, high);\r \t}\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Sort.cpp\\Algorithm\\Sort\\quickSort(int[],int,int)"
+    },
+    {
+        "f": [],
+        "fm": "void quickSortIterative(int arr[], int l, int h) {\r \t// Create an auxiliary stack\r \tint stack[h - l + 1];\r \r \t// initialize top of stack\r \tint top = -1;\r \r \t// push initial values of l and h to stack\r \ttop++;\r \tstack[top] = l;\r \ttop++;\r \tstack[top] = h;\r \r \t// Keep popping from stack while is not empty\r \twhile (top >= 0) {\r \t\t// Pop h and l\r \t\th = stack[top];\r \t\ttop--;\r \t\tl = stack[top];\r \t\ttop--;\r \r \t\t// Set pivot element at its correct position\r \t\t// in sorted array\r \t\tint p = partition(arr, l, h);\r \r \t\t// If there are elements on left side of pivot,\r \t\t// then push left side to stack\r \t\tif (p - 1 > l) {\r \t\t\ttop++;\r \t\t\tstack[top] = l;\r \t\t\ttop++;\r \t\t\tstack[top] = p - 1;\r \t\t}\r \r \t\t// If there are elements on right side of pivot,\r \t\t// then push right side to stack\r \t\tif (p + 1 < h) {\r \t\t\ttop++;\r \t\t\tstack[top] = p + 1;\r \t\t\ttop++;\r \t\t\tstack[top] = h;\r \t\t}\r \t}\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Sort.cpp\\Algorithm\\Sort\\quickSortIterative(int[],int,int)"
+    },
+    {
+        "f": [],
+        "fm": "void push(struct Node** head_ref, int new_data) {\r \t/* allocate node */\r \tstruct Node* new_node = new Node;\r \r \t/* put in the data  */\r \tnew_node->data = new_data;\r \r \t/* link the old list off the new node */\r \tnew_node->next = (*head_ref);\r \r \t/* move the head to point to the new node */\r \t(*head_ref) = new_node;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Sort.cpp\\Algorithm\\Sort\\push(struct Node**,int)"
+    },
+    {
+        "f": [],
+        "fm": "void printList(struct Node *node) {\r \twhile (node != NULL) {\r \t\tprintf(\"%d  \", node->data);\r \t\tnode = node->next;\r \t}\r \tprintf(\"\\n\");\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Sort.cpp\\Algorithm\\Sort\\printList(struct Node*)"
+    },
+    {
+        "f": [],
+        "fm": "struct Node *getTail(struct Node *cur) {\r \twhile (cur != NULL && cur->next != NULL)\r \t\tcur = cur->next;\r \treturn cur;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Sort.cpp\\Algorithm\\Sort\\getTail(struct Node*)"
+    },
+    {
+        "f": [],
+        "fm": "struct Node *partition(struct Node *head, struct Node *end,\r \t\tstruct Node **newHead, struct Node **newEnd) {\r \tstruct Node *pivot = end;\r \tstruct Node *prev = NULL, *cur = head, *tail = pivot;\r \r \t// During partition, both the head and end of the list might change\r \t// which is updated in the newHead and newEnd variables\r \twhile (cur != pivot) {\r \t\tif (cur->data < pivot->data) {\r \t\t\t// First node that has a value less than the pivot - becomes\r \t\t\t// the new head\r \t\t\tif ((*newHead) == NULL)\r \t\t\t\t(*newHead) = cur;\r \r \t\t\tprev = cur;\r \t\t\tcur = cur->next;\r \t\t} else { // If cur node is greater than pivot\r \t\t\t// Move cur node to next of tail, and change tail\r \t\t\tif (prev)\r \t\t\t\tprev->next = cur->next;\r \t\t\tstruct Node *tmp = cur->next;\r \t\t\tcur->next = NULL;\r \t\t\ttail->next = cur;\r \t\t\ttail = cur;\r \t\t\tcur = tmp;\r \t\t}\r \t}\r \r \t// If the pivot data is the smallest element in the current list,\r \t// pivot becomes the head\r \tif ((*newHead) == NULL)\r \t\t(*newHead) = pivot;\r \r \t// Update newEnd to the current last node\r \t(*newEnd) = tail;\r \r \t// Return the pivot node\r \treturn pivot;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Sort.cpp\\Algorithm\\Sort\\partition(struct Node*,struct Node*,struct Node**,struct Node**)"
+    },
+    {
+        "f": [],
+        "fm": "struct Node *quickSortRecur(struct Node *head, struct Node *end) {\r \t// base condition\r \tif (!head || head == end)\r \t\treturn head;\r \r \tNode *newHead = NULL, *newEnd = NULL;\r \r \t// Partition the list, newHead and newEnd will be updated\r \t// by the partition function\r \tstruct Node *pivot = partition(head, end, &newHead, &newEnd);\r \r \t// If pivot is the smallest element - no need to recur for\r \t// the left part.\r \tif (newHead != pivot) {\r \t\t// Set the node before the pivot node as NULL\r \t\tstruct Node *tmp = newHead;\r \t\twhile (tmp->next != pivot)\r \t\t\ttmp = tmp->next;\r \t\ttmp->next = NULL;\r \r \t\t// Recur for the list before pivot\r \t\tnewHead = quickSortRecur(newHead, tmp);\r \r \t\t// Change next of last node of the left half to pivot\r \t\ttmp = getTail(newHead);\r \t\ttmp->next = pivot;\r \t}\r \r \t// Recur for the list after the pivot element\r \tpivot->next = quickSortRecur(pivot->next, newEnd);\r \r \treturn newHead;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Sort.cpp\\Algorithm\\Sort\\quickSortRecur(struct Node*,struct Node*)"
+    }
+]

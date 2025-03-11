@@ -1,0 +1,194 @@
+[
+    {
+        "f": [],
+        "fm": "bool is_overflow(int dividend, int divisor, int result) {\r     return (dividend / divisor) != result;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_is_overflow_int_int_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_is_overflow_int_int_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\sqrt_x.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint dividend=2024746389;\n\n\nint divisor=648473680;\n\n\nint result=-631710410;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode dividend */\n/* NormalNumberDataNode divisor */\n/* NormalNumberDataNode result */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_is_overflow_int_int_int_random_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->is_overflow(dividend,divisor,result);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-25\\\\sqrt_x.cpp\\\\Solution\\\\is_overflow(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\spiral_matrix.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-376388683;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=149844673;\nmatrix_element0.push_back(matrix_element0_element1);\nint matrix_element0_element2=1440922016;\nmatrix_element0.push_back(matrix_element0_element2);\nmatrix.push_back(matrix_element0);\nvector<int> matrix_element1;\nint matrix_element1_element0=-1569849725;\nmatrix_element1.push_back(matrix_element1_element0);\nint matrix_element1_element1=750017235;\nmatrix_element1.push_back(matrix_element1_element1);\nmatrix.push_back(matrix_element1);\nvector<int> matrix_element2;\nint matrix_element2_element0=-1060375281;\nmatrix_element2.push_back(matrix_element2_element0);\nint matrix_element2_element1=-2127740576;\nmatrix_element2.push_back(matrix_element2_element1);\nint matrix_element2_element2=887258218;\nmatrix_element2.push_back(matrix_element2_element2);\nmatrix.push_back(matrix_element2);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool is_overflow(int dividend, int divisor, int result) {\r     return (dividend / divisor) != result;\r   }\r \r   int sqrt(int x) {\r     int result;\r     int min = 0;\r     int max = x;\r     int square;\r \r     if (x <= 1) {\r       return x;\r     }\r \r     while (min <= max) {\r       result = (min + max) / 2;\r       square = result * result;\r \r       if (is_overflow(square, result, result)) {\r         max = result - 1;\r         continue;\r       }\r \r       if (square == x) {\r         return result;\r       }\r       else if (square < x) {\r         min = result + 1;\r       }\r       else {\r         max = result - 1;\r       }\r     }\r \r     return (square < x) ? result : (result - 1); \r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-25\\sqrt_x.cpp\\Solution\\is_overflow(int,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int sqrt(int x) {\r     int result;\r     int min = 0;\r     int max = x;\r     int square;\r \r     if (x <= 1) {\r       return x;\r     }\r \r     while (min <= max) {\r       result = (min + max) / 2;\r       square = result * result;\r \r       if (is_overflow(square, result, result)) {\r         max = result - 1;\r         continue;\r       }\r \r       if (square == x) {\r         return result;\r       }\r       else if (square < x) {\r         min = result + 1;\r       }\r       else {\r         max = result - 1;\r       }\r     }\r \r     return (square < x) ? result : (result - 1); \r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_sqrt_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_sqrt_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\sqrt_x.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint x=4;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_sqrt_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->sqrt(x);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-25\\\\sqrt_x.cpp\\\\Solution\\\\sqrt(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\spiral_matrix.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-376388683;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=149844673;\nmatrix_element0.push_back(matrix_element0_element1);\nint matrix_element0_element2=1440922016;\nmatrix_element0.push_back(matrix_element0_element2);\nmatrix.push_back(matrix_element0);\nvector<int> matrix_element1;\nint matrix_element1_element0=-1569849725;\nmatrix_element1.push_back(matrix_element1_element0);\nint matrix_element1_element1=750017235;\nmatrix_element1.push_back(matrix_element1_element1);\nmatrix.push_back(matrix_element1);\nvector<int> matrix_element2;\nint matrix_element2_element0=-1060375281;\nmatrix_element2.push_back(matrix_element2_element0);\nint matrix_element2_element1=-2127740576;\nmatrix_element2.push_back(matrix_element2_element1);\nint matrix_element2_element2=887258218;\nmatrix_element2.push_back(matrix_element2_element2);\nmatrix.push_back(matrix_element2);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_sqrt_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_sqrt_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\sqrt_x.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint x=5;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_sqrt_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->sqrt(x);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-25\\\\sqrt_x.cpp\\\\Solution\\\\sqrt(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\spiral_matrix.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-343419870;\nmatrix_element0.push_back(matrix_element0_element0);\nmatrix.push_back(matrix_element0);\nvector<int> matrix_element1;\nint matrix_element1_element0=-2097715263;\nmatrix_element1.push_back(matrix_element1_element0);\nint matrix_element1_element1=-1255828900;\nmatrix_element1.push_back(matrix_element1_element1);\nint matrix_element1_element2=649607326;\nmatrix_element1.push_back(matrix_element1_element2);\nmatrix.push_back(matrix_element1);\nvector<int> matrix_element2;\nint matrix_element2_element0=1814778113;\nmatrix_element2.push_back(matrix_element2_element0);\nint matrix_element2_element1=-2127196322;\nmatrix_element2.push_back(matrix_element2_element1);\nint matrix_element2_element2=1285642931;\nmatrix_element2.push_back(matrix_element2_element2);\nmatrix.push_back(matrix_element2);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool is_overflow(int dividend, int divisor, int result) {\r     return (dividend / divisor) != result;\r   }\r \r   int sqrt(int x) {\r     int result;\r     int min = 0;\r     int max = x;\r     int square;\r \r     if (x <= 1) {\r       return x;\r     }\r \r     while (min <= max) {\r       result = (min + max) / 2;\r       square = result * result;\r \r       if (is_overflow(square, result, result)) {\r         max = result - 1;\r         continue;\r       }\r \r       if (square == x) {\r         return result;\r       }\r       else if (square < x) {\r         min = result + 1;\r       }\r       else {\r         max = result - 1;\r       }\r     }\r \r     return (square < x) ? result : (result - 1); \r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-25\\sqrt_x.cpp\\Solution\\sqrt(int)"
+    },
+    {
+        "f": [],
+        "fm": "int atoi(const char *str) {\r     bool minus = false; // 不确定的情况下先假设为正数\r \r     while (' ' == *str) {\r       // 先消除头上连续的空格\r       ++str;\r     }\r \r     // 判断正负数\r     if (('+' ==  *str) || ('-' == *str)) {\r       if ('-' == *str) {\r         minus = true;\r       }\r \r       ++str;\r     }\r \r     // 有非数字就返回0\r     if (('\\0' == *str) || (*str < '0') || (*str > '9')) {\r       return 0;\r     }\r \r     unsigned long long ull = 0; // 小心溢出，我们这里处理32位数。\r \r     while (*str != '\\0') {\r       // 遇到非数字就中止\r       if ((*str < '0') || (*str > '9')) {\r         break;\r       }\r \r       ull = ull * 10 + (*str - '0');\r \r       if (minus) {\r         if (ull > 0x80000000) {\r           // 负数溢出\r           return INT_MIN;\r         }\r       }\r       else {\r         if (ull > 0x7fffffff) {\r           // 正数溢出\r           return INT_MAX;\r         }\r       }\r \r       ++str;\r     }\r \r     return minus ? -1 * (int)ull : (int)ull;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_atoi_char_constmul_random_1(void) {\n{\nAKA_test_case_name=\"Solution_atoi_char_constmul_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\string_to_integer_atoi.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_str[2];\n\nchar AKA_ARRAY_INIT_str_constantPointer_0=5;\nAKA_ARRAY_INIT_str[0] = AKA_ARRAY_INIT_str_constantPointer_0;\n\nchar AKA_ARRAY_INIT_str_constantPointer_1=-63;\nAKA_ARRAY_INIT_str[1] = AKA_ARRAY_INIT_str_constantPointer_1;\n\nchar const* str = AKA_ARRAY_INIT_str;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode str */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_atoi_char_constmul_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->atoi(str);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-25\\\\string_to_integer_atoi.cpp\\\\Solution\\\\atoi(char const*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\spiral_matrix.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-376388683;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=149844673;\nmatrix_element0.push_back(matrix_element0_element1);\nint matrix_element0_element2=1440922016;\nmatrix_element0.push_back(matrix_element0_element2);\nmatrix.push_back(matrix_element0);\nvector<int> matrix_element1;\nint matrix_element1_element0=-1569849725;\nmatrix_element1.push_back(matrix_element1_element0);\nint matrix_element1_element1=750017235;\nmatrix_element1.push_back(matrix_element1_element1);\nmatrix.push_back(matrix_element1);\nvector<int> matrix_element2;\nint matrix_element2_element0=-1060375281;\nmatrix_element2.push_back(matrix_element2_element0);\nint matrix_element2_element1=-2127740576;\nmatrix_element2.push_back(matrix_element2_element1);\nint matrix_element2_element2=887258218;\nmatrix_element2.push_back(matrix_element2_element2);\nmatrix.push_back(matrix_element2);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_atoi_char_constmul_random_3(void) {\n{\nAKA_test_case_name=\"Solution_atoi_char_constmul_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\string_to_integer_atoi.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_str[2];\n\nchar AKA_ARRAY_INIT_str_constantPointer_0=125;\nAKA_ARRAY_INIT_str[0] = AKA_ARRAY_INIT_str_constantPointer_0;\n\nchar AKA_ARRAY_INIT_str_constantPointer_1=-74;\nAKA_ARRAY_INIT_str[1] = AKA_ARRAY_INIT_str_constantPointer_1;\n\nchar const* str = AKA_ARRAY_INIT_str;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode str */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_atoi_char_constmul_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->atoi(str);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-25\\\\string_to_integer_atoi.cpp\\\\Solution\\\\atoi(char const*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\spiral_matrix.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-343419870;\nmatrix_element0.push_back(matrix_element0_element0);\nmatrix.push_back(matrix_element0);\nvector<int> matrix_element1;\nint matrix_element1_element0=-2097715263;\nmatrix_element1.push_back(matrix_element1_element0);\nint matrix_element1_element1=-1255828900;\nmatrix_element1.push_back(matrix_element1_element1);\nint matrix_element1_element2=649607326;\nmatrix_element1.push_back(matrix_element1_element2);\nmatrix.push_back(matrix_element1);\nvector<int> matrix_element2;\nint matrix_element2_element0=1814778113;\nmatrix_element2.push_back(matrix_element2_element0);\nint matrix_element2_element1=-2127196322;\nmatrix_element2.push_back(matrix_element2_element1);\nint matrix_element2_element2=1285642931;\nmatrix_element2.push_back(matrix_element2_element2);\nmatrix.push_back(matrix_element2);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int atoi(const char *str) {\r     bool minus = false; // 不确定的情况下先假设为正数\r \r     while (' ' == *str) {\r       // 先消除头上连续的空格\r       ++str;\r     }\r \r     // 判断正负数\r     if (('+' ==  *str) || ('-' == *str)) {\r       if ('-' == *str) {\r         minus = true;\r       }\r \r       ++str;\r     }\r \r     // 有非数字就返回0\r     if (('\\0' == *str) || (*str < '0') || (*str > '9')) {\r       return 0;\r     }\r \r     unsigned long long ull = 0; // 小心溢出，我们这里处理32位数。\r \r     while (*str != '\\0') {\r       // 遇到非数字就中止\r       if ((*str < '0') || (*str > '9')) {\r         break;\r       }\r \r       ull = ull * 10 + (*str - '0');\r \r       if (minus) {\r         if (ull > 0x80000000) {\r           // 负数溢出\r           return INT_MIN;\r         }\r       }\r       else {\r         if (ull > 0x7fffffff) {\r           // 正数溢出\r           return INT_MAX;\r         }\r       }\r \r       ++str;\r     }\r \r     return minus ? -1 * (int)ull : (int)ull;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-25\\string_to_integer_atoi.cpp\\Solution\\atoi(char const*)"
+    },
+    {
+        "f": [],
+        "fm": "void generate_subsets(vector<int> &set,\r       int index,\r       vector<int> &subset,\r       vector<vector<int> > &result) {\r     for (int i = index; i < set.size(); ++i) {\r       subset.push_back(set[i]);\r       result.push_back(subset);\r \r       if (i < (set.size() - 1)) {\r         generate_subsets(set, i + 1, subset, result);\r       }\r \r       subset.pop_back();\r     }\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_generate_subsets_vector_int_int_vector_int_vector_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_generate_subsets_vector_int_int_vector_int_vector_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\subsets.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> set;\n\n\nint index=0;\nvector<int> subset;\nvector<vector<int>> result;\n\n/* RootDataNode STATIC */\n/* VectorDataNode set */\nint set_element0=1076437519;\nset.push_back(set_element0);\nint set_element1=72712312;\nset.push_back(set_element1);\n/* NormalNumberDataNode index */\n/* VectorDataNode subset */\nint subset_element0=-422092455;\nsubset.push_back(subset_element0);\nint subset_element1=540144198;\nsubset.push_back(subset_element1);\n/* VectorDataNode result */\nvector<int> result_element0;\nint result_element0_element0=698568851;\nresult_element0.push_back(result_element0_element0);\nint result_element0_element1=-1485345712;\nresult_element0.push_back(result_element0_element1);\nint result_element0_element2=-437813202;\nresult_element0.push_back(result_element0_element2);\nresult.push_back(result_element0);\nvector<int> result_element1;\nint result_element1_element0=-1150694269;\nresult_element1.push_back(result_element1_element0);\nresult.push_back(result_element1);\nvector<int> result_element2;\nint result_element2_element0=1892835402;\nresult_element2.push_back(result_element2_element0);\nint result_element2_element1=1731732778;\nresult_element2.push_back(result_element2_element1);\nint result_element2_element2=766948399;\nresult_element2.push_back(result_element2_element2);\nresult.push_back(result_element2);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_generate_subsets_vector_int_int_vector_int_vector_vector_int_random_3\");AKA_INSTANCE___Solution->generate_subsets(set,index,subset,result);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-25\\\\subsets.cpp\\\\Solution\\\\generate_subsets(vector<int>&,int,vector<int>&,vector<vector<int>>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_set;\n\nvector<int> EXPECTED_subset;\n\nvector<vector<int>> EXPECTED_result;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\spiral_matrix.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-376388683;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=149844673;\nmatrix_element0.push_back(matrix_element0_element1);\nint matrix_element0_element2=1440922016;\nmatrix_element0.push_back(matrix_element0_element2);\nmatrix.push_back(matrix_element0);\nvector<int> matrix_element1;\nint matrix_element1_element0=-1569849725;\nmatrix_element1.push_back(matrix_element1_element0);\nint matrix_element1_element1=750017235;\nmatrix_element1.push_back(matrix_element1_element1);\nmatrix.push_back(matrix_element1);\nvector<int> matrix_element2;\nint matrix_element2_element0=-1060375281;\nmatrix_element2.push_back(matrix_element2_element0);\nint matrix_element2_element1=-2127740576;\nmatrix_element2.push_back(matrix_element2_element1);\nint matrix_element2_element2=887258218;\nmatrix_element2.push_back(matrix_element2_element2);\nmatrix.push_back(matrix_element2);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   void generate_subsets(vector<int> &set,\r       int index,\r       vector<int> &subset,\r       vector<vector<int> > &result) {\r     for (int i = index; i < set.size(); ++i) {\r       subset.push_back(set[i]);\r       result.push_back(subset);\r \r       if (i < (set.size() - 1)) {\r         generate_subsets(set, i + 1, subset, result);\r       }\r \r       subset.pop_back();\r     }\r   }\r \r   vector<vector<int> > subsets(vector<int> &S) {\r     vector<vector<int> > result;\r     vector<int> subset;\r \r     if (0 == S.size()) {\r       return result;\r     }\r \r     sort(S.begin(), S.end());\r     // 空集一定是个子集\r     result.push_back(subset);\r \r     generate_subsets(S, 0, subset, result);\r \r     return result;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-25\\subsets.cpp\\Solution\\generate_subsets(vector<int>&,int,vector<int>&,vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<vector<int> > subsets(vector<int> &S) {\r     vector<vector<int> > result;\r     vector<int> subset;\r \r     if (0 == S.size()) {\r       return result;\r     }\r \r     sort(S.begin(), S.end());\r     // 空集一定是个子集\r     result.push_back(subset);\r \r     generate_subsets(S, 0, subset, result);\r \r     return result;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_subsets_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_subsets_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\subsets.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> S;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode S */\nint S_element0=-1526014046;\nS.push_back(S_element0);\nint S_element1=-578442761;\nS.push_back(S_element1);\nint S_element2=999184301;\nS.push_back(S_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_subsets_vector_int_random_2\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->subsets(S);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-25\\\\subsets.cpp\\\\Solution\\\\subsets(vector<int>&)\");\n\n\nvector<int> EXPECTED_S;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\spiral_matrix.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-376388683;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=149844673;\nmatrix_element0.push_back(matrix_element0_element1);\nint matrix_element0_element2=1440922016;\nmatrix_element0.push_back(matrix_element0_element2);\nmatrix.push_back(matrix_element0);\nvector<int> matrix_element1;\nint matrix_element1_element0=-1569849725;\nmatrix_element1.push_back(matrix_element1_element0);\nint matrix_element1_element1=750017235;\nmatrix_element1.push_back(matrix_element1_element1);\nmatrix.push_back(matrix_element1);\nvector<int> matrix_element2;\nint matrix_element2_element0=-1060375281;\nmatrix_element2.push_back(matrix_element2_element0);\nint matrix_element2_element1=-2127740576;\nmatrix_element2.push_back(matrix_element2_element1);\nint matrix_element2_element2=887258218;\nmatrix_element2.push_back(matrix_element2_element2);\nmatrix.push_back(matrix_element2);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   void generate_subsets(vector<int> &set,\r       int index,\r       vector<int> &subset,\r       vector<vector<int> > &result) {\r     for (int i = index; i < set.size(); ++i) {\r       subset.push_back(set[i]);\r       result.push_back(subset);\r \r       if (i < (set.size() - 1)) {\r         generate_subsets(set, i + 1, subset, result);\r       }\r \r       subset.pop_back();\r     }\r   }\r \r   vector<vector<int> > subsets(vector<int> &S) {\r     vector<vector<int> > result;\r     vector<int> subset;\r \r     if (0 == S.size()) {\r       return result;\r     }\r \r     sort(S.begin(), S.end());\r     // 空集一定是个子集\r     result.push_back(subset);\r \r     generate_subsets(S, 0, subset, result);\r \r     return result;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-25\\subsets.cpp\\Solution\\subsets(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<vector<int> > subsetsWithDup(vector<int> &S) {\r     vector<vector<int> > subsets;\r     vector<int> subset;\r \r     if (0 == S.size()) {\r       return subsets;\r     }\r \r     sort(S.begin(), S.end());\r     // 空集一定是个子集\r     subsets.push_back(subset);\r \r     generate_subsets(S, 0, subset, subsets);\r \r     return subsets;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_subsetsWithDup_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_subsetsWithDup_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\subsets_ii.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> S;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode S */\nint S_element0=508064185;\nS.push_back(S_element0);\nint S_element1=-1553085912;\nS.push_back(S_element1);\nint S_element2=1294219572;\nS.push_back(S_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_subsetsWithDup_vector_int_random_0\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->subsetsWithDup(S);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-25\\\\subsets_ii.cpp\\\\Solution\\\\subsetsWithDup(vector<int>&)\");\n\n\nvector<int> EXPECTED_S;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\spiral_matrix.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-376388683;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=149844673;\nmatrix_element0.push_back(matrix_element0_element1);\nint matrix_element0_element2=1440922016;\nmatrix_element0.push_back(matrix_element0_element2);\nmatrix.push_back(matrix_element0);\nvector<int> matrix_element1;\nint matrix_element1_element0=-1569849725;\nmatrix_element1.push_back(matrix_element1_element0);\nint matrix_element1_element1=750017235;\nmatrix_element1.push_back(matrix_element1_element1);\nmatrix.push_back(matrix_element1);\nvector<int> matrix_element2;\nint matrix_element2_element0=-1060375281;\nmatrix_element2.push_back(matrix_element2_element0);\nint matrix_element2_element1=-2127740576;\nmatrix_element2.push_back(matrix_element2_element1);\nint matrix_element2_element2=887258218;\nmatrix_element2.push_back(matrix_element2_element2);\nmatrix.push_back(matrix_element2);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   void generate_subsets(vector<int> &set,\r       int index,\r       vector<int> &subset,\r       vector<vector<int> > &subsets) {\r     int size = set.size();\r \r     for (int i = index; i < size; ) {\r       subset.push_back(set[i]);\r       subsets.push_back(subset);\r \r       if ((i + 1) < size) {\r         generate_subsets(set, i + 1, subset, subsets);\r       }\r \r       subset.pop_back();\r \r       int j = i + 1;\r \r       while ((j < size) && (set[i] == set[j])) {\r         ++j;\r       }\r \r       i = j;\r     }\r   }\r \r   vector<vector<int> > subsetsWithDup(vector<int> &S) {\r     vector<vector<int> > subsets;\r     vector<int> subset;\r \r     if (0 == S.size()) {\r       return subsets;\r     }\r \r     sort(S.begin(), S.end());\r     // 空集一定是个子集\r     subsets.push_back(subset);\r \r     generate_subsets(S, 0, subset, subsets);\r \r     return subsets;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-25\\subsets_ii.cpp\\Solution\\subsetsWithDup(vector<int>&)"
+    }
+]

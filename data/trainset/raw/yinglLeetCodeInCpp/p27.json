@@ -1,0 +1,162 @@
+[
+    {
+        "f": [],
+        "fm": "bool binary_search(vector<int> &row, int target) {\r     int min = 0;\r     int max = row.size() - 1;\r \r     while (min <= max) {\r       int mid = (min + max) / 2;\r \r       if (row[mid] == target) {\r         return true;\r       }\r       else if (row[mid] < target) {\r         min = mid + 1;\r       }\r       else {\r         max = mid - 1;\r       }\r     }\r \r     return false;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_binary_search_vector_int_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_binary_search_vector_int_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\search_a_2d_matrix.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> row;\n\n\nint target=-545242102;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode row */\nint row_element0=-1809951433;\nrow.push_back(row_element0);\nint row_element1=98936386;\nrow.push_back(row_element1);\nint row_element2=1832257630;\nrow.push_back(row_element2);\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_binary_search_vector_int_int_random_4\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->binary_search(row,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-21\\\\search_a_2d_matrix.cpp\\\\Solution\\\\binary_search(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_row;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool binary_search(vector<int> &row, int target) {\r     int min = 0;\r     int max = row.size() - 1;\r \r     while (min <= max) {\r       int mid = (min + max) / 2;\r \r       if (row[mid] == target) {\r         return true;\r       }\r       else if (row[mid] < target) {\r         min = mid + 1;\r       }\r       else {\r         max = mid - 1;\r       }\r     }\r \r     return false;\r   }\r \r   // 确定在哪一行搜索\r   int locate_row(const vector<vector<int> > &matrix, int target) {\r     int rows = matrix.size();\r \r     for (int row = 0; row < (rows - 1); ++row) {\r       if ((target >= matrix[row][0]) && (target < matrix[row + 1][0])) {\r         return row;\r       }\r     }\r \r     return (target >= matrix[rows - 1][0]) ? (rows - 1) : -1;\r   }\r \r   bool searchMatrix(vector<vector<int> > &matrix, int target) {\r     int row = locate_row(matrix, target);\r \r     if (row != -1) {\r       return binary_search(matrix[row], target);\r     }\r     else {\r       return false;\r     }\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-21\\search_a_2d_matrix.cpp\\Solution\\binary_search(vector<int>&,int)"
+    },
+    {
+        "f": [],
+        "fm": "int locate_row(const vector<vector<int> > &matrix, int target) {\r     int rows = matrix.size();\r \r     for (int row = 0; row < (rows - 1); ++row) {\r       if ((target >= matrix[row][0]) && (target < matrix[row + 1][0])) {\r         return row;\r       }\r     }\r \r     return (target >= matrix[rows - 1][0]) ? (rows - 1) : -1;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_locate_row_vector_vector_int_const_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_locate_row_vector_vector_int_const_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\search_a_2d_matrix.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>>matrix;\n\n\nint target=37491004;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-16494457;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=-595823644;\nmatrix_element0.push_back(matrix_element0_element1);\nmatrix.push_back(matrix_element0);\nvector<int> matrix_element1;\nint matrix_element1_element0=978369022;\nmatrix_element1.push_back(matrix_element1_element0);\nint matrix_element1_element1=40188957;\nmatrix_element1.push_back(matrix_element1_element1);\nmatrix.push_back(matrix_element1);\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_locate_row_vector_vector_int_const_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->locate_row(matrix,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-21\\\\search_a_2d_matrix.cpp\\\\Solution\\\\locate_row(vector<vector<int>>const&,int)\");\n\n\nvector<vector<int>>const EXPECTED_matrix;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_locate_row_vector_vector_int_const_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_locate_row_vector_vector_int_const_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\search_a_2d_matrix.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>>matrix;\n\n\nint target=2051319896;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-266516383;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=2047189109;\nmatrix_element0.push_back(matrix_element0_element1);\nint matrix_element0_element2=1209088158;\nmatrix_element0.push_back(matrix_element0_element2);\nmatrix.push_back(matrix_element0);\nvector<int> matrix_element1;\nint matrix_element1_element0=-869642155;\nmatrix_element1.push_back(matrix_element1_element0);\nmatrix.push_back(matrix_element1);\nvector<int> matrix_element2;\nint matrix_element2_element0=614488356;\nmatrix_element2.push_back(matrix_element2_element0);\nint matrix_element2_element1=-925855442;\nmatrix_element2.push_back(matrix_element2_element1);\nmatrix.push_back(matrix_element2);\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_locate_row_vector_vector_int_const_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->locate_row(matrix,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-21\\\\search_a_2d_matrix.cpp\\\\Solution\\\\locate_row(vector<vector<int>>const&,int)\");\n\n\nvector<vector<int>>const EXPECTED_matrix;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-110210008;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=1580515888;\nmatrix_element0.push_back(matrix_element0_element1);\nmatrix.push_back(matrix_element0);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_locate_row_vector_vector_int_const_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_locate_row_vector_vector_int_const_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\search_a_2d_matrix.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>>matrix;\n\n\nint target=-1983078135;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=873217163;\nmatrix_element0.push_back(matrix_element0_element0);\nmatrix.push_back(matrix_element0);\nvector<int> matrix_element1;\nint matrix_element1_element0=1305596699;\nmatrix_element1.push_back(matrix_element1_element0);\nint matrix_element1_element1=-1027281034;\nmatrix_element1.push_back(matrix_element1_element1);\nmatrix.push_back(matrix_element1);\nvector<int> matrix_element2;\nint matrix_element2_element0=1591707376;\nmatrix_element2.push_back(matrix_element2_element0);\nint matrix_element2_element1=1501317306;\nmatrix_element2.push_back(matrix_element2_element1);\nint matrix_element2_element2=-231346043;\nmatrix_element2.push_back(matrix_element2_element2);\nmatrix.push_back(matrix_element2);\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_locate_row_vector_vector_int_const_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->locate_row(matrix,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-21\\\\search_a_2d_matrix.cpp\\\\Solution\\\\locate_row(vector<vector<int>>const&,int)\");\n\n\nvector<vector<int>>const EXPECTED_matrix;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-212762741;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=2070304605;\nmatrix_element0.push_back(matrix_element0_element1);\nmatrix.push_back(matrix_element0);\nvector<int> matrix_element1;\nint matrix_element1_element0=2037744170;\nmatrix_element1.push_back(matrix_element1_element0);\nint matrix_element1_element1=1931361686;\nmatrix_element1.push_back(matrix_element1_element1);\nint matrix_element1_element2=1120640478;\nmatrix_element1.push_back(matrix_element1_element2);\nmatrix.push_back(matrix_element1);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool binary_search(vector<int> &row, int target) {\r     int min = 0;\r     int max = row.size() - 1;\r \r     while (min <= max) {\r       int mid = (min + max) / 2;\r \r       if (row[mid] == target) {\r         return true;\r       }\r       else if (row[mid] < target) {\r         min = mid + 1;\r       }\r       else {\r         max = mid - 1;\r       }\r     }\r \r     return false;\r   }\r \r   // 确定在哪一行搜索\r   int locate_row(const vector<vector<int> > &matrix, int target) {\r     int rows = matrix.size();\r \r     for (int row = 0; row < (rows - 1); ++row) {\r       if ((target >= matrix[row][0]) && (target < matrix[row + 1][0])) {\r         return row;\r       }\r     }\r \r     return (target >= matrix[rows - 1][0]) ? (rows - 1) : -1;\r   }\r \r   bool searchMatrix(vector<vector<int> > &matrix, int target) {\r     int row = locate_row(matrix, target);\r \r     if (row != -1) {\r       return binary_search(matrix[row], target);\r     }\r     else {\r       return false;\r     }\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-21\\search_a_2d_matrix.cpp\\Solution\\locate_row(vector<vector<int>>const&,int)"
+    },
+    {
+        "f": [],
+        "fm": "int binary_search(int array[], int start, int end, int target) {\r     while (start <= end) {\r       int mid = (start + end) / 2;\r \r       if (array[mid] < target) {\r         start = mid + 1;\r       }\r       else if (array[mid] > target) {\r         end = mid - 1;\r       }\r       else {\r         return mid;\r       }\r     }\r \r     return -1;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_binary_search_int_int_int_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_binary_search_int_int_int_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\search_for_a_range.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint array[1];;\n\n\nint start=1;\n\n\nint end=1;\n\n\nint target=81703640;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode array */\n/* NormalNumberDataNode array[0] */\narray[0]=-1749650682;\n/* NormalNumberDataNode start */\n/* NormalNumberDataNode end */\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_binary_search_int_int_int_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->binary_search(array,start,end,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-21\\\\search_for_a_range.cpp\\\\Solution\\\\binary_search(int[],int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_binary_search_int_int_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_binary_search_int_int_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\search_for_a_range.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint array[3];;\n\n\nint start=3;\n\n\nint end=10;\n\n\nint target=-2018918385;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode array */\n/* NormalNumberDataNode array[0] */\narray[0]=773609052;\n/* NormalNumberDataNode array[1] */\narray[1]=-1159645120;\n/* NormalNumberDataNode array[2] */\narray[2]=-362275490;\n/* NormalNumberDataNode start */\n/* NormalNumberDataNode end */\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_binary_search_int_int_int_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->binary_search(array,start,end,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-21\\\\search_for_a_range.cpp\\\\Solution\\\\binary_search(int[],int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-110210008;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=1580515888;\nmatrix_element0.push_back(matrix_element0_element1);\nmatrix.push_back(matrix_element0);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int binary_search(int array[], int start, int end, int target) {\r     while (start <= end) {\r       int mid = (start + end) / 2;\r \r       if (array[mid] < target) {\r         start = mid + 1;\r       }\r       else if (array[mid] > target) {\r         end = mid - 1;\r       }\r       else {\r         return mid;\r       }\r     }\r \r     return -1;\r   }\r \r   vector<int> searchRange(int A[], int n, int target) {\r     vector<int> result(2, -1);\r     int position = binary_search(A, 0, n - 1, target);\r \r     if (-1 == position) {\r       return result;\r     }\r \r     int tmp = position - 1;\r     result[0] = position;\r     result[1] = position;\r \r     // 搜索[0, position - 1]\r     while (tmp >= 0) {\r       tmp = binary_search(A, 0, tmp, target);\r \r       if (-1 == tmp) {\r         break;\r       }\r       else {\r         result[0] = tmp;  // 可能的开始位置\r         --tmp;\r       }\r     }\r \r     tmp = position + 1;\r \r     // 搜索后半段\r     while (tmp < n) {\r       tmp = binary_search(A, tmp, n - 1, target);\r \r       if (-1 == tmp) {\r         break;\r       }\r       else {\r         result[1] = tmp;  // 可能的结束位置\r         ++tmp;\r       }\r     }\r \r     return result;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-21\\search_for_a_range.cpp\\Solution\\binary_search(int[],int,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> searchRange(int A[], int n, int target) {\r     vector<int> result(2, -1);\r     int position = binary_search(A, 0, n - 1, target);\r \r     if (-1 == position) {\r       return result;\r     }\r \r     int tmp = position - 1;\r     result[0] = position;\r     result[1] = position;\r \r     // 搜索[0, position - 1]\r     while (tmp >= 0) {\r       tmp = binary_search(A, 0, tmp, target);\r \r       if (-1 == tmp) {\r         break;\r       }\r       else {\r         result[0] = tmp;  // 可能的开始位置\r         --tmp;\r       }\r     }\r \r     tmp = position + 1;\r \r     // 搜索后半段\r     while (tmp < n) {\r       tmp = binary_search(A, tmp, n - 1, target);\r \r       if (-1 == tmp) {\r         break;\r       }\r       else {\r         result[1] = tmp;  // 可能的结束位置\r         ++tmp;\r       }\r     }\r \r     return result;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_searchRange_int_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_searchRange_int_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\search_for_a_range.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[3];;\n\n\nint n=5;\n\n\nint target=-316847875;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=552069544;\n/* NormalNumberDataNode A[1] */\nA[1]=1415639077;\n/* NormalNumberDataNode A[2] */\nA[2]=-1235587287;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_searchRange_int_int_int_random_0\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->searchRange(A,n,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-21\\\\search_for_a_range.cpp\\\\Solution\\\\searchRange(int[],int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_searchRange_int_int_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_searchRange_int_int_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\search_for_a_range.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[2];;\n\n\nint n=1;\n\n\nint target=368130906;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=-2117724148;\n/* NormalNumberDataNode A[1] */\nA[1]=-1990172005;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_searchRange_int_int_int_random_1\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->searchRange(A,n,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-21\\\\search_for_a_range.cpp\\\\Solution\\\\searchRange(int[],int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-110210008;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=1580515888;\nmatrix_element0.push_back(matrix_element0_element1);\nmatrix.push_back(matrix_element0);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int binary_search(int array[], int start, int end, int target) {\r     while (start <= end) {\r       int mid = (start + end) / 2;\r \r       if (array[mid] < target) {\r         start = mid + 1;\r       }\r       else if (array[mid] > target) {\r         end = mid - 1;\r       }\r       else {\r         return mid;\r       }\r     }\r \r     return -1;\r   }\r \r   vector<int> searchRange(int A[], int n, int target) {\r     vector<int> result(2, -1);\r     int position = binary_search(A, 0, n - 1, target);\r \r     if (-1 == position) {\r       return result;\r     }\r \r     int tmp = position - 1;\r     result[0] = position;\r     result[1] = position;\r \r     // 搜索[0, position - 1]\r     while (tmp >= 0) {\r       tmp = binary_search(A, 0, tmp, target);\r \r       if (-1 == tmp) {\r         break;\r       }\r       else {\r         result[0] = tmp;  // 可能的开始位置\r         --tmp;\r       }\r     }\r \r     tmp = position + 1;\r \r     // 搜索后半段\r     while (tmp < n) {\r       tmp = binary_search(A, tmp, n - 1, target);\r \r       if (-1 == tmp) {\r         break;\r       }\r       else {\r         result[1] = tmp;  // 可能的结束位置\r         ++tmp;\r       }\r     }\r \r     return result;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-21\\search_for_a_range.cpp\\Solution\\searchRange(int[],int,int)"
+    }
+]

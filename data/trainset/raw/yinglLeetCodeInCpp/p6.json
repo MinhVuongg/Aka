@@ -1,0 +1,138 @@
+[
+    {
+        "f": [],
+        "fm": "int min_distance(string word_1,\r       int index_1,\r       string word_2,\r       int index_2,\r       vector<vector<int> > &cached_distances) {\r     int len_1 = word_1.length();\r     int len_2 = word_2.length();\r \r     if (index_1 >= len_1) {\r       // 字符串1已经到了尾部，距离就是字符串2剩下的长度。\r       return (len_2 - index_2);\r     }\r     else if (index_2 >= len_2) {\r       return (len_1 - index_1);\r     }\r \r     if (cached_distances[index_1][index_2] > 0) {\r       return cached_distances[index_1][index_2];\r     }\r     else {\r       // word_1或者word_2插入一个字符，取较小值。\r       int dist_1 = 1 + min(min_distance(word_1, index_1, word_2, index_2 + 1, cached_distances),\r           min_distance(word_1, index_1 + 1, word_2, index_2, cached_distances));\r \r       // 如果word_1[index_1]不等于word_2[index_2]，则做一次修改，继续比较取较小值。\r       int dist_2 = min_distance(word_1, index_1 + 1, word_2, index_2 + 1, cached_distances);\r       if (word_1[index_1] != word_2[index_2]) {\r         dist_2 += 1;\r       }\r \r       cached_distances[index_1][index_2] = min(dist_1, dist_2);\r     }\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_min_distance_string_int_string_int_vector_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_min_distance_string_int_string_int_vector_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\edit_distance.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName871602 = new char[2];akaRandomName871602[0] = 1;akaRandomName871602[1] = '\\0';string word_1=akaRandomName871602;\n\n\nint index_1=-2021869922;\nchar* akaRandomName287916 = new char[2];akaRandomName287916[0] = 67;akaRandomName287916[1] = '\\0';string word_2=akaRandomName287916;\n\n\nint index_2=1639904226;\nvector<vector<int>> cached_distances;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word_1 */\n/* NormalNumberDataNode index_1 */\n/* NormalStringDataNode word_2 */\n/* NormalNumberDataNode index_2 */\n/* VectorDataNode cached_distances */\nvector<int> cached_distances_element0;\nint cached_distances_element0_element0=-793107520;\ncached_distances_element0.push_back(cached_distances_element0_element0);\ncached_distances.push_back(cached_distances_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_min_distance_string_int_string_int_vector_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->min_distance(word_1,index_1,word_2,index_2,cached_distances);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-6\\\\edit_distance.cpp\\\\Solution\\\\min_distance(string,int,string,int,vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_cached_distances;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\container_with_most_water.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=-867895881;\nheight.push_back(height_element0);\nint height_element1=1288329573;\nheight.push_back(height_element1);\nint height_element2=-1368174190;\nheight.push_back(height_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_min_distance_string_int_string_int_vector_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_min_distance_string_int_string_int_vector_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\edit_distance.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName374960 = new char[2];akaRandomName374960[0] = 82;akaRandomName374960[1] = '\\0';string word_1=akaRandomName374960;\n\n\nint index_1=1144119643;\nchar* akaRandomName869911 = new char[2];akaRandomName869911[0] = 111;akaRandomName869911[1] = '\\0';string word_2=akaRandomName869911;\n\n\nint index_2=716925272;\nvector<vector<int>> cached_distances;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word_1 */\n/* NormalNumberDataNode index_1 */\n/* NormalStringDataNode word_2 */\n/* NormalNumberDataNode index_2 */\n/* VectorDataNode cached_distances */\nvector<int> cached_distances_element0;\nint cached_distances_element0_element0=752571664;\ncached_distances_element0.push_back(cached_distances_element0_element0);\nint cached_distances_element0_element1=1732134347;\ncached_distances_element0.push_back(cached_distances_element0_element1);\ncached_distances.push_back(cached_distances_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_min_distance_string_int_string_int_vector_vector_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->min_distance(word_1,index_1,word_2,index_2,cached_distances);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-6\\\\edit_distance.cpp\\\\Solution\\\\min_distance(string,int,string,int,vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_cached_distances;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\container_with_most_water.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=2055599774;\nheight.push_back(height_element0);\nint height_element1=508870766;\nheight.push_back(height_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_min_distance_string_int_string_int_vector_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_min_distance_string_int_string_int_vector_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\edit_distance.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName917616 = new char[2];akaRandomName917616[0] = -23;akaRandomName917616[1] = '\\0';string word_1=akaRandomName917616;\n\n\nint index_1=-845100311;\nchar* akaRandomName845731 = new char[2];akaRandomName845731[0] = 41;akaRandomName845731[1] = '\\0';string word_2=akaRandomName845731;\n\n\nint index_2=-872083117;\nvector<vector<int>> cached_distances;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word_1 */\n/* NormalNumberDataNode index_1 */\n/* NormalStringDataNode word_2 */\n/* NormalNumberDataNode index_2 */\n/* VectorDataNode cached_distances */\nvector<int> cached_distances_element0;\nint cached_distances_element0_element0=-2144894141;\ncached_distances_element0.push_back(cached_distances_element0_element0);\nint cached_distances_element0_element1=-776617624;\ncached_distances_element0.push_back(cached_distances_element0_element1);\nint cached_distances_element0_element2=-737548967;\ncached_distances_element0.push_back(cached_distances_element0_element2);\ncached_distances.push_back(cached_distances_element0);\nvector<int> cached_distances_element1;\nint cached_distances_element1_element0=-915621693;\ncached_distances_element1.push_back(cached_distances_element1_element0);\nint cached_distances_element1_element1=1249133171;\ncached_distances_element1.push_back(cached_distances_element1_element1);\nint cached_distances_element1_element2=1472574842;\ncached_distances_element1.push_back(cached_distances_element1_element2);\ncached_distances.push_back(cached_distances_element1);\nvector<int> cached_distances_element2;\nint cached_distances_element2_element0=-361064069;\ncached_distances_element2.push_back(cached_distances_element2_element0);\nint cached_distances_element2_element1=-1490242174;\ncached_distances_element2.push_back(cached_distances_element2_element1);\nint cached_distances_element2_element2=2045274699;\ncached_distances_element2.push_back(cached_distances_element2_element2);\ncached_distances.push_back(cached_distances_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_min_distance_string_int_string_int_vector_vector_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->min_distance(word_1,index_1,word_2,index_2,cached_distances);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-6\\\\edit_distance.cpp\\\\Solution\\\\min_distance(string,int,string,int,vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_cached_distances;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\container_with_most_water.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=-867895881;\nheight.push_back(height_element0);\nint height_element1=1288329573;\nheight.push_back(height_element1);\nint height_element2=-1368174190;\nheight.push_back(height_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int min_distance(string word_1,\r       int index_1,\r       string word_2,\r       int index_2,\r       vector<vector<int> > &cached_distances) {\r     int len_1 = word_1.length();\r     int len_2 = word_2.length();\r \r     if (index_1 >= len_1) {\r       // 字符串1已经到了尾部，距离就是字符串2剩下的长度。\r       return (len_2 - index_2);\r     }\r     else if (index_2 >= len_2) {\r       return (len_1 - index_1);\r     }\r \r     if (cached_distances[index_1][index_2] > 0) {\r       return cached_distances[index_1][index_2];\r     }\r     else {\r       // word_1或者word_2插入一个字符，取较小值。\r       int dist_1 = 1 + min(min_distance(word_1, index_1, word_2, index_2 + 1, cached_distances),\r           min_distance(word_1, index_1 + 1, word_2, index_2, cached_distances));\r \r       // 如果word_1[index_1]不等于word_2[index_2]，则做一次修改，继续比较取较小值。\r       int dist_2 = min_distance(word_1, index_1 + 1, word_2, index_2 + 1, cached_distances);\r       if (word_1[index_1] != word_2[index_2]) {\r         dist_2 += 1;\r       }\r \r       cached_distances[index_1][index_2] = min(dist_1, dist_2);\r     }\r   }\r \r   int minDistance(string word1, string word2) {\r     // 保存计算结果，空间换时间。\r     vector<vector<int> > cached_distances(word1.length(), vector<int>(word2.length(), -1));\r \r     return min_distance(word1, 0, word2, 0, cached_distances);\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-6\\edit_distance.cpp\\Solution\\min_distance(string,int,string,int,vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "int minDistance(string word1, string word2) {\r     // 保存计算结果，空间换时间。\r     vector<vector<int> > cached_distances(word1.length(), vector<int>(word2.length(), -1));\r \r     return min_distance(word1, 0, word2, 0, cached_distances);\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minDistance_string_string_random_1(void) {\n{\nAKA_test_case_name=\"Solution_minDistance_string_string_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\edit_distance.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName360652 = new char[2];akaRandomName360652[0] = -72;akaRandomName360652[1] = '\\0';string word1=akaRandomName360652;\nchar* akaRandomName629025 = new char[2];akaRandomName629025[0] = 53;akaRandomName629025[1] = '\\0';string word2=akaRandomName629025;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word1 */\n/* NormalStringDataNode word2 */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minDistance_string_string_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minDistance(word1,word2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-6\\\\edit_distance.cpp\\\\Solution\\\\minDistance(string,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\container_with_most_water.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=-867895881;\nheight.push_back(height_element0);\nint height_element1=1288329573;\nheight.push_back(height_element1);\nint height_element2=-1368174190;\nheight.push_back(height_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int min_distance(string word_1,\r       int index_1,\r       string word_2,\r       int index_2,\r       vector<vector<int> > &cached_distances) {\r     int len_1 = word_1.length();\r     int len_2 = word_2.length();\r \r     if (index_1 >= len_1) {\r       // 字符串1已经到了尾部，距离就是字符串2剩下的长度。\r       return (len_2 - index_2);\r     }\r     else if (index_2 >= len_2) {\r       return (len_1 - index_1);\r     }\r \r     if (cached_distances[index_1][index_2] > 0) {\r       return cached_distances[index_1][index_2];\r     }\r     else {\r       // word_1或者word_2插入一个字符，取较小值。\r       int dist_1 = 1 + min(min_distance(word_1, index_1, word_2, index_2 + 1, cached_distances),\r           min_distance(word_1, index_1 + 1, word_2, index_2, cached_distances));\r \r       // 如果word_1[index_1]不等于word_2[index_2]，则做一次修改，继续比较取较小值。\r       int dist_2 = min_distance(word_1, index_1 + 1, word_2, index_2 + 1, cached_distances);\r       if (word_1[index_1] != word_2[index_2]) {\r         dist_2 += 1;\r       }\r \r       cached_distances[index_1][index_2] = min(dist_1, dist_2);\r     }\r   }\r \r   int minDistance(string word1, string word2) {\r     // 保存计算结果，空间换时间。\r     vector<vector<int> > cached_distances(word1.length(), vector<int>(word2.length(), -1));\r \r     return min_distance(word1, 0, word2, 0, cached_distances);\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-6\\edit_distance.cpp\\Solution\\minDistance(string,string)"
+    },
+    {
+        "f": [],
+        "fm": "int evalRPN(vector<string> &tokens) {\r     stack<int> results;\r \r     for (int i = 0; i < tokens.size(); ++i) {\r       string token = tokens[i];\r \r       if (is_operator(token)) {\r         int val_1;\r         int val_2;\r \r         val_2 = results.top();\r         results.pop();\r         val_1 = results.top();\r         results.pop();\r \r         results.push(do_op(val_1, val_2, token));\r       }\r       else {\r         results.push(atoi(token.c_str()));\r       }\r     }\r \r     return results.top();\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_evalRPN_vector_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_evalRPN_vector_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\evaluate_reverse_polish_notation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> tokens;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode tokens */\nchar* akaRandomName355797 = new char[2];akaRandomName355797[0] = 64;akaRandomName355797[1] = '\\0';string tokens_element0=akaRandomName355797;\ntokens.push_back(tokens_element0);\nchar* akaRandomName966862 = new char[2];akaRandomName966862[0] = 69;akaRandomName966862[1] = '\\0';string tokens_element1=akaRandomName966862;\ntokens.push_back(tokens_element1);\nchar* akaRandomName632385 = new char[2];akaRandomName632385[0] = 49;akaRandomName632385[1] = '\\0';string tokens_element2=akaRandomName632385;\ntokens.push_back(tokens_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_evalRPN_vector_string_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->evalRPN(tokens);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-6\\\\evaluate_reverse_polish_notation.cpp\\\\Solution\\\\evalRPN(vector<string>&)\");\n\n\nvector<string> EXPECTED_tokens;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\container_with_most_water.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=-867895881;\nheight.push_back(height_element0);\nint height_element1=1288329573;\nheight.push_back(height_element1);\nint height_element2=-1368174190;\nheight.push_back(height_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int evalRPN(vector<string> &tokens) {\r     stack<int> results;\r \r     for (int i = 0; i < tokens.size(); ++i) {\r       string token = tokens[i];\r \r       if (is_operator(token)) {\r         int val_1;\r         int val_2;\r \r         val_2 = results.top();\r         results.pop();\r         val_1 = results.top();\r         results.pop();\r \r         results.push(do_op(val_1, val_2, token));\r       }\r       else {\r         results.push(atoi(token.c_str()));\r       }\r     }\r \r     return results.top();\r   }\r \r protected:\r   bool is_operator(string &token) {\r     char op = token[0];\r \r     return (1 == token.length()) && \r         (('+' == op) ||\r          ('-' == op) ||\r          ('*' == op) ||\r          ('/' == op));\r   }\r \r   int do_op(int val_1, int val_2, string &token) {\r     char op = token[0];\r \r     switch(op) {\r       case '+':\r         return val_1 + val_2;\r       case '-':\r         return val_1 - val_2;\r       case '*':\r         return val_1 * val_2;\r       default:  // '/'\r         return val_1 / val_2;\r     }\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-6\\evaluate_reverse_polish_notation.cpp\\Solution\\evalRPN(vector<string>&)"
+    },
+    {
+        "f": [],
+        "fm": "bool is_operator(string &token) {\r     char op = token[0];\r \r     return (1 == token.length()) && \r         (('+' == op) ||\r          ('-' == op) ||\r          ('*' == op) ||\r          ('/' == op));\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_is_operator_string_random_1(void) {\n{\nAKA_test_case_name=\"Solution_is_operator_string_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\evaluate_reverse_polish_notation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName804978 = new char[2];akaRandomName804978[0] = -75;akaRandomName804978[1] = '\\0';string token=akaRandomName804978;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode token */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_is_operator_string_random_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->is_operator(token);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-6\\\\evaluate_reverse_polish_notation.cpp\\\\Solution\\\\is_operator(string&)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\container_with_most_water.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=-867895881;\nheight.push_back(height_element0);\nint height_element1=1288329573;\nheight.push_back(height_element1);\nint height_element2=-1368174190;\nheight.push_back(height_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int evalRPN(vector<string> &tokens) {\r     stack<int> results;\r \r     for (int i = 0; i < tokens.size(); ++i) {\r       string token = tokens[i];\r \r       if (is_operator(token)) {\r         int val_1;\r         int val_2;\r \r         val_2 = results.top();\r         results.pop();\r         val_1 = results.top();\r         results.pop();\r \r         results.push(do_op(val_1, val_2, token));\r       }\r       else {\r         results.push(atoi(token.c_str()));\r       }\r     }\r \r     return results.top();\r   }\r \r protected:\r   bool is_operator(string &token) {\r     char op = token[0];\r \r     return (1 == token.length()) && \r         (('+' == op) ||\r          ('-' == op) ||\r          ('*' == op) ||\r          ('/' == op));\r   }\r \r   int do_op(int val_1, int val_2, string &token) {\r     char op = token[0];\r \r     switch(op) {\r       case '+':\r         return val_1 + val_2;\r       case '-':\r         return val_1 - val_2;\r       case '*':\r         return val_1 * val_2;\r       default:  // '/'\r         return val_1 / val_2;\r     }\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-6\\evaluate_reverse_polish_notation.cpp\\Solution\\is_operator(string&)"
+    }
+]

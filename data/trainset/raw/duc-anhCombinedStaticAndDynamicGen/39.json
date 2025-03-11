@@ -1,0 +1,794 @@
+[
+    {
+        "f": [
+            "int age;",
+            "char name[2];",
+            "Others * other;"
+        ],
+        "fm": "void setAge_(int age){ this->age = age; }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_SinhVien_setAge_int_random_3(void) {\n{\nAKA_test_case_name=\"SinhVien_setAge_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SinhVien */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\class_test.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SinhVien\\\\AKA_INSTANCE___SinhVien\\\\SinhVien()\");AKA_fCall++;AKA_INSTANCE___SinhVien = new ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* OneDimensionCharacterDataNode name */\n/* NormalCharacterDataNode name[0] */\n/* NormalCharacterDataNode name[1] */\n/* PointerStructureDataNode other */\nAKA_INSTANCE___SinhVien->other;\n/* NormalNumberDataNode height */\n/* height : null value -> no code */\n\n\n\n\nint age=-1494019005;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode age */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SinhVien_setAge_int_random_3\");AKA_INSTANCE___SinhVien->setAge_(age);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\class_test.cpp\\\\SinhVien\\\\setAge_(int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class SinhVien : public Person {\r private:\r \tint age;\r \tchar name[2];\r \tOthers* other;\r public:\r     void setAge_(int age){ this->age = age; }\r     int getAge(){return age;}\r \r \tvoid setName_(char* name1){ strcpy(name,name1); }\r \tchar* getName(){return name;}\r         \r     void setOther_(Others* other){this->other = other;}\r     Others* getOther(){ return other; }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\class_test.cpp\\SinhVien\\setAge_(int)"
+    },
+    {
+        "f": [
+            "int age;",
+            "char name[2];",
+            "Others * other;"
+        ],
+        "fm": "int getAge(){return age;}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_SinhVien_getAge_random_0(void) {\n{\nAKA_test_case_name=\"SinhVien_getAge_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SinhVien */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\class_test.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SinhVien\\\\AKA_INSTANCE___SinhVien\\\\SinhVien()\");AKA_fCall++;AKA_INSTANCE___SinhVien = new ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* OneDimensionCharacterDataNode name */\n/* NormalCharacterDataNode name[0] */\n/* NormalCharacterDataNode name[1] */\n/* PointerStructureDataNode other */\nAKA_INSTANCE___SinhVien->other;\n/* NormalNumberDataNode height */\n/* height : null value -> no code */\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SinhVien_getAge_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SinhVien->getAge();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\class_test.cpp\\\\SinhVien\\\\getAge()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class SinhVien : public Person {\r private:\r \tint age;\r \tchar name[2];\r \tOthers* other;\r public:\r     void setAge_(int age){ this->age = age; }\r     int getAge(){return age;}\r \r \tvoid setName_(char* name1){ strcpy(name,name1); }\r \tchar* getName(){return name;}\r         \r     void setOther_(Others* other){this->other = other;}\r     Others* getOther(){ return other; }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\class_test.cpp\\SinhVien\\getAge()"
+    },
+    {
+        "f": [
+            "int age;",
+            "char name[2];",
+            "Others * other;"
+        ],
+        "fm": "void setName_(char* name1){ strcpy(name,name1); }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_SinhVien_setName_charmul_random_2(void) {\n{\nAKA_test_case_name=\"SinhVien_setName_charmul_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SinhVien */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\class_test.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SinhVien\\\\AKA_INSTANCE___SinhVien\\\\SinhVien()\");AKA_fCall++;AKA_INSTANCE___SinhVien = new ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* OneDimensionCharacterDataNode name */\n/* NormalCharacterDataNode name[0] */\n/* NormalCharacterDataNode name[1] */\n/* PointerStructureDataNode other */\nAKA_INSTANCE___SinhVien->other;\n/* NormalNumberDataNode height */\n/* height : null value -> no code */\n\n\nchar AKA_ARRAY_INIT_name1[2];\n\nchar AKA_ARRAY_INIT_name1_0=49;\nAKA_ARRAY_INIT_name1[0] = AKA_ARRAY_INIT_name1_0;\n\nchar AKA_ARRAY_INIT_name1_1=101;\nAKA_ARRAY_INIT_name1[1] = AKA_ARRAY_INIT_name1_1;\n\nchar* name1 = AKA_ARRAY_INIT_name1;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode name1 */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SinhVien_setName_charmul_random_2\");AKA_INSTANCE___SinhVien->setName_(name1);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\class_test.cpp\\\\SinhVien\\\\setName_(char*)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class SinhVien : public Person {\r private:\r \tint age;\r \tchar name[2];\r \tOthers* other;\r public:\r     void setAge_(int age){ this->age = age; }\r     int getAge(){return age;}\r \r \tvoid setName_(char* name1){ strcpy(name,name1); }\r \tchar* getName(){return name;}\r         \r     void setOther_(Others* other){this->other = other;}\r     Others* getOther(){ return other; }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\class_test.cpp\\SinhVien\\setName_(char*)"
+    },
+    {
+        "f": [
+            "int age;",
+            "char name[2];",
+            "Others * other;"
+        ],
+        "fm": "char* getName(){return name;}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_SinhVien_getName_random_0(void) {\n{\nAKA_test_case_name=\"SinhVien_getName_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SinhVien */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\class_test.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SinhVien\\\\AKA_INSTANCE___SinhVien\\\\SinhVien()\");AKA_fCall++;AKA_INSTANCE___SinhVien = new ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* OneDimensionCharacterDataNode name */\n/* NormalCharacterDataNode name[0] */\n/* NormalCharacterDataNode name[1] */\n/* PointerStructureDataNode other */\nAKA_INSTANCE___SinhVien->other;\n/* NormalNumberDataNode height */\n/* height : null value -> no code */\n\n\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SinhVien_getName_random_0\");char* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SinhVien->getName();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\class_test.cpp\\\\SinhVien\\\\getName()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class SinhVien : public Person {\r private:\r \tint age;\r \tchar name[2];\r \tOthers* other;\r public:\r     void setAge_(int age){ this->age = age; }\r     int getAge(){return age;}\r \r \tvoid setName_(char* name1){ strcpy(name,name1); }\r \tchar* getName(){return name;}\r         \r     void setOther_(Others* other){this->other = other;}\r     Others* getOther(){ return other; }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\class_test.cpp\\SinhVien\\getName()"
+    },
+    {
+        "f": [
+            "int age;",
+            "char name[2];",
+            "Others * other;"
+        ],
+        "fm": "void setOther_(Others* other){this->other = other;}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_SinhVien_setOther_Othersmul_random_0(void) {\n{\nAKA_test_case_name=\"SinhVien_setOther_Othersmul_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SinhVien */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\class_test.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SinhVien\\\\AKA_INSTANCE___SinhVien\\\\SinhVien()\");AKA_fCall++;AKA_INSTANCE___SinhVien = new ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* OneDimensionCharacterDataNode name */\n/* NormalCharacterDataNode name[0] */\n/* NormalCharacterDataNode name[1] */\n/* PointerStructureDataNode other */\nAKA_INSTANCE___SinhVien->other;\n/* NormalNumberDataNode height */\n/* height : null value -> no code */\n\n\nstd::vector<Others*> AKA_VECTOR_INIT_other;\n\n\n/* SubClassDataNode other */\n/* ConstructorDataNode Others() */\nAKA_mark(\"Calling: \\\\Others()|ROOT\\\\class_test.cpp\\\\setOther_(Others*)\\\\other\\\\AKA_VECTOR_INIT_other_0\\\\other\\\\Others()\");AKA_fCall++;auto AKA_VECTOR_INIT_other_0 = new ::Others();\n/* PointerCharacterDataNode eeee */\n(*AKA_VECTOR_INIT_other_0).eeee;\n\nAKA_VECTOR_INIT_other.push_back(AKA_VECTOR_INIT_other_0);\n\n\n/* SubClassDataNode other */\n/* ConstructorDataNode Others() */\nAKA_mark(\"Calling: \\\\Others()|ROOT\\\\class_test.cpp\\\\setOther_(Others*)\\\\other\\\\AKA_VECTOR_INIT_other_1\\\\other\\\\Others()\");AKA_fCall++;auto AKA_VECTOR_INIT_other_1 = new ::Others();\n/* PointerCharacterDataNode eeee */\n(*AKA_VECTOR_INIT_other_1).eeee;\n\nAKA_VECTOR_INIT_other.push_back(AKA_VECTOR_INIT_other_1);\n\nOthers* other = AKA_VECTOR_INIT_other[0];\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode other */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SinhVien_setOther_Othersmul_random_0\");AKA_INSTANCE___SinhVien->setOther_(other);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\class_test.cpp\\\\SinhVien\\\\setOther_(Others*)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class SinhVien : public Person {\r private:\r \tint age;\r \tchar name[2];\r \tOthers* other;\r public:\r     void setAge_(int age){ this->age = age; }\r     int getAge(){return age;}\r \r \tvoid setName_(char* name1){ strcpy(name,name1); }\r \tchar* getName(){return name;}\r         \r     void setOther_(Others* other){this->other = other;}\r     Others* getOther(){ return other; }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\class_test.cpp\\SinhVien\\setOther_(Others*)"
+    },
+    {
+        "f": [
+            "int age;",
+            "char name[2];",
+            "Others * other;"
+        ],
+        "fm": "Others* getOther(){ return other; }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_SinhVien_getOther_random_0(void) {\n{\nAKA_test_case_name=\"SinhVien_getOther_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SinhVien */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\class_test.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SinhVien\\\\AKA_INSTANCE___SinhVien\\\\SinhVien()\");AKA_fCall++;AKA_INSTANCE___SinhVien = new ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* OneDimensionCharacterDataNode name */\n/* NormalCharacterDataNode name[0] */\n/* NormalCharacterDataNode name[1] */\n/* PointerStructureDataNode other */\nAKA_INSTANCE___SinhVien->other;\n/* NormalNumberDataNode height */\n/* height : null value -> no code */\n\n\nOthers* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SinhVien_getOther_random_0\");Others* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SinhVien->getOther();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\class_test.cpp\\\\SinhVien\\\\getOther()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class SinhVien : public Person {\r private:\r \tint age;\r \tchar name[2];\r \tOthers* other;\r public:\r     void setAge_(int age){ this->age = age; }\r     int getAge(){return age;}\r \r \tvoid setName_(char* name1){ strcpy(name,name1); }\r \tchar* getName(){return name;}\r         \r     void setOther_(Others* other){this->other = other;}\r     Others* getOther(){ return other; }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\class_test.cpp\\SinhVien\\getOther()"
+    },
+    {
+        "f": [
+            "char * eeee;"
+        ],
+        "fm": "char* getEeee(){ return eeee; }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Others_getEeee_random_0(void) {\n{\nAKA_test_case_name=\"Others_getEeee_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Others */\n/* ConstructorDataNode Others() */\nAKA_mark(\"Calling: \\\\Others()|ROOT\\\\class_test.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Others\\\\AKA_INSTANCE___Others\\\\Others()\");AKA_fCall++;AKA_INSTANCE___Others = new ::Others();\n/* PointerCharacterDataNode eeee */\nAKA_INSTANCE___Others->eeee;\n\n\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Others_getEeee_random_0\");char* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Others->getEeee();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\class_test.cpp\\\\Others\\\\getEeee()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Others{\r private:\r \tchar* eeee;\r public:\r \tchar* getEeee(){ return eeee; }\r \tvoid setEeee(char* name){ this->eeee = name; }\t\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\class_test.cpp\\Others\\getEeee()"
+    },
+    {
+        "f": [
+            "char * eeee;"
+        ],
+        "fm": "void setEeee(char* name){ this->eeee = name; }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Others_setEeee_charmul_random_3(void) {\n{\nAKA_test_case_name=\"Others_setEeee_charmul_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Others */\n/* ConstructorDataNode Others() */\nAKA_mark(\"Calling: \\\\Others()|ROOT\\\\class_test.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Others\\\\AKA_INSTANCE___Others\\\\Others()\");AKA_fCall++;AKA_INSTANCE___Others = new ::Others();\n/* PointerCharacterDataNode eeee */\nAKA_INSTANCE___Others->eeee;\n\n\nchar AKA_ARRAY_INIT_name[2];\n\nchar AKA_ARRAY_INIT_name_0=15;\nAKA_ARRAY_INIT_name[0] = AKA_ARRAY_INIT_name_0;\n\nchar AKA_ARRAY_INIT_name_1=-56;\nAKA_ARRAY_INIT_name[1] = AKA_ARRAY_INIT_name_1;\n\nchar* name = AKA_ARRAY_INIT_name;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode name */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Others_setEeee_charmul_random_3\");AKA_INSTANCE___Others->setEeee(name);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\class_test.cpp\\\\Others\\\\setEeee(char*)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Others{\r private:\r \tchar* eeee;\r public:\r \tchar* getEeee(){ return eeee; }\r \tvoid setEeee(char* name){ this->eeee = name; }\t\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\class_test.cpp\\Others\\setEeee(char*)"
+    },
+    {
+        "f": [],
+        "fm": "int class_test1(SinhVien sv){\r \tif (sv.getAge() > 0){\r \t\t\tif (sv.getName()[2] == 'a')\r \t\t\t\treturn 0;\r \t\t\telse\r \t\t\t\treturn 1;\r \t}else\r \t\treturn 2;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_class_test1_SinhVien_directed_0(void) {\n{\nAKA_test_case_name=\"class_test1_SinhVien_directed_0\";\n\n// set up\n;\n\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* ClassDataNode sv */\n/* SubClassDataNode sv */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\class_test.cpp\\\\class_test1(SinhVien)\\\\sv\\\\sv\\\\SinhVien()\");AKA_fCall++;::SinhVien sv = ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* OneDimensionCharacterDataNode name */\n/* NormalCharacterDataNode name[0] */\n/* NormalCharacterDataNode name[1] */\n/* PointerStructureDataNode other */\nsv.other;\n/* NormalNumberDataNode height */\n/* height : null value -> no code */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test class_test1_SinhVien_directed_0\");int AKA_ACTUAL_OUTPUT=class_test1(sv);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\class_test.cpp\\\\class_test1(SinhVien)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_class_test1_SinhVien_directed_1(void) {\n{\nAKA_test_case_name=\"class_test1_SinhVien_directed_1\";\n\n// set up\n;\n\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* ClassDataNode sv */\n/* SubClassDataNode sv */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\class_test.cpp\\\\class_test1(SinhVien)\\\\sv\\\\sv\\\\SinhVien()\");AKA_fCall++;::SinhVien sv = ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* OneDimensionCharacterDataNode name */\n/* NormalCharacterDataNode name[0] */\n/* NormalCharacterDataNode name[1] */\n/* PointerStructureDataNode other */\nsv.other;\n/* NormalNumberDataNode height */\n/* height : null value -> no code */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test class_test1_SinhVien_directed_1\");int AKA_ACTUAL_OUTPUT=class_test1(sv);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\class_test.cpp\\\\class_test1(SinhVien)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nlong list[1];;\n\n\nlong n=4;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode list */\n/* NormalNumberDataNode list[0] */\nlist[0]=-38251900;\n/* NormalNumberDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_class_test1_SinhVien_random_0(void) {\n{\nAKA_test_case_name=\"class_test1_SinhVien_random_0\";\n\n// set up\n;\n\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* ClassDataNode sv */\n/* SubClassDataNode sv */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\class_test.cpp\\\\class_test1(SinhVien)\\\\sv\\\\sv\\\\SinhVien()\");AKA_fCall++;::SinhVien sv = ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* OneDimensionCharacterDataNode name */\n/* NormalCharacterDataNode name[0] */\n/* NormalCharacterDataNode name[1] */\n/* PointerStructureDataNode other */\nsv.other;\n/* NormalNumberDataNode height */\n/* height : null value -> no code */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test class_test1_SinhVien_random_0\");int AKA_ACTUAL_OUTPUT=class_test1(sv);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\class_test.cpp\\\\class_test1(SinhVien)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar AKA_ARRAY_INIT_original[2];\n\nchar AKA_ARRAY_INIT_original_0=-77;\nAKA_ARRAY_INIT_original[0] = AKA_ARRAY_INIT_original_0;\n\nchar AKA_ARRAY_INIT_original_1=0;\nAKA_ARRAY_INIT_original[1] = AKA_ARRAY_INIT_original_1;\n\nchar* original = AKA_ARRAY_INIT_original;\nchar AKA_ARRAY_INIT_add[2];\n\nchar AKA_ARRAY_INIT_add_0=-20;\nAKA_ARRAY_INIT_add[0] = AKA_ARRAY_INIT_add_0;\n\nchar AKA_ARRAY_INIT_add_1=0;\nAKA_ARRAY_INIT_add[1] = AKA_ARRAY_INIT_add_1;\n\nchar* add = AKA_ARRAY_INIT_add;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode original */\n/* PointerCharacterDataNode add */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\class_test.cpp\\class_test1(SinhVien)"
+    },
+    {
+        "f": [],
+        "fm": "int class_test2(SinhVien sv){\r \tchar c = sv.getName()[2];\r \r \tif (sv.getAge() > 0){\r \t\t\tif (c == 'a')\r \t\t\t\treturn 0;\r \t\t\telse\r \t\t\t\treturn 1;\r \t}else\r \t\treturn 2;\t\t\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_class_test2_SinhVien_random_0(void) {\n{\nAKA_test_case_name=\"class_test2_SinhVien_random_0\";\n\n// set up\n;\n\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* ClassDataNode sv */\n/* SubClassDataNode sv */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\class_test.cpp\\\\class_test2(SinhVien)\\\\sv\\\\sv\\\\SinhVien()\");AKA_fCall++;::SinhVien sv = ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* OneDimensionCharacterDataNode name */\n/* NormalCharacterDataNode name[0] */\n/* NormalCharacterDataNode name[1] */\n/* PointerStructureDataNode other */\nsv.other;\n/* NormalNumberDataNode height */\n/* height : null value -> no code */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test class_test2_SinhVien_random_0\");int AKA_ACTUAL_OUTPUT=class_test2(sv);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\class_test.cpp\\\\class_test2(SinhVien)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_class_test2_SinhVien_directed_1(void) {\n{\nAKA_test_case_name=\"class_test2_SinhVien_directed_1\";\n\n// set up\n;\n\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* ClassDataNode sv */\n/* SubClassDataNode sv */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\class_test.cpp\\\\class_test2(SinhVien)\\\\sv\\\\sv\\\\SinhVien()\");AKA_fCall++;::SinhVien sv = ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* OneDimensionCharacterDataNode name */\n/* NormalCharacterDataNode name[0] */\n/* NormalCharacterDataNode name[1] */\n/* PointerStructureDataNode other */\nsv.other;\n/* NormalNumberDataNode height */\n/* height : null value -> no code */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test class_test2_SinhVien_directed_1\");int AKA_ACTUAL_OUTPUT=class_test2(sv);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\class_test.cpp\\\\class_test2(SinhVien)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nlong list[1];;\n\n\nlong n=4;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode list */\n/* NormalNumberDataNode list[0] */\nlist[0]=-38251900;\n/* NormalNumberDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_class_test2_SinhVien_directed_0(void) {\n{\nAKA_test_case_name=\"class_test2_SinhVien_directed_0\";\n\n// set up\n;\n\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* ClassDataNode sv */\n/* SubClassDataNode sv */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\class_test.cpp\\\\class_test2(SinhVien)\\\\sv\\\\sv\\\\SinhVien()\");AKA_fCall++;::SinhVien sv = ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* OneDimensionCharacterDataNode name */\n/* NormalCharacterDataNode name[0] */\n/* NormalCharacterDataNode name[1] */\n/* PointerStructureDataNode other */\nsv.other;\n/* NormalNumberDataNode height */\n/* height : null value -> no code */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test class_test2_SinhVien_directed_0\");int AKA_ACTUAL_OUTPUT=class_test2(sv);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\class_test.cpp\\\\class_test2(SinhVien)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar AKA_ARRAY_INIT_original[2];\n\nchar AKA_ARRAY_INIT_original_0=-77;\nAKA_ARRAY_INIT_original[0] = AKA_ARRAY_INIT_original_0;\n\nchar AKA_ARRAY_INIT_original_1=0;\nAKA_ARRAY_INIT_original[1] = AKA_ARRAY_INIT_original_1;\n\nchar* original = AKA_ARRAY_INIT_original;\nchar AKA_ARRAY_INIT_add[2];\n\nchar AKA_ARRAY_INIT_add_0=-20;\nAKA_ARRAY_INIT_add[0] = AKA_ARRAY_INIT_add_0;\n\nchar AKA_ARRAY_INIT_add_1=0;\nAKA_ARRAY_INIT_add[1] = AKA_ARRAY_INIT_add_1;\n\nchar* add = AKA_ARRAY_INIT_add;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode original */\n/* PointerCharacterDataNode add */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\class_test.cpp\\class_test2(SinhVien)"
+    },
+    {
+        "f": [],
+        "fm": "int class_test3(SinhVien sv){\r \tchar* s = sv.getOther()[0].getEeee();\r \r \tif (sv.getAge() > 0){\r \t\tif (s[0] == 'a')\r \t\t\treturn 0;\r \t\telse\r \t\t\treturn 1;\r \t}\r \telse\r \t\treturn 2;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_class_test3_SinhVien_random_0(void) {\n{\nAKA_test_case_name=\"class_test3_SinhVien_random_0\";\n\n// set up\n;\n\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* ClassDataNode sv */\n/* SubClassDataNode sv */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\class_test.cpp\\\\class_test3(SinhVien)\\\\sv\\\\sv\\\\SinhVien()\");AKA_fCall++;::SinhVien sv = ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* OneDimensionCharacterDataNode name */\n/* NormalCharacterDataNode name[0] */\n/* NormalCharacterDataNode name[1] */\n/* PointerStructureDataNode other */\nsv.other;\n/* NormalNumberDataNode height */\n/* height : null value -> no code */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test class_test3_SinhVien_random_0\");int AKA_ACTUAL_OUTPUT=class_test3(sv);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\class_test.cpp\\\\class_test3(SinhVien)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_class_test3_SinhVien_directed_0(void) {\n{\nAKA_test_case_name=\"class_test3_SinhVien_directed_0\";\n\n// set up\n;\n\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* ClassDataNode sv */\n/* SubClassDataNode sv */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\class_test.cpp\\\\class_test3(SinhVien)\\\\sv\\\\sv\\\\SinhVien()\");AKA_fCall++;::SinhVien sv = ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* OneDimensionCharacterDataNode name */\n/* NormalCharacterDataNode name[0] */\n/* NormalCharacterDataNode name[1] */\n/* PointerStructureDataNode other */\nsv.other;\n/* NormalNumberDataNode height */\n/* height : null value -> no code */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test class_test3_SinhVien_directed_0\");int AKA_ACTUAL_OUTPUT=class_test3(sv);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\class_test.cpp\\\\class_test3(SinhVien)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nlong list[1];;\n\n\nlong n=4;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode list */\n/* NormalNumberDataNode list[0] */\nlist[0]=-38251900;\n/* NormalNumberDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_class_test3_SinhVien_directed_1(void) {\n{\nAKA_test_case_name=\"class_test3_SinhVien_directed_1\";\n\n// set up\n;\n\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* ClassDataNode sv */\n/* SubClassDataNode sv */\n/* ConstructorDataNode SinhVien() */\nAKA_mark(\"Calling: \\\\SinhVien()|ROOT\\\\class_test.cpp\\\\class_test3(SinhVien)\\\\sv\\\\sv\\\\SinhVien()\");AKA_fCall++;::SinhVien sv = ::SinhVien();\n/* NormalNumberDataNode age */\n/* age : null value -> no code */\n/* OneDimensionCharacterDataNode name */\n/* NormalCharacterDataNode name[0] */\n/* NormalCharacterDataNode name[1] */\n/* PointerStructureDataNode other */\nsv.other;\n/* NormalNumberDataNode height */\n/* height : null value -> no code */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test class_test3_SinhVien_directed_1\");int AKA_ACTUAL_OUTPUT=class_test3(sv);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\class_test.cpp\\\\class_test3(SinhVien)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar AKA_ARRAY_INIT_original[2];\n\nchar AKA_ARRAY_INIT_original_0=-77;\nAKA_ARRAY_INIT_original[0] = AKA_ARRAY_INIT_original_0;\n\nchar AKA_ARRAY_INIT_original_1=0;\nAKA_ARRAY_INIT_original[1] = AKA_ARRAY_INIT_original_1;\n\nchar* original = AKA_ARRAY_INIT_original;\nchar AKA_ARRAY_INIT_add[2];\n\nchar AKA_ARRAY_INIT_add_0=-20;\nAKA_ARRAY_INIT_add[0] = AKA_ARRAY_INIT_add_0;\n\nchar AKA_ARRAY_INIT_add_1=0;\nAKA_ARRAY_INIT_add[1] = AKA_ARRAY_INIT_add_1;\n\nchar* add = AKA_ARRAY_INIT_add;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode original */\n/* PointerCharacterDataNode add */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\class_test.cpp\\class_test3(SinhVien)"
+    },
+    {
+        "f": [],
+        "fm": "int simpleTest0(int x){\r      switch (x){\r \t\tcase 1: \r \t\t\tint sum=0;\r \t\t\tfor (int i = 0; i< 10; i++) \r \t\t\t\tsum+=i;\r \t\tbreak;\r      }\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest0_int_directed_0(void) {\n{\nAKA_test_case_name=\"simpleTest0_int_directed_0\";\n\n// set up\n;\n\n\n\nint x=1;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest0_int_directed_0\");int AKA_ACTUAL_OUTPUT=simpleTest0(x);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest0(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest0_int_random_0(void) {\n{\nAKA_test_case_name=\"simpleTest0_int_random_0\";\n\n// set up\n;\n\n\n\nint x=-815741259;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest0_int_random_0\");int AKA_ACTUAL_OUTPUT=simpleTest0(x);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest0(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nlong list[1];;\n\n\nlong n=4;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode list */\n/* NormalNumberDataNode list[0] */\nlist[0]=-38251900;\n/* NormalNumberDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\simple_test.cpp\\simpleTest0(int)"
+    },
+    {
+        "f": [],
+        "fm": "int simpleTest1(int a){\r \treturn a--;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest1_int_random_2(void) {\n{\nAKA_test_case_name=\"simpleTest1_int_random_2\";\n\n// set up\n;\n\n\n\nint a=1381649959;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest1_int_random_2\");int AKA_ACTUAL_OUTPUT=simpleTest1(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest1(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\simple_test.cpp\\simpleTest1(int)"
+    },
+    {
+        "f": [],
+        "fm": "int simpleTest2(int a, int b){\r \tif (a!=b){\r \t\ta = a - b;\r \t}else{\r \t\tint x = simpleTest1(a);\r \t\tif (a>0){\r \t\t\ta++;\r \t\t}\r \t}\r \treturn a;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest2_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"simpleTest2_int_int_directed_0\";\n\n// set up\n;\n\n\n\nint a=0;\n\n\nint b=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest2_int_int_directed_0\");int AKA_ACTUAL_OUTPUT=simpleTest2(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest2(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest2_int_int_directed_1(void) {\n{\nAKA_test_case_name=\"simpleTest2_int_int_directed_1\";\n\n// set up\n;\n\n\n\nint a=1;\n\n\nint b=1;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest2_int_int_directed_1\");int AKA_ACTUAL_OUTPUT=simpleTest2(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest2(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nlong list[1];;\n\n\nlong n=4;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode list */\n/* NormalNumberDataNode list[0] */\nlist[0]=-38251900;\n/* NormalNumberDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest2_int_int_random_1(void) {\n{\nAKA_test_case_name=\"simpleTest2_int_int_random_1\";\n\n// set up\n;\n\n\n\nint a=1563293786;\n\n\nint b=1927670673;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest2_int_int_random_1\");int AKA_ACTUAL_OUTPUT=simpleTest2(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest2(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar AKA_ARRAY_INIT_original[2];\n\nchar AKA_ARRAY_INIT_original_0=-77;\nAKA_ARRAY_INIT_original[0] = AKA_ARRAY_INIT_original_0;\n\nchar AKA_ARRAY_INIT_original_1=0;\nAKA_ARRAY_INIT_original[1] = AKA_ARRAY_INIT_original_1;\n\nchar* original = AKA_ARRAY_INIT_original;\nchar AKA_ARRAY_INIT_add[2];\n\nchar AKA_ARRAY_INIT_add_0=-20;\nAKA_ARRAY_INIT_add[0] = AKA_ARRAY_INIT_add_0;\n\nchar AKA_ARRAY_INIT_add_1=0;\nAKA_ARRAY_INIT_add[1] = AKA_ARRAY_INIT_add_1;\n\nchar* add = AKA_ARRAY_INIT_add;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode original */\n/* PointerCharacterDataNode add */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\simple_test.cpp\\simpleTest2(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int simpleTest3(int a, int b){\r \tif (a==10&&b==10)\r \t\treturn 0;\r \telse\r \t\treturn 1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest3_int_int_random_4(void) {\n{\nAKA_test_case_name=\"simpleTest3_int_int_random_4\";\n\n// set up\n;\n\n\n\nint a=-1397774372;\n\n\nint b=-1794006271;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest3_int_int_random_4\");int AKA_ACTUAL_OUTPUT=simpleTest3(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest3(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest3_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"simpleTest3_int_int_directed_0\";\n\n// set up\n;\n\n\n\nint a=10;\n\n\nint b=10;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest3_int_int_directed_0\");int AKA_ACTUAL_OUTPUT=simpleTest3(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest3(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nlong list[1];;\n\n\nlong n=4;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode list */\n/* NormalNumberDataNode list[0] */\nlist[0]=-38251900;\n/* NormalNumberDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest3_int_int_directed_1(void) {\n{\nAKA_test_case_name=\"simpleTest3_int_int_directed_1\";\n\n// set up\n;\n\n\n\nint a=10;\n\n\nint b=-2147483640;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest3_int_int_directed_1\");int AKA_ACTUAL_OUTPUT=simpleTest3(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest3(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar AKA_ARRAY_INIT_original[2];\n\nchar AKA_ARRAY_INIT_original_0=-77;\nAKA_ARRAY_INIT_original[0] = AKA_ARRAY_INIT_original_0;\n\nchar AKA_ARRAY_INIT_original_1=0;\nAKA_ARRAY_INIT_original[1] = AKA_ARRAY_INIT_original_1;\n\nchar* original = AKA_ARRAY_INIT_original;\nchar AKA_ARRAY_INIT_add[2];\n\nchar AKA_ARRAY_INIT_add_0=-20;\nAKA_ARRAY_INIT_add[0] = AKA_ARRAY_INIT_add_0;\n\nchar AKA_ARRAY_INIT_add_1=0;\nAKA_ARRAY_INIT_add[1] = AKA_ARRAY_INIT_add_1;\n\nchar* add = AKA_ARRAY_INIT_add;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode original */\n/* PointerCharacterDataNode add */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\simple_test.cpp\\simpleTest3(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int simpleTest4(int a, int b){\r \tif (a==10||b==10)\r \t\treturn 0;\r \telse\r \t\treturn 1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest4_int_int_random_2(void) {\n{\nAKA_test_case_name=\"simpleTest4_int_int_random_2\";\n\n// set up\n;\n\n\n\nint a=-1545807229;\n\n\nint b=1169701812;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest4_int_int_random_2\");int AKA_ACTUAL_OUTPUT=simpleTest4(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest4(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest4_int_int_directed_1(void) {\n{\nAKA_test_case_name=\"simpleTest4_int_int_directed_1\";\n\n// set up\n;\n\n\n\nint a=-2147483640;\n\n\nint b=10;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest4_int_int_directed_1\");int AKA_ACTUAL_OUTPUT=simpleTest4(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest4(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nlong list[1];;\n\n\nlong n=4;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode list */\n/* NormalNumberDataNode list[0] */\nlist[0]=-38251900;\n/* NormalNumberDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest4_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"simpleTest4_int_int_directed_0\";\n\n// set up\n;\n\n\n\nint a=10;\n\n\nint b=-2147483648;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest4_int_int_directed_0\");int AKA_ACTUAL_OUTPUT=simpleTest4(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest4(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar AKA_ARRAY_INIT_original[2];\n\nchar AKA_ARRAY_INIT_original_0=-77;\nAKA_ARRAY_INIT_original[0] = AKA_ARRAY_INIT_original_0;\n\nchar AKA_ARRAY_INIT_original_1=0;\nAKA_ARRAY_INIT_original[1] = AKA_ARRAY_INIT_original_1;\n\nchar* original = AKA_ARRAY_INIT_original;\nchar AKA_ARRAY_INIT_add[2];\n\nchar AKA_ARRAY_INIT_add_0=-20;\nAKA_ARRAY_INIT_add[0] = AKA_ARRAY_INIT_add_0;\n\nchar AKA_ARRAY_INIT_add_1=0;\nAKA_ARRAY_INIT_add[1] = AKA_ARRAY_INIT_add_1;\n\nchar* add = AKA_ARRAY_INIT_add;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode original */\n/* PointerCharacterDataNode add */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\simple_test.cpp\\simpleTest4(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int simpleTest5(int a, int b){\r \tif (!(a==10||b==10))\r \t\treturn 0;\r \telse\r \t\treturn 1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest5_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"simpleTest5_int_int_directed_0\";\n\n// set up\n;\n\n\n\nint a=10;\n\n\nint b=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest5_int_int_directed_0\");int AKA_ACTUAL_OUTPUT=simpleTest5(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest5(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest5_int_int_random_2(void) {\n{\nAKA_test_case_name=\"simpleTest5_int_int_random_2\";\n\n// set up\n;\n\n\n\nint a=-1623018752;\n\n\nint b=1653792627;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest5_int_int_random_2\");int AKA_ACTUAL_OUTPUT=simpleTest5(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest5(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nlong list[1];;\n\n\nlong n=4;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode list */\n/* NormalNumberDataNode list[0] */\nlist[0]=-38251900;\n/* NormalNumberDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\simple_test.cpp\\simpleTest5(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int simpleTest6(int a, int b, int c){\r \tif (a==10||b==10||c==10)\r \t\treturn 0;\r \telse\r \t\treturn 1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest6_int_int_int_directed_2(void) {\n{\nAKA_test_case_name=\"simpleTest6_int_int_int_directed_2\";\n\n// set up\n;\n\n\n\nint a=0;\n\n\nint b=0;\n\n\nint c=10;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode c */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest6_int_int_int_directed_2\");int AKA_ACTUAL_OUTPUT=simpleTest6(a,b,c);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest6(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest6_int_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"simpleTest6_int_int_int_directed_0\";\n\n// set up\n;\n\n\n\nint a=10;\n\n\nint b=0;\n\n\nint c=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode c */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest6_int_int_int_directed_0\");int AKA_ACTUAL_OUTPUT=simpleTest6(a,b,c);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest6(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nlong list[1];;\n\n\nlong n=4;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode list */\n/* NormalNumberDataNode list[0] */\nlist[0]=-38251900;\n/* NormalNumberDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest6_int_int_int_directed_1(void) {\n{\nAKA_test_case_name=\"simpleTest6_int_int_int_directed_1\";\n\n// set up\n;\n\n\n\nint a=0;\n\n\nint b=10;\n\n\nint c=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode c */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest6_int_int_int_directed_1\");int AKA_ACTUAL_OUTPUT=simpleTest6(a,b,c);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest6(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar AKA_ARRAY_INIT_original[2];\n\nchar AKA_ARRAY_INIT_original_0=-77;\nAKA_ARRAY_INIT_original[0] = AKA_ARRAY_INIT_original_0;\n\nchar AKA_ARRAY_INIT_original_1=0;\nAKA_ARRAY_INIT_original[1] = AKA_ARRAY_INIT_original_1;\n\nchar* original = AKA_ARRAY_INIT_original;\nchar AKA_ARRAY_INIT_add[2];\n\nchar AKA_ARRAY_INIT_add_0=-20;\nAKA_ARRAY_INIT_add[0] = AKA_ARRAY_INIT_add_0;\n\nchar AKA_ARRAY_INIT_add_1=0;\nAKA_ARRAY_INIT_add[1] = AKA_ARRAY_INIT_add_1;\n\nchar* add = AKA_ARRAY_INIT_add;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode original */\n/* PointerCharacterDataNode add */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest6_int_int_int_random_2(void) {\n{\nAKA_test_case_name=\"simpleTest6_int_int_int_random_2\";\n\n// set up\n;\n\n\n\nint a=-915833208;\n\n\nint b=2044852114;\n\n\nint c=-1792544799;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode c */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest6_int_int_int_random_2\");int AKA_ACTUAL_OUTPUT=simpleTest6(a,b,c);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest6(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\simple_test.cpp\\simpleTest6(int,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int simpleTest7(int a, int b, int c){\r \tif (!(!(a==10)||b==10||c==10))\r \t\treturn 0;\r \telse\r \t\treturn 1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest7_int_int_int_random_4(void) {\n{\nAKA_test_case_name=\"simpleTest7_int_int_int_random_4\";\n\n// set up\n;\n\n\n\nint a=348731238;\n\n\nint b=-2020381899;\n\n\nint c=-1272373744;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode c */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest7_int_int_int_random_4\");int AKA_ACTUAL_OUTPUT=simpleTest7(a,b,c);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest7(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest7_int_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"simpleTest7_int_int_int_directed_0\";\n\n// set up\n;\n\n\n\nint a=10;\n\n\nint b=0;\n\n\nint c=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode c */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest7_int_int_int_directed_0\");int AKA_ACTUAL_OUTPUT=simpleTest7(a,b,c);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest7(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nlong list[1];;\n\n\nlong n=4;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode list */\n/* NormalNumberDataNode list[0] */\nlist[0]=-38251900;\n/* NormalNumberDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\simple_test.cpp\\simpleTest7(int,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int simpleTest8(int a, int b, int c){\r \tif (!(!a==10||b==10||c==10))\r \t\treturn 0;\r \telse\r \t\treturn 1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest8_int_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"simpleTest8_int_int_int_directed_0\";\n\n// set up\n;\n\n\n\nint a=0;\n\n\nint b=0;\n\n\nint c=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode c */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest8_int_int_int_directed_0\");int AKA_ACTUAL_OUTPUT=simpleTest8(a,b,c);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest8(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar a[1];\n\nchar b[1];\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=8;\n/* NormalCharacterDataNode a[1] */\na[1]=19;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=-122;\n/* NormalCharacterDataNode b[1] */\nb[1]=-2;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_simpleTest8_int_int_int_random_0(void) {\n{\nAKA_test_case_name=\"simpleTest8_int_int_int_random_0\";\n\n// set up\n;\n\n\n\nint a=-351071895;\n\n\nint b=2051739904;\n\n\nint c=20947535;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode c */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test simpleTest8_int_int_int_random_0\");int AKA_ACTUAL_OUTPUT=simpleTest8(a,b,c);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\CombinedStaticAndDynamicGen\\\\simple_test.cpp\\\\simpleTest8(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nlong list[1];;\n\n\nlong n=4;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode list */\n/* NormalNumberDataNode list[0] */\nlist[0]=-38251900;\n/* NormalNumberDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\CombinedStaticAndDynamicGen\\simple_test.cpp\\simpleTest8(int,int,int)"
+    }
+]

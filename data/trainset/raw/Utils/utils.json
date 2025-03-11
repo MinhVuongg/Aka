@@ -1,0 +1,132 @@
+[
+    {
+        "f": [],
+        "fm": "int check_array(float a[3]) {\r     int k = 0;\r     for (int i = 0; i < 3; i++) {\r         if (abs(a[i] - sqrt(i + 1)) < 0.000001) {\r             k++;\r         }\r     }\r     return k;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\check_array(float[3])"
+    },
+    {
+        "f": [],
+        "fm": "int Tritype(int i, int j, int k) {\r \tint trityp = 0;\r \tif (i < 0 || j < 0 || k < 0)\r \t\treturn 3;\r \tif (i + j <= k || j + k <= i || k + i <= j)\r \t\treturn 3;\r \tif (i == j)\r \t\ttrityp = trityp + 1;\r \tif (i == k)\r \t\ttrityp = trityp + 1;\r \tif (j == k)\r \t\ttrityp = trityp + 1;\r \tif (trityp >= 2)\r \t\ttrityp = 2;\r \treturn trityp;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\Tritype(int,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int uninit_var(int a[3], int b[3]) {\r \tint i, k=0;\r \r \tfor(i=0; i<2; i++) {\r \t\tif(a[i] == 0)\r \t\t\treturn 0;\r \r \t\tif(a[i] != a[i+1])\r \t\t\tk = 0;\r \t\telse if(k == 2)\r \t\t\treturn 0;\r \r \t\twhile(b[k] != a[i])\r \t\t\tif(k == 2)\r \t\t\t\treturn 0;\r \t\t\telse\r \t\t\t\tk++;\r \t}\r \treturn 1;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\uninit_var(int[3],int[3])"
+    },
+    {
+        "f": [],
+        "fm": "int ArrayCmp(int n, unsigned char* t1, unsigned char* t2) {\r \tint i;\r \tfor (i = 0; i < n; i++) {\r \t\tif (t1[i] > t2[i])\r \t\t\treturn -1;\r \t\telse if (t1[i] < t2[i])\r \t\t\treturn 1;\r \t}\r \treturn 0;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\ArrayCmp(int,unsigned char*,unsigned char*)"
+    },
+    {
+        "f": [],
+        "fm": "int find_maximum(int a[], int n) {\r \tint c, max, index;\r \r \tmax = a[0];\r \tindex = 0;\r \r \tfor (c = 1; c < n; c++) {\r \t\tif (a[c] > max) {\r \t\t\tindex = c;\r \t\t\tmax = a[c];\r \t\t}\r \t}\r \r \treturn index;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\find_maximum(int[],int)"
+    },
+    {
+        "f": [],
+        "fm": "void print (int r) {\r \tint c, space;\r \tint stars = -1;\r \r \tif (r <= 0)\r \t\treturn;\r \r \tspace = r - 1;\r \tstars += 2;\r \r \tfor (c = 0; c < space; c++)\r \t\tprintf(\" \");\r \r \tfor (c = 0; c < stars; c++)\r \t\tprintf(\"*\");\r \r \tprintf(\"\\n\");\r \tprint(--r);\r \r \tspace = r + 1;\r \tstars -= 2;\r \r \tfor (c = 0; c < space; c++)\r \t\tprintf(\" \");\r \r \tfor (c = 0; c < stars; c++)\r \t\tprintf(\"*\");\r \r \tprintf(\"\\n\");\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\print(int)"
+    },
+    {
+        "f": [],
+        "fm": "long reverse(long n) {\r \tstatic long r = 0;\r \r \tif (n == 0)\r \t\treturn 0;\r \r \tr = r * 10;\r \tr = r + n % 10;\r \treverse(n/10);\r \treturn r;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\reverse(long)"
+    },
+    {
+        "f": [],
+        "fm": "int add_digits(int n) {\r \tstatic int sum = 0;\r \r \tif (n == 0) {\r \t\treturn 0;\r \t}\r \tsum = n%10 + add_digits(n/10);\r \r \treturn sum;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\add_digits(int)"
+    },
+    {
+        "f": [],
+        "fm": "int check_prime(int a) {\r \tint c;\r \r \tfor ( c = 2 ; c <= a - 1 ; c++ ) {\r \t\tif ( a%c == 0 )\r \t\t\treturn 0;\r \t}\r \tif ( c == a )\r \t\treturn 1;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\check_prime(int)"
+    },
+    {
+        "f": [],
+        "fm": "int check_armstrong(long long n) {\r \tlong long sum = 0, temp;\r \tint remainder, digits = 0;\r \r \ttemp = n;\r \r \twhile (temp != 0) {\r \t\tdigits++;\r \t\ttemp = temp/10;\r \t}\r \r \ttemp = n;\r \r \twhile (temp != 0) {\r \t\tremainder = temp%10;\r \t\tsum = sum + power(remainder, digits);\r \t\ttemp = temp/10;\r \t}\r \r \tif (n == sum)\r \t\treturn 1;\r \telse\r \t\treturn 0;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\check_armstrong(long long)"
+    }
+]

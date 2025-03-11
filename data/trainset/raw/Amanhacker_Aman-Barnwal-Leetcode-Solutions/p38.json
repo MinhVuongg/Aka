@@ -1,0 +1,145 @@
+[
+    {
+        "f": [],
+        "fm": "string thousandSeparator(int n) {\r     \r         string res = \"\";\r         \r         string temp = to_string(n);\r         int siz = temp.size();\r         \r         int c = 0;\r         \r         for(int i=siz-1; i>=0; i--) {\r             \r             res += temp[i];\r             \r             c++;\r             if(c % 3 == 0 && i > 0)                     res += '.';\r         }\r             \r         reverse(res.begin(), res.end());        \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_thousandSeparator_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_thousandSeparator_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1556-thousand-separator.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=1366375546;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_thousandSeparator_int_random_2\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->thousandSeparator(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p38\\\\1556-thousand-separator\\\\1556-thousand-separator.cpp\\\\Solution\\\\thousandSeparator(int)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1556-thousand-separator.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=1366375546;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     string thousandSeparator(int n) {\r     \r         string res = \"\";\r         \r         string temp = to_string(n);\r         int siz = temp.size();\r         \r         int c = 0;\r         \r         for(int i=siz-1; i>=0; i--) {\r             \r             res += temp[i];\r             \r             c++;\r             if(c % 3 == 0 && i > 0)                     res += '.';\r         }\r             \r         reverse(res.begin(), res.end());        \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p38\\1556-thousand-separator\\1556-thousand-separator.cpp\\Solution\\thousandSeparator(int)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> findSmallestSetOfVertices(int n, vector<vector<int>>& edges) {\r     \r         vector<int> res, indegree(n);\r         unordered_map<int, vector<int>> adj;\r         \r         for(auto &x : edges) {\r             adj[x[0]].push_back(x[1]);\r             indegree[x[1]]++;\r         }\r         \r         for(int i=0; i<n; i++) {\r             if(indegree[i] == 0)              res.push_back(i);\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findSmallestSetOfVertices_int_vector_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_findSmallestSetOfVertices_int_vector_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1557-minimum-number-of-vertices-to-reach-all-nodes.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=5;\nvector<vector<int>> edges;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode edges */\nvector<int> edges_element0;\nint edges_element0_element0=1589038942;\nedges_element0.push_back(edges_element0_element0);\nedges.push_back(edges_element0);\nvector<int> edges_element1;\nint edges_element1_element0=104046497;\nedges_element1.push_back(edges_element1_element0);\nedges.push_back(edges_element1);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findSmallestSetOfVertices_int_vector_vector_int_random_1\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findSmallestSetOfVertices(n,edges);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p38\\\\1557-minimum-number-of-vertices-to-reach-all-nodes\\\\1557-minimum-number-of-vertices-to-reach-all-nodes.cpp\\\\Solution\\\\findSmallestSetOfVertices(int,vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_edges;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1556-thousand-separator.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=1366375546;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     vector<int> findSmallestSetOfVertices(int n, vector<vector<int>>& edges) {\r     \r         vector<int> res, indegree(n);\r         unordered_map<int, vector<int>> adj;\r         \r         for(auto &x : edges) {\r             adj[x[0]].push_back(x[1]);\r             indegree[x[1]]++;\r         }\r         \r         for(int i=0; i<n; i++) {\r             if(indegree[i] == 0)              res.push_back(i);\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p38\\1557-minimum-number-of-vertices-to-reach-all-nodes\\1557-minimum-number-of-vertices-to-reach-all-nodes.cpp\\Solution\\findSmallestSetOfVertices(int,vector<vector<int>>&)"
+    },
+    {
+        "f": [
+            "int dx[4] = {-1, 0, 1,  0};",
+            "int dy[4] = { 0, 1, 0, -1};"
+        ],
+        "fm": "bool containsCycle(vector<vector<char>>& grid) {\r     \r         int n = grid.size();\r         int m = grid[0].size();\r         \r         vector<vector<int>> vis(n, vector<int>(m, 0));\r         \r         bool flag = false;\r \r         for(int i=0; i<n; i++) {\r             for(int j=0; j<m; j++) {\r                 \r                 if(vis[i][j] == 0)                              dfs(i, j, n, m, -1, -1, grid[i][j], grid, vis, flag);\r                 if(flag == true)                                return true;\r             }\r         }\r         \r         return false;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_containsCycle_vector_vector_char_random_2(void) {\n{\nAKA_test_case_name=\"Solution_containsCycle_vector_vector_char_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1559-detect-cycles-in-2d-grid.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\n/* dx[0] : null value -> no code */\n/* NormalNumberDataNode dx[1] */\n/* dx[1] : null value -> no code */\n/* NormalNumberDataNode dx[2] */\n/* dx[2] : null value -> no code */\n/* NormalNumberDataNode dx[3] */\n/* dx[3] : null value -> no code */\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\n/* dy[0] : null value -> no code */\n/* NormalNumberDataNode dy[1] */\n/* dy[1] : null value -> no code */\n/* NormalNumberDataNode dy[2] */\n/* dy[2] : null value -> no code */\n/* NormalNumberDataNode dy[3] */\n/* dy[3] : null value -> no code */\n\n\nvector<vector<char>> grid;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode grid */\nvector<char> grid_element0;\nchar grid_element0_element0=-87;\ngrid_element0.push_back(grid_element0_element0);\nchar grid_element0_element1=12;\ngrid_element0.push_back(grid_element0_element1);\nchar grid_element0_element2=34;\ngrid_element0.push_back(grid_element0_element2);\ngrid.push_back(grid_element0);\nvector<char> grid_element1;\nchar grid_element1_element0=20;\ngrid_element1.push_back(grid_element1_element0);\ngrid.push_back(grid_element1);\nvector<char> grid_element2;\nchar grid_element2_element0=-95;\ngrid_element2.push_back(grid_element2_element0);\ngrid.push_back(grid_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_containsCycle_vector_vector_char_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->containsCycle(grid);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p38\\\\1559-detect-cycles-in-2d-grid\\\\1559-detect-cycles-in-2d-grid.cpp\\\\Solution\\\\containsCycle(vector<vector<char>>&)\");\n\n\nvector<vector<char>> EXPECTED_grid;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1556-thousand-separator.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=1366375546;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     // Possible movements : top, right, bottom, left\r     // (-1, 0), (0, 1), (1, 0), (0, -1)\r     \r     int dx[4] = {-1, 0, 1,  0};\r     int dy[4] = { 0, 1, 0, -1};\r     \r     void dfs(int x, int y, int n, int m, int last_x, int last_y, char ch, vector<vector<char>> &grid, vector<vector<int>> &vis, bool &flag) {\r \r         if(flag == true)                                                                 return;\r         \r         if(x < 0 || x >= n || y < 0 || y >= m || grid[x][y] != ch)                       return;\r         \r         if(vis[x][y] == 1) {\r             flag = true;\r             return;\r         }\r         \r         vis[x][y] = 1;\r         \r         for(int i=0; i<4; i++) {\r             \r             int x1 = x + dx[i];\r             int y1 = y + dy[i];\r             \r             // When (x1, y1) are not previous visited co-ordinates of (x, y)\r             \r             if(x1 != last_x || y1 != last_y) {\r                 dfs(x1, y1, n, m, x, y, ch, grid, vis, flag);\r             }\r         }\r         \r         return;\r     }\r     \r     bool containsCycle(vector<vector<char>>& grid) {\r     \r         int n = grid.size();\r         int m = grid[0].size();\r         \r         vector<vector<int>> vis(n, vector<int>(m, 0));\r         \r         bool flag = false;\r \r         for(int i=0; i<n; i++) {\r             for(int j=0; j<m; j++) {\r                 \r                 if(vis[i][j] == 0)                              dfs(i, j, n, m, -1, -1, grid[i][j], grid, vis, flag);\r                 if(flag == true)                                return true;\r             }\r         }\r         \r         return false;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p38\\1559-detect-cycles-in-2d-grid\\1559-detect-cycles-in-2d-grid.cpp\\Solution\\containsCycle(vector<vector<char>>&)"
+    },
+    {
+        "f": [],
+        "fm": "bool containsPattern(vector<int>& a, int m, int k) {\r     \r         int count = 0;\r         int n = a.size();\r         \r         // Subarray of size m should repeat greater or equal to k times consecutively\r         \r         for(int i=0; i<n-m; i++) {\r             \r             if(a[i] != a[i + m])                            count = 0;\r             else                                            count++;\r             \r             if(count == m * (k - 1))                        return true;\r         }\r         \r         return false;        \r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_containsPattern_vector_int_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_containsPattern_vector_int_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1566-detect-pattern-of-length-m-repeated-k-or-more-times.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint m=7;\n\n\nint k=975704375;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=-689665761;\na.push_back(a_element0);\nint a_element1=-1394610620;\na.push_back(a_element1);\nint a_element2=-976074432;\na.push_back(a_element2);\n/* NormalNumberDataNode m */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_containsPattern_vector_int_int_int_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->containsPattern(a,m,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p38\\\\1566-detect-pattern-of-length-m-repeated-k-or-more-times\\\\1566-detect-pattern-of-length-m-repeated-k-or-more-times.cpp\\\\Solution\\\\containsPattern(vector<int>&,int,int)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1556-thousand-separator.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=1366375546;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   \r     bool containsPattern(vector<int>& a, int m, int k) {\r     \r         int count = 0;\r         int n = a.size();\r         \r         // Subarray of size m should repeat greater or equal to k times consecutively\r         \r         for(int i=0; i<n-m; i++) {\r             \r             if(a[i] != a[i + m])                            count = 0;\r             else                                            count++;\r             \r             if(count == m * (k - 1))                        return true;\r         }\r         \r         return false;        \r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p38\\1566-detect-pattern-of-length-m-repeated-k-or-more-times\\1566-detect-pattern-of-length-m-repeated-k-or-more-times.cpp\\Solution\\containsPattern(vector<int>&,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int getMaxLen(vector<int>& nums) {\r         \r         int maxLen = 0;\r         \r         for (int sectionStart = 0; sectionStart < nums.size(); ) {\r             \r             while (sectionStart < nums.size() && !nums[sectionStart]) sectionStart++; // ignore leading 0s\r \r             int evenNeg = 0;            // flag for even or odd number of negative we've seen in this section\r             int first = -1, last = -1;  // indices of first and last negative number so far\r             \r             int i = sectionStart;\r             \r             for (; i < nums.size(); i++) {\r              \r                 if (!nums[i])               break;    // 0, this section is done\r                 \r                 if (nums[i] < 0) {\r                     evenNeg ^= 1;\r                     (first < 0) && (first = i);\r                     last = i;\r                 }\r             }\r             \r             maxLen = max(maxLen, evenNeg ? max(last - sectionStart, i - first - 1) : i - sectionStart);\r             sectionStart = i + 1;\r         }\r         \r         return maxLen;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_getMaxLen_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_getMaxLen_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1567-maximum-length-of-subarray-with-positive-product.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1703210652;\nnums.push_back(nums_element0);\nint nums_element1=-241732357;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_getMaxLen_vector_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->getMaxLen(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p38\\\\1567-maximum-length-of-subarray-with-positive-product\\\\1567-maximum-length-of-subarray-with-positive-product.cpp\\\\Solution\\\\getMaxLen(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1556-thousand-separator.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=1366375546;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int getMaxLen(vector<int>& nums) {\r         \r         int maxLen = 0;\r         \r         for (int sectionStart = 0; sectionStart < nums.size(); ) {\r             \r             while (sectionStart < nums.size() && !nums[sectionStart]) sectionStart++; // ignore leading 0s\r \r             int evenNeg = 0;            // flag for even or odd number of negative we've seen in this section\r             int first = -1, last = -1;  // indices of first and last negative number so far\r             \r             int i = sectionStart;\r             \r             for (; i < nums.size(); i++) {\r              \r                 if (!nums[i])               break;    // 0, this section is done\r                 \r                 if (nums[i] < 0) {\r                     evenNeg ^= 1;\r                     (first < 0) && (first = i);\r                     last = i;\r                 }\r             }\r             \r             maxLen = max(maxLen, evenNeg ? max(last - sectionStart, i - first - 1) : i - sectionStart);\r             sectionStart = i + 1;\r         }\r         \r         return maxLen;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p38\\1567-maximum-length-of-subarray-with-positive-product\\1567-maximum-length-of-subarray-with-positive-product.cpp\\Solution\\getMaxLen(vector<int>&)"
+    }
+]

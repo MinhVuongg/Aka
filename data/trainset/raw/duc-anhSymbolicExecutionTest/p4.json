@@ -1,0 +1,168 @@
+[
+    {
+        "f": [
+            "int id;"
+        ],
+        "fm": "int getId(){return id;}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Student_getId_random_0(void) {\n{\nAKA_test_case_name=\"Student_getId_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE_nsTest1__Student */\n/* ConstructorDataNode Student() */\nAKA_mark(\"Calling: .\\\\SymbolicExecutionTest\\\\nsTest1.cpp\\\\nsTest1\\\\Student\\\\Student()|ROOT\\\\nsTest1.cpp\\\\GLOBAL\\\\AKA_INSTANCE_nsTest1__Student\\\\AKA_INSTANCE_nsTest1__Student\\\\Student()\");AKA_fCall++;AKA_INSTANCE_nsTest1__Student = new nsTest1::Student();\n/* NormalNumberDataNode id */\n/* id : null value -> no code */\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Student_getId_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE_nsTest1__Student->getId();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\nsTest1.cpp\\\\nsTest1\\\\Student\\\\getId()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1904350254;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Student{\r \t\tprivate:\r \t\t\tint id;\r \t\tpublic:\r \t\t\tStudent(){}\r \t\t\tint getId(){return id;}\r \t\t\tvoid setId(int id_){id = id_;}\r \t\t\tint isAvailable(int id){\r \t\t\t\tif (id < 999)\r \t\t\t\t\treturn 0;\r \t\t\t\telse\r \t\t\t\t\treturn 1;\t\r \t\t\t}\r \t};",
+        "c": [
+            "Student(){}"
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\nsTest1.cpp\\nsTest1\\Student\\getId()"
+    },
+    {
+        "f": [
+            "int id;"
+        ],
+        "fm": "void setId(int id_){id = id_;}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Student_setId_int_random_2(void) {\n{\nAKA_test_case_name=\"Student_setId_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE_nsTest1__Student */\n/* ConstructorDataNode Student() */\nAKA_mark(\"Calling: .\\\\SymbolicExecutionTest\\\\nsTest1.cpp\\\\nsTest1\\\\Student\\\\Student()|ROOT\\\\nsTest1.cpp\\\\GLOBAL\\\\AKA_INSTANCE_nsTest1__Student\\\\AKA_INSTANCE_nsTest1__Student\\\\Student()\");AKA_fCall++;AKA_INSTANCE_nsTest1__Student = new nsTest1::Student();\n/* NormalNumberDataNode id */\n/* id : null value -> no code */\n\n\n\n\nint id_=-1966989764;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode id_ */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Student_setId_int_random_2\");AKA_INSTANCE_nsTest1__Student->setId(id_);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\nsTest1.cpp\\\\nsTest1\\\\Student\\\\setId(int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1904350254;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Student{\r \t\tprivate:\r \t\t\tint id;\r \t\tpublic:\r \t\t\tStudent(){}\r \t\t\tint getId(){return id;}\r \t\t\tvoid setId(int id_){id = id_;}\r \t\t\tint isAvailable(int id){\r \t\t\t\tif (id < 999)\r \t\t\t\t\treturn 0;\r \t\t\t\telse\r \t\t\t\t\treturn 1;\t\r \t\t\t}\r \t};",
+        "c": [
+            "Student(){}"
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\nsTest1.cpp\\nsTest1\\Student\\setId(int)"
+    },
+    {
+        "f": [
+            "int id;"
+        ],
+        "fm": "int isAvailable(int id){\r \t\t\t\tif (id < 999)\r \t\t\t\t\treturn 0;\r \t\t\t\telse\r \t\t\t\t\treturn 1;\t\r \t\t\t}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Student_isAvailable_int_random_0(void) {\n{\nAKA_test_case_name=\"Student_isAvailable_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE_nsTest1__Student */\n/* ConstructorDataNode Student() */\nAKA_mark(\"Calling: .\\\\SymbolicExecutionTest\\\\nsTest1.cpp\\\\nsTest1\\\\Student\\\\Student()|ROOT\\\\nsTest1.cpp\\\\GLOBAL\\\\AKA_INSTANCE_nsTest1__Student\\\\AKA_INSTANCE_nsTest1__Student\\\\Student()\");AKA_fCall++;AKA_INSTANCE_nsTest1__Student = new nsTest1::Student();\n/* NormalNumberDataNode id */\n/* id : null value -> no code */\n\n\n\n\nint id=-1187447550;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode id */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Student_isAvailable_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE_nsTest1__Student->isAvailable(id);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\nsTest1.cpp\\\\nsTest1\\\\Student\\\\isAvailable(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1904350254;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Student_isAvailable_int_random_1(void) {\n{\nAKA_test_case_name=\"Student_isAvailable_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE_nsTest1__Student */\n/* ConstructorDataNode Student() */\nAKA_mark(\"Calling: .\\\\SymbolicExecutionTest\\\\nsTest1.cpp\\\\nsTest1\\\\Student\\\\Student()|ROOT\\\\nsTest1.cpp\\\\GLOBAL\\\\AKA_INSTANCE_nsTest1__Student\\\\AKA_INSTANCE_nsTest1__Student\\\\Student()\");AKA_fCall++;AKA_INSTANCE_nsTest1__Student = new nsTest1::Student();\n/* NormalNumberDataNode id */\n/* id : null value -> no code */\n\n\n\n\nint id=1429935869;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode id */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Student_isAvailable_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE_nsTest1__Student->isAvailable(id);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\nsTest1.cpp\\\\nsTest1\\\\Student\\\\isAvailable(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=1484769299;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Student{\r \t\tprivate:\r \t\t\tint id;\r \t\tpublic:\r \t\t\tStudent(){}\r \t\t\tint getId(){return id;}\r \t\t\tvoid setId(int id_){id = id_;}\r \t\t\tint isAvailable(int id){\r \t\t\t\tif (id < 999)\r \t\t\t\t\treturn 0;\r \t\t\t\telse\r \t\t\t\t\treturn 1;\t\r \t\t\t}\r \t};",
+        "c": [
+            "Student(){}"
+        ],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\nsTest1.cpp\\nsTest1\\Student\\isAvailable(int)"
+    },
+    {
+        "f": [],
+        "fm": "int isAvailable(int a){\r \t\tif (a<999)\r \t\t\treturn 0;\r \t\telse\r \t\t\treturn 1;\r \t}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_isAvailable_int_random_2(void) {\n{\nAKA_test_case_name=\"isAvailable_int_random_2\";\n\n// set up\n;\n\n\n\nint a=-225740073;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test isAvailable_int_random_2\");int AKA_ACTUAL_OUTPUT=nsTest2::isAvailable(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\nsTest2.cpp\\\\nsTest2\\\\isAvailable(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1904350254;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_isAvailable_int_random_5(void) {\n{\nAKA_test_case_name=\"isAvailable_int_random_5\";\n\n// set up\n;\n\n\n\nint a=1500385954;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test isAvailable_int_random_5\");int AKA_ACTUAL_OUTPUT=nsTest2::isAvailable(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\nsTest2.cpp\\\\nsTest2\\\\isAvailable(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=1484769299;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\nsTest2.cpp\\nsTest2\\isAvailable(int)"
+    },
+    {
+        "f": [],
+        "fm": "int isAvailable(int a){\r \t\t\ta--;\r \t\t\treturn a;\r \t\t}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_isAvailable_int_random_1(void) {\n{\nAKA_test_case_name=\"isAvailable_int_random_1\";\n\n// set up\n;\n\n\n\nint a=-639375582;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test isAvailable_int_random_1\");int AKA_ACTUAL_OUTPUT=nsTest3::second_space::isAvailable(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\nsTest3.cpp\\\\nsTest3\\\\second_space\\\\isAvailable(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1904350254;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\nsTest3.cpp\\nsTest3\\second_space\\isAvailable(int)"
+    }
+]

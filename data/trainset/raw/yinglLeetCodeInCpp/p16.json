@@ -1,0 +1,70 @@
+[
+    {
+        "f": [],
+        "fm": "int maxProduct(int A[], int n) {\r     if (1 == n) {\r       return A[0];\r     }\r     \r     int max_product;\r     int positive_max = 0; // 正的最大值\r     int negtive_min = 0;  // 负的最小值\r \r     for (int i = 0; i < n; ++i) {\r       if (A[i] < 0) {\r         // 交换，为后面可能遇到的负数做准备\r         swap(positive_max, negtive_min);\r       }\r \r       positive_max = max(positive_max * A[i], A[i]);\r       negtive_min = min(negtive_min * A[i], A[i]);\r       max_product = max(max_product, positive_max);\r     }\r \r     return max_product;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maxProduct_int_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_maxProduct_int_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\maximum_product_subarray.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[1];;\n\n\nint n=10;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=-2139050189;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maxProduct_int_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maxProduct(A,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-12\\\\maximum_product_subarray.cpp\\\\Solution\\\\maxProduct(int[],int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\maximum_product_subarray.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[1];;\n\n\nint n=10;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=-2139050189;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int maxProduct(int A[], int n) {\r     if (1 == n) {\r       return A[0];\r     }\r     \r     int max_product;\r     int positive_max = 0; // 正的最大值\r     int negtive_min = 0;  // 负的最小值\r \r     for (int i = 0; i < n; ++i) {\r       if (A[i] < 0) {\r         // 交换，为后面可能遇到的负数做准备\r         swap(positive_max, negtive_min);\r       }\r \r       positive_max = max(positive_max * A[i], A[i]);\r       negtive_min = min(negtive_min * A[i], A[i]);\r       max_product = max(max_product, positive_max);\r     }\r \r     return max_product;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-12\\maximum_product_subarray.cpp\\Solution\\maxProduct(int[],int)"
+    },
+    {
+        "f": [],
+        "fm": "int maxPoints(vector<Point> &points) {\r     if (points.size() <= 2) {\r       return points.size();\r     }\r \r     int max_points = INT_MIN;\r     map<double, int> lines;\r \r     for (int i = 0; i < (points.size() - 1); ++i) {\r       int same_points = 0;\r       int _max_points = 1;\r \r       lines.clear();\r \r       for (int j = i + 1; j < points.size(); ++j) {\r         int x = points[i].x - points[j].x;\r         int y = points[i].y - points[j].y;\r         double slope = numeric_limits<double>::infinity();  // 偷懒的做法\r \r         if ((0 ==x) && (0 == y)) {\r           ++same_points;\r         }\r         else {\r           if (y != 0) {\r             slope = (double)x / (double)y;\r           }\r \r           int count = (lines.find(slope) != lines.end()) ? lines[slope] + 1: 2;\r \r           lines[slope] = count;\r \r           if (_max_points < count) {\r             _max_points = count;\r           }\r         }\r       }\r \r       if (max_points < (_max_points + same_points)) {\r         max_points = _max_points + same_points;\r       }\r     }\r \r     return max_points;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maxPoints_vector_Point_random_3(void) {\n{\nAKA_test_case_name=\"Solution_maxPoints_vector_Point_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\max_points_on_a_line.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<Point> points;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode points */\n\n/* SubClassDataNode  */\n/* ConstructorDataNode Point() */\nAKA_mark(\"Calling: D:\\\\Lab\\\\test-cpp\\\\leetcode\\\\prj-data\\\\yingl_LeetCodeInCpp\\\\com-12\\\\max_points_on_a_line.cpp\\\\Point\\\\Point()|ROOT\\\\max_points_on_a_line.cpp\\\\maxPoints(vector<Point>&)\\\\points\\\\element #0\\\\Point()\");AKA_fCall++;::Point points_element0 = ::Point();\n/* NormalNumberDataNode x */\npoints_element0.x=1558002747;\n/* NormalNumberDataNode y */\npoints_element0.y=-1796816182;\npoints.push_back(points_element0);\n\n/* SubClassDataNode  */\n/* ConstructorDataNode Point(int,int) */\n/* NormalNumberDataNode a */\nint points_element1_a=190936351;\n/* NormalNumberDataNode b */\nint points_element1_b=1091164374;\nAKA_mark(\"Calling: D:\\\\Lab\\\\test-cpp\\\\leetcode\\\\prj-data\\\\yingl_LeetCodeInCpp\\\\com-12\\\\max_points_on_a_line.cpp\\\\Point\\\\Point(int,int)|ROOT\\\\max_points_on_a_line.cpp\\\\maxPoints(vector<Point>&)\\\\points\\\\element #1\\\\Point(int,int)\");AKA_fCall++;::Point points_element1 = ::Point(points_element1_a,points_element1_b);\n/* NormalNumberDataNode x */\npoints_element1.x=201465369;\n/* NormalNumberDataNode y */\npoints_element1.y=-1197359603;\npoints.push_back(points_element1);\n\n/* SubClassDataNode  */\n/* ConstructorDataNode Point() */\nAKA_mark(\"Calling: D:\\\\Lab\\\\test-cpp\\\\leetcode\\\\prj-data\\\\yingl_LeetCodeInCpp\\\\com-12\\\\max_points_on_a_line.cpp\\\\Point\\\\Point()|ROOT\\\\max_points_on_a_line.cpp\\\\maxPoints(vector<Point>&)\\\\points\\\\element #2\\\\Point()\");AKA_fCall++;::Point points_element2 = ::Point();\n/* NormalNumberDataNode x */\npoints_element2.x=249613920;\n/* NormalNumberDataNode y */\npoints_element2.y=-45921196;\npoints.push_back(points_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maxPoints_vector_Point_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maxPoints(points);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-12\\\\max_points_on_a_line.cpp\\\\Solution\\\\maxPoints(vector<Point>&)\");\n\n\nvector<Point> EXPECTED_points;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\maximum_product_subarray.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[1];;\n\n\nint n=10;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=-2139050189;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maxPoints_vector_Point_random_0(void) {\n{\nAKA_test_case_name=\"Solution_maxPoints_vector_Point_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\max_points_on_a_line.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<Point> points;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode points */\n\n/* SubClassDataNode  */\n/* ConstructorDataNode Point() */\nAKA_mark(\"Calling: D:\\\\Lab\\\\test-cpp\\\\leetcode\\\\prj-data\\\\yingl_LeetCodeInCpp\\\\com-12\\\\max_points_on_a_line.cpp\\\\Point\\\\Point()|ROOT\\\\max_points_on_a_line.cpp\\\\maxPoints(vector<Point>&)\\\\points\\\\element #0\\\\Point()\");AKA_fCall++;::Point points_element0 = ::Point();\n/* NormalNumberDataNode x */\npoints_element0.x=-1029137812;\n/* NormalNumberDataNode y */\npoints_element0.y=-1030202960;\npoints.push_back(points_element0);\n\n/* SubClassDataNode  */\n/* ConstructorDataNode Point(int,int) */\n/* NormalNumberDataNode a */\nint points_element1_a=-65657511;\n/* NormalNumberDataNode b */\nint points_element1_b=42801279;\nAKA_mark(\"Calling: D:\\\\Lab\\\\test-cpp\\\\leetcode\\\\prj-data\\\\yingl_LeetCodeInCpp\\\\com-12\\\\max_points_on_a_line.cpp\\\\Point\\\\Point(int,int)|ROOT\\\\max_points_on_a_line.cpp\\\\maxPoints(vector<Point>&)\\\\points\\\\element #1\\\\Point(int,int)\");AKA_fCall++;::Point points_element1 = ::Point(points_element1_a,points_element1_b);\n/* NormalNumberDataNode x */\npoints_element1.x=-1968129265;\n/* NormalNumberDataNode y */\npoints_element1.y=-2104369718;\npoints.push_back(points_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maxPoints_vector_Point_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maxPoints(points);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-12\\\\max_points_on_a_line.cpp\\\\Solution\\\\maxPoints(vector<Point>&)\");\n\n\nvector<Point> EXPECTED_points;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\maximum_product_subarray.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[1];;\n\n\nint n=10;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=-2139050189;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int maxPoints(vector<Point> &points) {\r     if (points.size() <= 2) {\r       return points.size();\r     }\r \r     int max_points = INT_MIN;\r     map<double, int> lines;\r \r     for (int i = 0; i < (points.size() - 1); ++i) {\r       int same_points = 0;\r       int _max_points = 1;\r \r       lines.clear();\r \r       for (int j = i + 1; j < points.size(); ++j) {\r         int x = points[i].x - points[j].x;\r         int y = points[i].y - points[j].y;\r         double slope = numeric_limits<double>::infinity();  // 偷懒的做法\r \r         if ((0 ==x) && (0 == y)) {\r           ++same_points;\r         }\r         else {\r           if (y != 0) {\r             slope = (double)x / (double)y;\r           }\r \r           int count = (lines.find(slope) != lines.end()) ? lines[slope] + 1: 2;\r \r           lines[slope] = count;\r \r           if (_max_points < count) {\r             _max_points = count;\r           }\r         }\r       }\r \r       if (max_points < (_max_points + same_points)) {\r         max_points = _max_points + same_points;\r       }\r     }\r \r     return max_points;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-12\\max_points_on_a_line.cpp\\Solution\\maxPoints(vector<Point>&)"
+    }
+]

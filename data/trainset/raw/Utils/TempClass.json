@@ -1,0 +1,135 @@
+[
+    {
+        "f": [
+            "int value;",
+            "int multiplier;"
+        ],
+        "fm": "void setMultiplier(int m) {\r         multiplier = m;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Calculator {\r private:\r     int value; // Giá trị nội bộ của class\r     int multiplier; // Một thuộc tính bổ sung để nhân giá trị\r \r public:\r     // Constructor với nhiều tham số\r     Calculator(int v, int m) : value(v), multiplier(m) {}\r \r     // Constructor mặc định\r     Calculator() : value(0), multiplier(1) {}\r \r     // Constructor sao chép\r     Calculator(const Calculator& other) : value(other.value), multiplier(other.multiplier) {}\r \r     // Setter để thay đổi multiplier\r     void setMultiplier(int m) {\r         multiplier = m;\r     }\r \r     // Getter để lấy multiplier\r     int getMultiplier() const {\r         return multiplier;\r     }\r \r     // Hàm cộng giá trị nội bộ với một số khác\r     int add(int x) {\r         return calculateAddition(x);\r     }\r \r     // Hàm chia giá trị nội bộ cho một số khác\r     double divide(int x) {\r         return static_cast<double>(value) / x;\r     }\r \r     // Phương thức bổ sung gọi đến add\r     int addAndMultiply(int x) {\r         int sum = add(x); // Gọi hàm add\r         return sum * multiplier; // Nhân kết quả với multiplier\r     }\r \r private:\r     // Hàm riêng để thực hiện phép cộng\r     int calculateAddition(int x) {\r         return value + x;\r     }\r };",
+        "c": [
+            "Calculator(int v, int m) : value(v), multiplier(m) {}",
+            "Calculator() : value(0), multiplier(1) {}",
+            "Calculator(const Calculator& other) : value(other.value), multiplier(other.multiplier) {}"
+        ],
+        "path_fm": "C:\\Users\\admin\\Downloads\\exel\\test.cpp\\Calculator\\setMultiplier(int)"
+    },
+    {
+        "f": [
+            "int value;",
+            "int multiplier;"
+        ],
+        "fm": "int getMultiplier() const {\r         return multiplier;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Calculator {\r private:\r     int value; // Giá trị nội bộ của class\r     int multiplier; // Một thuộc tính bổ sung để nhân giá trị\r \r public:\r     // Constructor với nhiều tham số\r     Calculator(int v, int m) : value(v), multiplier(m) {}\r \r     // Constructor mặc định\r     Calculator() : value(0), multiplier(1) {}\r \r     // Constructor sao chép\r     Calculator(const Calculator& other) : value(other.value), multiplier(other.multiplier) {}\r \r     // Setter để thay đổi multiplier\r     void setMultiplier(int m) {\r         multiplier = m;\r     }\r \r     // Getter để lấy multiplier\r     int getMultiplier() const {\r         return multiplier;\r     }\r \r     // Hàm cộng giá trị nội bộ với một số khác\r     int add(int x) {\r         return calculateAddition(x);\r     }\r \r     // Hàm chia giá trị nội bộ cho một số khác\r     double divide(int x) {\r         return static_cast<double>(value) / x;\r     }\r \r     // Phương thức bổ sung gọi đến add\r     int addAndMultiply(int x) {\r         int sum = add(x); // Gọi hàm add\r         return sum * multiplier; // Nhân kết quả với multiplier\r     }\r \r private:\r     // Hàm riêng để thực hiện phép cộng\r     int calculateAddition(int x) {\r         return value + x;\r     }\r };",
+        "c": [
+            "Calculator(int v, int m) : value(v), multiplier(m) {}",
+            "Calculator() : value(0), multiplier(1) {}",
+            "Calculator(const Calculator& other) : value(other.value), multiplier(other.multiplier) {}"
+        ],
+        "path_fm": "C:\\Users\\admin\\Downloads\\exel\\test.cpp\\Calculator\\getMultiplier()"
+    },
+    {
+        "f": [
+            "int value;",
+            "int multiplier;"
+        ],
+        "fm": "int add(int x) {\r         return calculateAddition(x);\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Calculator {\r private:\r     int value; // Giá trị nội bộ của class\r     int multiplier; // Một thuộc tính bổ sung để nhân giá trị\r \r public:\r     // Constructor với nhiều tham số\r     Calculator(int v, int m) : value(v), multiplier(m) {}\r \r     // Constructor mặc định\r     Calculator() : value(0), multiplier(1) {}\r \r     // Constructor sao chép\r     Calculator(const Calculator& other) : value(other.value), multiplier(other.multiplier) {}\r \r     // Setter để thay đổi multiplier\r     void setMultiplier(int m) {\r         multiplier = m;\r     }\r \r     // Getter để lấy multiplier\r     int getMultiplier() const {\r         return multiplier;\r     }\r \r     // Hàm cộng giá trị nội bộ với một số khác\r     int add(int x) {\r         return calculateAddition(x);\r     }\r \r     // Hàm chia giá trị nội bộ cho một số khác\r     double divide(int x) {\r         return static_cast<double>(value) / x;\r     }\r \r     // Phương thức bổ sung gọi đến add\r     int addAndMultiply(int x) {\r         int sum = add(x); // Gọi hàm add\r         return sum * multiplier; // Nhân kết quả với multiplier\r     }\r \r private:\r     // Hàm riêng để thực hiện phép cộng\r     int calculateAddition(int x) {\r         return value + x;\r     }\r };",
+        "c": [
+            "Calculator(int v, int m) : value(v), multiplier(m) {}",
+            "Calculator() : value(0), multiplier(1) {}",
+            "Calculator(const Calculator& other) : value(other.value), multiplier(other.multiplier) {}"
+        ],
+        "path_fm": "C:\\Users\\admin\\Downloads\\exel\\test.cpp\\Calculator\\add(int)"
+    },
+    {
+        "f": [
+            "int value;",
+            "int multiplier;"
+        ],
+        "fm": "double divide(int x) {\r         return static_cast<double>(value) / x;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Calculator {\r private:\r     int value; // Giá trị nội bộ của class\r     int multiplier; // Một thuộc tính bổ sung để nhân giá trị\r \r public:\r     // Constructor với nhiều tham số\r     Calculator(int v, int m) : value(v), multiplier(m) {}\r \r     // Constructor mặc định\r     Calculator() : value(0), multiplier(1) {}\r \r     // Constructor sao chép\r     Calculator(const Calculator& other) : value(other.value), multiplier(other.multiplier) {}\r \r     // Setter để thay đổi multiplier\r     void setMultiplier(int m) {\r         multiplier = m;\r     }\r \r     // Getter để lấy multiplier\r     int getMultiplier() const {\r         return multiplier;\r     }\r \r     // Hàm cộng giá trị nội bộ với một số khác\r     int add(int x) {\r         return calculateAddition(x);\r     }\r \r     // Hàm chia giá trị nội bộ cho một số khác\r     double divide(int x) {\r         return static_cast<double>(value) / x;\r     }\r \r     // Phương thức bổ sung gọi đến add\r     int addAndMultiply(int x) {\r         int sum = add(x); // Gọi hàm add\r         return sum * multiplier; // Nhân kết quả với multiplier\r     }\r \r private:\r     // Hàm riêng để thực hiện phép cộng\r     int calculateAddition(int x) {\r         return value + x;\r     }\r };",
+        "c": [
+            "Calculator(int v, int m) : value(v), multiplier(m) {}",
+            "Calculator() : value(0), multiplier(1) {}",
+            "Calculator(const Calculator& other) : value(other.value), multiplier(other.multiplier) {}"
+        ],
+        "path_fm": "C:\\Users\\admin\\Downloads\\exel\\test.cpp\\Calculator\\divide(int)"
+    },
+    {
+        "f": [
+            "int value;",
+            "int multiplier;"
+        ],
+        "fm": "int addAndMultiply(int x) {\r         int sum = add(x); // Gọi hàm add\r         return sum * multiplier; // Nhân kết quả với multiplier\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Calculator {\r private:\r     int value; // Giá trị nội bộ của class\r     int multiplier; // Một thuộc tính bổ sung để nhân giá trị\r \r public:\r     // Constructor với nhiều tham số\r     Calculator(int v, int m) : value(v), multiplier(m) {}\r \r     // Constructor mặc định\r     Calculator() : value(0), multiplier(1) {}\r \r     // Constructor sao chép\r     Calculator(const Calculator& other) : value(other.value), multiplier(other.multiplier) {}\r \r     // Setter để thay đổi multiplier\r     void setMultiplier(int m) {\r         multiplier = m;\r     }\r \r     // Getter để lấy multiplier\r     int getMultiplier() const {\r         return multiplier;\r     }\r \r     // Hàm cộng giá trị nội bộ với một số khác\r     int add(int x) {\r         return calculateAddition(x);\r     }\r \r     // Hàm chia giá trị nội bộ cho một số khác\r     double divide(int x) {\r         return static_cast<double>(value) / x;\r     }\r \r     // Phương thức bổ sung gọi đến add\r     int addAndMultiply(int x) {\r         int sum = add(x); // Gọi hàm add\r         return sum * multiplier; // Nhân kết quả với multiplier\r     }\r \r private:\r     // Hàm riêng để thực hiện phép cộng\r     int calculateAddition(int x) {\r         return value + x;\r     }\r };",
+        "c": [
+            "Calculator(int v, int m) : value(v), multiplier(m) {}",
+            "Calculator() : value(0), multiplier(1) {}",
+            "Calculator(const Calculator& other) : value(other.value), multiplier(other.multiplier) {}"
+        ],
+        "path_fm": "C:\\Users\\admin\\Downloads\\exel\\test.cpp\\Calculator\\addAndMultiply(int)"
+    },
+    {
+        "f": [
+            "int value;",
+            "int multiplier;"
+        ],
+        "fm": "int calculateAddition(int x) {\r         return value + x;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Calculator {\r private:\r     int value; // Giá trị nội bộ của class\r     int multiplier; // Một thuộc tính bổ sung để nhân giá trị\r \r public:\r     // Constructor với nhiều tham số\r     Calculator(int v, int m) : value(v), multiplier(m) {}\r \r     // Constructor mặc định\r     Calculator() : value(0), multiplier(1) {}\r \r     // Constructor sao chép\r     Calculator(const Calculator& other) : value(other.value), multiplier(other.multiplier) {}\r \r     // Setter để thay đổi multiplier\r     void setMultiplier(int m) {\r         multiplier = m;\r     }\r \r     // Getter để lấy multiplier\r     int getMultiplier() const {\r         return multiplier;\r     }\r \r     // Hàm cộng giá trị nội bộ với một số khác\r     int add(int x) {\r         return calculateAddition(x);\r     }\r \r     // Hàm chia giá trị nội bộ cho một số khác\r     double divide(int x) {\r         return static_cast<double>(value) / x;\r     }\r \r     // Phương thức bổ sung gọi đến add\r     int addAndMultiply(int x) {\r         int sum = add(x); // Gọi hàm add\r         return sum * multiplier; // Nhân kết quả với multiplier\r     }\r \r private:\r     // Hàm riêng để thực hiện phép cộng\r     int calculateAddition(int x) {\r         return value + x;\r     }\r };",
+        "c": [
+            "Calculator(int v, int m) : value(v), multiplier(m) {}",
+            "Calculator() : value(0), multiplier(1) {}",
+            "Calculator(const Calculator& other) : value(other.value), multiplier(other.multiplier) {}"
+        ],
+        "path_fm": "C:\\Users\\admin\\Downloads\\exel\\test.cpp\\Calculator\\calculateAddition(int)"
+    },
+    {
+        "f": [],
+        "fm": "int testCalculator() {\r     // Phần test khởi tạo và thực thi\r     Calculator calc(10, 2); // Khởi tạo đối tượng với giá trị ban đầu là 10\r     return calc.add(5); // Kiểm thử hàm add và trả về kết quả\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\Downloads\\exel\\test.cpp\\testCalculator()"
+    }
+]

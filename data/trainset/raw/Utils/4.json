@@ -1,0 +1,182 @@
+[
+    {
+        "f": [],
+        "fm": "int climbStairs(int n) {\r        if (n<=3) return n;\r        int a[2]={2,3};\r        for(int i=4; i<=n; i++){\r            int t = a[0] + a[1];\r            a[0] = a[1];\r            a[1] = t;\r        }\r        return a[1];\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int climbStairs(int n) {\r        if (n<=3) return n;\r        int a[2]={2,3};\r        for(int i=4; i<=n; i++){\r            int t = a[0] + a[1];\r            a[0] = a[1];\r            a[1] = t;\r        }\r        return a[1];\r     }\r     //Time too long\r     int climbStairs2(int n) {\r         if (n<=3) return n;\r         return climbStairs(n-1) + climbStairs(n-2);\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\4\\climbStairs\\climbStairs.cpp\\Solution\\climbStairs(int)"
+    },
+    {
+        "f": [],
+        "fm": "int climbStairs2(int n) {\r         if (n<=3) return n;\r         return climbStairs(n-1) + climbStairs(n-2);\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int climbStairs(int n) {\r        if (n<=3) return n;\r        int a[2]={2,3};\r        for(int i=4; i<=n; i++){\r            int t = a[0] + a[1];\r            a[0] = a[1];\r            a[1] = t;\r        }\r        return a[1];\r     }\r     //Time too long\r     int climbStairs2(int n) {\r         if (n<=3) return n;\r         return climbStairs(n-1) + climbStairs(n-2);\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\4\\climbStairs\\climbStairs.cpp\\Solution\\climbStairs2(int)"
+    },
+    {
+        "f": [],
+        "fm": "int abs_min (int x, int y, int z) {\r         return  abs_min(x, abs_min(y, z));\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r private:\r     int abs_min (int x, int y, int z) {\r         return  abs_min(x, abs_min(y, z));\r     }\r     // compare the absolute value and return the min one\r     // if their absolute value are equal, return the positive one.\r     int abs_min(int x, int y) {\r         int ax = abs(x);\r         int ay = abs(y);\r         if (ax == ay) return max(x, y);\r         return ax < ay ? x : y;\r     }\r public:\r     int closestCost(vector<int>& baseCosts, vector<int>& toppingCosts, int target) {\r \r         int min_gap = INT_MAX;\r         for (auto& base : baseCosts) {\r             int gap = closetToppingCost(toppingCosts, target - base, 0);\r             min_gap = abs_min(min_gap, gap);\r         }\r         \r         return target - min_gap;\r     }\r     \r     int closetToppingCost(vector<int>& costs, int target, int idx ){\r     \r         if (idx >= costs.size()) return target;\r \r         // three options: not slect, select once & select twice\r         int select_none  = closetToppingCost(costs, target, idx+1);\r         int select_once  = closetToppingCost(costs, target - costs[idx], idx+1);\r         int select_twice = closetToppingCost(costs, target - 2*costs[idx], idx+1);\r         \r         return abs_min(select_none, select_once, select_twice);\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\4\\closestDessertCost\\ClosestDessertCost.cpp\\Solution\\abs_min(int,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int abs_min(int x, int y) {\r         int ax = abs(x);\r         int ay = abs(y);\r         if (ax == ay) return max(x, y);\r         return ax < ay ? x : y;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r private:\r     int abs_min (int x, int y, int z) {\r         return  abs_min(x, abs_min(y, z));\r     }\r     // compare the absolute value and return the min one\r     // if their absolute value are equal, return the positive one.\r     int abs_min(int x, int y) {\r         int ax = abs(x);\r         int ay = abs(y);\r         if (ax == ay) return max(x, y);\r         return ax < ay ? x : y;\r     }\r public:\r     int closestCost(vector<int>& baseCosts, vector<int>& toppingCosts, int target) {\r \r         int min_gap = INT_MAX;\r         for (auto& base : baseCosts) {\r             int gap = closetToppingCost(toppingCosts, target - base, 0);\r             min_gap = abs_min(min_gap, gap);\r         }\r         \r         return target - min_gap;\r     }\r     \r     int closetToppingCost(vector<int>& costs, int target, int idx ){\r     \r         if (idx >= costs.size()) return target;\r \r         // three options: not slect, select once & select twice\r         int select_none  = closetToppingCost(costs, target, idx+1);\r         int select_once  = closetToppingCost(costs, target - costs[idx], idx+1);\r         int select_twice = closetToppingCost(costs, target - 2*costs[idx], idx+1);\r         \r         return abs_min(select_none, select_once, select_twice);\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\4\\closestDessertCost\\ClosestDessertCost.cpp\\Solution\\abs_min(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int closestCost(vector<int>& baseCosts, vector<int>& toppingCosts, int target) {\r \r         int min_gap = INT_MAX;\r         for (auto& base : baseCosts) {\r             int gap = closetToppingCost(toppingCosts, target - base, 0);\r             min_gap = abs_min(min_gap, gap);\r         }\r         \r         return target - min_gap;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r private:\r     int abs_min (int x, int y, int z) {\r         return  abs_min(x, abs_min(y, z));\r     }\r     // compare the absolute value and return the min one\r     // if their absolute value are equal, return the positive one.\r     int abs_min(int x, int y) {\r         int ax = abs(x);\r         int ay = abs(y);\r         if (ax == ay) return max(x, y);\r         return ax < ay ? x : y;\r     }\r public:\r     int closestCost(vector<int>& baseCosts, vector<int>& toppingCosts, int target) {\r \r         int min_gap = INT_MAX;\r         for (auto& base : baseCosts) {\r             int gap = closetToppingCost(toppingCosts, target - base, 0);\r             min_gap = abs_min(min_gap, gap);\r         }\r         \r         return target - min_gap;\r     }\r     \r     int closetToppingCost(vector<int>& costs, int target, int idx ){\r     \r         if (idx >= costs.size()) return target;\r \r         // three options: not slect, select once & select twice\r         int select_none  = closetToppingCost(costs, target, idx+1);\r         int select_once  = closetToppingCost(costs, target - costs[idx], idx+1);\r         int select_twice = closetToppingCost(costs, target - 2*costs[idx], idx+1);\r         \r         return abs_min(select_none, select_once, select_twice);\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\4\\closestDessertCost\\ClosestDessertCost.cpp\\Solution\\closestCost(vector<int>&,vector<int>&,int)"
+    },
+    {
+        "f": [],
+        "fm": "int closetToppingCost(vector<int>& costs, int target, int idx ){\r     \r         if (idx >= costs.size()) return target;\r \r         // three options: not slect, select once & select twice\r         int select_none  = closetToppingCost(costs, target, idx+1);\r         int select_once  = closetToppingCost(costs, target - costs[idx], idx+1);\r         int select_twice = closetToppingCost(costs, target - 2*costs[idx], idx+1);\r         \r         return abs_min(select_none, select_once, select_twice);\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r private:\r     int abs_min (int x, int y, int z) {\r         return  abs_min(x, abs_min(y, z));\r     }\r     // compare the absolute value and return the min one\r     // if their absolute value are equal, return the positive one.\r     int abs_min(int x, int y) {\r         int ax = abs(x);\r         int ay = abs(y);\r         if (ax == ay) return max(x, y);\r         return ax < ay ? x : y;\r     }\r public:\r     int closestCost(vector<int>& baseCosts, vector<int>& toppingCosts, int target) {\r \r         int min_gap = INT_MAX;\r         for (auto& base : baseCosts) {\r             int gap = closetToppingCost(toppingCosts, target - base, 0);\r             min_gap = abs_min(min_gap, gap);\r         }\r         \r         return target - min_gap;\r     }\r     \r     int closetToppingCost(vector<int>& costs, int target, int idx ){\r     \r         if (idx >= costs.size()) return target;\r \r         // three options: not slect, select once & select twice\r         int select_none  = closetToppingCost(costs, target, idx+1);\r         int select_once  = closetToppingCost(costs, target - costs[idx], idx+1);\r         int select_twice = closetToppingCost(costs, target - 2*costs[idx], idx+1);\r         \r         return abs_min(select_none, select_once, select_twice);\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\4\\closestDessertCost\\ClosestDessertCost.cpp\\Solution\\closetToppingCost(vector<int>&,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> closestRoom(vector<vector<int>>& rooms, vector<vector<int>>& queries) {\r         \r \r         for(int i=0; i<queries.size(); i++) { \r             queries[i].push_back(i);\r         }\r         \r         // sorted the rooms by size by descending order, because query the minimal size.\r         auto sort_by_size_desc =  [&](vector<int>& lhs, vector<int>&rhs) {\r             if (lhs[1] != rhs[1] ) return lhs[1] > rhs[1];\r             return lhs[0] < rhs[0];\r         };\r         sort(rooms.begin(), rooms.end(), sort_by_size_desc);\r         sort(queries.begin(), queries.end(), sort_by_size_desc);\r         //print(rooms);\r         //print(queries);\r         \r         vector<int> result(queries.size(), -1);\r         set<int> ids;\r         int i = 0;\r         for( auto& q: queries) {\r             int preferId = q[0];\r             int minSize = q[1];\r             int idx = q[2];\r             for (;i < rooms.size() && rooms[i][1] >= minSize; i++) {\r                 ids.insert(rooms[i][0]);\r             }\r             if (ids.size() <= 0 ) continue;\r             auto it = ids.lower_bound(preferId); \r             \r             int id1 = (it == ids.begin() ? -1 : *(prev(it)));\r             int id2 = (it == ids.end() ? -1 : *it);\r             \r             if (id1 == -1 || id2 == -1) {\r                 result[idx] = max(id1, id2);\r             }else{\r                 result[idx] = abs(preferId - id1) <= abs(preferId - id2) ? id1 : id2;\r             }\r             \r         }\r         return result;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r private:\r     void print(vector<vector<int>>& vv) {\r         cout << \"[\";\r         int i = 0;\r         for(; i<vv.size()-1; i++) {\r             cout << \"[\" << vv[i][0] << \",\" << vv[i][1] << \"],\";\r         }\r         cout << \"[\" << vv[i][0] << \",\" << vv[i][1] << \"]]\" << endl;\r     }\r public:\r     vector<int> closestRoom(vector<vector<int>>& rooms, vector<vector<int>>& queries) {\r         \r \r         for(int i=0; i<queries.size(); i++) { \r             queries[i].push_back(i);\r         }\r         \r         // sorted the rooms by size by descending order, because query the minimal size.\r         auto sort_by_size_desc =  [&](vector<int>& lhs, vector<int>&rhs) {\r             if (lhs[1] != rhs[1] ) return lhs[1] > rhs[1];\r             return lhs[0] < rhs[0];\r         };\r         sort(rooms.begin(), rooms.end(), sort_by_size_desc);\r         sort(queries.begin(), queries.end(), sort_by_size_desc);\r         //print(rooms);\r         //print(queries);\r         \r         vector<int> result(queries.size(), -1);\r         set<int> ids;\r         int i = 0;\r         for( auto& q: queries) {\r             int preferId = q[0];\r             int minSize = q[1];\r             int idx = q[2];\r             for (;i < rooms.size() && rooms[i][1] >= minSize; i++) {\r                 ids.insert(rooms[i][0]);\r             }\r             if (ids.size() <= 0 ) continue;\r             auto it = ids.lower_bound(preferId); \r             \r             int id1 = (it == ids.begin() ? -1 : *(prev(it)));\r             int id2 = (it == ids.end() ? -1 : *it);\r             \r             if (id1 == -1 || id2 == -1) {\r                 result[idx] = max(id1, id2);\r             }else{\r                 result[idx] = abs(preferId - id1) <= abs(preferId - id2) ? id1 : id2;\r             }\r             \r         }\r         return result;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\4\\closestRoom\\ClosestRoom.cpp\\Solution\\closestRoom(vector<vector<int>>&,vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "int abs(int n){\r         return n>0 ? n : -n;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r private: \r     int abs(int n){\r         return n>0 ? n : -n;\r     }\r     \r     void printSet(set<int>& s){\r         cout << \"[\";\r         for(auto& n : s) {\r             cout << n << \", \";\r         }\r         cout << \"]\" << endl;\r     }\r     \r     int findClosetDiff(set<int>& sums, int goal) {\r         auto it = sums.lower_bound(goal);\r         \r         // find the first item >= goal\r         int high = (it == sums.end()) ? *(sums.rbegin()) : *it;\r         // find the first item < goal\r         int low = (it != sums.begin()) ? *(--it) : *it; \r         \r         return min(abs(low - goal), abs(high - goal));\r     }\r     \r     // walk through all of element, and each element could have two chioces:\r     // add itself into sum or not. So, the time complexity is O(2^n)\r     void getAllSums(int index, int end, vector<int>& nums, int sum, set<int>& sums) {\r         if (index > end ) { // the latest one\r             sums.insert(sum);\r             return;\r         }\r         getAllSums(index+1, end, nums, sum+nums[index], sums); // add it into sum\r         getAllSums(index+1, end, nums, sum, sums); // skip this item\r     }\r     \r     void getAllSums(int start, int end, vector<int>& nums, set<int>& sums) {\r         //sums.clear(); \r         sums.insert(0);\r         for (int i=start; i<=end; i++) {\r             vector<int> s(sums.begin(), sums.end());\r             for (auto n : s) {\r                 sums.insert(n + nums[i]);\r             }\r         }\r     }\r public:\r     int minAbsDifference(vector<int>& nums, int goal) {\r         set<int> sums_left, sums_right;\r         //seprate the arrage to two parts\r         int mid = nums.size() / 2;\r         // ---The recusive way cause the TLE problem---\r         //getAllSums(0, mid, nums, 0, sums_left);\r         //getAllSums(mid+1, nums.size()-1, nums, 0, sums_right);\r         getAllSums(0, mid, nums, sums_left);\r         getAllSums(mid+1, nums.size()-1, nums, sums_right);\r         \r         int minDiff = INT_MAX;\r         for (auto& sum : sums_left) {\r             // Two Sum problem:\r             //  - sum_left + sum_right = goal\r             //  - sum_right = goal = sum_left\r             minDiff = min(minDiff, findClosetDiff(sums_right, goal - sum));\r         }\r         return minDiff;\r     }\r     \r \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\4\\closestSubsequenceSum\\ClosestSubsequenceSum.cpp\\Solution\\abs(int)"
+    },
+    {
+        "f": [],
+        "fm": "void printSet(set<int>& s){\r         cout << \"[\";\r         for(auto& n : s) {\r             cout << n << \", \";\r         }\r         cout << \"]\" << endl;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r private: \r     int abs(int n){\r         return n>0 ? n : -n;\r     }\r     \r     void printSet(set<int>& s){\r         cout << \"[\";\r         for(auto& n : s) {\r             cout << n << \", \";\r         }\r         cout << \"]\" << endl;\r     }\r     \r     int findClosetDiff(set<int>& sums, int goal) {\r         auto it = sums.lower_bound(goal);\r         \r         // find the first item >= goal\r         int high = (it == sums.end()) ? *(sums.rbegin()) : *it;\r         // find the first item < goal\r         int low = (it != sums.begin()) ? *(--it) : *it; \r         \r         return min(abs(low - goal), abs(high - goal));\r     }\r     \r     // walk through all of element, and each element could have two chioces:\r     // add itself into sum or not. So, the time complexity is O(2^n)\r     void getAllSums(int index, int end, vector<int>& nums, int sum, set<int>& sums) {\r         if (index > end ) { // the latest one\r             sums.insert(sum);\r             return;\r         }\r         getAllSums(index+1, end, nums, sum+nums[index], sums); // add it into sum\r         getAllSums(index+1, end, nums, sum, sums); // skip this item\r     }\r     \r     void getAllSums(int start, int end, vector<int>& nums, set<int>& sums) {\r         //sums.clear(); \r         sums.insert(0);\r         for (int i=start; i<=end; i++) {\r             vector<int> s(sums.begin(), sums.end());\r             for (auto n : s) {\r                 sums.insert(n + nums[i]);\r             }\r         }\r     }\r public:\r     int minAbsDifference(vector<int>& nums, int goal) {\r         set<int> sums_left, sums_right;\r         //seprate the arrage to two parts\r         int mid = nums.size() / 2;\r         // ---The recusive way cause the TLE problem---\r         //getAllSums(0, mid, nums, 0, sums_left);\r         //getAllSums(mid+1, nums.size()-1, nums, 0, sums_right);\r         getAllSums(0, mid, nums, sums_left);\r         getAllSums(mid+1, nums.size()-1, nums, sums_right);\r         \r         int minDiff = INT_MAX;\r         for (auto& sum : sums_left) {\r             // Two Sum problem:\r             //  - sum_left + sum_right = goal\r             //  - sum_right = goal = sum_left\r             minDiff = min(minDiff, findClosetDiff(sums_right, goal - sum));\r         }\r         return minDiff;\r     }\r     \r \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\4\\closestSubsequenceSum\\ClosestSubsequenceSum.cpp\\Solution\\printSet(set<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int findClosetDiff(set<int>& sums, int goal) {\r         auto it = sums.lower_bound(goal);\r         \r         // find the first item >= goal\r         int high = (it == sums.end()) ? *(sums.rbegin()) : *it;\r         // find the first item < goal\r         int low = (it != sums.begin()) ? *(--it) : *it; \r         \r         return min(abs(low - goal), abs(high - goal));\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r private: \r     int abs(int n){\r         return n>0 ? n : -n;\r     }\r     \r     void printSet(set<int>& s){\r         cout << \"[\";\r         for(auto& n : s) {\r             cout << n << \", \";\r         }\r         cout << \"]\" << endl;\r     }\r     \r     int findClosetDiff(set<int>& sums, int goal) {\r         auto it = sums.lower_bound(goal);\r         \r         // find the first item >= goal\r         int high = (it == sums.end()) ? *(sums.rbegin()) : *it;\r         // find the first item < goal\r         int low = (it != sums.begin()) ? *(--it) : *it; \r         \r         return min(abs(low - goal), abs(high - goal));\r     }\r     \r     // walk through all of element, and each element could have two chioces:\r     // add itself into sum or not. So, the time complexity is O(2^n)\r     void getAllSums(int index, int end, vector<int>& nums, int sum, set<int>& sums) {\r         if (index > end ) { // the latest one\r             sums.insert(sum);\r             return;\r         }\r         getAllSums(index+1, end, nums, sum+nums[index], sums); // add it into sum\r         getAllSums(index+1, end, nums, sum, sums); // skip this item\r     }\r     \r     void getAllSums(int start, int end, vector<int>& nums, set<int>& sums) {\r         //sums.clear(); \r         sums.insert(0);\r         for (int i=start; i<=end; i++) {\r             vector<int> s(sums.begin(), sums.end());\r             for (auto n : s) {\r                 sums.insert(n + nums[i]);\r             }\r         }\r     }\r public:\r     int minAbsDifference(vector<int>& nums, int goal) {\r         set<int> sums_left, sums_right;\r         //seprate the arrage to two parts\r         int mid = nums.size() / 2;\r         // ---The recusive way cause the TLE problem---\r         //getAllSums(0, mid, nums, 0, sums_left);\r         //getAllSums(mid+1, nums.size()-1, nums, 0, sums_right);\r         getAllSums(0, mid, nums, sums_left);\r         getAllSums(mid+1, nums.size()-1, nums, sums_right);\r         \r         int minDiff = INT_MAX;\r         for (auto& sum : sums_left) {\r             // Two Sum problem:\r             //  - sum_left + sum_right = goal\r             //  - sum_right = goal = sum_left\r             minDiff = min(minDiff, findClosetDiff(sums_right, goal - sum));\r         }\r         return minDiff;\r     }\r     \r \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\4\\closestSubsequenceSum\\ClosestSubsequenceSum.cpp\\Solution\\findClosetDiff(set<int>&,int)"
+    },
+    {
+        "f": [],
+        "fm": "void getAllSums(int index, int end, vector<int>& nums, int sum, set<int>& sums) {\r         if (index > end ) { // the latest one\r             sums.insert(sum);\r             return;\r         }\r         getAllSums(index+1, end, nums, sum+nums[index], sums); // add it into sum\r         getAllSums(index+1, end, nums, sum, sums); // skip this item\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r private: \r     int abs(int n){\r         return n>0 ? n : -n;\r     }\r     \r     void printSet(set<int>& s){\r         cout << \"[\";\r         for(auto& n : s) {\r             cout << n << \", \";\r         }\r         cout << \"]\" << endl;\r     }\r     \r     int findClosetDiff(set<int>& sums, int goal) {\r         auto it = sums.lower_bound(goal);\r         \r         // find the first item >= goal\r         int high = (it == sums.end()) ? *(sums.rbegin()) : *it;\r         // find the first item < goal\r         int low = (it != sums.begin()) ? *(--it) : *it; \r         \r         return min(abs(low - goal), abs(high - goal));\r     }\r     \r     // walk through all of element, and each element could have two chioces:\r     // add itself into sum or not. So, the time complexity is O(2^n)\r     void getAllSums(int index, int end, vector<int>& nums, int sum, set<int>& sums) {\r         if (index > end ) { // the latest one\r             sums.insert(sum);\r             return;\r         }\r         getAllSums(index+1, end, nums, sum+nums[index], sums); // add it into sum\r         getAllSums(index+1, end, nums, sum, sums); // skip this item\r     }\r     \r     void getAllSums(int start, int end, vector<int>& nums, set<int>& sums) {\r         //sums.clear(); \r         sums.insert(0);\r         for (int i=start; i<=end; i++) {\r             vector<int> s(sums.begin(), sums.end());\r             for (auto n : s) {\r                 sums.insert(n + nums[i]);\r             }\r         }\r     }\r public:\r     int minAbsDifference(vector<int>& nums, int goal) {\r         set<int> sums_left, sums_right;\r         //seprate the arrage to two parts\r         int mid = nums.size() / 2;\r         // ---The recusive way cause the TLE problem---\r         //getAllSums(0, mid, nums, 0, sums_left);\r         //getAllSums(mid+1, nums.size()-1, nums, 0, sums_right);\r         getAllSums(0, mid, nums, sums_left);\r         getAllSums(mid+1, nums.size()-1, nums, sums_right);\r         \r         int minDiff = INT_MAX;\r         for (auto& sum : sums_left) {\r             // Two Sum problem:\r             //  - sum_left + sum_right = goal\r             //  - sum_right = goal = sum_left\r             minDiff = min(minDiff, findClosetDiff(sums_right, goal - sum));\r         }\r         return minDiff;\r     }\r     \r \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\4\\closestSubsequenceSum\\ClosestSubsequenceSum.cpp\\Solution\\getAllSums(int,int,vector<int>&,int,set<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int minAbsDifference(vector<int>& nums, int goal) {\r         set<int> sums_left, sums_right;\r         //seprate the arrage to two parts\r         int mid = nums.size() / 2;\r         // ---The recusive way cause the TLE problem---\r         //getAllSums(0, mid, nums, 0, sums_left);\r         //getAllSums(mid+1, nums.size()-1, nums, 0, sums_right);\r         getAllSums(0, mid, nums, sums_left);\r         getAllSums(mid+1, nums.size()-1, nums, sums_right);\r         \r         int minDiff = INT_MAX;\r         for (auto& sum : sums_left) {\r             // Two Sum problem:\r             //  - sum_left + sum_right = goal\r             //  - sum_right = goal = sum_left\r             minDiff = min(minDiff, findClosetDiff(sums_right, goal - sum));\r         }\r         return minDiff;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r private: \r     int abs(int n){\r         return n>0 ? n : -n;\r     }\r     \r     void printSet(set<int>& s){\r         cout << \"[\";\r         for(auto& n : s) {\r             cout << n << \", \";\r         }\r         cout << \"]\" << endl;\r     }\r     \r     int findClosetDiff(set<int>& sums, int goal) {\r         auto it = sums.lower_bound(goal);\r         \r         // find the first item >= goal\r         int high = (it == sums.end()) ? *(sums.rbegin()) : *it;\r         // find the first item < goal\r         int low = (it != sums.begin()) ? *(--it) : *it; \r         \r         return min(abs(low - goal), abs(high - goal));\r     }\r     \r     // walk through all of element, and each element could have two chioces:\r     // add itself into sum or not. So, the time complexity is O(2^n)\r     void getAllSums(int index, int end, vector<int>& nums, int sum, set<int>& sums) {\r         if (index > end ) { // the latest one\r             sums.insert(sum);\r             return;\r         }\r         getAllSums(index+1, end, nums, sum+nums[index], sums); // add it into sum\r         getAllSums(index+1, end, nums, sum, sums); // skip this item\r     }\r     \r     void getAllSums(int start, int end, vector<int>& nums, set<int>& sums) {\r         //sums.clear(); \r         sums.insert(0);\r         for (int i=start; i<=end; i++) {\r             vector<int> s(sums.begin(), sums.end());\r             for (auto n : s) {\r                 sums.insert(n + nums[i]);\r             }\r         }\r     }\r public:\r     int minAbsDifference(vector<int>& nums, int goal) {\r         set<int> sums_left, sums_right;\r         //seprate the arrage to two parts\r         int mid = nums.size() / 2;\r         // ---The recusive way cause the TLE problem---\r         //getAllSums(0, mid, nums, 0, sums_left);\r         //getAllSums(mid+1, nums.size()-1, nums, 0, sums_right);\r         getAllSums(0, mid, nums, sums_left);\r         getAllSums(mid+1, nums.size()-1, nums, sums_right);\r         \r         int minDiff = INT_MAX;\r         for (auto& sum : sums_left) {\r             // Two Sum problem:\r             //  - sum_left + sum_right = goal\r             //  - sum_right = goal = sum_left\r             minDiff = min(minDiff, findClosetDiff(sums_right, goal - sum));\r         }\r         return minDiff;\r     }\r     \r \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\4\\closestSubsequenceSum\\ClosestSubsequenceSum.cpp\\Solution\\minAbsDifference(vector<int>&,int)"
+    }
+]

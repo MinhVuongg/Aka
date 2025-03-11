@@ -1,0 +1,154 @@
+[
+    {
+        "f": [],
+        "fm": "string removeOccurrences(string s, string part) {\r     \r         int len = part.length();\r         \r         while(true) {\r             \r             auto ind = s.find(part);\r             \r             if(ind == string :: npos)                              return s;\r             else                                                   s.erase(ind, len);        \r         }\r         \r         return s;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_removeOccurrences_string_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_removeOccurrences_string_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1910-remove-all-occurrences-of-a-substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName160957 = new char[2];akaRandomName160957[0] = -10;akaRandomName160957[1] = '\\0';string s=akaRandomName160957;\nchar* akaRandomName848171 = new char[2];akaRandomName848171[0] = 73;akaRandomName848171[1] = '\\0';string part=akaRandomName848171;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode part */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_removeOccurrences_string_string_random_3\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->removeOccurrences(s,part);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p54\\\\1910-remove-all-occurrences-of-a-substring\\\\1910-remove-all-occurrences-of-a-substring.cpp\\\\Solution\\\\removeOccurrences(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1805-number-of-different-integers-in-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName398746 = new char[2];akaRandomName398746[0] = -126;akaRandomName398746[1] = '\\0';string word=akaRandomName398746;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     string removeOccurrences(string s, string part) {\r     \r         int len = part.length();\r         \r         while(true) {\r             \r             auto ind = s.find(part);\r             \r             if(ind == string :: npos)                              return s;\r             else                                                   s.erase(ind, len);        \r         }\r         \r         return s;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p54\\1910-remove-all-occurrences-of-a-substring\\1910-remove-all-occurrences-of-a-substring.cpp\\Solution\\removeOccurrences(string,string)"
+    },
+    {
+        "f": [],
+        "fm": "int maxProductDifference(vector<int>& a) {\r         \r         int res;\r         int n = a.size();\r         \r         int max1 = INT_MIN, max2 = INT_MIN;\r         int min1 = INT_MAX, min2 = INT_MAX;\r         \r         for(int i=0; i<n; i++) {\r             \r             if(a[i] > max1) {\r                 max2 = max1;\r                 max1 = a[i];\r             }\r             \r             else if(a[i] > max2) {\r                 max2 = a[i];\r             }\r             \r             if(a[i] < min1) {\r                 min2 = min1;\r                 min1 = a[i];\r             }\r             \r             else if(a[i] < min2) {\r                 min2 = a[i];\r             }\r         }\r             \r         res = (max2 * max1) - (min2 * min1);\r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maxProductDifference_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_maxProductDifference_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1913-maximum-product-difference-between-two-pairs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=-1281507681;\na.push_back(a_element0);\nint a_element1=-1048020707;\na.push_back(a_element1);\nint a_element2=-111679443;\na.push_back(a_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maxProductDifference_vector_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maxProductDifference(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p54\\\\1913-maximum-product-difference-between-two-pairs\\\\1913-maximum-product-difference-between-two-pairs.cpp\\\\Solution\\\\maxProductDifference(vector<int>&)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1805-number-of-different-integers-in-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName398746 = new char[2];akaRandomName398746[0] = -126;akaRandomName398746[1] = '\\0';string word=akaRandomName398746;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maxProductDifference_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_maxProductDifference_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1913-maximum-product-difference-between-two-pairs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=-1263853041;\na.push_back(a_element0);\nint a_element1=-2129736451;\na.push_back(a_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maxProductDifference_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maxProductDifference(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p54\\\\1913-maximum-product-difference-between-two-pairs\\\\1913-maximum-product-difference-between-two-pairs.cpp\\\\Solution\\\\maxProductDifference(vector<int>&)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1805-number-of-different-integers-in-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName732626 = new char[2];akaRandomName732626[0] = 56;akaRandomName732626[1] = '\\0';string word=akaRandomName732626;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int maxProductDifference(vector<int>& a) {\r         \r         int res;\r         int n = a.size();\r         \r         int max1 = INT_MIN, max2 = INT_MIN;\r         int min1 = INT_MAX, min2 = INT_MAX;\r         \r         for(int i=0; i<n; i++) {\r             \r             if(a[i] > max1) {\r                 max2 = max1;\r                 max1 = a[i];\r             }\r             \r             else if(a[i] > max2) {\r                 max2 = a[i];\r             }\r             \r             if(a[i] < min1) {\r                 min2 = min1;\r                 min1 = a[i];\r             }\r             \r             else if(a[i] < min2) {\r                 min2 = a[i];\r             }\r         }\r             \r         res = (max2 * max1) - (min2 * min1);\r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p54\\1913-maximum-product-difference-between-two-pairs\\1913-maximum-product-difference-between-two-pairs.cpp\\Solution\\maxProductDifference(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> buildArray(vector<int>& a) {\r     \r         int n = a.size();\r         vector<int> res(n);\r         \r         for(int i=0; i<n; i++)              res[i] = a[a[i]];\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_buildArray_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_buildArray_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1920-build-array-from-permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=-756256798;\na.push_back(a_element0);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_buildArray_vector_int_random_4\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->buildArray(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p54\\\\1920-build-array-from-permutation\\\\1920-build-array-from-permutation.cpp\\\\Solution\\\\buildArray(vector<int>&)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1805-number-of-different-integers-in-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName398746 = new char[2];akaRandomName398746[0] = -126;akaRandomName398746[1] = '\\0';string word=akaRandomName398746;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     vector<int> buildArray(vector<int>& a) {\r     \r         int n = a.size();\r         vector<int> res(n);\r         \r         for(int i=0; i<n; i++)              res[i] = a[a[i]];\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p54\\1920-build-array-from-permutation\\1920-build-array-from-permutation.cpp\\Solution\\buildArray(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int countTriples(int n) {\r         \r         int count = 0, c;\r         \r         for(int i=1; i<=n; i++) {\r             for(int j=1; j<=n; j++) {\r                 \r                 c = i*i + j*j;\r                 int sqrtC = sqrt(c);\r                 \r                 if(sqrtC * sqrtC == c && sqrtC <= n)                          count++;    \r             }\r         }\r         \r         return count;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countTriples_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_countTriples_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1925-count-square-sum-triples.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=5;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countTriples_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countTriples(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p54\\\\1925-count-square-sum-triples\\\\1925-count-square-sum-triples.cpp\\\\Solution\\\\countTriples(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1805-number-of-different-integers-in-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName398746 = new char[2];akaRandomName398746[0] = -126;akaRandomName398746[1] = '\\0';string word=akaRandomName398746;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int countTriples(int n) {\r         \r         int count = 0, c;\r         \r         for(int i=1; i<=n; i++) {\r             for(int j=1; j<=n; j++) {\r                 \r                 c = i*i + j*j;\r                 int sqrtC = sqrt(c);\r                 \r                 if(sqrtC * sqrtC == c && sqrtC <= n)                          count++;    \r             }\r         }\r         \r         return count;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p54\\1925-count-square-sum-triples\\1925-count-square-sum-triples.cpp\\Solution\\countTriples(int)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> getConcatenation(vector<int>& a) {\r \r         int n = a.size();\r         vector<int> res(2*n);\r         \r         for(int i=0; i<n; i++) {\r             res[i] = a[i];\r             res[i + n] = a[i];            \r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_getConcatenation_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_getConcatenation_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1929-concatenation-of-array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=-1836416025;\na.push_back(a_element0);\nint a_element1=1114513200;\na.push_back(a_element1);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_getConcatenation_vector_int_random_2\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->getConcatenation(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p54\\\\1929-concatenation-of-array\\\\1929-concatenation-of-array.cpp\\\\Solution\\\\getConcatenation(vector<int>&)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1805-number-of-different-integers-in-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName398746 = new char[2];akaRandomName398746[0] = -126;akaRandomName398746[1] = '\\0';string word=akaRandomName398746;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     vector<int> getConcatenation(vector<int>& a) {\r \r         int n = a.size();\r         vector<int> res(2*n);\r         \r         for(int i=0; i<n; i++) {\r             res[i] = a[i];\r             res[i + n] = a[i];            \r         }\r         \r         return res;\r     }\r     \r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p54\\1929-concatenation-of-array\\1929-concatenation-of-array.cpp\\Solution\\getConcatenation(vector<int>&)"
+    }
+]

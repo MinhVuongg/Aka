@@ -1,0 +1,358 @@
+[
+    {
+        "f": [],
+        "fm": "void CombinationPar(vector<string>& result, string& sample,\r \t                    int deep, int n, int leftNum, int rightNum)\r \t{\r \t\tif (deep == 2 * n)\r \t\t{\r \t\t\tresult.push_back(sample);\r \t\t\treturn;\r \t\t}\r \t\tif (leftNum < n)\r \t\t{\r \t\t\tsample.push_back('(');\r \t\t\tCombinationPar(\r \t\t\t    result, sample, deep + 1, n, leftNum + 1, rightNum);\r \t\t\tsample.resize(sample.size() - 1);\r \t\t}\r \t\tif (rightNum < leftNum)\r \t\t{\r \t\t\tsample.push_back(')');\r \t\t\tCombinationPar(\r \t\t\t    result, sample, deep + 1, n, leftNum, rightNum + 1);\r \t\t\tsample.resize(sample.size() - 1);\r \t\t}\r \t}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_CombinationPar_vector_string_string_int_int_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_CombinationPar_vector_string_string_int_int_int_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Generate_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> result;\nstring sample=\"\";\n\n\nint deep=-1;\n\n\nint n=0;\n\n\nint leftNum=0;\n\n\nint rightNum=0;\n\n/* RootDataNode STATIC */\n/* VectorDataNode result */\n/* NormalStringDataNode sample */\n/* NormalNumberDataNode deep */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode leftNum */\n/* NormalNumberDataNode rightNum */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_CombinationPar_vector_string_string_int_int_int_int_directed_0\");AKA_INSTANCE___Solution->CombinationPar(result,sample,deep,n,leftNum,rightNum);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\five(chua-run-duoc)\\\\Generate_Parentheses.cpp\\\\Solution\\\\CombinationPar(vector<string>&,string&,int,int,int,int)\");\n\n/* error assertion */\nvector<string> EXPECTED_result;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Generate_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> result;\nstring sample=\"\";\n\n\nint deep=-1;\n\n\nint n=0;\n\n\nint leftNum=0;\n\n\nint rightNum=0;\n\n/* RootDataNode STATIC */\n/* VectorDataNode result */\n/* NormalStringDataNode sample */\n/* NormalNumberDataNode deep */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode leftNum */\n/* NormalNumberDataNode rightNum */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_CombinationPar_vector_string_string_int_int_int_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_CombinationPar_vector_string_string_int_int_int_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Generate_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> result;\nchar* akaRandomName741405 = new char[2];akaRandomName741405[0] = 46;akaRandomName741405[1] = '\\0';string sample=akaRandomName741405;\n\n\nint deep=444463122;\n\n\nint n=2058243158;\n\n\nint leftNum=-1703573352;\n\n\nint rightNum=-58234008;\n\n/* RootDataNode STATIC */\n/* VectorDataNode result */\nchar* akaRandomName816662 = new char[2];akaRandomName816662[0] = -79;akaRandomName816662[1] = '\\0';string result_element0=akaRandomName816662;\nresult.push_back(result_element0);\nchar* akaRandomName985604 = new char[2];akaRandomName985604[0] = -15;akaRandomName985604[1] = '\\0';string result_element1=akaRandomName985604;\nresult.push_back(result_element1);\n/* NormalStringDataNode sample */\n/* NormalNumberDataNode deep */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode leftNum */\n/* NormalNumberDataNode rightNum */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_CombinationPar_vector_string_string_int_int_int_int_random_1\");AKA_INSTANCE___Solution->CombinationPar(result,sample,deep,n,leftNum,rightNum);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\five(chua-run-duoc)\\\\Generate_Parentheses.cpp\\\\Solution\\\\CombinationPar(vector<string>&,string&,int,int,int,int)\");\n\n/* error assertion */\nvector<string> EXPECTED_result;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Generate_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> result;\nchar* akaRandomName507132 = new char[2];akaRandomName507132[0] = 46;akaRandomName507132[1] = '\\0';string sample=akaRandomName507132;\n\n\nint deep=444463122;\n\n\nint n=2058243158;\n\n\nint leftNum=-1703573352;\n\n\nint rightNum=-58234008;\n\n/* RootDataNode STATIC */\n/* VectorDataNode result */\nchar* akaRandomName487909 = new char[2];akaRandomName487909[0] = -79;akaRandomName487909[1] = '\\0';string result_element0=akaRandomName487909;\nresult.push_back(result_element0);\nchar* akaRandomName815604 = new char[2];akaRandomName815604[0] = -15;akaRandomName815604[1] = '\\0';string result_element1=akaRandomName815604;\nresult.push_back(result_element1);\n/* NormalStringDataNode sample */\n/* NormalNumberDataNode deep */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode leftNum */\n/* NormalNumberDataNode rightNum */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \tvoid CombinationPar(vector<string>& result, string& sample,\r \t                    int deep, int n, int leftNum, int rightNum)\r \t{\r \t\tif (deep == 2 * n)\r \t\t{\r \t\t\tresult.push_back(sample);\r \t\t\treturn;\r \t\t}\r \t\tif (leftNum < n)\r \t\t{\r \t\t\tsample.push_back('(');\r \t\t\tCombinationPar(\r \t\t\t    result, sample, deep + 1, n, leftNum + 1, rightNum);\r \t\t\tsample.resize(sample.size() - 1);\r \t\t}\r \t\tif (rightNum < leftNum)\r \t\t{\r \t\t\tsample.push_back(')');\r \t\t\tCombinationPar(\r \t\t\t    result, sample, deep + 1, n, leftNum, rightNum + 1);\r \t\t\tsample.resize(sample.size() - 1);\r \t\t}\r \t}\r \r \tvector<string> generateParenthesis(int n) {\r \t\tvector<string> result;\r \t\tstring sample;\r \t\tif (n != 0)\r \t\t\tCombinationPar(result, sample, 0, n, 0, 0);\r \t\treturn result;\r \t}\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\five(chua-run-duoc)\\Generate_Parentheses.cpp\\Solution\\CombinationPar(vector<string>&,string&,int,int,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "vector<string> generateParenthesis(int n) {\r \t\tvector<string> result;\r \t\tstring sample;\r \t\tif (n != 0)\r \t\t\tCombinationPar(result, sample, 0, n, 0, 0);\r \t\treturn result;\r \t}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_generateParenthesis_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_generateParenthesis_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Generate_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=0;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_generateParenthesis_int_directed_0\");vector<string> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->generateParenthesis(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\five(chua-run-duoc)\\\\Generate_Parentheses.cpp\\\\Solution\\\\generateParenthesis(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Generate_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=0;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_generateParenthesis_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_generateParenthesis_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Generate_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=-752210982;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_generateParenthesis_int_random_2\");vector<string> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->generateParenthesis(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\five(chua-run-duoc)\\\\Generate_Parentheses.cpp\\\\Solution\\\\generateParenthesis(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Generate_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=-752210982;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_generateParenthesis_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_generateParenthesis_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Generate_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=1291588462;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_generateParenthesis_int_random_0\");vector<string> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->generateParenthesis(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\five(chua-run-duoc)\\\\Generate_Parentheses.cpp\\\\Solution\\\\generateParenthesis(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Generate_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=1291588462;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \tvoid CombinationPar(vector<string>& result, string& sample,\r \t                    int deep, int n, int leftNum, int rightNum)\r \t{\r \t\tif (deep == 2 * n)\r \t\t{\r \t\t\tresult.push_back(sample);\r \t\t\treturn;\r \t\t}\r \t\tif (leftNum < n)\r \t\t{\r \t\t\tsample.push_back('(');\r \t\t\tCombinationPar(\r \t\t\t    result, sample, deep + 1, n, leftNum + 1, rightNum);\r \t\t\tsample.resize(sample.size() - 1);\r \t\t}\r \t\tif (rightNum < leftNum)\r \t\t{\r \t\t\tsample.push_back(')');\r \t\t\tCombinationPar(\r \t\t\t    result, sample, deep + 1, n, leftNum, rightNum + 1);\r \t\t\tsample.resize(sample.size() - 1);\r \t\t}\r \t}\r \r \tvector<string> generateParenthesis(int n) {\r \t\tvector<string> result;\r \t\tstring sample;\r \t\tif (n != 0)\r \t\t\tCombinationPar(result, sample, 0, n, 0, 0);\r \t\treturn result;\r \t}\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\five(chua-run-duoc)\\Generate_Parentheses.cpp\\Solution\\generateParenthesis(int)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> grayCode(int n) {\r \t\tvector<int> result;\r \t\tresult.push_back(0);\r \t\tfor (int i = 0; i < n; i++)\r \t\t{\r \t\t\tint highestBit = 1 << i;\r \t\t\tint len = result.size();\r \t\t\tfor (int i = len - 1; i >= 0; i--)\r \t\t\t{\r \t\t\t\tresult.push_back(highestBit + result[i]);\r \t\t\t}\r \t\t}\r \t\treturn result;\r \t}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_grayCode_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_grayCode_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Gray_Code.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=1;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_grayCode_int_directed_0\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->grayCode(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\five(chua-run-duoc)\\\\Gray_Code.cpp\\\\Solution\\\\grayCode(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Gray_Code.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=1;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_grayCode_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_grayCode_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Gray_Code.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_grayCode_int_random_1\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->grayCode(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\five(chua-run-duoc)\\\\Gray_Code.cpp\\\\Solution\\\\grayCode(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Gray_Code.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_grayCode_int_directed_1(void) {\n{\nAKA_test_case_name=\"Solution_grayCode_int_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Gray_Code.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=5;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_grayCode_int_directed_1\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->grayCode(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\five(chua-run-duoc)\\\\Gray_Code.cpp\\\\Solution\\\\grayCode(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Gray_Code.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=5;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \tvector<int> grayCode(int n) {\r \t\tvector<int> result;\r \t\tresult.push_back(0);\r \t\tfor (int i = 0; i < n; i++)\r \t\t{\r \t\t\tint highestBit = 1 << i;\r \t\t\tint len = result.size();\r \t\t\tfor (int i = len - 1; i >= 0; i--)\r \t\t\t{\r \t\t\t\tresult.push_back(highestBit + result[i]);\r \t\t\t}\r \t\t}\r \t\treturn result;\r \t}\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\five(chua-run-duoc)\\Gray_Code.cpp\\Solution\\grayCode(int)"
+    },
+    {
+        "f": [],
+        "fm": "int hIndex(vector<int>& citations) {\r         std::sort (citations.begin(), citations.end());   \r         \r         int length = citations.size();\r         for(int i =0; i< length; i++) {\r             int h = length - i;\r             if(h<= citations[i]) {\r                 // return the first h\r                 return h;\r             }\r         }\r         \r         return 0;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_hIndex_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_hIndex_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\H_Index.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> citations;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode citations */\nint citations_element0=812608398;\ncitations.push_back(citations_element0);\nint citations_element1=502267854;\ncitations.push_back(citations_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_hIndex_vector_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->hIndex(citations);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\five(chua-run-duoc)\\\\H_Index.cpp\\\\Solution\\\\hIndex(vector<int>&)\");\n\n\nvector<int> EXPECTED_citations;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\H_Index.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> citations;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode citations */\nint citations_element0=812608398;\ncitations.push_back(citations_element0);\nint citations_element1=502267854;\ncitations.push_back(citations_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_hIndex_vector_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_hIndex_vector_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\H_Index.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> citations;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode citations */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_hIndex_vector_int_directed_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->hIndex(citations);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\five(chua-run-duoc)\\\\H_Index.cpp\\\\Solution\\\\hIndex(vector<int>&)\");\n\n\nvector<int> EXPECTED_citations;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\H_Index.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> citations;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode citations */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_hIndex_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_hIndex_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\H_Index.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> citations;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode citations */\nint citations_element0=-850619185;\ncitations.push_back(citations_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_hIndex_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->hIndex(citations);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\five(chua-run-duoc)\\\\H_Index.cpp\\\\Solution\\\\hIndex(vector<int>&)\");\n\n\nvector<int> EXPECTED_citations;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\H_Index.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> citations;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode citations */\nint citations_element0=-850619185;\ncitations.push_back(citations_element0);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int hIndex(vector<int>& citations) {\r         std::sort (citations.begin(), citations.end());   \r         \r         int length = citations.size();\r         for(int i =0; i< length; i++) {\r             int h = length - i;\r             if(h<= citations[i]) {\r                 // return the first h\r                 return h;\r             }\r         }\r         \r         return 0;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\five(chua-run-duoc)\\H_Index.cpp\\Solution\\hIndex(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int hIndex(vector<int>& citations) {\r         int start = 0, end = citations.size()-1;\r         \r         int max_h = 0;\r         while(start<=end) {\r             int mid = start + (end - start)/2;\r             int h = citations.size() - mid;\r             if(h<= citations[mid]) {\r                 end = mid -1;\r                 max_h = h;\r             } else {\r                 start = mid +1;\r             }\r         }\r         \r         return max_h;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_hIndex_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_hIndex_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\H_Index_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> citations;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode citations */\nint citations_element0=-518013823;\ncitations.push_back(citations_element0);\nint citations_element1=36524651;\ncitations.push_back(citations_element1);\nint citations_element2=-2137447895;\ncitations.push_back(citations_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_hIndex_vector_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->hIndex(citations);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\five(chua-run-duoc)\\\\H_Index_II.cpp\\\\Solution\\\\hIndex(vector<int>&)\");\n\n\nvector<int> EXPECTED_citations;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\H_Index_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> citations;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode citations */\nint citations_element0=-518013823;\ncitations.push_back(citations_element0);\nint citations_element1=36524651;\ncitations.push_back(citations_element1);\nint citations_element2=-2137447895;\ncitations.push_back(citations_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int hIndex(vector<int>& citations) {\r         int start = 0, end = citations.size()-1;\r         \r         int max_h = 0;\r         while(start<=end) {\r             int mid = start + (end - start)/2;\r             int h = citations.size() - mid;\r             if(h<= citations[mid]) {\r                 end = mid -1;\r                 max_h = h;\r             } else {\r                 start = mid +1;\r             }\r         }\r         \r         return max_h;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\five(chua-run-duoc)\\H_Index_II.cpp\\Solution\\hIndex(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "char *strStr(char *haystack, char *needle) {\r \t\tif (haystack == NULL || needle == NULL) return NULL;\r \t\tint hlen = strlen(haystack);\r \t\tint nlen = strlen(needle);\r \t\tif (nlen == 0) return haystack;\r \t\tif (hlen == 0 ) return NULL;\r \t\tint pattern[100000];\r \t\tGeneratePattern(needle, nlen, pattern);\r \t\treturn Match(haystack, needle, pattern);\r \t}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_strStr_charmul_charmul_random_0(void) {\n{\nAKA_test_case_name=\"Solution_strStr_charmul_charmul_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Implement_strStr().cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=-88;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=0;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_strStr_charmul_charmul_random_0\");char* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->strStr(haystack,needle);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\five(chua-run-duoc)\\\\Implement_strStr().cpp\\\\Solution\\\\strStr(char*,char*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Implement_strStr().cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=-88;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=0;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerCharacterDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_strStr_charmul_charmul_directed_1(void) {\n{\nAKA_test_case_name=\"Solution_strStr_charmul_charmul_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Implement_strStr().cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=49;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=49;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=0;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_strStr_charmul_charmul_directed_1\");char* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->strStr(haystack,needle);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\five(chua-run-duoc)\\\\Implement_strStr().cpp\\\\Solution\\\\strStr(char*,char*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Implement_strStr().cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=49;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=49;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=0;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerCharacterDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_strStr_charmul_charmul_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_strStr_charmul_charmul_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Implement_strStr().cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=50;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=48;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=0;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_strStr_charmul_charmul_directed_0\");char* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->strStr(haystack,needle);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\five(chua-run-duoc)\\\\Implement_strStr().cpp\\\\Solution\\\\strStr(char*,char*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Implement_strStr().cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=50;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=48;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=0;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerCharacterDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_strStr_charmul_charmul_random_1(void) {\n{\nAKA_test_case_name=\"Solution_strStr_charmul_charmul_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Implement_strStr().cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=-55;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=91;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=-68;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=-98;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_strStr_charmul_charmul_random_1\");char* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->strStr(haystack,needle);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\five(chua-run-duoc)\\\\Implement_strStr().cpp\\\\Solution\\\\strStr(char*,char*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Implement_strStr().cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=-55;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=91;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=-68;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=-98;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerCharacterDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \tchar *strStr(char *haystack, char *needle) {\r \t\tif (haystack == NULL || needle == NULL) return NULL;\r \t\tint hlen = strlen(haystack);\r \t\tint nlen = strlen(needle);\r \t\tif (nlen == 0) return haystack;\r \t\tif (hlen == 0 ) return NULL;\r \t\tint pattern[100000];\r \t\tGeneratePattern(needle, nlen, pattern);\r \t\treturn Match(haystack, needle, pattern);\r \t}\r \r \tvoid GeneratePattern(char* str, int len, int* pattern)\r \t{\r \t\tpattern[0] = -1;\r \t\tint k = -1;\r \t\tfor (int j = 1; j < len; j++)\r \t\t{\r \t\t\twhile (k > -1 && str[k + 1] != str[j])\r \t\t\t\tk = pattern[k];\r \t\t\tif (str[k + 1] == str[j])\r \t\t\t\tk++;\r \t\t\tpattern[j] = k;\r \t\t}\r \t}\r \r \tchar* Match(char* haystack, char* needle, int* pattern)\r \t{\r \t\tint hlen = strlen(haystack);\r \t\tint nlen = strlen(needle);\r \t\tint k = -1;\r \t\tfor (int j = 0; j < hlen; j++, haystack++)\r \t\t{\r \t\t\twhile (k > -1 && needle[k + 1] != *haystack)\r \t\t\t\tk = pattern[k];\r \t\t\tif (needle[k + 1] == *haystack)\r \t\t\t\tk++;\r \t\t\tif (k == nlen - 1)\r \t\t\t\treturn haystack - k;\r \t\t}\r \t\treturn NULL;\r \t}\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\five(chua-run-duoc)\\Implement_strStr().cpp\\Solution\\strStr(char*,char*)"
+    },
+    {
+        "f": [],
+        "fm": "void GeneratePattern(char* str, int len, int* pattern)\r \t{\r \t\tpattern[0] = -1;\r \t\tint k = -1;\r \t\tfor (int j = 1; j < len; j++)\r \t\t{\r \t\t\twhile (k > -1 && str[k + 1] != str[j])\r \t\t\t\tk = pattern[k];\r \t\t\tif (str[k + 1] == str[j])\r \t\t\t\tk++;\r \t\t\tpattern[j] = k;\r \t\t}\r \t}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_GeneratePattern_charmul_int_intmul_random_4(void) {\n{\nAKA_test_case_name=\"Solution_GeneratePattern_charmul_int_intmul_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Implement_strStr().cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_str[2];\n\nchar AKA_ARRAY_INIT_str_0=-82;\nAKA_ARRAY_INIT_str[0] = AKA_ARRAY_INIT_str_0;\n\nchar AKA_ARRAY_INIT_str_1=25;\nAKA_ARRAY_INIT_str[1] = AKA_ARRAY_INIT_str_1;\n\nchar* str = AKA_ARRAY_INIT_str;\n\n\nint len=9;\nint AKA_ARRAY_INIT_pattern[2];\n\n\nint AKA_ARRAY_INIT_pattern_0=1454441656;\nAKA_ARRAY_INIT_pattern[0] = AKA_ARRAY_INIT_pattern_0;\n\n\nint AKA_ARRAY_INIT_pattern_1=1508166907;\nAKA_ARRAY_INIT_pattern[1] = AKA_ARRAY_INIT_pattern_1;\n\nint* pattern = AKA_ARRAY_INIT_pattern;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode str */\n/* NormalNumberDataNode len */\n/* PointerNumberDataNode pattern */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_GeneratePattern_charmul_int_intmul_random_4\");AKA_INSTANCE___Solution->GeneratePattern(str,len,pattern);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\five(chua-run-duoc)\\\\Implement_strStr().cpp\\\\Solution\\\\GeneratePattern(char*,int,int*)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Implement_strStr().cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_str[2];\n\nchar AKA_ARRAY_INIT_str_0=-82;\nAKA_ARRAY_INIT_str[0] = AKA_ARRAY_INIT_str_0;\n\nchar AKA_ARRAY_INIT_str_1=25;\nAKA_ARRAY_INIT_str[1] = AKA_ARRAY_INIT_str_1;\n\nchar* str = AKA_ARRAY_INIT_str;\n\n\nint len=9;\nint AKA_ARRAY_INIT_pattern[2];\n\n\nint AKA_ARRAY_INIT_pattern_0=1454441656;\nAKA_ARRAY_INIT_pattern[0] = AKA_ARRAY_INIT_pattern_0;\n\n\nint AKA_ARRAY_INIT_pattern_1=1508166907;\nAKA_ARRAY_INIT_pattern[1] = AKA_ARRAY_INIT_pattern_1;\n\nint* pattern = AKA_ARRAY_INIT_pattern;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode str */\n/* NormalNumberDataNode len */\n/* PointerNumberDataNode pattern */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \tchar *strStr(char *haystack, char *needle) {\r \t\tif (haystack == NULL || needle == NULL) return NULL;\r \t\tint hlen = strlen(haystack);\r \t\tint nlen = strlen(needle);\r \t\tif (nlen == 0) return haystack;\r \t\tif (hlen == 0 ) return NULL;\r \t\tint pattern[100000];\r \t\tGeneratePattern(needle, nlen, pattern);\r \t\treturn Match(haystack, needle, pattern);\r \t}\r \r \tvoid GeneratePattern(char* str, int len, int* pattern)\r \t{\r \t\tpattern[0] = -1;\r \t\tint k = -1;\r \t\tfor (int j = 1; j < len; j++)\r \t\t{\r \t\t\twhile (k > -1 && str[k + 1] != str[j])\r \t\t\t\tk = pattern[k];\r \t\t\tif (str[k + 1] == str[j])\r \t\t\t\tk++;\r \t\t\tpattern[j] = k;\r \t\t}\r \t}\r \r \tchar* Match(char* haystack, char* needle, int* pattern)\r \t{\r \t\tint hlen = strlen(haystack);\r \t\tint nlen = strlen(needle);\r \t\tint k = -1;\r \t\tfor (int j = 0; j < hlen; j++, haystack++)\r \t\t{\r \t\t\twhile (k > -1 && needle[k + 1] != *haystack)\r \t\t\t\tk = pattern[k];\r \t\t\tif (needle[k + 1] == *haystack)\r \t\t\t\tk++;\r \t\t\tif (k == nlen - 1)\r \t\t\t\treturn haystack - k;\r \t\t}\r \t\treturn NULL;\r \t}\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\five(chua-run-duoc)\\Implement_strStr().cpp\\Solution\\GeneratePattern(char*,int,int*)"
+    },
+    {
+        "f": [],
+        "fm": "char* Match(char* haystack, char* needle, int* pattern)\r \t{\r \t\tint hlen = strlen(haystack);\r \t\tint nlen = strlen(needle);\r \t\tint k = -1;\r \t\tfor (int j = 0; j < hlen; j++, haystack++)\r \t\t{\r \t\t\twhile (k > -1 && needle[k + 1] != *haystack)\r \t\t\t\tk = pattern[k];\r \t\t\tif (needle[k + 1] == *haystack)\r \t\t\t\tk++;\r \t\t\tif (k == nlen - 1)\r \t\t\t\treturn haystack - k;\r \t\t}\r \t\treturn NULL;\r \t}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_Match_charmul_charmul_intmul_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_Match_charmul_charmul_intmul_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Implement_strStr().cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=48;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=48;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=0;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\n\nint* pattern = nullptr;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerNumberDataNode pattern */\n/* PointerCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_Match_charmul_charmul_intmul_directed_0\");char* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->Match(haystack,needle,pattern);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\five(chua-run-duoc)\\\\Implement_strStr().cpp\\\\Solution\\\\Match(char*,char*,int*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Implement_strStr().cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=48;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=48;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=0;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\n\nint* pattern = nullptr;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerNumberDataNode pattern */\n/* PointerCharacterDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_Match_charmul_charmul_intmul_random_4(void) {\n{\nAKA_test_case_name=\"Solution_Match_charmul_charmul_intmul_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Implement_strStr().cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=-65;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=82;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=4;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=-35;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\nint* pattern;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerNumberDataNode pattern */\n/* PointerCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_Match_charmul_charmul_intmul_random_4\");char* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->Match(haystack,needle,pattern);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\five(chua-run-duoc)\\\\Implement_strStr().cpp\\\\Solution\\\\Match(char*,char*,int*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Implement_strStr().cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=-65;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=82;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=4;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=-35;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\nint* pattern;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerNumberDataNode pattern */\n/* PointerCharacterDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \tchar *strStr(char *haystack, char *needle) {\r \t\tif (haystack == NULL || needle == NULL) return NULL;\r \t\tint hlen = strlen(haystack);\r \t\tint nlen = strlen(needle);\r \t\tif (nlen == 0) return haystack;\r \t\tif (hlen == 0 ) return NULL;\r \t\tint pattern[100000];\r \t\tGeneratePattern(needle, nlen, pattern);\r \t\treturn Match(haystack, needle, pattern);\r \t}\r \r \tvoid GeneratePattern(char* str, int len, int* pattern)\r \t{\r \t\tpattern[0] = -1;\r \t\tint k = -1;\r \t\tfor (int j = 1; j < len; j++)\r \t\t{\r \t\t\twhile (k > -1 && str[k + 1] != str[j])\r \t\t\t\tk = pattern[k];\r \t\t\tif (str[k + 1] == str[j])\r \t\t\t\tk++;\r \t\t\tpattern[j] = k;\r \t\t}\r \t}\r \r \tchar* Match(char* haystack, char* needle, int* pattern)\r \t{\r \t\tint hlen = strlen(haystack);\r \t\tint nlen = strlen(needle);\r \t\tint k = -1;\r \t\tfor (int j = 0; j < hlen; j++, haystack++)\r \t\t{\r \t\t\twhile (k > -1 && needle[k + 1] != *haystack)\r \t\t\t\tk = pattern[k];\r \t\t\tif (needle[k + 1] == *haystack)\r \t\t\t\tk++;\r \t\t\tif (k == nlen - 1)\r \t\t\t\treturn haystack - k;\r \t\t}\r \t\treturn NULL;\r \t}\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\five(chua-run-duoc)\\Implement_strStr().cpp\\Solution\\Match(char*,char*,int*)"
+    }
+]

@@ -1,0 +1,140 @@
+[
+    {
+        "f": [
+            "int width;",
+            "int height;"
+        ],
+        "fm": "int getWidth()\r     {\r         return width;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Polygon {\r protected:\r     int width, height;\r \r public:\r     Polygon() {}\r     int getWidth()\r     {\r         return width;\r     }\r     int getHeight()\r     {\r         return height;\r     }\r     virtual int area(){}; // abstract class\r };",
+        "c": [
+            "Polygon() {}"
+        ],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\ShapeComparison.cpp\\Polygon\\getWidth()"
+    },
+    {
+        "f": [
+            "int width;",
+            "int height;"
+        ],
+        "fm": "int getHeight()\r     {\r         return height;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Polygon {\r protected:\r     int width, height;\r \r public:\r     Polygon() {}\r     int getWidth()\r     {\r         return width;\r     }\r     int getHeight()\r     {\r         return height;\r     }\r     virtual int area(){}; // abstract class\r };",
+        "c": [
+            "Polygon() {}"
+        ],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\ShapeComparison.cpp\\Polygon\\getHeight()"
+    },
+    {
+        "f": [
+            "int width;",
+            "int height;"
+        ],
+        "fm": "virtual int area(){}",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Polygon {\r protected:\r     int width, height;\r \r public:\r     Polygon() {}\r     int getWidth()\r     {\r         return width;\r     }\r     int getHeight()\r     {\r         return height;\r     }\r     virtual int area(){}; // abstract class\r };",
+        "c": [
+            "Polygon() {}"
+        ],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\ShapeComparison.cpp\\Polygon\\area()"
+    },
+    {
+        "f": [],
+        "fm": "int area()\r     {\r         return width * height;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Rectangle : public Polygon {\r public:\r     Rectangle(){}\r     Rectangle(int a, int b)\r     {\r         width = a;\r         height = b;\r     }\r     int area()\r     {\r         return width * height;\r     }\r };",
+        "c": [
+            "Rectangle(){}",
+            "Rectangle(int a, int b)\r\n    {\r\n        width = a;\r\n        height = b;\r\n    }"
+        ],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\ShapeComparison.cpp\\Rectangle\\area()"
+    },
+    {
+        "f": [],
+        "fm": "int area()\r     {\r         return width * height / 2;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Triangle : public Polygon {\r public:\r     Triangle(){}\r     Triangle(int a, int b)\r     {\r         width = a;\r         height = b;\r     }\r     int area()\r     {\r         return width * height / 2;\r     }\r };",
+        "c": [
+            "Triangle(){}",
+            "Triangle(int a, int b)\r\n    {\r\n        width = a;\r\n        height = b;\r\n    }"
+        ],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\ShapeComparison.cpp\\Triangle\\area()"
+    },
+    {
+        "f": [],
+        "fm": "int compare(Polygon* r1, Polygon* r2, int size_r1, int size_r2)\r {\r     if (size_r1 != size_r2)\r         return 0;\r     else{\r         for (int i = 0; i < size_r1; i++)\r             if (r1[i].getWidth() != r2[i].getWidth() && r1[i].getHeight() != r2[i].getHeight())\r                     return 0;\r         return 1;\r     }\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\ShapeComparison.cpp\\compare(Polygon*,Polygon*,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int compare(Polygon r1, Polygon r2)\r {\r     if (r1.getWidth() == r2.getWidth())\r         if (r1.getHeight() == r2.getHeight())\r             return 1;\r     return 0;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\ShapeComparison.cpp\\compare(Polygon,Polygon)"
+    },
+    {
+        "f": [],
+        "fm": "int compare(Polygon r1[3], Polygon r2[3])\r {\r     for (int i = 0; i < 3; i++)\r         if (r1[i].getWidth() != r2[i].getWidth() && r1[i].getHeight() != r2[i].getHeight())\r                 return 0;\r     return 1;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\ShapeComparison.cpp\\compare(Polygon[3],Polygon[3])"
+    },
+    {
+        "f": [],
+        "fm": "int comparev2(Polygon r1[], Polygon r2[], int size_r1, int size_r2)\r {\r     if (size_r1 != size_r2)\r         return 0;\r     else{\r         for (int i = 0; i < size_r1; i++)\r             if (r1[i].getWidth() != r2[i].getWidth() && r1[i].getHeight() != r2[i].getHeight())\r                     return 0;\r         return 1;\r     }\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\ShapeComparison.cpp\\comparev2(Polygon[],Polygon[],int,int)"
+    }
+]

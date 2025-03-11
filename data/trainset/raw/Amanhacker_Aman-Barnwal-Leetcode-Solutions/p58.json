@@ -1,0 +1,144 @@
+[
+    {
+        "f": [
+            "const int mod = 1e9 + 7;"
+        ],
+        "fm": "int countPaths(int n, vector<vector<int>>& roads) {\r     \r         int count = 0;\r         \r         if(n == 0)                                       return count;\r         \r         unordered_map<int, vector<pair<long long, int>>> adj;            // 1st arg - src, 2nd arg - weight, 3rd arg - dest\r         \r         for(int i=0; i<n; i++)                           adj[i].clear();\r \r         for(auto &x : roads) {\r             adj[x[0]].push_back({x[2], x[1]});\r             adj[x[1]].push_back({x[2], x[0]});\r         }\r         \r         // Form a Min Heap\r         priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<pair<long long, int>>> pq;\r         \r         vector<long long> dist(n, LONG_MAX);\r         vector<int> path(n, 0);\r         \r         pq.push({0, 0});\r \r         dist[0] = 0;\r         path[0] = 1;\r         \r         while(pq.empty() == false) {\r             \r             pair<long long, int> cur = pq.top();\r             pq.pop();\r             \r             int curNode = cur.second;\r             long long curWeight = cur.first;\r             \r             for(int i=0; i<adj[curNode].size(); i++) {\r                 \r                 pair<long long, int> w = adj[curNode][i];\r                 \r                 int wNode = w.second;\r                 long long wWeight = w.first;\r                 \r                 if(dist[wNode] > curWeight + wWeight) {\r                     \r                     dist[wNode] = curWeight + wWeight;\r                     \r                     pq.push({dist[wNode], wNode});\r                     path[wNode] = path[curNode] % mod;\r                 }\r                 \r                 else if(dist[wNode] == curWeight + wWeight) {\r                     path[wNode] += path[curNode];\r                     path[wNode] %= mod;\r                 }\r             }\r         }\r         \r         count = path[n-1];\r         return count;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countPaths_int_vector_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_countPaths_int_vector_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1976-number-of-ways-to-arrive-at-destination.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* NormalNumberDataNode mod */\nAKA_INSTANCE___Solution->mod=25118588;\n\n\n\n\nint n=1;\nvector<vector<int>> roads;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode roads */\nvector<int> roads_element0;\nint roads_element0_element0=183701676;\nroads_element0.push_back(roads_element0_element0);\nint roads_element0_element1=1072938127;\nroads_element0.push_back(roads_element0_element1);\nint roads_element0_element2=1190287331;\nroads_element0.push_back(roads_element0_element2);\nroads.push_back(roads_element0);\nvector<int> roads_element1;\nint roads_element1_element0=440094655;\nroads_element1.push_back(roads_element1_element0);\nroads.push_back(roads_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countPaths_int_vector_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countPaths(n,roads);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p58\\\\1976-number-of-ways-to-arrive-at-destination\\\\1976-number-of-ways-to-arrive-at-destination.cpp\\\\Solution\\\\countPaths(int,vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_roads;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1952-three-divisors.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r    const int mod = 1e9 + 7;\r     \r     int countPaths(int n, vector<vector<int>>& roads) {\r     \r         int count = 0;\r         \r         if(n == 0)                                       return count;\r         \r         unordered_map<int, vector<pair<long long, int>>> adj;            // 1st arg - src, 2nd arg - weight, 3rd arg - dest\r         \r         for(int i=0; i<n; i++)                           adj[i].clear();\r \r         for(auto &x : roads) {\r             adj[x[0]].push_back({x[2], x[1]});\r             adj[x[1]].push_back({x[2], x[0]});\r         }\r         \r         // Form a Min Heap\r         priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<pair<long long, int>>> pq;\r         \r         vector<long long> dist(n, LONG_MAX);\r         vector<int> path(n, 0);\r         \r         pq.push({0, 0});\r \r         dist[0] = 0;\r         path[0] = 1;\r         \r         while(pq.empty() == false) {\r             \r             pair<long long, int> cur = pq.top();\r             pq.pop();\r             \r             int curNode = cur.second;\r             long long curWeight = cur.first;\r             \r             for(int i=0; i<adj[curNode].size(); i++) {\r                 \r                 pair<long long, int> w = adj[curNode][i];\r                 \r                 int wNode = w.second;\r                 long long wWeight = w.first;\r                 \r                 if(dist[wNode] > curWeight + wWeight) {\r                     \r                     dist[wNode] = curWeight + wWeight;\r                     \r                     pq.push({dist[wNode], wNode});\r                     path[wNode] = path[curNode] % mod;\r                 }\r                 \r                 else if(dist[wNode] == curWeight + wWeight) {\r                     path[wNode] += path[curNode];\r                     path[wNode] %= mod;\r                 }\r             }\r         }\r         \r         count = path[n-1];\r         return count;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p58\\1976-number-of-ways-to-arrive-at-destination\\1976-number-of-ways-to-arrive-at-destination.cpp\\Solution\\countPaths(int,vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "int gcd(int a, int b) {\r         \r         int rem;\r         \r         while(b > 0) {\r             \r             rem = a % b;\r             \r             a = b;\r             b = rem;\r         }\r \r         return a;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_gcd_int_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_gcd_int_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1979-find-greatest-common-divisor-of-array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint a=2;\n\n\nint b=10;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_gcd_int_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->gcd(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p58\\\\1979-find-greatest-common-divisor-of-array\\\\1979-find-greatest-common-divisor-of-array.cpp\\\\Solution\\\\gcd(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1952-three-divisors.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     // Here, we assume that a > b\r     int gcd(int a, int b) {\r         \r         int rem;\r         \r         while(b > 0) {\r             \r             rem = a % b;\r             \r             a = b;\r             b = rem;\r         }\r \r         return a;\r     }\r     \r     int findGCD(vector<int>& v) {\r     \r         int n = v.size();\r         sort(v.begin(), v.end());\r         \r         return gcd(v[0], v[n-1]);\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p58\\1979-find-greatest-common-divisor-of-array\\1979-find-greatest-common-divisor-of-array.cpp\\Solution\\gcd(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int findGCD(vector<int>& v) {\r     \r         int n = v.size();\r         sort(v.begin(), v.end());\r         \r         return gcd(v[0], v[n-1]);\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findGCD_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_findGCD_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1979-find-greatest-common-divisor-of-array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> v;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nint v_element0=-1442691032;\nv.push_back(v_element0);\nint v_element1=1401151266;\nv.push_back(v_element1);\nint v_element2=-1728472283;\nv.push_back(v_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findGCD_vector_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findGCD(v);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p58\\\\1979-find-greatest-common-divisor-of-array\\\\1979-find-greatest-common-divisor-of-array.cpp\\\\Solution\\\\findGCD(vector<int>&)\");\n\n\nvector<int> EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1952-three-divisors.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     // Here, we assume that a > b\r     int gcd(int a, int b) {\r         \r         int rem;\r         \r         while(b > 0) {\r             \r             rem = a % b;\r             \r             a = b;\r             b = rem;\r         }\r \r         return a;\r     }\r     \r     int findGCD(vector<int>& v) {\r     \r         int n = v.size();\r         sort(v.begin(), v.end());\r         \r         return gcd(v[0], v[n-1]);\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p58\\1979-find-greatest-common-divisor-of-array\\1979-find-greatest-common-divisor-of-array.cpp\\Solution\\findGCD(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int minimumDifference(vector<int>& nums, int k) {\r     \r         int res = INT_MAX;\r         int n = nums.size();\r         \r         sort(nums.begin(), nums.end());\r         \r         for(int i=0; i<=n-k; i++)                           res = min(res, nums[i + k - 1] - nums[i]);\r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minimumDifference_vector_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_minimumDifference_vector_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1984-minimum-difference-between-highest-and-lowest-of-k-scores.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint k=8;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1965148962;\nnums.push_back(nums_element0);\nint nums_element1=1784736108;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minimumDifference_vector_int_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minimumDifference(nums,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p58\\\\1984-minimum-difference-between-highest-and-lowest-of-k-scores\\\\1984-minimum-difference-between-highest-and-lowest-of-k-scores.cpp\\\\Solution\\\\minimumDifference(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1952-three-divisors.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int minimumDifference(vector<int>& nums, int k) {\r     \r         int res = INT_MAX;\r         int n = nums.size();\r         \r         sort(nums.begin(), nums.end());\r         \r         for(int i=0; i<=n-k; i++)                           res = min(res, nums[i + k - 1] - nums[i]);\r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p58\\1984-minimum-difference-between-highest-and-lowest-of-k-scores\\1984-minimum-difference-between-highest-and-lowest-of-k-scores.cpp\\Solution\\minimumDifference(vector<int>&,int)"
+    },
+    {
+        "f": [],
+        "fm": "string kthLargestNumber(vector<string>& v, int k) {\r     \r         string res = \"\";\r         \r         // Form the Max Heap\r         priority_queue<pair<int, string>> pq;                       // 1st arg - size of string, 2nd arg - string\r         \r         for(int i=0; i<v.size(); i++) {\r             \r             int len = v[i].size();\r             string str = v[i];\r             \r             pq.push({len, str});\r         }\r         \r         int i = 0;\r         \r         while(pq.empty() == false) {\r             \r             i++;\r             \r             if(i == k)                      break;\r             pq.pop();\r         }\r         \r         res = pq.top().second;\r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_kthLargestNumber_vector_string_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_kthLargestNumber_vector_string_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1985-find-the-kth-largest-integer-in-the-array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> v;\n\n\nint k=-1444781568;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nchar* akaRandomName146864 = new char[2];akaRandomName146864[0] = 80;akaRandomName146864[1] = '\\0';string v_element0=akaRandomName146864;\nv.push_back(v_element0);\nchar* akaRandomName330518 = new char[2];akaRandomName330518[0] = 15;akaRandomName330518[1] = '\\0';string v_element1=akaRandomName330518;\nv.push_back(v_element1);\nchar* akaRandomName521006 = new char[2];akaRandomName521006[0] = -123;akaRandomName521006[1] = '\\0';string v_element2=akaRandomName521006;\nv.push_back(v_element2);\n/* NormalNumberDataNode k */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_kthLargestNumber_vector_string_int_random_0\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->kthLargestNumber(v,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p58\\\\1985-find-the-kth-largest-integer-in-the-array\\\\1985-find-the-kth-largest-integer-in-the-array.cpp\\\\Solution\\\\kthLargestNumber(vector<string>&,int)\");\n\n\n\nvector<string> EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1952-three-divisors.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     string kthLargestNumber(vector<string>& v, int k) {\r     \r         string res = \"\";\r         \r         // Form the Max Heap\r         priority_queue<pair<int, string>> pq;                       // 1st arg - size of string, 2nd arg - string\r         \r         for(int i=0; i<v.size(); i++) {\r             \r             int len = v[i].size();\r             string str = v[i];\r             \r             pq.push({len, str});\r         }\r         \r         int i = 0;\r         \r         while(pq.empty() == false) {\r             \r             i++;\r             \r             if(i == k)                      break;\r             pq.pop();\r         }\r         \r         res = pq.top().second;\r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p58\\1985-find-the-kth-largest-integer-in-the-array\\1985-find-the-kth-largest-integer-in-the-array.cpp\\Solution\\kthLargestNumber(vector<string>&,int)"
+    }
+]

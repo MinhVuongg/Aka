@@ -1,0 +1,384 @@
+[
+    {
+        "f": [],
+        "fm": "int main() {\r   int N = 0;\r   cin >> N;\r   for (int i = 0; i < N; ++i) {\r     string x;\r     cin >> x;\r     cout << shortestReduction(x) << endl;\r   }\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_main_random_1(void) {\n{\nAKA_test_case_name=\"main_random_1\";\n\n// set up\n;\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test main_random_1\");int AKA_ACTUAL_OUTPUT=AKA_MAIN();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\two\\\\String_Reduction.cpp\\\\main()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\two\\String_Reduction.cpp\\main()"
+    },
+    {
+        "f": [],
+        "fm": "int shortestReduction(const string& x) {\r   int L = x.size();\r   vector<vector<pair<int, char> > > N(L, vector<pair<int, char> >(L, make_pair(INT_MAX, 'd')));\r   for (int i = 0; i < L; ++i) {\r     N[i][i] = make_pair(1, x[i]);\r   }\r   for (int diff = 1; diff < L; ++diff) {\r     for (int i = 0; i < L - diff; ++i) {\r       int j = i + diff;\r       for (int k = i; k < j; ++k) {\r \t// Merge [i, k] and [k + 1, j]\r \tpair<int, char> res = merge(N[i][k].second, N[i][k].first, N[k + 1][j].second, N[k + 1][j].first);\r \tif (res.first < N[i][j].first) N[i][j] = res;\r       }\r     }\r   }\r   return N[0][L - 1].first;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_shortestReduction_string_const_random_0(void) {\n{\nAKA_test_case_name=\"shortestReduction_string_const_random_0\";\n\n// set up\n;\n\nchar* akaRandomName836230 = new char[2];akaRandomName836230[0] = 2;akaRandomName836230[1] = '\\0';string x=akaRandomName836230;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode x */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test shortestReduction_string_const_random_0\");int AKA_ACTUAL_OUTPUT=shortestReduction(x);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\two\\\\String_Reduction.cpp\\\\shortestReduction(string const&)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar* akaRandomName687690 = new char[2];akaRandomName687690[0] = 2;akaRandomName687690[1] = '\\0';string x=akaRandomName687690;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode x */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\two\\String_Reduction.cpp\\shortestReduction(string const&)"
+    },
+    {
+        "f": [],
+        "fm": "pair<int, char> merge(char a, int na, char b, int nb) {\r   if (a == b) return make_pair(na + nb, a);\r   if (na % 2 == 1 && nb % 2 == 1) return make_pair(1, 'a' + 'b' + 'c' - a - b);\r   if (na % 2 == 1) return make_pair(1, a);\r   if (nb % 2 == 1) return make_pair(1, b);\r   if (na < nb) return make_pair(na, a);\r   return make_pair(nb, b);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_merge_char_int_char_int_random_8(void) {\n{\nAKA_test_case_name=\"merge_char_int_char_int_random_8\";\n\n// set up\n;\n\n\nchar a=-18;\n\n\nint na=1063148665;\n\nchar b=8;\n\n\nint nb=1306425813;\npair<int, char> AKA_EXPECTED_OUTPUT;\n\n/* NormalNumberDataNode first */\n/* first : null value -> no code */\n/* NormalCharacterDataNode second */\n\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode a */\n/* NormalNumberDataNode na */\n/* NormalCharacterDataNode b */\n/* NormalNumberDataNode nb */\n/* PairDataNode RETURN */\n/* NormalNumberDataNode first */\n/* first : null value -> no code */\n/* NormalCharacterDataNode second */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test merge_char_int_char_int_random_8\");pair<int,char> AKA_ACTUAL_OUTPUT=merge(a,na,b,nb);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\two\\\\String_Reduction.cpp\\\\merge(char,int,char,int)\");\n\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\nchar a=-18;\n\n\nint na=1063148665;\n\nchar b=8;\n\n\nint nb=1306425813;\npair<int, char> AKA_EXPECTED_OUTPUT;\n\n/* NormalNumberDataNode first */\n/* first : null value -> no code */\n/* NormalCharacterDataNode second */\n\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode a */\n/* NormalNumberDataNode na */\n/* NormalCharacterDataNode b */\n/* NormalNumberDataNode nb */\n/* PairDataNode RETURN */\n/* NormalNumberDataNode first */\n/* first : null value -> no code */\n/* NormalCharacterDataNode second */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_merge_char_int_char_int_random_7(void) {\n{\nAKA_test_case_name=\"merge_char_int_char_int_random_7\";\n\n// set up\n;\n\n\nchar a=-106;\n\n\nint na=1447638666;\n\nchar b=72;\n\n\nint nb=268713957;\npair<int, char> AKA_EXPECTED_OUTPUT;\n\n/* NormalNumberDataNode first */\n/* first : null value -> no code */\n/* NormalCharacterDataNode second */\n\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode a */\n/* NormalNumberDataNode na */\n/* NormalCharacterDataNode b */\n/* NormalNumberDataNode nb */\n/* PairDataNode RETURN */\n/* NormalNumberDataNode first */\n/* first : null value -> no code */\n/* NormalCharacterDataNode second */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test merge_char_int_char_int_random_7\");pair<int,char> AKA_ACTUAL_OUTPUT=merge(a,na,b,nb);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\two\\\\String_Reduction.cpp\\\\merge(char,int,char,int)\");\n\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\nchar a=-106;\n\n\nint na=1447638666;\n\nchar b=72;\n\n\nint nb=268713957;\npair<int, char> AKA_EXPECTED_OUTPUT;\n\n/* NormalNumberDataNode first */\n/* first : null value -> no code */\n/* NormalCharacterDataNode second */\n\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode a */\n/* NormalNumberDataNode na */\n/* NormalCharacterDataNode b */\n/* NormalNumberDataNode nb */\n/* PairDataNode RETURN */\n/* NormalNumberDataNode first */\n/* first : null value -> no code */\n/* NormalCharacterDataNode second */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_merge_char_int_char_int_random_6(void) {\n{\nAKA_test_case_name=\"merge_char_int_char_int_random_6\";\n\n// set up\n;\n\n\nchar a=126;\n\n\nint na=861562380;\n\nchar b=-8;\n\n\nint nb=160261798;\npair<int, char> AKA_EXPECTED_OUTPUT;\n\n/* NormalNumberDataNode first */\n/* first : null value -> no code */\n/* NormalCharacterDataNode second */\n\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode a */\n/* NormalNumberDataNode na */\n/* NormalCharacterDataNode b */\n/* NormalNumberDataNode nb */\n/* PairDataNode RETURN */\n/* NormalNumberDataNode first */\n/* first : null value -> no code */\n/* NormalCharacterDataNode second */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test merge_char_int_char_int_random_6\");pair<int,char> AKA_ACTUAL_OUTPUT=merge(a,na,b,nb);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\two\\\\String_Reduction.cpp\\\\merge(char,int,char,int)\");\n\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\nchar a=126;\n\n\nint na=861562380;\n\nchar b=-8;\n\n\nint nb=160261798;\npair<int, char> AKA_EXPECTED_OUTPUT;\n\n/* NormalNumberDataNode first */\n/* first : null value -> no code */\n/* NormalCharacterDataNode second */\n\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode a */\n/* NormalNumberDataNode na */\n/* NormalCharacterDataNode b */\n/* NormalNumberDataNode nb */\n/* PairDataNode RETURN */\n/* NormalNumberDataNode first */\n/* first : null value -> no code */\n/* NormalCharacterDataNode second */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_merge_char_int_char_int_random_4(void) {\n{\nAKA_test_case_name=\"merge_char_int_char_int_random_4\";\n\n// set up\n;\n\n\nchar a=93;\n\n\nint na=-1335491309;\n\nchar b=-80;\n\n\nint nb=-920265787;\npair<int, char> AKA_EXPECTED_OUTPUT;\n\n/* NormalNumberDataNode first */\n/* first : null value -> no code */\n/* NormalCharacterDataNode second */\n\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode a */\n/* NormalNumberDataNode na */\n/* NormalCharacterDataNode b */\n/* NormalNumberDataNode nb */\n/* PairDataNode RETURN */\n/* NormalNumberDataNode first */\n/* first : null value -> no code */\n/* NormalCharacterDataNode second */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test merge_char_int_char_int_random_4\");pair<int,char> AKA_ACTUAL_OUTPUT=merge(a,na,b,nb);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\two\\\\String_Reduction.cpp\\\\merge(char,int,char,int)\");\n\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\nchar a=93;\n\n\nint na=-1335491309;\n\nchar b=-80;\n\n\nint nb=-920265787;\npair<int, char> AKA_EXPECTED_OUTPUT;\n\n/* NormalNumberDataNode first */\n/* first : null value -> no code */\n/* NormalCharacterDataNode second */\n\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode a */\n/* NormalNumberDataNode na */\n/* NormalCharacterDataNode b */\n/* NormalNumberDataNode nb */\n/* PairDataNode RETURN */\n/* NormalNumberDataNode first */\n/* first : null value -> no code */\n/* NormalCharacterDataNode second */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\two\\String_Reduction.cpp\\merge(char,int,char,int)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> findSubstring(string S, vector<string> &L) {\r     vector<int> result;\r     int N = L[0].size();\r     if (N * L.size() > S.size()) return result;\r     map<string, int> need;\r     for (int i = 0; i < L.size(); ++i) need[L[i]] ++;\r     for (int i = 0; i <= S.size() - N * L.size(); ++i) {\r       map<string, int> found;\r       int j = 0;\r       for (; j < L.size(); ++j) {\r \tstring s = S.substr(i + j * N, N);\r \tif (need.count(s) == 0 || ++found[s] > need[s]) break;\r       }\r       if (j == L.size()) result.push_back(i);\r     }\r     return result;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionBruteForce_findSubstring_string_vector_string_random_1(void) {\n{\nAKA_test_case_name=\"SolutionBruteForce_findSubstring_string_vector_string_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionBruteForce */\n/* ConstructorDataNode SolutionBruteForce() */\nAKA_mark(\"Calling: \\\\SolutionBruteForce()|ROOT\\\\Substring_with_Concatenation_of_All_Words.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionBruteForce\\\\AKA_INSTANCE___SolutionBruteForce\\\\SolutionBruteForce()\");AKA_fCall++;AKA_INSTANCE___SolutionBruteForce = new ::SolutionBruteForce();\n\n\nchar* akaRandomName165291 = new char[2];akaRandomName165291[0] = -58;akaRandomName165291[1] = '\\0';string S=akaRandomName165291;\nvector<string> L;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* VectorDataNode L */\nchar* akaRandomName268526 = new char[2];akaRandomName268526[0] = -6;akaRandomName268526[1] = '\\0';string L_element0=akaRandomName268526;\nL.push_back(L_element0);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionBruteForce_findSubstring_string_vector_string_random_1\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionBruteForce->findSubstring(S,L);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\two\\\\Substring_with_Concatenation_of_All_Words.cpp\\\\SolutionBruteForce\\\\findSubstring(string,vector<string>&)\");\n\n\nvector<string> EXPECTED_L;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionBruteForce */\n/* ConstructorDataNode SolutionBruteForce() */\nAKA_mark(\"Calling: \\\\SolutionBruteForce()|ROOT\\\\Substring_with_Concatenation_of_All_Words.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionBruteForce\\\\AKA_INSTANCE___SolutionBruteForce\\\\SolutionBruteForce()\");AKA_fCall++;AKA_INSTANCE___SolutionBruteForce = new ::SolutionBruteForce();\n\n\nchar* akaRandomName499591 = new char[2];akaRandomName499591[0] = -58;akaRandomName499591[1] = '\\0';string S=akaRandomName499591;\nvector<string> L;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* VectorDataNode L */\nchar* akaRandomName175408 = new char[2];akaRandomName175408[0] = -6;akaRandomName175408[1] = '\\0';string L_element0=akaRandomName175408;\nL.push_back(L_element0);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionBruteForce_findSubstring_string_vector_string_random_5(void) {\n{\nAKA_test_case_name=\"SolutionBruteForce_findSubstring_string_vector_string_random_5\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionBruteForce */\n/* ConstructorDataNode SolutionBruteForce() */\nAKA_mark(\"Calling: \\\\SolutionBruteForce()|ROOT\\\\Substring_with_Concatenation_of_All_Words.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionBruteForce\\\\AKA_INSTANCE___SolutionBruteForce\\\\SolutionBruteForce()\");AKA_fCall++;AKA_INSTANCE___SolutionBruteForce = new ::SolutionBruteForce();\n\n\nchar* akaRandomName489493 = new char[2];akaRandomName489493[0] = 0;akaRandomName489493[1] = '\\0';string S=akaRandomName489493;\nvector<string> L;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* VectorDataNode L */\nchar* akaRandomName494412 = new char[2];akaRandomName494412[0] = -74;akaRandomName494412[1] = '\\0';string L_element0=akaRandomName494412;\nL.push_back(L_element0);\nchar* akaRandomName558200 = new char[2];akaRandomName558200[0] = 35;akaRandomName558200[1] = '\\0';string L_element1=akaRandomName558200;\nL.push_back(L_element1);\nchar* akaRandomName493065 = new char[2];akaRandomName493065[0] = -14;akaRandomName493065[1] = '\\0';string L_element2=akaRandomName493065;\nL.push_back(L_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionBruteForce_findSubstring_string_vector_string_random_5\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionBruteForce->findSubstring(S,L);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\two\\\\Substring_with_Concatenation_of_All_Words.cpp\\\\SolutionBruteForce\\\\findSubstring(string,vector<string>&)\");\n\n\nvector<string> EXPECTED_L;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionBruteForce */\n/* ConstructorDataNode SolutionBruteForce() */\nAKA_mark(\"Calling: \\\\SolutionBruteForce()|ROOT\\\\Substring_with_Concatenation_of_All_Words.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionBruteForce\\\\AKA_INSTANCE___SolutionBruteForce\\\\SolutionBruteForce()\");AKA_fCall++;AKA_INSTANCE___SolutionBruteForce = new ::SolutionBruteForce();\n\n\nchar* akaRandomName471148 = new char[2];akaRandomName471148[0] = 0;akaRandomName471148[1] = '\\0';string S=akaRandomName471148;\nvector<string> L;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* VectorDataNode L */\nchar* akaRandomName512844 = new char[2];akaRandomName512844[0] = -74;akaRandomName512844[1] = '\\0';string L_element0=akaRandomName512844;\nL.push_back(L_element0);\nchar* akaRandomName921832 = new char[2];akaRandomName921832[0] = 35;akaRandomName921832[1] = '\\0';string L_element1=akaRandomName921832;\nL.push_back(L_element1);\nchar* akaRandomName357997 = new char[2];akaRandomName357997[0] = -14;akaRandomName357997[1] = '\\0';string L_element2=akaRandomName357997;\nL.push_back(L_element2);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class SolutionBruteForce {\r public:\r   vector<int> findSubstring(string S, vector<string> &L) {\r     vector<int> result;\r     int N = L[0].size();\r     if (N * L.size() > S.size()) return result;\r     map<string, int> need;\r     for (int i = 0; i < L.size(); ++i) need[L[i]] ++;\r     for (int i = 0; i <= S.size() - N * L.size(); ++i) {\r       map<string, int> found;\r       int j = 0;\r       for (; j < L.size(); ++j) {\r \tstring s = S.substr(i + j * N, N);\r \tif (need.count(s) == 0 || ++found[s] > need[s]) break;\r       }\r       if (j == L.size()) result.push_back(i);\r     }\r     return result;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\two\\Substring_with_Concatenation_of_All_Words.cpp\\SolutionBruteForce\\findSubstring(string,vector<string>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> findSubstring(string S, vector<string> &L) {\r     vector<int> result;\r     int N = L[0].size();\r     if (N * L.size() > S.size()) return result;        \r     map<string, int> need;\r     for (int i = 0; i < L.size(); ++i) need[L[i]] ++;\r         \r     for (int i = 0; i < N; ++i) {\r       map<string, int> found;\r       // Try to find a valid region\r       int begin = i, pos = i, valid_elements = 0;\r       while (pos < S.size()) {\r \tstring s = S.substr(pos, N);\r \tif (need.count(s) == 0) {\r \t  pos += N;\r \t  begin = pos;\r \t  valid_elements = 0;\r \t  found.clear();\r \t} else {\r \t  found[s] ++;\r \t  if (found[s] <= need[s]) valid_elements ++;\r \t  if (valid_elements == L.size()) break;\r \t  pos += N;\r \t}\r       }\r       if (valid_elements < L.size()) continue;\r       while (pos < S.size()) {\r \t// Try move begin to the right as much as possible\r \tstring s = S.substr(begin, N);\r \twhile (need[s] < found[s]) {\r \t  found[s] --;\r \t  begin += N;\r \t  s = S.substr(begin, N);\r \t}\r \tif (pos - begin == N * (L.size() - 1)) result.push_back(begin);\r \t// Next valid\t\r \tstring t = \"\";\r \tdo {\r \t  pos += N;\r \t  if (pos < S.size()) t = S.substr(pos, N);\r \t  found[t] ++;\r \t} while (t != s && pos < S.size());\r       }\r     }\r     return result;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findSubstring_string_vector_string_random_4(void) {\n{\nAKA_test_case_name=\"Solution_findSubstring_string_vector_string_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Substring_with_Concatenation_of_All_Words.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName330053 = new char[2];akaRandomName330053[0] = 33;akaRandomName330053[1] = '\\0';string S=akaRandomName330053;\nvector<string> L;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* VectorDataNode L */\nchar* akaRandomName388127 = new char[2];akaRandomName388127[0] = 124;akaRandomName388127[1] = '\\0';string L_element0=akaRandomName388127;\nL.push_back(L_element0);\nchar* akaRandomName589264 = new char[2];akaRandomName589264[0] = -80;akaRandomName589264[1] = '\\0';string L_element1=akaRandomName589264;\nL.push_back(L_element1);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findSubstring_string_vector_string_random_4\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findSubstring(S,L);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\two\\\\Substring_with_Concatenation_of_All_Words.cpp\\\\Solution\\\\findSubstring(string,vector<string>&)\");\n\n\nvector<string> EXPECTED_L;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Substring_with_Concatenation_of_All_Words.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName79060 = new char[2];akaRandomName79060[0] = 33;akaRandomName79060[1] = '\\0';string S=akaRandomName79060;\nvector<string> L;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* VectorDataNode L */\nchar* akaRandomName198908 = new char[2];akaRandomName198908[0] = 124;akaRandomName198908[1] = '\\0';string L_element0=akaRandomName198908;\nL.push_back(L_element0);\nchar* akaRandomName603781 = new char[2];akaRandomName603781[0] = -80;akaRandomName603781[1] = '\\0';string L_element1=akaRandomName603781;\nL.push_back(L_element1);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   vector<int> findSubstring(string S, vector<string> &L) {\r     vector<int> result;\r     int N = L[0].size();\r     if (N * L.size() > S.size()) return result;        \r     map<string, int> need;\r     for (int i = 0; i < L.size(); ++i) need[L[i]] ++;\r         \r     for (int i = 0; i < N; ++i) {\r       map<string, int> found;\r       // Try to find a valid region\r       int begin = i, pos = i, valid_elements = 0;\r       while (pos < S.size()) {\r \tstring s = S.substr(pos, N);\r \tif (need.count(s) == 0) {\r \t  pos += N;\r \t  begin = pos;\r \t  valid_elements = 0;\r \t  found.clear();\r \t} else {\r \t  found[s] ++;\r \t  if (found[s] <= need[s]) valid_elements ++;\r \t  if (valid_elements == L.size()) break;\r \t  pos += N;\r \t}\r       }\r       if (valid_elements < L.size()) continue;\r       while (pos < S.size()) {\r \t// Try move begin to the right as much as possible\r \tstring s = S.substr(begin, N);\r \twhile (need[s] < found[s]) {\r \t  found[s] --;\r \t  begin += N;\r \t  s = S.substr(begin, N);\r \t}\r \tif (pos - begin == N * (L.size() - 1)) result.push_back(begin);\r \t// Next valid\t\r \tstring t = \"\";\r \tdo {\r \t  pos += N;\r \t  if (pos < S.size()) t = S.substr(pos, N);\r \t  found[t] ++;\r \t} while (t != s && pos < S.size());\r       }\r     }\r     return result;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\two\\Substring_with_Concatenation_of_All_Words.cpp\\Solution\\findSubstring(string,vector<string>&)"
+    },
+    {
+        "f": [],
+        "fm": "bool isNumber(const char *cs) {\r     string s(cs);\r     if (s.length() == 0) return false;\r \r     // Strip leading and trailing spaces\r     int from = 0, to = s.length() - 1;\r     while (from < s.length() && s[from] == ' ') from ++;\r     while (to >= 0 && s[to] == ' ') to --;\r     s = s.substr(from, max(0, to - from + 1));\r \r     int p = s.find('e');\r     string e = \"\";\r     if (p != string::npos) {\r       e = s.substr(p + 1, s.length());\r       s = s.substr(0, p);\r       if (e == \"\") return false;\r     }\r \r     bool res = true;\r     if (e.length()) res &= isInt(e);\r     res &= isNumberNoE(s);\r     return res;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isNumber_char_constmul_random_3(void) {\n{\nAKA_test_case_name=\"Solution_isNumber_char_constmul_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_cs[2];\n\nchar AKA_ARRAY_INIT_cs_constantPointer_0=-95;\nAKA_ARRAY_INIT_cs[0] = AKA_ARRAY_INIT_cs_constantPointer_0;\n\nchar AKA_ARRAY_INIT_cs_constantPointer_1=46;\nAKA_ARRAY_INIT_cs[1] = AKA_ARRAY_INIT_cs_constantPointer_1;\n\nchar const* cs = AKA_ARRAY_INIT_cs;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode cs */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isNumber_char_constmul_random_3\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isNumber(cs);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\two\\\\Valid_Number.cpp\\\\Solution\\\\isNumber(char const*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_cs[2];\n\nchar AKA_ARRAY_INIT_cs_constantPointer_0=-95;\nAKA_ARRAY_INIT_cs[0] = AKA_ARRAY_INIT_cs_constantPointer_0;\n\nchar AKA_ARRAY_INIT_cs_constantPointer_1=46;\nAKA_ARRAY_INIT_cs[1] = AKA_ARRAY_INIT_cs_constantPointer_1;\n\nchar const* cs = AKA_ARRAY_INIT_cs;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode cs */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isNumber_char_constmul_random_4(void) {\n{\nAKA_test_case_name=\"Solution_isNumber_char_constmul_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_cs[2];\n\nchar AKA_ARRAY_INIT_cs_constantPointer_0=93;\nAKA_ARRAY_INIT_cs[0] = AKA_ARRAY_INIT_cs_constantPointer_0;\n\nchar AKA_ARRAY_INIT_cs_constantPointer_1=105;\nAKA_ARRAY_INIT_cs[1] = AKA_ARRAY_INIT_cs_constantPointer_1;\n\nchar const* cs = AKA_ARRAY_INIT_cs;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode cs */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isNumber_char_constmul_random_4\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isNumber(cs);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\two\\\\Valid_Number.cpp\\\\Solution\\\\isNumber(char const*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_cs[2];\n\nchar AKA_ARRAY_INIT_cs_constantPointer_0=93;\nAKA_ARRAY_INIT_cs[0] = AKA_ARRAY_INIT_cs_constantPointer_0;\n\nchar AKA_ARRAY_INIT_cs_constantPointer_1=105;\nAKA_ARRAY_INIT_cs[1] = AKA_ARRAY_INIT_cs_constantPointer_1;\n\nchar const* cs = AKA_ARRAY_INIT_cs;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode cs */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isNumber_char_constmul_random_5(void) {\n{\nAKA_test_case_name=\"Solution_isNumber_char_constmul_random_5\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_cs[2];\n\nchar AKA_ARRAY_INIT_cs_constantPointer_0=50;\nAKA_ARRAY_INIT_cs[0] = AKA_ARRAY_INIT_cs_constantPointer_0;\n\nchar AKA_ARRAY_INIT_cs_constantPointer_1=0;\nAKA_ARRAY_INIT_cs[1] = AKA_ARRAY_INIT_cs_constantPointer_1;\n\nchar const* cs = AKA_ARRAY_INIT_cs;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode cs */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isNumber_char_constmul_random_5\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isNumber(cs);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\two\\\\Valid_Number.cpp\\\\Solution\\\\isNumber(char const*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_cs[2];\n\nchar AKA_ARRAY_INIT_cs_constantPointer_0=50;\nAKA_ARRAY_INIT_cs[0] = AKA_ARRAY_INIT_cs_constantPointer_0;\n\nchar AKA_ARRAY_INIT_cs_constantPointer_1=0;\nAKA_ARRAY_INIT_cs[1] = AKA_ARRAY_INIT_cs_constantPointer_1;\n\nchar const* cs = AKA_ARRAY_INIT_cs;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode cs */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool isNumber(const char *cs) {\r     string s(cs);\r     if (s.length() == 0) return false;\r \r     // Strip leading and trailing spaces\r     int from = 0, to = s.length() - 1;\r     while (from < s.length() && s[from] == ' ') from ++;\r     while (to >= 0 && s[to] == ' ') to --;\r     s = s.substr(from, max(0, to - from + 1));\r \r     int p = s.find('e');\r     string e = \"\";\r     if (p != string::npos) {\r       e = s.substr(p + 1, s.length());\r       s = s.substr(0, p);\r       if (e == \"\") return false;\r     }\r \r     bool res = true;\r     if (e.length()) res &= isInt(e);\r     res &= isNumberNoE(s);\r     return res;\r   }\r   bool isNumberNoE(string s) {\r     if (s == \"\") return false;\r     if (s[0] == '+' || s[0] == '-') s.erase(0, 1);\r     int p = s.find('.');\r     string dec = \"\";\r     if (p != string::npos) {\r       dec = s.substr(p + 1, s.length());\r       s = s.substr(0, p);\r     }\r     bool res = s.length() || dec.length();\r     if (s.length()) res &= isIntNoSign(s);\r     if (dec.length()) res &= isIntNoSign(dec);\r     return res;\r   }\r   bool isIntNoSign(string s) {\r     if (s.length() == 0) return false;\r     for (int i = 0; i < s.length(); ++i) {\r       if (s[i] > '9' || s[i] < '0') return false;\r     }\r     return true;\r   }\r   bool isInt(string s) {\r     if (s == \"\") return false;\r     if (s[0] == '+' || s[0] == '-') s.erase(0, 1);\r     return isIntNoSign(s);\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\two\\Valid_Number.cpp\\Solution\\isNumber(char const*)"
+    },
+    {
+        "f": [],
+        "fm": "bool isNumberNoE(string s) {\r     if (s == \"\") return false;\r     if (s[0] == '+' || s[0] == '-') s.erase(0, 1);\r     int p = s.find('.');\r     string dec = \"\";\r     if (p != string::npos) {\r       dec = s.substr(p + 1, s.length());\r       s = s.substr(0, p);\r     }\r     bool res = s.length() || dec.length();\r     if (s.length()) res &= isIntNoSign(s);\r     if (dec.length()) res &= isIntNoSign(dec);\r     return res;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isNumberNoE_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_isNumberNoE_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName792961 = new char[2];akaRandomName792961[0] = -118;akaRandomName792961[1] = '\\0';string s=akaRandomName792961;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isNumberNoE_string_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isNumberNoE(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\two\\\\Valid_Number.cpp\\\\Solution\\\\isNumberNoE(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName328622 = new char[2];akaRandomName328622[0] = -118;akaRandomName328622[1] = '\\0';string s=akaRandomName328622;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isNumberNoE_string_random_8(void) {\n{\nAKA_test_case_name=\"Solution_isNumberNoE_string_random_8\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName723178 = new char[2];akaRandomName723178[0] = 126;akaRandomName723178[1] = '\\0';string s=akaRandomName723178;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isNumberNoE_string_random_8\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isNumberNoE(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\two\\\\Valid_Number.cpp\\\\Solution\\\\isNumberNoE(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName397684 = new char[2];akaRandomName397684[0] = 126;akaRandomName397684[1] = '\\0';string s=akaRandomName397684;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool isNumber(const char *cs) {\r     string s(cs);\r     if (s.length() == 0) return false;\r \r     // Strip leading and trailing spaces\r     int from = 0, to = s.length() - 1;\r     while (from < s.length() && s[from] == ' ') from ++;\r     while (to >= 0 && s[to] == ' ') to --;\r     s = s.substr(from, max(0, to - from + 1));\r \r     int p = s.find('e');\r     string e = \"\";\r     if (p != string::npos) {\r       e = s.substr(p + 1, s.length());\r       s = s.substr(0, p);\r       if (e == \"\") return false;\r     }\r \r     bool res = true;\r     if (e.length()) res &= isInt(e);\r     res &= isNumberNoE(s);\r     return res;\r   }\r   bool isNumberNoE(string s) {\r     if (s == \"\") return false;\r     if (s[0] == '+' || s[0] == '-') s.erase(0, 1);\r     int p = s.find('.');\r     string dec = \"\";\r     if (p != string::npos) {\r       dec = s.substr(p + 1, s.length());\r       s = s.substr(0, p);\r     }\r     bool res = s.length() || dec.length();\r     if (s.length()) res &= isIntNoSign(s);\r     if (dec.length()) res &= isIntNoSign(dec);\r     return res;\r   }\r   bool isIntNoSign(string s) {\r     if (s.length() == 0) return false;\r     for (int i = 0; i < s.length(); ++i) {\r       if (s[i] > '9' || s[i] < '0') return false;\r     }\r     return true;\r   }\r   bool isInt(string s) {\r     if (s == \"\") return false;\r     if (s[0] == '+' || s[0] == '-') s.erase(0, 1);\r     return isIntNoSign(s);\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\two\\Valid_Number.cpp\\Solution\\isNumberNoE(string)"
+    },
+    {
+        "f": [],
+        "fm": "bool isIntNoSign(string s) {\r     if (s.length() == 0) return false;\r     for (int i = 0; i < s.length(); ++i) {\r       if (s[i] > '9' || s[i] < '0') return false;\r     }\r     return true;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isIntNoSign_string_random_7(void) {\n{\nAKA_test_case_name=\"Solution_isIntNoSign_string_random_7\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName474833 = new char[2];akaRandomName474833[0] = 63;akaRandomName474833[1] = '\\0';string s=akaRandomName474833;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isIntNoSign_string_random_7\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isIntNoSign(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\two\\\\Valid_Number.cpp\\\\Solution\\\\isIntNoSign(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName299101 = new char[2];akaRandomName299101[0] = 63;akaRandomName299101[1] = '\\0';string s=akaRandomName299101;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isIntNoSign_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_isIntNoSign_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName526813 = new char[2];akaRandomName526813[0] = -36;akaRandomName526813[1] = '\\0';string s=akaRandomName526813;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isIntNoSign_string_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isIntNoSign(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\two\\\\Valid_Number.cpp\\\\Solution\\\\isIntNoSign(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName386387 = new char[2];akaRandomName386387[0] = -36;akaRandomName386387[1] = '\\0';string s=akaRandomName386387;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool isNumber(const char *cs) {\r     string s(cs);\r     if (s.length() == 0) return false;\r \r     // Strip leading and trailing spaces\r     int from = 0, to = s.length() - 1;\r     while (from < s.length() && s[from] == ' ') from ++;\r     while (to >= 0 && s[to] == ' ') to --;\r     s = s.substr(from, max(0, to - from + 1));\r \r     int p = s.find('e');\r     string e = \"\";\r     if (p != string::npos) {\r       e = s.substr(p + 1, s.length());\r       s = s.substr(0, p);\r       if (e == \"\") return false;\r     }\r \r     bool res = true;\r     if (e.length()) res &= isInt(e);\r     res &= isNumberNoE(s);\r     return res;\r   }\r   bool isNumberNoE(string s) {\r     if (s == \"\") return false;\r     if (s[0] == '+' || s[0] == '-') s.erase(0, 1);\r     int p = s.find('.');\r     string dec = \"\";\r     if (p != string::npos) {\r       dec = s.substr(p + 1, s.length());\r       s = s.substr(0, p);\r     }\r     bool res = s.length() || dec.length();\r     if (s.length()) res &= isIntNoSign(s);\r     if (dec.length()) res &= isIntNoSign(dec);\r     return res;\r   }\r   bool isIntNoSign(string s) {\r     if (s.length() == 0) return false;\r     for (int i = 0; i < s.length(); ++i) {\r       if (s[i] > '9' || s[i] < '0') return false;\r     }\r     return true;\r   }\r   bool isInt(string s) {\r     if (s == \"\") return false;\r     if (s[0] == '+' || s[0] == '-') s.erase(0, 1);\r     return isIntNoSign(s);\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\two\\Valid_Number.cpp\\Solution\\isIntNoSign(string)"
+    },
+    {
+        "f": [],
+        "fm": "bool isInt(string s) {\r     if (s == \"\") return false;\r     if (s[0] == '+' || s[0] == '-') s.erase(0, 1);\r     return isIntNoSign(s);\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isInt_string_random_8(void) {\n{\nAKA_test_case_name=\"Solution_isInt_string_random_8\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName479461 = new char[2];akaRandomName479461[0] = -69;akaRandomName479461[1] = '\\0';string s=akaRandomName479461;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isInt_string_random_8\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isInt(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\two\\\\Valid_Number.cpp\\\\Solution\\\\isInt(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName722514 = new char[2];akaRandomName722514[0] = -69;akaRandomName722514[1] = '\\0';string s=akaRandomName722514;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isInt_string_random_5(void) {\n{\nAKA_test_case_name=\"Solution_isInt_string_random_5\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName441005 = new char[2];akaRandomName441005[0] = 72;akaRandomName441005[1] = '\\0';string s=akaRandomName441005;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isInt_string_random_5\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isInt(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\two\\\\Valid_Number.cpp\\\\Solution\\\\isInt(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName779961 = new char[2];akaRandomName779961[0] = 72;akaRandomName779961[1] = '\\0';string s=akaRandomName779961;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool isNumber(const char *cs) {\r     string s(cs);\r     if (s.length() == 0) return false;\r \r     // Strip leading and trailing spaces\r     int from = 0, to = s.length() - 1;\r     while (from < s.length() && s[from] == ' ') from ++;\r     while (to >= 0 && s[to] == ' ') to --;\r     s = s.substr(from, max(0, to - from + 1));\r \r     int p = s.find('e');\r     string e = \"\";\r     if (p != string::npos) {\r       e = s.substr(p + 1, s.length());\r       s = s.substr(0, p);\r       if (e == \"\") return false;\r     }\r \r     bool res = true;\r     if (e.length()) res &= isInt(e);\r     res &= isNumberNoE(s);\r     return res;\r   }\r   bool isNumberNoE(string s) {\r     if (s == \"\") return false;\r     if (s[0] == '+' || s[0] == '-') s.erase(0, 1);\r     int p = s.find('.');\r     string dec = \"\";\r     if (p != string::npos) {\r       dec = s.substr(p + 1, s.length());\r       s = s.substr(0, p);\r     }\r     bool res = s.length() || dec.length();\r     if (s.length()) res &= isIntNoSign(s);\r     if (dec.length()) res &= isIntNoSign(dec);\r     return res;\r   }\r   bool isIntNoSign(string s) {\r     if (s.length() == 0) return false;\r     for (int i = 0; i < s.length(); ++i) {\r       if (s[i] > '9' || s[i] < '0') return false;\r     }\r     return true;\r   }\r   bool isInt(string s) {\r     if (s == \"\") return false;\r     if (s[0] == '+' || s[0] == '-') s.erase(0, 1);\r     return isIntNoSign(s);\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\two\\Valid_Number.cpp\\Solution\\isInt(string)"
+    },
+    {
+        "f": [],
+        "fm": "bool isValid(string s) {\r     string L = \"{[(\", R = \"}])\";\r     stack<char> S;\r     for (int i = 0; i < s.length(); ++i) {\r       if (L.find(s[i]) != string::npos) S.push(s[i]);\r       else if (S.empty() || L.find(S.top()) != R.find(s[i])) return false;\r       else S.pop();\r     }\r     return S.empty();\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isValid_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_isValid_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName119279 = new char[2];akaRandomName119279[0] = -47;akaRandomName119279[1] = '\\0';string s=akaRandomName119279;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isValid_string_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isValid(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\two\\\\Valid_Parentheses.cpp\\\\Solution\\\\isValid(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Valid_Parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName735379 = new char[2];akaRandomName735379[0] = -47;akaRandomName735379[1] = '\\0';string s=akaRandomName735379;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool isValid(string s) {\r     string L = \"{[(\", R = \"}])\";\r     stack<char> S;\r     for (int i = 0; i < s.length(); ++i) {\r       if (L.find(s[i]) != string::npos) S.push(s[i]);\r       else if (S.empty() || L.find(S.top()) != R.find(s[i])) return false;\r       else S.pop();\r     }\r     return S.empty();\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\two\\Valid_Parentheses.cpp\\Solution\\isValid(string)"
+    }
+]

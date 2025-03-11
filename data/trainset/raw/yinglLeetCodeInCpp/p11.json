@@ -1,0 +1,30 @@
+[
+    {
+        "f": [],
+        "fm": "bool is_alphabets(char c) {\r     return ((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z'));\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_is_alphabets_char_random_1(void) {\n{\nAKA_test_case_name=\"Solution_is_alphabets_char_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\length_of_last_word.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\nchar c=24;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode c */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_is_alphabets_char_random_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->is_alphabets(c);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-9\\\\length_of_last_word.cpp\\\\Solution\\\\is_alphabets(char)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\jump_game.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[3];;\n\n\nint n=5;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=-1810973461;\n/* NormalNumberDataNode A[1] */\nA[1]=-2057703049;\n/* NormalNumberDataNode A[2] */\nA[2]=2030134978;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool is_alphabets(char c) {\r     return ((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z'));\r   }\r \r   int lengthOfLastWord(const char *s) {\r     int len = 0;\r     bool found = false;\r \r     for (int i = strlen(s) - 1; i >= 0; --i) {\r       char c = s[i];\r \r       if (is_alphabets(c)) {\r         if (!found) {\r           found = true;\r         }\r \r         ++len;\r       }\r       else {\r         if (found) {\r           break;\r         }\r       }\r     }\r \r     return len;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-9\\length_of_last_word.cpp\\Solution\\is_alphabets(char)"
+    }
+]

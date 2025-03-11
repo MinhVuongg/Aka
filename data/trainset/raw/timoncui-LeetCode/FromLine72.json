@@ -1,0 +1,378 @@
+[
+    {
+        "f": [],
+        "fm": "vector<int> inorderTraversal(TreeNode *root) {\r     vector<int> result;\r     stack<TreeNode*> S;\r     TreeNode* n = root;\r     while (n || !S.empty()) { \r       if (n) {\r \tS.push(n);\r \tn = n->left;\r       }\r       if (!n) {\r \tn = S.top();\r \tS.pop();\r \tresult.push_back(n->val);\r \tn = n->right;\r       }\r     }\r     return result;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_inorderTraversal_TreeNodemul_random_0(void) {\n{\nAKA_test_case_name=\"Solution_inorderTraversal_TreeNodemul_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Binary_Tree_Inorder_Traversal.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-318145230;\nAKA_mark(\"Calling: .\\\\seven\\\\Binary_Tree_Inorder_Traversal.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Binary_Tree_Inorder_Traversal.cpp\\\\inorderTraversal(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_inorderTraversal_TreeNodemul_random_0\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->inorderTraversal(root);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Binary_Tree_Inorder_Traversal.cpp\\\\Solution\\\\inorderTraversal(TreeNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Binary_Tree_Inorder_Traversal.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-318145230;\nAKA_mark(\"Calling: .\\\\seven\\\\Binary_Tree_Inorder_Traversal.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Binary_Tree_Inorder_Traversal.cpp\\\\inorderTraversal(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_inorderTraversal_TreeNodemul_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_inorderTraversal_TreeNodemul_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Binary_Tree_Inorder_Traversal.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\nTreeNode* root = nullptr;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_inorderTraversal_TreeNodemul_directed_0\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->inorderTraversal(root);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Binary_Tree_Inorder_Traversal.cpp\\\\Solution\\\\inorderTraversal(TreeNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Binary_Tree_Inorder_Traversal.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\nTreeNode* root = nullptr;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   vector<int> inorderTraversal(TreeNode *root) {\r     vector<int> result;\r     stack<TreeNode*> S;\r     TreeNode* n = root;\r     while (n || !S.empty()) { \r       if (n) {\r \tS.push(n);\r \tn = n->left;\r       }\r       if (!n) {\r \tn = S.top();\r \tS.pop();\r \tresult.push_back(n->val);\r \tn = n->right;\r       }\r     }\r     return result;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\seven\\Binary_Tree_Inorder_Traversal.cpp\\Solution\\inorderTraversal(TreeNode*)"
+    },
+    {
+        "f": [],
+        "fm": "vector<vector<int> > permute(vector<int> &num) {\r         if (num.size() == 1) return vector<vector<int> >(1, num);\r         vector<int> rest(num.begin() + 1, num.end());\r         vector<vector<int> > part = permute(rest);\r         vector<vector<int> > result;\r         for (int i = 0; i < part.size(); ++i) {\r             for (int j = 0; j <= part[i].size(); ++j) {\r                 vector<int> p = part[i];\r                 p.insert(p.begin() + j, num[0]);\r                 result.push_back(p);\r             }\r         }\r         return result;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_permute_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_permute_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=187702564;\nnum.push_back(num_element0);\nint num_element1=-902979748;\nnum.push_back(num_element1);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_permute_vector_int_random_2\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->permute(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Permutations.cpp\\\\Solution\\\\permute(vector<int>&)\");\n\n\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=187702564;\nnum.push_back(num_element0);\nint num_element1=-902979748;\nnum.push_back(num_element1);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_permute_vector_int_directed_2(void) {\n{\nAKA_test_case_name=\"Solution_permute_vector_int_directed_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_permute_vector_int_directed_2\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->permute(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Permutations.cpp\\\\Solution\\\\permute(vector<int>&)\");\n\n\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_permute_vector_int_directed_3(void) {\n{\nAKA_test_case_name=\"Solution_permute_vector_int_directed_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_permute_vector_int_directed_3\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->permute(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Permutations.cpp\\\\Solution\\\\permute(vector<int>&)\");\n\n\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_permute_vector_int_directed_4(void) {\n{\nAKA_test_case_name=\"Solution_permute_vector_int_directed_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_permute_vector_int_directed_4\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->permute(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Permutations.cpp\\\\Solution\\\\permute(vector<int>&)\");\n\n\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 4,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_permute_vector_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_permute_vector_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_permute_vector_int_directed_0\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->permute(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Permutations.cpp\\\\Solution\\\\permute(vector<int>&)\");\n\n\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 5,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_permute_vector_int_directed_1(void) {\n{\nAKA_test_case_name=\"Solution_permute_vector_int_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_permute_vector_int_directed_1\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->permute(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Permutations.cpp\\\\Solution\\\\permute(vector<int>&)\");\n\n\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     vector<vector<int> > permute(vector<int> &num) {\r         if (num.size() == 1) return vector<vector<int> >(1, num);\r         vector<int> rest(num.begin() + 1, num.end());\r         vector<vector<int> > part = permute(rest);\r         vector<vector<int> > result;\r         for (int i = 0; i < part.size(); ++i) {\r             for (int j = 0; j <= part[i].size(); ++j) {\r                 vector<int> p = part[i];\r                 p.insert(p.begin() + j, num[0]);\r                 result.push_back(p);\r             }\r         }\r         return result;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\seven\\Permutations.cpp\\Solution\\permute(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<vector<int> > permute(vector<int> &num) {\r         if (num.size() == 1) return vector<vector<int> >(1, num);\r         vector<vector<int> > result;\r         for (int i = 0; i < num.size(); ++i) {\r             vector<int> sub = num;\r             sub.erase(sub.begin() + i);\r             vector<vector<int> > p = permute(sub);\r             for (int j = 0; j < p.size(); ++j) {\r                 p[j].push_back(num[i]);\r                 result.push_back(p[j]);\r             }\r         }\r         return result;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution2_permute_vector_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution2_permute_vector_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution2 */\n/* ConstructorDataNode Solution2() */\nAKA_mark(\"Calling: \\\\Solution2()|ROOT\\\\Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution2\\\\AKA_INSTANCE___Solution2\\\\Solution2()\");AKA_fCall++;AKA_INSTANCE___Solution2 = new ::Solution2();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution2_permute_vector_int_directed_0\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution2->permute(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Permutations.cpp\\\\Solution2\\\\permute(vector<int>&)\");\n\n\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution2 */\n/* ConstructorDataNode Solution2() */\nAKA_mark(\"Calling: \\\\Solution2()|ROOT\\\\Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution2\\\\AKA_INSTANCE___Solution2\\\\Solution2()\");AKA_fCall++;AKA_INSTANCE___Solution2 = new ::Solution2();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution2_permute_vector_int_directed_1(void) {\n{\nAKA_test_case_name=\"Solution2_permute_vector_int_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution2 */\n/* ConstructorDataNode Solution2() */\nAKA_mark(\"Calling: \\\\Solution2()|ROOT\\\\Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution2\\\\AKA_INSTANCE___Solution2\\\\Solution2()\");AKA_fCall++;AKA_INSTANCE___Solution2 = new ::Solution2();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution2_permute_vector_int_directed_1\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution2->permute(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Permutations.cpp\\\\Solution2\\\\permute(vector<int>&)\");\n\n\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution2 */\n/* ConstructorDataNode Solution2() */\nAKA_mark(\"Calling: \\\\Solution2()|ROOT\\\\Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution2\\\\AKA_INSTANCE___Solution2\\\\Solution2()\");AKA_fCall++;AKA_INSTANCE___Solution2 = new ::Solution2();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution2_permute_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution2_permute_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution2 */\n/* ConstructorDataNode Solution2() */\nAKA_mark(\"Calling: \\\\Solution2()|ROOT\\\\Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution2\\\\AKA_INSTANCE___Solution2\\\\Solution2()\");AKA_fCall++;AKA_INSTANCE___Solution2 = new ::Solution2();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-1098619319;\nnum.push_back(num_element0);\nint num_element1=-1832636684;\nnum.push_back(num_element1);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution2_permute_vector_int_random_2\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution2->permute(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Permutations.cpp\\\\Solution2\\\\permute(vector<int>&)\");\n\n\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution2 */\n/* ConstructorDataNode Solution2() */\nAKA_mark(\"Calling: \\\\Solution2()|ROOT\\\\Permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution2\\\\AKA_INSTANCE___Solution2\\\\Solution2()\");AKA_fCall++;AKA_INSTANCE___Solution2 = new ::Solution2();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-1098619319;\nnum.push_back(num_element0);\nint num_element1=-1832636684;\nnum.push_back(num_element1);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution2 {\r public:\r     vector<vector<int> > permute(vector<int> &num) {\r         if (num.size() == 1) return vector<vector<int> >(1, num);\r         vector<vector<int> > result;\r         for (int i = 0; i < num.size(); ++i) {\r             vector<int> sub = num;\r             sub.erase(sub.begin() + i);\r             vector<vector<int> > p = permute(sub);\r             for (int j = 0; j < p.size(); ++j) {\r                 p[j].push_back(num[i]);\r                 result.push_back(p[j]);\r             }\r         }\r         return result;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\seven\\Permutations.cpp\\Solution2\\permute(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> plusOne(vector<int> &digits) {\r         int carry = 1, N = digits.size(), pos = N - 1;\r         while (carry && pos >= 0) {\r             carry += digits[pos];\r             digits[pos] = carry % 10;\r             carry /= 10;\r             pos --;\r         }\r         if (carry) digits.insert(digits.begin(), carry);\r         return digits;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_plusOne_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_plusOne_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Plus_One.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> digits;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode digits */\nint digits_element0=1963086599;\ndigits.push_back(digits_element0);\nint digits_element1=1743825923;\ndigits.push_back(digits_element1);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_plusOne_vector_int_random_2\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->plusOne(digits);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Plus_One.cpp\\\\Solution\\\\plusOne(vector<int>&)\");\n\n\nvector<int> EXPECTED_digits;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Plus_One.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> digits;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode digits */\nint digits_element0=1963086599;\ndigits.push_back(digits_element0);\nint digits_element1=1743825923;\ndigits.push_back(digits_element1);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_plusOne_vector_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_plusOne_vector_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Plus_One.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> digits;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode digits */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_plusOne_vector_int_directed_0\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->plusOne(digits);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Plus_One.cpp\\\\Solution\\\\plusOne(vector<int>&)\");\n\n\nvector<int> EXPECTED_digits;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Plus_One.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> digits;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode digits */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     vector<int> plusOne(vector<int> &digits) {\r         int carry = 1, N = digits.size(), pos = N - 1;\r         while (carry && pos >= 0) {\r             carry += digits[pos];\r             digits[pos] = carry % 10;\r             carry /= 10;\r             pos --;\r         }\r         if (carry) digits.insert(digits.begin(), carry);\r         return digits;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\seven\\Plus_One.cpp\\Solution\\plusOne(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "double pow(double x, int n) {\r         if (n == 0) return 1;\r         if (n == 1) return x;\r         double res = pow(x, abs(n) / 2);\r         res *= res;\r         if (n % 2 != 0) res *= x;\r         return n < 0 ? 1 / res : res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_pow_double_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_pow_double_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Pow_X_N.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\ndouble x=0.0;\n\n\nint n=0;\n\n\ndouble AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_pow_double_int_directed_0\");double AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->pow(x,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Pow_X_N.cpp\\\\Solution\\\\pow(double,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Pow_X_N.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\ndouble x=0.0;\n\n\nint n=0;\n\n\ndouble AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_pow_double_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_pow_double_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Pow_X_N.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\ndouble x=0.77;\n\n\nint n=1012954624;\n\n\ndouble AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_pow_double_int_random_1\");double AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->pow(x,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Pow_X_N.cpp\\\\Solution\\\\pow(double,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Pow_X_N.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\ndouble x=0.77;\n\n\nint n=1012954624;\n\n\ndouble AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     double pow(double x, int n) {\r         if (n == 0) return 1;\r         if (n == 1) return x;\r         double res = pow(x, abs(n) / 2);\r         res *= res;\r         if (n % 2 != 0) res *= x;\r         return n < 0 ? 1 / res : res;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\seven\\Pow_X_N.cpp\\Solution\\pow(double,int)"
+    },
+    {
+        "f": [],
+        "fm": "bool isMatch(const char *s, const char *p) {\r         int nS = strlen(s), nP = strlen(p);\r         if (nP == 0) return nS == 0;\r         if (nP == 1 || p[1] != '*') {\r             return nS >= 1 && isMatch(s[0], p[0]) && isMatch(s + 1, p + 1);\r         }   \r         if (isMatch(s, p + 2)) return true;\r         int i = 0;\r         while (i < nS && isMatch(s[i], p[0])) {\r             i ++;\r             if (isMatch(s + i, p + 2)) return true;\r         }\r         return false;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isMatch_char_constmul_char_constmul_random_0(void) {\n{\nAKA_test_case_name=\"Solution_isMatch_char_constmul_char_constmul_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Regular_Expression_Matching.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_s[2];\n\nchar AKA_ARRAY_INIT_s_constantPointer_0=119;\nAKA_ARRAY_INIT_s[0] = AKA_ARRAY_INIT_s_constantPointer_0;\n\nchar AKA_ARRAY_INIT_s_constantPointer_1=49;\nAKA_ARRAY_INIT_s[1] = AKA_ARRAY_INIT_s_constantPointer_1;\n\nchar const* s = AKA_ARRAY_INIT_s;\nchar AKA_ARRAY_INIT_p[2];\n\nchar AKA_ARRAY_INIT_p_constantPointer_0=79;\nAKA_ARRAY_INIT_p[0] = AKA_ARRAY_INIT_p_constantPointer_0;\n\nchar AKA_ARRAY_INIT_p_constantPointer_1=80;\nAKA_ARRAY_INIT_p[1] = AKA_ARRAY_INIT_p_constantPointer_1;\n\nchar const* p = AKA_ARRAY_INIT_p;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n/* PointerCharacterDataNode p */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isMatch_char_constmul_char_constmul_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isMatch(s,p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Regular_Expression_Matching.cpp\\\\Solution\\\\isMatch(char const*,char const*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Regular_Expression_Matching.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_s[2];\n\nchar AKA_ARRAY_INIT_s_constantPointer_0=119;\nAKA_ARRAY_INIT_s[0] = AKA_ARRAY_INIT_s_constantPointer_0;\n\nchar AKA_ARRAY_INIT_s_constantPointer_1=49;\nAKA_ARRAY_INIT_s[1] = AKA_ARRAY_INIT_s_constantPointer_1;\n\nchar const* s = AKA_ARRAY_INIT_s;\nchar AKA_ARRAY_INIT_p[2];\n\nchar AKA_ARRAY_INIT_p_constantPointer_0=79;\nAKA_ARRAY_INIT_p[0] = AKA_ARRAY_INIT_p_constantPointer_0;\n\nchar AKA_ARRAY_INIT_p_constantPointer_1=80;\nAKA_ARRAY_INIT_p[1] = AKA_ARRAY_INIT_p_constantPointer_1;\n\nchar const* p = AKA_ARRAY_INIT_p;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n/* PointerCharacterDataNode p */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isMatch_char_constmul_char_constmul_directed_1(void) {\n{\nAKA_test_case_name=\"Solution_isMatch_char_constmul_char_constmul_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Regular_Expression_Matching.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_s[2];\n\nchar AKA_ARRAY_INIT_s_constantPointer_0=48;\nAKA_ARRAY_INIT_s[0] = AKA_ARRAY_INIT_s_constantPointer_0;\n\nchar AKA_ARRAY_INIT_s_constantPointer_1=0;\nAKA_ARRAY_INIT_s[1] = AKA_ARRAY_INIT_s_constantPointer_1;\n\nchar const* s = AKA_ARRAY_INIT_s;\nchar AKA_ARRAY_INIT_p[2];\n\nchar AKA_ARRAY_INIT_p_constantPointer_0=50;\nAKA_ARRAY_INIT_p[0] = AKA_ARRAY_INIT_p_constantPointer_0;\n\nchar AKA_ARRAY_INIT_p_constantPointer_1=42;\nAKA_ARRAY_INIT_p[1] = AKA_ARRAY_INIT_p_constantPointer_1;\n\nchar const* p = AKA_ARRAY_INIT_p;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n/* PointerCharacterDataNode p */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isMatch_char_constmul_char_constmul_directed_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isMatch(s,p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Regular_Expression_Matching.cpp\\\\Solution\\\\isMatch(char const*,char const*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Regular_Expression_Matching.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_s[2];\n\nchar AKA_ARRAY_INIT_s_constantPointer_0=48;\nAKA_ARRAY_INIT_s[0] = AKA_ARRAY_INIT_s_constantPointer_0;\n\nchar AKA_ARRAY_INIT_s_constantPointer_1=0;\nAKA_ARRAY_INIT_s[1] = AKA_ARRAY_INIT_s_constantPointer_1;\n\nchar const* s = AKA_ARRAY_INIT_s;\nchar AKA_ARRAY_INIT_p[2];\n\nchar AKA_ARRAY_INIT_p_constantPointer_0=50;\nAKA_ARRAY_INIT_p[0] = AKA_ARRAY_INIT_p_constantPointer_0;\n\nchar AKA_ARRAY_INIT_p_constantPointer_1=42;\nAKA_ARRAY_INIT_p[1] = AKA_ARRAY_INIT_p_constantPointer_1;\n\nchar const* p = AKA_ARRAY_INIT_p;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n/* PointerCharacterDataNode p */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isMatch_char_constmul_char_constmul_directed_2(void) {\n{\nAKA_test_case_name=\"Solution_isMatch_char_constmul_char_constmul_directed_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Regular_Expression_Matching.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_s[2];\n\nchar AKA_ARRAY_INIT_s_constantPointer_0=48;\nAKA_ARRAY_INIT_s[0] = AKA_ARRAY_INIT_s_constantPointer_0;\n\nchar AKA_ARRAY_INIT_s_constantPointer_1=0;\nAKA_ARRAY_INIT_s[1] = AKA_ARRAY_INIT_s_constantPointer_1;\n\nchar const* s = AKA_ARRAY_INIT_s;\nchar AKA_ARRAY_INIT_p[2];\n\nchar AKA_ARRAY_INIT_p_constantPointer_0=50;\nAKA_ARRAY_INIT_p[0] = AKA_ARRAY_INIT_p_constantPointer_0;\n\nchar AKA_ARRAY_INIT_p_constantPointer_1=42;\nAKA_ARRAY_INIT_p[1] = AKA_ARRAY_INIT_p_constantPointer_1;\n\nchar const* p = AKA_ARRAY_INIT_p;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n/* PointerCharacterDataNode p */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isMatch_char_constmul_char_constmul_directed_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isMatch(s,p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Regular_Expression_Matching.cpp\\\\Solution\\\\isMatch(char const*,char const*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Regular_Expression_Matching.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_s[2];\n\nchar AKA_ARRAY_INIT_s_constantPointer_0=48;\nAKA_ARRAY_INIT_s[0] = AKA_ARRAY_INIT_s_constantPointer_0;\n\nchar AKA_ARRAY_INIT_s_constantPointer_1=0;\nAKA_ARRAY_INIT_s[1] = AKA_ARRAY_INIT_s_constantPointer_1;\n\nchar const* s = AKA_ARRAY_INIT_s;\nchar AKA_ARRAY_INIT_p[2];\n\nchar AKA_ARRAY_INIT_p_constantPointer_0=50;\nAKA_ARRAY_INIT_p[0] = AKA_ARRAY_INIT_p_constantPointer_0;\n\nchar AKA_ARRAY_INIT_p_constantPointer_1=42;\nAKA_ARRAY_INIT_p[1] = AKA_ARRAY_INIT_p_constantPointer_1;\n\nchar const* p = AKA_ARRAY_INIT_p;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n/* PointerCharacterDataNode p */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isMatch_char_constmul_char_constmul_random_3(void) {\n{\nAKA_test_case_name=\"Solution_isMatch_char_constmul_char_constmul_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Regular_Expression_Matching.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_s[2];\n\nchar AKA_ARRAY_INIT_s_constantPointer_0=-63;\nAKA_ARRAY_INIT_s[0] = AKA_ARRAY_INIT_s_constantPointer_0;\n\nchar AKA_ARRAY_INIT_s_constantPointer_1=-18;\nAKA_ARRAY_INIT_s[1] = AKA_ARRAY_INIT_s_constantPointer_1;\n\nchar const* s = AKA_ARRAY_INIT_s;\nchar AKA_ARRAY_INIT_p[2];\n\nchar AKA_ARRAY_INIT_p_constantPointer_0=52;\nAKA_ARRAY_INIT_p[0] = AKA_ARRAY_INIT_p_constantPointer_0;\n\nchar AKA_ARRAY_INIT_p_constantPointer_1=0;\nAKA_ARRAY_INIT_p[1] = AKA_ARRAY_INIT_p_constantPointer_1;\n\nchar const* p = AKA_ARRAY_INIT_p;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n/* PointerCharacterDataNode p */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isMatch_char_constmul_char_constmul_random_3\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isMatch(s,p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Regular_Expression_Matching.cpp\\\\Solution\\\\isMatch(char const*,char const*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Regular_Expression_Matching.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_s[2];\n\nchar AKA_ARRAY_INIT_s_constantPointer_0=-63;\nAKA_ARRAY_INIT_s[0] = AKA_ARRAY_INIT_s_constantPointer_0;\n\nchar AKA_ARRAY_INIT_s_constantPointer_1=-18;\nAKA_ARRAY_INIT_s[1] = AKA_ARRAY_INIT_s_constantPointer_1;\n\nchar const* s = AKA_ARRAY_INIT_s;\nchar AKA_ARRAY_INIT_p[2];\n\nchar AKA_ARRAY_INIT_p_constantPointer_0=52;\nAKA_ARRAY_INIT_p[0] = AKA_ARRAY_INIT_p_constantPointer_0;\n\nchar AKA_ARRAY_INIT_p_constantPointer_1=0;\nAKA_ARRAY_INIT_p[1] = AKA_ARRAY_INIT_p_constantPointer_1;\n\nchar const* p = AKA_ARRAY_INIT_p;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n/* PointerCharacterDataNode p */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 4,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isMatch_char_constmul_char_constmul_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_isMatch_char_constmul_char_constmul_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Regular_Expression_Matching.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_s[2];\n\nchar AKA_ARRAY_INIT_s_constantPointer_0=48;\nAKA_ARRAY_INIT_s[0] = AKA_ARRAY_INIT_s_constantPointer_0;\n\nchar AKA_ARRAY_INIT_s_constantPointer_1=0;\nAKA_ARRAY_INIT_s[1] = AKA_ARRAY_INIT_s_constantPointer_1;\n\nchar const* s = AKA_ARRAY_INIT_s;\nchar AKA_ARRAY_INIT_p[2];\n\nchar AKA_ARRAY_INIT_p_constantPointer_0=50;\nAKA_ARRAY_INIT_p[0] = AKA_ARRAY_INIT_p_constantPointer_0;\n\nchar AKA_ARRAY_INIT_p_constantPointer_1=42;\nAKA_ARRAY_INIT_p[1] = AKA_ARRAY_INIT_p_constantPointer_1;\n\nchar const* p = AKA_ARRAY_INIT_p;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n/* PointerCharacterDataNode p */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isMatch_char_constmul_char_constmul_directed_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isMatch(s,p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Regular_Expression_Matching.cpp\\\\Solution\\\\isMatch(char const*,char const*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Regular_Expression_Matching.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_s[2];\n\nchar AKA_ARRAY_INIT_s_constantPointer_0=48;\nAKA_ARRAY_INIT_s[0] = AKA_ARRAY_INIT_s_constantPointer_0;\n\nchar AKA_ARRAY_INIT_s_constantPointer_1=0;\nAKA_ARRAY_INIT_s[1] = AKA_ARRAY_INIT_s_constantPointer_1;\n\nchar const* s = AKA_ARRAY_INIT_s;\nchar AKA_ARRAY_INIT_p[2];\n\nchar AKA_ARRAY_INIT_p_constantPointer_0=50;\nAKA_ARRAY_INIT_p[0] = AKA_ARRAY_INIT_p_constantPointer_0;\n\nchar AKA_ARRAY_INIT_p_constantPointer_1=42;\nAKA_ARRAY_INIT_p[1] = AKA_ARRAY_INIT_p_constantPointer_1;\n\nchar const* p = AKA_ARRAY_INIT_p;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n/* PointerCharacterDataNode p */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 5,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isMatch_char_constmul_char_constmul_directed_3(void) {\n{\nAKA_test_case_name=\"Solution_isMatch_char_constmul_char_constmul_directed_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Regular_Expression_Matching.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_s[2];\n\nchar AKA_ARRAY_INIT_s_constantPointer_0=48;\nAKA_ARRAY_INIT_s[0] = AKA_ARRAY_INIT_s_constantPointer_0;\n\nchar AKA_ARRAY_INIT_s_constantPointer_1=0;\nAKA_ARRAY_INIT_s[1] = AKA_ARRAY_INIT_s_constantPointer_1;\n\nchar const* s = AKA_ARRAY_INIT_s;\nchar AKA_ARRAY_INIT_p[2];\n\nchar AKA_ARRAY_INIT_p_constantPointer_0=50;\nAKA_ARRAY_INIT_p[0] = AKA_ARRAY_INIT_p_constantPointer_0;\n\nchar AKA_ARRAY_INIT_p_constantPointer_1=42;\nAKA_ARRAY_INIT_p[1] = AKA_ARRAY_INIT_p_constantPointer_1;\n\nchar const* p = AKA_ARRAY_INIT_p;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n/* PointerCharacterDataNode p */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isMatch_char_constmul_char_constmul_directed_3\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isMatch(s,p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Regular_Expression_Matching.cpp\\\\Solution\\\\isMatch(char const*,char const*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Regular_Expression_Matching.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_s[2];\n\nchar AKA_ARRAY_INIT_s_constantPointer_0=48;\nAKA_ARRAY_INIT_s[0] = AKA_ARRAY_INIT_s_constantPointer_0;\n\nchar AKA_ARRAY_INIT_s_constantPointer_1=0;\nAKA_ARRAY_INIT_s[1] = AKA_ARRAY_INIT_s_constantPointer_1;\n\nchar const* s = AKA_ARRAY_INIT_s;\nchar AKA_ARRAY_INIT_p[2];\n\nchar AKA_ARRAY_INIT_p_constantPointer_0=50;\nAKA_ARRAY_INIT_p[0] = AKA_ARRAY_INIT_p_constantPointer_0;\n\nchar AKA_ARRAY_INIT_p_constantPointer_1=42;\nAKA_ARRAY_INIT_p[1] = AKA_ARRAY_INIT_p_constantPointer_1;\n\nchar const* p = AKA_ARRAY_INIT_p;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n/* PointerCharacterDataNode p */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     bool isMatch(const char *s, const char *p) {\r         int nS = strlen(s), nP = strlen(p);\r         if (nP == 0) return nS == 0;\r         if (nP == 1 || p[1] != '*') {\r             return nS >= 1 && isMatch(s[0], p[0]) && isMatch(s + 1, p + 1);\r         }   \r         if (isMatch(s, p + 2)) return true;\r         int i = 0;\r         while (i < nS && isMatch(s[i], p[0])) {\r             i ++;\r             if (isMatch(s + i, p + 2)) return true;\r         }\r         return false;\r     }\r private:\r     bool isMatch(char s, char p) { return p == '.' || p == s; }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\seven\\Regular_Expression_Matching.cpp\\Solution\\isMatch(char const*,char const*)"
+    },
+    {
+        "f": [],
+        "fm": "bool isMatch(char s, char p) { return p == '.' || p == s; }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isMatch_char_char_random_0(void) {\n{\nAKA_test_case_name=\"Solution_isMatch_char_char_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Regular_Expression_Matching.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\nchar s;\n\nchar p;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode s */\n/* NormalCharacterDataNode p */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isMatch_char_char_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isMatch(s,p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\seven\\\\Regular_Expression_Matching.cpp\\\\Solution\\\\isMatch(char,char)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Regular_Expression_Matching.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\nchar s;\n\nchar p;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode s */\n/* NormalCharacterDataNode p */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     bool isMatch(const char *s, const char *p) {\r         int nS = strlen(s), nP = strlen(p);\r         if (nP == 0) return nS == 0;\r         if (nP == 1 || p[1] != '*') {\r             return nS >= 1 && isMatch(s[0], p[0]) && isMatch(s + 1, p + 1);\r         }   \r         if (isMatch(s, p + 2)) return true;\r         int i = 0;\r         while (i < nS && isMatch(s[i], p[0])) {\r             i ++;\r             if (isMatch(s + i, p + 2)) return true;\r         }\r         return false;\r     }\r private:\r     bool isMatch(char s, char p) { return p == '.' || p == s; }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\seven\\Regular_Expression_Matching.cpp\\Solution\\isMatch(char,char)"
+    }
+]

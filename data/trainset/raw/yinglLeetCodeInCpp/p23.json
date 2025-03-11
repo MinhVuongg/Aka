@@ -1,0 +1,42 @@
+[
+    {
+        "f": [],
+        "fm": "int removeDuplicates(int A[], int n) {\r     int steps;\r \r     for (int i = 1; i < n; ++i) {\r       if (A[i] == A[i - 1]) {\r         ++steps;\r       }\r       else {\r         A[i - steps] = A[i];\r       }\r     }\r \r     return n - steps;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_removeDuplicates_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_removeDuplicates_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\remove_duplicates_from_sorted_array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[2];;\n\n\nint n=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=818903165;\n/* NormalNumberDataNode A[1] */\nA[1]=1608209917;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_removeDuplicates_int_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->removeDuplicates(A,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-19\\\\remove_duplicates_from_sorted_array.cpp\\\\Solution\\\\removeDuplicates(int[],int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\remove_duplicates_from_sorted_array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[2];;\n\n\nint n=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=818903165;\n/* NormalNumberDataNode A[1] */\nA[1]=1608209917;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_removeDuplicates_int_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_removeDuplicates_int_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\remove_duplicates_from_sorted_array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[2];;\n\n\nint n=8;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=149813074;\n/* NormalNumberDataNode A[1] */\nA[1]=2066593760;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_removeDuplicates_int_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->removeDuplicates(A,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-19\\\\remove_duplicates_from_sorted_array.cpp\\\\Solution\\\\removeDuplicates(int[],int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\remove_duplicates_from_sorted_array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[2];;\n\n\nint n=8;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=149813074;\n/* NormalNumberDataNode A[1] */\nA[1]=2066593760;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int removeDuplicates(int A[], int n) {\r     int steps;\r \r     for (int i = 1; i < n; ++i) {\r       if (A[i] == A[i - 1]) {\r         ++steps;\r       }\r       else {\r         A[i - steps] = A[i];\r       }\r     }\r \r     return n - steps;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-19\\remove_duplicates_from_sorted_array.cpp\\Solution\\removeDuplicates(int[],int)"
+    }
+]

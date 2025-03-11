@@ -1,0 +1,126 @@
+[
+    {
+        "f": [],
+        "fm": "bool isMatch(const char *s, const char *p) {\r     bool star = false;  // *有没有出现过\r     const char *saved_s = NULL;\r     const char *saved_p = NULL;\r \r     while (*s != '\\0') {\r       if (*p != '*') {\r         if ((*s == *p) || ('?' == *p)) {\r           ++s;\r           ++p;\r         }\r         else {\r           if (star) {\r             // p固定在*之后的字符串，s则不断增长试图匹配。\r             s = ++saved_s;\r             p = saved_p + 1;\r           }\r           else {\r             return false;\r           }\r         }\r       }\r       else {\r         star = true;\r \r         while ('*' == *p) {\r           ++p;\r         }\r \r         saved_s = s;\r         // 记录连续出现的最后一个*的位置\r         saved_p = p - 1;\r       }\r     }\r \r     // 处理p尾部的*\r     while ('*' == *p) {\r       ++p;\r     }\r \r     return (('\\0' == *s) && ('\\0' == *p));\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isMatch_char_constmul_char_constmul_random_4(void) {\n{\nAKA_test_case_name=\"Solution_isMatch_char_constmul_char_constmul_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\wildcard_matching.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar const* s;\nchar AKA_ARRAY_INIT_p[2];\n\nchar AKA_ARRAY_INIT_p_constantPointer_0=79;\nAKA_ARRAY_INIT_p[0] = AKA_ARRAY_INIT_p_constantPointer_0;\n\nchar AKA_ARRAY_INIT_p_constantPointer_1=0;\nAKA_ARRAY_INIT_p[1] = AKA_ARRAY_INIT_p_constantPointer_1;\n\nchar const* p = AKA_ARRAY_INIT_p;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n/* PointerCharacterDataNode p */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isMatch_char_constmul_char_constmul_random_4\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isMatch(s,p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-29\\\\wildcard_matching.cpp\\\\Solution\\\\isMatch(char const*,char const*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\valid_parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName940840 = new char[2];akaRandomName940840[0] = 58;akaRandomName940840[1] = '\\0';string s=akaRandomName940840;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isMatch_char_constmul_char_constmul_random_1(void) {\n{\nAKA_test_case_name=\"Solution_isMatch_char_constmul_char_constmul_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\wildcard_matching.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar const* s;\nchar const* p;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n/* PointerCharacterDataNode p */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isMatch_char_constmul_char_constmul_random_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isMatch(s,p);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-29\\\\wildcard_matching.cpp\\\\Solution\\\\isMatch(char const*,char const*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\wildcard_matching.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar const* s;\nchar AKA_ARRAY_INIT_p[2];\n\nchar AKA_ARRAY_INIT_p_constantPointer_0=79;\nAKA_ARRAY_INIT_p[0] = AKA_ARRAY_INIT_p_constantPointer_0;\n\nchar AKA_ARRAY_INIT_p_constantPointer_1=0;\nAKA_ARRAY_INIT_p[1] = AKA_ARRAY_INIT_p_constantPointer_1;\n\nchar const* p = AKA_ARRAY_INIT_p;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n/* PointerCharacterDataNode p */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool isMatch(const char *s, const char *p) {\r     bool star = false;  // *有没有出现过\r     const char *saved_s = NULL;\r     const char *saved_p = NULL;\r \r     while (*s != '\\0') {\r       if (*p != '*') {\r         if ((*s == *p) || ('?' == *p)) {\r           ++s;\r           ++p;\r         }\r         else {\r           if (star) {\r             // p固定在*之后的字符串，s则不断增长试图匹配。\r             s = ++saved_s;\r             p = saved_p + 1;\r           }\r           else {\r             return false;\r           }\r         }\r       }\r       else {\r         star = true;\r \r         while ('*' == *p) {\r           ++p;\r         }\r \r         saved_s = s;\r         // 记录连续出现的最后一个*的位置\r         saved_p = p - 1;\r       }\r     }\r \r     // 处理p尾部的*\r     while ('*' == *p) {\r       ++p;\r     }\r \r     return (('\\0' == *s) && ('\\0' == *p));\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-29\\wildcard_matching.cpp\\Solution\\isMatch(char const*,char const*)"
+    },
+    {
+        "f": [],
+        "fm": "bool wordBreak(string s, unordered_set<string> &dict) {\r     int len = s.length();\r     vector<bool> match(len + 1, false);\r \r     match[0] = true;\r \r     for (int i = 1; i <= len; ++i) {\r       for (int j = i - 1; j >= 0; --j) {\r         if (match[j]) {\r           if (dict.find(s.substr(j, i - j)) != dict.end()) {\r             match[i] = true;  // 前i个字母可以match\r             break;\r           }\r         }\r       }\r     }\r \r     return match[len];\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_wordBreak_string_unordered_set_string_random_4(void) {\n{\nAKA_test_case_name=\"Solution_wordBreak_string_unordered_set_string_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\word_break.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName258606 = new char[2];akaRandomName258606[0] = 60;akaRandomName258606[1] = '\\0';string s=akaRandomName258606;\nunordered_set<string> dict;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* UnorderedSetDataNode dict */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_wordBreak_string_unordered_set_string_random_4\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->wordBreak(s,dict);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-29\\\\word_break.cpp\\\\Solution\\\\wordBreak(string,unordered_set<string>&)\");\n\n\nunordered_set<string> EXPECTED_dict;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\valid_parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName940840 = new char[2];akaRandomName940840[0] = 58;akaRandomName940840[1] = '\\0';string s=akaRandomName940840;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool wordBreak(string s, unordered_set<string> &dict) {\r     int len = s.length();\r     vector<bool> match(len + 1, false);\r \r     match[0] = true;\r \r     for (int i = 1; i <= len; ++i) {\r       for (int j = i - 1; j >= 0; --j) {\r         if (match[j]) {\r           if (dict.find(s.substr(j, i - j)) != dict.end()) {\r             match[i] = true;  // 前i个字母可以match\r             break;\r           }\r         }\r       }\r     }\r \r     return match[len];\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-29\\word_break.cpp\\Solution\\wordBreak(string,unordered_set<string>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<string> wordBreak(string s, unordered_set<string> &dict) {\r     vector<string> result;\r     vector<string> path;\r     int len = s.length();\r     vector<bool> match(len + 1, false);\r     vector<list<int> > lookup(len + 1);\r \r     match[0] = true;\r \r     for (int i = 1; i <= len; ++i) {\r       for (int prev = 0; prev < i; ++prev) {\r         if (match[prev] && (dict.find(s.substr(prev, i - prev)) != dict.end())) {\r           // 找到一个匹配的单词\r           match[i] = true;\r           lookup[i].push_back(prev);\r         }\r       }\r     }\r \r     if (!match[len]) {\r       return result;\r     }\r \r     back_trace(s, len, lookup, path, result);\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_wordBreak_string_unordered_set_string_random_5(void) {\n{\nAKA_test_case_name=\"Solution_wordBreak_string_unordered_set_string_random_5\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\word_break_ii.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName144220 = new char[2];akaRandomName144220[0] = -39;akaRandomName144220[1] = '\\0';string s=akaRandomName144220;\nunordered_set<string> dict;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* UnorderedSetDataNode dict */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_wordBreak_string_unordered_set_string_random_5\");vector<string> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->wordBreak(s,dict);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-29\\\\word_break_ii.cpp\\\\Solution\\\\wordBreak(string,unordered_set<string>&)\");\n\n\nunordered_set<string> EXPECTED_dict;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\valid_parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName940840 = new char[2];akaRandomName940840[0] = 58;akaRandomName940840[1] = '\\0';string s=akaRandomName940840;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   vector<string> wordBreak(string s, unordered_set<string> &dict) {\r     vector<string> result;\r     vector<string> path;\r     int len = s.length();\r     vector<bool> match(len + 1, false);\r     vector<list<int> > lookup(len + 1);\r \r     match[0] = true;\r \r     for (int i = 1; i <= len; ++i) {\r       for (int prev = 0; prev < i; ++prev) {\r         if (match[prev] && (dict.find(s.substr(prev, i - prev)) != dict.end())) {\r           // 找到一个匹配的单词\r           match[i] = true;\r           lookup[i].push_back(prev);\r         }\r       }\r     }\r \r     if (!match[len]) {\r       return result;\r     }\r \r     back_trace(s, len, lookup, path, result);\r   }\r \r protected:\r   void back_trace(string &s,\r       int index,\r       vector<list<int> > &lookup,\r       vector<string> &path,\r       vector<string> &result) {\r     if (0 == index) {\r       string str;\r       int size = path.size();\r \r       for (int i = size - 1; i >= 0; --i) {\r         str.append(path[i]);\r \r         if (i != 0) {\r           str.append(\" \");\r         }\r       }\r \r       result.push_back(str);\r     }\r     else {\r       for (list<int>::iterator it = lookup[index].begin();\r           it != lookup[index].end();\r           ++it) {\r         int prev = *it;\r \r         path.push_back(s.substr(prev, index - prev));\r         back_trace(s, prev, lookup, path, result);\r         path.pop_back();\r       }\r     }\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-29\\word_break_ii.cpp\\Solution\\wordBreak(string,unordered_set<string>&)"
+    },
+    {
+        "f": [],
+        "fm": "void back_trace(string &s,\r       int index,\r       vector<list<int> > &lookup,\r       vector<string> &path,\r       vector<string> &result) {\r     if (0 == index) {\r       string str;\r       int size = path.size();\r \r       for (int i = size - 1; i >= 0; --i) {\r         str.append(path[i]);\r \r         if (i != 0) {\r           str.append(\" \");\r         }\r       }\r \r       result.push_back(str);\r     }\r     else {\r       for (list<int>::iterator it = lookup[index].begin();\r           it != lookup[index].end();\r           ++it) {\r         int prev = *it;\r \r         path.push_back(s.substr(prev, index - prev));\r         back_trace(s, prev, lookup, path, result);\r         path.pop_back();\r       }\r     }\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_back_trace_string_int_vector_list_int_vector_string_vector_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_back_trace_string_int_vector_list_int_vector_string_vector_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\word_break_ii.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName653794 = new char[2];akaRandomName653794[0] = 83;akaRandomName653794[1] = '\\0';string s=akaRandomName653794;\n\n\nint index=-1342715093;\nvector<list<int>> lookup;\nvector<string> path;\nvector<string> result;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode index */\n/* VectorDataNode lookup */\nlist<int> lookup_element0;\n/* element #0 : null value -> no code */\nlookup_element0.push_back(lookup_element0_element0);\nint lookup_element0_element1=1648639310;\nlookup_element0.push_back(lookup_element0_element1);\n/* element #2 : null value -> no code */\nlookup_element0.push_back(lookup_element0_element2);\nlookup.push_back(lookup_element0);\nlist<int> lookup_element1;\n/* element #0 : null value -> no code */\nlookup_element1.push_back(lookup_element1_element0);\nint lookup_element1_element1=-2056781723;\nlookup_element1.push_back(lookup_element1_element1);\n/* element #2 : null value -> no code */\nlookup_element1.push_back(lookup_element1_element2);\nlookup.push_back(lookup_element1);\n/* VectorDataNode path */\nchar* akaRandomName147378 = new char[2];akaRandomName147378[0] = 78;akaRandomName147378[1] = '\\0';string path_element0=akaRandomName147378;\npath.push_back(path_element0);\n/* VectorDataNode result */\nchar* akaRandomName356468 = new char[2];akaRandomName356468[0] = -65;akaRandomName356468[1] = '\\0';string result_element0=akaRandomName356468;\nresult.push_back(result_element0);\nchar* akaRandomName119708 = new char[2];akaRandomName119708[0] = -123;akaRandomName119708[1] = '\\0';string result_element1=akaRandomName119708;\nresult.push_back(result_element1);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_back_trace_string_int_vector_list_int_vector_string_vector_string_random_0\");AKA_INSTANCE___Solution->back_trace(s,index,lookup,path,result);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-29\\\\word_break_ii.cpp\\\\Solution\\\\back_trace(string&,int,vector<list<int>>&,vector<string>&,vector<string>&)\");\n\n/* error assertion */\nvector<list<int>> EXPECTED_lookup;\n\nvector<string> EXPECTED_path;\n\nvector<string> EXPECTED_result;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\valid_parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName940840 = new char[2];akaRandomName940840[0] = 58;akaRandomName940840[1] = '\\0';string s=akaRandomName940840;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   vector<string> wordBreak(string s, unordered_set<string> &dict) {\r     vector<string> result;\r     vector<string> path;\r     int len = s.length();\r     vector<bool> match(len + 1, false);\r     vector<list<int> > lookup(len + 1);\r \r     match[0] = true;\r \r     for (int i = 1; i <= len; ++i) {\r       for (int prev = 0; prev < i; ++prev) {\r         if (match[prev] && (dict.find(s.substr(prev, i - prev)) != dict.end())) {\r           // 找到一个匹配的单词\r           match[i] = true;\r           lookup[i].push_back(prev);\r         }\r       }\r     }\r \r     if (!match[len]) {\r       return result;\r     }\r \r     back_trace(s, len, lookup, path, result);\r   }\r \r protected:\r   void back_trace(string &s,\r       int index,\r       vector<list<int> > &lookup,\r       vector<string> &path,\r       vector<string> &result) {\r     if (0 == index) {\r       string str;\r       int size = path.size();\r \r       for (int i = size - 1; i >= 0; --i) {\r         str.append(path[i]);\r \r         if (i != 0) {\r           str.append(\" \");\r         }\r       }\r \r       result.push_back(str);\r     }\r     else {\r       for (list<int>::iterator it = lookup[index].begin();\r           it != lookup[index].end();\r           ++it) {\r         int prev = *it;\r \r         path.push_back(s.substr(prev, index - prev));\r         back_trace(s, prev, lookup, path, result);\r         path.pop_back();\r       }\r     }\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-29\\word_break_ii.cpp\\Solution\\back_trace(string&,int,vector<list<int>>&,vector<string>&,vector<string>&)"
+    }
+]

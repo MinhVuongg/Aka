@@ -1,0 +1,166 @@
+[
+    {
+        "f": [],
+        "fm": "int pointerTest6(int* p1,int* p2){\r \tif (*(p1+0) == *(p2+1))\r \t\treturn 1;\r \treturn 0;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_pointerTest6_intmul_intmul_random_1(void) {\n{\nAKA_test_case_name=\"pointerTest6_intmul_intmul_random_1\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_p1[2];\n\n\nint AKA_ARRAY_INIT_p1_0=1371210264;\nAKA_ARRAY_INIT_p1[0] = AKA_ARRAY_INIT_p1_0;\n\n\nint AKA_ARRAY_INIT_p1_1=881027911;\nAKA_ARRAY_INIT_p1[1] = AKA_ARRAY_INIT_p1_1;\n\nint* p1 = AKA_ARRAY_INIT_p1;\nint AKA_ARRAY_INIT_p2[2];\n\n\nint AKA_ARRAY_INIT_p2_0=760478570;\nAKA_ARRAY_INIT_p2[0] = AKA_ARRAY_INIT_p2_0;\n\n\nint AKA_ARRAY_INIT_p2_1=904874849;\nAKA_ARRAY_INIT_p2[1] = AKA_ARRAY_INIT_p2_1;\n\nint* p2 = AKA_ARRAY_INIT_p2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode p1 */\n/* PointerNumberDataNode p2 */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test pointerTest6_intmul_intmul_random_1\");int AKA_ACTUAL_OUTPUT=pointerTest6(p1,p2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\pointerTest.cpp\\\\pointerTest6(int*,int*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_a[2];\n\n\nint AKA_ARRAY_INIT_a_constantPointer_0=230301102;\nAKA_ARRAY_INIT_a[0] = AKA_ARRAY_INIT_a_constantPointer_0;\n\n\nint AKA_ARRAY_INIT_a_constantPointer_1=-898747821;\nAKA_ARRAY_INIT_a[1] = AKA_ARRAY_INIT_a_constantPointer_1;\n\nint const* a = AKA_ARRAY_INIT_a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_pointerTest6_intmul_intmul_random_2(void) {\n{\nAKA_test_case_name=\"pointerTest6_intmul_intmul_random_2\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_p1[1];\n\n\nint AKA_ARRAY_INIT_p1_0=-740465950;\nAKA_ARRAY_INIT_p1[0] = AKA_ARRAY_INIT_p1_0;\n\nint* p1 = AKA_ARRAY_INIT_p1;\nint AKA_ARRAY_INIT_p2[1];\n\n\nint AKA_ARRAY_INIT_p2_0=-1619583764;\nAKA_ARRAY_INIT_p2[0] = AKA_ARRAY_INIT_p2_0;\n\nint* p2 = AKA_ARRAY_INIT_p2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode p1 */\n/* PointerNumberDataNode p2 */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test pointerTest6_intmul_intmul_random_2\");int AKA_ACTUAL_OUTPUT=pointerTest6(p1,p2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\pointerTest.cpp\\\\pointerTest6(int*,int*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_a[2];\n\n\nint AKA_ARRAY_INIT_a_constantPointer_0=0;\nAKA_ARRAY_INIT_a[0] = AKA_ARRAY_INIT_a_constantPointer_0;\n\n\nint AKA_ARRAY_INIT_a_constantPointer_1=0;\nAKA_ARRAY_INIT_a[1] = AKA_ARRAY_INIT_a_constantPointer_1;\n\nint const* a = AKA_ARRAY_INIT_a;\n\n\nint b=1;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\pointerTest.cpp\\pointerTest6(int*,int*)"
+    },
+    {
+        "f": [],
+        "fm": "int pointerTest7(int* p1,int* p2){\r \tif (*(p1) == *(p2+1)){\r \t\tp1 = p2;\r \t\tif (*(p1) == *(p2+1))\r \t\t\treturn 1;\r \t}\r \treturn 0;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_pointerTest7_intmul_intmul_random_3(void) {\n{\nAKA_test_case_name=\"pointerTest7_intmul_intmul_random_3\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_p1[3];\n\n\nint AKA_ARRAY_INIT_p1_0=873941246;\nAKA_ARRAY_INIT_p1[0] = AKA_ARRAY_INIT_p1_0;\n\n\nint AKA_ARRAY_INIT_p1_1=774741729;\nAKA_ARRAY_INIT_p1[1] = AKA_ARRAY_INIT_p1_1;\n\n\nint AKA_ARRAY_INIT_p1_2=-21807048;\nAKA_ARRAY_INIT_p1[2] = AKA_ARRAY_INIT_p1_2;\n\nint* p1 = AKA_ARRAY_INIT_p1;\nint* p2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode p1 */\n/* PointerNumberDataNode p2 */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test pointerTest7_intmul_intmul_random_3\");int AKA_ACTUAL_OUTPUT=pointerTest7(p1,p2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\pointerTest.cpp\\\\pointerTest7(int*,int*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_a[2];\n\n\nint AKA_ARRAY_INIT_a_constantPointer_0=230301102;\nAKA_ARRAY_INIT_a[0] = AKA_ARRAY_INIT_a_constantPointer_0;\n\n\nint AKA_ARRAY_INIT_a_constantPointer_1=-898747821;\nAKA_ARRAY_INIT_a[1] = AKA_ARRAY_INIT_a_constantPointer_1;\n\nint const* a = AKA_ARRAY_INIT_a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_pointerTest7_intmul_intmul_directed_0(void) {\n{\nAKA_test_case_name=\"pointerTest7_intmul_intmul_directed_0\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_p1[1];\n\n\nint AKA_ARRAY_INIT_p1_0=0;\nAKA_ARRAY_INIT_p1[0] = AKA_ARRAY_INIT_p1_0;\n\nint* p1 = AKA_ARRAY_INIT_p1;\nint AKA_ARRAY_INIT_p2[2];\n\n\nint AKA_ARRAY_INIT_p2_0=0;\nAKA_ARRAY_INIT_p2[0] = AKA_ARRAY_INIT_p2_0;\n\n\nint AKA_ARRAY_INIT_p2_1=0;\nAKA_ARRAY_INIT_p2[1] = AKA_ARRAY_INIT_p2_1;\n\nint* p2 = AKA_ARRAY_INIT_p2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode p1 */\n/* PointerNumberDataNode p2 */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test pointerTest7_intmul_intmul_directed_0\");int AKA_ACTUAL_OUTPUT=pointerTest7(p1,p2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\pointerTest.cpp\\\\pointerTest7(int*,int*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_a[2];\n\n\nint AKA_ARRAY_INIT_a_constantPointer_0=0;\nAKA_ARRAY_INIT_a[0] = AKA_ARRAY_INIT_a_constantPointer_0;\n\n\nint AKA_ARRAY_INIT_a_constantPointer_1=0;\nAKA_ARRAY_INIT_a[1] = AKA_ARRAY_INIT_a_constantPointer_1;\n\nint const* a = AKA_ARRAY_INIT_a;\n\n\nint b=1;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_pointerTest7_intmul_intmul_directed_1(void) {\n{\nAKA_test_case_name=\"pointerTest7_intmul_intmul_directed_1\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_p1[1];\n\n\nint AKA_ARRAY_INIT_p1_0=0;\nAKA_ARRAY_INIT_p1[0] = AKA_ARRAY_INIT_p1_0;\n\nint* p1 = AKA_ARRAY_INIT_p1;\nint AKA_ARRAY_INIT_p2[2];\n\n\nint AKA_ARRAY_INIT_p2_0=-1;\nAKA_ARRAY_INIT_p2[0] = AKA_ARRAY_INIT_p2_0;\n\n\nint AKA_ARRAY_INIT_p2_1=0;\nAKA_ARRAY_INIT_p2[1] = AKA_ARRAY_INIT_p2_1;\n\nint* p2 = AKA_ARRAY_INIT_p2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode p1 */\n/* PointerNumberDataNode p2 */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test pointerTest7_intmul_intmul_directed_1\");int AKA_ACTUAL_OUTPUT=pointerTest7(p1,p2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\pointerTest.cpp\\\\pointerTest7(int*,int*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_a[1];\n\n\nint AKA_ARRAY_INIT_a_constantPointer_0=-816586510;\nAKA_ARRAY_INIT_a[0] = AKA_ARRAY_INIT_a_constantPointer_0;\n\nint const* a = AKA_ARRAY_INIT_a;\n\n\nint b=428716981;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\pointerTest.cpp\\pointerTest7(int*,int*)"
+    },
+    {
+        "f": [],
+        "fm": "int pointerTest9(int* p1,int* p2){\r \tp1 = p2;\r \t\r \tif (*p1 - 10000 > *(p2+1))\r \t\treturn 1;\r \treturn 0;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_pointerTest9_intmul_intmul_random_0(void) {\n{\nAKA_test_case_name=\"pointerTest9_intmul_intmul_random_0\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_p1[2];\n\n\nint AKA_ARRAY_INIT_p1_0=1316681432;\nAKA_ARRAY_INIT_p1[0] = AKA_ARRAY_INIT_p1_0;\n\n\nint AKA_ARRAY_INIT_p1_1=-30479772;\nAKA_ARRAY_INIT_p1[1] = AKA_ARRAY_INIT_p1_1;\n\nint* p1 = AKA_ARRAY_INIT_p1;\nint AKA_ARRAY_INIT_p2[3];\n\n\nint AKA_ARRAY_INIT_p2_0=-1769198784;\nAKA_ARRAY_INIT_p2[0] = AKA_ARRAY_INIT_p2_0;\n\n\nint AKA_ARRAY_INIT_p2_1=1926602102;\nAKA_ARRAY_INIT_p2[1] = AKA_ARRAY_INIT_p2_1;\n\n\nint AKA_ARRAY_INIT_p2_2=-901869500;\nAKA_ARRAY_INIT_p2[2] = AKA_ARRAY_INIT_p2_2;\n\nint* p2 = AKA_ARRAY_INIT_p2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode p1 */\n/* PointerNumberDataNode p2 */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test pointerTest9_intmul_intmul_random_0\");int AKA_ACTUAL_OUTPUT=pointerTest9(p1,p2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\pointerTest.cpp\\\\pointerTest9(int*,int*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_a[2];\n\n\nint AKA_ARRAY_INIT_a_constantPointer_0=230301102;\nAKA_ARRAY_INIT_a[0] = AKA_ARRAY_INIT_a_constantPointer_0;\n\n\nint AKA_ARRAY_INIT_a_constantPointer_1=-898747821;\nAKA_ARRAY_INIT_a[1] = AKA_ARRAY_INIT_a_constantPointer_1;\n\nint const* a = AKA_ARRAY_INIT_a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_pointerTest9_intmul_intmul_random_1(void) {\n{\nAKA_test_case_name=\"pointerTest9_intmul_intmul_random_1\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_p1[3];\n\n\nint AKA_ARRAY_INIT_p1_0=-420750256;\nAKA_ARRAY_INIT_p1[0] = AKA_ARRAY_INIT_p1_0;\n\n\nint AKA_ARRAY_INIT_p1_1=1132865464;\nAKA_ARRAY_INIT_p1[1] = AKA_ARRAY_INIT_p1_1;\n\n\nint AKA_ARRAY_INIT_p1_2=665139567;\nAKA_ARRAY_INIT_p1[2] = AKA_ARRAY_INIT_p1_2;\n\nint* p1 = AKA_ARRAY_INIT_p1;\nint AKA_ARRAY_INIT_p2[1];\n\n\nint AKA_ARRAY_INIT_p2_0=822243302;\nAKA_ARRAY_INIT_p2[0] = AKA_ARRAY_INIT_p2_0;\n\nint* p2 = AKA_ARRAY_INIT_p2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode p1 */\n/* PointerNumberDataNode p2 */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test pointerTest9_intmul_intmul_random_1\");int AKA_ACTUAL_OUTPUT=pointerTest9(p1,p2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\pointerTest.cpp\\\\pointerTest9(int*,int*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_a[2];\n\n\nint AKA_ARRAY_INIT_a_constantPointer_0=0;\nAKA_ARRAY_INIT_a[0] = AKA_ARRAY_INIT_a_constantPointer_0;\n\n\nint AKA_ARRAY_INIT_a_constantPointer_1=0;\nAKA_ARRAY_INIT_a[1] = AKA_ARRAY_INIT_a_constantPointer_1;\n\nint const* a = AKA_ARRAY_INIT_a;\n\n\nint b=1;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\pointerTest.cpp\\pointerTest9(int*,int*)"
+    },
+    {
+        "f": [],
+        "fm": "int pointerTest10(int* p1,int* p2){\r \tp1 = p2;\r \t\r \tif (*p1 - 10000 > *(p2+1 + (1+1)))\r \t\treturn 1;\r \treturn 0;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_pointerTest10_intmul_intmul_random_0(void) {\n{\nAKA_test_case_name=\"pointerTest10_intmul_intmul_random_0\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_p1[3];\n\n\nint AKA_ARRAY_INIT_p1_0=-2036224249;\nAKA_ARRAY_INIT_p1[0] = AKA_ARRAY_INIT_p1_0;\n\n\nint AKA_ARRAY_INIT_p1_1=1442407380;\nAKA_ARRAY_INIT_p1[1] = AKA_ARRAY_INIT_p1_1;\n\n\nint AKA_ARRAY_INIT_p1_2=1563437507;\nAKA_ARRAY_INIT_p1[2] = AKA_ARRAY_INIT_p1_2;\n\nint* p1 = AKA_ARRAY_INIT_p1;\nint AKA_ARRAY_INIT_p2[1];\n\n\nint AKA_ARRAY_INIT_p2_0=625176908;\nAKA_ARRAY_INIT_p2[0] = AKA_ARRAY_INIT_p2_0;\n\nint* p2 = AKA_ARRAY_INIT_p2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode p1 */\n/* PointerNumberDataNode p2 */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test pointerTest10_intmul_intmul_random_0\");int AKA_ACTUAL_OUTPUT=pointerTest10(p1,p2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\pointerTest.cpp\\\\pointerTest10(int*,int*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_a[2];\n\n\nint AKA_ARRAY_INIT_a_constantPointer_0=230301102;\nAKA_ARRAY_INIT_a[0] = AKA_ARRAY_INIT_a_constantPointer_0;\n\n\nint AKA_ARRAY_INIT_a_constantPointer_1=-898747821;\nAKA_ARRAY_INIT_a[1] = AKA_ARRAY_INIT_a_constantPointer_1;\n\nint const* a = AKA_ARRAY_INIT_a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_pointerTest10_intmul_intmul_random_4(void) {\n{\nAKA_test_case_name=\"pointerTest10_intmul_intmul_random_4\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_p1[1];\n\n\nint AKA_ARRAY_INIT_p1_0=-777548677;\nAKA_ARRAY_INIT_p1[0] = AKA_ARRAY_INIT_p1_0;\n\nint* p1 = AKA_ARRAY_INIT_p1;\nint AKA_ARRAY_INIT_p2[3];\n\n\nint AKA_ARRAY_INIT_p2_0=-687840697;\nAKA_ARRAY_INIT_p2[0] = AKA_ARRAY_INIT_p2_0;\n\n\nint AKA_ARRAY_INIT_p2_1=785903187;\nAKA_ARRAY_INIT_p2[1] = AKA_ARRAY_INIT_p2_1;\n\n\nint AKA_ARRAY_INIT_p2_2=-1902581028;\nAKA_ARRAY_INIT_p2[2] = AKA_ARRAY_INIT_p2_2;\n\nint* p2 = AKA_ARRAY_INIT_p2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode p1 */\n/* PointerNumberDataNode p2 */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test pointerTest10_intmul_intmul_random_4\");int AKA_ACTUAL_OUTPUT=pointerTest10(p1,p2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\pointerTest.cpp\\\\pointerTest10(int*,int*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_a[2];\n\n\nint AKA_ARRAY_INIT_a_constantPointer_0=0;\nAKA_ARRAY_INIT_a[0] = AKA_ARRAY_INIT_a_constantPointer_0;\n\n\nint AKA_ARRAY_INIT_a_constantPointer_1=0;\nAKA_ARRAY_INIT_a[1] = AKA_ARRAY_INIT_a_constantPointer_1;\n\nint const* a = AKA_ARRAY_INIT_a;\n\n\nint b=1;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\pointerTest.cpp\\pointerTest10(int*,int*)"
+    }
+]

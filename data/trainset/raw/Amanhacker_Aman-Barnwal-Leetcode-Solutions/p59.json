@@ -1,0 +1,98 @@
+[
+    {
+        "f": [],
+        "fm": "int findMiddleIndex(vector<int>& a) {\r     \r         int n = a.size();\r         \r         vector<int> left(n), right(n);\r         \r         // left[] is the cumulative sum from left to right\r         // right[] is the cumulative sum from right to left\r         \r         left[0] = a[0];\r         for(int i=1; i<n; i++)                          left[i] = a[i] + left[i-1];\r         \r         right[n-1] = a[n-1];\r         for(int i=n-2; i>=0; i--)                       right[i] = a[i] + right[i+1];\r         \r         for(int i=0; i<n; i++) {\r             if(left[i] == right[i])                     return i;\r         }\r         \r         return -1;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findMiddleIndex_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_findMiddleIndex_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1991-find-the-middle-index-in-array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=321085167;\na.push_back(a_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findMiddleIndex_vector_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findMiddleIndex(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p59\\\\1991-find-the-middle-index-in-array\\\\1991-find-the-middle-index-in-array.cpp\\\\Solution\\\\findMiddleIndex(vector<int>&)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1952-three-divisors.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findMiddleIndex_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_findMiddleIndex_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1991-find-the-middle-index-in-array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=-425224553;\na.push_back(a_element0);\nint a_element1=1818102135;\na.push_back(a_element1);\nint a_element2=-1701693626;\na.push_back(a_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findMiddleIndex_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findMiddleIndex(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p59\\\\1991-find-the-middle-index-in-array\\\\1991-find-the-middle-index-in-array.cpp\\\\Solution\\\\findMiddleIndex(vector<int>&)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1952-three-divisors.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=0;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int findMiddleIndex(vector<int>& a) {\r     \r         int n = a.size();\r         \r         vector<int> left(n), right(n);\r         \r         // left[] is the cumulative sum from left to right\r         // right[] is the cumulative sum from right to left\r         \r         left[0] = a[0];\r         for(int i=1; i<n; i++)                          left[i] = a[i] + left[i-1];\r         \r         right[n-1] = a[n-1];\r         for(int i=n-2; i>=0; i--)                       right[i] = a[i] + right[i+1];\r         \r         for(int i=0; i<n; i++) {\r             if(left[i] == right[i])                     return i;\r         }\r         \r         return -1;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p59\\1991-find-the-middle-index-in-array\\1991-find-the-middle-index-in-array.cpp\\Solution\\findMiddleIndex(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "void addNodeAtLast(ListNode** head, int val) {\r         \r         ListNode* temp = new ListNode(val);\r         ListNode* last = *head;\r         \r         while(last->next != NULL) {\r             last = last->next;\r         }\r \r         last->next = temp;\r         return;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_addNodeAtLast_ListNodemulmul_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_addNodeAtLast_ListNodemulmul_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2-add-two-numbers.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode**> AKA_VECTOR_INIT_head;\nstd::vector<ListNode*> AKA_VECTOR_INIT_AKA_VECTOR_INIT_head_0;\n\n\n/* SubStructDataNode AKA_VECTOR_INIT_head_0_0 */\n/* ConstructorDataNode ListNode() */\nAKA_mark(\"Calling: .\\\\p59\\\\2-add-two-numbers\\\\2-add-two-numbers.cpp\\\\ListNode\\\\ListNode()|ROOT\\\\2-add-two-numbers.cpp\\\\addNodeAtLast(ListNode**,int)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\AKA_VECTOR_INIT_head_0_0\\\\AKA_VECTOR_INIT_head_0_0\\\\ListNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0_0 = new ::ListNode();\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_0_0).val=1091049687;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0_0).next;\n\nAKA_VECTOR_INIT_AKA_VECTOR_INIT_head_0.push_back(AKA_VECTOR_INIT_head_0_0);\n\n\n/* SubStructDataNode AKA_VECTOR_INIT_head_0_1 */\n/* ConstructorDataNode ListNode(int,ListNode*) */\n/* NormalNumberDataNode x */\nint head01_x=-22645202;\n/* PointerStructureDataNode next */\nListNode* head01_next;\nAKA_mark(\"Calling: .\\\\p59\\\\2-add-two-numbers\\\\2-add-two-numbers.cpp\\\\ListNode\\\\ListNode(int,ListNode*)|ROOT\\\\2-add-two-numbers.cpp\\\\addNodeAtLast(ListNode**,int)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\AKA_VECTOR_INIT_head_0_1\\\\AKA_VECTOR_INIT_head_0_1\\\\ListNode(int,ListNode*)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0_1 = new ::ListNode(head01_x,head01_next);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_0_1).val=-938172056;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0_1).next;\n\nAKA_VECTOR_INIT_AKA_VECTOR_INIT_head_0.push_back(AKA_VECTOR_INIT_head_0_1);\n\nauto AKA_VECTOR_INIT_head_0 = &(AKA_VECTOR_INIT_AKA_VECTOR_INIT_head_0[0]);\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode** head = AKA_VECTOR_INIT_head[0];\n\n\nint val=-94397360;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* NormalNumberDataNode val */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_addNodeAtLast_ListNodemulmul_int_random_0\");AKA_INSTANCE___Solution->addNodeAtLast(head,val);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p59\\\\2-add-two-numbers\\\\2-add-two-numbers.cpp\\\\Solution\\\\addNodeAtLast(ListNode**,int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1952-three-divisors.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     // Add Node at Beginning of Linked List\r     void addNodeAtLast(ListNode** head, int val) {\r         \r         ListNode* temp = new ListNode(val);\r         ListNode* last = *head;\r         \r         while(last->next != NULL) {\r             last = last->next;\r         }\r \r         last->next = temp;\r         return;\r     }\r     \r     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {\r         \r        ListNode* res = NULL;\r         \r         if(l1 == NULL && l2 == NULL)                                    return NULL;\r         if(l1 == NULL)                                                  return l2;\r         if(l2 == NULL)                                                  return l1;\r         \r         // Reverse both Linked List\r         ListNode* res1 = NULL, *res2 = NULL;\r         \r         int carry = 0;\r         int i = 0;\r         \r         while(l1 != NULL && l2 != NULL) {\r             \r             int val = l1->val + l2->val + carry;\r             \r             if(val >= 10) {\r                 carry = val / 10;\r                 val = val % 10;\r             }\r             \r             else {\r                 carry = 0;\r             }\r             \r             l1 = l1->next;\r             l2 = l2->next;\r             \r             if(i == 0)                                                  res = new ListNode(val);\r             else                                                        addNodeAtLast(&res, val);\r             \r             i++;\r         }\r         \r         while(l1 != NULL) {\r             \r             int val = l1->val + carry;\r             \r             if(val >= 10) {\r                 carry = val / 10;\r                 val = val % 10;\r             }\r             \r             else {\r                 carry = 0;\r             }\r             \r             l1 = l1->next;\r             \r             if(i == 0)                                                  res = new ListNode(val);\r             else                                                        addNodeAtLast(&res, val);\r             \r             i++;\r         }\r         \r         while(l2 != NULL) {\r             \r             int val = l2->val + carry;\r             \r             if(val >= 10) {\r                 carry = val / 10;\r                 val = val % 10;\r             }\r             \r             else {\r                 carry = 0;\r             }\r             \r             l2 = l2->next;\r             \r             if(i == 0)                                                  res = new ListNode(val);\r             else                                                        addNodeAtLast(&res, val);\r             \r             i++;\r         }\r         \r         if(carry > 0) {\r             \r             if(i == 0)                                                  res = new ListNode(carry);\r             else                                                        addNodeAtLast(&res, carry);\r             \r             i++;\r         }\r         \r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p59\\2-add-two-numbers\\2-add-two-numbers.cpp\\Solution\\addNodeAtLast(ListNode**,int)"
+    },
+    {
+        "f": [],
+        "fm": "bool isValid(string s) {\r     \r         int n = s.length();\r         \r         if(n == 0)                                  return true;\r         \r         stack<char> w;\r         \r         for(int i=n-1; i>=0; i--) {\r             \r             char x = s[i];\r             \r             if(x == ')' || x == ']' || x == '}')         w.push(x);\r             \r             else {\r                 \r                 if(w.size() == 0)                       return false;\r                 \r                 char temp = w.top();\r \r                 if(x == '(' && temp == ')')              w.pop();  \r                 else if(x == '{' && temp == '}')         w.pop();  \r                 else if(x == '[' && temp == ']')         w.pop();  \r                 else                                     return false;\r             }\r         }\r         \r         return (w.size() == 0);\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isValid_string_random_4(void) {\n{\nAKA_test_case_name=\"Solution_isValid_string_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\20-valid-parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName980172 = new char[2];akaRandomName980172[0] = -73;akaRandomName980172[1] = '\\0';string s=akaRandomName980172;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isValid_string_random_4\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isValid(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p59\\\\20-valid-parentheses\\\\20-valid-parentheses.cpp\\\\Solution\\\\isValid(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1952-three-divisors.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r    \r     bool isValid(string s) {\r     \r         int n = s.length();\r         \r         if(n == 0)                                  return true;\r         \r         stack<char> w;\r         \r         for(int i=n-1; i>=0; i--) {\r             \r             char x = s[i];\r             \r             if(x == ')' || x == ']' || x == '}')         w.push(x);\r             \r             else {\r                 \r                 if(w.size() == 0)                       return false;\r                 \r                 char temp = w.top();\r \r                 if(x == '(' && temp == ')')              w.pop();  \r                 else if(x == '{' && temp == '}')         w.pop();  \r                 else if(x == '[' && temp == ']')         w.pop();  \r                 else                                     return false;\r             }\r         }\r         \r         return (w.size() == 0);\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p59\\20-valid-parentheses\\20-valid-parentheses.cpp\\Solution\\isValid(string)"
+    }
+]

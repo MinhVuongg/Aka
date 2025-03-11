@@ -1,0 +1,98 @@
+[
+    {
+        "f": [],
+        "fm": "bool isThree(int n) {\r     \r         int c = 0;\r         \r         if(n <= 3)                                  return false;\r         \r         for(int i=2; i<n; i++) {\r             \r             if(n % i == 0) {\r                 c++;\r             }\r             \r             if(c >= 2)                              return false;\r         }\r         \r         if(c == 0)                                  return false;\r         \r         return (c == 1);\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isThree_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_isThree_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1952-three-divisors.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isThree_int_random_3\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isThree(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p56\\\\1952-three-divisors\\\\1952-three-divisors.cpp\\\\Solution\\\\isThree(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1952-three-divisors.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isThree_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_isThree_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1952-three-divisors.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=0;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isThree_int_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isThree(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p56\\\\1952-three-divisors\\\\1952-three-divisors.cpp\\\\Solution\\\\isThree(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1952-three-divisors.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=0;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     bool isThree(int n) {\r     \r         int c = 0;\r         \r         if(n <= 3)                                  return false;\r         \r         for(int i=2; i<n; i++) {\r             \r             if(n % i == 0) {\r                 c++;\r             }\r             \r             if(c >= 2)                              return false;\r         }\r         \r         if(c == 0)                                  return false;\r         \r         return (c == 1);\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p56\\1952-three-divisors\\1952-three-divisors.cpp\\Solution\\isThree(int)"
+    },
+    {
+        "f": [],
+        "fm": "string makeFancyString(string s) {\r     \r         string res = \"\";\r         int n = s.length();\r         \r         for(int i=0; i<n; i++) {\r             \r             // Check whether the substring having the same character starting at index i has 3 or more consecutive char or not\r             int k = i;\r             int count = 0;\r             \r             while(k + 1 < n && s[k] == s[k + 1])    k++;\r             \r             // Same char is from index i to k i.e [i, k]\r             count = k - i + 1;\r             \r             if(count >= 3)                          res += s.substr(i, 2);\r             else                                    res += s.substr(i, count);\r                         \r             i = k;\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_makeFancyString_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_makeFancyString_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1957-delete-characters-to-make-fancy-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName82654 = new char[2];akaRandomName82654[0] = -119;akaRandomName82654[1] = '\\0';string s=akaRandomName82654;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_makeFancyString_string_random_0\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->makeFancyString(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p56\\\\1957-delete-characters-to-make-fancy-string\\\\1957-delete-characters-to-make-fancy-string.cpp\\\\Solution\\\\makeFancyString(string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1952-three-divisors.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     string makeFancyString(string s) {\r     \r         string res = \"\";\r         int n = s.length();\r         \r         for(int i=0; i<n; i++) {\r             \r             // Check whether the substring having the same character starting at index i has 3 or more consecutive char or not\r             int k = i;\r             int count = 0;\r             \r             while(k + 1 < n && s[k] == s[k + 1])    k++;\r             \r             // Same char is from index i to k i.e [i, k]\r             count = k - i + 1;\r             \r             if(count >= 3)                          res += s.substr(i, 2);\r             else                                    res += s.substr(i, count);\r                         \r             i = k;\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p56\\1957-delete-characters-to-make-fancy-string\\1957-delete-characters-to-make-fancy-string.cpp\\Solution\\makeFancyString(string)"
+    },
+    {
+        "f": [],
+        "fm": "int minStoneSum(vector<int>& piles, int k) {\r         \r         // Form max heap\r         priority_queue<int> pq;\r         \r         for(auto &x : piles)                        pq.push(x);\r         \r         while(k-- && pq.empty() == false) {\r             \r             int temp = pq.top();\r             pq.pop();\r             \r             int remStones = floor(temp / 2);\r             pq.push(temp - remStones);\r         }\r         \r         int res = 0;\r         \r         while(pq.empty() == false) {\r             res += pq.top();\r             pq.pop();\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minStoneSum_vector_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_minStoneSum_vector_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1962-remove-stones-to-minimize-the-total.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> piles;\n\n\nint k=-1143472062;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode piles */\nint piles_element0=-1800284779;\npiles.push_back(piles_element0);\nint piles_element1=-339404523;\npiles.push_back(piles_element1);\nint piles_element2=2039455640;\npiles.push_back(piles_element2);\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minStoneSum_vector_int_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minStoneSum(piles,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p56\\\\1962-remove-stones-to-minimize-the-total\\\\1962-remove-stones-to-minimize-the-total.cpp\\\\Solution\\\\minStoneSum(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_piles;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1952-three-divisors.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int minStoneSum(vector<int>& piles, int k) {\r         \r         // Form max heap\r         priority_queue<int> pq;\r         \r         for(auto &x : piles)                        pq.push(x);\r         \r         while(k-- && pq.empty() == false) {\r             \r             int temp = pq.top();\r             pq.pop();\r             \r             int remStones = floor(temp / 2);\r             pq.push(temp - remStones);\r         }\r         \r         int res = 0;\r         \r         while(pq.empty() == false) {\r             res += pq.top();\r             pq.pop();\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p56\\1962-remove-stones-to-minimize-the-total\\1962-remove-stones-to-minimize-the-total.cpp\\Solution\\minStoneSum(vector<int>&,int)"
+    }
+]

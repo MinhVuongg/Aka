@@ -1,0 +1,165 @@
+[
+    {
+        "f": [],
+        "fm": "int findLUSlength(string a, string b) {\r     \r         // Find the length of Longest Uncommon Subsequence between a and b\r         int res = -1;\r         \r         int l = max(a.length(), b.length());\r         \r         if(a != b)                                     res = l;\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findLUSlength_string_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_findLUSlength_string_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\521-longest-uncommon-subsequence-i.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName488126 = new char[2];akaRandomName488126[0] = -70;akaRandomName488126[1] = '\\0';string a=akaRandomName488126;\nchar* akaRandomName404256 = new char[2];akaRandomName404256[0] = 109;akaRandomName404256[1] = '\\0';string b=akaRandomName404256;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode a */\n/* NormalStringDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findLUSlength_string_string_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findLUSlength(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p93\\\\521-longest-uncommon-subsequence-i\\\\521-longest-uncommon-subsequence-i.cpp\\\\Solution\\\\findLUSlength(string,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\521-longest-uncommon-subsequence-i.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName263832 = new char[2];akaRandomName263832[0] = -70;akaRandomName263832[1] = '\\0';string a=akaRandomName263832;\nchar* akaRandomName133829 = new char[2];akaRandomName133829[0] = 109;akaRandomName133829[1] = '\\0';string b=akaRandomName133829;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode a */\n/* NormalStringDataNode b */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findLUSlength_string_string_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_findLUSlength_string_string_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\521-longest-uncommon-subsequence-i.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName322651 = new char[2];akaRandomName322651[0] = 98;akaRandomName322651[1] = '\\0';string a=akaRandomName322651;\nstring b=\"\";\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode a */\n/* NormalStringDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findLUSlength_string_string_directed_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findLUSlength(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p93\\\\521-longest-uncommon-subsequence-i\\\\521-longest-uncommon-subsequence-i.cpp\\\\Solution\\\\findLUSlength(string,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\521-longest-uncommon-subsequence-i.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName729125 = new char[2];akaRandomName729125[0] = 98;akaRandomName729125[1] = '\\0';string a=akaRandomName729125;\nstring b=\"\";\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode a */\n/* NormalStringDataNode b */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int findLUSlength(string a, string b) {\r     \r         // Find the length of Longest Uncommon Subsequence between a and b\r         int res = -1;\r         \r         int l = max(a.length(), b.length());\r         \r         if(a != b)                                     res = l;\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p93\\521-longest-uncommon-subsequence-i\\521-longest-uncommon-subsequence-i.cpp\\Solution\\findLUSlength(string,string)"
+    },
+    {
+        "f": [],
+        "fm": "bool checkSubarraySum(vector<int>& v, int k) {\r     \r         int n = v.size();\r       \r         if(n == 0)                              return false;\r         \r         int sum = 0, pre = 0;\r         unordered_set<int> w;\r         \r //         S1 = k * n + x\r //         S2 = k * m + x\r \r //         So, (S1 - S2) = k * (n - m) i.e (S1 - S2) is divisible by k\r         \r         for(int i=0; i<n; i++) {\r             \r             sum += v[i];\r             \r             int mod;\r             \r             if(k == 0)                          mod = sum;\r             else                                mod = sum % k;\r             \r             if(w.count(mod))                    return true;\r             \r             w.insert(pre);\r             pre = mod;\r         }\r         \r         return false;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_checkSubarraySum_vector_int_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_checkSubarraySum_vector_int_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\523-continuous-subarray-sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> v;\n\n\nint k=-1003759178;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nint v_element0=-1949021200;\nv.push_back(v_element0);\nint v_element1=-1766474643;\nv.push_back(v_element1);\nint v_element2=-426908175;\nv.push_back(v_element2);\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_checkSubarraySum_vector_int_int_random_4\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->checkSubarraySum(v,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p93\\\\523-continuous-subarray-sum\\\\523-continuous-subarray-sum.cpp\\\\Solution\\\\checkSubarraySum(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\523-continuous-subarray-sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> v;\n\n\nint k=-1003759178;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nint v_element0=-1949021200;\nv.push_back(v_element0);\nint v_element1=-1766474643;\nv.push_back(v_element1);\nint v_element2=-426908175;\nv.push_back(v_element2);\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_checkSubarraySum_vector_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_checkSubarraySum_vector_int_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\523-continuous-subarray-sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> v;\n\n\nint k=0;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_checkSubarraySum_vector_int_int_directed_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->checkSubarraySum(v,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p93\\\\523-continuous-subarray-sum\\\\523-continuous-subarray-sum.cpp\\\\Solution\\\\checkSubarraySum(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\523-continuous-subarray-sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> v;\n\n\nint k=0;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     bool checkSubarraySum(vector<int>& v, int k) {\r     \r         int n = v.size();\r       \r         if(n == 0)                              return false;\r         \r         int sum = 0, pre = 0;\r         unordered_set<int> w;\r         \r //         S1 = k * n + x\r //         S2 = k * m + x\r \r //         So, (S1 - S2) = k * (n - m) i.e (S1 - S2) is divisible by k\r         \r         for(int i=0; i<n; i++) {\r             \r             sum += v[i];\r             \r             int mod;\r             \r             if(k == 0)                          mod = sum;\r             else                                mod = sum % k;\r             \r             if(w.count(mod))                    return true;\r             \r             w.insert(pre);\r             pre = mod;\r         }\r         \r         return false;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p93\\523-continuous-subarray-sum\\523-continuous-subarray-sum.cpp\\Solution\\checkSubarraySum(vector<int>&,int)"
+    },
+    {
+        "f": [
+            "int n;",
+            "vector<int> sum;"
+        ],
+        "fm": "int pickIndex() {\r         \r         int res;\r         \r         int index = rand() % sum.back();\r         \r         res = upper_bound(sum.begin(), sum.end(), index) - sum.begin();\r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_pickIndex_random_2(void) {\n{\nAKA_test_case_name=\"Solution_pickIndex_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution(vector<int>&) */\n/* VectorDataNode w */\nvector<int> AKA_INSTANCE___Solution_w;\nint AKA_INSTANCE___Solution_w_element0=-762805986;\nAKA_INSTANCE___Solution_w.push_back(AKA_INSTANCE___Solution_w_element0);\nint AKA_INSTANCE___Solution_w_element1=1865524163;\nAKA_INSTANCE___Solution_w.push_back(AKA_INSTANCE___Solution_w_element1);\nint AKA_INSTANCE___Solution_w_element2=946269919;\nAKA_INSTANCE___Solution_w.push_back(AKA_INSTANCE___Solution_w_element2);\nAKA_mark(\"Calling: .\\\\p93\\\\528-random-pick-with-weight\\\\528-random-pick-with-weight.cpp\\\\Solution\\\\Solution(vector<int>&)|ROOT\\\\528-random-pick-with-weight.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution(vector<int>&)\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution(AKA_INSTANCE___Solution_w);\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* VectorDataNode sum */\nint AKA_INSTANCE___Solution_sum_element0=293484437;\nAKA_INSTANCE___Solution->sum.push_back(AKA_INSTANCE___Solution_sum_element0);\nint AKA_INSTANCE___Solution_sum_element1=-512840877;\nAKA_INSTANCE___Solution->sum.push_back(AKA_INSTANCE___Solution_sum_element1);\nint AKA_INSTANCE___Solution_sum_element2=-1841405060;\nAKA_INSTANCE___Solution->sum.push_back(AKA_INSTANCE___Solution_sum_element2);\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_pickIndex_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->pickIndex();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p93\\\\528-random-pick-with-weight\\\\528-random-pick-with-weight.cpp\\\\Solution\\\\pickIndex()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution(vector<int>&) */\n/* VectorDataNode w */\nvector<int> AKA_INSTANCE___Solution_w;\nint AKA_INSTANCE___Solution_w_element0=-762805986;\nAKA_INSTANCE___Solution_w.push_back(AKA_INSTANCE___Solution_w_element0);\nint AKA_INSTANCE___Solution_w_element1=1865524163;\nAKA_INSTANCE___Solution_w.push_back(AKA_INSTANCE___Solution_w_element1);\nint AKA_INSTANCE___Solution_w_element2=946269919;\nAKA_INSTANCE___Solution_w.push_back(AKA_INSTANCE___Solution_w_element2);\nAKA_mark(\"Calling: .\\\\p93\\\\528-random-pick-with-weight\\\\528-random-pick-with-weight.cpp\\\\Solution\\\\Solution(vector<int>&)|ROOT\\\\528-random-pick-with-weight.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution(vector<int>&)\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution(AKA_INSTANCE___Solution_w);\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* VectorDataNode sum */\nint AKA_INSTANCE___Solution_sum_element0=293484437;\nAKA_INSTANCE___Solution->sum.push_back(AKA_INSTANCE___Solution_sum_element0);\nint AKA_INSTANCE___Solution_sum_element1=-512840877;\nAKA_INSTANCE___Solution->sum.push_back(AKA_INSTANCE___Solution_sum_element1);\nint AKA_INSTANCE___Solution_sum_element2=-1841405060;\nAKA_INSTANCE___Solution->sum.push_back(AKA_INSTANCE___Solution_sum_element2);\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   \r     int n;\r     vector<int> sum;\r     \r     Solution(vector<int>& w) {\r         \r         n = w.size();\r         \r         for(int i=1; i<n; i++)                    w[i] += w[i-1];\r         sum = w;\r     }\r     \r     \r     int pickIndex() {\r         \r         int res;\r         \r         int index = rand() % sum.back();\r         \r         res = upper_bound(sum.begin(), sum.end(), index) - sum.begin();\r         return res;\r     }\r     \r };",
+        "c": [
+            "Solution(vector<int>& w) {\r\n        \r\n        n = w.size();\r\n        \r\n        for(int i=1; i<n; i++)                    w[i] += w[i-1];\r\n        sum = w;\r\n    }"
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p93\\528-random-pick-with-weight\\528-random-pick-with-weight.cpp\\Solution\\pickIndex()"
+    },
+    {
+        "f": [],
+        "fm": "int maxSubArray(vector<int>& a) {\r         \r         int n = a.size();\r         \r         int o_sum = a[0];\r         int cur_sum = a[0];\r \r         for(int i=1; i<n; i++) {\r \r             if(cur_sum > 0)                     cur_sum += a[i];\r             else                                cur_sum = a[i];\r \r             if(o_sum < cur_sum)                 o_sum = cur_sum;\r         }\r \r         return o_sum;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maxSubArray_vector_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_maxSubArray_vector_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\53-maximum-subarray.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\n/* element #0 : null value -> no code */\na.push_back(a_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maxSubArray_vector_int_directed_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maxSubArray(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p93\\\\53-maximum-subarray\\\\53-maximum-subarray.cpp\\\\Solution\\\\maxSubArray(vector<int>&)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\53-maximum-subarray.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\n/* element #0 : null value -> no code */\na.push_back(a_element0);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maxSubArray_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_maxSubArray_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\53-maximum-subarray.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=-259617909;\na.push_back(a_element0);\nint a_element1=-1479909790;\na.push_back(a_element1);\nint a_element2=1733664729;\na.push_back(a_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maxSubArray_vector_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maxSubArray(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p93\\\\53-maximum-subarray\\\\53-maximum-subarray.cpp\\\\Solution\\\\maxSubArray(vector<int>&)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\53-maximum-subarray.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=-259617909;\na.push_back(a_element0);\nint a_element1=-1479909790;\na.push_back(a_element1);\nint a_element2=1733664729;\na.push_back(a_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maxSubArray_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_maxSubArray_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\53-maximum-subarray.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=1480686522;\na.push_back(a_element0);\nint a_element1=471097448;\na.push_back(a_element1);\nint a_element2=192229739;\na.push_back(a_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maxSubArray_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maxSubArray(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p93\\\\53-maximum-subarray\\\\53-maximum-subarray.cpp\\\\Solution\\\\maxSubArray(vector<int>&)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\53-maximum-subarray.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=1480686522;\na.push_back(a_element0);\nint a_element1=471097448;\na.push_back(a_element1);\nint a_element2=192229739;\na.push_back(a_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int maxSubArray(vector<int>& a) {\r         \r         int n = a.size();\r         \r         int o_sum = a[0];\r         int cur_sum = a[0];\r \r         for(int i=1; i<n; i++) {\r \r             if(cur_sum > 0)                     cur_sum += a[i];\r             else                                cur_sum = a[i];\r \r             if(o_sum < cur_sum)                 o_sum = cur_sum;\r         }\r \r         return o_sum;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p93\\53-maximum-subarray\\53-maximum-subarray.cpp\\Solution\\maxSubArray(vector<int>&)"
+    }
+]

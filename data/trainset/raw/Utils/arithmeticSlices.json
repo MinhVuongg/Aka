@@ -1,0 +1,32 @@
+[
+    {
+        "f": [],
+        "fm": "int sum1toN(int n) {\r         return n * (n+1) / 2;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     //\r     // It's easy to find out how many 3-length slices in an arithmetic array with N length.\r     //\r     //   len = 3, then  1 slices, sum(1)\r     //   len = 4, then  3 slices, sum(1,2) - TWO 3-length slices + ONE 4-length slice\r     //   len = 5, then  6 slices, sum(1,2,3) - THREE 3-length slices + TWO 4-length slices + ONE 5-length slice\r     //   len = 6, then 10 slices, sum(1,2,3,4) - ...\r     //   len = 7, then 15 slices, sum(1,2,3,4,5) - ..\r     //\r     // So, with N length arithmetic array, there are Sum[1, N-3+1] 3-length slices\r     //\r     // And, we know the formula sum from 1 to n is:\r     //\r     //                  n * ( n + 1 )\r     //    sum [1, n] = ---------------\r     //                       2\r     // Then, we could have the solution - O(n) Time with O(1) Space\r     //\r     \r     int sum1toN(int n) {\r         return n * (n+1) / 2;\r     }\r \r     int numberOfArithmeticSlices(vector<int>& A) {\r         int result = 0;\r         int len = 0; // the current length of arithmetic\r         for (int i=2; i<A.size(); i++) {\r             if (A[i] - A[i-1] == A[i-1] - A[i-2]) {\r                 len++;\r             }else{\r                 result += sum1toN(len);\r                 len=0;\r             }\r         }\r         return len==0 ? result : result + sum1toN(len);\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\arithmeticSlices\\ArithmeticSlices.cpp\\Solution\\sum1toN(int)"
+    },
+    {
+        "f": [],
+        "fm": "int numberOfArithmeticSlices(vector<int>& A) {\r         int result = 0;\r         int len = 0; // the current length of arithmetic\r         for (int i=2; i<A.size(); i++) {\r             if (A[i] - A[i-1] == A[i-1] - A[i-2]) {\r                 len++;\r             }else{\r                 result += sum1toN(len);\r                 len=0;\r             }\r         }\r         return len==0 ? result : result + sum1toN(len);\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     //\r     // It's easy to find out how many 3-length slices in an arithmetic array with N length.\r     //\r     //   len = 3, then  1 slices, sum(1)\r     //   len = 4, then  3 slices, sum(1,2) - TWO 3-length slices + ONE 4-length slice\r     //   len = 5, then  6 slices, sum(1,2,3) - THREE 3-length slices + TWO 4-length slices + ONE 5-length slice\r     //   len = 6, then 10 slices, sum(1,2,3,4) - ...\r     //   len = 7, then 15 slices, sum(1,2,3,4,5) - ..\r     //\r     // So, with N length arithmetic array, there are Sum[1, N-3+1] 3-length slices\r     //\r     // And, we know the formula sum from 1 to n is:\r     //\r     //                  n * ( n + 1 )\r     //    sum [1, n] = ---------------\r     //                       2\r     // Then, we could have the solution - O(n) Time with O(1) Space\r     //\r     \r     int sum1toN(int n) {\r         return n * (n+1) / 2;\r     }\r \r     int numberOfArithmeticSlices(vector<int>& A) {\r         int result = 0;\r         int len = 0; // the current length of arithmetic\r         for (int i=2; i<A.size(); i++) {\r             if (A[i] - A[i-1] == A[i-1] - A[i-2]) {\r                 len++;\r             }else{\r                 result += sum1toN(len);\r                 len=0;\r             }\r         }\r         return len==0 ? result : result + sum1toN(len);\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\arithmeticSlices\\ArithmeticSlices.cpp\\Solution\\numberOfArithmeticSlices(vector<int>&)"
+    }
+]

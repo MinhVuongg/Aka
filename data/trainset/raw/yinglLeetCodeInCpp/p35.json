@@ -1,0 +1,30 @@
+[
+    {
+        "f": [],
+        "fm": "bool isValid(string s) {\r     stack<char> left_pars;\r     const char *str = s.c_str();\r \r     while (*str != '\\0') {\r       char c = *str;\r \r       if (('(' == c) || ('[' == c) || ('{' == c)) {\r         left_pars.push(c);\r       }\r       else {\r         if (left_pars.empty()) {\r           return false;\r         }\r \r         char expected;\r \r         switch (c) {\r           case ')':\r             expected = '(';\r             break;\r           case ']':\r             expected = '[';\r             break;\r           case '}':\r             expected = '{';\r             break;\r         }\r \r         if (left_pars.top() == expected) {\r           left_pars.pop();\r         }\r         else {\r           return false;\r         }\r       }\r \r       ++str;\r     }\r \r     return left_pars.empty();\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isValid_string_random_1(void) {\n{\nAKA_test_case_name=\"Solution_isValid_string_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\valid_parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName671339 = new char[2];akaRandomName671339[0] = 58;akaRandomName671339[1] = '\\0';string s=akaRandomName671339;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isValid_string_random_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isValid(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-29\\\\valid_parentheses.cpp\\\\Solution\\\\isValid(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\valid_parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName940840 = new char[2];akaRandomName940840[0] = 58;akaRandomName940840[1] = '\\0';string s=akaRandomName940840;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool isValid(string s) {\r     stack<char> left_pars;\r     const char *str = s.c_str();\r \r     while (*str != '\\0') {\r       char c = *str;\r \r       if (('(' == c) || ('[' == c) || ('{' == c)) {\r         left_pars.push(c);\r       }\r       else {\r         if (left_pars.empty()) {\r           return false;\r         }\r \r         char expected;\r \r         switch (c) {\r           case ')':\r             expected = '(';\r             break;\r           case ']':\r             expected = '[';\r             break;\r           case '}':\r             expected = '{';\r             break;\r         }\r \r         if (left_pars.top() == expected) {\r           left_pars.pop();\r         }\r         else {\r           return false;\r         }\r       }\r \r       ++str;\r     }\r \r     return left_pars.empty();\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-29\\valid_parentheses.cpp\\Solution\\isValid(string)"
+    }
+]

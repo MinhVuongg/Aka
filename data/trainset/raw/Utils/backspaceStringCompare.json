@@ -1,0 +1,33 @@
+[
+    {
+        "f": [],
+        "fm": "void removeBackspaces(string &s) {\r         int i = 0;\r         for(int i=0; i<s.size(); i++) {\r             if (s[i] == '#') {\r                 int backSteps = i>0 ? 2 : 1;\r                 s.erase(i-backSteps + 1, backSteps);\r                 i -= backSteps;\r             } \r         }\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r private:    \r     void removeBackspaces(string &s) {\r         int i = 0;\r         for(int i=0; i<s.size(); i++) {\r             if (s[i] == '#') {\r                 int backSteps = i>0 ? 2 : 1;\r                 s.erase(i-backSteps + 1, backSteps);\r                 i -= backSteps;\r             } \r         }\r     }\r     \r public:\r     bool backspaceCompare(string S, string T) {\r         removeBackspaces(S);\r         removeBackspaces(T);\r         return S == T;\r     }\r };",
+        "c": [
+            "",
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\backspaceStringCompare\\BackspaceStringCompare.cpp\\Solution\\removeBackspaces(string&)"
+    },
+    {
+        "f": [],
+        "fm": "bool backspaceCompare(string S, string T) {\r         removeBackspaces(S);\r         removeBackspaces(T);\r         return S == T;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r private:    \r     void removeBackspaces(string &s) {\r         int i = 0;\r         for(int i=0; i<s.size(); i++) {\r             if (s[i] == '#') {\r                 int backSteps = i>0 ? 2 : 1;\r                 s.erase(i-backSteps + 1, backSteps);\r                 i -= backSteps;\r             } \r         }\r     }\r     \r public:\r     bool backspaceCompare(string S, string T) {\r         removeBackspaces(S);\r         removeBackspaces(T);\r         return S == T;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\backspaceStringCompare\\BackspaceStringCompare.cpp\\Solution\\backspaceCompare(string,string)"
+    }
+]

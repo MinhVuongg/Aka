@@ -1,0 +1,192 @@
+[
+    {
+        "f": [],
+        "fm": "int basicTest12(int a){\r \ta /= 3;\r \ta *= 2;\r \tif (a>0)\r \t\treturn a;\r \treturn 1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_basicTest12_int_random_1(void) {\n{\nAKA_test_case_name=\"basicTest12_int_random_1\";\n\n// set up\n;\n\n\n\nint a=-684608538;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test basicTest12_int_random_1\");int AKA_ACTUAL_OUTPUT=basicTest12(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\basicTest.c\\\\basicTest12(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1756772476;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_basicTest12_int_random_0(void) {\n{\nAKA_test_case_name=\"basicTest12_int_random_0\";\n\n// set up\n;\n\n\n\nint a=306672848;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test basicTest12_int_random_0\");int AKA_ACTUAL_OUTPUT=basicTest12(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\basicTest.c\\\\basicTest12(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=1218881918;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\basicTest.c\\basicTest12(int)"
+    },
+    {
+        "f": [],
+        "fm": "int basicTest15(bool a){\r \tif (a)\r \t\treturn 1;\r \telse\r \t\treturn 0;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_basicTest15_bool_random_1(void) {\n{\nAKA_test_case_name=\"basicTest15_bool_random_1\";\n\n// set up\n;\n\n\n\nbool a=true;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test basicTest15_bool_random_1\");int AKA_ACTUAL_OUTPUT=basicTest15(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\basicTest.c\\\\basicTest15(bool)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1756772476;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_basicTest15_bool_random_0(void) {\n{\nAKA_test_case_name=\"basicTest15_bool_random_0\";\n\n// set up\n;\n\n\n\nbool a=false;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test basicTest15_bool_random_0\");int AKA_ACTUAL_OUTPUT=basicTest15(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\basicTest.c\\\\basicTest15(bool)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=1218881918;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\basicTest.c\\basicTest15(bool)"
+    },
+    {
+        "f": [],
+        "fm": "int basicTest14(char sv_name_2,int sv_age){\r \tchar c = sv_name_2;\r \r \tif (sv_age > 0){\r \t\tif (c == 'a')\r \t\t\treturn 0;\r \t\telse\r \t\t\treturn 1;\r \t} else\r \t\treturn 2;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_basicTest14_char_int_random_0(void) {\n{\nAKA_test_case_name=\"basicTest14_char_int_random_0\";\n\n// set up\n;\n\n\nchar sv_name_2=-35;\n\n\nint sv_age=40519063;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode sv_name_2 */\n/* NormalNumberDataNode sv_age */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test basicTest14_char_int_random_0\");int AKA_ACTUAL_OUTPUT=basicTest14(sv_name_2,sv_age);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\basicTest.c\\\\basicTest14(char,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1756772476;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_basicTest14_char_int_random_1(void) {\n{\nAKA_test_case_name=\"basicTest14_char_int_random_1\";\n\n// set up\n;\n\n\nchar sv_name_2=-18;\n\n\nint sv_age=-754661049;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode sv_name_2 */\n/* NormalNumberDataNode sv_age */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test basicTest14_char_int_random_1\");int AKA_ACTUAL_OUTPUT=basicTest14(sv_name_2,sv_age);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\basicTest.c\\\\basicTest14(char,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=1218881918;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\basicTest.c\\basicTest14(char,int)"
+    },
+    {
+        "f": [],
+        "fm": "int basicTest16(bool a){\r \tif (!a)\r \t\treturn 1;\r \telse\r \t\treturn 0;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_basicTest16_bool_random_0(void) {\n{\nAKA_test_case_name=\"basicTest16_bool_random_0\";\n\n// set up\n;\n\n\n\nbool a=false;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test basicTest16_bool_random_0\");int AKA_ACTUAL_OUTPUT=basicTest16(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\basicTest.c\\\\basicTest16(bool)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1756772476;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_basicTest16_bool_random_1(void) {\n{\nAKA_test_case_name=\"basicTest16_bool_random_1\";\n\n// set up\n;\n\n\n\nbool a=true;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test basicTest16_bool_random_1\");int AKA_ACTUAL_OUTPUT=basicTest16(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\basicTest.c\\\\basicTest16(bool)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=1218881918;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\basicTest.c\\basicTest16(bool)"
+    },
+    {
+        "f": [],
+        "fm": "int basicTest17(int a, int b, int c){\r \tif (a--> b++ + c--){\r \t\tif (c==a)\r \t\t\treturn 1;\r \t\telse\r \t\t\treturn 0;\r \t}\r \telse\r \t\treturn 0;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_basicTest17_int_int_int_random_4(void) {\n{\nAKA_test_case_name=\"basicTest17_int_int_int_random_4\";\n\n// set up\n;\n\n\n\nint a=815194927;\n\n\nint b=1135917753;\n\n\nint c=-1380644999;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode c */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test basicTest17_int_int_int_random_4\");int AKA_ACTUAL_OUTPUT=basicTest17(a,b,c);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\basicTest.c\\\\basicTest17(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1756772476;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_basicTest17_int_int_int_random_0(void) {\n{\nAKA_test_case_name=\"basicTest17_int_int_int_random_0\";\n\n// set up\n;\n\n\n\nint a=-1846577821;\n\n\nint b=940191604;\n\n\nint c=-30474619;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode c */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test basicTest17_int_int_int_random_0\");int AKA_ACTUAL_OUTPUT=basicTest17(a,b,c);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\basicTest.c\\\\basicTest17(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=1218881918;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\basicTest.c\\basicTest17(int,int,int)"
+    }
+]

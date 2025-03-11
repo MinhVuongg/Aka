@@ -1,0 +1,542 @@
+[
+    {
+        "f": [],
+        "fm": "int checkRotations(int elem, vector<int>& A, vector<int>& B) {         int rotA = 0;         int rotB = 0;         for (int i = 0; i < A.size(); i++) {             if (A[i] != elem && B[i] != elem) {                 return -1;             } else if (A[i] != elem) {                 rotA++;             } else if (B[i] != elem) {                 rotB++;             }         }         return min(rotA, rotB);     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_checkRotations_int_vector_int_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_checkRotations_int_vector_int_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1007-minimum-domino-rotations-for-equal-row.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint elem=-1608617546;\nvector<int> A;\nvector<int> B;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode elem */\n/* VectorDataNode A */\nint A_element0=-1364252223;\nA.push_back(A_element0);\nint A_element1=-1891020970;\nA.push_back(A_element1);\n/* VectorDataNode B */\nint B_element0=-2021212909;\nB.push_back(B_element0);\nint B_element1=1027536081;\nB.push_back(B_element1);\nint B_element2=-512290095;\nB.push_back(B_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_checkRotations_int_vector_int_vector_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->checkRotations(elem,A,B);\nAKA_fCall++;AKA_mark(\"Return from: ./2/1007-minimum-domino-rotations-for-equal-row.cpp/Solution/checkRotations(int,vector<int>&,vector<int>&)\");\n\n\nvector<int> EXPECTED_A;\n\nvector<int> EXPECTED_B;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1007-minimum-domino-rotations-for-equal-row.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint elem=-1608617546;\nvector<int> A;\nvector<int> B;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode elem */\n/* VectorDataNode A */\nint A_element0=-1364252223;\nA.push_back(A_element0);\nint A_element1=-1891020970;\nA.push_back(A_element1);\n/* VectorDataNode B */\nint B_element0=-2021212909;\nB.push_back(B_element0);\nint B_element1=1027536081;\nB.push_back(B_element1);\nint B_element2=-512290095;\nB.push_back(B_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int checkRotations(int elem, vector<int>& A, vector<int>& B) {         int rotA = 0;         int rotB = 0;         for (int i = 0; i < A.size(); i++) {             if (A[i] != elem && B[i] != elem) {                 return -1;             } else if (A[i] != elem) {                 rotA++;             } else if (B[i] != elem) {                 rotB++;             }         }         return min(rotA, rotB);     }          int minDominoRotations(vector<int>& A, vector<int>& B) {         int rotations = checkRotations(A[0], A, B);         if (rotations != -1) {             return rotations;         }         return checkRotations(B[0], A, B);     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/2/1007-minimum-domino-rotations-for-equal-row.cpp/Solution/checkRotations(int,vector<int>&,vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int minDominoRotations(vector<int>& A, vector<int>& B) {         int rotations = checkRotations(A[0], A, B);         if (rotations != -1) {             return rotations;         }         return checkRotations(B[0], A, B);     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minDominoRotations_vector_int_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_minDominoRotations_vector_int_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1007-minimum-domino-rotations-for-equal-row.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> A;\nvector<int> B;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode A */\nint A_element0=127671376;\nA.push_back(A_element0);\nint A_element1=-1905491861;\nA.push_back(A_element1);\n/* VectorDataNode B */\nint B_element0=554389717;\nB.push_back(B_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minDominoRotations_vector_int_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minDominoRotations(A,B);\nAKA_fCall++;AKA_mark(\"Return from: ./2/1007-minimum-domino-rotations-for-equal-row.cpp/Solution/minDominoRotations(vector<int>&,vector<int>&)\");\n\n\nvector<int> EXPECTED_A;\n\nvector<int> EXPECTED_B;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1007-minimum-domino-rotations-for-equal-row.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> A;\nvector<int> B;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode A */\nint A_element0=127671376;\nA.push_back(A_element0);\nint A_element1=-1905491861;\nA.push_back(A_element1);\n/* VectorDataNode B */\nint B_element0=554389717;\nB.push_back(B_element0);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minDominoRotations_vector_int_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_minDominoRotations_vector_int_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1007-minimum-domino-rotations-for-equal-row.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> A;\nvector<int> B;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode A */\nint A_element0=535405180;\nA.push_back(A_element0);\n/* VectorDataNode B */\nint B_element0=1923783955;\nB.push_back(B_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minDominoRotations_vector_int_vector_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minDominoRotations(A,B);\nAKA_fCall++;AKA_mark(\"Return from: ./2/1007-minimum-domino-rotations-for-equal-row.cpp/Solution/minDominoRotations(vector<int>&,vector<int>&)\");\n\n\nvector<int> EXPECTED_A;\n\nvector<int> EXPECTED_B;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1007-minimum-domino-rotations-for-equal-row.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> A;\nvector<int> B;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode A */\nint A_element0=535405180;\nA.push_back(A_element0);\n/* VectorDataNode B */\nint B_element0=1923783955;\nB.push_back(B_element0);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int checkRotations(int elem, vector<int>& A, vector<int>& B) {         int rotA = 0;         int rotB = 0;         for (int i = 0; i < A.size(); i++) {             if (A[i] != elem && B[i] != elem) {                 return -1;             } else if (A[i] != elem) {                 rotA++;             } else if (B[i] != elem) {                 rotB++;             }         }         return min(rotA, rotB);     }          int minDominoRotations(vector<int>& A, vector<int>& B) {         int rotations = checkRotations(A[0], A, B);         if (rotations != -1) {             return rotations;         }         return checkRotations(B[0], A, B);     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/2/1007-minimum-domino-rotations-for-equal-row.cpp/Solution/minDominoRotations(vector<int>&,vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "void visitNeighbors(int garden, vector<vector<int>>& graph, vector<int>& flowers) {         vector<bool> colors(4, false); \t\t \t\t// Find all colors already assigned to neighbors         for (int& n : graph[garden]) {             if (flowers[n] != -1) {                 colors[flowers[n] - 1] = true;             }         } \t\t \t\t// Assign the first unassiged color to the current garden         for (int i = 0; i < 4; i++) {             if (!colors[i]) {                 flowers[garden] = i + 1;                 break;             }         }     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_visitNeighbors_int_vector_vector_int_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_visitNeighbors_int_vector_vector_int_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1042-flower-planting-with-no-adjacent.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint garden=177587350;\nvector<vector<int>> graph;\nvector<int> flowers;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode garden */\n/* VectorDataNode graph */\nvector<int> graph_element0;\nint graph_element0_element0=2057007445;\ngraph_element0.push_back(graph_element0_element0);\nint graph_element0_element1=108897432;\ngraph_element0.push_back(graph_element0_element1);\ngraph.push_back(graph_element0);\n/* VectorDataNode flowers */\nint flowers_element0=611842418;\nflowers.push_back(flowers_element0);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_visitNeighbors_int_vector_vector_int_vector_int_random_4\");AKA_INSTANCE___Solution->visitNeighbors(garden,graph,flowers);\nAKA_fCall++;AKA_mark(\"Return from: ./2/1042-flower-planting-with-no-adjacent.cpp/Solution/visitNeighbors(int,vector<vector<int>>&,vector<int>&)\");\n\n/* error assertion */\nvector<vector<int>> EXPECTED_graph;\n\nvector<int> EXPECTED_flowers;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1042-flower-planting-with-no-adjacent.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint garden=177587350;\nvector<vector<int>> graph;\nvector<int> flowers;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode garden */\n/* VectorDataNode graph */\nvector<int> graph_element0;\nint graph_element0_element0=2057007445;\ngraph_element0.push_back(graph_element0_element0);\nint graph_element0_element1=108897432;\ngraph_element0.push_back(graph_element0_element1);\ngraph.push_back(graph_element0);\n/* VectorDataNode flowers */\nint flowers_element0=611842418;\nflowers.push_back(flowers_element0);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     void visitNeighbors(int garden, vector<vector<int>>& graph, vector<int>& flowers) {         vector<bool> colors(4, false); \t\t \t\t// Find all colors already assigned to neighbors         for (int& n : graph[garden]) {             if (flowers[n] != -1) {                 colors[flowers[n] - 1] = true;             }         } \t\t \t\t// Assign the first unassiged color to the current garden         for (int i = 0; i < 4; i++) {             if (!colors[i]) {                 flowers[garden] = i + 1;                 break;             }         }     }          vector<int> gardenNoAdj(int N, vector<vector<int>>& paths) {         vector<vector<int>> graph(N, vector<int>{});         for (int i = 0; i < paths.size(); i++) {             int to = paths[i][0];             int from = paths[i][1];             graph[to - 1].push_back(from - 1);             graph[from - 1].push_back(to - 1);         }         vector<int> flowers(N, -1);         for (int garden = 0; garden < N; garden++) { \t\t// Only visit neighbors of unvisited gardens             if (flowers[garden] == -1) {                 visitNeighbors(garden, graph, flowers);             }         }         return flowers;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/2/1042-flower-planting-with-no-adjacent.cpp/Solution/visitNeighbors(int,vector<vector<int>>&,vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> gardenNoAdj(int N, vector<vector<int>>& paths) {         vector<vector<int>> graph(N, vector<int>{});         for (int i = 0; i < paths.size(); i++) {             int to = paths[i][0];             int from = paths[i][1];             graph[to - 1].push_back(from - 1);             graph[from - 1].push_back(to - 1);         }         vector<int> flowers(N, -1);         for (int garden = 0; garden < N; garden++) { \t\t// Only visit neighbors of unvisited gardens             if (flowers[garden] == -1) {                 visitNeighbors(garden, graph, flowers);             }         }         return flowers;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_gardenNoAdj_int_vector_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_gardenNoAdj_int_vector_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1042-flower-planting-with-no-adjacent.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint N=6;\nvector<vector<int>> paths;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode N */\n/* VectorDataNode paths */\nvector<int> paths_element0;\nint paths_element0_element0=847347590;\npaths_element0.push_back(paths_element0_element0);\npaths.push_back(paths_element0);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_gardenNoAdj_int_vector_vector_int_random_4\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->gardenNoAdj(N,paths);\nAKA_fCall++;AKA_mark(\"Return from: ./2/1042-flower-planting-with-no-adjacent.cpp/Solution/gardenNoAdj(int,vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_paths;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1042-flower-planting-with-no-adjacent.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint N=6;\nvector<vector<int>> paths;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode N */\n/* VectorDataNode paths */\nvector<int> paths_element0;\nint paths_element0_element0=847347590;\npaths_element0.push_back(paths_element0_element0);\npaths.push_back(paths_element0);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     void visitNeighbors(int garden, vector<vector<int>>& graph, vector<int>& flowers) {         vector<bool> colors(4, false); \t\t \t\t// Find all colors already assigned to neighbors         for (int& n : graph[garden]) {             if (flowers[n] != -1) {                 colors[flowers[n] - 1] = true;             }         } \t\t \t\t// Assign the first unassiged color to the current garden         for (int i = 0; i < 4; i++) {             if (!colors[i]) {                 flowers[garden] = i + 1;                 break;             }         }     }          vector<int> gardenNoAdj(int N, vector<vector<int>>& paths) {         vector<vector<int>> graph(N, vector<int>{});         for (int i = 0; i < paths.size(); i++) {             int to = paths[i][0];             int from = paths[i][1];             graph[to - 1].push_back(from - 1);             graph[from - 1].push_back(to - 1);         }         vector<int> flowers(N, -1);         for (int garden = 0; garden < N; garden++) { \t\t// Only visit neighbors of unvisited gardens             if (flowers[garden] == -1) {                 visitNeighbors(garden, graph, flowers);             }         }         return flowers;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/2/1042-flower-planting-with-no-adjacent.cpp/Solution/gardenNoAdj(int,vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "int shortestWay(string source, string target) {         int result = 0;         int skips = 0;         int i = 0;         int j = 0;                  while (i < target.size()) {             if (source[j] == target[i]) {                 skips = 0;                 i++;             } else {                 skips++;                 if (skips == source.size()) {                     return -1;                 }             }             j++;             if (j == source.size() || i == target.size()) {                 result++;                 j = 0;             }         }         return result;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_shortestWay_string_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_shortestWay_string_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1055-shortest-way-to-form-string.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName453720 = new char[2];akaRandomName453720[0] = -60;akaRandomName453720[1] = '\\0';string source=akaRandomName453720;\nchar* akaRandomName942226 = new char[2];akaRandomName942226[0] = 54;akaRandomName942226[1] = '\\0';string target=akaRandomName942226;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode source */\n/* NormalStringDataNode target */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_shortestWay_string_string_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->shortestWay(source,target);\nAKA_fCall++;AKA_mark(\"Return from: ./2/1055-shortest-way-to-form-string.cpp/Solution/shortestWay(string,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1055-shortest-way-to-form-string.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName137916 = new char[2];akaRandomName137916[0] = -60;akaRandomName137916[1] = '\\0';string source=akaRandomName137916;\nchar* akaRandomName148731 = new char[2];akaRandomName148731[0] = 54;akaRandomName148731[1] = '\\0';string target=akaRandomName148731;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode source */\n/* NormalStringDataNode target */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int shortestWay(string source, string target) {         int result = 0;         int skips = 0;         int i = 0;         int j = 0;                  while (i < target.size()) {             if (source[j] == target[i]) {                 skips = 0;                 i++;             } else {                 skips++;                 if (skips == source.size()) {                     return -1;                 }             }             j++;             if (j == source.size() || i == target.size()) {                 result++;                 j = 0;             }         }         return result;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/2/1055-shortest-way-to-form-string.cpp/Solution/shortestWay(string,string)"
+    },
+    {
+        "f": [],
+        "fm": "int countPossibilities(unordered_map<char, int>& charMap, int len) {         if (len == 0) return 0;         int sum = 0;         for (auto& item : charMap) {             if (item.second > 0) {                 item.second--;                 sum += 1 + countPossibilities(charMap, len - 1);                 item.second++;             }         }         return sum;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countPossibilities_unordered_map_char_int_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_countPossibilities_unordered_map_char_int_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1079-letter-tile-possibilities.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nunordered_map<char, int> charMap;\n\n\nint len=-493233952;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* UnorderedMapDataNode charMap */\n/* NormalNumberDataNode len */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countPossibilities_unordered_map_char_int_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countPossibilities(charMap,len);\nAKA_fCall++;AKA_mark(\"Return from: ./2/1079-letter-tile-possibilities.cpp/Solution/countPossibilities(unordered_map<char,int>&,int)\");\n\n\nunordered_map<char, int> EXPECTED_charMap;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1079-letter-tile-possibilities.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nunordered_map<char, int> charMap;\n\n\nint len=-493233952;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* UnorderedMapDataNode charMap */\n/* NormalNumberDataNode len */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int countPossibilities(unordered_map<char, int>& charMap, int len) {         if (len == 0) return 0;         int sum = 0;         for (auto& item : charMap) {             if (item.second > 0) {                 item.second--;                 sum += 1 + countPossibilities(charMap, len - 1);                 item.second++;             }         }         return sum;     }          int numTilePossibilities(string tiles) {         unordered_map<char, int> charMap;         for (char t : tiles) {             charMap[t]++;         }         return countPossibilities(charMap, tiles.size());     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/2/1079-letter-tile-possibilities.cpp/Solution/countPossibilities(unordered_map<char,int>&,int)"
+    },
+    {
+        "f": [],
+        "fm": "int numTilePossibilities(string tiles) {         unordered_map<char, int> charMap;         for (char t : tiles) {             charMap[t]++;         }         return countPossibilities(charMap, tiles.size());     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_numTilePossibilities_string_random_4(void) {\n{\nAKA_test_case_name=\"Solution_numTilePossibilities_string_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1079-letter-tile-possibilities.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName820077 = new char[2];akaRandomName820077[0] = -112;akaRandomName820077[1] = '\\0';string tiles=akaRandomName820077;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode tiles */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_numTilePossibilities_string_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->numTilePossibilities(tiles);\nAKA_fCall++;AKA_mark(\"Return from: ./2/1079-letter-tile-possibilities.cpp/Solution/numTilePossibilities(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1079-letter-tile-possibilities.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName290374 = new char[2];akaRandomName290374[0] = -112;akaRandomName290374[1] = '\\0';string tiles=akaRandomName290374;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode tiles */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int countPossibilities(unordered_map<char, int>& charMap, int len) {         if (len == 0) return 0;         int sum = 0;         for (auto& item : charMap) {             if (item.second > 0) {                 item.second--;                 sum += 1 + countPossibilities(charMap, len - 1);                 item.second++;             }         }         return sum;     }          int numTilePossibilities(string tiles) {         unordered_map<char, int> charMap;         for (char t : tiles) {             charMap[t]++;         }         return countPossibilities(charMap, tiles.size());     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/2/1079-letter-tile-possibilities.cpp/Solution/numTilePossibilities(string)"
+    },
+    {
+        "f": [],
+        "fm": "int maximumMinimumPath(vector<vector<int>>& A) {         int m = A.size();         if (m == 0) return 0;         int n = A[0].size();                  vector<vector<int>> diff = {{-1, 0}, {1, 0}, {0, 1}, {0, -1}};                 using qtype = pair<int, pair<int, int>>;                      priority_queue<qtype, vector<qtype>, function<bool(qtype, qtype)>>              pq([](const qtype& v1, const qtype& v2) {                 return v1.first < v2.first;             });                  pq.push({A[0][0], {0, 0}});         while (!pq.empty()) {             qtype curr = pq.top();             pq.pop();             int i = curr.second.first;             int j = curr.second.second;             int w = curr.first;             if (i == m - 1 && j == n - 1) {                 return w;             }             A[i][j] = -1;             for (const auto& d : diff) {                 int x = i + d[0];                 int y = j + d[1];                 if (x >= 0 && x < m && y >= 0 && y < n && A[x][y] >= 0) {                     pq.push({min(A[x][y], w), {x, y}});                 }             }         }         return -1;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maximumMinimumPath_vector_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_maximumMinimumPath_vector_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1102-path-with-maximum-minimum-value.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> A;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode A */\nvector<int> A_element0;\nint A_element0_element0=1625589945;\nA_element0.push_back(A_element0_element0);\nA.push_back(A_element0);\nvector<int> A_element1;\nint A_element1_element0=522036491;\nA_element1.push_back(A_element1_element0);\nint A_element1_element1=-81532975;\nA_element1.push_back(A_element1_element1);\nint A_element1_element2=189570604;\nA_element1.push_back(A_element1_element2);\nA.push_back(A_element1);\nvector<int> A_element2;\nint A_element2_element0=2134355966;\nA_element2.push_back(A_element2_element0);\nA.push_back(A_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maximumMinimumPath_vector_vector_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maximumMinimumPath(A);\nAKA_fCall++;AKA_mark(\"Return from: ./2/1102-path-with-maximum-minimum-value.cpp/Solution/maximumMinimumPath(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_A;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1102-path-with-maximum-minimum-value.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> A;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode A */\nvector<int> A_element0;\nint A_element0_element0=1625589945;\nA_element0.push_back(A_element0_element0);\nA.push_back(A_element0);\nvector<int> A_element1;\nint A_element1_element0=522036491;\nA_element1.push_back(A_element1_element0);\nint A_element1_element1=-81532975;\nA_element1.push_back(A_element1_element1);\nint A_element1_element2=189570604;\nA_element1.push_back(A_element1_element2);\nA.push_back(A_element1);\nvector<int> A_element2;\nint A_element2_element0=2134355966;\nA_element2.push_back(A_element2_element0);\nA.push_back(A_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maximumMinimumPath_vector_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_maximumMinimumPath_vector_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1102-path-with-maximum-minimum-value.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> A;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode A */\nvector<int> A_element0;\nint A_element0_element0=-1266091869;\nA_element0.push_back(A_element0_element0);\nint A_element0_element1=1294889617;\nA_element0.push_back(A_element0_element1);\nint A_element0_element2=-1764433883;\nA_element0.push_back(A_element0_element2);\nA.push_back(A_element0);\nvector<int> A_element1;\nint A_element1_element0=1620656940;\nA_element1.push_back(A_element1_element0);\nint A_element1_element1=-250430891;\nA_element1.push_back(A_element1_element1);\nint A_element1_element2=-1863634541;\nA_element1.push_back(A_element1_element2);\nA.push_back(A_element1);\nvector<int> A_element2;\nint A_element2_element0=1215806676;\nA_element2.push_back(A_element2_element0);\nA.push_back(A_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maximumMinimumPath_vector_vector_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maximumMinimumPath(A);\nAKA_fCall++;AKA_mark(\"Return from: ./2/1102-path-with-maximum-minimum-value.cpp/Solution/maximumMinimumPath(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_A;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1102-path-with-maximum-minimum-value.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> A;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode A */\nvector<int> A_element0;\nint A_element0_element0=-1266091869;\nA_element0.push_back(A_element0_element0);\nint A_element0_element1=1294889617;\nA_element0.push_back(A_element0_element1);\nint A_element0_element2=-1764433883;\nA_element0.push_back(A_element0_element2);\nA.push_back(A_element0);\nvector<int> A_element1;\nint A_element1_element0=1620656940;\nA_element1.push_back(A_element1_element0);\nint A_element1_element1=-250430891;\nA_element1.push_back(A_element1_element1);\nint A_element1_element2=-1863634541;\nA_element1.push_back(A_element1_element2);\nA.push_back(A_element1);\nvector<int> A_element2;\nint A_element2_element0=1215806676;\nA_element2.push_back(A_element2_element0);\nA.push_back(A_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maximumMinimumPath_vector_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_maximumMinimumPath_vector_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1102-path-with-maximum-minimum-value.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> A;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode A */\nvector<int> A_element0;\nint A_element0_element0=2047743751;\nA_element0.push_back(A_element0_element0);\nint A_element0_element1=-1342526461;\nA_element0.push_back(A_element0_element1);\nint A_element0_element2=-963578384;\nA_element0.push_back(A_element0_element2);\nA.push_back(A_element0);\nvector<int> A_element1;\nint A_element1_element0=-2012628779;\nA_element1.push_back(A_element1_element0);\nint A_element1_element1=-431537916;\nA_element1.push_back(A_element1_element1);\nint A_element1_element2=1463094991;\nA_element1.push_back(A_element1_element2);\nA.push_back(A_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maximumMinimumPath_vector_vector_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maximumMinimumPath(A);\nAKA_fCall++;AKA_mark(\"Return from: ./2/1102-path-with-maximum-minimum-value.cpp/Solution/maximumMinimumPath(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_A;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1102-path-with-maximum-minimum-value.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> A;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode A */\nvector<int> A_element0;\nint A_element0_element0=2047743751;\nA_element0.push_back(A_element0_element0);\nint A_element0_element1=-1342526461;\nA_element0.push_back(A_element0_element1);\nint A_element0_element2=-963578384;\nA_element0.push_back(A_element0_element2);\nA.push_back(A_element0);\nvector<int> A_element1;\nint A_element1_element0=-2012628779;\nA_element1.push_back(A_element1_element0);\nint A_element1_element1=-431537916;\nA_element1.push_back(A_element1_element1);\nint A_element1_element2=1463094991;\nA_element1.push_back(A_element1_element2);\nA.push_back(A_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int maximumMinimumPath(vector<vector<int>>& A) {         int m = A.size();         if (m == 0) return 0;         int n = A[0].size();                  vector<vector<int>> diff = {{-1, 0}, {1, 0}, {0, 1}, {0, -1}};                 using qtype = pair<int, pair<int, int>>;                      priority_queue<qtype, vector<qtype>, function<bool(qtype, qtype)>>              pq([](const qtype& v1, const qtype& v2) {                 return v1.first < v2.first;             });                  pq.push({A[0][0], {0, 0}});         while (!pq.empty()) {             qtype curr = pq.top();             pq.pop();             int i = curr.second.first;             int j = curr.second.second;             int w = curr.first;             if (i == m - 1 && j == n - 1) {                 return w;             }             A[i][j] = -1;             for (const auto& d : diff) {                 int x = i + d[0];                 int y = j + d[1];                 if (x >= 0 && x < m && y >= 0 && y < n && A[x][y] >= 0) {                     pq.push({min(A[x][y], w), {x, y}});                 }             }         }         return -1;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/2/1102-path-with-maximum-minimum-value.cpp/Solution/maximumMinimumPath(vector<vector<int>>&)"
+    },
+    {
+        "f": [
+            "int connectedComponents;",
+            "vector<int> parent;",
+            "int totalCost;"
+        ],
+        "fm": "void init(int N) {         connectedComponents = N;         totalCost = 0;         for (int i = 0; i < N + 1; i++) {             parent.push_back(-1);         }     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_init_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_init_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1135-connecting-cities-with-minimum-cost.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* NormalNumberDataNode connectedComponents */\n/* connectedComponents : null value -> no code */\n/* VectorDataNode parent */\n/* NormalNumberDataNode totalCost */\n/* totalCost : null value -> no code */\n\n\n\n\nint N=6;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode N */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_init_int_random_3\");AKA_INSTANCE___Solution->init(N);\nAKA_fCall++;AKA_mark(\"Return from: ./2/1135-connecting-cities-with-minimum-cost.cpp/Solution/init(int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1135-connecting-cities-with-minimum-cost.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* NormalNumberDataNode connectedComponents */\n/* connectedComponents : null value -> no code */\n/* VectorDataNode parent */\n/* NormalNumberDataNode totalCost */\n/* totalCost : null value -> no code */\n\n\n\n\nint N=6;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode N */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { private:     int connectedComponents;     vector<int> parent;     int totalCost; public:     void init(int N) {         connectedComponents = N;         totalCost = 0;         for (int i = 0; i < N + 1; i++) {             parent.push_back(-1);         }     }          int findParent(int x) {         if (parent[x] < 0) {             return x;         }         return parent[x] = findParent(parent[x]);     }          void unite(const vector<int> conn) {         int c1 = conn[0];         int c2 = conn[1];         int cost = conn[2];         int p1 = findParent(c1);         int p2 = findParent(c2);         if (p1 != p2) {             int r1 = parent[p1];             int r2 = parent[p2];             if (r1 < r2) { // Remember ranks are -ve so the effect is opposite                 parent[p2] = p1;             } else {                 parent[p1] = p2;                 if (r1 == r2) {                     parent[p2]--;                 }             }             connectedComponents--;             totalCost += cost;         }     }          int minimumCost(int N, vector<vector<int>>& connections) {         init(N);         sort(connections.begin(), connections.end(),              [](const vector<int>& v1, const vector<int>& v2) {                 return v1[2] < v2[2];             });         for (const vector<int>& c : connections) {             unite(c);             if (connectedComponents == 1) {                 return totalCost;             }         }         return connectedComponents == 1 ? totalCost : -1;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/2/1135-connecting-cities-with-minimum-cost.cpp/Solution/init(int)"
+    },
+    {
+        "f": [
+            "int connectedComponents;",
+            "vector<int> parent;",
+            "int totalCost;"
+        ],
+        "fm": "int findParent(int x) {         if (parent[x] < 0) {             return x;         }         return parent[x] = findParent(parent[x]);     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findParent_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_findParent_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1135-connecting-cities-with-minimum-cost.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* NormalNumberDataNode connectedComponents */\n/* connectedComponents : null value -> no code */\n/* VectorDataNode parent */\n/* NormalNumberDataNode totalCost */\n/* totalCost : null value -> no code */\n\n\n\n\nint x=-1117698303;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findParent_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findParent(x);\nAKA_fCall++;AKA_mark(\"Return from: ./2/1135-connecting-cities-with-minimum-cost.cpp/Solution/findParent(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1135-connecting-cities-with-minimum-cost.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* NormalNumberDataNode connectedComponents */\n/* connectedComponents : null value -> no code */\n/* VectorDataNode parent */\n/* NormalNumberDataNode totalCost */\n/* totalCost : null value -> no code */\n\n\n\n\nint x=-1117698303;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { private:     int connectedComponents;     vector<int> parent;     int totalCost; public:     void init(int N) {         connectedComponents = N;         totalCost = 0;         for (int i = 0; i < N + 1; i++) {             parent.push_back(-1);         }     }          int findParent(int x) {         if (parent[x] < 0) {             return x;         }         return parent[x] = findParent(parent[x]);     }          void unite(const vector<int> conn) {         int c1 = conn[0];         int c2 = conn[1];         int cost = conn[2];         int p1 = findParent(c1);         int p2 = findParent(c2);         if (p1 != p2) {             int r1 = parent[p1];             int r2 = parent[p2];             if (r1 < r2) { // Remember ranks are -ve so the effect is opposite                 parent[p2] = p1;             } else {                 parent[p1] = p2;                 if (r1 == r2) {                     parent[p2]--;                 }             }             connectedComponents--;             totalCost += cost;         }     }          int minimumCost(int N, vector<vector<int>>& connections) {         init(N);         sort(connections.begin(), connections.end(),              [](const vector<int>& v1, const vector<int>& v2) {                 return v1[2] < v2[2];             });         for (const vector<int>& c : connections) {             unite(c);             if (connectedComponents == 1) {                 return totalCost;             }         }         return connectedComponents == 1 ? totalCost : -1;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/2/1135-connecting-cities-with-minimum-cost.cpp/Solution/findParent(int)"
+    },
+    {
+        "f": [
+            "int connectedComponents;",
+            "vector<int> parent;",
+            "int totalCost;"
+        ],
+        "fm": "void unite(const vector<int> conn) {         int c1 = conn[0];         int c2 = conn[1];         int cost = conn[2];         int p1 = findParent(c1);         int p2 = findParent(c2);         if (p1 != p2) {             int r1 = parent[p1];             int r2 = parent[p2];             if (r1 < r2) { // Remember ranks are -ve so the effect is opposite                 parent[p2] = p1;             } else {                 parent[p1] = p2;                 if (r1 == r2) {                     parent[p2]--;                 }             }             connectedComponents--;             totalCost += cost;         }     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_unite_vector_int_const_random_1(void) {\n{\nAKA_test_case_name=\"Solution_unite_vector_int_const_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1135-connecting-cities-with-minimum-cost.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* NormalNumberDataNode connectedComponents */\n/* connectedComponents : null value -> no code */\n/* VectorDataNode parent */\n/* NormalNumberDataNode totalCost */\n/* totalCost : null value -> no code */\n\n\nvector<int> conn;\n\n/* RootDataNode STATIC */\n/* VectorDataNode conn */\nint conn_element0=2001736186;\nconn.push_back(conn_element0);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_unite_vector_int_const_random_1\");AKA_INSTANCE___Solution->unite(conn);\nAKA_fCall++;AKA_mark(\"Return from: ./2/1135-connecting-cities-with-minimum-cost.cpp/Solution/unite(vector<int>const)\");\n\n/* error assertion */\nvector<int> EXPECTED_conn;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1135-connecting-cities-with-minimum-cost.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* NormalNumberDataNode connectedComponents */\n/* connectedComponents : null value -> no code */\n/* VectorDataNode parent */\n/* NormalNumberDataNode totalCost */\n/* totalCost : null value -> no code */\n\n\nvector<int> conn;\n\n/* RootDataNode STATIC */\n/* VectorDataNode conn */\nint conn_element0=2001736186;\nconn.push_back(conn_element0);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { private:     int connectedComponents;     vector<int> parent;     int totalCost; public:     void init(int N) {         connectedComponents = N;         totalCost = 0;         for (int i = 0; i < N + 1; i++) {             parent.push_back(-1);         }     }          int findParent(int x) {         if (parent[x] < 0) {             return x;         }         return parent[x] = findParent(parent[x]);     }          void unite(const vector<int> conn) {         int c1 = conn[0];         int c2 = conn[1];         int cost = conn[2];         int p1 = findParent(c1);         int p2 = findParent(c2);         if (p1 != p2) {             int r1 = parent[p1];             int r2 = parent[p2];             if (r1 < r2) { // Remember ranks are -ve so the effect is opposite                 parent[p2] = p1;             } else {                 parent[p1] = p2;                 if (r1 == r2) {                     parent[p2]--;                 }             }             connectedComponents--;             totalCost += cost;         }     }          int minimumCost(int N, vector<vector<int>>& connections) {         init(N);         sort(connections.begin(), connections.end(),              [](const vector<int>& v1, const vector<int>& v2) {                 return v1[2] < v2[2];             });         for (const vector<int>& c : connections) {             unite(c);             if (connectedComponents == 1) {                 return totalCost;             }         }         return connectedComponents == 1 ? totalCost : -1;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/2/1135-connecting-cities-with-minimum-cost.cpp/Solution/unite(vector<int>const)"
+    },
+    {
+        "f": [
+            "int connectedComponents;",
+            "vector<int> parent;",
+            "int totalCost;"
+        ],
+        "fm": "int minimumCost(int N, vector<vector<int>>& connections) {         init(N);         sort(connections.begin(), connections.end(),              [](const vector<int>& v1, const vector<int>& v2) {                 return v1[2] < v2[2];             });         for (const vector<int>& c : connections) {             unite(c);             if (connectedComponents == 1) {                 return totalCost;             }         }         return connectedComponents == 1 ? totalCost : -1;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minimumCost_int_vector_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_minimumCost_int_vector_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1135-connecting-cities-with-minimum-cost.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* NormalNumberDataNode connectedComponents */\n/* connectedComponents : null value -> no code */\n/* VectorDataNode parent */\n/* NormalNumberDataNode totalCost */\n/* totalCost : null value -> no code */\n\n\n\n\nint N=-1813493709;\nvector<vector<int>> connections;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode N */\n/* VectorDataNode connections */\nvector<int> connections_element0;\nint connections_element0_element0=1005433011;\nconnections_element0.push_back(connections_element0_element0);\nconnections.push_back(connections_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minimumCost_int_vector_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minimumCost(N,connections);\nAKA_fCall++;AKA_mark(\"Return from: ./2/1135-connecting-cities-with-minimum-cost.cpp/Solution/minimumCost(int,vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_connections;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1135-connecting-cities-with-minimum-cost.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* NormalNumberDataNode connectedComponents */\n/* connectedComponents : null value -> no code */\n/* VectorDataNode parent */\n/* NormalNumberDataNode totalCost */\n/* totalCost : null value -> no code */\n\n\n\n\nint N=-1813493709;\nvector<vector<int>> connections;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode N */\n/* VectorDataNode connections */\nvector<int> connections_element0;\nint connections_element0_element0=1005433011;\nconnections_element0.push_back(connections_element0_element0);\nconnections.push_back(connections_element0);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { private:     int connectedComponents;     vector<int> parent;     int totalCost; public:     void init(int N) {         connectedComponents = N;         totalCost = 0;         for (int i = 0; i < N + 1; i++) {             parent.push_back(-1);         }     }          int findParent(int x) {         if (parent[x] < 0) {             return x;         }         return parent[x] = findParent(parent[x]);     }          void unite(const vector<int> conn) {         int c1 = conn[0];         int c2 = conn[1];         int cost = conn[2];         int p1 = findParent(c1);         int p2 = findParent(c2);         if (p1 != p2) {             int r1 = parent[p1];             int r2 = parent[p2];             if (r1 < r2) { // Remember ranks are -ve so the effect is opposite                 parent[p2] = p1;             } else {                 parent[p1] = p2;                 if (r1 == r2) {                     parent[p2]--;                 }             }             connectedComponents--;             totalCost += cost;         }     }          int minimumCost(int N, vector<vector<int>>& connections) {         init(N);         sort(connections.begin(), connections.end(),              [](const vector<int>& v1, const vector<int>& v2) {                 return v1[2] < v2[2];             });         for (const vector<int>& c : connections) {             unite(c);             if (connectedComponents == 1) {                 return totalCost;             }         }         return connectedComponents == 1 ? totalCost : -1;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/2/1135-connecting-cities-with-minimum-cost.cpp/Solution/minimumCost(int,vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "void dfs(int u, int parent, vector<int>& ids, vector<bool>& visited, vector<int>& low, vector<vector<int>>& graph, vector<vector<int>>& result) {         visited[u] = true;         int id = ids[parent] + 1;         low[u] = id;         ids[u] = id;         for (int n : graph[u]) {             if (n == parent) continue;             if (!visited[n]) {                 dfs(n, u, ids, visited, low, graph, result);                 low[u] = min(low[u], low[n]);                 if (ids[u] < low[n]) {                     result.push_back({u, n});                 }             } else {                 low[u] = min(low[u], ids[n]);             }         }     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_dfs_int_int_vector_int_vector_bool_vector_int_vector_vector_int_vector_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_dfs_int_int_vector_int_vector_bool_vector_int_vector_vector_int_vector_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1192-critical-connections-in-a-network.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint u=695144557;\n\n\nint parent=-1014449386;\nvector<int> ids;\nvector<bool> visited;\nvector<int> low;\nvector<vector<int>> graph;\nvector<vector<int>> result;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode u */\n/* NormalNumberDataNode parent */\n/* VectorDataNode ids */\nint ids_element0=-1246346135;\nids.push_back(ids_element0);\n/* VectorDataNode visited */\nbool visited_element0=false;\nvisited.push_back(visited_element0);\n/* VectorDataNode low */\nint low_element0=-1954148022;\nlow.push_back(low_element0);\nint low_element1=330480606;\nlow.push_back(low_element1);\nint low_element2=583381170;\nlow.push_back(low_element2);\n/* VectorDataNode graph */\nvector<int> graph_element0;\nint graph_element0_element0=722479240;\ngraph_element0.push_back(graph_element0_element0);\nint graph_element0_element1=-442761705;\ngraph_element0.push_back(graph_element0_element1);\ngraph.push_back(graph_element0);\nvector<int> graph_element1;\nint graph_element1_element0=1524244882;\ngraph_element1.push_back(graph_element1_element0);\nint graph_element1_element1=-2017018356;\ngraph_element1.push_back(graph_element1_element1);\nint graph_element1_element2=1520619545;\ngraph_element1.push_back(graph_element1_element2);\ngraph.push_back(graph_element1);\nvector<int> graph_element2;\nint graph_element2_element0=167362783;\ngraph_element2.push_back(graph_element2_element0);\ngraph.push_back(graph_element2);\n/* VectorDataNode result */\nvector<int> result_element0;\nint result_element0_element0=1063535598;\nresult_element0.push_back(result_element0_element0);\nint result_element0_element1=-1301893429;\nresult_element0.push_back(result_element0_element1);\nint result_element0_element2=2116237448;\nresult_element0.push_back(result_element0_element2);\nresult.push_back(result_element0);\nvector<int> result_element1;\nint result_element1_element0=-1421490404;\nresult_element1.push_back(result_element1_element0);\nint result_element1_element1=1055521597;\nresult_element1.push_back(result_element1_element1);\nresult.push_back(result_element1);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_dfs_int_int_vector_int_vector_bool_vector_int_vector_vector_int_vector_vector_int_random_2\");AKA_INSTANCE___Solution->dfs(u,parent,ids,visited,low,graph,result);\nAKA_fCall++;AKA_mark(\"Return from: ./2/1192-critical-connections-in-a-network.cpp/Solution/dfs(int,int,vector<int>&,vector<bool>&,vector<int>&,vector<vector<int>>&,vector<vector<int>>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_ids;\n\nvector<bool> EXPECTED_visited;\n\nvector<int> EXPECTED_low;\n\nvector<vector<int>> EXPECTED_graph;\n\nvector<vector<int>> EXPECTED_result;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1192-critical-connections-in-a-network.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint u=695144557;\n\n\nint parent=-1014449386;\nvector<int> ids;\nvector<bool> visited;\nvector<int> low;\nvector<vector<int>> graph;\nvector<vector<int>> result;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode u */\n/* NormalNumberDataNode parent */\n/* VectorDataNode ids */\nint ids_element0=-1246346135;\nids.push_back(ids_element0);\n/* VectorDataNode visited */\nbool visited_element0=false;\nvisited.push_back(visited_element0);\n/* VectorDataNode low */\nint low_element0=-1954148022;\nlow.push_back(low_element0);\nint low_element1=330480606;\nlow.push_back(low_element1);\nint low_element2=583381170;\nlow.push_back(low_element2);\n/* VectorDataNode graph */\nvector<int> graph_element0;\nint graph_element0_element0=722479240;\ngraph_element0.push_back(graph_element0_element0);\nint graph_element0_element1=-442761705;\ngraph_element0.push_back(graph_element0_element1);\ngraph.push_back(graph_element0);\nvector<int> graph_element1;\nint graph_element1_element0=1524244882;\ngraph_element1.push_back(graph_element1_element0);\nint graph_element1_element1=-2017018356;\ngraph_element1.push_back(graph_element1_element1);\nint graph_element1_element2=1520619545;\ngraph_element1.push_back(graph_element1_element2);\ngraph.push_back(graph_element1);\nvector<int> graph_element2;\nint graph_element2_element0=167362783;\ngraph_element2.push_back(graph_element2_element0);\ngraph.push_back(graph_element2);\n/* VectorDataNode result */\nvector<int> result_element0;\nint result_element0_element0=1063535598;\nresult_element0.push_back(result_element0_element0);\nint result_element0_element1=-1301893429;\nresult_element0.push_back(result_element0_element1);\nint result_element0_element2=2116237448;\nresult_element0.push_back(result_element0_element2);\nresult.push_back(result_element0);\nvector<int> result_element1;\nint result_element1_element0=-1421490404;\nresult_element1.push_back(result_element1_element0);\nint result_element1_element1=1055521597;\nresult_element1.push_back(result_element1_element1);\nresult.push_back(result_element1);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     void dfs(int u, int parent, vector<int>& ids, vector<bool>& visited, vector<int>& low, vector<vector<int>>& graph, vector<vector<int>>& result) {         visited[u] = true;         int id = ids[parent] + 1;         low[u] = id;         ids[u] = id;         for (int n : graph[u]) {             if (n == parent) continue;             if (!visited[n]) {                 dfs(n, u, ids, visited, low, graph, result);                 low[u] = min(low[u], low[n]);                 if (ids[u] < low[n]) {                     result.push_back({u, n});                 }             } else {                 low[u] = min(low[u], ids[n]);             }         }     }          vector<vector<int>> criticalConnections(int n, vector<vector<int>>& connections) {         vector<vector<int>> graph(n, vector<int>());          for (const vector<int>& conn : connections) {             int to = conn[0];             int from = conn[1];             graph[to].push_back(from);             graph[from].push_back(to);         }                  vector<vector<int>> result;         vector<bool> visited(n, false);         vector<int> low(n, -1);         vector<int> ids(n, 0);                  for (int i = 0; i < n; i++) {             if (!visited[i]) {                 dfs(i, i, ids, visited, low, graph, result);             }         }         return result;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/2/1192-critical-connections-in-a-network.cpp/Solution/dfs(int,int,vector<int>&,vector<bool>&,vector<int>&,vector<vector<int>>&,vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<vector<int>> criticalConnections(int n, vector<vector<int>>& connections) {         vector<vector<int>> graph(n, vector<int>());          for (const vector<int>& conn : connections) {             int to = conn[0];             int from = conn[1];             graph[to].push_back(from);             graph[from].push_back(to);         }                  vector<vector<int>> result;         vector<bool> visited(n, false);         vector<int> low(n, -1);         vector<int> ids(n, 0);                  for (int i = 0; i < n; i++) {             if (!visited[i]) {                 dfs(i, i, ids, visited, low, graph, result);             }         }         return result;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_criticalConnections_int_vector_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_criticalConnections_int_vector_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1192-critical-connections-in-a-network.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=4;\nvector<vector<int>> connections;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode connections */\nvector<int> connections_element0;\nint connections_element0_element0=-1644555737;\nconnections_element0.push_back(connections_element0_element0);\nint connections_element0_element1=1931430554;\nconnections_element0.push_back(connections_element0_element1);\nint connections_element0_element2=-49933823;\nconnections_element0.push_back(connections_element0_element2);\nconnections.push_back(connections_element0);\nvector<int> connections_element1;\nint connections_element1_element0=-868269060;\nconnections_element1.push_back(connections_element1_element0);\nint connections_element1_element1=66567446;\nconnections_element1.push_back(connections_element1_element1);\nint connections_element1_element2=678788085;\nconnections_element1.push_back(connections_element1_element2);\nconnections.push_back(connections_element1);\nvector<int> connections_element2;\nint connections_element2_element0=-1410087669;\nconnections_element2.push_back(connections_element2_element0);\nconnections.push_back(connections_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_criticalConnections_int_vector_vector_int_random_4\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->criticalConnections(n,connections);\nAKA_fCall++;AKA_mark(\"Return from: ./2/1192-critical-connections-in-a-network.cpp/Solution/criticalConnections(int,vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_connections;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/1192-critical-connections-in-a-network.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=4;\nvector<vector<int>> connections;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode connections */\nvector<int> connections_element0;\nint connections_element0_element0=-1644555737;\nconnections_element0.push_back(connections_element0_element0);\nint connections_element0_element1=1931430554;\nconnections_element0.push_back(connections_element0_element1);\nint connections_element0_element2=-49933823;\nconnections_element0.push_back(connections_element0_element2);\nconnections.push_back(connections_element0);\nvector<int> connections_element1;\nint connections_element1_element0=-868269060;\nconnections_element1.push_back(connections_element1_element0);\nint connections_element1_element1=66567446;\nconnections_element1.push_back(connections_element1_element1);\nint connections_element1_element2=678788085;\nconnections_element1.push_back(connections_element1_element2);\nconnections.push_back(connections_element1);\nvector<int> connections_element2;\nint connections_element2_element0=-1410087669;\nconnections_element2.push_back(connections_element2_element0);\nconnections.push_back(connections_element2);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     void dfs(int u, int parent, vector<int>& ids, vector<bool>& visited, vector<int>& low, vector<vector<int>>& graph, vector<vector<int>>& result) {         visited[u] = true;         int id = ids[parent] + 1;         low[u] = id;         ids[u] = id;         for (int n : graph[u]) {             if (n == parent) continue;             if (!visited[n]) {                 dfs(n, u, ids, visited, low, graph, result);                 low[u] = min(low[u], low[n]);                 if (ids[u] < low[n]) {                     result.push_back({u, n});                 }             } else {                 low[u] = min(low[u], ids[n]);             }         }     }          vector<vector<int>> criticalConnections(int n, vector<vector<int>>& connections) {         vector<vector<int>> graph(n, vector<int>());          for (const vector<int>& conn : connections) {             int to = conn[0];             int from = conn[1];             graph[to].push_back(from);             graph[from].push_back(to);         }                  vector<vector<int>> result;         vector<bool> visited(n, false);         vector<int> low(n, -1);         vector<int> ids(n, 0);                  for (int i = 0; i < n; i++) {             if (!visited[i]) {                 dfs(i, i, ids, visited, low, graph, result);             }         }         return result;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/2/1192-critical-connections-in-a-network.cpp/Solution/criticalConnections(int,vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "int mincostTickets(vector<int>& days, vector<int>& costs) {         int n = days.size();         if (n == 0) return 0;         if (n == 1) return costs[0];                  vector<int> minCosts(366, 0);         int currDay = 0;         int dc = costs[0];         int wc = costs[1];         int mc = costs[2];                  for (int i = 1; i <= 365; i++) {             if (currDay == n) {                 break;             }             if (days[currDay] != i) {                 minCosts[i] = minCosts[i - 1];             } else {                 int dailyCost = dc, weeklyCost = wc, monthlyCost = mc;                 if (i > 1) {                     dailyCost += minCosts[i - 1];                 }                 if (i > 7) {                     weeklyCost += minCosts[i - 7];                 }                 if (i > 30) {                     monthlyCost += minCosts[i - 30];                 }                 minCosts[i] = min(dailyCost, min(weeklyCost, monthlyCost));                 currDay++;             }         }         return minCosts[days[n - 1]];     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_mincostTickets_vector_int_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_mincostTickets_vector_int_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/983-minimum-cost-for-tickets.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> days;\nvector<int> costs;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode days */\nint days_element0=1673271233;\ndays.push_back(days_element0);\n/* VectorDataNode costs */\nint costs_element0=-244502788;\ncosts.push_back(costs_element0);\nint costs_element1=1803551918;\ncosts.push_back(costs_element1);\nint costs_element2=1169863682;\ncosts.push_back(costs_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_mincostTickets_vector_int_vector_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->mincostTickets(days,costs);\nAKA_fCall++;AKA_mark(\"Return from: ./2/983-minimum-cost-for-tickets.cpp/Solution/mincostTickets(vector<int>&,vector<int>&)\");\n\n\nvector<int> EXPECTED_days;\n\nvector<int> EXPECTED_costs;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/983-minimum-cost-for-tickets.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> days;\nvector<int> costs;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode days */\nint days_element0=1673271233;\ndays.push_back(days_element0);\n/* VectorDataNode costs */\nint costs_element0=-244502788;\ncosts.push_back(costs_element0);\nint costs_element1=1803551918;\ncosts.push_back(costs_element1);\nint costs_element2=1169863682;\ncosts.push_back(costs_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_mincostTickets_vector_int_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_mincostTickets_vector_int_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/983-minimum-cost-for-tickets.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> days;\nvector<int> costs;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode days */\nint days_element0=-1925709301;\ndays.push_back(days_element0);\nint days_element1=688026487;\ndays.push_back(days_element1);\nint days_element2=969776452;\ndays.push_back(days_element2);\n/* VectorDataNode costs */\nint costs_element0=-1027494282;\ncosts.push_back(costs_element0);\nint costs_element1=1459674576;\ncosts.push_back(costs_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_mincostTickets_vector_int_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->mincostTickets(days,costs);\nAKA_fCall++;AKA_mark(\"Return from: ./2/983-minimum-cost-for-tickets.cpp/Solution/mincostTickets(vector<int>&,vector<int>&)\");\n\n\nvector<int> EXPECTED_days;\n\nvector<int> EXPECTED_costs;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/983-minimum-cost-for-tickets.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> days;\nvector<int> costs;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode days */\nint days_element0=-1925709301;\ndays.push_back(days_element0);\nint days_element1=688026487;\ndays.push_back(days_element1);\nint days_element2=969776452;\ndays.push_back(days_element2);\n/* VectorDataNode costs */\nint costs_element0=-1027494282;\ncosts.push_back(costs_element0);\nint costs_element1=1459674576;\ncosts.push_back(costs_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int mincostTickets(vector<int>& days, vector<int>& costs) {         int n = days.size();         if (n == 0) return 0;         if (n == 1) return costs[0];                  vector<int> minCosts(366, 0);         int currDay = 0;         int dc = costs[0];         int wc = costs[1];         int mc = costs[2];                  for (int i = 1; i <= 365; i++) {             if (currDay == n) {                 break;             }             if (days[currDay] != i) {                 minCosts[i] = minCosts[i - 1];             } else {                 int dailyCost = dc, weeklyCost = wc, monthlyCost = mc;                 if (i > 1) {                     dailyCost += minCosts[i - 1];                 }                 if (i > 7) {                     weeklyCost += minCosts[i - 7];                 }                 if (i > 30) {                     monthlyCost += minCosts[i - 30];                 }                 minCosts[i] = min(dailyCost, min(weeklyCost, monthlyCost));                 currDay++;             }         }         return minCosts[days[n - 1]];     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/2/983-minimum-cost-for-tickets.cpp/Solution/mincostTickets(vector<int>&,vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int orangesRotting(vector<vector<int>>& grid) {         int R = grid.size();         int C = grid[0].size();                  queue<int> q;         unordered_map<int, int> depth;         int numFresh = 0;                  for (int r = 0; r < R; r++) {             for (int c = 0; c < C; c++) {                 if (grid[r][c] == 2) {                     int code = c + r * C;                     q.push(code);                     depth[code] = 0;                 } else if (grid[r][c] == 1) {                     numFresh++;                 }             }         }                  vector<int> dr = {-1, 0, 1, 0};         vector<int> dc = {0, -1, 0, 1};         int maxDepth = 0;         int newlyRotten = 0;                  while (!q.empty()) {             int elem = q.front();             q.pop();             int r = elem / C;             int c = elem % C;             for (int k = 0; k < 4; k++) {                 int nr = r + dr[k];                 int nc = c + dc[k];                 if (nr >= 0 && nr < R && nc >= 0 && nc < C && grid[nr][nc] == 1) {                     int ncode = nc + nr * C;                     q.push(ncode);                     grid[nr][nc] = 2;                     newlyRotten++;                     int ndepth = depth.find(elem)->second + 1;                     depth[ncode] = ndepth;                     if (ndepth > maxDepth) {                         maxDepth = ndepth;                     }                 }             }         }         if (newlyRotten < numFresh) return -1;         return maxDepth;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_orangesRotting_vector_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_orangesRotting_vector_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/994-rotting-oranges.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> grid;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode grid */\nvector<int> grid_element0;\nint grid_element0_element0=1053950656;\ngrid_element0.push_back(grid_element0_element0);\nint grid_element0_element1=48017624;\ngrid_element0.push_back(grid_element0_element1);\ngrid.push_back(grid_element0);\nvector<int> grid_element1;\nint grid_element1_element0=-2122687283;\ngrid_element1.push_back(grid_element1_element0);\ngrid.push_back(grid_element1);\nvector<int> grid_element2;\nint grid_element2_element0=69880641;\ngrid_element2.push_back(grid_element2_element0);\nint grid_element2_element1=1611504430;\ngrid_element2.push_back(grid_element2_element1);\nint grid_element2_element2=700181070;\ngrid_element2.push_back(grid_element2_element2);\ngrid.push_back(grid_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_orangesRotting_vector_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->orangesRotting(grid);\nAKA_fCall++;AKA_mark(\"Return from: ./2/994-rotting-oranges.cpp/Solution/orangesRotting(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_grid;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/994-rotting-oranges.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> grid;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode grid */\nvector<int> grid_element0;\nint grid_element0_element0=1053950656;\ngrid_element0.push_back(grid_element0_element0);\nint grid_element0_element1=48017624;\ngrid_element0.push_back(grid_element0_element1);\ngrid.push_back(grid_element0);\nvector<int> grid_element1;\nint grid_element1_element0=-2122687283;\ngrid_element1.push_back(grid_element1_element0);\ngrid.push_back(grid_element1);\nvector<int> grid_element2;\nint grid_element2_element0=69880641;\ngrid_element2.push_back(grid_element2_element0);\nint grid_element2_element1=1611504430;\ngrid_element2.push_back(grid_element2_element1);\nint grid_element2_element2=700181070;\ngrid_element2.push_back(grid_element2_element2);\ngrid.push_back(grid_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int orangesRotting(vector<vector<int>>& grid) {         int R = grid.size();         int C = grid[0].size();                  queue<int> q;         unordered_map<int, int> depth;         int numFresh = 0;                  for (int r = 0; r < R; r++) {             for (int c = 0; c < C; c++) {                 if (grid[r][c] == 2) {                     int code = c + r * C;                     q.push(code);                     depth[code] = 0;                 } else if (grid[r][c] == 1) {                     numFresh++;                 }             }         }                  vector<int> dr = {-1, 0, 1, 0};         vector<int> dc = {0, -1, 0, 1};         int maxDepth = 0;         int newlyRotten = 0;                  while (!q.empty()) {             int elem = q.front();             q.pop();             int r = elem / C;             int c = elem % C;             for (int k = 0; k < 4; k++) {                 int nr = r + dr[k];                 int nc = c + dc[k];                 if (nr >= 0 && nr < R && nc >= 0 && nc < C && grid[nr][nc] == 1) {                     int ncode = nc + nr * C;                     q.push(ncode);                     grid[nr][nc] = 2;                     newlyRotten++;                     int ndepth = depth.find(elem)->second + 1;                     depth[ncode] = ndepth;                     if (ndepth > maxDepth) {                         maxDepth = ndepth;                     }                 }             }         }         if (newlyRotten < numFresh) return -1;         return maxDepth;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/2/994-rotting-oranges.cpp/Solution/orangesRotting(vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "int findJudge(int N, vector<vector<int>>& trust) {         vector<vector<int>> trustGraph(N, vector<int>());         for (int i = 0; i < trust.size(); i++) {             int from = trust[i][0];             int to = trust[i][1];             trustGraph[from - 1].push_back(to);         }         int candidate = -1;         int numCandidates = 0;         for (int i = 0; i < N; i++) {             if (trustGraph[i].size() == 0) {                 candidate = i + 1;                 numCandidates++;             }         }         if (numCandidates != 1) return -1;         for (int i = 0; i < N; i++) {             if (i == candidate - 1) continue;             vector<int> conn = trustGraph[i];             if (find(conn.begin(), conn.end(), candidate) == conn.end()) return -1;         }         return candidate;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findJudge_int_vector_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_findJudge_int_vector_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/997-find-the-town-judge.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint N=10;\nvector<vector<int>> trust;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode N */\n/* VectorDataNode trust */\nvector<int> trust_element0;\nint trust_element0_element0=1605267643;\ntrust_element0.push_back(trust_element0_element0);\nint trust_element0_element1=1122894895;\ntrust_element0.push_back(trust_element0_element1);\ntrust.push_back(trust_element0);\nvector<int> trust_element1;\nint trust_element1_element0=1625231689;\ntrust_element1.push_back(trust_element1_element0);\ntrust.push_back(trust_element1);\nvector<int> trust_element2;\nint trust_element2_element0=1767081708;\ntrust_element2.push_back(trust_element2_element0);\nint trust_element2_element1=-820279198;\ntrust_element2.push_back(trust_element2_element1);\ntrust.push_back(trust_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findJudge_int_vector_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findJudge(N,trust);\nAKA_fCall++;AKA_mark(\"Return from: ./2/997-find-the-town-judge.cpp/Solution/findJudge(int,vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_trust;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/997-find-the-town-judge.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint N=10;\nvector<vector<int>> trust;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode N */\n/* VectorDataNode trust */\nvector<int> trust_element0;\nint trust_element0_element0=1605267643;\ntrust_element0.push_back(trust_element0_element0);\nint trust_element0_element1=1122894895;\ntrust_element0.push_back(trust_element0_element1);\ntrust.push_back(trust_element0);\nvector<int> trust_element1;\nint trust_element1_element0=1625231689;\ntrust_element1.push_back(trust_element1_element0);\ntrust.push_back(trust_element1);\nvector<int> trust_element2;\nint trust_element2_element0=1767081708;\ntrust_element2.push_back(trust_element2_element0);\nint trust_element2_element1=-820279198;\ntrust_element2.push_back(trust_element2_element1);\ntrust.push_back(trust_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int findJudge(int N, vector<vector<int>>& trust) {         vector<vector<int>> trustGraph(N, vector<int>());         for (int i = 0; i < trust.size(); i++) {             int from = trust[i][0];             int to = trust[i][1];             trustGraph[from - 1].push_back(to);         }         int candidate = -1;         int numCandidates = 0;         for (int i = 0; i < N; i++) {             if (trustGraph[i].size() == 0) {                 candidate = i + 1;                 numCandidates++;             }         }         if (numCandidates != 1) return -1;         for (int i = 0; i < N; i++) {             if (i == candidate - 1) continue;             vector<int> conn = trustGraph[i];             if (find(conn.begin(), conn.end(), candidate) == conn.end()) return -1;         }         return candidate;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/2/997-find-the-town-judge.cpp/Solution/findJudge(int,vector<vector<int>>&)"
+    }
+]

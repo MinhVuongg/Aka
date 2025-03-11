@@ -1,0 +1,94 @@
+[
+    {
+        "f": [],
+        "fm": "vector<vector<int> > fourSum(vector<int> &num, int target) {\r     vector<vector<int> > results;\r     int i = 0;\r     int size = num.size();\r \r     sort(num.begin(), num.end());\r \r     while (i < (size - 3)) {\r       int pre_first = num[i];\r       int j = i + 1;\r       int tmp;\r \r       while (j < (size - 2)) {\r         int pre_second = num[j];\r         int two_sum = pre_first + pre_second;\r         int start = j + 1;\r         int end = size - 1;\r         \r         while (start < end) {\r           int left_val = num[start];\r           int right_val = num[end];\r           int four_sum = two_sum + left_val + right_val;\r \r           if (four_sum < target) {\r             ++start;\r           }\r           else if (four_sum > target) {\r             --end;\r           }\r           else {\r             vector<int> result;\r \r             result.push_back(pre_first);\r             result.push_back(pre_second);\r             result.push_back(left_val);\r             result.push_back(right_val);\r \r             results.push_back(result);\r \r             tmp = start + 1;\r \r             while ((tmp < end) && (num[tmp] == num[start])) {\r               ++tmp;\r             }\r \r             start = tmp;\r \r             tmp = end - 1;\r \r             while ((tmp > start) && (num[tmp] == num[end])) {\r               --tmp;\r             }\r \r             end = tmp;\r           }\r         }\r \r         tmp = j + 1;\r \r         while ((tmp < (size - 2)) && (num[tmp] == num[j])) {\r           ++tmp;\r         }\r \r         j = tmp;\r       }\r \r       tmp = i + 1;\r \r       while ((tmp < (size - 3)) && (num[tmp] == num[i])) {\r         ++tmp;\r       }\r \r       i = tmp;\r     }\r \r     return results;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_fourSum_vector_int_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_fourSum_vector_int_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\4sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint target=-1922147662;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-2052476777;\nnum.push_back(num_element0);\nint num_element1=1300941352;\nnum.push_back(num_element1);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_fourSum_vector_int_int_random_1\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->fourSum(num,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-5\\\\4sum.cpp\\\\Solution\\\\fourSum(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\4sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint target=-1922147662;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-2052476777;\nnum.push_back(num_element0);\nint num_element1=1300941352;\nnum.push_back(num_element1);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_fourSum_vector_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_fourSum_vector_int_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\4sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint target=0;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_fourSum_vector_int_int_directed_0\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->fourSum(num,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-5\\\\4sum.cpp\\\\Solution\\\\fourSum(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\4sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint target=0;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   vector<vector<int> > fourSum(vector<int> &num, int target) {\r     vector<vector<int> > results;\r     int i = 0;\r     int size = num.size();\r \r     sort(num.begin(), num.end());\r \r     while (i < (size - 3)) {\r       int pre_first = num[i];\r       int j = i + 1;\r       int tmp;\r \r       while (j < (size - 2)) {\r         int pre_second = num[j];\r         int two_sum = pre_first + pre_second;\r         int start = j + 1;\r         int end = size - 1;\r         \r         while (start < end) {\r           int left_val = num[start];\r           int right_val = num[end];\r           int four_sum = two_sum + left_val + right_val;\r \r           if (four_sum < target) {\r             ++start;\r           }\r           else if (four_sum > target) {\r             --end;\r           }\r           else {\r             vector<int> result;\r \r             result.push_back(pre_first);\r             result.push_back(pre_second);\r             result.push_back(left_val);\r             result.push_back(right_val);\r \r             results.push_back(result);\r \r             tmp = start + 1;\r \r             while ((tmp < end) && (num[tmp] == num[start])) {\r               ++tmp;\r             }\r \r             start = tmp;\r \r             tmp = end - 1;\r \r             while ((tmp > start) && (num[tmp] == num[end])) {\r               --tmp;\r             }\r \r             end = tmp;\r           }\r         }\r \r         tmp = j + 1;\r \r         while ((tmp < (size - 2)) && (num[tmp] == num[j])) {\r           ++tmp;\r         }\r \r         j = tmp;\r       }\r \r       tmp = i + 1;\r \r       while ((tmp < (size - 3)) && (num[tmp] == num[i])) {\r         ++tmp;\r       }\r \r       i = tmp;\r     }\r \r     return results;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-5\\4sum.cpp\\Solution\\fourSum(vector<int>&,int)"
+    },
+    {
+        "f": [],
+        "fm": "string addBinary(string a, string b) {\r     string result;\r     int bit;\r     int flag = 0;\r \r     reverse(a.begin(), a.end());\r     reverse(b.begin(), b.end());\r \r     const char *a_str = a.c_str();\r     const char *b_str = b.c_str();\r \r     while ((*a_str != '\\0') && (*b_str != '\\0')) {\r       bit = (*a_str - '0') + (*b_str - '0') + flag;\r       result.push_back((bit % 2) + '0');\r       flag = bit / 2;\r \r       ++a_str;\r       ++b_str;\r     }\r \r     const char *p = ('\\0' == *a_str) ? b_str : a_str;\r \r     while (*p != '\\0') {\r       bit = (*p - '0') + flag;\r       result.push_back((bit % 2) + '0');\r       flag = bit / 2;\r \r       ++p;\r     }\r \r     if (flag > 0) {\r       result.push_back('1');\r     }\r \r     reverse(result.begin(), result.end());\r \r     return result;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_addBinary_string_string_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_addBinary_string_string_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\add_binary.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring a=\"\";\nstring b=\"\";\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode a */\n/* NormalStringDataNode b */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_addBinary_string_string_directed_0\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->addBinary(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-5\\\\add_binary.cpp\\\\Solution\\\\addBinary(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\4sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint target=-1922147662;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-2052476777;\nnum.push_back(num_element0);\nint num_element1=1300941352;\nnum.push_back(num_element1);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_addBinary_string_string_random_4(void) {\n{\nAKA_test_case_name=\"Solution_addBinary_string_string_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\add_binary.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName177628 = new char[2];akaRandomName177628[0] = 29;akaRandomName177628[1] = '\\0';string a=akaRandomName177628;\nchar* akaRandomName339825 = new char[2];akaRandomName339825[0] = 76;akaRandomName339825[1] = '\\0';string b=akaRandomName339825;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode a */\n/* NormalStringDataNode b */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_addBinary_string_string_random_4\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->addBinary(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-5\\\\add_binary.cpp\\\\Solution\\\\addBinary(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\4sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint target=0;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_addBinary_string_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_addBinary_string_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\add_binary.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName628271 = new char[2];akaRandomName628271[0] = 58;akaRandomName628271[1] = '\\0';string a=akaRandomName628271;\nchar* akaRandomName566286 = new char[2];akaRandomName566286[0] = -117;akaRandomName566286[1] = '\\0';string b=akaRandomName566286;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode a */\n/* NormalStringDataNode b */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_addBinary_string_string_random_3\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->addBinary(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-5\\\\add_binary.cpp\\\\Solution\\\\addBinary(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\4sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint target=-1922147662;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-2052476777;\nnum.push_back(num_element0);\nint num_element1=1300941352;\nnum.push_back(num_element1);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   string addBinary(string a, string b) {\r     string result;\r     int bit;\r     int flag = 0;\r \r     reverse(a.begin(), a.end());\r     reverse(b.begin(), b.end());\r \r     const char *a_str = a.c_str();\r     const char *b_str = b.c_str();\r \r     while ((*a_str != '\\0') && (*b_str != '\\0')) {\r       bit = (*a_str - '0') + (*b_str - '0') + flag;\r       result.push_back((bit % 2) + '0');\r       flag = bit / 2;\r \r       ++a_str;\r       ++b_str;\r     }\r \r     const char *p = ('\\0' == *a_str) ? b_str : a_str;\r \r     while (*p != '\\0') {\r       bit = (*p - '0') + flag;\r       result.push_back((bit % 2) + '0');\r       flag = bit / 2;\r \r       ++p;\r     }\r \r     if (flag > 0) {\r       result.push_back('1');\r     }\r \r     reverse(result.begin(), result.end());\r \r     return result;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-5\\add_binary.cpp\\Solution\\addBinary(string,string)"
+    }
+]

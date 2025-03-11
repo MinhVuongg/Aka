@@ -1,0 +1,238 @@
+[
+    {
+        "f": [],
+        "fm": "string intToRoman(int num) {\r \t\tchar symbol[7] = { 'I', 'V', 'X', 'L', 'C', 'D', 'M'};\r \t\tstring roman;\r \t\tint scale = 1000;\r \t\tfor (int i = 6; i >= 0; i -= 2)\r \t\t{\r \t\t\tint digit = num / scale;\r \t\t\tif (digit != 0)\r \t\t\t{\r \t\t\t\tif (digit <= 3)\r \t\t\t\t{\r \t\t\t\t\troman.append(digit, symbol[i]);\r \t\t\t\t}\r \t\t\t\telse if (digit == 4)\r \t\t\t\t{\r \t\t\t\t\troman.append(1, symbol[i]);\r \t\t\t\t\troman.append(1, symbol[i + 1]);\r \t\t\t\t}\r \t\t\t\telse if (digit == 5)\r \t\t\t\t{\r \t\t\t\t\troman.append(1, symbol[i + 1]);\r \t\t\t\t}\r \t\t\t\telse if (digit <= 8)\r \t\t\t\t{\r \t\t\t\t\troman.append(1, symbol[i + 1]);\r \t\t\t\t\troman.append(digit - 5, symbol[i]);\r \t\t\t\t}\r \t\t\t\telse if (digit == 9)\r \t\t\t\t{\r \t\t\t\t\troman.append(1, symbol[i]);\r \t\t\t\t\troman.append(1, symbol[i + 2]);\r \t\t\t\t}\r \t\t\t}\r \t\t\tnum = num % scale;\r \t\t\tscale /= 10;\r \t\t}\r \t\treturn roman;\r \t}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_intToRoman_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_intToRoman_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Integer_to_Roman.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint num=0;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode num */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_intToRoman_int_directed_0\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->intToRoman(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\sixLMAO\\\\Integer_to_Roman.cpp\\\\Solution\\\\intToRoman(int)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Integer_to_Roman.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint num=0;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode num */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_intToRoman_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_intToRoman_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Integer_to_Roman.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint num=-155509085;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode num */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_intToRoman_int_random_4\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->intToRoman(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\sixLMAO\\\\Integer_to_Roman.cpp\\\\Solution\\\\intToRoman(int)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Integer_to_Roman.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint num=-155509085;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode num */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_intToRoman_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_intToRoman_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Integer_to_Roman.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint num=1955964544;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode num */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_intToRoman_int_random_2\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->intToRoman(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\sixLMAO\\\\Integer_to_Roman.cpp\\\\Solution\\\\intToRoman(int)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Integer_to_Roman.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint num=1955964544;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode num */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_intToRoman_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_intToRoman_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Integer_to_Roman.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint num=897350969;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode num */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_intToRoman_int_random_0\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->intToRoman(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\sixLMAO\\\\Integer_to_Roman.cpp\\\\Solution\\\\intToRoman(int)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Integer_to_Roman.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint num=897350969;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode num */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \tstring intToRoman(int num) {\r \t\tchar symbol[7] = { 'I', 'V', 'X', 'L', 'C', 'D', 'M'};\r \t\tstring roman;\r \t\tint scale = 1000;\r \t\tfor (int i = 6; i >= 0; i -= 2)\r \t\t{\r \t\t\tint digit = num / scale;\r \t\t\tif (digit != 0)\r \t\t\t{\r \t\t\t\tif (digit <= 3)\r \t\t\t\t{\r \t\t\t\t\troman.append(digit, symbol[i]);\r \t\t\t\t}\r \t\t\t\telse if (digit == 4)\r \t\t\t\t{\r \t\t\t\t\troman.append(1, symbol[i]);\r \t\t\t\t\troman.append(1, symbol[i + 1]);\r \t\t\t\t}\r \t\t\t\telse if (digit == 5)\r \t\t\t\t{\r \t\t\t\t\troman.append(1, symbol[i + 1]);\r \t\t\t\t}\r \t\t\t\telse if (digit <= 8)\r \t\t\t\t{\r \t\t\t\t\troman.append(1, symbol[i + 1]);\r \t\t\t\t\troman.append(digit - 5, symbol[i]);\r \t\t\t\t}\r \t\t\t\telse if (digit == 9)\r \t\t\t\t{\r \t\t\t\t\troman.append(1, symbol[i]);\r \t\t\t\t\troman.append(1, symbol[i + 2]);\r \t\t\t\t}\r \t\t\t}\r \t\t\tnum = num % scale;\r \t\t\tscale /= 10;\r \t\t}\r \t\treturn roman;\r \t}\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\sixLMAO\\Integer_to_Roman.cpp\\Solution\\intToRoman(int)"
+    },
+    {
+        "f": [],
+        "fm": "bool canJump(vector<int>& nums) {\r     int n = nums.size();\r     int maxCover = 0;  \r     for(int start =0; start<= maxCover && start<n; start++)  \r     {  \r       if(nums[start]+start > maxCover)  \r         maxCover = nums[start]+start;  \r         if(maxCover >= n-1) return true;  \r     }  \r     return false;  \r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_canJump_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_canJump_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Jump_Game.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-650977520;\nnums.push_back(nums_element0);\nint nums_element1=-2013901075;\nnums.push_back(nums_element1);\nint nums_element2=-1733350525;\nnums.push_back(nums_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_canJump_vector_int_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->canJump(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\sixLMAO\\\\Jump_Game.cpp\\\\Solution\\\\canJump(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Jump_Game.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-650977520;\nnums.push_back(nums_element0);\nint nums_element1=-2013901075;\nnums.push_back(nums_element1);\nint nums_element2=-1733350525;\nnums.push_back(nums_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_canJump_vector_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_canJump_vector_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Jump_Game.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_canJump_vector_int_directed_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->canJump(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\sixLMAO\\\\Jump_Game.cpp\\\\Solution\\\\canJump(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Jump_Game.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_canJump_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_canJump_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Jump_Game.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=368219716;\nnums.push_back(nums_element0);\nint nums_element1=-649777760;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_canJump_vector_int_random_3\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->canJump(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\sixLMAO\\\\Jump_Game.cpp\\\\Solution\\\\canJump(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Jump_Game.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=368219716;\nnums.push_back(nums_element0);\nint nums_element1=-649777760;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool canJump(vector<int>& nums) {\r     int n = nums.size();\r     int maxCover = 0;  \r     for(int start =0; start<= maxCover && start<n; start++)  \r     {  \r       if(nums[start]+start > maxCover)  \r         maxCover = nums[start]+start;  \r         if(maxCover >= n-1) return true;  \r     }  \r     return false;  \r   }  \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\sixLMAO\\Jump_Game.cpp\\Solution\\canJump(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int largestRectangleArea(vector<int>& h) {\r     stack<int> S;\r     h.push_back(0);  // the last trigger\r     int sum = 0;\r     for (int i = 0; i < h.size(); i++) {\r       if (S.empty() || h[i] > h[S.top()]) S.push(i);\r       else {\r         int tmp = S.top();\r         S.pop();\r         sum = max(sum, h[tmp] * (S.empty() ? i : i - S.top() - 1));\r         i--;\r       }\r     }\r     return sum;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_largestRectangleArea_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_largestRectangleArea_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Largest_Rectangle_in_Histogram.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> h;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode h */\nint h_element0=455813483;\nh.push_back(h_element0);\nint h_element1=1998854796;\nh.push_back(h_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_largestRectangleArea_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->largestRectangleArea(h);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\sixLMAO\\\\Largest_Rectangle_in_Histogram.cpp\\\\Solution\\\\largestRectangleArea(vector<int>&)\");\n\n\nvector<int> EXPECTED_h;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Largest_Rectangle_in_Histogram.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> h;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode h */\nint h_element0=455813483;\nh.push_back(h_element0);\nint h_element1=1998854796;\nh.push_back(h_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_largestRectangleArea_vector_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_largestRectangleArea_vector_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Largest_Rectangle_in_Histogram.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> h;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode h */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_largestRectangleArea_vector_int_directed_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->largestRectangleArea(h);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\sixLMAO\\\\Largest_Rectangle_in_Histogram.cpp\\\\Solution\\\\largestRectangleArea(vector<int>&)\");\n\n\nvector<int> EXPECTED_h;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Largest_Rectangle_in_Histogram.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> h;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode h */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int largestRectangleArea(vector<int>& h) {\r     stack<int> S;\r     h.push_back(0);  // the last trigger\r     int sum = 0;\r     for (int i = 0; i < h.size(); i++) {\r       if (S.empty() || h[i] > h[S.top()]) S.push(i);\r       else {\r         int tmp = S.top();\r         S.pop();\r         sum = max(sum, h[tmp] * (S.empty() ? i : i - S.top() - 1));\r         i--;\r       }\r     }\r     return sum;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\sixLMAO\\Largest_Rectangle_in_Histogram.cpp\\Solution\\largestRectangleArea(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int lengthOfLastWord(const char *s) {\r         const char* pStart = s;\r         const char* pEnd = s;\r         const char* p = s;\r         const char* pre = s;\r \r         while (*p != '\\0')\r         {\r             if (*pre == ' ' && *p != ' ') pStart = p;\r             if (*pre != ' ' && *p == ' ') pEnd = p;\r \r             pre = p;\r             p++;\r         }\r \r         if (*pre != ' ' && *p == '\\0') pEnd = p;\r         return pEnd - pStart;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_lengthOfLastWord_char_constmul_random_2(void) {\n{\nAKA_test_case_name=\"Solution_lengthOfLastWord_char_constmul_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Length_of_Last_Word.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_s[2];\n\nchar AKA_ARRAY_INIT_s_constantPointer_0=93;\nAKA_ARRAY_INIT_s[0] = AKA_ARRAY_INIT_s_constantPointer_0;\n\nchar AKA_ARRAY_INIT_s_constantPointer_1=-21;\nAKA_ARRAY_INIT_s[1] = AKA_ARRAY_INIT_s_constantPointer_1;\n\nchar const* s = AKA_ARRAY_INIT_s;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_lengthOfLastWord_char_constmul_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->lengthOfLastWord(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\sixLMAO\\\\Length_of_Last_Word.cpp\\\\Solution\\\\lengthOfLastWord(char const*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Length_of_Last_Word.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_s[2];\n\nchar AKA_ARRAY_INIT_s_constantPointer_0=93;\nAKA_ARRAY_INIT_s[0] = AKA_ARRAY_INIT_s_constantPointer_0;\n\nchar AKA_ARRAY_INIT_s_constantPointer_1=-21;\nAKA_ARRAY_INIT_s[1] = AKA_ARRAY_INIT_s_constantPointer_1;\n\nchar const* s = AKA_ARRAY_INIT_s;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_lengthOfLastWord_char_constmul_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_lengthOfLastWord_char_constmul_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Length_of_Last_Word.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar const* s;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_lengthOfLastWord_char_constmul_directed_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->lengthOfLastWord(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\sixLMAO\\\\Length_of_Last_Word.cpp\\\\Solution\\\\lengthOfLastWord(char const*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Length_of_Last_Word.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar const* s;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int lengthOfLastWord(const char *s) {\r         const char* pStart = s;\r         const char* pEnd = s;\r         const char* p = s;\r         const char* pre = s;\r \r         while (*p != '\\0')\r         {\r             if (*pre == ' ' && *p != ' ') pStart = p;\r             if (*pre != ' ' && *p == ' ') pEnd = p;\r \r             pre = p;\r             p++;\r         }\r \r         if (*pre != ' ' && *p == '\\0') pEnd = p;\r         return pEnd - pStart;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\sixLMAO\\Length_of_Last_Word.cpp\\Solution\\lengthOfLastWord(char const*)"
+    },
+    {
+        "f": [],
+        "fm": "int numSquares(int n) {\r         vector<int> dp_nums(1,0);\r         \r         while(dp_nums.size() <= n) {\r             int k = dp_nums.size();\r             int least_num = INT_MAX;\r             for(int i =1; i*i <=k; i++){\r                 least_num = min(least_num, dp_nums[k-i*i] +1);               \r             }\r             dp_nums.push_back(least_num);\r         }\r         return dp_nums[n];\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_numSquares_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_numSquares_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Perfect_Squares.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=6;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_numSquares_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->numSquares(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\sixLMAO\\\\Perfect_Squares.cpp\\\\Solution\\\\numSquares(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Perfect_Squares.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=6;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_numSquares_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_numSquares_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Perfect_Squares.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_numSquares_int_directed_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->numSquares(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\sixLMAO\\\\Perfect_Squares.cpp\\\\Solution\\\\numSquares(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Perfect_Squares.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int numSquares(int n) {\r         vector<int> dp_nums(1,0);\r         \r         while(dp_nums.size() <= n) {\r             int k = dp_nums.size();\r             int least_num = INT_MAX;\r             for(int i =1; i*i <=k; i++){\r                 least_num = min(least_num, dp_nums[k-i*i] +1);               \r             }\r             dp_nums.push_back(least_num);\r         }\r         return dp_nums[n];\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\codingtmd_leetcode\\src\\sixLMAO\\Perfect_Squares.cpp\\Solution\\numSquares(int)"
+    }
+]

@@ -1,0 +1,110 @@
+[
+    {
+        "f": [],
+        "fm": "int maxArea(vector<int> &height) {\r     int width = height.size();\r     int left = 0;\r     int right = width - 1;\r     int next;\r     int max = 0;\r \r     while (left < right) {\r       int area = std::min(height[left], height[right]) * (right - left);\r \r       if (area > max) {\r         max = area;\r       }\r \r       if (height[left] > height[right]) {\r         next = right - 1;\r \r         while ((next > left) && (height[next] <= height[right])) {\r           --next;\r         }\r \r         right = next;\r       }\r       else {\r         next = left + 1;\r \r         while ((next < right) && (height[next] <= height[left])) {\r           ++next;\r         }\r \r         left = next;\r       }\r     }\r \r     return max;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maxArea_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_maxArea_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\container_with_most_water.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=-867895881;\nheight.push_back(height_element0);\nint height_element1=1288329573;\nheight.push_back(height_element1);\nint height_element2=-1368174190;\nheight.push_back(height_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maxArea_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maxArea(height);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-5\\\\container_with_most_water.cpp\\\\Solution\\\\maxArea(vector<int>&)\");\n\n\nvector<int> EXPECTED_height;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\container_with_most_water.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=-867895881;\nheight.push_back(height_element0);\nint height_element1=1288329573;\nheight.push_back(height_element1);\nint height_element2=-1368174190;\nheight.push_back(height_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maxArea_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_maxArea_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\container_with_most_water.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=2055599774;\nheight.push_back(height_element0);\nint height_element1=508870766;\nheight.push_back(height_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maxArea_vector_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maxArea(height);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-5\\\\container_with_most_water.cpp\\\\Solution\\\\maxArea(vector<int>&)\");\n\n\nvector<int> EXPECTED_height;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\container_with_most_water.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=2055599774;\nheight.push_back(height_element0);\nint height_element1=508870766;\nheight.push_back(height_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int maxArea(vector<int> &height) {\r     int width = height.size();\r     int left = 0;\r     int right = width - 1;\r     int next;\r     int max = 0;\r \r     while (left < right) {\r       int area = std::min(height[left], height[right]) * (right - left);\r \r       if (area > max) {\r         max = area;\r       }\r \r       if (height[left] > height[right]) {\r         next = right - 1;\r \r         while ((next > left) && (height[next] <= height[right])) {\r           --next;\r         }\r \r         right = next;\r       }\r       else {\r         next = left + 1;\r \r         while ((next < right) && (height[next] <= height[left])) {\r           ++next;\r         }\r \r         left = next;\r       }\r     }\r \r     return max;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-5\\container_with_most_water.cpp\\Solution\\maxArea(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int calc_decode_ways(string &s,\r       int index,\r       vector<int> &cached_ways) {\r     int len = s.length();\r \r     if (index >= len) {\r       return 1;\r     }\r     else if (cached_ways[index] >= 0) {\r       return cached_ways[index];\r     }\r     else {\r       int v1 = s[index] - '0';\r       int v2 = -1;\r \r       if (0 == v1) {\r         cached_ways[index] = 0;\r         return 0;\r       }\r       else {\r         int ways = calc_decode_ways(s, index + 1, cached_ways);\r \r         if ((index + 1) < len) {\r           v2 = v1 * 10 + (s[index + 1] - '0');\r \r           if ((v1 >= 1) && (v2 <= 26)) {\r             ways += calc_decode_ways(s, index + 2, cached_ways);\r           }\r         }\r \r         cached_ways[index] = ways;\r \r         return ways;\r       }\r     }\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_calc_decode_ways_string_int_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_calc_decode_ways_string_int_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\decode_ways.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName188205 = new char[2];akaRandomName188205[0] = -84;akaRandomName188205[1] = '\\0';string s=akaRandomName188205;\n\n\nint index=-58461985;\nvector<int> cached_ways;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode index */\n/* VectorDataNode cached_ways */\nint cached_ways_element0=654234479;\ncached_ways.push_back(cached_ways_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_calc_decode_ways_string_int_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->calc_decode_ways(s,index,cached_ways);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-5\\\\decode_ways.cpp\\\\Solution\\\\calc_decode_ways(string&,int,vector<int>&)\");\n\n\nvector<int> EXPECTED_cached_ways;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\container_with_most_water.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=-867895881;\nheight.push_back(height_element0);\nint height_element1=1288329573;\nheight.push_back(height_element1);\nint height_element2=-1368174190;\nheight.push_back(height_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_calc_decode_ways_string_int_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_calc_decode_ways_string_int_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\decode_ways.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName202427 = new char[2];akaRandomName202427[0] = -10;akaRandomName202427[1] = '\\0';string s=akaRandomName202427;\n\n\nint index=2089887601;\nvector<int> cached_ways;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode index */\n/* VectorDataNode cached_ways */\nint cached_ways_element0=-2009931971;\ncached_ways.push_back(cached_ways_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_calc_decode_ways_string_int_vector_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->calc_decode_ways(s,index,cached_ways);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-5\\\\decode_ways.cpp\\\\Solution\\\\calc_decode_ways(string&,int,vector<int>&)\");\n\n\nvector<int> EXPECTED_cached_ways;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\container_with_most_water.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=2055599774;\nheight.push_back(height_element0);\nint height_element1=508870766;\nheight.push_back(height_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int calc_decode_ways(string &s,\r       int index,\r       vector<int> &cached_ways) {\r     int len = s.length();\r \r     if (index >= len) {\r       return 1;\r     }\r     else if (cached_ways[index] >= 0) {\r       return cached_ways[index];\r     }\r     else {\r       int v1 = s[index] - '0';\r       int v2 = -1;\r \r       if (0 == v1) {\r         cached_ways[index] = 0;\r         return 0;\r       }\r       else {\r         int ways = calc_decode_ways(s, index + 1, cached_ways);\r \r         if ((index + 1) < len) {\r           v2 = v1 * 10 + (s[index + 1] - '0');\r \r           if ((v1 >= 1) && (v2 <= 26)) {\r             ways += calc_decode_ways(s, index + 2, cached_ways);\r           }\r         }\r \r         cached_ways[index] = ways;\r \r         return ways;\r       }\r     }\r   }\r \r   int numDecodings(string s) {\r     int len = s.length();\r \r     if (0 == len) {\r       return 0;\r     }\r \r     vector<int> cached_ways(len, -1);\r \r     calc_decode_ways(s, 0, cached_ways);\r \r     return cached_ways[0];\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-5\\decode_ways.cpp\\Solution\\calc_decode_ways(string&,int,vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int numDecodings(string s) {\r     int len = s.length();\r \r     if (0 == len) {\r       return 0;\r     }\r \r     vector<int> cached_ways(len, -1);\r \r     calc_decode_ways(s, 0, cached_ways);\r \r     return cached_ways[0];\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_numDecodings_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_numDecodings_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\decode_ways.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName463728 = new char[2];akaRandomName463728[0] = 50;akaRandomName463728[1] = '\\0';string s=akaRandomName463728;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_numDecodings_string_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->numDecodings(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-5\\\\decode_ways.cpp\\\\Solution\\\\numDecodings(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\container_with_most_water.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=-867895881;\nheight.push_back(height_element0);\nint height_element1=1288329573;\nheight.push_back(height_element1);\nint height_element2=-1368174190;\nheight.push_back(height_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int calc_decode_ways(string &s,\r       int index,\r       vector<int> &cached_ways) {\r     int len = s.length();\r \r     if (index >= len) {\r       return 1;\r     }\r     else if (cached_ways[index] >= 0) {\r       return cached_ways[index];\r     }\r     else {\r       int v1 = s[index] - '0';\r       int v2 = -1;\r \r       if (0 == v1) {\r         cached_ways[index] = 0;\r         return 0;\r       }\r       else {\r         int ways = calc_decode_ways(s, index + 1, cached_ways);\r \r         if ((index + 1) < len) {\r           v2 = v1 * 10 + (s[index + 1] - '0');\r \r           if ((v1 >= 1) && (v2 <= 26)) {\r             ways += calc_decode_ways(s, index + 2, cached_ways);\r           }\r         }\r \r         cached_ways[index] = ways;\r \r         return ways;\r       }\r     }\r   }\r \r   int numDecodings(string s) {\r     int len = s.length();\r \r     if (0 == len) {\r       return 0;\r     }\r \r     vector<int> cached_ways(len, -1);\r \r     calc_decode_ways(s, 0, cached_ways);\r \r     return cached_ways[0];\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-5\\decode_ways.cpp\\Solution\\numDecodings(string)"
+    }
+]

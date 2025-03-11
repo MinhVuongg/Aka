@@ -1,0 +1,17 @@
+[
+    {
+        "f": [],
+        "fm": "int brokenCalc(int X, int Y) {\r         if (X >= Y) return X-Y ;\r         if ( Y%2 ==0 ) return brokenCalc(X, Y/2) + 1;\r         return brokenCalc(X, Y+1) + 1;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int brokenCalc(int X, int Y) {\r         if (X >= Y) return X-Y ;\r         if ( Y%2 ==0 ) return brokenCalc(X, Y/2) + 1;\r         return brokenCalc(X, Y+1) + 1;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\brokenCalculator\\BrokenCalculator.cpp\\Solution\\brokenCalc(int,int)"
+    }
+]

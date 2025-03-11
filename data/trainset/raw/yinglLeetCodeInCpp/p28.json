@@ -1,0 +1,110 @@
+[
+    {
+        "f": [],
+        "fm": "int find_pivotal(int array[], int start, int end) {\r     if (start >= end) {\r       return start;\r     }\r \r     int mid = (start + end) / 2;\r \r     if (array[mid] >= array[start]) {\r       if (array[mid] >= array[0]) {\r         return find_pivotal(array, mid + 1, end);\r       }\r       else {\r         return find_pivotal(array, start, mid - 1);\r       }\r     }\r     else {\r       return find_pivotal(array, start, mid);\r     }\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_find_pivotal_int_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_find_pivotal_int_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\search_in_rotated_sorted_array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint array[3];;\n\n\nint start=-868636769;\n\n\nint end=1742457951;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode array */\n/* NormalNumberDataNode array[0] */\narray[0]=-1884251997;\n/* NormalNumberDataNode array[1] */\narray[1]=631780184;\n/* NormalNumberDataNode array[2] */\narray[2]=1817263568;\n/* NormalNumberDataNode start */\n/* NormalNumberDataNode end */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_find_pivotal_int_int_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->find_pivotal(array,start,end);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-24\\\\search_in_rotated_sorted_array.cpp\\\\Solution\\\\find_pivotal(int[],int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_find_pivotal_int_int_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_find_pivotal_int_int_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\search_in_rotated_sorted_array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint array[3];;\n\n\nint start=1259470618;\n\n\nint end=180298538;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode array */\n/* NormalNumberDataNode array[0] */\narray[0]=1108726836;\n/* NormalNumberDataNode array[1] */\narray[1]=-963771229;\n/* NormalNumberDataNode array[2] */\narray[2]=94679142;\n/* NormalNumberDataNode start */\n/* NormalNumberDataNode end */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_find_pivotal_int_int_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->find_pivotal(array,start,end);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-24\\\\search_in_rotated_sorted_array.cpp\\\\Solution\\\\find_pivotal(int[],int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-110210008;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=1580515888;\nmatrix_element0.push_back(matrix_element0_element1);\nmatrix.push_back(matrix_element0);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   // 原理分析\r   // 以4567012里找6为例子：\r   // 判断数组是否顺序，满足条件直接二分法。\r   // 寻找分界(pivotal)点，满足a[i] < a[i - 1]并且a[i] > a[i + 1]。\r   // 比较要找的数和A[0]，大的话在［0， i - 1]区间找，小的话在[i, n - 1]区间找。\r   int find_pivotal(int array[], int start, int end) {\r     if (start >= end) {\r       return start;\r     }\r \r     int mid = (start + end) / 2;\r \r     if (array[mid] >= array[start]) {\r       if (array[mid] >= array[0]) {\r         return find_pivotal(array, mid + 1, end);\r       }\r       else {\r         return find_pivotal(array, start, mid - 1);\r       }\r     }\r     else {\r       return find_pivotal(array, start, mid);\r     }\r   }\r \r   int binary_search(int array[], int start, int end, int target) {\r     while (start <= end) {\r       int mid = (start + end) / 2;\r \r       if (array[mid] < target) {\r         start = mid + 1;\r       }\r       else if (array[mid] > target) {\r         end = mid - 1;\r       }\r       else {\r         return mid;\r       }\r     }\r \r     return -1;\r   }\r \r   int search(int A[], int n, int target) {\r     // 处理顺序和只有一个元素的情况\r     if (A[0] <= A[n - 1]) {\r       return binary_search(A, 0, n - 1, target);\r     }\r \r     int pivotal = find_pivotal(A, 0, n - 1);\r \r     if (target >= A[0]) {\r       return binary_search(A, 0, pivotal - 1, target);\r     }\r     else {\r       return binary_search(A, pivotal, n - 1, target);\r     }\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-24\\search_in_rotated_sorted_array.cpp\\Solution\\find_pivotal(int[],int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int binary_search(int array[], int start, int end, int target) {\r     while (start <= end) {\r       int mid = (start + end) / 2;\r \r       if (array[mid] < target) {\r         start = mid + 1;\r       }\r       else if (array[mid] > target) {\r         end = mid - 1;\r       }\r       else {\r         return mid;\r       }\r     }\r \r     return -1;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_binary_search_int_int_int_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_binary_search_int_int_int_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\search_in_rotated_sorted_array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint array[2];;\n\n\nint start=4;\n\n\nint end=5;\n\n\nint target=2103648971;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode array */\n/* NormalNumberDataNode array[0] */\narray[0]=203862300;\n/* NormalNumberDataNode array[1] */\narray[1]=-1280817589;\n/* NormalNumberDataNode start */\n/* NormalNumberDataNode end */\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_binary_search_int_int_int_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->binary_search(array,start,end,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-24\\\\search_in_rotated_sorted_array.cpp\\\\Solution\\\\binary_search(int[],int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_binary_search_int_int_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_binary_search_int_int_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\search_in_rotated_sorted_array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint array[3];;\n\n\nint start=7;\n\n\nint end=9;\n\n\nint target=-1485881296;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode array */\n/* NormalNumberDataNode array[0] */\narray[0]=1010061195;\n/* NormalNumberDataNode array[1] */\narray[1]=1971460837;\n/* NormalNumberDataNode array[2] */\narray[2]=-1836515404;\n/* NormalNumberDataNode start */\n/* NormalNumberDataNode end */\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_binary_search_int_int_int_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->binary_search(array,start,end,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-24\\\\search_in_rotated_sorted_array.cpp\\\\Solution\\\\binary_search(int[],int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-110210008;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=1580515888;\nmatrix_element0.push_back(matrix_element0_element1);\nmatrix.push_back(matrix_element0);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   // 原理分析\r   // 以4567012里找6为例子：\r   // 判断数组是否顺序，满足条件直接二分法。\r   // 寻找分界(pivotal)点，满足a[i] < a[i - 1]并且a[i] > a[i + 1]。\r   // 比较要找的数和A[0]，大的话在［0， i - 1]区间找，小的话在[i, n - 1]区间找。\r   int find_pivotal(int array[], int start, int end) {\r     if (start >= end) {\r       return start;\r     }\r \r     int mid = (start + end) / 2;\r \r     if (array[mid] >= array[start]) {\r       if (array[mid] >= array[0]) {\r         return find_pivotal(array, mid + 1, end);\r       }\r       else {\r         return find_pivotal(array, start, mid - 1);\r       }\r     }\r     else {\r       return find_pivotal(array, start, mid);\r     }\r   }\r \r   int binary_search(int array[], int start, int end, int target) {\r     while (start <= end) {\r       int mid = (start + end) / 2;\r \r       if (array[mid] < target) {\r         start = mid + 1;\r       }\r       else if (array[mid] > target) {\r         end = mid - 1;\r       }\r       else {\r         return mid;\r       }\r     }\r \r     return -1;\r   }\r \r   int search(int A[], int n, int target) {\r     // 处理顺序和只有一个元素的情况\r     if (A[0] <= A[n - 1]) {\r       return binary_search(A, 0, n - 1, target);\r     }\r \r     int pivotal = find_pivotal(A, 0, n - 1);\r \r     if (target >= A[0]) {\r       return binary_search(A, 0, pivotal - 1, target);\r     }\r     else {\r       return binary_search(A, pivotal, n - 1, target);\r     }\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-24\\search_in_rotated_sorted_array.cpp\\Solution\\binary_search(int[],int,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int search(int A[], int n, int target) {\r     // 处理顺序和只有一个元素的情况\r     if (A[0] <= A[n - 1]) {\r       return binary_search(A, 0, n - 1, target);\r     }\r \r     int pivotal = find_pivotal(A, 0, n - 1);\r \r     if (target >= A[0]) {\r       return binary_search(A, 0, pivotal - 1, target);\r     }\r     else {\r       return binary_search(A, pivotal, n - 1, target);\r     }\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_search_int_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_search_int_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\search_in_rotated_sorted_array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[1];;\n\n\nint n=-2116209898;\n\n\nint target=-1700064326;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=-820048190;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_search_int_int_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->search(A,n,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-24\\\\search_in_rotated_sorted_array.cpp\\\\Solution\\\\search(int[],int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   // 原理分析\r   // 以4567012里找6为例子：\r   // 判断数组是否顺序，满足条件直接二分法。\r   // 寻找分界(pivotal)点，满足a[i] < a[i - 1]并且a[i] > a[i + 1]。\r   // 比较要找的数和A[0]，大的话在［0， i - 1]区间找，小的话在[i, n - 1]区间找。\r   int find_pivotal(int array[], int start, int end) {\r     if (start >= end) {\r       return start;\r     }\r \r     int mid = (start + end) / 2;\r \r     if (array[mid] >= array[start]) {\r       if (array[mid] >= array[0]) {\r         return find_pivotal(array, mid + 1, end);\r       }\r       else {\r         return find_pivotal(array, start, mid - 1);\r       }\r     }\r     else {\r       return find_pivotal(array, start, mid);\r     }\r   }\r \r   int binary_search(int array[], int start, int end, int target) {\r     while (start <= end) {\r       int mid = (start + end) / 2;\r \r       if (array[mid] < target) {\r         start = mid + 1;\r       }\r       else if (array[mid] > target) {\r         end = mid - 1;\r       }\r       else {\r         return mid;\r       }\r     }\r \r     return -1;\r   }\r \r   int search(int A[], int n, int target) {\r     // 处理顺序和只有一个元素的情况\r     if (A[0] <= A[n - 1]) {\r       return binary_search(A, 0, n - 1, target);\r     }\r \r     int pivotal = find_pivotal(A, 0, n - 1);\r \r     if (target >= A[0]) {\r       return binary_search(A, 0, pivotal - 1, target);\r     }\r     else {\r       return binary_search(A, pivotal, n - 1, target);\r     }\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-24\\search_in_rotated_sorted_array.cpp\\Solution\\search(int[],int,int)"
+    }
+]

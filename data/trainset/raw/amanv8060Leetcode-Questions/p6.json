@@ -1,0 +1,318 @@
+[
+    {
+        "f": [],
+        "fm": "void reverseString(vector<char> &s) {\r     int i;\r     int n = s.size();\r     for (i = 0; i < n / 2; i++) {\r       int temp = s[i];\r       s[i] = s[n - i - 1];\r       s[n - i - 1] = temp;\r     }\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_reverseString_vector_char_random_3(void) {\n{\nAKA_test_case_name=\"Solution_reverseString_vector_char_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\344.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<char> s;\n\n/* RootDataNode STATIC */\n/* VectorDataNode s */\nchar s_element0=2;\ns.push_back(s_element0);\nchar s_element1=26;\ns.push_back(s_element1);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_reverseString_vector_char_random_3\");AKA_INSTANCE___Solution->reverseString(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p6\\\\344.cpp\\\\Solution\\\\reverseString(vector<char>&)\");\n\n/* error assertion */\nvector<char> EXPECTED_s;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r  public:\r   void reverseString(vector<char> &s) {\r     int i;\r     int n = s.size();\r     for (i = 0; i < n / 2; i++) {\r       int temp = s[i];\r       s[i] = s[n - i - 1];\r       s[n - i - 1] = temp;\r     }\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p6\\344.cpp\\Solution\\reverseString(vector<char>&)"
+    },
+    {
+        "f": [],
+        "fm": "int distributeCandies(vector<int>& candyType) {\r     int n = candyType.size();\r     map<int, int> m;\r     for (int i = 0; i < n; i++) {\r       m.insert({candyType[i], 1});\r     }\r     int maplen = m.size();\r     if (maplen >= n / 2)\r       return n / 2;\r     else\r       return maplen;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_distributeCandies_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_distributeCandies_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\575.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> candyType;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode candyType */\nint candyType_element0=1880516419;\ncandyType.push_back(candyType_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_distributeCandies_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->distributeCandies(candyType);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p6\\\\575.cpp\\\\Solution\\\\distributeCandies(vector<int>&)\");\n\n\nvector<int> EXPECTED_candyType;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r  public:\r   int distributeCandies(vector<int>& candyType) {\r     int n = candyType.size();\r     map<int, int> m;\r     for (int i = 0; i < n; i++) {\r       m.insert({candyType[i], 1});\r     }\r     int maplen = m.size();\r     if (maplen >= n / 2)\r       return n / 2;\r     else\r       return maplen;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p6\\575.cpp\\Solution\\distributeCandies(vector<int>&)"
+    },
+    {
+        "f": [
+            "int front = 0;",
+            "int rear = -1;",
+            "int size;",
+            "int max_size;",
+            "vector<int> vec;"
+        ],
+        "fm": "bool enQueue(int value) {\r     if (isFull() == true) {\r       return false;\r     }\r     rear = (rear + 1) % max_size;\r     vec[rear] = value;\r     size++;\r     return true;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_MyCircularQueue_enQueue_int_random_2(void) {\n{\nAKA_test_case_name=\"MyCircularQueue_enQueue_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___MyCircularQueue */\n/* ConstructorDataNode MyCircularQueue(int) */\n/* NormalNumberDataNode k */\nint AKA_INSTANCE___MyCircularQueue_k=2084908673;\nAKA_mark(\"Calling: .\\\\p6\\\\622.cpp\\\\MyCircularQueue\\\\MyCircularQueue(int)|ROOT\\\\622.cpp\\\\GLOBAL\\\\AKA_INSTANCE___MyCircularQueue\\\\AKA_INSTANCE___MyCircularQueue\\\\MyCircularQueue(int)\");AKA_fCall++;AKA_INSTANCE___MyCircularQueue = new ::MyCircularQueue(AKA_INSTANCE___MyCircularQueue_k);\n/* NormalNumberDataNode front */\n/* front : null value -> no code */\n/* NormalNumberDataNode rear */\nAKA_INSTANCE___MyCircularQueue->rear=68100794;\n/* NormalNumberDataNode size */\nAKA_INSTANCE___MyCircularQueue->size=-253107054;\n/* NormalNumberDataNode max_size */\nAKA_INSTANCE___MyCircularQueue->max_size=-1707133587;\n/* VectorDataNode vec */\nint AKA_INSTANCE___MyCircularQueue_vec_element0=1469380739;\nAKA_INSTANCE___MyCircularQueue->vec.push_back(AKA_INSTANCE___MyCircularQueue_vec_element0);\nint AKA_INSTANCE___MyCircularQueue_vec_element1=662009593;\nAKA_INSTANCE___MyCircularQueue->vec.push_back(AKA_INSTANCE___MyCircularQueue_vec_element1);\nint AKA_INSTANCE___MyCircularQueue_vec_element2=1665121303;\nAKA_INSTANCE___MyCircularQueue->vec.push_back(AKA_INSTANCE___MyCircularQueue_vec_element2);\n\n\n\n\nint value=-614711329;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode value */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test MyCircularQueue_enQueue_int_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___MyCircularQueue->enQueue(value);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p6\\\\622.cpp\\\\MyCircularQueue\\\\enQueue(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class MyCircularQueue {\r  public:\r   int front = 0, rear = -1;\r   int size;\r   int max_size;\r   vector<int> vec;\r \r   MyCircularQueue(int k) {\r     front = 0;\r     rear = -1;\r     vec.resize(k);\r     size = 0;\r     max_size = k;\r   }\r \r   bool enQueue(int value) {\r     if (isFull() == true) {\r       return false;\r     }\r     rear = (rear + 1) % max_size;\r     vec[rear] = value;\r     size++;\r     return true;\r   }\r \r   bool deQueue() {\r     if (isEmpty() == true) {\r       return false;\r     }\r     front = (front + 1) % max_size;\r     size--;\r     return true;\r   }\r \r   int Front() {\r     if (isEmpty() == true) {\r       return -1;\r     }\r     return vec[front];\r   }\r \r   int Rear() {\r     if (isEmpty() == true) {\r       return -1;\r     }\r     return vec[rear];\r   }\r \r   bool isEmpty() {\r     if (size == 0) {\r       return true;\r     }\r     return false;\r   }\r \r   bool isFull() {\r     if (size == max_size) {\r       return true;\r     }\r     return false;\r   }\r };",
+        "c": [
+            "MyCircularQueue(int k) {\r\n    front = 0;\r\n    rear = -1;\r\n    vec.resize(k);\r\n    size = 0;\r\n    max_size = k;\r\n  }"
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p6\\622.cpp\\MyCircularQueue\\enQueue(int)"
+    },
+    {
+        "f": [
+            "int front = 0;",
+            "int rear = -1;",
+            "int size;",
+            "int max_size;",
+            "vector<int> vec;"
+        ],
+        "fm": "bool deQueue() {\r     if (isEmpty() == true) {\r       return false;\r     }\r     front = (front + 1) % max_size;\r     size--;\r     return true;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_MyCircularQueue_deQueue_random_1(void) {\n{\nAKA_test_case_name=\"MyCircularQueue_deQueue_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___MyCircularQueue */\n/* ConstructorDataNode MyCircularQueue(int) */\n/* NormalNumberDataNode k */\nint AKA_INSTANCE___MyCircularQueue_k=232542043;\nAKA_mark(\"Calling: .\\\\p6\\\\622.cpp\\\\MyCircularQueue\\\\MyCircularQueue(int)|ROOT\\\\622.cpp\\\\GLOBAL\\\\AKA_INSTANCE___MyCircularQueue\\\\AKA_INSTANCE___MyCircularQueue\\\\MyCircularQueue(int)\");AKA_fCall++;AKA_INSTANCE___MyCircularQueue = new ::MyCircularQueue(AKA_INSTANCE___MyCircularQueue_k);\n/* NormalNumberDataNode front */\nAKA_INSTANCE___MyCircularQueue->front=-1460461947;\n/* NormalNumberDataNode rear */\n/* rear : null value -> no code */\n/* NormalNumberDataNode size */\nAKA_INSTANCE___MyCircularQueue->size=-736885337;\n/* NormalNumberDataNode max_size */\nAKA_INSTANCE___MyCircularQueue->max_size=-637164734;\n/* VectorDataNode vec */\n\n\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test MyCircularQueue_deQueue_random_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___MyCircularQueue->deQueue();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p6\\\\622.cpp\\\\MyCircularQueue\\\\deQueue()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class MyCircularQueue {\r  public:\r   int front = 0, rear = -1;\r   int size;\r   int max_size;\r   vector<int> vec;\r \r   MyCircularQueue(int k) {\r     front = 0;\r     rear = -1;\r     vec.resize(k);\r     size = 0;\r     max_size = k;\r   }\r \r   bool enQueue(int value) {\r     if (isFull() == true) {\r       return false;\r     }\r     rear = (rear + 1) % max_size;\r     vec[rear] = value;\r     size++;\r     return true;\r   }\r \r   bool deQueue() {\r     if (isEmpty() == true) {\r       return false;\r     }\r     front = (front + 1) % max_size;\r     size--;\r     return true;\r   }\r \r   int Front() {\r     if (isEmpty() == true) {\r       return -1;\r     }\r     return vec[front];\r   }\r \r   int Rear() {\r     if (isEmpty() == true) {\r       return -1;\r     }\r     return vec[rear];\r   }\r \r   bool isEmpty() {\r     if (size == 0) {\r       return true;\r     }\r     return false;\r   }\r \r   bool isFull() {\r     if (size == max_size) {\r       return true;\r     }\r     return false;\r   }\r };",
+        "c": [
+            "MyCircularQueue(int k) {\r\n    front = 0;\r\n    rear = -1;\r\n    vec.resize(k);\r\n    size = 0;\r\n    max_size = k;\r\n  }"
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p6\\622.cpp\\MyCircularQueue\\deQueue()"
+    },
+    {
+        "f": [
+            "int front = 0;",
+            "int rear = -1;",
+            "int size;",
+            "int max_size;",
+            "vector<int> vec;"
+        ],
+        "fm": "int Front() {\r     if (isEmpty() == true) {\r       return -1;\r     }\r     return vec[front];\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_MyCircularQueue_Front_random_1(void) {\n{\nAKA_test_case_name=\"MyCircularQueue_Front_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___MyCircularQueue */\n/* ConstructorDataNode MyCircularQueue(int) */\n/* NormalNumberDataNode k */\nint AKA_INSTANCE___MyCircularQueue_k=916716366;\nAKA_mark(\"Calling: .\\\\p6\\\\622.cpp\\\\MyCircularQueue\\\\MyCircularQueue(int)|ROOT\\\\622.cpp\\\\GLOBAL\\\\AKA_INSTANCE___MyCircularQueue\\\\AKA_INSTANCE___MyCircularQueue\\\\MyCircularQueue(int)\");AKA_fCall++;AKA_INSTANCE___MyCircularQueue = new ::MyCircularQueue(AKA_INSTANCE___MyCircularQueue_k);\n/* NormalNumberDataNode front */\nAKA_INSTANCE___MyCircularQueue->front=-108545289;\n/* NormalNumberDataNode rear */\n/* rear : null value -> no code */\n/* NormalNumberDataNode size */\n/* size : null value -> no code */\n/* NormalNumberDataNode max_size */\n/* max_size : null value -> no code */\n/* VectorDataNode vec */\nint AKA_INSTANCE___MyCircularQueue_vec_element0=2041869257;\nAKA_INSTANCE___MyCircularQueue->vec.push_back(AKA_INSTANCE___MyCircularQueue_vec_element0);\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test MyCircularQueue_Front_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___MyCircularQueue->Front();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p6\\\\622.cpp\\\\MyCircularQueue\\\\Front()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class MyCircularQueue {\r  public:\r   int front = 0, rear = -1;\r   int size;\r   int max_size;\r   vector<int> vec;\r \r   MyCircularQueue(int k) {\r     front = 0;\r     rear = -1;\r     vec.resize(k);\r     size = 0;\r     max_size = k;\r   }\r \r   bool enQueue(int value) {\r     if (isFull() == true) {\r       return false;\r     }\r     rear = (rear + 1) % max_size;\r     vec[rear] = value;\r     size++;\r     return true;\r   }\r \r   bool deQueue() {\r     if (isEmpty() == true) {\r       return false;\r     }\r     front = (front + 1) % max_size;\r     size--;\r     return true;\r   }\r \r   int Front() {\r     if (isEmpty() == true) {\r       return -1;\r     }\r     return vec[front];\r   }\r \r   int Rear() {\r     if (isEmpty() == true) {\r       return -1;\r     }\r     return vec[rear];\r   }\r \r   bool isEmpty() {\r     if (size == 0) {\r       return true;\r     }\r     return false;\r   }\r \r   bool isFull() {\r     if (size == max_size) {\r       return true;\r     }\r     return false;\r   }\r };",
+        "c": [
+            "MyCircularQueue(int k) {\r\n    front = 0;\r\n    rear = -1;\r\n    vec.resize(k);\r\n    size = 0;\r\n    max_size = k;\r\n  }"
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p6\\622.cpp\\MyCircularQueue\\Front()"
+    },
+    {
+        "f": [
+            "int front = 0;",
+            "int rear = -1;",
+            "int size;",
+            "int max_size;",
+            "vector<int> vec;"
+        ],
+        "fm": "int Rear() {\r     if (isEmpty() == true) {\r       return -1;\r     }\r     return vec[rear];\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_MyCircularQueue_Rear_random_3(void) {\n{\nAKA_test_case_name=\"MyCircularQueue_Rear_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___MyCircularQueue */\n/* ConstructorDataNode MyCircularQueue(int) */\n/* NormalNumberDataNode k */\nint AKA_INSTANCE___MyCircularQueue_k=1847066485;\nAKA_mark(\"Calling: .\\\\p6\\\\622.cpp\\\\MyCircularQueue\\\\MyCircularQueue(int)|ROOT\\\\622.cpp\\\\GLOBAL\\\\AKA_INSTANCE___MyCircularQueue\\\\AKA_INSTANCE___MyCircularQueue\\\\MyCircularQueue(int)\");AKA_fCall++;AKA_INSTANCE___MyCircularQueue = new ::MyCircularQueue(AKA_INSTANCE___MyCircularQueue_k);\n/* NormalNumberDataNode front */\n/* front : null value -> no code */\n/* NormalNumberDataNode rear */\nAKA_INSTANCE___MyCircularQueue->rear=-1046848611;\n/* NormalNumberDataNode size */\n/* size : null value -> no code */\n/* NormalNumberDataNode max_size */\n/* max_size : null value -> no code */\n/* VectorDataNode vec */\nint AKA_INSTANCE___MyCircularQueue_vec_element0=2061106400;\nAKA_INSTANCE___MyCircularQueue->vec.push_back(AKA_INSTANCE___MyCircularQueue_vec_element0);\nint AKA_INSTANCE___MyCircularQueue_vec_element1=2075716544;\nAKA_INSTANCE___MyCircularQueue->vec.push_back(AKA_INSTANCE___MyCircularQueue_vec_element1);\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test MyCircularQueue_Rear_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___MyCircularQueue->Rear();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p6\\\\622.cpp\\\\MyCircularQueue\\\\Rear()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class MyCircularQueue {\r  public:\r   int front = 0, rear = -1;\r   int size;\r   int max_size;\r   vector<int> vec;\r \r   MyCircularQueue(int k) {\r     front = 0;\r     rear = -1;\r     vec.resize(k);\r     size = 0;\r     max_size = k;\r   }\r \r   bool enQueue(int value) {\r     if (isFull() == true) {\r       return false;\r     }\r     rear = (rear + 1) % max_size;\r     vec[rear] = value;\r     size++;\r     return true;\r   }\r \r   bool deQueue() {\r     if (isEmpty() == true) {\r       return false;\r     }\r     front = (front + 1) % max_size;\r     size--;\r     return true;\r   }\r \r   int Front() {\r     if (isEmpty() == true) {\r       return -1;\r     }\r     return vec[front];\r   }\r \r   int Rear() {\r     if (isEmpty() == true) {\r       return -1;\r     }\r     return vec[rear];\r   }\r \r   bool isEmpty() {\r     if (size == 0) {\r       return true;\r     }\r     return false;\r   }\r \r   bool isFull() {\r     if (size == max_size) {\r       return true;\r     }\r     return false;\r   }\r };",
+        "c": [
+            "MyCircularQueue(int k) {\r\n    front = 0;\r\n    rear = -1;\r\n    vec.resize(k);\r\n    size = 0;\r\n    max_size = k;\r\n  }"
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p6\\622.cpp\\MyCircularQueue\\Rear()"
+    },
+    {
+        "f": [
+            "int front = 0;",
+            "int rear = -1;",
+            "int size;",
+            "int max_size;",
+            "vector<int> vec;"
+        ],
+        "fm": "bool isEmpty() {\r     if (size == 0) {\r       return true;\r     }\r     return false;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_MyCircularQueue_isEmpty_random_2(void) {\n{\nAKA_test_case_name=\"MyCircularQueue_isEmpty_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___MyCircularQueue */\n/* ConstructorDataNode MyCircularQueue(int) */\n/* NormalNumberDataNode k */\nint AKA_INSTANCE___MyCircularQueue_k=771406625;\nAKA_mark(\"Calling: .\\\\p6\\\\622.cpp\\\\MyCircularQueue\\\\MyCircularQueue(int)|ROOT\\\\622.cpp\\\\GLOBAL\\\\AKA_INSTANCE___MyCircularQueue\\\\AKA_INSTANCE___MyCircularQueue\\\\MyCircularQueue(int)\");AKA_fCall++;AKA_INSTANCE___MyCircularQueue = new ::MyCircularQueue(AKA_INSTANCE___MyCircularQueue_k);\n/* NormalNumberDataNode front */\n/* front : null value -> no code */\n/* NormalNumberDataNode rear */\n/* rear : null value -> no code */\n/* NormalNumberDataNode size */\nAKA_INSTANCE___MyCircularQueue->size=-840667169;\n/* NormalNumberDataNode max_size */\n/* max_size : null value -> no code */\n/* VectorDataNode vec */\n\n\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test MyCircularQueue_isEmpty_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___MyCircularQueue->isEmpty();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p6\\\\622.cpp\\\\MyCircularQueue\\\\isEmpty()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class MyCircularQueue {\r  public:\r   int front = 0, rear = -1;\r   int size;\r   int max_size;\r   vector<int> vec;\r \r   MyCircularQueue(int k) {\r     front = 0;\r     rear = -1;\r     vec.resize(k);\r     size = 0;\r     max_size = k;\r   }\r \r   bool enQueue(int value) {\r     if (isFull() == true) {\r       return false;\r     }\r     rear = (rear + 1) % max_size;\r     vec[rear] = value;\r     size++;\r     return true;\r   }\r \r   bool deQueue() {\r     if (isEmpty() == true) {\r       return false;\r     }\r     front = (front + 1) % max_size;\r     size--;\r     return true;\r   }\r \r   int Front() {\r     if (isEmpty() == true) {\r       return -1;\r     }\r     return vec[front];\r   }\r \r   int Rear() {\r     if (isEmpty() == true) {\r       return -1;\r     }\r     return vec[rear];\r   }\r \r   bool isEmpty() {\r     if (size == 0) {\r       return true;\r     }\r     return false;\r   }\r \r   bool isFull() {\r     if (size == max_size) {\r       return true;\r     }\r     return false;\r   }\r };",
+        "c": [
+            "MyCircularQueue(int k) {\r\n    front = 0;\r\n    rear = -1;\r\n    vec.resize(k);\r\n    size = 0;\r\n    max_size = k;\r\n  }"
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p6\\622.cpp\\MyCircularQueue\\isEmpty()"
+    },
+    {
+        "f": [
+            "int front = 0;",
+            "int rear = -1;",
+            "int size;",
+            "int max_size;",
+            "vector<int> vec;"
+        ],
+        "fm": "bool isFull() {\r     if (size == max_size) {\r       return true;\r     }\r     return false;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_MyCircularQueue_isFull_random_0(void) {\n{\nAKA_test_case_name=\"MyCircularQueue_isFull_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___MyCircularQueue */\n/* ConstructorDataNode MyCircularQueue(int) */\n/* NormalNumberDataNode k */\nint AKA_INSTANCE___MyCircularQueue_k=1409689504;\nAKA_mark(\"Calling: .\\\\p6\\\\622.cpp\\\\MyCircularQueue\\\\MyCircularQueue(int)|ROOT\\\\622.cpp\\\\GLOBAL\\\\AKA_INSTANCE___MyCircularQueue\\\\AKA_INSTANCE___MyCircularQueue\\\\MyCircularQueue(int)\");AKA_fCall++;AKA_INSTANCE___MyCircularQueue = new ::MyCircularQueue(AKA_INSTANCE___MyCircularQueue_k);\n/* NormalNumberDataNode front */\n/* front : null value -> no code */\n/* NormalNumberDataNode rear */\n/* rear : null value -> no code */\n/* NormalNumberDataNode size */\nAKA_INSTANCE___MyCircularQueue->size=1038500470;\n/* NormalNumberDataNode max_size */\nAKA_INSTANCE___MyCircularQueue->max_size=1229883426;\n/* VectorDataNode vec */\n\n\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test MyCircularQueue_isFull_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___MyCircularQueue->isFull();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p6\\\\622.cpp\\\\MyCircularQueue\\\\isFull()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class MyCircularQueue {\r  public:\r   int front = 0, rear = -1;\r   int size;\r   int max_size;\r   vector<int> vec;\r \r   MyCircularQueue(int k) {\r     front = 0;\r     rear = -1;\r     vec.resize(k);\r     size = 0;\r     max_size = k;\r   }\r \r   bool enQueue(int value) {\r     if (isFull() == true) {\r       return false;\r     }\r     rear = (rear + 1) % max_size;\r     vec[rear] = value;\r     size++;\r     return true;\r   }\r \r   bool deQueue() {\r     if (isEmpty() == true) {\r       return false;\r     }\r     front = (front + 1) % max_size;\r     size--;\r     return true;\r   }\r \r   int Front() {\r     if (isEmpty() == true) {\r       return -1;\r     }\r     return vec[front];\r   }\r \r   int Rear() {\r     if (isEmpty() == true) {\r       return -1;\r     }\r     return vec[rear];\r   }\r \r   bool isEmpty() {\r     if (size == 0) {\r       return true;\r     }\r     return false;\r   }\r \r   bool isFull() {\r     if (size == max_size) {\r       return true;\r     }\r     return false;\r   }\r };",
+        "c": [
+            "MyCircularQueue(int k) {\r\n    front = 0;\r\n    rear = -1;\r\n    vec.resize(k);\r\n    size = 0;\r\n    max_size = k;\r\n  }"
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p6\\622.cpp\\MyCircularQueue\\isFull()"
+    },
+    {
+        "f": [],
+        "fm": "bool isIdealPermutation(vector<int> &nums) {\r     for (int i = 0; i < nums.size(); i++) {\r       if (abs(nums[i] - i) > 1) return false;\r     }\r     return true;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isIdealPermutation_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_isIdealPermutation_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\775.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-657948088;\nnums.push_back(nums_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isIdealPermutation_vector_int_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isIdealPermutation(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p6\\\\775.cpp\\\\Solution\\\\isIdealPermutation(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r  public:\r   bool isIdealPermutation(vector<int> &nums) {\r     for (int i = 0; i < nums.size(); i++) {\r       if (abs(nums[i] - i) > 1) return false;\r     }\r     return true;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p6\\775.cpp\\Solution\\isIdealPermutation(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int minAddToMakeValid(string s) {\r     int open = 0;\r     int close = 0;\r     stack<char> sta;\r     for (int i = 0; i < s.size(); i++) {\r       if (s[i] == '(') {\r         sta.push(s[i]);\r         open++;\r       } else if (sta.empty() == false and s[i] == ')' and sta.top() == '(') {\r         open--;\r         sta.pop();\r       } else {\r         sta.push(s[i]);\r         close++;\r       }\r     }\r     return close + open;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minAddToMakeValid_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_minAddToMakeValid_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\921.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName665519 = new char[2];akaRandomName665519[0] = -127;akaRandomName665519[1] = '\\0';string s=akaRandomName665519;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minAddToMakeValid_string_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minAddToMakeValid(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p6\\\\921.cpp\\\\Solution\\\\minAddToMakeValid(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r  public:\r   int minAddToMakeValid(string s) {\r     int open = 0;\r     int close = 0;\r     stack<char> sta;\r     for (int i = 0; i < s.size(); i++) {\r       if (s[i] == '(') {\r         sta.push(s[i]);\r         open++;\r       } else if (sta.empty() == false and s[i] == ')' and sta.top() == '(') {\r         open--;\r         sta.pop();\r       } else {\r         sta.push(s[i]);\r         close++;\r       }\r     }\r     return close + open;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p6\\921.cpp\\Solution\\minAddToMakeValid(string)"
+    }
+]

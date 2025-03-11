@@ -1,0 +1,182 @@
+[
+    {
+        "f": [],
+        "fm": "int maximumSwap(int num) {\r     \r         int res = 0;\r         \r         string s = to_string(num);\r         \r         int maxi = -1;\r         int maxInd;\r         \r         int n = s.length();\r         \r         int ind = 0;\r         \r         while(ind < n) {\r                         \r              maxi = (int)(s[ind] - '0');\r             \r              for(int i=ind; i<n; i++) {\r             \r                 if(maxi <= (int)(s[i] - '0')) {\r                     maxi = (int)(s[i] - '0');\r                     maxInd = i;\r                 }    \r             }\r             \r             if((int)(s[ind] - '0') >= maxi)                                  ind++;\r             \r             else {\r                 swap(s[ind], s[maxInd]);\r                 break;\r             }\r         }\r         \r         res = stoi(s);\r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maximumSwap_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_maximumSwap_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\670-maximum-swap.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint num=-148649366;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode num */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maximumSwap_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maximumSwap(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p100\\\\670-maximum-swap\\\\670-maximum-swap.cpp\\\\Solution\\\\maximumSwap(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\670-maximum-swap.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint num=-148649366;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode num */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int maximumSwap(int num) {\r     \r         int res = 0;\r         \r         string s = to_string(num);\r         \r         int maxi = -1;\r         int maxInd;\r         \r         int n = s.length();\r         \r         int ind = 0;\r         \r         while(ind < n) {\r                         \r              maxi = (int)(s[ind] - '0');\r             \r              for(int i=ind; i<n; i++) {\r             \r                 if(maxi <= (int)(s[i] - '0')) {\r                     maxi = (int)(s[i] - '0');\r                     maxInd = i;\r                 }    \r             }\r             \r             if((int)(s[ind] - '0') >= maxi)                                  ind++;\r             \r             else {\r                 swap(s[ind], s[maxInd]);\r                 break;\r             }\r         }\r         \r         res = stoi(s);\r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p100\\670-maximum-swap\\670-maximum-swap.cpp\\Solution\\maximumSwap(int)"
+    },
+    {
+        "f": [],
+        "fm": "int findSecondMinimumValue(TreeNode* root) {\r     \r         if(root == NULL)                    return -1;\r         \r         set<int> w;\r         dfs(root, w);\r         \r         if(w.size() == 1)                   return -1;\r         \r         auto it = w.begin();\r         it++;\r         \r         return *it;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findSecondMinimumValue_TreeNodemul_random_2(void) {\n{\nAKA_test_case_name=\"Solution_findSecondMinimumValue_TreeNodemul_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\671-second-minimum-node-in-a-binary-tree.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode() */\nAKA_mark(\"Calling: .\\\\p100\\\\671-second-minimum-node-in-a-binary-tree\\\\671-second-minimum-node-in-a-binary-tree.cpp\\\\TreeNode\\\\TreeNode()|ROOT\\\\671-second-minimum-node-in-a-binary-tree.cpp\\\\findSecondMinimumValue(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode();\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=624322890;\nAKA_mark(\"Calling: .\\\\p100\\\\671-second-minimum-node-in-a-binary-tree\\\\671-second-minimum-node-in-a-binary-tree.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\671-second-minimum-node-in-a-binary-tree.cpp\\\\findSecondMinimumValue(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_1\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root2_x=0;\nAKA_mark(\"Calling: .\\\\p100\\\\671-second-minimum-node-in-a-binary-tree\\\\671-second-minimum-node-in-a-binary-tree.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\671-second-minimum-node-in-a-binary-tree.cpp\\\\findSecondMinimumValue(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_2\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_2 = new ::TreeNode(root2_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_2).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_2).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_2);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findSecondMinimumValue_TreeNodemul_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findSecondMinimumValue(root);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p100\\\\671-second-minimum-node-in-a-binary-tree\\\\671-second-minimum-node-in-a-binary-tree.cpp\\\\Solution\\\\findSecondMinimumValue(TreeNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\671-second-minimum-node-in-a-binary-tree.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode() */\nAKA_mark(\"Calling: .\\\\p100\\\\671-second-minimum-node-in-a-binary-tree\\\\671-second-minimum-node-in-a-binary-tree.cpp\\\\TreeNode\\\\TreeNode()|ROOT\\\\671-second-minimum-node-in-a-binary-tree.cpp\\\\findSecondMinimumValue(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode();\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=624322890;\nAKA_mark(\"Calling: .\\\\p100\\\\671-second-minimum-node-in-a-binary-tree\\\\671-second-minimum-node-in-a-binary-tree.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\671-second-minimum-node-in-a-binary-tree.cpp\\\\findSecondMinimumValue(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_1\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root2_x=0;\nAKA_mark(\"Calling: .\\\\p100\\\\671-second-minimum-node-in-a-binary-tree\\\\671-second-minimum-node-in-a-binary-tree.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\671-second-minimum-node-in-a-binary-tree.cpp\\\\findSecondMinimumValue(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_2\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_2 = new ::TreeNode(root2_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_2).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_2).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_2);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     void dfs(TreeNode* root, set<int> &w) {\r         \r         if(root == NULL)                    return;\r         \r         w.insert(root->val);\r         \r         dfs(root->left, w);\r         dfs(root->right, w);\r         \r         return;\r     }\r      \r     int findSecondMinimumValue(TreeNode* root) {\r     \r         if(root == NULL)                    return -1;\r         \r         set<int> w;\r         dfs(root, w);\r         \r         if(w.size() == 1)                   return -1;\r         \r         auto it = w.begin();\r         it++;\r         \r         return *it;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p100\\671-second-minimum-node-in-a-binary-tree\\671-second-minimum-node-in-a-binary-tree.cpp\\Solution\\findSecondMinimumValue(TreeNode*)"
+    },
+    {
+        "f": [],
+        "fm": "bool checkValidString(string s) {\r     \r         int n = s.length();\r         stack<int> open, star;\r         \r         for(int i=0; i<n; i++) {\r             \r             if(s[i] == '(')                                         open.push(i);\r             else if(s[i] == '*')                                    star.push(i);\r             else {\r                 \r                 if(open.empty() == false)                           open.pop();\r                 else if(star.empty() == false)                      star.pop();\r                 else                                                return false;\r             }\r         }\r         \r         // Now process leftover opening brackets\r         while(open.empty() == false) {\r             \r             if(star.empty() == true)                                return false;\r             \r             else if(open.top() < star.top()) {\r                 \r                 open.pop();\r                 star.pop();\r             }\r             \r             // CASE: open.top() > star.top()\r             \r             else                                                    return false;\r         }\r         \r         return true;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_checkValidString_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_checkValidString_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\678-valid-parenthesis-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName572532 = new char[2];akaRandomName572532[0] = 76;akaRandomName572532[1] = '\\0';string s=akaRandomName572532;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_checkValidString_string_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->checkValidString(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p100\\\\678-valid-parenthesis-string\\\\678-valid-parenthesis-string.cpp\\\\Solution\\\\checkValidString(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\678-valid-parenthesis-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName849551 = new char[2];akaRandomName849551[0] = 76;akaRandomName849551[1] = '\\0';string s=akaRandomName849551;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     bool checkValidString(string s) {\r     \r         int n = s.length();\r         stack<int> open, star;\r         \r         for(int i=0; i<n; i++) {\r             \r             if(s[i] == '(')                                         open.push(i);\r             else if(s[i] == '*')                                    star.push(i);\r             else {\r                 \r                 if(open.empty() == false)                           open.pop();\r                 else if(star.empty() == false)                      star.pop();\r                 else                                                return false;\r             }\r         }\r         \r         // Now process leftover opening brackets\r         while(open.empty() == false) {\r             \r             if(star.empty() == true)                                return false;\r             \r             else if(open.top() < star.top()) {\r                 \r                 open.pop();\r                 star.pop();\r             }\r             \r             // CASE: open.top() > star.top()\r             \r             else                                                    return false;\r         }\r         \r         return true;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p100\\678-valid-parenthesis-string\\678-valid-parenthesis-string.cpp\\Solution\\checkValidString(string)"
+    },
+    {
+        "f": [],
+        "fm": "bool validPalindrome(string s) {\r     \r         int n = s.length();\r         \r         for(int i=0, j=n-1; i < j; i++, j--) {\r             \r             if(s[i] != s[j]) {\r                 \r                 int i1 = i, j1 = j - 1;\r                 \r                 // Deleting chat at j index\r                 while(i1 < j1 && s[i1] == s[j1]) {\r                     i1++;\r                     j1--;\r                 } \r                 \r                 int i2 = i + 1, j2 = j;\r                 \r                 // Deleting char at i index\r                 while(i2 < j2 && s[i2] == s[j2]) {\r                     i2++;\r                     j2--;\r                 }\r                 \r                 return (i1 >= j1) || (i2 >= j2);\r             }\r         }\r         \r         return true;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_validPalindrome_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_validPalindrome_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\680-valid-palindrome-ii.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName354892 = new char[2];akaRandomName354892[0] = -72;akaRandomName354892[1] = '\\0';string s=akaRandomName354892;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_validPalindrome_string_random_3\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->validPalindrome(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p100\\\\680-valid-palindrome-ii\\\\680-valid-palindrome-ii.cpp\\\\Solution\\\\validPalindrome(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\680-valid-palindrome-ii.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName603022 = new char[2];akaRandomName603022[0] = -72;akaRandomName603022[1] = '\\0';string s=akaRandomName603022;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \r     bool validPalindrome(string s) {\r     \r         int n = s.length();\r         \r         for(int i=0, j=n-1; i < j; i++, j--) {\r             \r             if(s[i] != s[j]) {\r                 \r                 int i1 = i, j1 = j - 1;\r                 \r                 // Deleting chat at j index\r                 while(i1 < j1 && s[i1] == s[j1]) {\r                     i1++;\r                     j1--;\r                 } \r                 \r                 int i2 = i + 1, j2 = j;\r                 \r                 // Deleting char at i index\r                 while(i2 < j2 && s[i2] == s[j2]) {\r                     i2++;\r                     j2--;\r                 }\r                 \r                 return (i1 >= j1) || (i2 >= j2);\r             }\r         }\r         \r         return true;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p100\\680-valid-palindrome-ii\\680-valid-palindrome-ii.cpp\\Solution\\validPalindrome(string)"
+    },
+    {
+        "f": [],
+        "fm": "void dfs(int node, int dest, unordered_map<int, vector<int>> &adj, vector<int> &vis, bool &flag) {\r         \r         if(flag == true)                    return;\r         \r         if(node == dest) {\r             flag = true;\r             return;\r         }   \r         \r         vis[node] = 1;\r         \r         for(auto &ch : adj[node]) {\r             \r             if(vis[ch] == 0) {\r                 dfs(ch, dest, adj, vis, flag);\r             }\r         } \r         \r         return;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_dfs_int_int_unordered_map_int_vector_int_vector_int_bool_random_0(void) {\n{\nAKA_test_case_name=\"Solution_dfs_int_int_unordered_map_int_vector_int_vector_int_bool_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\684-redundant-connection.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint node=-1428933082;\n\n\nint dest=-1217397384;\nunordered_map<int, vector<int>> adj;\nvector<int> vis;\n\n\nbool flag=false;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode node */\n/* NormalNumberDataNode dest */\n/* UnorderedMapDataNode adj */\n/* VectorDataNode vis */\nint vis_element0=-523991742;\nvis.push_back(vis_element0);\n/* NormalNumberDataNode flag */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_dfs_int_int_unordered_map_int_vector_int_vector_int_bool_random_0\");AKA_INSTANCE___Solution->dfs(node,dest,adj,vis,flag);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p100\\\\684-redundant-connection\\\\684-redundant-connection.cpp\\\\Solution\\\\dfs(int,int,unordered_map<int,vector<int>>&,vector<int>&,bool&)\");\n\n/* error assertion */\nunordered_map<int, vector<int>> EXPECTED_adj;\n\nvector<int> EXPECTED_vis;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\684-redundant-connection.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint node=-1428933082;\n\n\nint dest=-1217397384;\nunordered_map<int, vector<int>> adj;\nvector<int> vis;\n\n\nbool flag=false;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode node */\n/* NormalNumberDataNode dest */\n/* UnorderedMapDataNode adj */\n/* VectorDataNode vis */\nint vis_element0=-523991742;\nvis.push_back(vis_element0);\n/* NormalNumberDataNode flag */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_dfs_int_int_unordered_map_int_vector_int_vector_int_bool_random_4(void) {\n{\nAKA_test_case_name=\"Solution_dfs_int_int_unordered_map_int_vector_int_vector_int_bool_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\684-redundant-connection.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint node=-20774999;\n\n\nint dest=1626987560;\nunordered_map<int, vector<int>> adj;\nvector<int> vis;\n\n\nbool flag=true;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode node */\n/* NormalNumberDataNode dest */\n/* UnorderedMapDataNode adj */\n/* VectorDataNode vis */\nint vis_element0=-843955518;\nvis.push_back(vis_element0);\n/* NormalNumberDataNode flag */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_dfs_int_int_unordered_map_int_vector_int_vector_int_bool_random_4\");AKA_INSTANCE___Solution->dfs(node,dest,adj,vis,flag);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p100\\\\684-redundant-connection\\\\684-redundant-connection.cpp\\\\Solution\\\\dfs(int,int,unordered_map<int,vector<int>>&,vector<int>&,bool&)\");\n\n/* error assertion */\nunordered_map<int, vector<int>> EXPECTED_adj;\n\nvector<int> EXPECTED_vis;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\684-redundant-connection.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint node=-20774999;\n\n\nint dest=1626987560;\nunordered_map<int, vector<int>> adj;\nvector<int> vis;\n\n\nbool flag=true;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode node */\n/* NormalNumberDataNode dest */\n/* UnorderedMapDataNode adj */\n/* VectorDataNode vis */\nint vis_element0=-843955518;\nvis.push_back(vis_element0);\n/* NormalNumberDataNode flag */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     // Returns true if cycle exists, else false\r     void dfs(int node, int dest, unordered_map<int, vector<int>> &adj, vector<int> &vis, bool &flag) {\r         \r         if(flag == true)                    return;\r         \r         if(node == dest) {\r             flag = true;\r             return;\r         }   \r         \r         vis[node] = 1;\r         \r         for(auto &ch : adj[node]) {\r             \r             if(vis[ch] == 0) {\r                 dfs(ch, dest, adj, vis, flag);\r             }\r         } \r         \r         return;\r     }\r     \r     vector<int> findRedundantConnection(vector<vector<int>>& edges) {\r     \r         vector<int> res;\r         \r         unordered_map<int, vector<int>> adj;\r         int n = edges.size();\r         \r         for(auto &x : edges) {\r             adj[x[0]].push_back(x[1]);\r             adj[x[1]].push_back(x[0]);\r         }\r         \r         vector<int> vis(n + 1, 0);\r         \r         for(int i=edges.size()-1; i>=0; i--) {\r             \r             int u = edges[i][0];\r             int v = edges[i][1];\r             \r             // if edge between u and v is removed, then check whether the cycle removed ?\r             auto it1 = find(adj[u].begin(), adj[u].end(), v);\r             auto it2 = find(adj[v].begin(), adj[v].end(), u);\r             \r             // Remove the edge\r             if(it1 != adj[u].end())                       adj[u].erase(it1);\r             if(it2 != adj[v].end())                       adj[v].erase(it2);\r             \r             \r             for(int i=1; i<=n; i++)                       vis[i] = 0;\r \r             // Check whether we can connect u and v without edges (u, v)\r             bool flag = false;\r             dfs(u, v, adj, vis, flag);\r             \r             if(flag == true) {\r                 \r                 res.push_back(u);\r                 res.push_back(v);\r                 \r                 return res;\r             }\r             \r             // Add the edge again\r             adj[u].push_back(v);\r             adj[v].push_back(u);\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p100\\684-redundant-connection\\684-redundant-connection.cpp\\Solution\\dfs(int,int,unordered_map<int,vector<int>>&,vector<int>&,bool&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> findRedundantConnection(vector<vector<int>>& edges) {\r     \r         vector<int> res;\r         \r         unordered_map<int, vector<int>> adj;\r         int n = edges.size();\r         \r         for(auto &x : edges) {\r             adj[x[0]].push_back(x[1]);\r             adj[x[1]].push_back(x[0]);\r         }\r         \r         vector<int> vis(n + 1, 0);\r         \r         for(int i=edges.size()-1; i>=0; i--) {\r             \r             int u = edges[i][0];\r             int v = edges[i][1];\r             \r             // if edge between u and v is removed, then check whether the cycle removed ?\r             auto it1 = find(adj[u].begin(), adj[u].end(), v);\r             auto it2 = find(adj[v].begin(), adj[v].end(), u);\r             \r             // Remove the edge\r             if(it1 != adj[u].end())                       adj[u].erase(it1);\r             if(it2 != adj[v].end())                       adj[v].erase(it2);\r             \r             \r             for(int i=1; i<=n; i++)                       vis[i] = 0;\r \r             // Check whether we can connect u and v without edges (u, v)\r             bool flag = false;\r             dfs(u, v, adj, vis, flag);\r             \r             if(flag == true) {\r                 \r                 res.push_back(u);\r                 res.push_back(v);\r                 \r                 return res;\r             }\r             \r             // Add the edge again\r             adj[u].push_back(v);\r             adj[v].push_back(u);\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findRedundantConnection_vector_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_findRedundantConnection_vector_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\684-redundant-connection.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> edges;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode edges */\nvector<int> edges_element0;\nint edges_element0_element0=53272037;\nedges_element0.push_back(edges_element0_element0);\nedges.push_back(edges_element0);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findRedundantConnection_vector_vector_int_random_4\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findRedundantConnection(edges);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p100\\\\684-redundant-connection\\\\684-redundant-connection.cpp\\\\Solution\\\\findRedundantConnection(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_edges;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\684-redundant-connection.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> edges;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode edges */\nvector<int> edges_element0;\nint edges_element0_element0=53272037;\nedges_element0.push_back(edges_element0_element0);\nedges.push_back(edges_element0);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     // Returns true if cycle exists, else false\r     void dfs(int node, int dest, unordered_map<int, vector<int>> &adj, vector<int> &vis, bool &flag) {\r         \r         if(flag == true)                    return;\r         \r         if(node == dest) {\r             flag = true;\r             return;\r         }   \r         \r         vis[node] = 1;\r         \r         for(auto &ch : adj[node]) {\r             \r             if(vis[ch] == 0) {\r                 dfs(ch, dest, adj, vis, flag);\r             }\r         } \r         \r         return;\r     }\r     \r     vector<int> findRedundantConnection(vector<vector<int>>& edges) {\r     \r         vector<int> res;\r         \r         unordered_map<int, vector<int>> adj;\r         int n = edges.size();\r         \r         for(auto &x : edges) {\r             adj[x[0]].push_back(x[1]);\r             adj[x[1]].push_back(x[0]);\r         }\r         \r         vector<int> vis(n + 1, 0);\r         \r         for(int i=edges.size()-1; i>=0; i--) {\r             \r             int u = edges[i][0];\r             int v = edges[i][1];\r             \r             // if edge between u and v is removed, then check whether the cycle removed ?\r             auto it1 = find(adj[u].begin(), adj[u].end(), v);\r             auto it2 = find(adj[v].begin(), adj[v].end(), u);\r             \r             // Remove the edge\r             if(it1 != adj[u].end())                       adj[u].erase(it1);\r             if(it2 != adj[v].end())                       adj[v].erase(it2);\r             \r             \r             for(int i=1; i<=n; i++)                       vis[i] = 0;\r \r             // Check whether we can connect u and v without edges (u, v)\r             bool flag = false;\r             dfs(u, v, adj, vis, flag);\r             \r             if(flag == true) {\r                 \r                 res.push_back(u);\r                 res.push_back(v);\r                 \r                 return res;\r             }\r             \r             // Add the edge again\r             adj[u].push_back(v);\r             adj[v].push_back(u);\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p100\\684-redundant-connection\\684-redundant-connection.cpp\\Solution\\findRedundantConnection(vector<vector<int>>&)"
+    }
+]

@@ -1,0 +1,110 @@
+[
+    {
+        "f": [],
+        "fm": "char *strStr(char *haystack, char *needle) {\r     int h_len = strlen(haystack);\r     int n_len = strlen(needle);\r \r     if (0 == n_len) {\r       return haystack;\r     }\r \r     vector<int> next(n_len);\r \r     generate_next(next, needle);\r \r     for (int i = 0, j = 0; i < h_len; ++i) {\r       // 算法核心，向前找到匹配位置。\r       while ((j > 0) && (haystack[i] != needle[j])) {\r         j = next[j - 1];\r       }\r \r       // 如果相等，needle的索引位置往后移动一位。\r       if (haystack[i] == needle[j]) {\r         ++j;\r       }\r \r       if (j == n_len) {\r         return haystack + i - j + 1;\r       }\r     }\r \r     return NULL;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_strStr_charmul_charmul_random_0(void) {\n{\nAKA_test_case_name=\"Solution_strStr_charmul_charmul_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\implement_strstr.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=-25;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar* needle;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_strStr_charmul_charmul_random_0\");char* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->strStr(haystack,needle);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-8\\\\implement_strstr.cpp\\\\Solution\\\\strStr(char*,char*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\implement_strstr.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=-25;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar* needle;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerCharacterDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_strStr_charmul_charmul_random_4(void) {\n{\nAKA_test_case_name=\"Solution_strStr_charmul_charmul_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\implement_strstr.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=-107;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=-107;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=-107;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_strStr_charmul_charmul_random_4\");char* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->strStr(haystack,needle);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-8\\\\implement_strstr.cpp\\\\Solution\\\\strStr(char*,char*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\implement_strstr.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=-107;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=-107;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=-107;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerCharacterDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_strStr_charmul_charmul_random_3(void) {\n{\nAKA_test_case_name=\"Solution_strStr_charmul_charmul_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\implement_strstr.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=-120;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=-118;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=56;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_strStr_charmul_charmul_random_3\");char* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->strStr(haystack,needle);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-8\\\\implement_strstr.cpp\\\\Solution\\\\strStr(char*,char*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\implement_strstr.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=-120;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=-118;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=56;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerCharacterDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   /*\r   char *strStr(char *haystack, char *needle) {\r     int h_len = strlen(haystack);\r     int n_len = strlen(needle);\r \r     if (0 == n_len) {\r       return haystack;\r     }\r \r     for (int i = 0; i <= (h_len - n_len); ++i) {\r       if (0 == strncmp(haystack + i, needle, n_len)) {\r         return haystack + i;\r       }\r     }\r \r     return NULL;\r   }\r   */\r \r   // Using KMP method!\r   char *strStr(char *haystack, char *needle) {\r     int h_len = strlen(haystack);\r     int n_len = strlen(needle);\r \r     if (0 == n_len) {\r       return haystack;\r     }\r \r     vector<int> next(n_len);\r \r     generate_next(next, needle);\r \r     for (int i = 0, j = 0; i < h_len; ++i) {\r       // 算法核心，向前找到匹配位置。\r       while ((j > 0) && (haystack[i] != needle[j])) {\r         j = next[j - 1];\r       }\r \r       // 如果相等，needle的索引位置往后移动一位。\r       if (haystack[i] == needle[j]) {\r         ++j;\r       }\r \r       if (j == n_len) {\r         return haystack + i - j + 1;\r       }\r     }\r \r     return NULL;\r   }\r \r protected:\r   void generate_next(vector<int> &next, char *needle) {\r     int n_len = strlen(needle);\r \r     // 因为第一个元素没有前缀后缀，所以永远是0。\r     next[0] = 0;\r \r     for (int i = 1, j = 0; i < n_len; ++i) {\r       // j代表部分[0, i]的部分匹配值\r       // 当i和j指向的字符不匹配时，next向前遍历，直到两个字符相等或j等于0.\r       while ((j > 0) && (needle[i] != needle[j])) {\r         j = next[j - 1];\r       }\r \r       // 如果i和j指向的字符相等，那么j增加1。\r       if (needle[i] == needle[j]) {\r         ++j;\r       }\r \r       next[i] = j;\r     }\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-8\\implement_strstr.cpp\\Solution\\strStr(char*,char*)"
+    },
+    {
+        "f": [],
+        "fm": "bool is_interleave(const char *s1,\r       int s1_index,\r       const char *s2,\r       int s2_index,\r       const char *s3,\r       vector<vector<int> > &match_statuses) {\r     if ('\\0' == *s1) {\r       return (0 == strcmp(s2, s3));\r     }\r     else if ('\\0' == *s2) {\r       return (0 == strcmp(s1, s3));\r     }\r     else {\r       int status = match_statuses[s1_index][s2_index];\r \r       if (status != 0) {\r         return (status == 1);\r       }\r \r       bool match = false;\r \r       if (*s1 == *s3) {\r         match = is_interleave(s1 + 1, s1_index + 1, s2, s2_index, s3 + 1, match_statuses);\r       }\r \r       if ((match == false) && (*s2 == *s3)) {\r         match = is_interleave(s1, s1_index, s2 + 1, s2_index + 1, s3 + 1, match_statuses);\r       }\r \r       match_statuses[s1_index][s2_index] = match ? 1 : -1;\r \r       return match;      \r     }\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_is_interleave_char_constmul_int_char_constmul_int_char_constmul_vector_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_is_interleave_char_constmul_int_char_constmul_int_char_constmul_vector_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\interleaving_string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_s1[2];\n\nchar AKA_ARRAY_INIT_s1_constantPointer_0=98;\nAKA_ARRAY_INIT_s1[0] = AKA_ARRAY_INIT_s1_constantPointer_0;\n\nchar AKA_ARRAY_INIT_s1_constantPointer_1=0;\nAKA_ARRAY_INIT_s1[1] = AKA_ARRAY_INIT_s1_constantPointer_1;\n\nchar const* s1 = AKA_ARRAY_INIT_s1;\n\n\nint s1_index=1688573700;\nchar AKA_ARRAY_INIT_s2[2];\n\nchar AKA_ARRAY_INIT_s2_constantPointer_0=-18;\nAKA_ARRAY_INIT_s2[0] = AKA_ARRAY_INIT_s2_constantPointer_0;\n\nchar AKA_ARRAY_INIT_s2_constantPointer_1=102;\nAKA_ARRAY_INIT_s2[1] = AKA_ARRAY_INIT_s2_constantPointer_1;\n\nchar const* s2 = AKA_ARRAY_INIT_s2;\n\n\nint s2_index=1881621743;\nchar AKA_ARRAY_INIT_s3[2];\n\nchar AKA_ARRAY_INIT_s3_constantPointer_0=-19;\nAKA_ARRAY_INIT_s3[0] = AKA_ARRAY_INIT_s3_constantPointer_0;\n\nchar AKA_ARRAY_INIT_s3_constantPointer_1=-56;\nAKA_ARRAY_INIT_s3[1] = AKA_ARRAY_INIT_s3_constantPointer_1;\n\nchar const* s3 = AKA_ARRAY_INIT_s3;\nvector<vector<int>> match_statuses;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s1 */\n/* NormalNumberDataNode s1_index */\n/* PointerCharacterDataNode s2 */\n/* NormalNumberDataNode s2_index */\n/* PointerCharacterDataNode s3 */\n/* VectorDataNode match_statuses */\nvector<int> match_statuses_element0;\nint match_statuses_element0_element0=-1980621744;\nmatch_statuses_element0.push_back(match_statuses_element0_element0);\nint match_statuses_element0_element1=1472525403;\nmatch_statuses_element0.push_back(match_statuses_element0_element1);\nmatch_statuses.push_back(match_statuses_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_is_interleave_char_constmul_int_char_constmul_int_char_constmul_vector_vector_int_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->is_interleave(s1,s1_index,s2,s2_index,s3,match_statuses);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-8\\\\interleaving_string.cpp\\\\Solution\\\\is_interleave(char const*,int,char const*,int,char const*,vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_match_statuses;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\implement_strstr.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=-25;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar* needle;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerCharacterDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool is_interleave(const char *s1,\r       int s1_index,\r       const char *s2,\r       int s2_index,\r       const char *s3,\r       vector<vector<int> > &match_statuses) {\r     if ('\\0' == *s1) {\r       return (0 == strcmp(s2, s3));\r     }\r     else if ('\\0' == *s2) {\r       return (0 == strcmp(s1, s3));\r     }\r     else {\r       int status = match_statuses[s1_index][s2_index];\r \r       if (status != 0) {\r         return (status == 1);\r       }\r \r       bool match = false;\r \r       if (*s1 == *s3) {\r         match = is_interleave(s1 + 1, s1_index + 1, s2, s2_index, s3 + 1, match_statuses);\r       }\r \r       if ((match == false) && (*s2 == *s3)) {\r         match = is_interleave(s1, s1_index, s2 + 1, s2_index + 1, s3 + 1, match_statuses);\r       }\r \r       match_statuses[s1_index][s2_index] = match ? 1 : -1;\r \r       return match;      \r     }\r   }\r \r   bool isInterleave(string s1, string s2, string s3) {\r     int s1_size = s1.length();\r     int s2_size = s2.length();\r     int s3_size = s3.length();\r \r     if ((s1_size + s2_size) != s3_size) {\r       return false;\r     }\r \r     // 0: 未初始化\r     // -1: 未匹配\r     // 1: 匹配\r     vector<vector<int> > match_statuses(s1_size, vector<int>(s2_size, 0));\r \r     return is_interleave(s1.c_str(), 0, s2.c_str(), 0, s3.c_str(), match_statuses);\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-8\\interleaving_string.cpp\\Solution\\is_interleave(char const*,int,char const*,int,char const*,vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "bool isInterleave(string s1, string s2, string s3) {\r     int s1_size = s1.length();\r     int s2_size = s2.length();\r     int s3_size = s3.length();\r \r     if ((s1_size + s2_size) != s3_size) {\r       return false;\r     }\r \r     // 0: 未初始化\r     // -1: 未匹配\r     // 1: 匹配\r     vector<vector<int> > match_statuses(s1_size, vector<int>(s2_size, 0));\r \r     return is_interleave(s1.c_str(), 0, s2.c_str(), 0, s3.c_str(), match_statuses);\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isInterleave_string_string_string_random_2(void) {\n{\nAKA_test_case_name=\"Solution_isInterleave_string_string_string_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\interleaving_string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName612601 = new char[2];akaRandomName612601[0] = -27;akaRandomName612601[1] = '\\0';string s1=akaRandomName612601;\nchar* akaRandomName678391 = new char[2];akaRandomName678391[0] = -14;akaRandomName678391[1] = '\\0';string s2=akaRandomName678391;\nchar* akaRandomName4039 = new char[2];akaRandomName4039[0] = -81;akaRandomName4039[1] = '\\0';string s3=akaRandomName4039;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s1 */\n/* NormalStringDataNode s2 */\n/* NormalStringDataNode s3 */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isInterleave_string_string_string_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isInterleave(s1,s2,s3);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-8\\\\interleaving_string.cpp\\\\Solution\\\\isInterleave(string,string,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\implement_strstr.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=-25;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar* needle;\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* PointerCharacterDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool is_interleave(const char *s1,\r       int s1_index,\r       const char *s2,\r       int s2_index,\r       const char *s3,\r       vector<vector<int> > &match_statuses) {\r     if ('\\0' == *s1) {\r       return (0 == strcmp(s2, s3));\r     }\r     else if ('\\0' == *s2) {\r       return (0 == strcmp(s1, s3));\r     }\r     else {\r       int status = match_statuses[s1_index][s2_index];\r \r       if (status != 0) {\r         return (status == 1);\r       }\r \r       bool match = false;\r \r       if (*s1 == *s3) {\r         match = is_interleave(s1 + 1, s1_index + 1, s2, s2_index, s3 + 1, match_statuses);\r       }\r \r       if ((match == false) && (*s2 == *s3)) {\r         match = is_interleave(s1, s1_index, s2 + 1, s2_index + 1, s3 + 1, match_statuses);\r       }\r \r       match_statuses[s1_index][s2_index] = match ? 1 : -1;\r \r       return match;      \r     }\r   }\r \r   bool isInterleave(string s1, string s2, string s3) {\r     int s1_size = s1.length();\r     int s2_size = s2.length();\r     int s3_size = s3.length();\r \r     if ((s1_size + s2_size) != s3_size) {\r       return false;\r     }\r \r     // 0: 未初始化\r     // -1: 未匹配\r     // 1: 匹配\r     vector<vector<int> > match_statuses(s1_size, vector<int>(s2_size, 0));\r \r     return is_interleave(s1.c_str(), 0, s2.c_str(), 0, s3.c_str(), match_statuses);\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-8\\interleaving_string.cpp\\Solution\\isInterleave(string,string,string)"
+    }
+]

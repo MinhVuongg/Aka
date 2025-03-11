@@ -1,0 +1,206 @@
+[
+    {
+        "f": [],
+        "fm": "bool isAnagram(string s, string t) {\r     \r         if(s == t)                      return true;\r         \r         map<int, int> mp;\r         \r         for(auto &x : s)                mp[x]++;\r         for(auto &x : t)                mp[x]--;\r         \r         for(auto &x : mp) {\r             if(x.second > 0 || x.second < 0)      return false;\r         }\r         \r         return true;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isAnagram_string_string_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_isAnagram_string_string_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\242-valid-anagram.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName608531 = new char[2];akaRandomName608531[0] = 48;akaRandomName608531[1] = '\\0';string s=akaRandomName608531;\nchar* akaRandomName998660 = new char[2];akaRandomName998660[0] = 49;akaRandomName998660[1] = '\\0';string t=akaRandomName998660;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode t */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isAnagram_string_string_directed_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isAnagram(s,t);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p76\\\\242-valid-anagram\\\\242-valid-anagram.cpp\\\\Solution\\\\isAnagram(string,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\242-valid-anagram.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName583906 = new char[2];akaRandomName583906[0] = 48;akaRandomName583906[1] = '\\0';string s=akaRandomName583906;\nchar* akaRandomName544068 = new char[2];akaRandomName544068[0] = 49;akaRandomName544068[1] = '\\0';string t=akaRandomName544068;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode t */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isAnagram_string_string_directed_1(void) {\n{\nAKA_test_case_name=\"Solution_isAnagram_string_string_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\242-valid-anagram.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName344631 = new char[2];akaRandomName344631[0] = 48;akaRandomName344631[1] = '\\0';string s=akaRandomName344631;\nchar* akaRandomName652344 = new char[2];akaRandomName652344[0] = 49;akaRandomName652344[1] = '\\0';string t=akaRandomName652344;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode t */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isAnagram_string_string_directed_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isAnagram(s,t);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p76\\\\242-valid-anagram\\\\242-valid-anagram.cpp\\\\Solution\\\\isAnagram(string,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\242-valid-anagram.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName411452 = new char[2];akaRandomName411452[0] = 48;akaRandomName411452[1] = '\\0';string s=akaRandomName411452;\nchar* akaRandomName193777 = new char[2];akaRandomName193777[0] = 49;akaRandomName193777[1] = '\\0';string t=akaRandomName193777;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode t */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     bool isAnagram(string s, string t) {\r     \r         if(s == t)                      return true;\r         \r         map<int, int> mp;\r         \r         for(auto &x : s)                mp[x]++;\r         for(auto &x : t)                mp[x]--;\r         \r         for(auto &x : mp) {\r             if(x.second > 0 || x.second < 0)      return false;\r         }\r         \r         return true;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p76\\242-valid-anagram\\242-valid-anagram.cpp\\Solution\\isAnagram(string,string)"
+    },
+    {
+        "f": [],
+        "fm": "int shortestDistance(vector<string>& wordsDict, string word1, string word2) {\r     \r         int res = INT_MAX;\r         vector<int> v1, v2;\r         \r         for(int i=0; i<wordsDict.size(); i++) {\r             \r             string temp = wordsDict[i];\r             \r             if(temp == word1)                               v1.push_back(i);\r             else if(temp == word2)                          v2.push_back(i);\r         }\r     \r         for(auto &x1 : v1) {\r             for(auto &x2 : v2 )                             res = min(res, abs(x2 - x1));\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_shortestDistance_vector_string_string_string_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_shortestDistance_vector_string_string_string_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\243-shortest-word-distance.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> wordsDict;\nstring word1=\"\";\nstring word2=\"\";\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode wordsDict */\n/* NormalStringDataNode word1 */\n/* NormalStringDataNode word2 */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_shortestDistance_vector_string_string_string_directed_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->shortestDistance(wordsDict,word1,word2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p76\\\\243-shortest-word-distance\\\\243-shortest-word-distance.cpp\\\\Solution\\\\shortestDistance(vector<string>&,string,string)\");\n\n\nvector<string> EXPECTED_wordsDict;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\243-shortest-word-distance.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> wordsDict;\nstring word1=\"\";\nstring word2=\"\";\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode wordsDict */\n/* NormalStringDataNode word1 */\n/* NormalStringDataNode word2 */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int shortestDistance(vector<string>& wordsDict, string word1, string word2) {\r     \r         int res = INT_MAX;\r         vector<int> v1, v2;\r         \r         for(int i=0; i<wordsDict.size(); i++) {\r             \r             string temp = wordsDict[i];\r             \r             if(temp == word1)                               v1.push_back(i);\r             else if(temp == word2)                          v2.push_back(i);\r         }\r     \r         for(auto &x1 : v1) {\r             for(auto &x2 : v2 )                             res = min(res, abs(x2 - x1));\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p76\\243-shortest-word-distance\\243-shortest-word-distance.cpp\\Solution\\shortestDistance(vector<string>&,string,string)"
+    },
+    {
+        "f": [],
+        "fm": "bool isStrobogrammatic(string s) {\r     \r         int n = s.length();\r         string res = s;\r         \r         for(int i=0; i<n; i++) {\r            \r             if(s[i] == '6')                                         s[i] = '9';\r             else if(s[i] == '9')                                    s[i] = '6';\r             else if(s[i] == '0' || s[i] == '8' || s[i] == '1')      continue;\r             else                                                    return false;\r         }\r         \r         reverse(res.begin(), res.end());\r         return (res == s);\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isStrobogrammatic_string_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_isStrobogrammatic_string_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\246-strobogrammatic-number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring s=\"\";\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isStrobogrammatic_string_directed_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isStrobogrammatic(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p76\\\\246-strobogrammatic-number\\\\246-strobogrammatic-number.cpp\\\\Solution\\\\isStrobogrammatic(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\246-strobogrammatic-number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring s=\"\";\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isStrobogrammatic_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_isStrobogrammatic_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\246-strobogrammatic-number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName278816 = new char[2];akaRandomName278816[0] = 62;akaRandomName278816[1] = '\\0';string s=akaRandomName278816;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isStrobogrammatic_string_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isStrobogrammatic(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p76\\\\246-strobogrammatic-number\\\\246-strobogrammatic-number.cpp\\\\Solution\\\\isStrobogrammatic(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\246-strobogrammatic-number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName469567 = new char[2];akaRandomName469567[0] = 62;akaRandomName469567[1] = '\\0';string s=akaRandomName469567;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     bool isStrobogrammatic(string s) {\r     \r         int n = s.length();\r         string res = s;\r         \r         for(int i=0; i<n; i++) {\r            \r             if(s[i] == '6')                                         s[i] = '9';\r             else if(s[i] == '9')                                    s[i] = '6';\r             else if(s[i] == '0' || s[i] == '8' || s[i] == '1')      continue;\r             else                                                    return false;\r         }\r         \r         reverse(res.begin(), res.end());\r         return (res == s);\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p76\\246-strobogrammatic-number\\246-strobogrammatic-number.cpp\\Solution\\isStrobogrammatic(string)"
+    },
+    {
+        "f": [],
+        "fm": "vector<vector<string>> groupStrings(vector<string>& v) {\r     \r         vector<vector<string>> res;\r         int n = v.size();\r         \r         unordered_map<string, vector<string>> u;\r         \r         for(int i=0; i<n; i++) {\r             \r             string temp = v[i];\r \r             string order = \"\";\r             cout << temp << \" \";\r             \r             for(int j=1; j<temp.size(); j++) {\r                 \r                 int diff = (int)(temp[j] - 'a') % 26 - (int)(temp[j-1] - 'a') % 26;\r                 \r                 if(diff <= 0)                          diff = diff + 26;\r                 order += to_string(diff) + \"-\";\r             }\r             \r             u[order].push_back(temp);\r         }\r \r         vector<string> path;\r         \r         for(auto &x : u) {\r             \r             vector<string> t = x.second;\r             \r             for(auto &x1 : t)                           path.push_back(x1);\r             \r             res.push_back(path);\r             path.clear();\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_groupStrings_vector_string_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_groupStrings_vector_string_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\249-group-shifted-strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> v;\nvector<vector<string>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_groupStrings_vector_string_directed_0\");vector<vector<string>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->groupStrings(v);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p76\\\\249-group-shifted-strings\\\\249-group-shifted-strings.cpp\\\\Solution\\\\groupStrings(vector<string>&)\");\n\n\nvector<string> EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\249-group-shifted-strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> v;\nvector<vector<string>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_groupStrings_vector_string_directed_1(void) {\n{\nAKA_test_case_name=\"Solution_groupStrings_vector_string_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\249-group-shifted-strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> v;\nvector<vector<string>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_groupStrings_vector_string_directed_1\");vector<vector<string>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->groupStrings(v);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p76\\\\249-group-shifted-strings\\\\249-group-shifted-strings.cpp\\\\Solution\\\\groupStrings(vector<string>&)\");\n\n\nvector<string> EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\249-group-shifted-strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> v;\nvector<vector<string>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     vector<vector<string>> groupStrings(vector<string>& v) {\r     \r         vector<vector<string>> res;\r         int n = v.size();\r         \r         unordered_map<string, vector<string>> u;\r         \r         for(int i=0; i<n; i++) {\r             \r             string temp = v[i];\r \r             string order = \"\";\r             cout << temp << \" \";\r             \r             for(int j=1; j<temp.size(); j++) {\r                 \r                 int diff = (int)(temp[j] - 'a') % 26 - (int)(temp[j-1] - 'a') % 26;\r                 \r                 if(diff <= 0)                          diff = diff + 26;\r                 order += to_string(diff) + \"-\";\r             }\r             \r             u[order].push_back(temp);\r         }\r \r         vector<string> path;\r         \r         for(auto &x : u) {\r             \r             vector<string> t = x.second;\r             \r             for(auto &x1 : t)                           path.push_back(x1);\r             \r             res.push_back(path);\r             path.clear();\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p76\\249-group-shifted-strings\\249-group-shifted-strings.cpp\\Solution\\groupStrings(vector<string>&)"
+    },
+    {
+        "f": [],
+        "fm": "void addNodeAtBeginning(ListNode** head, int val) {\r         \r         ListNode* temp = new ListNode(val);\r         \r         if(head == NULL) {\r             *head = temp;\r             return;\r         }\r         \r         else {\r             temp->next = *head;\r             *head = temp;\r         }\r         \r         return;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_addNodeAtBeginning_ListNodemulmul_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_addNodeAtBeginning_ListNodemulmul_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\25-reverse-nodes-in-k-group.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode**> AKA_VECTOR_INIT_head;\nstd::vector<ListNode*> AKA_VECTOR_INIT_AKA_VECTOR_INIT_head_0;\n\n\n/* SubStructDataNode AKA_VECTOR_INIT_head_0_0 */\n/* ConstructorDataNode ListNode() */\nAKA_mark(\"Calling: .\\\\p76\\\\25-reverse-nodes-in-k-group\\\\25-reverse-nodes-in-k-group.cpp\\\\ListNode\\\\ListNode()|ROOT\\\\25-reverse-nodes-in-k-group.cpp\\\\addNodeAtBeginning(ListNode**,int)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\AKA_VECTOR_INIT_head_0_0\\\\AKA_VECTOR_INIT_head_0_0\\\\ListNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0_0 = new ::ListNode();\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_0_0).val=-1462681927;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0_0).next;\n\nAKA_VECTOR_INIT_AKA_VECTOR_INIT_head_0.push_back(AKA_VECTOR_INIT_head_0_0);\n\nauto AKA_VECTOR_INIT_head_0 = &(AKA_VECTOR_INIT_AKA_VECTOR_INIT_head_0[0]);\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\nstd::vector<ListNode*> AKA_VECTOR_INIT_AKA_VECTOR_INIT_head_1;\n\n\n/* SubStructDataNode AKA_VECTOR_INIT_head_1_0 */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head10_x=-783001168;\nAKA_mark(\"Calling: .\\\\p76\\\\25-reverse-nodes-in-k-group\\\\25-reverse-nodes-in-k-group.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\25-reverse-nodes-in-k-group.cpp\\\\addNodeAtBeginning(ListNode**,int)\\\\head\\\\AKA_VECTOR_INIT_head_1\\\\AKA_VECTOR_INIT_head_1_0\\\\AKA_VECTOR_INIT_head_1_0\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_1_0 = new ::ListNode(head10_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_1_0).val=-1445888108;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_1_0).next;\n\nAKA_VECTOR_INIT_AKA_VECTOR_INIT_head_1.push_back(AKA_VECTOR_INIT_head_1_0);\n\nauto AKA_VECTOR_INIT_head_1 = &(AKA_VECTOR_INIT_AKA_VECTOR_INIT_head_1[0]);\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_1);\n\nListNode** head = AKA_VECTOR_INIT_head[0];\n\n\nint val=-1654418672;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* NormalNumberDataNode val */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_addNodeAtBeginning_ListNodemulmul_int_random_1\");AKA_INSTANCE___Solution->addNodeAtBeginning(head,val);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p76\\\\25-reverse-nodes-in-k-group\\\\25-reverse-nodes-in-k-group.cpp\\\\Solution\\\\addNodeAtBeginning(ListNode**,int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\25-reverse-nodes-in-k-group.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode**> AKA_VECTOR_INIT_head;\nstd::vector<ListNode*> AKA_VECTOR_INIT_AKA_VECTOR_INIT_head_0;\n\n\n/* SubStructDataNode AKA_VECTOR_INIT_head_0_0 */\n/* ConstructorDataNode ListNode() */\nAKA_mark(\"Calling: .\\\\p76\\\\25-reverse-nodes-in-k-group\\\\25-reverse-nodes-in-k-group.cpp\\\\ListNode\\\\ListNode()|ROOT\\\\25-reverse-nodes-in-k-group.cpp\\\\addNodeAtBeginning(ListNode**,int)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\AKA_VECTOR_INIT_head_0_0\\\\AKA_VECTOR_INIT_head_0_0\\\\ListNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0_0 = new ::ListNode();\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_0_0).val=-1462681927;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0_0).next;\n\nAKA_VECTOR_INIT_AKA_VECTOR_INIT_head_0.push_back(AKA_VECTOR_INIT_head_0_0);\n\nauto AKA_VECTOR_INIT_head_0 = &(AKA_VECTOR_INIT_AKA_VECTOR_INIT_head_0[0]);\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\nstd::vector<ListNode*> AKA_VECTOR_INIT_AKA_VECTOR_INIT_head_1;\n\n\n/* SubStructDataNode AKA_VECTOR_INIT_head_1_0 */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head10_x=-783001168;\nAKA_mark(\"Calling: .\\\\p76\\\\25-reverse-nodes-in-k-group\\\\25-reverse-nodes-in-k-group.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\25-reverse-nodes-in-k-group.cpp\\\\addNodeAtBeginning(ListNode**,int)\\\\head\\\\AKA_VECTOR_INIT_head_1\\\\AKA_VECTOR_INIT_head_1_0\\\\AKA_VECTOR_INIT_head_1_0\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_1_0 = new ::ListNode(head10_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_1_0).val=-1445888108;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_1_0).next;\n\nAKA_VECTOR_INIT_AKA_VECTOR_INIT_head_1.push_back(AKA_VECTOR_INIT_head_1_0);\n\nauto AKA_VECTOR_INIT_head_1 = &(AKA_VECTOR_INIT_AKA_VECTOR_INIT_head_1[0]);\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_1);\n\nListNode** head = AKA_VECTOR_INIT_head[0];\n\n\nint val=-1654418672;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* NormalNumberDataNode val */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     void addNodeAtBeginning(ListNode** head, int val) {\r         \r         ListNode* temp = new ListNode(val);\r         \r         if(head == NULL) {\r             *head = temp;\r             return;\r         }\r         \r         else {\r             temp->next = *head;\r             *head = temp;\r         }\r         \r         return;\r     }\r     \r     ListNode* reverseKGroup(ListNode* head, int k) {\r     \r         if(head == NULL)                                            return NULL;\r         \r         ListNode* temp = head;\r         int len = 0;\r         \r         vector<int> v;\r         \r         while(temp != NULL) {\r             \r             v.push_back(temp->val);\r             temp = temp->next;\r         \r             len++;\r         }\r         \r         int noOfGroups = len / k;\r         \r         // i is the groupNo\r         for(int i=0; i<noOfGroups; i++) {\r             \r             // Range of a group is from [i*k, (i+1)*k)\r             reverse(v.begin() + (i * k), v.begin() + (i + 1) * k);\r         }\r         \r         reverse(v.begin(), v.end());\r         \r         ListNode* res = NULL;\r         \r         for(auto &x : v) {\r             addNodeAtBeginning(&res, x);    \r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p76\\25-reverse-nodes-in-k-group\\25-reverse-nodes-in-k-group.cpp\\Solution\\addNodeAtBeginning(ListNode**,int)"
+    },
+    {
+        "f": [],
+        "fm": "ListNode* reverseKGroup(ListNode* head, int k) {\r     \r         if(head == NULL)                                            return NULL;\r         \r         ListNode* temp = head;\r         int len = 0;\r         \r         vector<int> v;\r         \r         while(temp != NULL) {\r             \r             v.push_back(temp->val);\r             temp = temp->next;\r         \r             len++;\r         }\r         \r         int noOfGroups = len / k;\r         \r         // i is the groupNo\r         for(int i=0; i<noOfGroups; i++) {\r             \r             // Range of a group is from [i*k, (i+1)*k)\r             reverse(v.begin() + (i * k), v.begin() + (i + 1) * k);\r         }\r         \r         reverse(v.begin(), v.end());\r         \r         ListNode* res = NULL;\r         \r         for(auto &x : v) {\r             addNodeAtBeginning(&res, x);    \r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_reverseKGroup_ListNodemul_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_reverseKGroup_ListNodemul_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\25-reverse-nodes-in-k-group.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-369752705;\nAKA_mark(\"Calling: .\\\\p76\\\\25-reverse-nodes-in-k-group\\\\25-reverse-nodes-in-k-group.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\25-reverse-nodes-in-k-group.cpp\\\\reverseKGroup(ListNode*,int)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head1_x=364293996;\nAKA_mark(\"Calling: .\\\\p76\\\\25-reverse-nodes-in-k-group\\\\25-reverse-nodes-in-k-group.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\25-reverse-nodes-in-k-group.cpp\\\\reverseKGroup(ListNode*,int)\\\\head\\\\AKA_VECTOR_INIT_head_1\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_1 = new ::ListNode(head1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_1).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_1);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\n\n\nint k=7;\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* NormalNumberDataNode k */\n/* PointerStructureDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_reverseKGroup_ListNodemul_int_random_4\");ListNode* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->reverseKGroup(head,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p76\\\\25-reverse-nodes-in-k-group\\\\25-reverse-nodes-in-k-group.cpp\\\\Solution\\\\reverseKGroup(ListNode*,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\25-reverse-nodes-in-k-group.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-369752705;\nAKA_mark(\"Calling: .\\\\p76\\\\25-reverse-nodes-in-k-group\\\\25-reverse-nodes-in-k-group.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\25-reverse-nodes-in-k-group.cpp\\\\reverseKGroup(ListNode*,int)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head1_x=364293996;\nAKA_mark(\"Calling: .\\\\p76\\\\25-reverse-nodes-in-k-group\\\\25-reverse-nodes-in-k-group.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\25-reverse-nodes-in-k-group.cpp\\\\reverseKGroup(ListNode*,int)\\\\head\\\\AKA_VECTOR_INIT_head_1\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_1 = new ::ListNode(head1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_1).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_1);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\n\n\nint k=7;\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* NormalNumberDataNode k */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     void addNodeAtBeginning(ListNode** head, int val) {\r         \r         ListNode* temp = new ListNode(val);\r         \r         if(head == NULL) {\r             *head = temp;\r             return;\r         }\r         \r         else {\r             temp->next = *head;\r             *head = temp;\r         }\r         \r         return;\r     }\r     \r     ListNode* reverseKGroup(ListNode* head, int k) {\r     \r         if(head == NULL)                                            return NULL;\r         \r         ListNode* temp = head;\r         int len = 0;\r         \r         vector<int> v;\r         \r         while(temp != NULL) {\r             \r             v.push_back(temp->val);\r             temp = temp->next;\r         \r             len++;\r         }\r         \r         int noOfGroups = len / k;\r         \r         // i is the groupNo\r         for(int i=0; i<noOfGroups; i++) {\r             \r             // Range of a group is from [i*k, (i+1)*k)\r             reverse(v.begin() + (i * k), v.begin() + (i + 1) * k);\r         }\r         \r         reverse(v.begin(), v.end());\r         \r         ListNode* res = NULL;\r         \r         for(auto &x : v) {\r             addNodeAtBeginning(&res, x);    \r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p76\\25-reverse-nodes-in-k-group\\25-reverse-nodes-in-k-group.cpp\\Solution\\reverseKGroup(ListNode*,int)"
+    }
+]

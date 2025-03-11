@@ -1,0 +1,145 @@
+[
+    {
+        "f": [
+            "int n;",
+            "vector<pair<int, int>> v;"
+        ],
+        "fm": "int dotProduct(SparseVector& vec) {\r     \r         int sum = 0;\r         \r         for(int i=0, j=0; i<v.size() && j<vec.v.size(); i++, j++) {\r             \r             if(v[i].first < vec.v[j].first)                                 j--;\r             else if(v[i].first > vec.v[j].first)                            i--;\r             else                                                            sum += (v[i].second) * (vec.v[j].second);\r         }\r         \r         return sum;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_SparseVector_dotProduct_SparseVector_random_0(void) {\n{\nAKA_test_case_name=\"SparseVector_dotProduct_SparseVector_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SparseVector */\n/* ConstructorDataNode SparseVector(vector<int>&) */\n/* VectorDataNode nums */\nvector<int> AKA_INSTANCE___SparseVector_nums;\nint AKA_INSTANCE___SparseVector_nums_element0=1371312541;\nAKA_INSTANCE___SparseVector_nums.push_back(AKA_INSTANCE___SparseVector_nums_element0);\nint AKA_INSTANCE___SparseVector_nums_element1=-1710950931;\nAKA_INSTANCE___SparseVector_nums.push_back(AKA_INSTANCE___SparseVector_nums_element1);\nAKA_mark(\"Calling: .\\\\p39\\\\1570-dot-product-of-two-sparse-vectors\\\\1570-dot-product-of-two-sparse-vectors.cpp\\\\SparseVector\\\\SparseVector(vector<int>&)|ROOT\\\\1570-dot-product-of-two-sparse-vectors.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SparseVector\\\\AKA_INSTANCE___SparseVector\\\\SparseVector(vector<int>&)\");AKA_fCall++;AKA_INSTANCE___SparseVector = new ::SparseVector(AKA_INSTANCE___SparseVector_nums);\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* VectorDataNode v */\npair<int,int> AKA_INSTANCE___SparseVector_v_element0;\n/* NormalNumberDataNode first */\nAKA_INSTANCE___SparseVector_v_element0->first=1360319718;\n/* NormalNumberDataNode second */\nAKA_INSTANCE___SparseVector_v_element0->second=1838812439;\nAKA_INSTANCE___SparseVector->v.push_back(AKA_INSTANCE___SparseVector_v_element0);\n\n\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* ClassDataNode vec */\n/* SubClassDataNode vec */\n/* ConstructorDataNode SparseVector(vector<int>&) */\n/* VectorDataNode nums */\nvector<int> vec_nums;\nint vec_nums_element0=-1367520340;\nvec_nums.push_back(vec_nums_element0);\nint vec_nums_element1=281214253;\nvec_nums.push_back(vec_nums_element1);\nint vec_nums_element2=1857769844;\nvec_nums.push_back(vec_nums_element2);\nAKA_mark(\"Calling: .\\\\p39\\\\1570-dot-product-of-two-sparse-vectors\\\\1570-dot-product-of-two-sparse-vectors.cpp\\\\SparseVector\\\\SparseVector(vector<int>&)|ROOT\\\\1570-dot-product-of-two-sparse-vectors.cpp\\\\dotProduct(SparseVector&)\\\\vec\\\\vec\\\\SparseVector(vector<int>&)\");AKA_fCall++;::SparseVector vec = ::SparseVector(vec_nums);\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* VectorDataNode v */\npair<int,int> vec_v_element0;\n/* NormalNumberDataNode first */\nvec_v_element0.first=1803750390;\n/* NormalNumberDataNode second */\nvec_v_element0.second=1895999904;\nvec.v.push_back(vec_v_element0);\npair<int,int> vec_v_element1;\n/* NormalNumberDataNode first */\nvec_v_element1.first=857638826;\n/* NormalNumberDataNode second */\nvec_v_element1.second=1867572529;\nvec.v.push_back(vec_v_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SparseVector_dotProduct_SparseVector_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SparseVector->dotProduct(vec);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p39\\\\1570-dot-product-of-two-sparse-vectors\\\\1570-dot-product-of-two-sparse-vectors.cpp\\\\SparseVector\\\\dotProduct(SparseVector&)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1556-thousand-separator.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=1366375546;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class SparseVector {\r public:\r     \r     int n;\r     vector<pair<int, int>> v;\r     \r     SparseVector(vector<int> &nums) {\r         \r         n = nums.size();    \r         \r         for(int i=0; i<n; i++) {\r             if(nums[i] > 0)                                                v.push_back({i, nums[i]});\r         }\r     }\r     \r     // Return the dotProduct of two sparse vectors\r     int dotProduct(SparseVector& vec) {\r     \r         int sum = 0;\r         \r         for(int i=0, j=0; i<v.size() && j<vec.v.size(); i++, j++) {\r             \r             if(v[i].first < vec.v[j].first)                                 j--;\r             else if(v[i].first > vec.v[j].first)                            i--;\r             else                                                            sum += (v[i].second) * (vec.v[j].second);\r         }\r         \r         return sum;\r     }\r     \r };",
+        "c": [
+            "SparseVector(vector<int> &nums) {\r\n        \r\n        n = nums.size();    \r\n        \r\n        for(int i=0; i<n; i++) {\r\n            if(nums[i] > 0)                                                v.push_back({i, nums[i]});\r\n        }\r\n    }"
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p39\\1570-dot-product-of-two-sparse-vectors\\1570-dot-product-of-two-sparse-vectors.cpp\\SparseVector\\dotProduct(SparseVector&)"
+    },
+    {
+        "f": [],
+        "fm": "string modifyString(string s) {\r     \r         vector<int> vis(26, 0);\r         \r         for(auto &x : s) {\r             if(x != '?')                             vis[x - 'a'] = 1;\r         }\r \r         vector<char> letter;\r         \r         for(int k=0 ; k<26; k++) {\r             char ch = (char)(k + 97);\r             if(vis[ch - 'a'] == 0)                   letter.push_back(ch);\r         }\r         \r         int n = s.length();\r         int c = 0;\r         \r         for(int i=0; i<n; i++) {\r             \r             if(s[i] == '?') {\r                 \r                 if(c % 2 == 0)                      s[i] = letter[0];\r                 else                                s[i] = letter[1];\r                 \r                 c++;\r             }\r         }\r         \r         return s;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_modifyString_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_modifyString_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1576-replace-all-s-to-avoid-consecutive-repeating-characters.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName320429 = new char[2];akaRandomName320429[0] = -105;akaRandomName320429[1] = '\\0';string s=akaRandomName320429;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_modifyString_string_random_0\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->modifyString(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p39\\\\1576-replace-all-s-to-avoid-consecutive-repeating-characters\\\\1576-replace-all-s-to-avoid-consecutive-repeating-characters.cpp\\\\Solution\\\\modifyString(string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1556-thousand-separator.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=1366375546;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     string modifyString(string s) {\r     \r         vector<int> vis(26, 0);\r         \r         for(auto &x : s) {\r             if(x != '?')                             vis[x - 'a'] = 1;\r         }\r \r         vector<char> letter;\r         \r         for(int k=0 ; k<26; k++) {\r             char ch = (char)(k + 97);\r             if(vis[ch - 'a'] == 0)                   letter.push_back(ch);\r         }\r         \r         int n = s.length();\r         int c = 0;\r         \r         for(int i=0; i<n; i++) {\r             \r             if(s[i] == '?') {\r                 \r                 if(c % 2 == 0)                      s[i] = letter[0];\r                 else                                s[i] = letter[1];\r                 \r                 c++;\r             }\r         }\r         \r         return s;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p39\\1576-replace-all-s-to-avoid-consecutive-repeating-characters\\1576-replace-all-s-to-avoid-consecutive-repeating-characters.cpp\\Solution\\modifyString(string)"
+    },
+    {
+        "f": [],
+        "fm": "int minCost(string a, vector<int>& neededTime) {\r     \r         int time = 0;\r         int n = a.size();\r \r         time = neededTime[0];\r         int maxCost = neededTime[0];\r         \r         for(int i=1; i<n; i++) {\r             \r             if(a[i] != a[i-1]) {\r                 time -= maxCost;\r                 maxCost = 0;\r             }\r             \r             time += neededTime[i];\r             maxCost = max(maxCost, neededTime[i]);\r         }\r         \r         return time - maxCost;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minCost_string_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_minCost_string_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1578-minimum-time-to-make-rope-colorful.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName54367 = new char[2];akaRandomName54367[0] = 38;akaRandomName54367[1] = '\\0';string a=akaRandomName54367;\nvector<int> neededTime;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode a */\n/* VectorDataNode neededTime */\nint neededTime_element0=1905555701;\nneededTime.push_back(neededTime_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minCost_string_vector_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minCost(a,neededTime);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p39\\\\1578-minimum-time-to-make-rope-colorful\\\\1578-minimum-time-to-make-rope-colorful.cpp\\\\Solution\\\\minCost(string,vector<int>&)\");\n\n\nvector<int> EXPECTED_neededTime;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1556-thousand-separator.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=1366375546;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int minCost(string a, vector<int>& neededTime) {\r     \r         int time = 0;\r         int n = a.size();\r \r         time = neededTime[0];\r         int maxCost = neededTime[0];\r         \r         for(int i=1; i<n; i++) {\r             \r             if(a[i] != a[i-1]) {\r                 time -= maxCost;\r                 maxCost = 0;\r             }\r             \r             time += neededTime[i];\r             maxCost = max(maxCost, neededTime[i]);\r         }\r         \r         return time - maxCost;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p39\\1578-minimum-time-to-make-rope-colorful\\1578-minimum-time-to-make-rope-colorful.cpp\\Solution\\minCost(string,vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int sumOddLengthSubarrays(vector<int>& a) {\r     \r         int sum = 0;\r         int n = a.size();\r         \r         int l = 3;\r         \r         for(int i=0; i<n; i++)                  sum += a[i];\r \r         while(l <= n) {\r             \r             for(int i=0; i<=n-l; i++) {\r                 \r                 int temp = 0;\r                 for(int j=i; j<i+l; j++)            temp += a[j];\r                 sum += temp;\r             }\r             \r             l += 2;\r         }\r         \r         return sum;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_sumOddLengthSubarrays_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_sumOddLengthSubarrays_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1588-sum-of-all-odd-length-subarrays.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=1394879059;\na.push_back(a_element0);\nint a_element1=-1375381627;\na.push_back(a_element1);\nint a_element2=769000529;\na.push_back(a_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_sumOddLengthSubarrays_vector_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->sumOddLengthSubarrays(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p39\\\\1588-sum-of-all-odd-length-subarrays\\\\1588-sum-of-all-odd-length-subarrays.cpp\\\\Solution\\\\sumOddLengthSubarrays(vector<int>&)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1556-thousand-separator.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=1366375546;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int sumOddLengthSubarrays(vector<int>& a) {\r     \r         int sum = 0;\r         int n = a.size();\r         \r         int l = 3;\r         \r         for(int i=0; i<n; i++)                  sum += a[i];\r \r         while(l <= n) {\r             \r             for(int i=0; i<=n-l; i++) {\r                 \r                 int temp = 0;\r                 for(int j=i; j<i+l; j++)            temp += a[j];\r                 sum += temp;\r             }\r             \r             l += 2;\r         }\r         \r         return sum;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p39\\1588-sum-of-all-odd-length-subarrays\\1588-sum-of-all-odd-length-subarrays.cpp\\Solution\\sumOddLengthSubarrays(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "string reorderSpaces(string text) {\r     \r         string res = \"\";\r         \r         int noSpaces = 0;\r         vector<string> words;\r         \r         string temp = \"\";\r         \r         for(int i=0; i<text.length(); ) {\r             \r             if(text[i] == ' ') {\r \r                 while(i < text.length() && text[i] == ' ') {\r                     i++;\r                     noSpaces++;\r                 }\r                 \r                 if(temp != \"\")                              words.push_back(temp);\r                 temp = \"\";\r             }\r             \r             else {\r                 temp += text[i];\r                 i++;\r             }\r         }\r         \r         if(temp != \"\")                                      words.push_back(temp);\r         \r         int noWords = words.size();\r         \r         if(noWords == 1) {\r             res += words[0];\r             \r             int c = noSpaces;\r             while(c--)                                      res += ' ';\r             \r             return res;\r         }\r         \r         int spacesExtra, spacesBetweenWords;\r         spacesExtra = noSpaces % (noWords - 1);\r \r         if(spacesExtra == 0) {\r             // Then we can put these spaces between each word  \r             spacesBetweenWords = noSpaces / (noWords - 1);\r         } \r         \r         // Else put extra spaces at the last\r         \r         for(int i=0; i<words.size(); i++) {\r             \r             res += words[i];\r \r             if(i == words.size() - 1)                   break;\r \r             int c = spacesBetweenWords;\r             while(c--)                                  res += ' ';\r         }\r         \r         if(spacesExtra > 0) {\r             int c = spacesExtra;\r             while(c--)                                  res += ' ';\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_reorderSpaces_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_reorderSpaces_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1592-rearrange-spaces-between-words.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName887806 = new char[2];akaRandomName887806[0] = 50;akaRandomName887806[1] = '\\0';string text=akaRandomName887806;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode text */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_reorderSpaces_string_random_3\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->reorderSpaces(text);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p39\\\\1592-rearrange-spaces-between-words\\\\1592-rearrange-spaces-between-words.cpp\\\\Solution\\\\reorderSpaces(string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1556-thousand-separator.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=1366375546;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     string reorderSpaces(string text) {\r     \r         string res = \"\";\r         \r         int noSpaces = 0;\r         vector<string> words;\r         \r         string temp = \"\";\r         \r         for(int i=0; i<text.length(); ) {\r             \r             if(text[i] == ' ') {\r \r                 while(i < text.length() && text[i] == ' ') {\r                     i++;\r                     noSpaces++;\r                 }\r                 \r                 if(temp != \"\")                              words.push_back(temp);\r                 temp = \"\";\r             }\r             \r             else {\r                 temp += text[i];\r                 i++;\r             }\r         }\r         \r         if(temp != \"\")                                      words.push_back(temp);\r         \r         int noWords = words.size();\r         \r         if(noWords == 1) {\r             res += words[0];\r             \r             int c = noSpaces;\r             while(c--)                                      res += ' ';\r             \r             return res;\r         }\r         \r         int spacesExtra, spacesBetweenWords;\r         spacesExtra = noSpaces % (noWords - 1);\r \r         if(spacesExtra == 0) {\r             // Then we can put these spaces between each word  \r             spacesBetweenWords = noSpaces / (noWords - 1);\r         } \r         \r         // Else put extra spaces at the last\r         \r         for(int i=0; i<words.size(); i++) {\r             \r             res += words[i];\r \r             if(i == words.size() - 1)                   break;\r \r             int c = spacesBetweenWords;\r             while(c--)                                  res += ' ';\r         }\r         \r         if(spacesExtra > 0) {\r             int c = spacesExtra;\r             while(c--)                                  res += ' ';\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p39\\1592-rearrange-spaces-between-words\\1592-rearrange-spaces-between-words.cpp\\Solution\\reorderSpaces(string)"
+    }
+]

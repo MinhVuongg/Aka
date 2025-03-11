@@ -1,0 +1,30 @@
+[
+    {
+        "f": [],
+        "fm": "int firstMissingPositive(int A[], int n) {\r     if (0 == n) {\r       return 1;\r     }\r \r     int i;\r \r     for (i = 0; i < n; ++i) {\r       int val = A[i];\r \r       if (val != (i + 1)) {\r         while ((val > 0) && (val <= n) && (A[val - 1] != val)) {\r           int tmp = A[val - 1];\r \r           A[val - 1] = val;\r           val = tmp;\r         }\r       }\r     }\r \r     for (i = 0; i < n; ++i) {\r       if (A[i] != (i + 1)) {\r         return i + 1;\r       }\r     }\r \r     return n + 1;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_firstMissingPositive_int_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_firstMissingPositive_int_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\first_missing_positive.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[1];;\n\n\nint n=8;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=1216825635;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_firstMissingPositive_int_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->firstMissingPositive(A,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-7\\\\first_missing_positive.cpp\\\\Solution\\\\firstMissingPositive(int[],int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\container_with_most_water.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=-867895881;\nheight.push_back(height_element0);\nint height_element1=1288329573;\nheight.push_back(height_element1);\nint height_element2=-1368174190;\nheight.push_back(height_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   // 原理分析\r   // 难点在于O(n)的时间复杂度和O(1)的空间复杂度。\r   // 办法也很简单，就是不断交换位置：\r   // 1. 数组大小为size\r   // 2. 如果A[i] < 0或者A[i] > size或者A[i] = i - 1，不处理。\r   // 3. 对于A[i]，如果A[i] > 0并且A[i] <= size，把A[i]和A[A[i] - 1]交换，再检查交换后的A[i]是否要继续做交换。\r   // 4. 顺序遍历数组，找到第一个不满足A[i] = i + 1的数。\r   int firstMissingPositive(int A[], int n) {\r     if (0 == n) {\r       return 1;\r     }\r \r     int i;\r \r     for (i = 0; i < n; ++i) {\r       int val = A[i];\r \r       if (val != (i + 1)) {\r         while ((val > 0) && (val <= n) && (A[val - 1] != val)) {\r           int tmp = A[val - 1];\r \r           A[val - 1] = val;\r           val = tmp;\r         }\r       }\r     }\r \r     for (i = 0; i < n; ++i) {\r       if (A[i] != (i + 1)) {\r         return i + 1;\r       }\r     }\r \r     return n + 1;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-7\\first_missing_positive.cpp\\Solution\\firstMissingPositive(int[],int)"
+    }
+]

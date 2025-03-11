@@ -1,0 +1,164 @@
+[
+    {
+        "f": [],
+        "fm": "int* twoSum(int* nums, int numsSize, int target) {\r \tint i, min = nums[0], max = nums[0];\r \t//ҳֵСֵ\r \tfor (i = 0; i < numsSize; i++) {\r \t\tif (nums[i] > max) max = nums[i];\r \t\tif (nums[i] < min) min = nums[i];\r \t}\r \t//Ϊmap±Ϊ룬mapĴСΪ+1ɡ\r \tint *map = (int*)calloc((max - min + 1), sizeof(int));\r \tint *twosum = (int*)malloc(sizeof(int) * 2);\r \t// ÿɨһnumsԪأԪص±;¼map\r \tfor (i = 0; i < numsSize; map[nums[i] - min] = ++i) {\r \t\tint lookfornum = target - nums[i];\r \t\tif (lookfornum<min || lookfornum>max)\r \t\t\tcontinue;\r \t\tint dis = lookfornum - min;\r \t\t// жĿǷѾֵ\r \t\tif (map[dis] != 0) {\r \t\t\ttwosum[0] = i;\r \t\t\ttwosum[1] = map[dis] - 1;\r \t\t\tbreak;\r \t\t}\r \t}\r \r \treturn twosum;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\zqxl_leetcode\\Leetcode\\_001 Two Sum\\_001 Two Sum.cpp\\twoSum(int*,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {\r \tstruct ListNode *p1 = l1;\r \tstruct ListNode *p2 = l2;\r \tint a, b, c;\r \tc = 0;\r \r \tstruct ListNode *result = (struct ListNode *)malloc(sizeof(struct ListNode));\r \tstruct ListNode *p = result;\r \r \twhile (1){\r \t\tif (p1 == NULL && p2 == NULL){\r \t\t\tif (c){\r \t\t\t\tstruct ListNode* t = (struct ListNode *)malloc(sizeof(struct ListNode));\r \t\t\t\tt->val = 1;\r \t\t\t\tt->next = NULL;\r \t\t\t\tp->next = t;\r \t\t\t}\r \t\t\tbreak;\r \t\t}\r \t\telse{\r \t\t\tstruct ListNode* t = (struct ListNode *)malloc(sizeof(struct ListNode));\r \t\t\tt->next = NULL;\r \t\t\tp->next = t;\r \t\t\tp = t;\r \t\t}\r \r \t\tif (p1 == NULL){\r \t\t\ta = 0;\r \t\t\tb = p2->val;\r \t\t\tp2 = p2->next;\r \t\t}\r \t\telse if (p2 == NULL){\r \t\t\ta = p1->val;\r \t\t\tb = 0;\r \t\t\tp1 = p1->next;\r \t\t}\r \t\telse{\r \t\t\ta = p1->val;\r \t\t\tb = p2->val;\r \t\t\tp1 = p1->next;\r \t\t\tp2 = p2->next;\r \t\t}\r \t\tp->val = (a + b + c) % 10;\r \t\tc = (a + b + c) / 10;\r \r \t}\r \treturn result->next;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\zqxl_leetcode\\Leetcode\\_002 Add Two Numbers\\_002 Add Two Numbers.cpp\\addTwoNumbers(struct ListNode*,struct ListNode*)"
+    },
+    {
+        "f": [],
+        "fm": "int lengthOfLongestSubstringWithoutContinuousCharacter(char* s) {\r \tint i = 1, iMax = 0;\r \twhile (*(++s) != '\\0'){\r \t\tif (*(s - 1) == *s){\r \t\t\t\r \t\t\ti = 1;\r \t\t}\r \t\telse{\r \t\t\ti++;\r \t\t}\r \t\tiMax = iMax < i ? i : iMax;\r \t}\r \treturn iMax;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\zqxl_leetcode\\Leetcode\\_003 Longest Substring Without Repeating Characters\\_003 Longest Substring Without Repeating Characters.cpp\\lengthOfLongestSubstringWithoutContinuousCharacter(char*)"
+    },
+    {
+        "f": [],
+        "fm": "int lengthOfLongestSubstring(char* s) {\r \tint i = 0, j = 2, max = 0, l = 0;\r \r \tif (s[0] == '\\0') \r \t\treturn 0; \r \telse if ((s[1] == '\\0')) \r \t\treturn 1;\r \twhile (1){\r \t\t// жʼַǷΪ\\0\r \t\tif (s[i + 1] != '\\0'){\r \t\t\tj = 1;\r \t\t\twhile (1){\r \t\t\t\tif (s[i + j-1] != '\\0'){\r \t\t\t\t\tl = checkRepeat(s, i, j);\r \t\t\t\t\tmax = max < l ? l : max;\r \t\t\t\t\tif (l < j) break;\r \t\t\t\t\tj++;\r \t\t\t\t}\r \t\t\t\telse{\r \t\t\t\t\tbreak;\r \t\t\t\t}\r \t\t\t}\r \t\t\ti++;\r \t\t}\r \t\telse{\r \t\t\tbreak;\r \t\t}\r \t}\r \treturn max;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\zqxl_leetcode\\Leetcode\\_003 Longest Substring Without Repeating Characters\\_003 Longest Substring Without Repeating Characters.cpp\\lengthOfLongestSubstring(char*)"
+    },
+    {
+        "f": [],
+        "fm": "int checkRepeat(char* s, int p, int q){\r \t//s[p, p+q)ΪҪظַ\r \t//صs[p, p+q)ַʼظӴ󳤶\r \tint i = 0;\r \tint a[200] = { 0 };\r \tfor (i = 0; i < q; i++){\r \t\tif (a[(int)(s[p + i])]){\r \t\t\tbreak;\r \t\t}\r \t\telse{\r \t\t\ta[(int)(s[p + i])]++;\r \t\t}\r \t}\r \treturn i;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\zqxl_leetcode\\Leetcode\\_003 Longest Substring Without Repeating Characters\\_003 Longest Substring Without Repeating Characters.cpp\\checkRepeat(char*,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "string longestPalindrome(string s) {\r \t\tint n = s.length();\r \t\tint i = 0;\r \t\tint start;\r \t\tint end;\r \t\tint tmp_len;\r \t\tint max_len = 1;\r \t\tint pos = 0;\r \t\twhile (i < n) {\r \t\t\tstart = i;\r \t\t\tend = i;\r \t\t\t// ظַ\r \t\t\twhile (end < n - 1 && s[end + 1] == s[end]) {\r \t\t\t\t++end;\r \t\t\t}\r \t\t\ti = end + 1; // i\r \t\t\t\t\t\t // ţעʱstartendǵķֱظʼ\r \t\t\twhile (start > 0 && end < n - 1 && s[start - 1] == s[end + 1]) {\r \t\t\t\t--start;\r \t\t\t\t++end;\r \t\t\t}\r \t\t\ttmp_len = end - start + 1;\r \t\t\tif (tmp_len > max_len) {\r \t\t\t\tmax_len = tmp_len;\r \t\t\t\tpos = start;\r \t\t\t}\r \t\t}\r \t\treturn s.substr(pos, max_len);\r \t}",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution2 {\r public:\r \tstring longestPalindrome(string s) {\r \t\tint n = s.length();\r \t\tint i = 0;\r \t\tint start;\r \t\tint end;\r \t\tint tmp_len;\r \t\tint max_len = 1;\r \t\tint pos = 0;\r \t\twhile (i < n) {\r \t\t\tstart = i;\r \t\t\tend = i;\r \t\t\t// ظַ\r \t\t\twhile (end < n - 1 && s[end + 1] == s[end]) {\r \t\t\t\t++end;\r \t\t\t}\r \t\t\ti = end + 1; // i\r \t\t\t\t\t\t // ţעʱstartendǵķֱظʼ\r \t\t\twhile (start > 0 && end < n - 1 && s[start - 1] == s[end + 1]) {\r \t\t\t\t--start;\r \t\t\t\t++end;\r \t\t\t}\r \t\t\ttmp_len = end - start + 1;\r \t\t\tif (tmp_len > max_len) {\r \t\t\t\tmax_len = tmp_len;\r \t\t\t\tpos = start;\r \t\t\t}\r \t\t}\r \t\treturn s.substr(pos, max_len);\r \t}\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\admin\\zqxl_leetcode\\Leetcode\\_005 Longest Palindromic Substring\\_005 Longest Palindromic Substring.cpp\\Solution2\\longestPalindrome(string)"
+    },
+    {
+        "f": [],
+        "fm": "string longestPalindrome(string s) {\r \t\tif (s.length() == 0) {\r \t\t\treturn \"\";\r \t\t}\r \t\tint maxlength = 0;\r \t\tstring maxString = s.substr(0, 1);\r \t\tfor (int i = 0; i < s.length() - 1; i++) {\r \t\t\tif (i == 0) {\r \t\t\t\tif (s[0] == s[1]) {\r \t\t\t\t\tmaxlength = 2;\r \t\t\t\t\tmaxString = s.substr(0, 2);\r \t\t\t\t}\r \t\t\t\tcontinue;\r \t\t\t}\r \r \t\t\tstring str = searchPalindrome(s, i);\r \t\t\tint length = str.length();\r \t\t\tif (length > maxlength) {\r \t\t\t\tmaxlength = length;\r \t\t\t\tmaxString = str;\r \t\t\t}\r \t\t}\r \t\treturn maxString;\r \t}",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \tstring longestPalindrome(string s) {\r \t\tif (s.length() == 0) {\r \t\t\treturn \"\";\r \t\t}\r \t\tint maxlength = 0;\r \t\tstring maxString = s.substr(0, 1);\r \t\tfor (int i = 0; i < s.length() - 1; i++) {\r \t\t\tif (i == 0) {\r \t\t\t\tif (s[0] == s[1]) {\r \t\t\t\t\tmaxlength = 2;\r \t\t\t\t\tmaxString = s.substr(0, 2);\r \t\t\t\t}\r \t\t\t\tcontinue;\r \t\t\t}\r \r \t\t\tstring str = searchPalindrome(s, i);\r \t\t\tint length = str.length();\r \t\t\tif (length > maxlength) {\r \t\t\t\tmaxlength = length;\r \t\t\t\tmaxString = str;\r \t\t\t}\r \t\t}\r \t\treturn maxString;\r \t}\r \r \t/*\r \t1 <= start< s.length()-1\r \tsУ±startΪԳᣬһַ\r \t*/\r \tstring searchPalindrome(string s, int start) {\r \t\tint length = 0, maxlength = 0;\r \t\tstring str = s.substr(start,1);\r \t\t// bbͻ\r \t\tif (s[start] == s[start + 1]) {\r \t\t\tmaxlength = 2;\r \t\t\tfor (int i = 1; start + i + 1 < s.length() && start - i >= 0; i++) {\r \t\t\t\tif (s[start + i + 1] == s[start - i]) {\r \t\t\t\t\tmaxlength += 2;\r \t\t\t\t}\r \t\t\t\telse {\r \t\t\t\t\tbreak;\r \t\t\t\t}\r \t\t\t}\r \t\t\tstr = s.substr(start - maxlength / 2 + 1, maxlength);\r \t\t}\r \t\t// abaͻ\r \t\tif (s[start - 1] == s[start + 1]) {\r \t\t\tlength = 3;\t\t\t\r \t\t\tfor (int i = 2; start + i < s.length() && start - i >= 0; i++) {\r \t\t\t\tif (s[start + i] == s[start - i]) {\r \t\t\t\t\tlength += 2;\r \t\t\t\t}\r \t\t\t\telse {\r \t\t\t\t\tbreak;\r \t\t\t\t}\r \t\t\t}\r \t\t\tmaxlength = maxlength > length ? maxlength : length;\r \t\t\tstr = s.substr(start - (maxlength - 1) / 2, maxlength);\r \t\t}\r \t\treturn str;\r \t}\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\admin\\zqxl_leetcode\\Leetcode\\_005 Longest Palindromic Substring\\_005 Longest Palindromic Substring.cpp\\Solution\\longestPalindrome(string)"
+    },
+    {
+        "f": [],
+        "fm": "string searchPalindrome(string s, int start) {\r \t\tint length = 0, maxlength = 0;\r \t\tstring str = s.substr(start,1);\r \t\t// bbͻ\r \t\tif (s[start] == s[start + 1]) {\r \t\t\tmaxlength = 2;\r \t\t\tfor (int i = 1; start + i + 1 < s.length() && start - i >= 0; i++) {\r \t\t\t\tif (s[start + i + 1] == s[start - i]) {\r \t\t\t\t\tmaxlength += 2;\r \t\t\t\t}\r \t\t\t\telse {\r \t\t\t\t\tbreak;\r \t\t\t\t}\r \t\t\t}\r \t\t\tstr = s.substr(start - maxlength / 2 + 1, maxlength);\r \t\t}\r \t\t// abaͻ\r \t\tif (s[start - 1] == s[start + 1]) {\r \t\t\tlength = 3;\t\t\t\r \t\t\tfor (int i = 2; start + i < s.length() && start - i >= 0; i++) {\r \t\t\t\tif (s[start + i] == s[start - i]) {\r \t\t\t\t\tlength += 2;\r \t\t\t\t}\r \t\t\t\telse {\r \t\t\t\t\tbreak;\r \t\t\t\t}\r \t\t\t}\r \t\t\tmaxlength = maxlength > length ? maxlength : length;\r \t\t\tstr = s.substr(start - (maxlength - 1) / 2, maxlength);\r \t\t}\r \t\treturn str;\r \t}",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \tstring longestPalindrome(string s) {\r \t\tif (s.length() == 0) {\r \t\t\treturn \"\";\r \t\t}\r \t\tint maxlength = 0;\r \t\tstring maxString = s.substr(0, 1);\r \t\tfor (int i = 0; i < s.length() - 1; i++) {\r \t\t\tif (i == 0) {\r \t\t\t\tif (s[0] == s[1]) {\r \t\t\t\t\tmaxlength = 2;\r \t\t\t\t\tmaxString = s.substr(0, 2);\r \t\t\t\t}\r \t\t\t\tcontinue;\r \t\t\t}\r \r \t\t\tstring str = searchPalindrome(s, i);\r \t\t\tint length = str.length();\r \t\t\tif (length > maxlength) {\r \t\t\t\tmaxlength = length;\r \t\t\t\tmaxString = str;\r \t\t\t}\r \t\t}\r \t\treturn maxString;\r \t}\r \r \t/*\r \t1 <= start< s.length()-1\r \tsУ±startΪԳᣬһַ\r \t*/\r \tstring searchPalindrome(string s, int start) {\r \t\tint length = 0, maxlength = 0;\r \t\tstring str = s.substr(start,1);\r \t\t// bbͻ\r \t\tif (s[start] == s[start + 1]) {\r \t\t\tmaxlength = 2;\r \t\t\tfor (int i = 1; start + i + 1 < s.length() && start - i >= 0; i++) {\r \t\t\t\tif (s[start + i + 1] == s[start - i]) {\r \t\t\t\t\tmaxlength += 2;\r \t\t\t\t}\r \t\t\t\telse {\r \t\t\t\t\tbreak;\r \t\t\t\t}\r \t\t\t}\r \t\t\tstr = s.substr(start - maxlength / 2 + 1, maxlength);\r \t\t}\r \t\t// abaͻ\r \t\tif (s[start - 1] == s[start + 1]) {\r \t\t\tlength = 3;\t\t\t\r \t\t\tfor (int i = 2; start + i < s.length() && start - i >= 0; i++) {\r \t\t\t\tif (s[start + i] == s[start - i]) {\r \t\t\t\t\tlength += 2;\r \t\t\t\t}\r \t\t\t\telse {\r \t\t\t\t\tbreak;\r \t\t\t\t}\r \t\t\t}\r \t\t\tmaxlength = maxlength > length ? maxlength : length;\r \t\t\tstr = s.substr(start - (maxlength - 1) / 2, maxlength);\r \t\t}\r \t\treturn str;\r \t}\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\admin\\zqxl_leetcode\\Leetcode\\_005 Longest Palindromic Substring\\_005 Longest Palindromic Substring.cpp\\Solution\\searchPalindrome(string,int)"
+    },
+    {
+        "f": [],
+        "fm": "int reverse1(int x) {\r \tint nums[10] = { 0 }, i = 0;\r \tlong result = 0;\r \t// ɵ͵ߴ\r \tfor (i = 0; i < 10; i++){\r \t\tnums[i] = x % 10;\r \t\tx = x / 10;\r \t\tif (x == 0)\r \t\t\tbreak;\r \t}\r \t// \r \tfor (int j=0; j<i+1; j++){\r \t\tresult = result * 10 + nums[j];\r \t\tif (result > 2147483647 || result < -2147483647)\r \t\t\treturn 0;\r \t}\r \t\r \treturn (int)result;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\zqxl_leetcode\\Leetcode\\_007 Reverse Integer\\_007 Reverse Integer.cpp\\reverse1(int)"
+    },
+    {
+        "f": [],
+        "fm": "int reverse(int x) {\r \tint temp =0, i = 0;\r \tlong result = 0;\r \t// ɵ͵ɨ\r \tfor (i = 0; i < 10; i++){\r \t\ttemp = x % 10;\r \t\tresult = result * 10 + temp;\r \t\tif (result > 2147483647 || result < -2147483647)\r \t\t\treturn 0;\r \t\tx = x / 10;\r \t\tif (x == 0)\r \t\t\tbreak;\r \t}\r \t\r \treturn (int)result;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\zqxl_leetcode\\Leetcode\\_007 Reverse Integer\\_007 Reverse Integer.cpp\\reverse(int)"
+    },
+    {
+        "f": [],
+        "fm": "bool isPalindrome1(int x) {\r \tlong result = 0;\r \tint y =x;\r \tif (x < 0)\r \t\treturn false;\r \tfor (int i = 0; i < 10; i++){\r \t\tresult = result * 10 + x % 10;\r \t\tx = x / 10;\r \t\tif (x == 0)\r \t\t\tbreak;\r \t}\r \treturn result - y == 0;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\zqxl_leetcode\\Leetcode\\_009 Palindrome Number\\_009 Palindrome Number.cpp\\isPalindrome1(int)"
+    },
+    {
+        "f": [],
+        "fm": "bool isPalindrome(int x) {\r \tint result = 0;\r \tif (x < 0 || (x % 10 == 0 && x != 0))\r \t\treturn false;\r \tfor (int i = 0; i < 10; i++){\r \t\tresult = result * 10 + x % 10;\r \t\tx = x / 10;\r \t\tif (x <= result)\r \t\t\tbreak;\r \t}\r \treturn result == x || result / 10 == x;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\zqxl_leetcode\\Leetcode\\_009 Palindrome Number\\_009 Palindrome Number.cpp\\isPalindrome(int)"
+    }
+]

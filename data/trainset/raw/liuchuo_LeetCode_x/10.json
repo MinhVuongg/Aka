@@ -1,0 +1,342 @@
+[
+    {
+        "f": [],
+        "fm": "bool rotateString(string A, string B) {         if (A.length() != B.length()) return false;                  string bothStrings = A + A;                  return bothStrings.find(B) != string::npos;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_rotateString_string_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_rotateString_string_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/796-is-rotation.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName368526 = new char[2];akaRandomName368526[0] = -48;akaRandomName368526[1] = '\\0';string A=akaRandomName368526;\nchar* akaRandomName840653 = new char[2];akaRandomName840653[0] = -121;akaRandomName840653[1] = '\\0';string B=akaRandomName840653;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode A */\n/* NormalStringDataNode B */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_rotateString_string_string_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->rotateString(A,B);\nAKA_fCall++;AKA_mark(\"Return from: ./10/796-is-rotation.cpp/Solution/rotateString(string,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/796-is-rotation.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName455533 = new char[2];akaRandomName455533[0] = -48;akaRandomName455533[1] = '\\0';string A=akaRandomName455533;\nchar* akaRandomName577723 = new char[2];akaRandomName577723[0] = -121;akaRandomName577723[1] = '\\0';string B=akaRandomName577723;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode A */\n/* NormalStringDataNode B */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     bool rotateString(string A, string B) {         if (A.length() != B.length()) return false;                  string bothStrings = A + A;                  return bothStrings.find(B) != string::npos;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/10/796-is-rotation.cpp/Solution/rotateString(string,string)"
+    },
+    {
+        "f": [],
+        "fm": "int numMagicSquaresInside(vector<vector<int>>& grid) {         int rows = grid.size();         int cols = grid[0].size();         int result = 0;         for (int r = 0; r < rows - 2; r++) {             for (int c = 0; c < cols - 2; c++) {                 if (isMagic({grid[r][c],   grid[r][c+1],   grid[r][c+2],                             grid[r+1][c], grid[r+1][c+1], grid[r+1][c+2],                             grid[r+2][c], grid[r+2][c+1], grid[r+2][c+2]})) {                     result++;                 }             }         }         return result;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_numMagicSquaresInside_vector_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_numMagicSquaresInside_vector_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/840-magic-squares-in-grid.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> grid;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode grid */\nvector<int> grid_element0;\nint grid_element0_element0=352985117;\ngrid_element0.push_back(grid_element0_element0);\nint grid_element0_element1=-1800533745;\ngrid_element0.push_back(grid_element0_element1);\nint grid_element0_element2=141386101;\ngrid_element0.push_back(grid_element0_element2);\ngrid.push_back(grid_element0);\nvector<int> grid_element1;\nint grid_element1_element0=-422449904;\ngrid_element1.push_back(grid_element1_element0);\ngrid.push_back(grid_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_numMagicSquaresInside_vector_vector_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->numMagicSquaresInside(grid);\nAKA_fCall++;AKA_mark(\"Return from: ./10/840-magic-squares-in-grid.cpp/Solution/numMagicSquaresInside(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_grid;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/840-magic-squares-in-grid.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> grid;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode grid */\nvector<int> grid_element0;\nint grid_element0_element0=352985117;\ngrid_element0.push_back(grid_element0_element0);\nint grid_element0_element1=-1800533745;\ngrid_element0.push_back(grid_element0_element1);\nint grid_element0_element2=141386101;\ngrid_element0.push_back(grid_element0_element2);\ngrid.push_back(grid_element0);\nvector<int> grid_element1;\nint grid_element1_element0=-422449904;\ngrid_element1.push_back(grid_element1_element0);\ngrid.push_back(grid_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     bool isMagic(vector<int> vals) {         vector<int> counts(16, 0);         for (int v : vals) {             counts[v]++;         }         for (int i = 1; i <= 9; i++) {             if (counts[i] != 1) return false;         }         return vals[0] + vals[1] + vals[2] == 15 &&                vals[3] + vals[4] + vals[5] == 15 &&                vals[6] + vals[7] + vals[8] == 15 &&                vals[0] + vals[4] + vals[8] == 15 &&                vals[2] + vals[4] + vals[6] == 15 &&                vals[0] + vals[3] + vals[6] == 15 &&                vals[1] + vals[4] + vals[7] == 15 &&                vals[2] + vals[5] + vals[8] == 15;     }          int numMagicSquaresInside(vector<vector<int>>& grid) {         int rows = grid.size();         int cols = grid[0].size();         int result = 0;         for (int r = 0; r < rows - 2; r++) {             for (int c = 0; c < cols - 2; c++) {                 if (isMagic({grid[r][c],   grid[r][c+1],   grid[r][c+2],                             grid[r+1][c], grid[r+1][c+1], grid[r+1][c+2],                             grid[r+2][c], grid[r+2][c+1], grid[r+2][c+2]})) {                     result++;                 }             }         }         return result;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/10/840-magic-squares-in-grid.cpp/Solution/numMagicSquaresInside(vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<vector<int>> transpose(vector<vector<int>>& A) {         int rows = A.size();         int cols = A[0].size();         vector<vector<int>> result(cols, vector<int>(rows, 0));         for (int r = 0; r < rows; r++) {             for (int c = 0; c < cols; c++) {                 result[c][r] = A[r][c];             }         }         return result;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_transpose_vector_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_transpose_vector_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/867-transpose-matrix.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> A;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode A */\nvector<int> A_element0;\nint A_element0_element0=-788000273;\nA_element0.push_back(A_element0_element0);\nint A_element0_element1=-869070610;\nA_element0.push_back(A_element0_element1);\nint A_element0_element2=-2047639849;\nA_element0.push_back(A_element0_element2);\nA.push_back(A_element0);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_transpose_vector_vector_int_random_4\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->transpose(A);\nAKA_fCall++;AKA_mark(\"Return from: ./10/867-transpose-matrix.cpp/Solution/transpose(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_A;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/867-transpose-matrix.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> A;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode A */\nvector<int> A_element0;\nint A_element0_element0=-788000273;\nA_element0.push_back(A_element0_element0);\nint A_element0_element1=-869070610;\nA_element0.push_back(A_element0_element1);\nint A_element0_element2=-2047639849;\nA_element0.push_back(A_element0_element2);\nA.push_back(A_element0);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     vector<vector<int>> transpose(vector<vector<int>>& A) {         int rows = A.size();         int cols = A[0].size();         vector<vector<int>> result(cols, vector<int>(rows, 0));         for (int r = 0; r < rows; r++) {             for (int c = 0; c < cols; c++) {                 result[c][r] = A[r][c];             }         }         return result;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/10/867-transpose-matrix.cpp/Solution/transpose(vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "int totalFruit(vector<int>& tree) {         int n = tree.size();         if (n < 3) return n;                  int p1 = 0;         int p2 = 0;         int prevStart = 0;         int typeB1 = tree[p1];          int typeB2 = tree[p2];                  int maxFruits = 0;                          for (int i = 1; i < n; i++) {             int currType = tree[i];                          if (currType != typeB1 && typeB1 == typeB2) {                 typeB2 = currType;             }             if (currType == typeB1 || currType == typeB2) {                 p2++;                 if (currType != tree[prevStart]) prevStart = i;             } else {                 maxFruits = max(p2 - p1 + 1, maxFruits);                 p1 = prevStart;                 p2 = i;                 typeB1 = tree[p1];                 typeB2 = currType;                 prevStart = p2;             }         }         maxFruits = max(p2 - p1 + 1, maxFruits);         return maxFruits;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_totalFruit_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_totalFruit_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/904-fruit-into-baskets.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> tree;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode tree */\nint tree_element0=-1011545344;\ntree.push_back(tree_element0);\nint tree_element1=-2021105893;\ntree.push_back(tree_element1);\nint tree_element2=354299751;\ntree.push_back(tree_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_totalFruit_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->totalFruit(tree);\nAKA_fCall++;AKA_mark(\"Return from: ./10/904-fruit-into-baskets.cpp/Solution/totalFruit(vector<int>&)\");\n\n\nvector<int> EXPECTED_tree;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/904-fruit-into-baskets.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> tree;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode tree */\nint tree_element0=-1011545344;\ntree.push_back(tree_element0);\nint tree_element1=-2021105893;\ntree.push_back(tree_element1);\nint tree_element2=354299751;\ntree.push_back(tree_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_totalFruit_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_totalFruit_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/904-fruit-into-baskets.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> tree;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode tree */\nint tree_element0=203746532;\ntree.push_back(tree_element0);\nint tree_element1=2031680925;\ntree.push_back(tree_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_totalFruit_vector_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->totalFruit(tree);\nAKA_fCall++;AKA_mark(\"Return from: ./10/904-fruit-into-baskets.cpp/Solution/totalFruit(vector<int>&)\");\n\n\nvector<int> EXPECTED_tree;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/904-fruit-into-baskets.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> tree;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode tree */\nint tree_element0=203746532;\ntree.push_back(tree_element0);\nint tree_element1=2031680925;\ntree.push_back(tree_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     /*          [1,   2,   3,   2,   2]           p1             p2          b1 -> 2     b2 -> 3     currFruits = 4     maxFruits = 4          [3,  3,  3,  1,  2,  1,  1,  2,  3,  3,  4]                                          p1  p2          b1 -> 3     b2 -> 4     currFruits = 2     maxFruits = 5          */          int totalFruit(vector<int>& tree) {         int n = tree.size();         if (n < 3) return n;                  int p1 = 0;         int p2 = 0;         int prevStart = 0;         int typeB1 = tree[p1];          int typeB2 = tree[p2];                  int maxFruits = 0;                          for (int i = 1; i < n; i++) {             int currType = tree[i];                          if (currType != typeB1 && typeB1 == typeB2) {                 typeB2 = currType;             }             if (currType == typeB1 || currType == typeB2) {                 p2++;                 if (currType != tree[prevStart]) prevStart = i;             } else {                 maxFruits = max(p2 - p1 + 1, maxFruits);                 p1 = prevStart;                 p2 = i;                 typeB1 = tree[p1];                 typeB2 = currType;                 prevStart = p2;             }         }         maxFruits = max(p2 - p1 + 1, maxFruits);         return maxFruits;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/10/904-fruit-into-baskets.cpp/Solution/totalFruit(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "string reverseOnlyLetters(string S) {         stack<char> rev_chars;         string to_return;         for (int i = 0; i < S.length(); i++) {             if (isalpha(S[i])) {                 rev_chars.push(S[i]);             }         }                  for (int k = 0; k < S.length(); k++) {             if (isalpha(S[k])) {                 to_return.push_back(rev_chars.top());                 rev_chars.pop();             } else {                 to_return.push_back(S[k]);             }         }         return to_return;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_reverseOnlyLetters_string_random_4(void) {\n{\nAKA_test_case_name=\"Solution_reverseOnlyLetters_string_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/917-reverse-only-letters.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName47174 = new char[2];akaRandomName47174[0] = -62;akaRandomName47174[1] = '\\0';string S=akaRandomName47174;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_reverseOnlyLetters_string_random_4\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->reverseOnlyLetters(S);\nAKA_fCall++;AKA_mark(\"Return from: ./10/917-reverse-only-letters.cpp/Solution/reverseOnlyLetters(string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/917-reverse-only-letters.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName253164 = new char[2];akaRandomName253164[0] = -62;akaRandomName253164[1] = '\\0';string S=akaRandomName253164;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_reverseOnlyLetters_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_reverseOnlyLetters_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/917-reverse-only-letters.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName83687 = new char[2];akaRandomName83687[0] = 118;akaRandomName83687[1] = '\\0';string S=akaRandomName83687;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_reverseOnlyLetters_string_random_3\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->reverseOnlyLetters(S);\nAKA_fCall++;AKA_mark(\"Return from: ./10/917-reverse-only-letters.cpp/Solution/reverseOnlyLetters(string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/917-reverse-only-letters.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName81064 = new char[2];akaRandomName81064[0] = 118;akaRandomName81064[1] = '\\0';string S=akaRandomName81064;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     string reverseOnlyLetters(string S) {         stack<char> rev_chars;         string to_return;         for (int i = 0; i < S.length(); i++) {             if (isalpha(S[i])) {                 rev_chars.push(S[i]);             }         }                  for (int k = 0; k < S.length(); k++) {             if (isalpha(S[k])) {                 to_return.push_back(rev_chars.top());                 rev_chars.pop();             } else {                 to_return.push_back(S[k]);             }         }         return to_return;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/10/917-reverse-only-letters.cpp/Solution/reverseOnlyLetters(string)"
+    },
+    {
+        "f": [],
+        "fm": "vector<string> reorderLogFiles(vector<string>& logs) {         vector<string> let_logs;         vector<string> dig_logs;         string id, first_word;         for (string log : logs) {                          stringstream ss(log);             ss >> id;             ss >> first_word;             if (isalpha(first_word[0])) {                 let_logs.push_back(log);             } else {                 dig_logs.push_back(log);             }         }         sort(let_logs.begin(), let_logs.end(), [](const string& a, const string& b) {             string str_a = a.substr(a.find_first_of(\" \") + 1);             string str_b = b.substr(b.find_first_of(\" \") + 1);             if (str_a != str_b) {                 return str_a < str_b;             } else {                 return a < b;             }                      });         let_logs.insert(let_logs.end(), dig_logs.begin(), dig_logs.end());         return let_logs;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_reorderLogFiles_vector_string_random_2(void) {\n{\nAKA_test_case_name=\"Solution_reorderLogFiles_vector_string_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/937-reorder-data-in-log-files.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> logs;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode logs */\nchar* akaRandomName93899 = new char[2];akaRandomName93899[0] = 87;akaRandomName93899[1] = '\\0';string logs_element0=akaRandomName93899;\nlogs.push_back(logs_element0);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_reorderLogFiles_vector_string_random_2\");vector<string> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->reorderLogFiles(logs);\nAKA_fCall++;AKA_mark(\"Return from: ./10/937-reorder-data-in-log-files.cpp/Solution/reorderLogFiles(vector<string>&)\");\n\n\nvector<string> EXPECTED_logs;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/937-reorder-data-in-log-files.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> logs;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode logs */\nchar* akaRandomName904242 = new char[2];akaRandomName904242[0] = 87;akaRandomName904242[1] = '\\0';string logs_element0=akaRandomName904242;\nlogs.push_back(logs_element0);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:      vector<string> reorderLogFiles(vector<string>& logs) {         vector<string> let_logs;         vector<string> dig_logs;         string id, first_word;         for (string log : logs) {                          stringstream ss(log);             ss >> id;             ss >> first_word;             if (isalpha(first_word[0])) {                 let_logs.push_back(log);             } else {                 dig_logs.push_back(log);             }         }         sort(let_logs.begin(), let_logs.end(), [](const string& a, const string& b) {             string str_a = a.substr(a.find_first_of(\" \") + 1);             string str_b = b.substr(b.find_first_of(\" \") + 1);             if (str_a != str_b) {                 return str_a < str_b;             } else {                 return a < b;             }                      });         let_logs.insert(let_logs.end(), dig_logs.begin(), dig_logs.end());         return let_logs;     }                  };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/10/937-reorder-data-in-log-files.cpp/Solution/reorderLogFiles(vector<string>&)"
+    },
+    {
+        "f": [],
+        "fm": "bool isTopRight(Point& other) {             return other.x > x && other.y > y;         }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_isTopRight_Point_random_0(void) {\n{\nAKA_test_case_name=\"isTopRight_Point_random_0\";\n\n// set up\n;\n\n\n/* SubStructDataNode AKA_INSTANCE_Solution__Point */\n/* ConstructorDataNode Point() */\nAKA_mark(\"Calling: ./10/939-minimum-area-rectangle.cpp/Solution/Point/Point()|ROOT/939-minimum-area-rectangle.cpp/GLOBAL/AKA_INSTANCE_Solution__Point/AKA_INSTANCE_Solution__Point/Point()\");AKA_fCall++;AKA_INSTANCE_Solution__Point = new Solution::Point();\n/* NormalNumberDataNode x */\nAKA_INSTANCE_Solution__Point->x=1987726835;\n/* NormalNumberDataNode y */\nAKA_INSTANCE_Solution__Point->y=360815904;\n\n\n\n\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* StructDataNode other */\n/* SubStructDataNode other */\n/* ConstructorDataNode Point(int,int) */\n/* NormalNumberDataNode x_ */\nint other_x_=-1845452129;\n/* NormalNumberDataNode y_ */\nint other_y_=-111205658;\nAKA_mark(\"Calling: ./10/939-minimum-area-rectangle.cpp/Solution/Point/Point(int,int)|ROOT/939-minimum-area-rectangle.cpp/isTopRight(Point&)/other/other/Point(int,int)\");AKA_fCall++;Solution::Point other = Solution::Point(other_x_,other_y_);\n/* NormalNumberDataNode x */\nother.x=1859562654;\n/* NormalNumberDataNode y */\nother.y=744744016;\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test isTopRight_Point_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE_Solution__Point->isTopRight(other);\nAKA_fCall++;AKA_mark(\"Return from: ./10/939-minimum-area-rectangle.cpp/Solution/Point/isTopRight(Point&)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubStructDataNode AKA_INSTANCE_Solution__Point */\n/* ConstructorDataNode Point() */\nAKA_mark(\"Calling: ./10/939-minimum-area-rectangle.cpp/Solution/Point/Point()|ROOT/939-minimum-area-rectangle.cpp/GLOBAL/AKA_INSTANCE_Solution__Point/AKA_INSTANCE_Solution__Point/Point()\");AKA_fCall++;AKA_INSTANCE_Solution__Point = new Solution::Point();\n/* NormalNumberDataNode x */\nAKA_INSTANCE_Solution__Point->x=1987726835;\n/* NormalNumberDataNode y */\nAKA_INSTANCE_Solution__Point->y=360815904;\n\n\n\n\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* StructDataNode other */\n/* SubStructDataNode other */\n/* ConstructorDataNode Point(int,int) */\n/* NormalNumberDataNode x_ */\nint other_x_=-1845452129;\n/* NormalNumberDataNode y_ */\nint other_y_=-111205658;\nAKA_mark(\"Calling: ./10/939-minimum-area-rectangle.cpp/Solution/Point/Point(int,int)|ROOT/939-minimum-area-rectangle.cpp/isTopRight(Point&)/other/other/Point(int,int)\");AKA_fCall++;Solution::Point other = Solution::Point(other_x_,other_y_);\n/* NormalNumberDataNode x */\nother.x=1859562654;\n/* NormalNumberDataNode y */\nother.y=744744016;\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "/mnt/sdb2/LAB/test/10/939-minimum-area-rectangle.cpp/Solution/Point/isTopRight(Point&)"
+    },
+    {
+        "f": [],
+        "fm": "string getName() {             return \"(\" + to_string(x) + \", \" + to_string(y) + \")\";         }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_getName_random_3(void) {\n{\nAKA_test_case_name=\"getName_random_3\";\n\n// set up\n;\n\n\n/* SubStructDataNode AKA_INSTANCE_Solution__Point */\n/* ConstructorDataNode Point(int,int) */\n/* NormalNumberDataNode x_ */\nint AKA_INSTANCE_Solution__Point_x_=686925300;\n/* NormalNumberDataNode y_ */\nint AKA_INSTANCE_Solution__Point_y_=-1222711988;\nAKA_mark(\"Calling: ./10/939-minimum-area-rectangle.cpp/Solution/Point/Point(int,int)|ROOT/939-minimum-area-rectangle.cpp/GLOBAL/AKA_INSTANCE_Solution__Point/AKA_INSTANCE_Solution__Point/Point(int,int)\");AKA_fCall++;AKA_INSTANCE_Solution__Point = new Solution::Point(AKA_INSTANCE_Solution__Point_x_,AKA_INSTANCE_Solution__Point_y_);\n/* NormalNumberDataNode x */\nAKA_INSTANCE_Solution__Point->x=705587048;\n/* NormalNumberDataNode y */\nAKA_INSTANCE_Solution__Point->y=658983164;\n\n\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test getName_random_3\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE_Solution__Point->getName();\nAKA_fCall++;AKA_mark(\"Return from: ./10/939-minimum-area-rectangle.cpp/Solution/Point/getName()\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubStructDataNode AKA_INSTANCE_Solution__Point */\n/* ConstructorDataNode Point(int,int) */\n/* NormalNumberDataNode x_ */\nint AKA_INSTANCE_Solution__Point_x_=686925300;\n/* NormalNumberDataNode y_ */\nint AKA_INSTANCE_Solution__Point_y_=-1222711988;\nAKA_mark(\"Calling: ./10/939-minimum-area-rectangle.cpp/Solution/Point/Point(int,int)|ROOT/939-minimum-area-rectangle.cpp/GLOBAL/AKA_INSTANCE_Solution__Point/AKA_INSTANCE_Solution__Point/Point(int,int)\");AKA_fCall++;AKA_INSTANCE_Solution__Point = new Solution::Point(AKA_INSTANCE_Solution__Point_x_,AKA_INSTANCE_Solution__Point_y_);\n/* NormalNumberDataNode x */\nAKA_INSTANCE_Solution__Point->x=705587048;\n/* NormalNumberDataNode y */\nAKA_INSTANCE_Solution__Point->y=658983164;\n\n\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "/mnt/sdb2/LAB/test/10/939-minimum-area-rectangle.cpp/Solution/Point/getName()"
+    },
+    {
+        "f": [],
+        "fm": "int minAreaRect(vector<vector<int>>& points) {         int minArea = INT_MAX;         unordered_map<string, Point> pointsMap;         for (vector<int>& p : points) {             Point pn(p[0], p[1]);             string name = pn.getName();             pointsMap[name] = pn;         }         for (auto it1 = pointsMap.begin(); it1 != pointsMap.end(); it1++) {             Point currPoint = it1->second;             for (auto it2 = pointsMap.begin(); it2 != pointsMap.end(); it2++) {                 Point candidateDiagonal = it2->second;                 if (currPoint.isTopRight(candidateDiagonal)) {                     int area = areaFormed(currPoint, candidateDiagonal, pointsMap);                     if (area != -1) {                         minArea = min(minArea, area);                     }                 }             }         }         return minArea == INT_MAX ? 0 : minArea;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minAreaRect_vector_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_minAreaRect_vector_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/939-minimum-area-rectangle.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> points;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode points */\nvector<int> points_element0;\nint points_element0_element0=1406740099;\npoints_element0.push_back(points_element0_element0);\npoints.push_back(points_element0);\nvector<int> points_element1;\nint points_element1_element0=899973886;\npoints_element1.push_back(points_element1_element0);\npoints.push_back(points_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minAreaRect_vector_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minAreaRect(points);\nAKA_fCall++;AKA_mark(\"Return from: ./10/939-minimum-area-rectangle.cpp/Solution/minAreaRect(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_points;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/939-minimum-area-rectangle.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> points;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode points */\nvector<int> points_element0;\nint points_element0_element0=1406740099;\npoints_element0.push_back(points_element0_element0);\npoints.push_back(points_element0);\nvector<int> points_element1;\nint points_element1_element0=899973886;\npoints_element1.push_back(points_element1_element0);\npoints.push_back(points_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     struct Point {         int x;         int y;                  Point() {             x = 0;             y = 0;         }                  Point(int x_, int y_) {             x = x_;             y = y_;         }          bool isTopRight(Point& other) {             return other.x > x && other.y > y;         }          string getName() {             return \"(\" + to_string(x) + \", \" + to_string(y) + \")\";         }     };          int areaFormed(Point p1, Point p2, unordered_map<string, Point>& pointsMap) {         Point topLeft(p1.x, p2.y);         Point bottomRight(p2.x, p1.y);         if (pointsMap.find(topLeft.getName()) != pointsMap.end() && pointsMap.find(bottomRight.getName()) != pointsMap.end()) {             return (p2.y - p1.y) * (p2.x - p1.x);         } else {             return -1;         }     }          int minAreaRect(vector<vector<int>>& points) {         int minArea = INT_MAX;         unordered_map<string, Point> pointsMap;         for (vector<int>& p : points) {             Point pn(p[0], p[1]);             string name = pn.getName();             pointsMap[name] = pn;         }         for (auto it1 = pointsMap.begin(); it1 != pointsMap.end(); it1++) {             Point currPoint = it1->second;             for (auto it2 = pointsMap.begin(); it2 != pointsMap.end(); it2++) {                 Point candidateDiagonal = it2->second;                 if (currPoint.isTopRight(candidateDiagonal)) {                     int area = areaFormed(currPoint, candidateDiagonal, pointsMap);                     if (area != -1) {                         minArea = min(minArea, area);                     }                 }             }         }         return minArea == INT_MAX ? 0 : minArea;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/10/939-minimum-area-rectangle.cpp/Solution/minAreaRect(vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "bool inOrder(unordered_map<char, int>& orderMap, vector<string>& words, int i, int j) {         string word1 = words[i];         string word2 = words[j];         int shorterLen = word1.size() < word2.size() ? word1.size() : word2.size();         for (int k = 0; k < shorterLen; k++) {             char c1 = word1[k];             char c2 = word2[k];             if (c1 == c2) {                 continue;             } else if (orderMap[c1] < orderMap[c2]) {                 return true;             } else {                 return false;             }         }         if (shorterLen == word1.size()) {             return true;         }         return false;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_inOrder_unordered_map_char_int_vector_string_int_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_inOrder_unordered_map_char_int_vector_string_int_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/953-verifying-an-alien-dictionary.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nunordered_map<char, int> orderMap;\nvector<string> words;\n\n\nint i=-893149446;\n\n\nint j=1721810690;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* UnorderedMapDataNode orderMap */\n/* VectorDataNode words */\nchar* akaRandomName46178 = new char[2];akaRandomName46178[0] = 21;akaRandomName46178[1] = '\\0';string words_element0=akaRandomName46178;\nwords.push_back(words_element0);\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_inOrder_unordered_map_char_int_vector_string_int_int_random_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->inOrder(orderMap,words,i,j);\nAKA_fCall++;AKA_mark(\"Return from: ./10/953-verifying-an-alien-dictionary.cpp/Solution/inOrder(unordered_map<char,int>&,vector<string>&,int,int)\");\n\n\nunordered_map<char, int> EXPECTED_orderMap;\n\nvector<string> EXPECTED_words;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/953-verifying-an-alien-dictionary.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nunordered_map<char, int> orderMap;\nvector<string> words;\n\n\nint i=-893149446;\n\n\nint j=1721810690;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* UnorderedMapDataNode orderMap */\n/* VectorDataNode words */\nchar* akaRandomName328732 = new char[2];akaRandomName328732[0] = 21;akaRandomName328732[1] = '\\0';string words_element0=akaRandomName328732;\nwords.push_back(words_element0);\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     bool inOrder(unordered_map<char, int>& orderMap, vector<string>& words, int i, int j) {         string word1 = words[i];         string word2 = words[j];         int shorterLen = word1.size() < word2.size() ? word1.size() : word2.size();         for (int k = 0; k < shorterLen; k++) {             char c1 = word1[k];             char c2 = word2[k];             if (c1 == c2) {                 continue;             } else if (orderMap[c1] < orderMap[c2]) {                 return true;             } else {                 return false;             }         }         if (shorterLen == word1.size()) {             return true;         }         return false;     }          bool isAlienSorted(vector<string>& words, string order) {         unordered_map<char, int> orderMap;         for (int i = 0; i < order.size(); i++) {             orderMap[order[i]] = i;         }         for (int i = 1; i < words.size(); i++) {             if (!inOrder(orderMap, words, i - 1, i)) return false;         }         return true;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/10/953-verifying-an-alien-dictionary.cpp/Solution/inOrder(unordered_map<char,int>&,vector<string>&,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "bool isAlienSorted(vector<string>& words, string order) {         unordered_map<char, int> orderMap;         for (int i = 0; i < order.size(); i++) {             orderMap[order[i]] = i;         }         for (int i = 1; i < words.size(); i++) {             if (!inOrder(orderMap, words, i - 1, i)) return false;         }         return true;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isAlienSorted_vector_string_string_random_1(void) {\n{\nAKA_test_case_name=\"Solution_isAlienSorted_vector_string_string_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/953-verifying-an-alien-dictionary.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> words;\nchar* akaRandomName981520 = new char[2];akaRandomName981520[0] = 20;akaRandomName981520[1] = '\\0';string order=akaRandomName981520;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode words */\nchar* akaRandomName554997 = new char[2];akaRandomName554997[0] = 36;akaRandomName554997[1] = '\\0';string words_element0=akaRandomName554997;\nwords.push_back(words_element0);\nchar* akaRandomName685599 = new char[2];akaRandomName685599[0] = -71;akaRandomName685599[1] = '\\0';string words_element1=akaRandomName685599;\nwords.push_back(words_element1);\n/* NormalStringDataNode order */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isAlienSorted_vector_string_string_random_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isAlienSorted(words,order);\nAKA_fCall++;AKA_mark(\"Return from: ./10/953-verifying-an-alien-dictionary.cpp/Solution/isAlienSorted(vector<string>&,string)\");\n\n\nvector<string> EXPECTED_words;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/953-verifying-an-alien-dictionary.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> words;\nchar* akaRandomName720454 = new char[2];akaRandomName720454[0] = 20;akaRandomName720454[1] = '\\0';string order=akaRandomName720454;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode words */\nchar* akaRandomName381871 = new char[2];akaRandomName381871[0] = 36;akaRandomName381871[1] = '\\0';string words_element0=akaRandomName381871;\nwords.push_back(words_element0);\nchar* akaRandomName768601 = new char[2];akaRandomName768601[0] = -71;akaRandomName768601[1] = '\\0';string words_element1=akaRandomName768601;\nwords.push_back(words_element1);\n/* NormalStringDataNode order */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isAlienSorted_vector_string_string_random_2(void) {\n{\nAKA_test_case_name=\"Solution_isAlienSorted_vector_string_string_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/953-verifying-an-alien-dictionary.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> words;\nchar* akaRandomName956988 = new char[2];akaRandomName956988[0] = -70;akaRandomName956988[1] = '\\0';string order=akaRandomName956988;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode words */\nchar* akaRandomName206543 = new char[2];akaRandomName206543[0] = -55;akaRandomName206543[1] = '\\0';string words_element0=akaRandomName206543;\nwords.push_back(words_element0);\n/* NormalStringDataNode order */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isAlienSorted_vector_string_string_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isAlienSorted(words,order);\nAKA_fCall++;AKA_mark(\"Return from: ./10/953-verifying-an-alien-dictionary.cpp/Solution/isAlienSorted(vector<string>&,string)\");\n\n\nvector<string> EXPECTED_words;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/953-verifying-an-alien-dictionary.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> words;\nchar* akaRandomName508073 = new char[2];akaRandomName508073[0] = -70;akaRandomName508073[1] = '\\0';string order=akaRandomName508073;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode words */\nchar* akaRandomName186312 = new char[2];akaRandomName186312[0] = -55;akaRandomName186312[1] = '\\0';string words_element0=akaRandomName186312;\nwords.push_back(words_element0);\n/* NormalStringDataNode order */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     bool inOrder(unordered_map<char, int>& orderMap, vector<string>& words, int i, int j) {         string word1 = words[i];         string word2 = words[j];         int shorterLen = word1.size() < word2.size() ? word1.size() : word2.size();         for (int k = 0; k < shorterLen; k++) {             char c1 = word1[k];             char c2 = word2[k];             if (c1 == c2) {                 continue;             } else if (orderMap[c1] < orderMap[c2]) {                 return true;             } else {                 return false;             }         }         if (shorterLen == word1.size()) {             return true;         }         return false;     }          bool isAlienSorted(vector<string>& words, string order) {         unordered_map<char, int> orderMap;         for (int i = 0; i < order.size(); i++) {             orderMap[order[i]] = i;         }         for (int i = 1; i < words.size(); i++) {             if (!inOrder(orderMap, words, i - 1, i)) return false;         }         return true;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/10/953-verifying-an-alien-dictionary.cpp/Solution/isAlienSorted(vector<string>&,string)"
+    }
+]

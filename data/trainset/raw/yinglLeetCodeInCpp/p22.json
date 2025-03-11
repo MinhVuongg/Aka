@@ -1,0 +1,70 @@
+[
+    {
+        "f": [],
+        "fm": "void generate_permutation(vector<int> &num,\r       int index,\r       vector<int> &permutation,\r       vector<vector<int> > &results) {\r     int size = num.size();\r \r     if (size == index) {\r       results.push_back(permutation);\r     }\r     else {\r       for (int i = index; i < size; ++i) {\r         swap(num[index], num[i]);\r         permutation.push_back(num[index]);\r         generate_permutation(num, index + 1, permutation, results);\r         permutation.pop_back();\r         swap(num[index], num[i]);\r       }\r     }\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_generate_permutation_vector_int_int_vector_int_vector_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_generate_permutation_vector_int_int_vector_int_vector_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint index=1;\nvector<int> permutation;\nvector<vector<int>> results;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-121149232;\nnum.push_back(num_element0);\n/* NormalNumberDataNode index */\n/* VectorDataNode permutation */\nint permutation_element0=47578408;\npermutation.push_back(permutation_element0);\nint permutation_element1=1791942504;\npermutation.push_back(permutation_element1);\n/* VectorDataNode results */\nvector<int> results_element0;\nint results_element0_element0=1156481447;\nresults_element0.push_back(results_element0_element0);\nresults.push_back(results_element0);\nvector<int> results_element1;\nint results_element1_element0=-659614587;\nresults_element1.push_back(results_element1_element0);\nresults.push_back(results_element1);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_generate_permutation_vector_int_int_vector_int_vector_vector_int_random_4\");AKA_INSTANCE___Solution->generate_permutation(num,index,permutation,results);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-17\\\\permutations.cpp\\\\Solution\\\\generate_permutation(vector<int>&,int,vector<int>&,vector<vector<int>>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_num;\n\nvector<int> EXPECTED_permutation;\n\nvector<vector<int>> EXPECTED_results;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint index=1;\nvector<int> permutation;\nvector<vector<int>> results;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-121149232;\nnum.push_back(num_element0);\n/* NormalNumberDataNode index */\n/* VectorDataNode permutation */\nint permutation_element0=47578408;\npermutation.push_back(permutation_element0);\nint permutation_element1=1791942504;\npermutation.push_back(permutation_element1);\n/* VectorDataNode results */\nvector<int> results_element0;\nint results_element0_element0=1156481447;\nresults_element0.push_back(results_element0_element0);\nresults.push_back(results_element0);\nvector<int> results_element1;\nint results_element1_element0=-659614587;\nresults_element1.push_back(results_element1_element0);\nresults.push_back(results_element1);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_generate_permutation_vector_int_int_vector_int_vector_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_generate_permutation_vector_int_int_vector_int_vector_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint index=4;\nvector<int> permutation;\nvector<vector<int>> results;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-1905859078;\nnum.push_back(num_element0);\n/* NormalNumberDataNode index */\n/* VectorDataNode permutation */\nint permutation_element0=1858492657;\npermutation.push_back(permutation_element0);\n/* VectorDataNode results */\nvector<int> results_element0;\nint results_element0_element0=-210548664;\nresults_element0.push_back(results_element0_element0);\nint results_element0_element1=1229257249;\nresults_element0.push_back(results_element0_element1);\nint results_element0_element2=2047615434;\nresults_element0.push_back(results_element0_element2);\nresults.push_back(results_element0);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_generate_permutation_vector_int_int_vector_int_vector_vector_int_random_1\");AKA_INSTANCE___Solution->generate_permutation(num,index,permutation,results);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-17\\\\permutations.cpp\\\\Solution\\\\generate_permutation(vector<int>&,int,vector<int>&,vector<vector<int>>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_num;\n\nvector<int> EXPECTED_permutation;\n\nvector<vector<int>> EXPECTED_results;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint index=4;\nvector<int> permutation;\nvector<vector<int>> results;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-1905859078;\nnum.push_back(num_element0);\n/* NormalNumberDataNode index */\n/* VectorDataNode permutation */\nint permutation_element0=1858492657;\npermutation.push_back(permutation_element0);\n/* VectorDataNode results */\nvector<int> results_element0;\nint results_element0_element0=-210548664;\nresults_element0.push_back(results_element0_element0);\nint results_element0_element1=1229257249;\nresults_element0.push_back(results_element0_element1);\nint results_element0_element2=2047615434;\nresults_element0.push_back(results_element0_element2);\nresults.push_back(results_element0);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   void generate_permutation(vector<int> &num,\r       int index,\r       vector<int> &permutation,\r       vector<vector<int> > &results) {\r     int size = num.size();\r \r     if (size == index) {\r       results.push_back(permutation);\r     }\r     else {\r       for (int i = index; i < size; ++i) {\r         swap(num[index], num[i]);\r         permutation.push_back(num[index]);\r         generate_permutation(num, index + 1, permutation, results);\r         permutation.pop_back();\r         swap(num[index], num[i]);\r       }\r     }\r   }\r \r   vector<vector<int> > permute(vector<int> &num) {\r     vector<vector<int> > results;\r     vector<int> permutation;\r \r     generate_permutation(num, 0, permutation, results);\r \r     return results;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-17\\permutations.cpp\\Solution\\generate_permutation(vector<int>&,int,vector<int>&,vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<vector<int> > permute(vector<int> &num) {\r     vector<vector<int> > results;\r     vector<int> permutation;\r \r     generate_permutation(num, 0, permutation, results);\r \r     return results;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_permute_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_permute_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=977368183;\nnum.push_back(num_element0);\nint num_element1=-1084576926;\nnum.push_back(num_element1);\nint num_element2=133328193;\nnum.push_back(num_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_permute_vector_int_random_3\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->permute(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-17\\\\permutations.cpp\\\\Solution\\\\permute(vector<int>&)\");\n\n\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\permutations.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n\nint index=1;\nvector<int> permutation;\nvector<vector<int>> results;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-121149232;\nnum.push_back(num_element0);\n/* NormalNumberDataNode index */\n/* VectorDataNode permutation */\nint permutation_element0=47578408;\npermutation.push_back(permutation_element0);\nint permutation_element1=1791942504;\npermutation.push_back(permutation_element1);\n/* VectorDataNode results */\nvector<int> results_element0;\nint results_element0_element0=1156481447;\nresults_element0.push_back(results_element0_element0);\nresults.push_back(results_element0);\nvector<int> results_element1;\nint results_element1_element0=-659614587;\nresults_element1.push_back(results_element1_element0);\nresults.push_back(results_element1);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   void generate_permutation(vector<int> &num,\r       int index,\r       vector<int> &permutation,\r       vector<vector<int> > &results) {\r     int size = num.size();\r \r     if (size == index) {\r       results.push_back(permutation);\r     }\r     else {\r       for (int i = index; i < size; ++i) {\r         swap(num[index], num[i]);\r         permutation.push_back(num[index]);\r         generate_permutation(num, index + 1, permutation, results);\r         permutation.pop_back();\r         swap(num[index], num[i]);\r       }\r     }\r   }\r \r   vector<vector<int> > permute(vector<int> &num) {\r     vector<vector<int> > results;\r     vector<int> permutation;\r \r     generate_permutation(num, 0, permutation, results);\r \r     return results;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-17\\permutations.cpp\\Solution\\permute(vector<int>&)"
+    }
+]

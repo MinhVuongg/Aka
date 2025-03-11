@@ -1,0 +1,212 @@
+[
+    {
+        "f": [],
+        "fm": "bool buddyStrings(string A, string B) {\r         if (A.size() != B.size()) return false;\r         if (A.size()<2) return false;\r         \r         bool bRepeat = false;\r         bool map[26] = {false};\r         int idx[2], diffCnt=0;\r         \r         for (int i=0; i<A.size(); i++){\r             if (map[A[i]-'a']) { bRepeat = true;}\r             map[A[i]-'a']=true;\r             if ( A[i] != B[i] ) {\r                 if (diffCnt>=2) return false;\r                 idx[diffCnt++] = i;\r                 \r             }\r         }\r         //if A == B and there has repeated chars , then return true\r         if (diffCnt==0 && bRepeat) return true;\r         \r         return (A[idx[0]] == B[idx[1]] && A[idx[1]] == B[idx[0]]);\r         \r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     bool buddyStrings(string A, string B) {\r         if (A.size() != B.size()) return false;\r         if (A.size()<2) return false;\r         \r         bool bRepeat = false;\r         bool map[26] = {false};\r         int idx[2], diffCnt=0;\r         \r         for (int i=0; i<A.size(); i++){\r             if (map[A[i]-'a']) { bRepeat = true;}\r             map[A[i]-'a']=true;\r             if ( A[i] != B[i] ) {\r                 if (diffCnt>=2) return false;\r                 idx[diffCnt++] = i;\r                 \r             }\r         }\r         //if A == B and there has repeated chars , then return true\r         if (diffCnt==0 && bRepeat) return true;\r         \r         return (A[idx[0]] == B[idx[1]] && A[idx[1]] == B[idx[0]]);\r         \r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\2\\buddyStrings\\BuddyStrings.cpp\\Solution\\buddyStrings(string,string)"
+    },
+    {
+        "f": [],
+        "fm": "int total(long h){\r         return h * (h+1) * (h+2) / 6;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution1 {\r private:\r     int total(long h){\r         return h * (h+1) * (h+2) / 6;\r     }\r public:\r     int minimumBoxes(int n) {\r         //find the maxiumn height which total(height) <= n\r         //binary search\r         int left = 1, right = pow(6l*n, 1.0/3) ;\r         while(left <= right){\r             int mid = left + (right - left) / 2;\r             int t = total(mid);\r             if ( t == n ) return mid*(mid+1l)/2;\r             if ( t < n) left = mid + 1;\r             else right = mid - 1;\r         }\r         int height = right;\r         int remind = n - total(height);\r         int bottom = height * (height+1l)/2 ;\r         //cout << \"n=\" << n << \", height=\" << height << \r         //    \", bottom = \" << bottom << \", remind=\" << remind << endl;\r         \r         //find teh maxium h which sum(1..h) <= remind\r         //binary search\r         left = 1; right = sqrt(2*remind);\r         while ( left <= right) {\r             int mid = left + (right - left)/2;\r             int h = mid*(mid+1)/2;\r             if ( h == remind) return bottom + mid;\r             if ( h < remind) left = mid + 1;\r             else right = mid -1;\r         }\r         //cout << \"left=\" << left << \", right=\" << right << endl;\r         return bottom + left;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\2\\buildingBoxes\\BuildingBoxes.cpp\\Solution1\\total(long)"
+    },
+    {
+        "f": [],
+        "fm": "int minimumBoxes(int n) {\r         //find the maxiumn height which total(height) <= n\r         //binary search\r         int left = 1, right = pow(6l*n, 1.0/3) ;\r         while(left <= right){\r             int mid = left + (right - left) / 2;\r             int t = total(mid);\r             if ( t == n ) return mid*(mid+1l)/2;\r             if ( t < n) left = mid + 1;\r             else right = mid - 1;\r         }\r         int height = right;\r         int remind = n - total(height);\r         int bottom = height * (height+1l)/2 ;\r         //cout << \"n=\" << n << \", height=\" << height << \r         //    \", bottom = \" << bottom << \", remind=\" << remind << endl;\r         \r         //find teh maxium h which sum(1..h) <= remind\r         //binary search\r         left = 1; right = sqrt(2*remind);\r         while ( left <= right) {\r             int mid = left + (right - left)/2;\r             int h = mid*(mid+1)/2;\r             if ( h == remind) return bottom + mid;\r             if ( h < remind) left = mid + 1;\r             else right = mid -1;\r         }\r         //cout << \"left=\" << left << \", right=\" << right << endl;\r         return bottom + left;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution1 {\r private:\r     int total(long h){\r         return h * (h+1) * (h+2) / 6;\r     }\r public:\r     int minimumBoxes(int n) {\r         //find the maxiumn height which total(height) <= n\r         //binary search\r         int left = 1, right = pow(6l*n, 1.0/3) ;\r         while(left <= right){\r             int mid = left + (right - left) / 2;\r             int t = total(mid);\r             if ( t == n ) return mid*(mid+1l)/2;\r             if ( t < n) left = mid + 1;\r             else right = mid - 1;\r         }\r         int height = right;\r         int remind = n - total(height);\r         int bottom = height * (height+1l)/2 ;\r         //cout << \"n=\" << n << \", height=\" << height << \r         //    \", bottom = \" << bottom << \", remind=\" << remind << endl;\r         \r         //find teh maxium h which sum(1..h) <= remind\r         //binary search\r         left = 1; right = sqrt(2*remind);\r         while ( left <= right) {\r             int mid = left + (right - left)/2;\r             int h = mid*(mid+1)/2;\r             if ( h == remind) return bottom + mid;\r             if ( h < remind) left = mid + 1;\r             else right = mid -1;\r         }\r         //cout << \"left=\" << left << \", right=\" << right << endl;\r         return bottom + left;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\2\\buildingBoxes\\BuildingBoxes.cpp\\Solution1\\minimumBoxes(int)"
+    },
+    {
+        "f": [],
+        "fm": "int bulbSwitch(int n) {\r         return (int)sqrt(n);\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int bulbSwitch(int n) {\r         return (int)sqrt(n);\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\2\\bulbSwitcher\\bulbSwitcher.cpp\\Solution\\bulbSwitch(int)"
+    },
+    {
+        "f": [],
+        "fm": "int flipLights(int n, int m) {\r         if (m == 0 || n == 0) return 1;\r         if (n == 1) return 2;\r         if (n == 2) return m == 1? 3:4;\r         if (m == 1) return 4;\r         return m==2 ? 7 :8;\r         \r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int flipLights(int n, int m) {\r         if (m == 0 || n == 0) return 1;\r         if (n == 1) return 2;\r         if (n == 2) return m == 1? 3:4;\r         if (m == 1) return 4;\r         return m==2 ? 7 :8;\r         \r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\2\\bulbSwitcher\\BulbSwitcher.II.cpp\\Solution\\flipLights(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int numTimesAllBlue(vector<int>& light) {\r         int n = light.size();\r         vector<bool> on(n, false);\r         int left = 0; //tracking the most left place that all bubls are truned on.\r         int result = 0;\r         for(int i=0; i<light.size(); i++){\r             on[light[i]-1] = true;\r             while (left < n && on[left]) left++;\r             //if the bulbs are on left is equal to current bulbs we trun on.\r             //then they all are blue.\r             if (left == i+1) result++; \r         }\r         return result;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int numTimesAllBlue(vector<int>& light) {\r         int n = light.size();\r         vector<bool> on(n, false);\r         int left = 0; //tracking the most left place that all bubls are truned on.\r         int result = 0;\r         for(int i=0; i<light.size(); i++){\r             on[light[i]-1] = true;\r             while (left < n && on[left]) left++;\r             //if the bulbs are on left is equal to current bulbs we trun on.\r             //then they all are blue.\r             if (left == i+1) result++; \r         }\r         return result;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\2\\bulbSwitcher\\BulbSwitcher.III.cpp\\Solution\\numTimesAllBlue(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int minFlips(string target) {\r         //flip the target to initalization\r         int flip = 0;\r         for(auto state : target) {\r             if (state == '0' && flip % 2 == 1 ) flip++;\r             if (state == '1' && flip % 2 == 0 ) flip++;\r         }\r         return flip;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int minFlips(string target) {\r         //flip the target to initalization\r         int flip = 0;\r         for(auto state : target) {\r             if (state == '0' && flip % 2 == 1 ) flip++;\r             if (state == '1' && flip % 2 == 0 ) flip++;\r         }\r         return flip;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\2\\bulbSwitcher\\BulbSwitcher.IV.cpp\\Solution\\minFlips(string)"
+    },
+    {
+        "f": [],
+        "fm": "string getHint(string secret, string guess) {\r         return getHint02(secret, guess);\r         return getHint01(secret, guess);\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     string getHint(string secret, string guess) {\r         return getHint02(secret, guess);\r         return getHint01(secret, guess);\r     }\r \r     string getHint01(string secret, string guess) {\r         int appears_in_secret[10] = {0}, appears_in_guess[10] = {0}, bulls[10] = {0};\r         int total_bulls = 0, total_cows = 0;\r         for(int i = 0; i < secret.size(); i++)\r             appears_in_secret[secret[i] - '0']++;\r         for(int i = 0; i < guess.size(); i++)\r         {\r              if(secret[i] == guess[i])\r                  bulls[secret[i] - '0']++;\r              appears_in_guess[guess[i] - '0']++;\r         }\r         for(int i = 0; i <= 9; i++)\r         {\r             total_bulls += bulls[i];\r             total_cows += min(appears_in_secret[i], appears_in_guess[i]) - bulls[i];\r         }\r         return to_string(total_bulls) + \"A\" + to_string(total_cows) + \"B\";\r     }\r \r     // Another implemntation - to save more space\r     string getHint02(string secret, string guess) {\r         \r         const int digital_num = 10;\r         int secret_stat[digital_num]={0};\r         \r         int bull = 0;\r         for(int i=0; i<secret.size(); i++) {\r             //both number & location are matched, count bull\r             if ( secret[i] == guess[i] ) {\r                 bull++;\r                 continue;\r             }\r             //otherwise, count the unmatched digits.\r             secret_stat[secret[i]-'0']++;\r         }\r         \r         int cow = 0;\r         for(int i=0; i<guess.size(); i++) {\r             //deal with duplication - decrease the digits count if cow is found.\r             if ( secret[i] != guess[i] && secret_stat[guess[i]-'0']-- > 0 ) {\r                 cow++;\r             }\r         }\r         \r         return to_string(bull) + \"A\" + to_string(cow) + \"B\";\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\2\\bullsAndCows\\bullsAndCows.cpp\\Solution\\getHint(string,string)"
+    },
+    {
+        "f": [],
+        "fm": "string getHint01(string secret, string guess) {\r         int appears_in_secret[10] = {0}, appears_in_guess[10] = {0}, bulls[10] = {0};\r         int total_bulls = 0, total_cows = 0;\r         for(int i = 0; i < secret.size(); i++)\r             appears_in_secret[secret[i] - '0']++;\r         for(int i = 0; i < guess.size(); i++)\r         {\r              if(secret[i] == guess[i])\r                  bulls[secret[i] - '0']++;\r              appears_in_guess[guess[i] - '0']++;\r         }\r         for(int i = 0; i <= 9; i++)\r         {\r             total_bulls += bulls[i];\r             total_cows += min(appears_in_secret[i], appears_in_guess[i]) - bulls[i];\r         }\r         return to_string(total_bulls) + \"A\" + to_string(total_cows) + \"B\";\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     string getHint(string secret, string guess) {\r         return getHint02(secret, guess);\r         return getHint01(secret, guess);\r     }\r \r     string getHint01(string secret, string guess) {\r         int appears_in_secret[10] = {0}, appears_in_guess[10] = {0}, bulls[10] = {0};\r         int total_bulls = 0, total_cows = 0;\r         for(int i = 0; i < secret.size(); i++)\r             appears_in_secret[secret[i] - '0']++;\r         for(int i = 0; i < guess.size(); i++)\r         {\r              if(secret[i] == guess[i])\r                  bulls[secret[i] - '0']++;\r              appears_in_guess[guess[i] - '0']++;\r         }\r         for(int i = 0; i <= 9; i++)\r         {\r             total_bulls += bulls[i];\r             total_cows += min(appears_in_secret[i], appears_in_guess[i]) - bulls[i];\r         }\r         return to_string(total_bulls) + \"A\" + to_string(total_cows) + \"B\";\r     }\r \r     // Another implemntation - to save more space\r     string getHint02(string secret, string guess) {\r         \r         const int digital_num = 10;\r         int secret_stat[digital_num]={0};\r         \r         int bull = 0;\r         for(int i=0; i<secret.size(); i++) {\r             //both number & location are matched, count bull\r             if ( secret[i] == guess[i] ) {\r                 bull++;\r                 continue;\r             }\r             //otherwise, count the unmatched digits.\r             secret_stat[secret[i]-'0']++;\r         }\r         \r         int cow = 0;\r         for(int i=0; i<guess.size(); i++) {\r             //deal with duplication - decrease the digits count if cow is found.\r             if ( secret[i] != guess[i] && secret_stat[guess[i]-'0']-- > 0 ) {\r                 cow++;\r             }\r         }\r         \r         return to_string(bull) + \"A\" + to_string(cow) + \"B\";\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\2\\bullsAndCows\\bullsAndCows.cpp\\Solution\\getHint01(string,string)"
+    },
+    {
+        "f": [],
+        "fm": "string getHint02(string secret, string guess) {\r         \r         const int digital_num = 10;\r         int secret_stat[digital_num]={0};\r         \r         int bull = 0;\r         for(int i=0; i<secret.size(); i++) {\r             //both number & location are matched, count bull\r             if ( secret[i] == guess[i] ) {\r                 bull++;\r                 continue;\r             }\r             //otherwise, count the unmatched digits.\r             secret_stat[secret[i]-'0']++;\r         }\r         \r         int cow = 0;\r         for(int i=0; i<guess.size(); i++) {\r             //deal with duplication - decrease the digits count if cow is found.\r             if ( secret[i] != guess[i] && secret_stat[guess[i]-'0']-- > 0 ) {\r                 cow++;\r             }\r         }\r         \r         return to_string(bull) + \"A\" + to_string(cow) + \"B\";\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     string getHint(string secret, string guess) {\r         return getHint02(secret, guess);\r         return getHint01(secret, guess);\r     }\r \r     string getHint01(string secret, string guess) {\r         int appears_in_secret[10] = {0}, appears_in_guess[10] = {0}, bulls[10] = {0};\r         int total_bulls = 0, total_cows = 0;\r         for(int i = 0; i < secret.size(); i++)\r             appears_in_secret[secret[i] - '0']++;\r         for(int i = 0; i < guess.size(); i++)\r         {\r              if(secret[i] == guess[i])\r                  bulls[secret[i] - '0']++;\r              appears_in_guess[guess[i] - '0']++;\r         }\r         for(int i = 0; i <= 9; i++)\r         {\r             total_bulls += bulls[i];\r             total_cows += min(appears_in_secret[i], appears_in_guess[i]) - bulls[i];\r         }\r         return to_string(total_bulls) + \"A\" + to_string(total_cows) + \"B\";\r     }\r \r     // Another implemntation - to save more space\r     string getHint02(string secret, string guess) {\r         \r         const int digital_num = 10;\r         int secret_stat[digital_num]={0};\r         \r         int bull = 0;\r         for(int i=0; i<secret.size(); i++) {\r             //both number & location are matched, count bull\r             if ( secret[i] == guess[i] ) {\r                 bull++;\r                 continue;\r             }\r             //otherwise, count the unmatched digits.\r             secret_stat[secret[i]-'0']++;\r         }\r         \r         int cow = 0;\r         for(int i=0; i<guess.size(); i++) {\r             //deal with duplication - decrease the digits count if cow is found.\r             if ( secret[i] != guess[i] && secret_stat[guess[i]-'0']-- > 0 ) {\r                 cow++;\r             }\r         }\r         \r         return to_string(bull) + \"A\" + to_string(cow) + \"B\";\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\2\\bullsAndCows\\bullsAndCows.cpp\\Solution\\getHint02(string,string)"
+    },
+    {
+        "f": [],
+        "fm": "int maxCoins(vector<int>& nums) {\r         //remove all of zero item\r         nums.erase(remove_if(nums.begin(), nums.end(), [](int n){return n==0;}), nums.end());\r         \r         //add 1 for head and tail\r         nums.insert(nums.begin(),1);\r         nums.push_back(1);\r         \r         int n = nums.size();\r         vector< vector<int> > matrix(n, vector<int>(n,0));\r         \r         return maxCoins_DP(nums, matrix);\r         return maxCoins_DC(nums, matrix, 0, n-1);\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int maxCoins(vector<int>& nums) {\r         //remove all of zero item\r         nums.erase(remove_if(nums.begin(), nums.end(), [](int n){return n==0;}), nums.end());\r         \r         //add 1 for head and tail\r         nums.insert(nums.begin(),1);\r         nums.push_back(1);\r         \r         int n = nums.size();\r         vector< vector<int> > matrix(n, vector<int>(n,0));\r         \r         return maxCoins_DP(nums, matrix);\r         return maxCoins_DC(nums, matrix, 0, n-1);\r     }\r     \r     \r     //Divide and Conquer\r     //\r     //  If we seprate the array to two part, left part and right part.\r     //\r     //  Then, we will find in this problem the left and right become adjacent \r     //  and have effects on the maxCoins in the future.\r     //\r     //  So, if we think reversely, if the balloon i is the last balloon of all to burst, \r     //  the left and right section now has well defined boundary and do not affect each other! \r     //  Therefore we can do either recursive method with memoization\r     //\r     int maxCoins_DC(vector<int>& nums, vector<vector<int>>& matrix, int low, int high) {\r         if (low + 1 == high) return 0;\r         if (matrix[low][high] > 0) return matrix[low][high];\r         int result = 0;\r         for (int i = low + 1; i < high; ++i){\r             result = max(result,  nums[low] * nums[i] * nums[high] \r                                     + maxCoins_DC(nums, matrix, low, i) \r                                     + maxCoins_DC(nums, matrix, i, high));\r         }\r         matrix[low][high] = result;\r         return result;\r     }\r     \r     //Dynamic Programming\r     // \r     //  using the same idea of above \r     //\r     int maxCoins_DP(vector<int>& nums, vector<vector<int>>& dp) {\r         int n = nums.size();\r         for (int k = 2; k < n; ++k) {\r             for (int low = 0; low < n - k; low++){\r                 int high = low + k;\r                 for (int i = low + 1; i < high; ++i)\r                     dp[low][high] = max( dp[low][high],\r                          nums[low] * nums[i] * nums[high] + dp[low][i] + dp[i][high]);\r             }\r         }\r         return dp[0][n - 1];\r     }\r     \r private:\r     void printVector(vector<int>& nums) {\r         cout << \"nums: \";\r         for (auto n: nums) {\r             cout << n << ' ';\r         }\r         cout << '\\n';\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\2\\burstBalloons\\BurstBalloons.cpp\\Solution\\maxCoins(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int maxCoins_DC(vector<int>& nums, vector<vector<int>>& matrix, int low, int high) {\r         if (low + 1 == high) return 0;\r         if (matrix[low][high] > 0) return matrix[low][high];\r         int result = 0;\r         for (int i = low + 1; i < high; ++i){\r             result = max(result,  nums[low] * nums[i] * nums[high] \r                                     + maxCoins_DC(nums, matrix, low, i) \r                                     + maxCoins_DC(nums, matrix, i, high));\r         }\r         matrix[low][high] = result;\r         return result;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int maxCoins(vector<int>& nums) {\r         //remove all of zero item\r         nums.erase(remove_if(nums.begin(), nums.end(), [](int n){return n==0;}), nums.end());\r         \r         //add 1 for head and tail\r         nums.insert(nums.begin(),1);\r         nums.push_back(1);\r         \r         int n = nums.size();\r         vector< vector<int> > matrix(n, vector<int>(n,0));\r         \r         return maxCoins_DP(nums, matrix);\r         return maxCoins_DC(nums, matrix, 0, n-1);\r     }\r     \r     \r     //Divide and Conquer\r     //\r     //  If we seprate the array to two part, left part and right part.\r     //\r     //  Then, we will find in this problem the left and right become adjacent \r     //  and have effects on the maxCoins in the future.\r     //\r     //  So, if we think reversely, if the balloon i is the last balloon of all to burst, \r     //  the left and right section now has well defined boundary and do not affect each other! \r     //  Therefore we can do either recursive method with memoization\r     //\r     int maxCoins_DC(vector<int>& nums, vector<vector<int>>& matrix, int low, int high) {\r         if (low + 1 == high) return 0;\r         if (matrix[low][high] > 0) return matrix[low][high];\r         int result = 0;\r         for (int i = low + 1; i < high; ++i){\r             result = max(result,  nums[low] * nums[i] * nums[high] \r                                     + maxCoins_DC(nums, matrix, low, i) \r                                     + maxCoins_DC(nums, matrix, i, high));\r         }\r         matrix[low][high] = result;\r         return result;\r     }\r     \r     //Dynamic Programming\r     // \r     //  using the same idea of above \r     //\r     int maxCoins_DP(vector<int>& nums, vector<vector<int>>& dp) {\r         int n = nums.size();\r         for (int k = 2; k < n; ++k) {\r             for (int low = 0; low < n - k; low++){\r                 int high = low + k;\r                 for (int i = low + 1; i < high; ++i)\r                     dp[low][high] = max( dp[low][high],\r                          nums[low] * nums[i] * nums[high] + dp[low][i] + dp[i][high]);\r             }\r         }\r         return dp[0][n - 1];\r     }\r     \r private:\r     void printVector(vector<int>& nums) {\r         cout << \"nums: \";\r         for (auto n: nums) {\r             cout << n << ' ';\r         }\r         cout << '\\n';\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\2\\burstBalloons\\BurstBalloons.cpp\\Solution\\maxCoins_DC(vector<int>&,vector<vector<int>>&,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int maxCoins_DP(vector<int>& nums, vector<vector<int>>& dp) {\r         int n = nums.size();\r         for (int k = 2; k < n; ++k) {\r             for (int low = 0; low < n - k; low++){\r                 int high = low + k;\r                 for (int i = low + 1; i < high; ++i)\r                     dp[low][high] = max( dp[low][high],\r                          nums[low] * nums[i] * nums[high] + dp[low][i] + dp[i][high]);\r             }\r         }\r         return dp[0][n - 1];\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int maxCoins(vector<int>& nums) {\r         //remove all of zero item\r         nums.erase(remove_if(nums.begin(), nums.end(), [](int n){return n==0;}), nums.end());\r         \r         //add 1 for head and tail\r         nums.insert(nums.begin(),1);\r         nums.push_back(1);\r         \r         int n = nums.size();\r         vector< vector<int> > matrix(n, vector<int>(n,0));\r         \r         return maxCoins_DP(nums, matrix);\r         return maxCoins_DC(nums, matrix, 0, n-1);\r     }\r     \r     \r     //Divide and Conquer\r     //\r     //  If we seprate the array to two part, left part and right part.\r     //\r     //  Then, we will find in this problem the left and right become adjacent \r     //  and have effects on the maxCoins in the future.\r     //\r     //  So, if we think reversely, if the balloon i is the last balloon of all to burst, \r     //  the left and right section now has well defined boundary and do not affect each other! \r     //  Therefore we can do either recursive method with memoization\r     //\r     int maxCoins_DC(vector<int>& nums, vector<vector<int>>& matrix, int low, int high) {\r         if (low + 1 == high) return 0;\r         if (matrix[low][high] > 0) return matrix[low][high];\r         int result = 0;\r         for (int i = low + 1; i < high; ++i){\r             result = max(result,  nums[low] * nums[i] * nums[high] \r                                     + maxCoins_DC(nums, matrix, low, i) \r                                     + maxCoins_DC(nums, matrix, i, high));\r         }\r         matrix[low][high] = result;\r         return result;\r     }\r     \r     //Dynamic Programming\r     // \r     //  using the same idea of above \r     //\r     int maxCoins_DP(vector<int>& nums, vector<vector<int>>& dp) {\r         int n = nums.size();\r         for (int k = 2; k < n; ++k) {\r             for (int low = 0; low < n - k; low++){\r                 int high = low + k;\r                 for (int i = low + 1; i < high; ++i)\r                     dp[low][high] = max( dp[low][high],\r                          nums[low] * nums[i] * nums[high] + dp[low][i] + dp[i][high]);\r             }\r         }\r         return dp[0][n - 1];\r     }\r     \r private:\r     void printVector(vector<int>& nums) {\r         cout << \"nums: \";\r         for (auto n: nums) {\r             cout << n << ' ';\r         }\r         cout << '\\n';\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\2\\burstBalloons\\BurstBalloons.cpp\\Solution\\maxCoins_DP(vector<int>&,vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "void printVector(vector<int>& nums) {\r         cout << \"nums: \";\r         for (auto n: nums) {\r             cout << n << ' ';\r         }\r         cout << '\\n';\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int maxCoins(vector<int>& nums) {\r         //remove all of zero item\r         nums.erase(remove_if(nums.begin(), nums.end(), [](int n){return n==0;}), nums.end());\r         \r         //add 1 for head and tail\r         nums.insert(nums.begin(),1);\r         nums.push_back(1);\r         \r         int n = nums.size();\r         vector< vector<int> > matrix(n, vector<int>(n,0));\r         \r         return maxCoins_DP(nums, matrix);\r         return maxCoins_DC(nums, matrix, 0, n-1);\r     }\r     \r     \r     //Divide and Conquer\r     //\r     //  If we seprate the array to two part, left part and right part.\r     //\r     //  Then, we will find in this problem the left and right become adjacent \r     //  and have effects on the maxCoins in the future.\r     //\r     //  So, if we think reversely, if the balloon i is the last balloon of all to burst, \r     //  the left and right section now has well defined boundary and do not affect each other! \r     //  Therefore we can do either recursive method with memoization\r     //\r     int maxCoins_DC(vector<int>& nums, vector<vector<int>>& matrix, int low, int high) {\r         if (low + 1 == high) return 0;\r         if (matrix[low][high] > 0) return matrix[low][high];\r         int result = 0;\r         for (int i = low + 1; i < high; ++i){\r             result = max(result,  nums[low] * nums[i] * nums[high] \r                                     + maxCoins_DC(nums, matrix, low, i) \r                                     + maxCoins_DC(nums, matrix, i, high));\r         }\r         matrix[low][high] = result;\r         return result;\r     }\r     \r     //Dynamic Programming\r     // \r     //  using the same idea of above \r     //\r     int maxCoins_DP(vector<int>& nums, vector<vector<int>>& dp) {\r         int n = nums.size();\r         for (int k = 2; k < n; ++k) {\r             for (int low = 0; low < n - k; low++){\r                 int high = low + k;\r                 for (int i = low + 1; i < high; ++i)\r                     dp[low][high] = max( dp[low][high],\r                          nums[low] * nums[i] * nums[high] + dp[low][i] + dp[i][high]);\r             }\r         }\r         return dp[0][n - 1];\r     }\r     \r private:\r     void printVector(vector<int>& nums) {\r         cout << \"nums: \";\r         for (auto n: nums) {\r             cout << n << ' ';\r         }\r         cout << '\\n';\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\2\\burstBalloons\\BurstBalloons.cpp\\Solution\\printVector(vector<int>&)"
+    }
+]

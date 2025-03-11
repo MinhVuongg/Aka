@@ -1,0 +1,154 @@
+[
+    {
+        "f": [],
+        "fm": "bool checkValid(vector<vector<int>>& mat) {\r     \r         int n = mat.size();\r         \r         for(int i=0; i<n; i++) {\r             \r             map<int, int> u1, u2;\r             \r             for(int j=0; j<n; j++) {\r                 u1[mat[i][j]]++;\r                 u2[mat[j][i]]++;\r             }\r             \r             for(int k=1; k<=n; k++) {\r                 if(u1[k] == 0 || u2[k] == 0)                          return false;\r             }\r         }\r         \r         return true;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_checkValid_vector_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_checkValid_vector_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2133-check-if-every-row-and-column-contains-all-numbers.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> mat;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode mat */\nvector<int> mat_element0;\nint mat_element0_element0=1483451380;\nmat_element0.push_back(mat_element0_element0);\nint mat_element0_element1=801799800;\nmat_element0.push_back(mat_element0_element1);\nmat.push_back(mat_element0);\nvector<int> mat_element1;\nint mat_element1_element0=1689141391;\nmat_element1.push_back(mat_element1_element0);\nint mat_element1_element1=339498456;\nmat_element1.push_back(mat_element1_element1);\nint mat_element1_element2=79556886;\nmat_element1.push_back(mat_element1_element2);\nmat.push_back(mat_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_checkValid_vector_vector_int_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->checkValid(mat);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p68\\\\2133-check-if-every-row-and-column-contains-all-numbers\\\\2133-check-if-every-row-and-column-contains-all-numbers.cpp\\\\Solution\\\\checkValid(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_mat;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2133-check-if-every-row-and-column-contains-all-numbers.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> mat;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode mat */\nvector<int> mat_element0;\nint mat_element0_element0=1483451380;\nmat_element0.push_back(mat_element0_element0);\nint mat_element0_element1=801799800;\nmat_element0.push_back(mat_element0_element1);\nmat.push_back(mat_element0);\nvector<int> mat_element1;\nint mat_element1_element0=1689141391;\nmat_element1.push_back(mat_element1_element0);\nint mat_element1_element1=339498456;\nmat_element1.push_back(mat_element1_element1);\nint mat_element1_element2=79556886;\nmat_element1.push_back(mat_element1_element2);\nmat.push_back(mat_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     bool checkValid(vector<vector<int>>& mat) {\r     \r         int n = mat.size();\r         \r         for(int i=0; i<n; i++) {\r             \r             map<int, int> u1, u2;\r             \r             for(int j=0; j<n; j++) {\r                 u1[mat[i][j]]++;\r                 u2[mat[j][i]]++;\r             }\r             \r             for(int k=1; k<=n; k++) {\r                 if(u1[k] == 0 || u2[k] == 0)                          return false;\r             }\r         }\r         \r         return true;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p68\\2133-check-if-every-row-and-column-contains-all-numbers\\2133-check-if-every-row-and-column-contains-all-numbers.cpp\\Solution\\checkValid(vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<string> divideString(string s, int k, char fill) {\r         \r         vector<string> res;\r         int n = s.length();\r         \r         for(int i=0; i<n; i += k) {\r             \r             if(i + k - 1 < n)                           res.push_back(s.substr(i, k));\r            \r             else {\r                 \r                 int len = (n - 1) - i + 1;\r                 string temp = s.substr(i, len);\r                 \r                 int rem = k - len;\r                 while(rem--)                        temp += fill;\r                 \r                 res.push_back(temp);\r             }\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_divideString_string_int_char_random_0(void) {\n{\nAKA_test_case_name=\"Solution_divideString_string_int_char_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2138-divide-a-string-into-groups-of-size-k.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName816746 = new char[2];akaRandomName816746[0] = 12;akaRandomName816746[1] = '\\0';string s=akaRandomName816746;\n\n\nint k=2000947185;\n\nchar fill=-14;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode k */\n/* NormalCharacterDataNode fill */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_divideString_string_int_char_random_0\");vector<string> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->divideString(s,k,fill);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p68\\\\2138-divide-a-string-into-groups-of-size-k\\\\2138-divide-a-string-into-groups-of-size-k.cpp\\\\Solution\\\\divideString(string,int,char)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2133-check-if-every-row-and-column-contains-all-numbers.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> mat;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode mat */\nvector<int> mat_element0;\nint mat_element0_element0=1483451380;\nmat_element0.push_back(mat_element0_element0);\nint mat_element0_element1=801799800;\nmat_element0.push_back(mat_element0_element1);\nmat.push_back(mat_element0);\nvector<int> mat_element1;\nint mat_element1_element0=1689141391;\nmat_element1.push_back(mat_element1_element0);\nint mat_element1_element1=339498456;\nmat_element1.push_back(mat_element1_element1);\nint mat_element1_element2=79556886;\nmat_element1.push_back(mat_element1_element2);\nmat.push_back(mat_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r    \r     vector<string> divideString(string s, int k, char fill) {\r         \r         vector<string> res;\r         int n = s.length();\r         \r         for(int i=0; i<n; i += k) {\r             \r             if(i + k - 1 < n)                           res.push_back(s.substr(i, k));\r            \r             else {\r                 \r                 int len = (n - 1) - i + 1;\r                 string temp = s.substr(i, len);\r                 \r                 int rem = k - len;\r                 while(rem--)                        temp += fill;\r                 \r                 res.push_back(temp);\r             }\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p68\\2138-divide-a-string-into-groups-of-size-k\\2138-divide-a-string-into-groups-of-size-k.cpp\\Solution\\divideString(string,int,char)"
+    },
+    {
+        "f": [],
+        "fm": "int minimumCost(vector<int>& cost) {\r     \r         int res = 0;\r         int n = cost.size();\r         \r         sort(cost.begin(), cost.end());\r         \r         for(int i=n-1; i>=0; ) {\r             \r             // Add the cost[i], and cost[i-1], and give the cost[i-2] for free\r             res += cost[i];\r             \r             i--;\r             \r             if(i >= 0)                              res += cost[i];\r             \r             i--;\r             \r             // Give 3rd candy for free\r             if(i >= 0)                              i--;\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minimumCost_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_minimumCost_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2144-minimum-cost-of-buying-candies-with-discount.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> cost;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode cost */\nint cost_element0=1877697064;\ncost.push_back(cost_element0);\nint cost_element1=1701399199;\ncost.push_back(cost_element1);\nint cost_element2=1953980604;\ncost.push_back(cost_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minimumCost_vector_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minimumCost(cost);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p68\\\\2144-minimum-cost-of-buying-candies-with-discount\\\\2144-minimum-cost-of-buying-candies-with-discount.cpp\\\\Solution\\\\minimumCost(vector<int>&)\");\n\n\nvector<int> EXPECTED_cost;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2133-check-if-every-row-and-column-contains-all-numbers.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> mat;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode mat */\nvector<int> mat_element0;\nint mat_element0_element0=1483451380;\nmat_element0.push_back(mat_element0_element0);\nint mat_element0_element1=801799800;\nmat_element0.push_back(mat_element0_element1);\nmat.push_back(mat_element0);\nvector<int> mat_element1;\nint mat_element1_element0=1689141391;\nmat_element1.push_back(mat_element1_element0);\nint mat_element1_element1=339498456;\nmat_element1.push_back(mat_element1_element1);\nint mat_element1_element2=79556886;\nmat_element1.push_back(mat_element1_element2);\nmat.push_back(mat_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minimumCost_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_minimumCost_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2144-minimum-cost-of-buying-candies-with-discount.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> cost;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode cost */\nint cost_element0=-2086109250;\ncost.push_back(cost_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minimumCost_vector_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minimumCost(cost);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p68\\\\2144-minimum-cost-of-buying-candies-with-discount\\\\2144-minimum-cost-of-buying-candies-with-discount.cpp\\\\Solution\\\\minimumCost(vector<int>&)\");\n\n\nvector<int> EXPECTED_cost;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2138-divide-a-string-into-groups-of-size-k.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName745479 = new char[2];akaRandomName745479[0] = 12;akaRandomName745479[1] = '\\0';string s=akaRandomName745479;\n\n\nint k=2000947185;\n\nchar fill=-14;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode k */\n/* NormalCharacterDataNode fill */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int minimumCost(vector<int>& cost) {\r     \r         int res = 0;\r         int n = cost.size();\r         \r         sort(cost.begin(), cost.end());\r         \r         for(int i=n-1; i>=0; ) {\r             \r             // Add the cost[i], and cost[i-1], and give the cost[i-2] for free\r             res += cost[i];\r             \r             i--;\r             \r             if(i >= 0)                              res += cost[i];\r             \r             i--;\r             \r             // Give 3rd candy for free\r             if(i >= 0)                              i--;\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p68\\2144-minimum-cost-of-buying-candies-with-discount\\2144-minimum-cost-of-buying-candies-with-discount.cpp\\Solution\\minimumCost(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int countElements(vector<int>& nums) {\r     \r         int res = 0;\r         \r         int n = nums.size();\r         sort(nums.begin(), nums.end());\r         \r         for(int i=1; i<n-1; i++) {\r             if(nums[0] < nums[i] && nums[i] < nums[n-1])                res++;\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countElements_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_countElements_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2148-count-elements-with-strictly-smaller-and-greater-elements.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=374509172;\nnums.push_back(nums_element0);\nint nums_element1=189297045;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countElements_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countElements(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p68\\\\2148-count-elements-with-strictly-smaller-and-greater-elements\\\\2148-count-elements-with-strictly-smaller-and-greater-elements.cpp\\\\Solution\\\\countElements(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2133-check-if-every-row-and-column-contains-all-numbers.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> mat;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode mat */\nvector<int> mat_element0;\nint mat_element0_element0=1483451380;\nmat_element0.push_back(mat_element0_element0);\nint mat_element0_element1=801799800;\nmat_element0.push_back(mat_element0_element1);\nmat.push_back(mat_element0);\nvector<int> mat_element1;\nint mat_element1_element0=1689141391;\nmat_element1.push_back(mat_element1_element0);\nint mat_element1_element1=339498456;\nmat_element1.push_back(mat_element1_element1);\nint mat_element1_element2=79556886;\nmat_element1.push_back(mat_element1_element2);\nmat.push_back(mat_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int countElements(vector<int>& nums) {\r     \r         int res = 0;\r         \r         int n = nums.size();\r         sort(nums.begin(), nums.end());\r         \r         for(int i=1; i<n-1; i++) {\r             if(nums[0] < nums[i] && nums[i] < nums[n-1])                res++;\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p68\\2148-count-elements-with-strictly-smaller-and-greater-elements\\2148-count-elements-with-strictly-smaller-and-greater-elements.cpp\\Solution\\countElements(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> rearrangeArray(vector<int>& a) {\r     \r         vector<int> res;\r         \r         int n = a.size();\r         res.resize(n);\r         \r         int i = 0;\r         \r         for(auto &x : a) {\r             if(x > 0) {\r                 res[i] = x;                \r                 i += 2;\r             }   \r         }\r         \r         i = 1;\r         \r         for(auto &x : a) {\r             if(x < 0) {\r                 res[i] = x;\r                 i += 2;\r             }\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_rearrangeArray_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_rearrangeArray_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2149-rearrange-array-elements-by-sign.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=1996221283;\na.push_back(a_element0);\nint a_element1=-620439541;\na.push_back(a_element1);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_rearrangeArray_vector_int_random_3\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->rearrangeArray(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p68\\\\2149-rearrange-array-elements-by-sign\\\\2149-rearrange-array-elements-by-sign.cpp\\\\Solution\\\\rearrangeArray(vector<int>&)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2133-check-if-every-row-and-column-contains-all-numbers.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> mat;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode mat */\nvector<int> mat_element0;\nint mat_element0_element0=1483451380;\nmat_element0.push_back(mat_element0_element0);\nint mat_element0_element1=801799800;\nmat_element0.push_back(mat_element0_element1);\nmat.push_back(mat_element0);\nvector<int> mat_element1;\nint mat_element1_element0=1689141391;\nmat_element1.push_back(mat_element1_element0);\nint mat_element1_element1=339498456;\nmat_element1.push_back(mat_element1_element1);\nint mat_element1_element2=79556886;\nmat_element1.push_back(mat_element1_element2);\nmat.push_back(mat_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     vector<int> rearrangeArray(vector<int>& a) {\r     \r         vector<int> res;\r         \r         int n = a.size();\r         res.resize(n);\r         \r         int i = 0;\r         \r         for(auto &x : a) {\r             if(x > 0) {\r                 res[i] = x;                \r                 i += 2;\r             }   \r         }\r         \r         i = 1;\r         \r         for(auto &x : a) {\r             if(x < 0) {\r                 res[i] = x;\r                 i += 2;\r             }\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p68\\2149-rearrange-array-elements-by-sign\\2149-rearrange-array-elements-by-sign.cpp\\Solution\\rearrangeArray(vector<int>&)"
+    }
+]

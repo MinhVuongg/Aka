@@ -1,0 +1,453 @@
+[
+    {
+        "f": [],
+        "fm": "void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {         int index = m + n - 1;         int aindex = m - 1;         int bindex = n - 1;         while(aindex >= 0 && bindex >= 0) {             if(nums1[aindex] > nums2[bindex]) {                 nums1[index--] = nums1[aindex--];             } else {                 nums1[index--] = nums2[bindex--];             }         }         while(bindex >= 0) {             nums1[index--] = nums2[bindex--];         }     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_merge_vector_int_int_vector_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_merge_vector_int_int_vector_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/088. Merge Sorted Array .cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums1;\n\n\nint m=7;\nvector<int> nums2;\n\n\nint n=4;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums1 */\nint nums1_element0=168786319;\nnums1.push_back(nums1_element0);\n/* NormalNumberDataNode m */\n/* VectorDataNode nums2 */\nint nums2_element0=984614929;\nnums2.push_back(nums2_element0);\nint nums2_element1=-2135737124;\nnums2.push_back(nums2_element1);\n/* NormalNumberDataNode n */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_merge_vector_int_int_vector_int_int_random_0\");AKA_INSTANCE___Solution->merge(nums1,m,nums2,n);\nAKA_fCall++;AKA_mark(\"Return from: ./33/088. Merge Sorted Array .cpp/Solution/merge(vector<int>&,int,vector<int>&,int)\");\n\n/* error assertion */\nvector<int> EXPECTED_nums1;\n\nvector<int> EXPECTED_nums2;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/088. Merge Sorted Array .cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums1;\n\n\nint m=7;\nvector<int> nums2;\n\n\nint n=4;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums1 */\nint nums1_element0=168786319;\nnums1.push_back(nums1_element0);\n/* NormalNumberDataNode m */\n/* VectorDataNode nums2 */\nint nums2_element0=984614929;\nnums2.push_back(nums2_element0);\nint nums2_element1=-2135737124;\nnums2.push_back(nums2_element1);\n/* NormalNumberDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {         int index = m + n - 1;         int aindex = m - 1;         int bindex = n - 1;         while(aindex >= 0 && bindex >= 0) {             if(nums1[aindex] > nums2[bindex]) {                 nums1[index--] = nums1[aindex--];             } else {                 nums1[index--] = nums2[bindex--];             }         }         while(bindex >= 0) {             nums1[index--] = nums2[bindex--];         }     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/33/088. Merge Sorted Array .cpp/Solution/merge(vector<int>&,int,vector<int>&,int)"
+    },
+    {
+        "f": [],
+        "fm": "int countPrimes(int n) {         int *book = new int [n];         for(int i = 2; i < n; i++) {             book[i] = 1;         }         for(int i = 2; i * i < n; i++) {             if(book[i] == 0)                 continue;             for(int j = i * i; j < n; j = j + i) {                 if(j % i == 0)                     book[j] = 0;             }         }         int cnt = 0;         for(int i = 2; i < n; i++) {             if(book[i] == 1)                 cnt++;         }         return cnt;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countPrimes_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_countPrimes_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/204. Count Primes.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=9;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countPrimes_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countPrimes(n);\nAKA_fCall++;AKA_mark(\"Return from: ./33/204. Count Primes.cpp/Solution/countPrimes(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/204. Count Primes.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=9;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countPrimes_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_countPrimes_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/204. Count Primes.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=6;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countPrimes_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countPrimes(n);\nAKA_fCall++;AKA_mark(\"Return from: ./33/204. Count Primes.cpp/Solution/countPrimes(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/204. Count Primes.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=6;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int countPrimes(int n) {         int *book = new int [n];         for(int i = 2; i < n; i++) {             book[i] = 1;         }         for(int i = 2; i * i < n; i++) {             if(book[i] == 0)                 continue;             for(int j = i * i; j < n; j = j + i) {                 if(j % i == 0)                     book[j] = 0;             }         }         int cnt = 0;         for(int i = 2; i < n; i++) {             if(book[i] == 1)                 cnt++;         }         return cnt;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/33/204. Count Primes.cpp/Solution/countPrimes(int)"
+    },
+    {
+        "f": [],
+        "fm": "bool isIsomorphic(string s, string t) {         int len = s.length();         int lent = t.length();         if(len != lent)             return false;         map<char, char> stot;         map<char, char> ttos;         for(int i = 0; i < len; i++) {             if(stot.find(s[i]) != stot.end() && stot[s[i]] != t[i]              || ttos.find(t[i]) != ttos.end() && ttos[t[i]] != s[i])                 return false;             stot[s[i]] = t[i];             ttos[t[i]] = s[i];         }         return true;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isIsomorphic_string_string_random_2(void) {\n{\nAKA_test_case_name=\"Solution_isIsomorphic_string_string_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/205. Isomorphic Strings.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName775933 = new char[2];akaRandomName775933[0] = 107;akaRandomName775933[1] = '\\0';string s=akaRandomName775933;\nchar* akaRandomName411077 = new char[2];akaRandomName411077[0] = -79;akaRandomName411077[1] = '\\0';string t=akaRandomName411077;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode t */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isIsomorphic_string_string_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isIsomorphic(s,t);\nAKA_fCall++;AKA_mark(\"Return from: ./33/205. Isomorphic Strings.cpp/Solution/isIsomorphic(string,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/205. Isomorphic Strings.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName176046 = new char[2];akaRandomName176046[0] = 107;akaRandomName176046[1] = '\\0';string s=akaRandomName176046;\nchar* akaRandomName869414 = new char[2];akaRandomName869414[0] = -79;akaRandomName869414[1] = '\\0';string t=akaRandomName869414;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode t */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     bool isIsomorphic(string s, string t) {         int len = s.length();         int lent = t.length();         if(len != lent)             return false;         map<char, char> stot;         map<char, char> ttos;         for(int i = 0; i < len; i++) {             if(stot.find(s[i]) != stot.end() && stot[s[i]] != t[i]              || ttos.find(t[i]) != ttos.end() && ttos[t[i]] != s[i])                 return false;             stot[s[i]] = t[i];             ttos[t[i]] = s[i];         }         return true;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/33/205. Isomorphic Strings.cpp/Solution/isIsomorphic(string,string)"
+    },
+    {
+        "f": [],
+        "fm": "int minSubArrayLen(int s, vector<int>& nums) {         int len = nums.size();         int minlen = len + 1;         vector<int> sum(len + 1);         for(int i = 1; i <= len; i++) {             sum[i] = sum[i-1] + nums[i-1];         }         for(int i = 0; i <= len; i++) {             for(int j = i + 1; j <= len; j++) {                 if(sum[j] - sum[i] >= s) {                     minlen = min(minlen, j - i);                     break;                 }             }         }         if(minlen == len + 1)             return 0;         return minlen;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minSubArrayLen_int_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_minSubArrayLen_int_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/209. Minimum Size Subarray Sum.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint s=-1016524827;\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode s */\n/* VectorDataNode nums */\nint nums_element0=-2030971913;\nnums.push_back(nums_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minSubArrayLen_int_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minSubArrayLen(s,nums);\nAKA_fCall++;AKA_mark(\"Return from: ./33/209. Minimum Size Subarray Sum.cpp/Solution/minSubArrayLen(int,vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/209. Minimum Size Subarray Sum.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint s=-1016524827;\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode s */\n/* VectorDataNode nums */\nint nums_element0=-2030971913;\nnums.push_back(nums_element0);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minSubArrayLen_int_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_minSubArrayLen_int_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/209. Minimum Size Subarray Sum.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint s=934639282;\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode s */\n/* VectorDataNode nums */\nint nums_element0=737212950;\nnums.push_back(nums_element0);\nint nums_element1=982427206;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minSubArrayLen_int_vector_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minSubArrayLen(s,nums);\nAKA_fCall++;AKA_mark(\"Return from: ./33/209. Minimum Size Subarray Sum.cpp/Solution/minSubArrayLen(int,vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/209. Minimum Size Subarray Sum.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint s=934639282;\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode s */\n/* VectorDataNode nums */\nint nums_element0=737212950;\nnums.push_back(nums_element0);\nint nums_element1=982427206;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minSubArrayLen_int_vector_int_random_6(void) {\n{\nAKA_test_case_name=\"Solution_minSubArrayLen_int_vector_int_random_6\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/209. Minimum Size Subarray Sum.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint s=189489755;\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode s */\n/* VectorDataNode nums */\nint nums_element0=726135388;\nnums.push_back(nums_element0);\nint nums_element1=-802822473;\nnums.push_back(nums_element1);\nint nums_element2=1919553702;\nnums.push_back(nums_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minSubArrayLen_int_vector_int_random_6\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minSubArrayLen(s,nums);\nAKA_fCall++;AKA_mark(\"Return from: ./33/209. Minimum Size Subarray Sum.cpp/Solution/minSubArrayLen(int,vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/209. Minimum Size Subarray Sum.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint s=189489755;\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode s */\n/* VectorDataNode nums */\nint nums_element0=726135388;\nnums.push_back(nums_element0);\nint nums_element1=-802822473;\nnums.push_back(nums_element1);\nint nums_element2=1919553702;\nnums.push_back(nums_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minSubArrayLen_int_vector_int_random_8(void) {\n{\nAKA_test_case_name=\"Solution_minSubArrayLen_int_vector_int_random_8\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/209. Minimum Size Subarray Sum.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint s=-765549756;\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode s */\n/* VectorDataNode nums */\nint nums_element0=-1432695523;\nnums.push_back(nums_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minSubArrayLen_int_vector_int_random_8\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minSubArrayLen(s,nums);\nAKA_fCall++;AKA_mark(\"Return from: ./33/209. Minimum Size Subarray Sum.cpp/Solution/minSubArrayLen(int,vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/209. Minimum Size Subarray Sum.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint s=-765549756;\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode s */\n/* VectorDataNode nums */\nint nums_element0=-1432695523;\nnums.push_back(nums_element0);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int minSubArrayLen(int s, vector<int>& nums) {         int len = nums.size();         int minlen = len + 1;         vector<int> sum(len + 1);         for(int i = 1; i <= len; i++) {             sum[i] = sum[i-1] + nums[i-1];         }         for(int i = 0; i <= len; i++) {             for(int j = i + 1; j <= len; j++) {                 if(sum[j] - sum[i] >= s) {                     minlen = min(minlen, j - i);                     break;                 }             }         }         if(minlen == len + 1)             return 0;         return minlen;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/33/209. Minimum Size Subarray Sum.cpp/Solution/minSubArrayLen(int,vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int rob(vector<int>& nums) {         int n = nums.size();         if(n == 0)             return 0;         if(n == 1)             return nums[0];         if(n == 2)             return max(nums[0], nums[1]);         return max(func(nums, 0, n-2), func(nums, 1, n-1));     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_rob_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_rob_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/213. House Robber II.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=849650437;\nnums.push_back(nums_element0);\nint nums_element1=298037048;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_rob_vector_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->rob(nums);\nAKA_fCall++;AKA_mark(\"Return from: ./33/213. House Robber II.cpp/Solution/rob(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/213. House Robber II.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=849650437;\nnums.push_back(nums_element0);\nint nums_element1=298037048;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_rob_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_rob_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/213. House Robber II.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-1824047491;\nnums.push_back(nums_element0);\nint nums_element1=-2006680681;\nnums.push_back(nums_element1);\nint nums_element2=-561243610;\nnums.push_back(nums_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_rob_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->rob(nums);\nAKA_fCall++;AKA_mark(\"Return from: ./33/213. House Robber II.cpp/Solution/rob(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/213. House Robber II.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-1824047491;\nnums.push_back(nums_element0);\nint nums_element1=-2006680681;\nnums.push_back(nums_element1);\nint nums_element2=-561243610;\nnums.push_back(nums_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_rob_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_rob_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/213. House Robber II.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-1035119085;\nnums.push_back(nums_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_rob_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->rob(nums);\nAKA_fCall++;AKA_mark(\"Return from: ./33/213. House Robber II.cpp/Solution/rob(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/213. House Robber II.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-1035119085;\nnums.push_back(nums_element0);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int rob(vector<int>& nums) {         int n = nums.size();         if(n == 0)             return 0;         if(n == 1)             return nums[0];         if(n == 2)             return max(nums[0], nums[1]);         return max(func(nums, 0, n-2), func(nums, 1, n-1));     }     int func(vector<int>& nums, int begin, int end) {         int n = end - begin + 1;         vector<int> dp(n);         dp[0] = nums[begin];         dp[1] = max(nums[begin], nums[begin+1]);         for(int i = 2; i < n; i++) {             int temp = dp[i - 2] + nums[begin+i];             dp[i] = max(temp, dp[i-1]);         }         return dp[n - 1];     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/33/213. House Robber II.cpp/Solution/rob(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int func(vector<int>& nums, int begin, int end) {         int n = end - begin + 1;         vector<int> dp(n);         dp[0] = nums[begin];         dp[1] = max(nums[begin], nums[begin+1]);         for(int i = 2; i < n; i++) {             int temp = dp[i - 2] + nums[begin+i];             dp[i] = max(temp, dp[i-1]);         }         return dp[n - 1];     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_func_vector_int_int_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_func_vector_int_int_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/213. House Robber II.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint begin=3;\n\n\nint end=7;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-1270553144;\nnums.push_back(nums_element0);\nint nums_element1=-1211281894;\nnums.push_back(nums_element1);\nint nums_element2=207448812;\nnums.push_back(nums_element2);\n/* NormalNumberDataNode begin */\n/* NormalNumberDataNode end */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_func_vector_int_int_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->func(nums,begin,end);\nAKA_fCall++;AKA_mark(\"Return from: ./33/213. House Robber II.cpp/Solution/func(vector<int>&,int,int)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/213. House Robber II.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint begin=3;\n\n\nint end=7;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-1270553144;\nnums.push_back(nums_element0);\nint nums_element1=-1211281894;\nnums.push_back(nums_element1);\nint nums_element2=207448812;\nnums.push_back(nums_element2);\n/* NormalNumberDataNode begin */\n/* NormalNumberDataNode end */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int rob(vector<int>& nums) {         int n = nums.size();         if(n == 0)             return 0;         if(n == 1)             return nums[0];         if(n == 2)             return max(nums[0], nums[1]);         return max(func(nums, 0, n-2), func(nums, 1, n-1));     }     int func(vector<int>& nums, int begin, int end) {         int n = end - begin + 1;         vector<int> dp(n);         dp[0] = nums[begin];         dp[1] = max(nums[begin], nums[begin+1]);         for(int i = 2; i < n; i++) {             int temp = dp[i - 2] + nums[begin+i];             dp[i] = max(temp, dp[i-1]);         }         return dp[n - 1];     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/33/213. House Robber II.cpp/Solution/func(vector<int>&,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int findKthLargest(vector<int>& nums, int k) {         multiset<int> s;         for(int i = 0; i < nums.size(); i++) {             s.insert(nums[i]);             if(s.size() > k)                 s.erase(s.begin());         }         return *s.begin();     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findKthLargest_vector_int_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_findKthLargest_vector_int_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/215. Kth Largest Element in an Array.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint k=1148804423;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=29272124;\nnums.push_back(nums_element0);\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findKthLargest_vector_int_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findKthLargest(nums,k);\nAKA_fCall++;AKA_mark(\"Return from: ./33/215. Kth Largest Element in an Array.cpp/Solution/findKthLargest(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/215. Kth Largest Element in an Array.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint k=1148804423;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=29272124;\nnums.push_back(nums_element0);\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int findKthLargest(vector<int>& nums, int k) {         multiset<int> s;         for(int i = 0; i < nums.size(); i++) {             s.insert(nums[i]);             if(s.size() > k)                 s.erase(s.begin());         }         return *s.begin();     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/33/215. Kth Largest Element in an Array.cpp/Solution/findKthLargest(vector<int>&,int)"
+    },
+    {
+        "f": [
+            "vector<vector<int>> result;",
+            "vector<int> path;"
+        ],
+        "fm": "vector<vector<int>> combinationSum3(int k, int n) {         dfs(k, n, 1);         return result;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_combinationSum3_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_combinationSum3_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/216. Combination Sum III.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* VectorDataNode result */\nvector<int> AKA_INSTANCE___Solution_result_element0;\nint AKA_INSTANCE___Solution_result_element0_element0=-1299925734;\nAKA_INSTANCE___Solution_result_element0.push_back(AKA_INSTANCE___Solution_result_element0_element0);\nint AKA_INSTANCE___Solution_result_element0_element1=-1547218161;\nAKA_INSTANCE___Solution_result_element0.push_back(AKA_INSTANCE___Solution_result_element0_element1);\nAKA_INSTANCE___Solution->result.push_back(AKA_INSTANCE___Solution_result_element0);\n/* VectorDataNode path */\n\n\n\n\nint k=-403671014;\n\n\nint n=734281964;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_combinationSum3_int_int_random_0\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->combinationSum3(k,n);\nAKA_fCall++;AKA_mark(\"Return from: ./33/216. Combination Sum III.cpp/Solution/combinationSum3(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/216. Combination Sum III.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* VectorDataNode result */\nvector<int> AKA_INSTANCE___Solution_result_element0;\nint AKA_INSTANCE___Solution_result_element0_element0=-1299925734;\nAKA_INSTANCE___Solution_result_element0.push_back(AKA_INSTANCE___Solution_result_element0_element0);\nint AKA_INSTANCE___Solution_result_element0_element1=-1547218161;\nAKA_INSTANCE___Solution_result_element0.push_back(AKA_INSTANCE___Solution_result_element0_element1);\nAKA_INSTANCE___Solution->result.push_back(AKA_INSTANCE___Solution_result_element0);\n/* VectorDataNode path */\n\n\n\n\nint k=-403671014;\n\n\nint n=734281964;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     vector<vector<int>> result;     vector<int> path;     vector<vector<int>> combinationSum3(int k, int n) {         dfs(k, n, 1);         return result;     }          void dfs(int k, int n, int start) {         if(k == 0) {             if(n == 0)                 result.push_back(path);             return ;         }         for(int i = start; i <= 9; i++) {             path.push_back(i);             dfs(k - 1, n - i, i + 1);             path.pop_back();         }     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/33/216. Combination Sum III.cpp/Solution/combinationSum3(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "bool containsDuplicate(vector<int>& nums) {         set<int> m;         for(int i = 0; i < nums.size(); i++) {             m.insert(nums[i]);         }         return nums.size() != m.size();     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_containsDuplicate_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_containsDuplicate_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/217. Contains Duplicate .cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1687095335;\nnums.push_back(nums_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_containsDuplicate_vector_int_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->containsDuplicate(nums);\nAKA_fCall++;AKA_mark(\"Return from: ./33/217. Contains Duplicate .cpp/Solution/containsDuplicate(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/217. Contains Duplicate .cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1687095335;\nnums.push_back(nums_element0);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     bool containsDuplicate(vector<int>& nums) {         set<int> m;         for(int i = 0; i < nums.size(); i++) {             m.insert(nums[i]);         }         return nums.size() != m.size();     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/33/217. Contains Duplicate .cpp/Solution/containsDuplicate(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "bool containsNearbyDuplicate(vector<int>& nums, int k) {         set<int> s;         int t = 0;         for(int i = 0; i < nums.size(); i++) {             s.insert(nums[i]);             if(s.size() == t) {                 for(int j = i - 1; j >= 0 && j >= i - k; j--) {                     if(nums[i] == nums[j])                         return true;                 }             }             t = s.size();         }         return false;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_containsNearbyDuplicate_vector_int_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_containsNearbyDuplicate_vector_int_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/219. Contains Duplicate II.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint k=10;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1420302680;\nnums.push_back(nums_element0);\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_containsNearbyDuplicate_vector_int_int_random_3\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->containsNearbyDuplicate(nums,k);\nAKA_fCall++;AKA_mark(\"Return from: ./33/219. Contains Duplicate II.cpp/Solution/containsNearbyDuplicate(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/219. Contains Duplicate II.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint k=10;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1420302680;\nnums.push_back(nums_element0);\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     bool containsNearbyDuplicate(vector<int>& nums, int k) {         set<int> s;         int t = 0;         for(int i = 0; i < nums.size(); i++) {             s.insert(nums[i]);             if(s.size() == t) {                 for(int j = i - 1; j >= 0 && j >= i - k; j--) {                     if(nums[i] == nums[j])                         return true;                 }             }             t = s.size();         }         return false;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/33/219. Contains Duplicate II.cpp/Solution/containsNearbyDuplicate(vector<int>&,int)"
+    },
+    {
+        "f": [],
+        "fm": "bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t) {         map<long, int> m;         int j = 0;         for (int i = 0; i < nums.size(); ++i) {             if (i - j > k && m[nums[j]] == j) m.erase(nums[j++]);             auto a = m.lower_bound((long)nums[i] - t);             if (a != m.end() && abs(a->first - nums[i]) <= t) return true;             m[nums[i]] = i;         }         return false;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_containsNearbyAlmostDuplicate_vector_int_int_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_containsNearbyAlmostDuplicate_vector_int_int_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/220. Contains Duplicate III.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint k=58216146;\n\n\nint t=-821065862;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1652366378;\nnums.push_back(nums_element0);\nint nums_element1=-1062143323;\nnums.push_back(nums_element1);\nint nums_element2=-778244982;\nnums.push_back(nums_element2);\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode t */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_containsNearbyAlmostDuplicate_vector_int_int_int_random_4\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->containsNearbyAlmostDuplicate(nums,k,t);\nAKA_fCall++;AKA_mark(\"Return from: ./33/220. Contains Duplicate III.cpp/Solution/containsNearbyAlmostDuplicate(vector<int>&,int,int)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/220. Contains Duplicate III.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint k=58216146;\n\n\nint t=-821065862;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1652366378;\nnums.push_back(nums_element0);\nint nums_element1=-1062143323;\nnums.push_back(nums_element1);\nint nums_element2=-778244982;\nnums.push_back(nums_element2);\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode t */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_containsNearbyAlmostDuplicate_vector_int_int_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_containsNearbyAlmostDuplicate_vector_int_int_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/220. Contains Duplicate III.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint k=-1061221963;\n\n\nint t=423659540;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1837321427;\nnums.push_back(nums_element0);\nint nums_element1=1215119044;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode t */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_containsNearbyAlmostDuplicate_vector_int_int_int_random_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->containsNearbyAlmostDuplicate(nums,k,t);\nAKA_fCall++;AKA_mark(\"Return from: ./33/220. Contains Duplicate III.cpp/Solution/containsNearbyAlmostDuplicate(vector<int>&,int,int)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/220. Contains Duplicate III.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint k=-1061221963;\n\n\nint t=423659540;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1837321427;\nnums.push_back(nums_element0);\nint nums_element1=1215119044;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode t */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t) {         map<long, int> m;         int j = 0;         for (int i = 0; i < nums.size(); ++i) {             if (i - j > k && m[nums[j]] == j) m.erase(nums[j++]);             auto a = m.lower_bound((long)nums[i] - t);             if (a != m.end() && abs(a->first - nums[i]) <= t) return true;             m[nums[i]] = i;         }         return false;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/33/220. Contains Duplicate III.cpp/Solution/containsNearbyAlmostDuplicate(vector<int>&,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int computeArea(int A, int B, int C, int D, int E, int F, int G, int H) {         int maxae = A > E ? A : E;         int mincg = C > G ? G : C;         int maxfb = F > B ? F : B;         int minhd = H > D ? D : H;         int overlap;         if(maxae >= mincg || maxfb >= minhd)             overlap = 0;         else             overlap = (mincg - maxae) * (minhd - maxfb);         return (C - A) * (D - B) + (G - E) * (H - F) - overlap;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_computeArea_int_int_int_int_int_int_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_computeArea_int_int_int_int_int_int_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/223. Rectangle Area.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint A=-866495677;\n\n\nint B=-35778102;\n\n\nint C=-1486287658;\n\n\nint D=-1203891871;\n\n\nint E=-292527174;\n\n\nint F=815107364;\n\n\nint G=-899235064;\n\n\nint H=532666509;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode A */\n/* NormalNumberDataNode B */\n/* NormalNumberDataNode C */\n/* NormalNumberDataNode D */\n/* NormalNumberDataNode E */\n/* NormalNumberDataNode F */\n/* NormalNumberDataNode G */\n/* NormalNumberDataNode H */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_computeArea_int_int_int_int_int_int_int_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->computeArea(A,B,C,D,E,F,G,H);\nAKA_fCall++;AKA_mark(\"Return from: ./33/223. Rectangle Area.cpp/Solution/computeArea(int,int,int,int,int,int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/223. Rectangle Area.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint A=-866495677;\n\n\nint B=-35778102;\n\n\nint C=-1486287658;\n\n\nint D=-1203891871;\n\n\nint E=-292527174;\n\n\nint F=815107364;\n\n\nint G=-899235064;\n\n\nint H=532666509;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode A */\n/* NormalNumberDataNode B */\n/* NormalNumberDataNode C */\n/* NormalNumberDataNode D */\n/* NormalNumberDataNode E */\n/* NormalNumberDataNode F */\n/* NormalNumberDataNode G */\n/* NormalNumberDataNode H */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int computeArea(int A, int B, int C, int D, int E, int F, int G, int H) {         int maxae = A > E ? A : E;         int mincg = C > G ? G : C;         int maxfb = F > B ? F : B;         int minhd = H > D ? D : H;         int overlap;         if(maxae >= mincg || maxfb >= minhd)             overlap = 0;         else             overlap = (mincg - maxae) * (minhd - maxfb);         return (C - A) * (D - B) + (G - E) * (H - F) - overlap;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/33/223. Rectangle Area.cpp/Solution/computeArea(int,int,int,int,int,int,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "vector<string> summaryRanges(vector<int>& nums) {         vector<string> result;         if(nums.size() == 0)             return result;         string temp = \"\";         int flag = 0;         temp += to_string(nums[0]);         for(int i = 1; i < nums.size(); i++) {             if(nums[i] != nums[i-1] + 1 && flag == 1) {                 flag = 0;                 temp += \"->\" + to_string(nums[i-1]);                 result.push_back(temp);                 temp = \"\" + to_string(nums[i]);             } else if(nums[i] != nums[i-1] + 1) {                 result.push_back(temp);                 temp = \"\" + to_string(nums[i]);             } else {                 flag = 1;             }         }         if(flag == 1) {             temp += \"->\" + to_string(nums[nums.size() - 1]);         }         result.push_back(temp);         return result;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_summaryRanges_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_summaryRanges_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/228. Summary Ranges.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-151376308;\nnums.push_back(nums_element0);\nint nums_element1=457162656;\nnums.push_back(nums_element1);\nint nums_element2=-1880600965;\nnums.push_back(nums_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_summaryRanges_vector_int_random_3\");vector<string> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->summaryRanges(nums);\nAKA_fCall++;AKA_mark(\"Return from: ./33/228. Summary Ranges.cpp/Solution/summaryRanges(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/228. Summary Ranges.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-151376308;\nnums.push_back(nums_element0);\nint nums_element1=457162656;\nnums.push_back(nums_element1);\nint nums_element2=-1880600965;\nnums.push_back(nums_element2);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     vector<string> summaryRanges(vector<int>& nums) {         vector<string> result;         if(nums.size() == 0)             return result;         string temp = \"\";         int flag = 0;         temp += to_string(nums[0]);         for(int i = 1; i < nums.size(); i++) {             if(nums[i] != nums[i-1] + 1 && flag == 1) {                 flag = 0;                 temp += \"->\" + to_string(nums[i-1]);                 result.push_back(temp);                 temp = \"\" + to_string(nums[i]);             } else if(nums[i] != nums[i-1] + 1) {                 result.push_back(temp);                 temp = \"\" + to_string(nums[i]);             } else {                 flag = 1;             }         }         if(flag == 1) {             temp += \"->\" + to_string(nums[nums.size() - 1]);         }         result.push_back(temp);         return result;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/33/228. Summary Ranges.cpp/Solution/summaryRanges(vector<int>&)"
+    }
+]

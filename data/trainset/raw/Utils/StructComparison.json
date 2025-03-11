@@ -1,0 +1,54 @@
+[
+    {
+        "f": [],
+        "fm": "int compareTwoPeople(Person a, Person b){\r     if (strcmp(a.name, b.name)==0)\r         if (a.age==b.age)\r             if (a.salary==b.salary)\r                 return 1;\r \treturn 0;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\StructComparison.cpp\\compareTwoPeople(Person,Person)"
+    },
+    {
+        "f": [],
+        "fm": "int compareGroup(Person* a, Person* b, int size_a, int size_b){\r     if (size_a != size_b)\r         return 0;\r     else{\r     for (int i = 0; i < size_a; i++)\r         if (strcmp(a[i].name, b[i].name) !=0 || a[i].age != b[i].age || a[i].salary != b[i].salary)\r             return 0;\r \treturn 1;\r \t}\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\StructComparison.cpp\\compareGroup(Person*,Person*,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int compareGroup(Person a[3], Person b[3]){\r     for (int i = 0; i < 3; i++)\r         if (strcmp(a[i].name, b[i].name) !=0 || a[i].age != b[i].age || a[i].salary != b[i].salary)\r             return 0;\r \treturn 1;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\StructComparison.cpp\\compareGroup(Person[3],Person[3])"
+    },
+    {
+        "f": [],
+        "fm": "int compareGroupv2(Person a[], Person b[], int size_a, int size_b){\r     if (size_a != size_b)\r         return 0;\r     else{\r     for (int i = 0; i < size_a; i++)\r         if (strcmp(a[i].name, b[i].name) !=0 || a[i].age != b[i].age || a[i].salary != b[i].salary)\r             return 0;\r \treturn 1;\r \t}\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\StructComparison.cpp\\compareGroupv2(Person[],Person[],int,int)"
+    }
+]

@@ -1,0 +1,182 @@
+[
+    {
+        "f": [],
+        "fm": "ListNode* reverseList(ListNode* head) {\r     \r         if(head == NULL)                        return NULL;\r         \r         ListNode* cur = head, *next;\r         ListNode* prev = NULL;\r         \r         while(cur != NULL) {\r             \r             next = cur->next;\r             cur->next = prev;\r             \r             prev = cur;\r             cur = next;\r         }\r         \r         return prev;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_reverseList_ListNodemul_random_3(void) {\n{\nAKA_test_case_name=\"Solution_reverseList_ListNodemul_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_reverseList_ListNodemul_random_3\");ListNode* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->reverseList(head);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\Solution\\\\reverseList(ListNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     ListNode* reverseList(ListNode* head) {\r     \r         if(head == NULL)                        return NULL;\r         \r         ListNode* cur = head, *next;\r         ListNode* prev = NULL;\r         \r         while(cur != NULL) {\r             \r             next = cur->next;\r             cur->next = prev;\r             \r             prev = cur;\r             cur = next;\r         }\r         \r         return prev;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p63\\206-reverse-linked-list\\206-reverse-linked-list.cpp\\Solution\\reverseList(ListNode*)"
+    },
+    {
+        "f": [],
+        "fm": "int countVowelSubstrings(string word) {\r     \r         int count = 0;\r         int j = 0, k = 0, vow = 0;\r         \r         // j mark start of \"all-vowel\" substr, and i = current posn. The window between k - 1 and i is smallest window with all 5 vowels.\r         // So, for each position i, we have k - j valid substrings\r         \r         unordered_map<char, int> u{{'a', 0}, {'e', 0}, {'i', 0}, {'o', 0}, {'u', 0}};\r         \r         for (int i=0; i<word.size(); i++) {\r             \r             if(u.count(word[i]) >= 1) {\r                 \r                 vow += ++u[word[i]] == 1;\r                 \r                 for ( ; vow == 5; k++)\r                     vow -= --u[word[k]] == 0;\r                 \r                 count += k - j;\r             }\r             \r             else {\r             \r                 u['a'] = u['e'] = u['i'] = u['o'] = u['u'] = vow = 0;\r                 j = k = i + 1;\r             }\r         }\r         \r         return count;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countVowelSubstrings_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_countVowelSubstrings_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2062-count-vowel-substrings-of-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName422060 = new char[2];akaRandomName422060[0] = 111;akaRandomName422060[1] = '\\0';string word=akaRandomName422060;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countVowelSubstrings_string_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countVowelSubstrings(word);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p63\\\\2062-count-vowel-substrings-of-a-string\\\\2062-count-vowel-substrings-of-a-string.cpp\\\\Solution\\\\countVowelSubstrings(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countVowelSubstrings_string_random_1(void) {\n{\nAKA_test_case_name=\"Solution_countVowelSubstrings_string_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2062-count-vowel-substrings-of-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName793956 = new char[2];akaRandomName793956[0] = -1;akaRandomName793956[1] = '\\0';string word=akaRandomName793956;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countVowelSubstrings_string_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countVowelSubstrings(word);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p63\\\\2062-count-vowel-substrings-of-a-string\\\\2062-count-vowel-substrings-of-a-string.cpp\\\\Solution\\\\countVowelSubstrings(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2062-count-vowel-substrings-of-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName921319 = new char[2];akaRandomName921319[0] = 111;akaRandomName921319[1] = '\\0';string word=akaRandomName921319;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r    \r     int countVowelSubstrings(string word) {\r     \r         int count = 0;\r         int j = 0, k = 0, vow = 0;\r         \r         // j mark start of \"all-vowel\" substr, and i = current posn. The window between k - 1 and i is smallest window with all 5 vowels.\r         // So, for each position i, we have k - j valid substrings\r         \r         unordered_map<char, int> u{{'a', 0}, {'e', 0}, {'i', 0}, {'o', 0}, {'u', 0}};\r         \r         for (int i=0; i<word.size(); i++) {\r             \r             if(u.count(word[i]) >= 1) {\r                 \r                 vow += ++u[word[i]] == 1;\r                 \r                 for ( ; vow == 5; k++)\r                     vow -= --u[word[k]] == 0;\r                 \r                 count += k - j;\r             }\r             \r             else {\r             \r                 u['a'] = u['e'] = u['i'] = u['o'] = u['u'] = vow = 0;\r                 j = k = i + 1;\r             }\r         }\r         \r         return count;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p63\\2062-count-vowel-substrings-of-a-string\\2062-count-vowel-substrings-of-a-string.cpp\\Solution\\countVowelSubstrings(string)"
+    },
+    {
+        "f": [],
+        "fm": "bool checkAlmostEquivalent(string word1, string word2) {\r     \r         unordered_map<char, int> u1, u2;\r         \r         for(auto &x : word1)                        u1[x]++;\r         for(auto &x : word2)                        u2[x]++;\r         \r         for(int i=0; i<26; i++) {\r             \r             char ch = (char)(i + 97);\r             \r             if( (u1[ch] > 0 || u2[ch] > 0) && abs(u1[ch] - u2[ch]) > 3)                         return false;\r         }\r         \r         return true;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_checkAlmostEquivalent_string_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_checkAlmostEquivalent_string_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2068-check-whether-two-strings-are-almost-equivalent.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName61749 = new char[2];akaRandomName61749[0] = 62;akaRandomName61749[1] = '\\0';string word1=akaRandomName61749;\nchar* akaRandomName90083 = new char[2];akaRandomName90083[0] = -64;akaRandomName90083[1] = '\\0';string word2=akaRandomName90083;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word1 */\n/* NormalStringDataNode word2 */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_checkAlmostEquivalent_string_string_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->checkAlmostEquivalent(word1,word2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p63\\\\2068-check-whether-two-strings-are-almost-equivalent\\\\2068-check-whether-two-strings-are-almost-equivalent.cpp\\\\Solution\\\\checkAlmostEquivalent(string,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     bool checkAlmostEquivalent(string word1, string word2) {\r     \r         unordered_map<char, int> u1, u2;\r         \r         for(auto &x : word1)                        u1[x]++;\r         for(auto &x : word2)                        u2[x]++;\r         \r         for(int i=0; i<26; i++) {\r             \r             char ch = (char)(i + 97);\r             \r             if( (u1[ch] > 0 || u2[ch] > 0) && abs(u1[ch] - u2[ch]) > 3)                         return false;\r         }\r         \r         return true;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p63\\2068-check-whether-two-strings-are-almost-equivalent\\2068-check-whether-two-strings-are-almost-equivalent.cpp\\Solution\\checkAlmostEquivalent(string,string)"
+    },
+    {
+        "f": [],
+        "fm": "bool dfs(int node, unordered_map<int, vector<int>> &adj, vector<int> &vis) {\r         \r         if(vis[node] == 2)                          return true;\r         \r         vis[node] = 2;\r         \r         for(int i=0; i<adj[node].size(); i++) {\r             int child = adj[node][i];\r             if(vis[child] != 1) {\r                 if(dfs(child, adj, vis) == true)    return true;\r             }                    \r         }\r         \r         vis[node] = 1;\r         return false;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_dfs_int_unordered_map_int_vector_int_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_dfs_int_unordered_map_int_vector_int_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\207-course-schedule.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint node=261047275;\nunordered_map<int, vector<int>> adj;\nvector<int> vis;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode node */\n/* UnorderedMapDataNode adj */\n/* VectorDataNode vis */\nint vis_element0=404938854;\nvis.push_back(vis_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_dfs_int_unordered_map_int_vector_int_vector_int_random_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->dfs(node,adj,vis);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p63\\\\207-course-schedule\\\\207-course-schedule.cpp\\\\Solution\\\\dfs(int,unordered_map<int,vector<int>>&,vector<int>&)\");\n\n\nunordered_map<int, vector<int>> EXPECTED_adj;\n\nvector<int> EXPECTED_vis;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     // Return true if cycle\r     bool dfs(int node, unordered_map<int, vector<int>> &adj, vector<int> &vis) {\r         \r         if(vis[node] == 2)                          return true;\r         \r         vis[node] = 2;\r         \r         for(int i=0; i<adj[node].size(); i++) {\r             int child = adj[node][i];\r             if(vis[child] != 1) {\r                 if(dfs(child, adj, vis) == true)    return true;\r             }                    \r         }\r         \r         vis[node] = 1;\r         return false;\r     }\r     \r     bool canFinish(int n, vector<vector<int>>& prereq) {\r     \r         // Topological Sort\r     \r         unordered_map<int, vector<int>> adj;\r         \r         for(auto &x : prereq) {\r             \r             int u = x[0];\r             int v = x[1];\r             \r             // v -> u\r             adj[v].push_back(u);\r         }\r         \r         vector<int> vis(n, 0);\r         \r         // 0 - unvisited, 1 - processing, 2 - processed\r         \r         for(int i=0; i<n; i++) {\r             if(vis[i] == 0) {\r                 // if cycle then not possible\r                 if(dfs(i, adj, vis) == true)            return false;\r             }\r         }\r         \r         return true;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p63\\207-course-schedule\\207-course-schedule.cpp\\Solution\\dfs(int,unordered_map<int,vector<int>>&,vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "bool canFinish(int n, vector<vector<int>>& prereq) {\r     \r         // Topological Sort\r     \r         unordered_map<int, vector<int>> adj;\r         \r         for(auto &x : prereq) {\r             \r             int u = x[0];\r             int v = x[1];\r             \r             // v -> u\r             adj[v].push_back(u);\r         }\r         \r         vector<int> vis(n, 0);\r         \r         // 0 - unvisited, 1 - processing, 2 - processed\r         \r         for(int i=0; i<n; i++) {\r             if(vis[i] == 0) {\r                 // if cycle then not possible\r                 if(dfs(i, adj, vis) == true)            return false;\r             }\r         }\r         \r         return true;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_canFinish_int_vector_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_canFinish_int_vector_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\207-course-schedule.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\nvector<vector<int>> prereq;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode prereq */\nvector<int> prereq_element0;\nint prereq_element0_element0=1623562680;\nprereq_element0.push_back(prereq_element0_element0);\nint prereq_element0_element1=-994842562;\nprereq_element0.push_back(prereq_element0_element1);\nint prereq_element0_element2=717898846;\nprereq_element0.push_back(prereq_element0_element2);\nprereq.push_back(prereq_element0);\nvector<int> prereq_element1;\nint prereq_element1_element0=-1716176013;\nprereq_element1.push_back(prereq_element1_element0);\nint prereq_element1_element1=-899068023;\nprereq_element1.push_back(prereq_element1_element1);\nprereq.push_back(prereq_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_canFinish_int_vector_vector_int_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->canFinish(n,prereq);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p63\\\\207-course-schedule\\\\207-course-schedule.cpp\\\\Solution\\\\canFinish(int,vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_prereq;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     // Return true if cycle\r     bool dfs(int node, unordered_map<int, vector<int>> &adj, vector<int> &vis) {\r         \r         if(vis[node] == 2)                          return true;\r         \r         vis[node] = 2;\r         \r         for(int i=0; i<adj[node].size(); i++) {\r             int child = adj[node][i];\r             if(vis[child] != 1) {\r                 if(dfs(child, adj, vis) == true)    return true;\r             }                    \r         }\r         \r         vis[node] = 1;\r         return false;\r     }\r     \r     bool canFinish(int n, vector<vector<int>>& prereq) {\r     \r         // Topological Sort\r     \r         unordered_map<int, vector<int>> adj;\r         \r         for(auto &x : prereq) {\r             \r             int u = x[0];\r             int v = x[1];\r             \r             // v -> u\r             adj[v].push_back(u);\r         }\r         \r         vector<int> vis(n, 0);\r         \r         // 0 - unvisited, 1 - processing, 2 - processed\r         \r         for(int i=0; i<n; i++) {\r             if(vis[i] == 0) {\r                 // if cycle then not possible\r                 if(dfs(i, adj, vis) == true)            return false;\r             }\r         }\r         \r         return true;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p63\\207-course-schedule\\207-course-schedule.cpp\\Solution\\canFinish(int,vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "int timeRequiredToBuy(vector<int>& v, int k) {\r     \r         int time = 0;\r         int n = v.size();\r         \r         while(v[k] > 0) {\r \r             // Decrease each element of array by 1\r             \r             for(int i=0; i<n && v[k] > 0; i++) {\r                 \r                 if(v[i] > 0) {\r                     v[i]--;\r                     time++;\r                 }\r             }\r         }\r         \r         return time;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_timeRequiredToBuy_vector_int_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_timeRequiredToBuy_vector_int_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2073-time-needed-to-buy-tickets.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> v;\n\n\nint k=-1875142301;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nint v_element0=1624149235;\nv.push_back(v_element0);\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_timeRequiredToBuy_vector_int_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->timeRequiredToBuy(v,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p63\\\\2073-time-needed-to-buy-tickets\\\\2073-time-needed-to-buy-tickets.cpp\\\\Solution\\\\timeRequiredToBuy(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r    \r     int timeRequiredToBuy(vector<int>& v, int k) {\r     \r         int time = 0;\r         int n = v.size();\r         \r         while(v[k] > 0) {\r \r             // Decrease each element of array by 1\r             \r             for(int i=0; i<n && v[k] > 0; i++) {\r                 \r                 if(v[i] > 0) {\r                     v[i]--;\r                     time++;\r                 }\r             }\r         }\r         \r         return time;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p63\\2073-time-needed-to-buy-tickets\\2073-time-needed-to-buy-tickets.cpp\\Solution\\timeRequiredToBuy(vector<int>&,int)"
+    }
+]

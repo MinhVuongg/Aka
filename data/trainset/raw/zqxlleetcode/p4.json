@@ -1,0 +1,92 @@
+[
+    {
+        "f": [],
+        "fm": "int searchNum1(int *nums, int s, int e, int t) {\r \tfor (int i = s; i < e; i++) {\r \t\tif (nums[i] == t) return i;\r \t}\r \treturn -1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_searchNum1_intmul_int_int_int_random_3(void) {\n{\nAKA_test_case_name=\"searchNum1_intmul_int_int_int_random_3\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_nums[3];\n\n\nint AKA_ARRAY_INIT_nums_0=2045854961;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=2079209164;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\n\nint AKA_ARRAY_INIT_nums_2=-1025185460;\nAKA_ARRAY_INIT_nums[2] = AKA_ARRAY_INIT_nums_2;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint s=9;\n\n\nint e=10;\n\n\nint t=1633739141;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode s */\n/* NormalNumberDataNode e */\n/* NormalNumberDataNode t */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test searchNum1_intmul_int_int_int_random_3\");int AKA_ACTUAL_OUTPUT=searchNum1(nums,s,e,t);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-169\\\\_167 Two Sum II - Input array is sorted\\\\_167 Two Sum II - Input array is sorted.cpp\\\\searchNum1(int*,int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_nums[3];\n\n\nint AKA_ARRAY_INIT_nums_0=2045854961;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=2079209164;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\n\nint AKA_ARRAY_INIT_nums_2=-1025185460;\nAKA_ARRAY_INIT_nums[2] = AKA_ARRAY_INIT_nums_2;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint s=9;\n\n\nint e=10;\n\n\nint t=1633739141;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode s */\n/* NormalNumberDataNode e */\n/* NormalNumberDataNode t */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_searchNum1_intmul_int_int_int_random_4(void) {\n{\nAKA_test_case_name=\"searchNum1_intmul_int_int_int_random_4\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_nums[3];\n\n\nint AKA_ARRAY_INIT_nums_0=366583599;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=1431581505;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\n\nint AKA_ARRAY_INIT_nums_2=-320263948;\nAKA_ARRAY_INIT_nums[2] = AKA_ARRAY_INIT_nums_2;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint s=2;\n\n\nint e=7;\n\n\nint t=636472174;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode s */\n/* NormalNumberDataNode e */\n/* NormalNumberDataNode t */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test searchNum1_intmul_int_int_int_random_4\");int AKA_ACTUAL_OUTPUT=searchNum1(nums,s,e,t);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-169\\\\_167 Two Sum II - Input array is sorted\\\\_167 Two Sum II - Input array is sorted.cpp\\\\searchNum1(int*,int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_nums[3];\n\n\nint AKA_ARRAY_INIT_nums_0=366583599;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=1431581505;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\n\nint AKA_ARRAY_INIT_nums_2=-320263948;\nAKA_ARRAY_INIT_nums[2] = AKA_ARRAY_INIT_nums_2;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint s=2;\n\n\nint e=7;\n\n\nint t=636472174;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode s */\n/* NormalNumberDataNode e */\n/* NormalNumberDataNode t */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\zqxl_leetcode\\Leetcode\\com-169\\_167 Two Sum II - Input array is sorted\\_167 Two Sum II - Input array is sorted.cpp\\searchNum1(int*,int,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int searchNum(int *nums, int s, int e, int t) {\r \tint m;\r \twhile (e>s) {\r \t\tm = (s + e) / 2;\r \t\tif (t < nums[m]) \r \t\t\te = m;\r \t\telse if (nums[m] < t) \r \t\t\ts = m+1;\r \t\telse \r \t\t\treturn m;\r \t}\r \treturn -1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_searchNum_intmul_int_int_int_random_0(void) {\n{\nAKA_test_case_name=\"searchNum_intmul_int_int_int_random_0\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_nums[2];\n\n\nint AKA_ARRAY_INIT_nums_0=469958960;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=1791676568;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint s=2;\n\n\nint e=8;\n\n\nint t=1532682248;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode s */\n/* NormalNumberDataNode e */\n/* NormalNumberDataNode t */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test searchNum_intmul_int_int_int_random_0\");int AKA_ACTUAL_OUTPUT=searchNum(nums,s,e,t);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-169\\\\_167 Two Sum II - Input array is sorted\\\\_167 Two Sum II - Input array is sorted.cpp\\\\searchNum(int*,int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_nums[3];\n\n\nint AKA_ARRAY_INIT_nums_0=2045854961;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=2079209164;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\n\nint AKA_ARRAY_INIT_nums_2=-1025185460;\nAKA_ARRAY_INIT_nums[2] = AKA_ARRAY_INIT_nums_2;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint s=9;\n\n\nint e=10;\n\n\nint t=1633739141;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode s */\n/* NormalNumberDataNode e */\n/* NormalNumberDataNode t */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\zqxl_leetcode\\Leetcode\\com-169\\_167 Two Sum II - Input array is sorted\\_167 Two Sum II - Input array is sorted.cpp\\searchNum(int*,int,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int* twoSum1(int* numbers, int numbersSize, int target, int* returnSize) {\r \tint i = 0, j = numbersSize - 1;\r \twhile (numbers[i] + numbers[j] != target)\r \t{\r \t\tif (numbers[i] + numbers[j] > target)\r \t\t\tj--;\r \t\telse i++;\r \t}\r \t*returnSize = 2;\r \tint* index = (int*)malloc(2 * sizeof(int));\r \tindex[0] = i + 1;\r \tindex[1] = j + 1;\r \treturn index;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_twoSum1_intmul_int_int_intmul_random_3(void) {\n{\nAKA_test_case_name=\"twoSum1_intmul_int_int_intmul_random_3\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_numbers[2];\n\n\nint AKA_ARRAY_INIT_numbers_0=1262742116;\nAKA_ARRAY_INIT_numbers[0] = AKA_ARRAY_INIT_numbers_0;\n\n\nint AKA_ARRAY_INIT_numbers_1=-1985193144;\nAKA_ARRAY_INIT_numbers[1] = AKA_ARRAY_INIT_numbers_1;\n\nint* numbers = AKA_ARRAY_INIT_numbers;\n\n\nint numbersSize=-259057163;\n\n\nint target=3;\nint* returnSize;\nint* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode numbers */\n/* NormalNumberDataNode numbersSize */\n/* NormalNumberDataNode target */\n/* PointerNumberDataNode returnSize */\n/* PointerNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test twoSum1_intmul_int_int_intmul_random_3\");int* AKA_ACTUAL_OUTPUT=twoSum1(numbers,numbersSize,target,returnSize);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-169\\\\_167 Two Sum II - Input array is sorted\\\\_167 Two Sum II - Input array is sorted.cpp\\\\twoSum1(int*,int,int,int*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_nums[3];\n\n\nint AKA_ARRAY_INIT_nums_0=2045854961;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=2079209164;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\n\nint AKA_ARRAY_INIT_nums_2=-1025185460;\nAKA_ARRAY_INIT_nums[2] = AKA_ARRAY_INIT_nums_2;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint s=9;\n\n\nint e=10;\n\n\nint t=1633739141;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode s */\n/* NormalNumberDataNode e */\n/* NormalNumberDataNode t */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\zqxl_leetcode\\Leetcode\\com-169\\_167 Two Sum II - Input array is sorted\\_167 Two Sum II - Input array is sorted.cpp\\twoSum1(int*,int,int,int*)"
+    }
+]

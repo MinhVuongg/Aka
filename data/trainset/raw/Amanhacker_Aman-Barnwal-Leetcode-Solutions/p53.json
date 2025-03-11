@@ -1,0 +1,154 @@
+[
+    {
+        "f": [],
+        "fm": "bool makeEqual(vector<string>& words) {\r     \r         unordered_map<char, int> u;\r         int n = words.size();\r         \r         for(auto &x : words) {\r             for(auto &x1 : x)                           u[x1]++;\r         }\r         \r         for(auto &x : u) {\r             int freq = x.second;\r             if(freq % n != 0)                           return false;\r         }\r         \r         return true;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_makeEqual_vector_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_makeEqual_vector_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1897-redistribute-characters-to-make-all-strings-equal.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> words;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode words */\nchar* akaRandomName318211 = new char[2];akaRandomName318211[0] = -85;akaRandomName318211[1] = '\\0';string words_element0=akaRandomName318211;\nwords.push_back(words_element0);\nchar* akaRandomName194638 = new char[2];akaRandomName194638[0] = 22;akaRandomName194638[1] = '\\0';string words_element1=akaRandomName194638;\nwords.push_back(words_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_makeEqual_vector_string_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->makeEqual(words);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p53\\\\1897-redistribute-characters-to-make-all-strings-equal\\\\1897-redistribute-characters-to-make-all-strings-equal.cpp\\\\Solution\\\\makeEqual(vector<string>&)\");\n\n\nvector<string> EXPECTED_words;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1805-number-of-different-integers-in-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName398746 = new char[2];akaRandomName398746[0] = -126;akaRandomName398746[1] = '\\0';string word=akaRandomName398746;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     bool makeEqual(vector<string>& words) {\r     \r         unordered_map<char, int> u;\r         int n = words.size();\r         \r         for(auto &x : words) {\r             for(auto &x1 : x)                           u[x1]++;\r         }\r         \r         for(auto &x : u) {\r             int freq = x.second;\r             if(freq % n != 0)                           return false;\r         }\r         \r         return true;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p53\\1897-redistribute-characters-to-make-all-strings-equal\\1897-redistribute-characters-to-make-all-strings-equal.cpp\\Solution\\makeEqual(vector<string>&)"
+    },
+    {
+        "f": [],
+        "fm": "ListNode* removeNthFromEnd(ListNode* head, int n) {\r     \r         int size = 0;\r         \r         ListNode* temp = head;\r         \r         while(temp != NULL) {\r             temp = temp->next;\r             size++;\r         }\r         \r         int m = size - n;\r         \r         if(n == size)                           return head->next;\r         \r         // Remove mth node from beginning considering 0-based indexing\r         \r         int i = 0;\r         \r         ListNode* cur;\r         temp = head;\r         \r         while(i < m && temp != NULL) {\r             \r             cur = temp;\r             temp = temp->next;\r             \r             i++;\r         }\r         \r         // Remove cur node\r         \r         if(temp == head)                        return NULL;\r         \r         cur->next = temp->next;\r         return head;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_removeNthFromEnd_ListNodemul_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_removeNthFromEnd_ListNodemul_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\19-remove-nth-node-from-end-of-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=403522386;\nAKA_mark(\"Calling: .\\\\p53\\\\19-remove-nth-node-from-end-of-list\\\\19-remove-nth-node-from-end-of-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\19-remove-nth-node-from-end-of-list.cpp\\\\removeNthFromEnd(ListNode*,int)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\nstd::vector<ListNode*> AKA_VECTOR_INIT_head_0_DOT_next;\n/* SubStructDataNode next */\n/* ConstructorDataNode ListNode() */\nAKA_mark(\"Calling: .\\\\p53\\\\19-remove-nth-node-from-end-of-list\\\\19-remove-nth-node-from-end-of-list.cpp\\\\ListNode\\\\ListNode()|ROOT\\\\19-remove-nth-node-from-end-of-list.cpp\\\\removeNthFromEnd(ListNode*,int)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\next\\\\next[0]\\\\next\\\\ListNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0_DOT_next_0 = new ::ListNode();\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0_DOT_next_0).next;\nAKA_VECTOR_INIT_head_0_DOT_next.push_back(AKA_VECTOR_INIT_head_0_DOT_next_0);\n(*AKA_VECTOR_INIT_head_0).next = AKA_VECTOR_INIT_head_0_DOT_next[0];\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int,ListNode*) */\n/* NormalNumberDataNode x */\nint head1_x=-460429114;\n/* PointerStructureDataNode next */\nListNode* head1_next;\nAKA_mark(\"Calling: .\\\\p53\\\\19-remove-nth-node-from-end-of-list\\\\19-remove-nth-node-from-end-of-list.cpp\\\\ListNode\\\\ListNode(int,ListNode*)|ROOT\\\\19-remove-nth-node-from-end-of-list.cpp\\\\removeNthFromEnd(ListNode*,int)\\\\head\\\\AKA_VECTOR_INIT_head_1\\\\head\\\\ListNode(int,ListNode*)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_1 = new ::ListNode(head1_x,head1_next);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_1).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_1);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\n\n\nint n=5;\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* NormalNumberDataNode n */\n/* PointerStructureDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_removeNthFromEnd_ListNodemul_int_random_2\");ListNode* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->removeNthFromEnd(head,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p53\\\\19-remove-nth-node-from-end-of-list\\\\19-remove-nth-node-from-end-of-list.cpp\\\\Solution\\\\removeNthFromEnd(ListNode*,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1805-number-of-different-integers-in-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName398746 = new char[2];akaRandomName398746[0] = -126;akaRandomName398746[1] = '\\0';string word=akaRandomName398746;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     ListNode* removeNthFromEnd(ListNode* head, int n) {\r     \r         int size = 0;\r         \r         ListNode* temp = head;\r         \r         while(temp != NULL) {\r             temp = temp->next;\r             size++;\r         }\r         \r         int m = size - n;\r         \r         if(n == size)                           return head->next;\r         \r         // Remove mth node from beginning considering 0-based indexing\r         \r         int i = 0;\r         \r         ListNode* cur;\r         temp = head;\r         \r         while(i < m && temp != NULL) {\r             \r             cur = temp;\r             temp = temp->next;\r             \r             i++;\r         }\r         \r         // Remove cur node\r         \r         if(temp == head)                        return NULL;\r         \r         cur->next = temp->next;\r         return head;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p53\\19-remove-nth-node-from-end-of-list\\19-remove-nth-node-from-end-of-list.cpp\\Solution\\removeNthFromEnd(ListNode*,int)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> findPeakGrid(vector<vector<int>>& mat) {\r     \r         vector<int> res;\r     \r         int n = mat.size();\r         int m = mat[0].size();\r         \r         int startCol = 0, endCol = m - 1;\r         \r         while(startCol <= endCol) {\r             \r             int curCol = startCol + (endCol - startCol) / 2;\r             \r             // Find the maximum element in the column no curCol\r             \r             // maxRowIndex is the row no where the element is maximum in endCol index\r             \r             int maxRowIndex = 0;\r             \r             for(int i=0; i<n; i++) {\r                 \r                 if(mat[i][curCol] > mat[maxRowIndex][curCol]) {\r                     // Update the row index\r                     maxRowIndex = i;\r                 }\r             }\r             \r             // Now, we ensured that the current column is greater than both top and bottom\r             // But, we need to now check for left and right of current element\r             \r             // If left and right element are both smaller than current Element, then return co-ordinate\r             if( (curCol == 0 || mat[maxRowIndex][curCol - 1] < mat[maxRowIndex][curCol]) && \r                 (curCol == m - 1 || mat[maxRowIndex][curCol + 1] < mat[maxRowIndex][curCol]) ) {\r                 \r                 res.push_back(maxRowIndex);\r                 res.push_back(curCol);\r                 \r                 return res;\r             }\r             \r             // Now, if left and right are not greater than current element\r \r             // if left element is greater than current element\r             else if(curCol - 1 >= 0 && mat[maxRowIndex][curCol - 1] > mat[maxRowIndex][curCol]) {\r                 endCol = curCol - 1;\r             }\r             \r             // if right element is greater than current element\r             else if(curCol + 1 < m && mat[maxRowIndex][curCol + 1] > mat[maxRowIndex][curCol]) {\r                 startCol = curCol + 1;\r             }\r         }\r        \r         return {-1, -1};\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findPeakGrid_vector_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_findPeakGrid_vector_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1901-find-a-peak-element-ii.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> mat;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode mat */\nvector<int> mat_element0;\nint mat_element0_element0=1593882373;\nmat_element0.push_back(mat_element0_element0);\nmat.push_back(mat_element0);\nvector<int> mat_element1;\nint mat_element1_element0=-1880881566;\nmat_element1.push_back(mat_element1_element0);\nint mat_element1_element1=1874027672;\nmat_element1.push_back(mat_element1_element1);\nmat.push_back(mat_element1);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findPeakGrid_vector_vector_int_random_3\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findPeakGrid(mat);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p53\\\\1901-find-a-peak-element-ii\\\\1901-find-a-peak-element-ii.cpp\\\\Solution\\\\findPeakGrid(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_mat;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1805-number-of-different-integers-in-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName398746 = new char[2];akaRandomName398746[0] = -126;akaRandomName398746[1] = '\\0';string word=akaRandomName398746;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findPeakGrid_vector_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_findPeakGrid_vector_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1901-find-a-peak-element-ii.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> mat;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode mat */\nvector<int> mat_element0;\nint mat_element0_element0=1906716793;\nmat_element0.push_back(mat_element0_element0);\nint mat_element0_element1=-1012477010;\nmat_element0.push_back(mat_element0_element1);\nint mat_element0_element2=-715924940;\nmat_element0.push_back(mat_element0_element2);\nmat.push_back(mat_element0);\nvector<int> mat_element1;\nint mat_element1_element0=-1724446988;\nmat_element1.push_back(mat_element1_element0);\nint mat_element1_element1=1936226311;\nmat_element1.push_back(mat_element1_element1);\nint mat_element1_element2=-90553861;\nmat_element1.push_back(mat_element1_element2);\nmat.push_back(mat_element1);\nvector<int> mat_element2;\nint mat_element2_element0=53150453;\nmat_element2.push_back(mat_element2_element0);\nmat.push_back(mat_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findPeakGrid_vector_vector_int_random_2\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findPeakGrid(mat);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p53\\\\1901-find-a-peak-element-ii\\\\1901-find-a-peak-element-ii.cpp\\\\Solution\\\\findPeakGrid(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_mat;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1805-number-of-different-integers-in-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName732626 = new char[2];akaRandomName732626[0] = 56;akaRandomName732626[1] = '\\0';string word=akaRandomName732626;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     vector<int> findPeakGrid(vector<vector<int>>& mat) {\r     \r         vector<int> res;\r     \r         int n = mat.size();\r         int m = mat[0].size();\r         \r         int startCol = 0, endCol = m - 1;\r         \r         while(startCol <= endCol) {\r             \r             int curCol = startCol + (endCol - startCol) / 2;\r             \r             // Find the maximum element in the column no curCol\r             \r             // maxRowIndex is the row no where the element is maximum in endCol index\r             \r             int maxRowIndex = 0;\r             \r             for(int i=0; i<n; i++) {\r                 \r                 if(mat[i][curCol] > mat[maxRowIndex][curCol]) {\r                     // Update the row index\r                     maxRowIndex = i;\r                 }\r             }\r             \r             // Now, we ensured that the current column is greater than both top and bottom\r             // But, we need to now check for left and right of current element\r             \r             // If left and right element are both smaller than current Element, then return co-ordinate\r             if( (curCol == 0 || mat[maxRowIndex][curCol - 1] < mat[maxRowIndex][curCol]) && \r                 (curCol == m - 1 || mat[maxRowIndex][curCol + 1] < mat[maxRowIndex][curCol]) ) {\r                 \r                 res.push_back(maxRowIndex);\r                 res.push_back(curCol);\r                 \r                 return res;\r             }\r             \r             // Now, if left and right are not greater than current element\r \r             // if left element is greater than current element\r             else if(curCol - 1 >= 0 && mat[maxRowIndex][curCol - 1] > mat[maxRowIndex][curCol]) {\r                 endCol = curCol - 1;\r             }\r             \r             // if right element is greater than current element\r             else if(curCol + 1 < m && mat[maxRowIndex][curCol + 1] > mat[maxRowIndex][curCol]) {\r                 startCol = curCol + 1;\r             }\r         }\r        \r         return {-1, -1};\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p53\\1901-find-a-peak-element-ii\\1901-find-a-peak-element-ii.cpp\\Solution\\findPeakGrid(vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "string largestOddNumber(string num) {\r     \r         string res = \"\";\r         int n = num.length();\r         \r         // It should be substring\r         \r         int oddIndex = -1;\r         \r         for(int i=n-1; i>=0; i--) {\r             \r             int x = (int)(num[i]) - 48;\r             \r             if(x % 2 == 1) {\r                 oddIndex = i;\r                 break;\r             }\r         }\r \r         if(oddIndex == -1)                                      return res;\r         \r         // Substring is from [0, oddIndex]\r         \r         res = num.substr(0, oddIndex + 1);\r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_largestOddNumber_string_random_2(void) {\n{\nAKA_test_case_name=\"Solution_largestOddNumber_string_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1903-largest-odd-number-in-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName776026 = new char[2];akaRandomName776026[0] = 80;akaRandomName776026[1] = '\\0';string num=akaRandomName776026;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_largestOddNumber_string_random_2\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->largestOddNumber(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p53\\\\1903-largest-odd-number-in-string\\\\1903-largest-odd-number-in-string.cpp\\\\Solution\\\\largestOddNumber(string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1805-number-of-different-integers-in-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName398746 = new char[2];akaRandomName398746[0] = -126;akaRandomName398746[1] = '\\0';string word=akaRandomName398746;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     string largestOddNumber(string num) {\r     \r         string res = \"\";\r         int n = num.length();\r         \r         // It should be substring\r         \r         int oddIndex = -1;\r         \r         for(int i=n-1; i>=0; i--) {\r             \r             int x = (int)(num[i]) - 48;\r             \r             if(x % 2 == 1) {\r                 oddIndex = i;\r                 break;\r             }\r         }\r \r         if(oddIndex == -1)                                      return res;\r         \r         // Substring is from [0, oddIndex]\r         \r         res = num.substr(0, oddIndex + 1);\r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p53\\1903-largest-odd-number-in-string\\1903-largest-odd-number-in-string.cpp\\Solution\\largestOddNumber(string)"
+    },
+    {
+        "f": [],
+        "fm": "int hammingWeight(uint32_t n) {\r     \r         int count = 0;\r         \r         while(n) {\r             count += (n % 2);\r             n >>= 1;\r         }\r         \r         return count;     \r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_hammingWeight_uint32_t_random_2(void) {\n{\nAKA_test_case_name=\"Solution_hammingWeight_uint32_t_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\191-number-of-1-bits.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nuint32_t n=966123810;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_hammingWeight_uint32_t_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->hammingWeight(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p53\\\\191-number-of-1-bits\\\\191-number-of-1-bits.cpp\\\\Solution\\\\hammingWeight(uint32_t)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1805-number-of-different-integers-in-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName398746 = new char[2];akaRandomName398746[0] = -126;akaRandomName398746[1] = '\\0';string word=akaRandomName398746;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int hammingWeight(uint32_t n) {\r     \r         int count = 0;\r         \r         while(n) {\r             count += (n % 2);\r             n >>= 1;\r         }\r         \r         return count;     \r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p53\\191-number-of-1-bits\\191-number-of-1-bits.cpp\\Solution\\hammingWeight(uint32_t)"
+    }
+]

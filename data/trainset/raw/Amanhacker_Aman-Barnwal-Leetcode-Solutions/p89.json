@@ -1,0 +1,300 @@
+[
+    {
+        "f": [],
+        "fm": "int hammingDistance(int x, int y) {\r     \r         int count = 0;\r         \r         vector<int> res1(32, 0), res2(32, 0);\r         int ind = 31;\r         \r         while(x > 0) {\r             \r             res1[ind] = (x % 2);\r             ind--;\r             \r             x = x / 2;\r         }\r         \r         ind = 31;\r         \r         while(y > 0) {\r             \r             res2[ind] = (y % 2);\r             ind--;\r             \r             y = y / 2;\r         }\r         \r         for(int i=0; i<32; i++) {\r             if(res1[i] != res2[i])                              count++;\r         }\r         \r         return count;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_hammingDistance_int_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_hammingDistance_int_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\461-hamming-distance.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint x=5;\n\n\nint y=4;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_hammingDistance_int_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->hammingDistance(x,y);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p89\\\\461-hamming-distance\\\\461-hamming-distance.cpp\\\\Solution\\\\hammingDistance(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\461-hamming-distance.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint x=5;\n\n\nint y=4;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_hammingDistance_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_hammingDistance_int_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\461-hamming-distance.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint x=8;\n\n\nint y=8;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_hammingDistance_int_int_directed_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->hammingDistance(x,y);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p89\\\\461-hamming-distance\\\\461-hamming-distance.cpp\\\\Solution\\\\hammingDistance(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\461-hamming-distance.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint x=8;\n\n\nint y=8;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int hammingDistance(int x, int y) {\r     \r         int count = 0;\r         \r         vector<int> res1(32, 0), res2(32, 0);\r         int ind = 31;\r         \r         while(x > 0) {\r             \r             res1[ind] = (x % 2);\r             ind--;\r             \r             x = x / 2;\r         }\r         \r         ind = 31;\r         \r         while(y > 0) {\r             \r             res2[ind] = (y % 2);\r             ind--;\r             \r             y = y / 2;\r         }\r         \r         for(int i=0; i<32; i++) {\r             if(res1[i] != res2[i])                              count++;\r         }\r         \r         return count;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p89\\461-hamming-distance\\461-hamming-distance.cpp\\Solution\\hammingDistance(int,int)"
+    },
+    {
+        "f": [
+            "vector<vector<int>> grid;",
+            "int n;",
+            "int m;",
+            "int dx[4] = {1, 0, -1,  0};",
+            "int dy[4] = {0, 1,  0, -1};"
+        ],
+        "fm": "bool isValid(int x, int y) {\r         if(x >= 0 && x < n && y >= 0 && y < m)                      return true;\r         else                                                        return false;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isValid_int_int_directed_1(void) {\n{\nAKA_test_case_name=\"Solution_isValid_int_int_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\463-island-perimeter.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* VectorDataNode grid */\n/* NormalNumberDataNode n */\nAKA_INSTANCE___Solution->n=1;\n/* NormalNumberDataNode m */\nAKA_INSTANCE___Solution->m=0;\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\n/* dx[0] : null value -> no code */\n/* NormalNumberDataNode dx[1] */\n/* dx[1] : null value -> no code */\n/* NormalNumberDataNode dx[2] */\n/* dx[2] : null value -> no code */\n/* NormalNumberDataNode dx[3] */\n/* dx[3] : null value -> no code */\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\n/* dy[0] : null value -> no code */\n/* NormalNumberDataNode dy[1] */\n/* dy[1] : null value -> no code */\n/* NormalNumberDataNode dy[2] */\n/* dy[2] : null value -> no code */\n/* NormalNumberDataNode dy[3] */\n/* dy[3] : null value -> no code */\n\n\n\n\nint x=0;\n\n\nint y=-1;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isValid_int_int_directed_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isValid(x,y);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p89\\\\463-island-perimeter\\\\463-island-perimeter.cpp\\\\Solution\\\\isValid(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\463-island-perimeter.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* VectorDataNode grid */\n/* NormalNumberDataNode n */\nAKA_INSTANCE___Solution->n=1;\n/* NormalNumberDataNode m */\nAKA_INSTANCE___Solution->m=0;\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\n/* dx[0] : null value -> no code */\n/* NormalNumberDataNode dx[1] */\n/* dx[1] : null value -> no code */\n/* NormalNumberDataNode dx[2] */\n/* dx[2] : null value -> no code */\n/* NormalNumberDataNode dx[3] */\n/* dx[3] : null value -> no code */\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\n/* dy[0] : null value -> no code */\n/* NormalNumberDataNode dy[1] */\n/* dy[1] : null value -> no code */\n/* NormalNumberDataNode dy[2] */\n/* dy[2] : null value -> no code */\n/* NormalNumberDataNode dy[3] */\n/* dy[3] : null value -> no code */\n\n\n\n\nint x=0;\n\n\nint y=-1;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isValid_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_isValid_int_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\463-island-perimeter.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* VectorDataNode grid */\n/* NormalNumberDataNode n */\nAKA_INSTANCE___Solution->n=1;\n/* NormalNumberDataNode m */\nAKA_INSTANCE___Solution->m=0;\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\n/* dx[0] : null value -> no code */\n/* NormalNumberDataNode dx[1] */\n/* dx[1] : null value -> no code */\n/* NormalNumberDataNode dx[2] */\n/* dx[2] : null value -> no code */\n/* NormalNumberDataNode dx[3] */\n/* dx[3] : null value -> no code */\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\n/* dy[0] : null value -> no code */\n/* NormalNumberDataNode dy[1] */\n/* dy[1] : null value -> no code */\n/* NormalNumberDataNode dy[2] */\n/* dy[2] : null value -> no code */\n/* NormalNumberDataNode dy[3] */\n/* dy[3] : null value -> no code */\n\n\n\n\nint x=0;\n\n\nint y=0;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isValid_int_int_directed_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isValid(x,y);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p89\\\\463-island-perimeter\\\\463-island-perimeter.cpp\\\\Solution\\\\isValid(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\463-island-perimeter.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* VectorDataNode grid */\n/* NormalNumberDataNode n */\nAKA_INSTANCE___Solution->n=1;\n/* NormalNumberDataNode m */\nAKA_INSTANCE___Solution->m=0;\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\n/* dx[0] : null value -> no code */\n/* NormalNumberDataNode dx[1] */\n/* dx[1] : null value -> no code */\n/* NormalNumberDataNode dx[2] */\n/* dx[2] : null value -> no code */\n/* NormalNumberDataNode dx[3] */\n/* dx[3] : null value -> no code */\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\n/* dy[0] : null value -> no code */\n/* NormalNumberDataNode dy[1] */\n/* dy[1] : null value -> no code */\n/* NormalNumberDataNode dy[2] */\n/* dy[2] : null value -> no code */\n/* NormalNumberDataNode dy[3] */\n/* dy[3] : null value -> no code */\n\n\n\n\nint x=0;\n\n\nint y=0;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isValid_int_int_directed_2(void) {\n{\nAKA_test_case_name=\"Solution_isValid_int_int_directed_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\463-island-perimeter.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* VectorDataNode grid */\n/* NormalNumberDataNode n */\nAKA_INSTANCE___Solution->n=1;\n/* NormalNumberDataNode m */\nAKA_INSTANCE___Solution->m=1;\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\n/* dx[0] : null value -> no code */\n/* NormalNumberDataNode dx[1] */\n/* dx[1] : null value -> no code */\n/* NormalNumberDataNode dx[2] */\n/* dx[2] : null value -> no code */\n/* NormalNumberDataNode dx[3] */\n/* dx[3] : null value -> no code */\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\n/* dy[0] : null value -> no code */\n/* NormalNumberDataNode dy[1] */\n/* dy[1] : null value -> no code */\n/* NormalNumberDataNode dy[2] */\n/* dy[2] : null value -> no code */\n/* NormalNumberDataNode dy[3] */\n/* dy[3] : null value -> no code */\n\n\n\n\nint x=0;\n\n\nint y=0;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isValid_int_int_directed_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isValid(x,y);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p89\\\\463-island-perimeter\\\\463-island-perimeter.cpp\\\\Solution\\\\isValid(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\463-island-perimeter.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* VectorDataNode grid */\n/* NormalNumberDataNode n */\nAKA_INSTANCE___Solution->n=1;\n/* NormalNumberDataNode m */\nAKA_INSTANCE___Solution->m=1;\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\n/* dx[0] : null value -> no code */\n/* NormalNumberDataNode dx[1] */\n/* dx[1] : null value -> no code */\n/* NormalNumberDataNode dx[2] */\n/* dx[2] : null value -> no code */\n/* NormalNumberDataNode dx[3] */\n/* dx[3] : null value -> no code */\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\n/* dy[0] : null value -> no code */\n/* NormalNumberDataNode dy[1] */\n/* dy[1] : null value -> no code */\n/* NormalNumberDataNode dy[2] */\n/* dy[2] : null value -> no code */\n/* NormalNumberDataNode dy[3] */\n/* dy[3] : null value -> no code */\n\n\n\n\nint x=0;\n\n\nint y=0;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isValid_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_isValid_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\463-island-perimeter.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* VectorDataNode grid */\n/* NormalNumberDataNode n */\nAKA_INSTANCE___Solution->n=78429876;\n/* NormalNumberDataNode m */\nAKA_INSTANCE___Solution->m=2144225623;\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\n/* dx[0] : null value -> no code */\n/* NormalNumberDataNode dx[1] */\n/* dx[1] : null value -> no code */\n/* NormalNumberDataNode dx[2] */\n/* dx[2] : null value -> no code */\n/* NormalNumberDataNode dx[3] */\n/* dx[3] : null value -> no code */\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\n/* dy[0] : null value -> no code */\n/* NormalNumberDataNode dy[1] */\n/* dy[1] : null value -> no code */\n/* NormalNumberDataNode dy[2] */\n/* dy[2] : null value -> no code */\n/* NormalNumberDataNode dy[3] */\n/* dy[3] : null value -> no code */\n\n\n\n\nint x=492449949;\n\n\nint y=-1144323976;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isValid_int_int_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isValid(x,y);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p89\\\\463-island-perimeter\\\\463-island-perimeter.cpp\\\\Solution\\\\isValid(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\463-island-perimeter.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* VectorDataNode grid */\n/* NormalNumberDataNode n */\nAKA_INSTANCE___Solution->n=78429876;\n/* NormalNumberDataNode m */\nAKA_INSTANCE___Solution->m=2144225623;\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\n/* dx[0] : null value -> no code */\n/* NormalNumberDataNode dx[1] */\n/* dx[1] : null value -> no code */\n/* NormalNumberDataNode dx[2] */\n/* dx[2] : null value -> no code */\n/* NormalNumberDataNode dx[3] */\n/* dx[3] : null value -> no code */\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\n/* dy[0] : null value -> no code */\n/* NormalNumberDataNode dy[1] */\n/* dy[1] : null value -> no code */\n/* NormalNumberDataNode dy[2] */\n/* dy[2] : null value -> no code */\n/* NormalNumberDataNode dy[3] */\n/* dy[3] : null value -> no code */\n\n\n\n\nint x=492449949;\n\n\nint y=-1144323976;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 4,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isValid_int_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_isValid_int_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\463-island-perimeter.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* VectorDataNode grid */\n/* NormalNumberDataNode n */\nAKA_INSTANCE___Solution->n=1046200173;\n/* NormalNumberDataNode m */\nAKA_INSTANCE___Solution->m=452874456;\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\n/* dx[0] : null value -> no code */\n/* NormalNumberDataNode dx[1] */\n/* dx[1] : null value -> no code */\n/* NormalNumberDataNode dx[2] */\n/* dx[2] : null value -> no code */\n/* NormalNumberDataNode dx[3] */\n/* dx[3] : null value -> no code */\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\n/* dy[0] : null value -> no code */\n/* NormalNumberDataNode dy[1] */\n/* dy[1] : null value -> no code */\n/* NormalNumberDataNode dy[2] */\n/* dy[2] : null value -> no code */\n/* NormalNumberDataNode dy[3] */\n/* dy[3] : null value -> no code */\n\n\n\n\nint x=-701939265;\n\n\nint y=256818147;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isValid_int_int_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isValid(x,y);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p89\\\\463-island-perimeter\\\\463-island-perimeter.cpp\\\\Solution\\\\isValid(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\463-island-perimeter.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* VectorDataNode grid */\n/* NormalNumberDataNode n */\nAKA_INSTANCE___Solution->n=1046200173;\n/* NormalNumberDataNode m */\nAKA_INSTANCE___Solution->m=452874456;\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\n/* dx[0] : null value -> no code */\n/* NormalNumberDataNode dx[1] */\n/* dx[1] : null value -> no code */\n/* NormalNumberDataNode dx[2] */\n/* dx[2] : null value -> no code */\n/* NormalNumberDataNode dx[3] */\n/* dx[3] : null value -> no code */\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\n/* dy[0] : null value -> no code */\n/* NormalNumberDataNode dy[1] */\n/* dy[1] : null value -> no code */\n/* NormalNumberDataNode dy[2] */\n/* dy[2] : null value -> no code */\n/* NormalNumberDataNode dy[3] */\n/* dy[3] : null value -> no code */\n\n\n\n\nint x=-701939265;\n\n\nint y=256818147;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     vector<vector<int>> grid;\r     int n, m;\r     \r     int dx[4] = {1, 0, -1,  0};\r     int dy[4] = {0, 1,  0, -1};\r     \r     bool isValid(int x, int y) {\r         if(x >= 0 && x < n && y >= 0 && y < m)                      return true;\r         else                                                        return false;\r     }\r     \r     int noSurroundedByWater(int x, int y) {\r         \r         int count = 0;\r         \r         for(int i=0; i<4; i++) {\r             \r             int x1 = x + dx[i];\r             int y1 = y + dy[i];\r             \r             if(isValid(x1, y1) == true) {\r                 if(grid[x1][y1] == 1)                                  count++;\r             }\r         }\r         \r         return (4 - count);\r     }\r     \r     int islandPerimeter(vector<vector<int>>& _grid) {\r         \r         // 1 means land and 0 means water\r         \r         n = _grid.size();\r         m = _grid[0].size();\r         \r         grid.resize(n, vector<int>(m));\r         grid = _grid;\r         \r         int peri = 0;\r         \r         for(int i=0; i<n; i++) {\r             for(int j=0; j<m; j++) {\r                 \r                 if(grid[i][j] == 1)             peri += noSurroundedByWater(i, j);\r             }\r         }\r         \r         return peri;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p89\\463-island-perimeter\\463-island-perimeter.cpp\\Solution\\isValid(int,int)"
+    },
+    {
+        "f": [
+            "vector<vector<int>> grid;",
+            "int n;",
+            "int m;",
+            "int dx[4] = {1, 0, -1,  0};",
+            "int dy[4] = {0, 1,  0, -1};"
+        ],
+        "fm": "int noSurroundedByWater(int x, int y) {\r         \r         int count = 0;\r         \r         for(int i=0; i<4; i++) {\r             \r             int x1 = x + dx[i];\r             int y1 = y + dy[i];\r             \r             if(isValid(x1, y1) == true) {\r                 if(grid[x1][y1] == 1)                                  count++;\r             }\r         }\r         \r         return (4 - count);\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_noSurroundedByWater_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_noSurroundedByWater_int_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\463-island-perimeter.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* VectorDataNode grid */\n/* NormalNumberDataNode n */\nAKA_INSTANCE___Solution->n=0;\n/* NormalNumberDataNode m */\nAKA_INSTANCE___Solution->m=0;\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\n/* dx[0] : null value -> no code */\n/* NormalNumberDataNode dx[1] */\n/* dx[1] : null value -> no code */\n/* NormalNumberDataNode dx[2] */\n/* dx[2] : null value -> no code */\n/* NormalNumberDataNode dx[3] */\n/* dx[3] : null value -> no code */\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\n/* dy[0] : null value -> no code */\n/* NormalNumberDataNode dy[1] */\n/* dy[1] : null value -> no code */\n/* NormalNumberDataNode dy[2] */\n/* dy[2] : null value -> no code */\n/* NormalNumberDataNode dy[3] */\n/* dy[3] : null value -> no code */\n\n\n\n\nint x=0;\n\n\nint y=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_noSurroundedByWater_int_int_directed_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->noSurroundedByWater(x,y);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p89\\\\463-island-perimeter\\\\463-island-perimeter.cpp\\\\Solution\\\\noSurroundedByWater(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\463-island-perimeter.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* VectorDataNode grid */\n/* NormalNumberDataNode n */\nAKA_INSTANCE___Solution->n=0;\n/* NormalNumberDataNode m */\nAKA_INSTANCE___Solution->m=0;\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\n/* dx[0] : null value -> no code */\n/* NormalNumberDataNode dx[1] */\n/* dx[1] : null value -> no code */\n/* NormalNumberDataNode dx[2] */\n/* dx[2] : null value -> no code */\n/* NormalNumberDataNode dx[3] */\n/* dx[3] : null value -> no code */\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\n/* dy[0] : null value -> no code */\n/* NormalNumberDataNode dy[1] */\n/* dy[1] : null value -> no code */\n/* NormalNumberDataNode dy[2] */\n/* dy[2] : null value -> no code */\n/* NormalNumberDataNode dy[3] */\n/* dy[3] : null value -> no code */\n\n\n\n\nint x=0;\n\n\nint y=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_noSurroundedByWater_int_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_noSurroundedByWater_int_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\463-island-perimeter.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* VectorDataNode grid */\nvector<int> AKA_INSTANCE___Solution_grid_element0;\nint AKA_INSTANCE___Solution_grid_element0_element0=1741732129;\nAKA_INSTANCE___Solution_grid_element0.push_back(AKA_INSTANCE___Solution_grid_element0_element0);\nint AKA_INSTANCE___Solution_grid_element0_element1=-1262550392;\nAKA_INSTANCE___Solution_grid_element0.push_back(AKA_INSTANCE___Solution_grid_element0_element1);\nAKA_INSTANCE___Solution->grid.push_back(AKA_INSTANCE___Solution_grid_element0);\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* NormalNumberDataNode m */\n/* m : null value -> no code */\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\nAKA_INSTANCE___Solution->dx[0]=-15137977;\n/* NormalNumberDataNode dx[1] */\nAKA_INSTANCE___Solution->dx[1]=-786712601;\n/* NormalNumberDataNode dx[2] */\nAKA_INSTANCE___Solution->dx[2]=-904084665;\n/* NormalNumberDataNode dx[3] */\nAKA_INSTANCE___Solution->dx[3]=1367322455;\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\nAKA_INSTANCE___Solution->dy[0]=501275885;\n/* NormalNumberDataNode dy[1] */\nAKA_INSTANCE___Solution->dy[1]=-1111559377;\n/* NormalNumberDataNode dy[2] */\nAKA_INSTANCE___Solution->dy[2]=-86500835;\n/* NormalNumberDataNode dy[3] */\nAKA_INSTANCE___Solution->dy[3]=996327920;\n\n\n\n\nint x=775400767;\n\n\nint y=1588183604;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_noSurroundedByWater_int_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->noSurroundedByWater(x,y);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p89\\\\463-island-perimeter\\\\463-island-perimeter.cpp\\\\Solution\\\\noSurroundedByWater(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\463-island-perimeter.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* VectorDataNode grid */\nvector<int> AKA_INSTANCE___Solution_grid_element0;\nint AKA_INSTANCE___Solution_grid_element0_element0=1741732129;\nAKA_INSTANCE___Solution_grid_element0.push_back(AKA_INSTANCE___Solution_grid_element0_element0);\nint AKA_INSTANCE___Solution_grid_element0_element1=-1262550392;\nAKA_INSTANCE___Solution_grid_element0.push_back(AKA_INSTANCE___Solution_grid_element0_element1);\nAKA_INSTANCE___Solution->grid.push_back(AKA_INSTANCE___Solution_grid_element0);\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* NormalNumberDataNode m */\n/* m : null value -> no code */\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\nAKA_INSTANCE___Solution->dx[0]=-15137977;\n/* NormalNumberDataNode dx[1] */\nAKA_INSTANCE___Solution->dx[1]=-786712601;\n/* NormalNumberDataNode dx[2] */\nAKA_INSTANCE___Solution->dx[2]=-904084665;\n/* NormalNumberDataNode dx[3] */\nAKA_INSTANCE___Solution->dx[3]=1367322455;\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\nAKA_INSTANCE___Solution->dy[0]=501275885;\n/* NormalNumberDataNode dy[1] */\nAKA_INSTANCE___Solution->dy[1]=-1111559377;\n/* NormalNumberDataNode dy[2] */\nAKA_INSTANCE___Solution->dy[2]=-86500835;\n/* NormalNumberDataNode dy[3] */\nAKA_INSTANCE___Solution->dy[3]=996327920;\n\n\n\n\nint x=775400767;\n\n\nint y=1588183604;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     vector<vector<int>> grid;\r     int n, m;\r     \r     int dx[4] = {1, 0, -1,  0};\r     int dy[4] = {0, 1,  0, -1};\r     \r     bool isValid(int x, int y) {\r         if(x >= 0 && x < n && y >= 0 && y < m)                      return true;\r         else                                                        return false;\r     }\r     \r     int noSurroundedByWater(int x, int y) {\r         \r         int count = 0;\r         \r         for(int i=0; i<4; i++) {\r             \r             int x1 = x + dx[i];\r             int y1 = y + dy[i];\r             \r             if(isValid(x1, y1) == true) {\r                 if(grid[x1][y1] == 1)                                  count++;\r             }\r         }\r         \r         return (4 - count);\r     }\r     \r     int islandPerimeter(vector<vector<int>>& _grid) {\r         \r         // 1 means land and 0 means water\r         \r         n = _grid.size();\r         m = _grid[0].size();\r         \r         grid.resize(n, vector<int>(m));\r         grid = _grid;\r         \r         int peri = 0;\r         \r         for(int i=0; i<n; i++) {\r             for(int j=0; j<m; j++) {\r                 \r                 if(grid[i][j] == 1)             peri += noSurroundedByWater(i, j);\r             }\r         }\r         \r         return peri;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p89\\463-island-perimeter\\463-island-perimeter.cpp\\Solution\\noSurroundedByWater(int,int)"
+    },
+    {
+        "f": [
+            "vector<vector<int>> grid;",
+            "int n;",
+            "int m;",
+            "int dx[4] = {1, 0, -1,  0};",
+            "int dy[4] = {0, 1,  0, -1};"
+        ],
+        "fm": "int islandPerimeter(vector<vector<int>>& _grid) {\r         \r         // 1 means land and 0 means water\r         \r         n = _grid.size();\r         m = _grid[0].size();\r         \r         grid.resize(n, vector<int>(m));\r         grid = _grid;\r         \r         int peri = 0;\r         \r         for(int i=0; i<n; i++) {\r             for(int j=0; j<m; j++) {\r                 \r                 if(grid[i][j] == 1)             peri += noSurroundedByWater(i, j);\r             }\r         }\r         \r         return peri;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_islandPerimeter_vector_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_islandPerimeter_vector_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\463-island-perimeter.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* VectorDataNode grid */\nvector<int> AKA_INSTANCE___Solution_grid_element0;\nint AKA_INSTANCE___Solution_grid_element0_element0=1550775110;\nAKA_INSTANCE___Solution_grid_element0.push_back(AKA_INSTANCE___Solution_grid_element0_element0);\nint AKA_INSTANCE___Solution_grid_element0_element1=129115545;\nAKA_INSTANCE___Solution_grid_element0.push_back(AKA_INSTANCE___Solution_grid_element0_element1);\nAKA_INSTANCE___Solution->grid.push_back(AKA_INSTANCE___Solution_grid_element0);\nvector<int> AKA_INSTANCE___Solution_grid_element1;\nint AKA_INSTANCE___Solution_grid_element1_element0=-780366877;\nAKA_INSTANCE___Solution_grid_element1.push_back(AKA_INSTANCE___Solution_grid_element1_element0);\nAKA_INSTANCE___Solution->grid.push_back(AKA_INSTANCE___Solution_grid_element1);\n/* NormalNumberDataNode n */\nAKA_INSTANCE___Solution->n=-1297531509;\n/* NormalNumberDataNode m */\nAKA_INSTANCE___Solution->m=1602414088;\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\n/* dx[0] : null value -> no code */\n/* NormalNumberDataNode dx[1] */\n/* dx[1] : null value -> no code */\n/* NormalNumberDataNode dx[2] */\n/* dx[2] : null value -> no code */\n/* NormalNumberDataNode dx[3] */\n/* dx[3] : null value -> no code */\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\n/* dy[0] : null value -> no code */\n/* NormalNumberDataNode dy[1] */\n/* dy[1] : null value -> no code */\n/* NormalNumberDataNode dy[2] */\n/* dy[2] : null value -> no code */\n/* NormalNumberDataNode dy[3] */\n/* dy[3] : null value -> no code */\n\n\nvector<vector<int>> _grid;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode _grid */\nvector<int> _grid_element0;\nint _grid_element0_element0=-655739058;\n_grid_element0.push_back(_grid_element0_element0);\n_grid.push_back(_grid_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_islandPerimeter_vector_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->islandPerimeter(_grid);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p89\\\\463-island-perimeter\\\\463-island-perimeter.cpp\\\\Solution\\\\islandPerimeter(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED__grid;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\463-island-perimeter.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* VectorDataNode grid */\nvector<int> AKA_INSTANCE___Solution_grid_element0;\nint AKA_INSTANCE___Solution_grid_element0_element0=1550775110;\nAKA_INSTANCE___Solution_grid_element0.push_back(AKA_INSTANCE___Solution_grid_element0_element0);\nint AKA_INSTANCE___Solution_grid_element0_element1=129115545;\nAKA_INSTANCE___Solution_grid_element0.push_back(AKA_INSTANCE___Solution_grid_element0_element1);\nAKA_INSTANCE___Solution->grid.push_back(AKA_INSTANCE___Solution_grid_element0);\nvector<int> AKA_INSTANCE___Solution_grid_element1;\nint AKA_INSTANCE___Solution_grid_element1_element0=-780366877;\nAKA_INSTANCE___Solution_grid_element1.push_back(AKA_INSTANCE___Solution_grid_element1_element0);\nAKA_INSTANCE___Solution->grid.push_back(AKA_INSTANCE___Solution_grid_element1);\n/* NormalNumberDataNode n */\nAKA_INSTANCE___Solution->n=-1297531509;\n/* NormalNumberDataNode m */\nAKA_INSTANCE___Solution->m=1602414088;\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\n/* dx[0] : null value -> no code */\n/* NormalNumberDataNode dx[1] */\n/* dx[1] : null value -> no code */\n/* NormalNumberDataNode dx[2] */\n/* dx[2] : null value -> no code */\n/* NormalNumberDataNode dx[3] */\n/* dx[3] : null value -> no code */\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\n/* dy[0] : null value -> no code */\n/* NormalNumberDataNode dy[1] */\n/* dy[1] : null value -> no code */\n/* NormalNumberDataNode dy[2] */\n/* dy[2] : null value -> no code */\n/* NormalNumberDataNode dy[3] */\n/* dy[3] : null value -> no code */\n\n\nvector<vector<int>> _grid;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode _grid */\nvector<int> _grid_element0;\nint _grid_element0_element0=-655739058;\n_grid_element0.push_back(_grid_element0_element0);\n_grid.push_back(_grid_element0);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     vector<vector<int>> grid;\r     int n, m;\r     \r     int dx[4] = {1, 0, -1,  0};\r     int dy[4] = {0, 1,  0, -1};\r     \r     bool isValid(int x, int y) {\r         if(x >= 0 && x < n && y >= 0 && y < m)                      return true;\r         else                                                        return false;\r     }\r     \r     int noSurroundedByWater(int x, int y) {\r         \r         int count = 0;\r         \r         for(int i=0; i<4; i++) {\r             \r             int x1 = x + dx[i];\r             int y1 = y + dy[i];\r             \r             if(isValid(x1, y1) == true) {\r                 if(grid[x1][y1] == 1)                                  count++;\r             }\r         }\r         \r         return (4 - count);\r     }\r     \r     int islandPerimeter(vector<vector<int>>& _grid) {\r         \r         // 1 means land and 0 means water\r         \r         n = _grid.size();\r         m = _grid[0].size();\r         \r         grid.resize(n, vector<int>(m));\r         grid = _grid;\r         \r         int peri = 0;\r         \r         for(int i=0; i<n; i++) {\r             for(int j=0; j<m; j++) {\r                 \r                 if(grid[i][j] == 1)             peri += noSurroundedByWater(i, j);\r             }\r         }\r         \r         return peri;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p89\\463-island-perimeter\\463-island-perimeter.cpp\\Solution\\islandPerimeter(vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "int findComplement(int n) {\r         \r         // Basic idea is to find the smallest power of 2 that is larger than num, and output the difference between powerof2s and num .\r         \r         long powerof2s = 2, temp = n;\r         \r         while(temp >> 1) {\r             temp >>= 1;\r             powerof2s <<= 1;\r         }\r         \r         return (powerof2s - n - 1);\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findComplement_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_findComplement_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\476-number-complement.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=10;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findComplement_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findComplement(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p89\\\\476-number-complement\\\\476-number-complement.cpp\\\\Solution\\\\findComplement(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\476-number-complement.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=10;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int findComplement(int n) {\r         \r         // Basic idea is to find the smallest power of 2 that is larger than num, and output the difference between powerof2s and num .\r         \r         long powerof2s = 2, temp = n;\r         \r         while(temp >> 1) {\r             temp >>= 1;\r             powerof2s <<= 1;\r         }\r         \r         return (powerof2s - n - 1);\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p89\\476-number-complement\\476-number-complement.cpp\\Solution\\findComplement(int)"
+    },
+    {
+        "f": [],
+        "fm": "string licenseKeyFormatting(string s, int k) {\r     \r         string res = \"\";\r         \r         int n = s.length();\r         \r         int noDashes = count(s.begin(), s.end(), '-');\r         int noLetters = n - noDashes;\r         \r         if(noLetters == 0)                                      return \"\";\r         if(n < k)                                               return s;\r         \r         string temp = \"\";\r         \r         for(auto &x : s) {\r             if(x != '-')                                        temp += toupper(x);\r         }\r         \r         int noGroups, firstGroupNo = 0;\r         \r         // First group is having no.os letters < k\r         firstGroupNo = noLetters % k;\r         \r         noGroups = noLetters / k;\r         int i = 0;\r         \r         if(firstGroupNo > 0) {\r             \r             int c = firstGroupNo;\r             res += temp.substr(i, c);\r             \r             i = c;\r             \r             res += '-';\r         }\r         \r         while(i < temp.size()) {\r             \r             if(i + k - 1 < temp.size())                        res += temp.substr(i, k);\r             \r             if(i + k == temp.size())                           break;\r             \r             res += '-';\r             i = i + k;\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_licenseKeyFormatting_string_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_licenseKeyFormatting_string_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\482-license-key-formatting.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring s=\"\";\n\n\nint k=0;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode k */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_licenseKeyFormatting_string_int_directed_0\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->licenseKeyFormatting(s,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p89\\\\482-license-key-formatting\\\\482-license-key-formatting.cpp\\\\Solution\\\\licenseKeyFormatting(string,int)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\482-license-key-formatting.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring s=\"\";\n\n\nint k=0;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode k */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_licenseKeyFormatting_string_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_licenseKeyFormatting_string_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\482-license-key-formatting.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName960635 = new char[2];akaRandomName960635[0] = -75;akaRandomName960635[1] = '\\0';string s=akaRandomName960635;\n\n\nint k=5;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode k */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_licenseKeyFormatting_string_int_random_4\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->licenseKeyFormatting(s,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p89\\\\482-license-key-formatting\\\\482-license-key-formatting.cpp\\\\Solution\\\\licenseKeyFormatting(string,int)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\482-license-key-formatting.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName856045 = new char[2];akaRandomName856045[0] = -75;akaRandomName856045[1] = '\\0';string s=akaRandomName856045;\n\n\nint k=5;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode k */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     string licenseKeyFormatting(string s, int k) {\r     \r         string res = \"\";\r         \r         int n = s.length();\r         \r         int noDashes = count(s.begin(), s.end(), '-');\r         int noLetters = n - noDashes;\r         \r         if(noLetters == 0)                                      return \"\";\r         if(n < k)                                               return s;\r         \r         string temp = \"\";\r         \r         for(auto &x : s) {\r             if(x != '-')                                        temp += toupper(x);\r         }\r         \r         int noGroups, firstGroupNo = 0;\r         \r         // First group is having no.os letters < k\r         firstGroupNo = noLetters % k;\r         \r         noGroups = noLetters / k;\r         int i = 0;\r         \r         if(firstGroupNo > 0) {\r             \r             int c = firstGroupNo;\r             res += temp.substr(i, c);\r             \r             i = c;\r             \r             res += '-';\r         }\r         \r         while(i < temp.size()) {\r             \r             if(i + k - 1 < temp.size())                        res += temp.substr(i, k);\r             \r             if(i + k == temp.size())                           break;\r             \r             res += '-';\r             i = i + k;\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p89\\482-license-key-formatting\\482-license-key-formatting.cpp\\Solution\\licenseKeyFormatting(string,int)"
+    },
+    {
+        "f": [],
+        "fm": "vector<vector<string>> groupAnagrams(vector<string>& s) {\r     \r         vector<vector<string>> res;\r         \r         set<string> w;\r         unordered_map<string, vector<string>> mp;\r         \r         for(auto &x : s) {\r             \r             string temp = x;\r             sort(temp.begin(), temp.end());\r             \r             w.insert(temp);\r             mp[temp].push_back(x);\r         }\r         \r         \r         for(auto &x : w) {\r             res.push_back(mp[x]);    \r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_groupAnagrams_vector_string_random_2(void) {\n{\nAKA_test_case_name=\"Solution_groupAnagrams_vector_string_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\49-group-anagrams.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> s;\nvector<vector<string>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode s */\nchar* akaRandomName632621 = new char[2];akaRandomName632621[0] = -111;akaRandomName632621[1] = '\\0';string s_element0=akaRandomName632621;\ns.push_back(s_element0);\nchar* akaRandomName222325 = new char[2];akaRandomName222325[0] = -22;akaRandomName222325[1] = '\\0';string s_element1=akaRandomName222325;\ns.push_back(s_element1);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_groupAnagrams_vector_string_random_2\");vector<vector<string>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->groupAnagrams(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p89\\\\49-group-anagrams\\\\49-group-anagrams.cpp\\\\Solution\\\\groupAnagrams(vector<string>&)\");\n\n\nvector<string> EXPECTED_s;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\49-group-anagrams.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> s;\nvector<vector<string>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode s */\nchar* akaRandomName412941 = new char[2];akaRandomName412941[0] = -111;akaRandomName412941[1] = '\\0';string s_element0=akaRandomName412941;\ns.push_back(s_element0);\nchar* akaRandomName328463 = new char[2];akaRandomName328463[0] = -22;akaRandomName328463[1] = '\\0';string s_element1=akaRandomName328463;\ns.push_back(s_element1);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     vector<vector<string>> groupAnagrams(vector<string>& s) {\r     \r         vector<vector<string>> res;\r         \r         set<string> w;\r         unordered_map<string, vector<string>> mp;\r         \r         for(auto &x : s) {\r             \r             string temp = x;\r             sort(temp.begin(), temp.end());\r             \r             w.insert(temp);\r             mp[temp].push_back(x);\r         }\r         \r         \r         for(auto &x : w) {\r             res.push_back(mp[x]);    \r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p89\\49-group-anagrams\\49-group-anagrams.cpp\\Solution\\groupAnagrams(vector<string>&)"
+    }
+]

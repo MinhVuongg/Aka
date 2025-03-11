@@ -1,0 +1,326 @@
+[
+    {
+        "f": [],
+        "fm": "vector<string> findRelativeRanks(vector<int>& nums) {         vector<int> arr = nums;         auto cmp = [](int a, int b) {return a > b;};         sort(arr.begin(), arr.end(), cmp);         vector<string> result(nums.size());         for (int i = 0; i < nums.size(); i++) {             for (int j = 0; j < nums.size(); j++) {                 if (nums[i] == arr[j]) {                     switch(j) {                         case 0: result[i] = \"Gold Medal\"; break;                         case 1: result[i] = \"Silver Medal\"; break;                         case 2: result[i] = \"Bronze Medal\"; break;                         default: result[i] = to_string(j + 1); break;                     }                     break;                 }             }         }         return result;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findRelativeRanks_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_findRelativeRanks_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/506. Relative Ranks.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1413220953;\nnums.push_back(nums_element0);\nint nums_element1=-1366080263;\nnums.push_back(nums_element1);\nint nums_element2=1592164798;\nnums.push_back(nums_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findRelativeRanks_vector_int_random_2\");vector<string> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findRelativeRanks(nums);\nAKA_fCall++;AKA_mark(\"Return from: ./22/506. Relative Ranks.cpp/Solution/findRelativeRanks(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/506. Relative Ranks.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1413220953;\nnums.push_back(nums_element0);\nint nums_element1=-1366080263;\nnums.push_back(nums_element1);\nint nums_element2=1592164798;\nnums.push_back(nums_element2);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     vector<string> findRelativeRanks(vector<int>& nums) {         vector<int> arr = nums;         auto cmp = [](int a, int b) {return a > b;};         sort(arr.begin(), arr.end(), cmp);         vector<string> result(nums.size());         for (int i = 0; i < nums.size(); i++) {             for (int j = 0; j < nums.size(); j++) {                 if (nums[i] == arr[j]) {                     switch(j) {                         case 0: result[i] = \"Gold Medal\"; break;                         case 1: result[i] = \"Silver Medal\"; break;                         case 2: result[i] = \"Bronze Medal\"; break;                         default: result[i] = to_string(j + 1); break;                     }                     break;                 }             }         }         return result;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/22/506. Relative Ranks.cpp/Solution/findRelativeRanks(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "bool checkPerfectNumber(int num) {         if (num == 1) return false;         int sum = 1;         for (int i = 2; i <= sqrt(num); i++)             if (num % i == 0) sum = sum + (num / i) + i;         return num == sum;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_checkPerfectNumber_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_checkPerfectNumber_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/507. Perfect Number.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint num=1340807758;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode num */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_checkPerfectNumber_int_random_4\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->checkPerfectNumber(num);\nAKA_fCall++;AKA_mark(\"Return from: ./22/507. Perfect Number.cpp/Solution/checkPerfectNumber(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/507. Perfect Number.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint num=1340807758;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode num */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     bool checkPerfectNumber(int num) {         if (num == 1) return false;         int sum = 1;         for (int i = 2; i <= sqrt(num); i++)             if (num % i == 0) sum = sum + (num / i) + i;         return num == sum;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/22/507. Perfect Number.cpp/Solution/checkPerfectNumber(int)"
+    },
+    {
+        "f": [
+            "map<int, int> m;"
+        ],
+        "fm": "vector<int> findFrequentTreeSum(TreeNode* root) {         vector<int> result;         dfs(root);         int maxn = 0;         for (auto it = m.begin(); it != m.end(); it++)             maxn = max(maxn, it->second);         for (auto it = m.begin(); it != m.end(); it++)             if (it->second == maxn)                 result.push_back(it->first);         return result;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findFrequentTreeSum_TreeNodemul_random_3(void) {\n{\nAKA_test_case_name=\"Solution_findFrequentTreeSum_TreeNodemul_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/508. Most Frequent Subtree Sum.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* MapDataNode m */\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-1578103727;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/findFrequentTreeSum(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=1991584848;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/findFrequentTreeSum(TreeNode*)/root/AKA_VECTOR_INIT_root_1/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findFrequentTreeSum_TreeNodemul_random_3\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findFrequentTreeSum(root);\nAKA_fCall++;AKA_mark(\"Return from: ./22/508. Most Frequent Subtree Sum.cpp/Solution/findFrequentTreeSum(TreeNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/508. Most Frequent Subtree Sum.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* MapDataNode m */\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-1578103727;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/findFrequentTreeSum(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=1991584848;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/findFrequentTreeSum(TreeNode*)/root/AKA_VECTOR_INIT_root_1/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findFrequentTreeSum_TreeNodemul_random_4(void) {\n{\nAKA_test_case_name=\"Solution_findFrequentTreeSum_TreeNodemul_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/508. Most Frequent Subtree Sum.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* MapDataNode m */\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=668322769;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/findFrequentTreeSum(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=-218886806;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/findFrequentTreeSum(TreeNode*)/root/AKA_VECTOR_INIT_root_1/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findFrequentTreeSum_TreeNodemul_random_4\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findFrequentTreeSum(root);\nAKA_fCall++;AKA_mark(\"Return from: ./22/508. Most Frequent Subtree Sum.cpp/Solution/findFrequentTreeSum(TreeNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/508. Most Frequent Subtree Sum.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* MapDataNode m */\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=668322769;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/findFrequentTreeSum(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=-218886806;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/findFrequentTreeSum(TreeNode*)/root/AKA_VECTOR_INIT_root_1/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { private:     map<int, int> m; public:     vector<int> findFrequentTreeSum(TreeNode* root) {         vector<int> result;         dfs(root);         int maxn = 0;         for (auto it = m.begin(); it != m.end(); it++)             maxn = max(maxn, it->second);         for (auto it = m.begin(); it != m.end(); it++)             if (it->second == maxn)                 result.push_back(it->first);         return result;     }          void dfs(TreeNode* root) {         if (root == NULL) return ;         if (root->left != NULL) {             dfs(root->left);             root->val += root->left->val;         }         if (root->right != NULL) {             dfs(root->right);             root->val += root->right->val;         }         m[root->val]++;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/22/508. Most Frequent Subtree Sum.cpp/Solution/findFrequentTreeSum(TreeNode*)"
+    },
+    {
+        "f": [
+            "map<int, int> m;"
+        ],
+        "fm": "void dfs(TreeNode* root) {         if (root == NULL) return ;         if (root->left != NULL) {             dfs(root->left);             root->val += root->left->val;         }         if (root->right != NULL) {             dfs(root->right);             root->val += root->right->val;         }         m[root->val]++;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_dfs_TreeNodemul_random_2(void) {\n{\nAKA_test_case_name=\"Solution_dfs_TreeNodemul_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/508. Most Frequent Subtree Sum.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* MapDataNode m */\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=1992958640;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/dfs(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_root_0).val=-1642411606;\n/* PointerStructureDataNode left */\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root_0_DOT_left;\n/* SubStructDataNode left */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_left0_x=2125512967;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/dfs(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/left/left[0]/left/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_left_0 = new ::TreeNode(root0_left0_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).val=-1871053468;\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).right;\nAKA_VECTOR_INIT_root_0_DOT_left.push_back(AKA_VECTOR_INIT_root_0_DOT_left_0);\n/* SubStructDataNode left */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_left1_x=2039021399;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/dfs(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/left/left[1]/left/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_left_1 = new ::TreeNode(root0_left1_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_root_0_DOT_left_1).val=-353997387;\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_left_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_left_1).right;\nAKA_VECTOR_INIT_root_0_DOT_left.push_back(AKA_VECTOR_INIT_root_0_DOT_left_1);\n(*AKA_VECTOR_INIT_root_0).left = AKA_VECTOR_INIT_root_0_DOT_left[0];\n/* PointerStructureDataNode right */\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root_0_DOT_right;\n/* SubStructDataNode right */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_right0_x=-1554460530;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/dfs(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/right/right[0]/right/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_right_0 = new ::TreeNode(root0_right0_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_root_0_DOT_right_0).val=1974684862;\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_right_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_right_0).right;\nAKA_VECTOR_INIT_root_0_DOT_right.push_back(AKA_VECTOR_INIT_root_0_DOT_right_0);\n/* SubStructDataNode right */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_right1_x=931514883;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/dfs(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/right/right[1]/right/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_right_1 = new ::TreeNode(root0_right1_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_root_0_DOT_right_1).val=-323629276;\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_right_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_right_1).right;\nAKA_VECTOR_INIT_root_0_DOT_right.push_back(AKA_VECTOR_INIT_root_0_DOT_right_1);\n/* SubStructDataNode right */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_right2_x=-256818679;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/dfs(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/right/right[2]/right/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_right_2 = new ::TreeNode(root0_right2_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_root_0_DOT_right_2).val=1249814011;\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_right_2).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_right_2).right;\nAKA_VECTOR_INIT_root_0_DOT_right.push_back(AKA_VECTOR_INIT_root_0_DOT_right_2);\n(*AKA_VECTOR_INIT_root_0).right = AKA_VECTOR_INIT_root_0_DOT_right[0];\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=1442162831;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/dfs(TreeNode*)/root/AKA_VECTOR_INIT_root_1/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_root_1).val=-49889665;\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root_1_DOT_right;\n/* SubStructDataNode right */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_right0_x=809351904;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/dfs(TreeNode*)/root/AKA_VECTOR_INIT_root_1/root/right/right[0]/right/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1_DOT_right_0 = new ::TreeNode(root1_right0_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_root_1_DOT_right_0).val=-851299535;\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1_DOT_right_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1_DOT_right_0).right;\nAKA_VECTOR_INIT_root_1_DOT_right.push_back(AKA_VECTOR_INIT_root_1_DOT_right_0);\n(*AKA_VECTOR_INIT_root_1).right = AKA_VECTOR_INIT_root_1_DOT_right[0];\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_dfs_TreeNodemul_random_2\");AKA_INSTANCE___Solution->dfs(root);\nAKA_fCall++;AKA_mark(\"Return from: ./22/508. Most Frequent Subtree Sum.cpp/Solution/dfs(TreeNode*)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/508. Most Frequent Subtree Sum.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* MapDataNode m */\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=1992958640;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/dfs(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_root_0).val=-1642411606;\n/* PointerStructureDataNode left */\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root_0_DOT_left;\n/* SubStructDataNode left */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_left0_x=2125512967;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/dfs(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/left/left[0]/left/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_left_0 = new ::TreeNode(root0_left0_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).val=-1871053468;\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_left_0).right;\nAKA_VECTOR_INIT_root_0_DOT_left.push_back(AKA_VECTOR_INIT_root_0_DOT_left_0);\n/* SubStructDataNode left */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_left1_x=2039021399;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/dfs(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/left/left[1]/left/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_left_1 = new ::TreeNode(root0_left1_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_root_0_DOT_left_1).val=-353997387;\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_left_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_left_1).right;\nAKA_VECTOR_INIT_root_0_DOT_left.push_back(AKA_VECTOR_INIT_root_0_DOT_left_1);\n(*AKA_VECTOR_INIT_root_0).left = AKA_VECTOR_INIT_root_0_DOT_left[0];\n/* PointerStructureDataNode right */\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root_0_DOT_right;\n/* SubStructDataNode right */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_right0_x=-1554460530;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/dfs(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/right/right[0]/right/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_right_0 = new ::TreeNode(root0_right0_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_root_0_DOT_right_0).val=1974684862;\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_right_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_right_0).right;\nAKA_VECTOR_INIT_root_0_DOT_right.push_back(AKA_VECTOR_INIT_root_0_DOT_right_0);\n/* SubStructDataNode right */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_right1_x=931514883;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/dfs(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/right/right[1]/right/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_right_1 = new ::TreeNode(root0_right1_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_root_0_DOT_right_1).val=-323629276;\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_right_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_right_1).right;\nAKA_VECTOR_INIT_root_0_DOT_right.push_back(AKA_VECTOR_INIT_root_0_DOT_right_1);\n/* SubStructDataNode right */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_right2_x=-256818679;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/dfs(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/right/right[2]/right/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_right_2 = new ::TreeNode(root0_right2_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_root_0_DOT_right_2).val=1249814011;\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_right_2).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_right_2).right;\nAKA_VECTOR_INIT_root_0_DOT_right.push_back(AKA_VECTOR_INIT_root_0_DOT_right_2);\n(*AKA_VECTOR_INIT_root_0).right = AKA_VECTOR_INIT_root_0_DOT_right[0];\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=1442162831;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/dfs(TreeNode*)/root/AKA_VECTOR_INIT_root_1/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_root_1).val=-49889665;\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root_1_DOT_right;\n/* SubStructDataNode right */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_right0_x=809351904;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/508. Most Frequent Subtree Sum.cpp/dfs(TreeNode*)/root/AKA_VECTOR_INIT_root_1/root/right/right[0]/right/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1_DOT_right_0 = new ::TreeNode(root1_right0_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_root_1_DOT_right_0).val=-851299535;\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1_DOT_right_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1_DOT_right_0).right;\nAKA_VECTOR_INIT_root_1_DOT_right.push_back(AKA_VECTOR_INIT_root_1_DOT_right_0);\n(*AKA_VECTOR_INIT_root_1).right = AKA_VECTOR_INIT_root_1_DOT_right[0];\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { private:     map<int, int> m; public:     vector<int> findFrequentTreeSum(TreeNode* root) {         vector<int> result;         dfs(root);         int maxn = 0;         for (auto it = m.begin(); it != m.end(); it++)             maxn = max(maxn, it->second);         for (auto it = m.begin(); it != m.end(); it++)             if (it->second == maxn)                 result.push_back(it->first);         return result;     }          void dfs(TreeNode* root) {         if (root == NULL) return ;         if (root->left != NULL) {             dfs(root->left);             root->val += root->left->val;         }         if (root->right != NULL) {             dfs(root->right);             root->val += root->right->val;         }         m[root->val]++;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/22/508. Most Frequent Subtree Sum.cpp/Solution/dfs(TreeNode*)"
+    },
+    {
+        "f": [],
+        "fm": "int findBottomLeftValue(TreeNode* root) {         int result = root->val;         queue<TreeNode *> q;         q.push(root);         TreeNode* temp;         while (!q.empty()) {             int size = q.size();             result = q.front()->val;             while (size--) {                 temp = q.front();                 q.pop();                 if (temp->left != NULL) q.push(temp->left);                 if (temp->right != NULL) q.push(temp->right);             }         }         return result;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findBottomLeftValue_TreeNodemul_random_4(void) {\n{\nAKA_test_case_name=\"Solution_findBottomLeftValue_TreeNodemul_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/513. Find Bottom Left Tree Value.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-1079484321;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/513. Find Bottom Left Tree Value.cpp/findBottomLeftValue(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_root_0).val=-924985885;\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findBottomLeftValue_TreeNodemul_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findBottomLeftValue(root);\nAKA_fCall++;AKA_mark(\"Return from: ./22/513. Find Bottom Left Tree Value.cpp/Solution/findBottomLeftValue(TreeNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/513. Find Bottom Left Tree Value.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-1079484321;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/513. Find Bottom Left Tree Value.cpp/findBottomLeftValue(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_root_0).val=-924985885;\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int findBottomLeftValue(TreeNode* root) {         int result = root->val;         queue<TreeNode *> q;         q.push(root);         TreeNode* temp;         while (!q.empty()) {             int size = q.size();             result = q.front()->val;             while (size--) {                 temp = q.front();                 q.pop();                 if (temp->left != NULL) q.push(temp->left);                 if (temp->right != NULL) q.push(temp->right);             }         }         return result;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/22/513. Find Bottom Left Tree Value.cpp/Solution/findBottomLeftValue(TreeNode*)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> largestValues(TreeNode* root) {         vector<int> result;         queue<TreeNode *> q;         if (root == NULL) return result;         q.push(root);         TreeNode *temp;         while (!q.empty()) {             int size = q.size();             int maxn = INT_MIN;             while (size--) {                 temp = q.front();                 q.pop();                 maxn = max(maxn, temp->val);                 if (temp->left != NULL) q.push(temp->left);                 if (temp->right != NULL) q.push(temp->right);             }             result.push_back(maxn);         }         return result;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_largestValues_TreeNodemul_random_0(void) {\n{\nAKA_test_case_name=\"Solution_largestValues_TreeNodemul_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/515. Find Largest Value in Each Tree Row.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=525282030;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/515. Find Largest Value in Each Tree Row.cpp/largestValues(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=-323922218;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/515. Find Largest Value in Each Tree Row.cpp/largestValues(TreeNode*)/root/AKA_VECTOR_INIT_root_1/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_largestValues_TreeNodemul_random_0\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->largestValues(root);\nAKA_fCall++;AKA_mark(\"Return from: ./22/515. Find Largest Value in Each Tree Row.cpp/Solution/largestValues(TreeNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/515. Find Largest Value in Each Tree Row.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=525282030;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/515. Find Largest Value in Each Tree Row.cpp/largestValues(TreeNode*)/root/AKA_VECTOR_INIT_root_0/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=-323922218;\nAKA_mark(\"Calling: ./22/508. Most Frequent Subtree Sum.cpp/TreeNode/TreeNode(int)|ROOT/515. Find Largest Value in Each Tree Row.cpp/largestValues(TreeNode*)/root/AKA_VECTOR_INIT_root_1/root/TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     vector<int> largestValues(TreeNode* root) {         vector<int> result;         queue<TreeNode *> q;         if (root == NULL) return result;         q.push(root);         TreeNode *temp;         while (!q.empty()) {             int size = q.size();             int maxn = INT_MIN;             while (size--) {                 temp = q.front();                 q.pop();                 maxn = max(maxn, temp->val);                 if (temp->left != NULL) q.push(temp->left);                 if (temp->right != NULL) q.push(temp->right);             }             result.push_back(maxn);         }         return result;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/22/515. Find Largest Value in Each Tree Row.cpp/Solution/largestValues(TreeNode*)"
+    },
+    {
+        "f": [],
+        "fm": "int longestPalindromeSubseq(string s) {         int len = s.length();         vector<vector<int>> dp(len, vector<int>(len));         for (int i = len - 1; i >= 0; i--) {             dp[i][i] = 1;             for (int j = i + 1; j < len; j++) {                 if (s[i] == s[j])                     dp[i][j] = dp[i+1][j-1] + 2;                 else                     dp[i][j] = max(dp[i+1][j], dp[i][j-1]);             }         }         return dp[0][len-1];     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_longestPalindromeSubseq_string_random_4(void) {\n{\nAKA_test_case_name=\"Solution_longestPalindromeSubseq_string_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/516. Longest Palindromic Subsequence.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName717318 = new char[2];akaRandomName717318[0] = -122;akaRandomName717318[1] = '\\0';string s=akaRandomName717318;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_longestPalindromeSubseq_string_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->longestPalindromeSubseq(s);\nAKA_fCall++;AKA_mark(\"Return from: ./22/516. Longest Palindromic Subsequence.cpp/Solution/longestPalindromeSubseq(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/516. Longest Palindromic Subsequence.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName932512 = new char[2];akaRandomName932512[0] = -122;akaRandomName932512[1] = '\\0';string s=akaRandomName932512;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int longestPalindromeSubseq(string s) {         int len = s.length();         vector<vector<int>> dp(len, vector<int>(len));         for (int i = len - 1; i >= 0; i--) {             dp[i][i] = 1;             for (int j = i + 1; j < len; j++) {                 if (s[i] == s[j])                     dp[i][j] = dp[i+1][j-1] + 2;                 else                     dp[i][j] = max(dp[i+1][j], dp[i][j-1]);             }         }         return dp[0][len-1];     }      };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/22/516. Longest Palindromic Subsequence.cpp/Solution/longestPalindromeSubseq(string)"
+    },
+    {
+        "f": [],
+        "fm": "bool detectCapitalUse(string word) {         if (word.length() <= 1) return true;         if (islower(word[0]) || (isupper(word[0]) && islower(word[1]))) {             for (int i = 1; i < word.length(); i++)                 if (isupper(word[i])) return false;         } else {             for (int i = 1; i < word.length(); i++)                 if (islower(word[i])) return false;         }         return true;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_detectCapitalUse_string_random_1(void) {\n{\nAKA_test_case_name=\"Solution_detectCapitalUse_string_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/520. Detect Capital.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName630344 = new char[2];akaRandomName630344[0] = -25;akaRandomName630344[1] = '\\0';string word=akaRandomName630344;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_detectCapitalUse_string_random_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->detectCapitalUse(word);\nAKA_fCall++;AKA_mark(\"Return from: ./22/520. Detect Capital.cpp/Solution/detectCapitalUse(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/520. Detect Capital.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName514832 = new char[2];akaRandomName514832[0] = -25;akaRandomName514832[1] = '\\0';string word=akaRandomName514832;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     bool detectCapitalUse(string word) {         if (word.length() <= 1) return true;         if (islower(word[0]) || (isupper(word[0]) && islower(word[1]))) {             for (int i = 1; i < word.length(); i++)                 if (isupper(word[i])) return false;         } else {             for (int i = 1; i < word.length(); i++)                 if (islower(word[i])) return false;         }         return true;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/22/520. Detect Capital.cpp/Solution/detectCapitalUse(string)"
+    },
+    {
+        "f": [],
+        "fm": "int findLUSlength(string a, string b) {         return a == b ? -1 : max(a.length(), b.length());     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findLUSlength_string_string_random_2(void) {\n{\nAKA_test_case_name=\"Solution_findLUSlength_string_string_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/521. Longest Uncommon Subsequence I.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName472606 = new char[2];akaRandomName472606[0] = -51;akaRandomName472606[1] = '\\0';string a=akaRandomName472606;\nchar* akaRandomName893440 = new char[2];akaRandomName893440[0] = -79;akaRandomName893440[1] = '\\0';string b=akaRandomName893440;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode a */\n/* NormalStringDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findLUSlength_string_string_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findLUSlength(a,b);\nAKA_fCall++;AKA_mark(\"Return from: ./22/521. Longest Uncommon Subsequence I.cpp/Solution/findLUSlength(string,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/521. Longest Uncommon Subsequence I.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName960288 = new char[2];akaRandomName960288[0] = -51;akaRandomName960288[1] = '\\0';string a=akaRandomName960288;\nchar* akaRandomName998759 = new char[2];akaRandomName998759[0] = -79;akaRandomName998759[1] = '\\0';string b=akaRandomName998759;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode a */\n/* NormalStringDataNode b */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int findLUSlength(string a, string b) {         return a == b ? -1 : max(a.length(), b.length());     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/22/521. Longest Uncommon Subsequence I.cpp/Solution/findLUSlength(string,string)"
+    },
+    {
+        "f": [],
+        "fm": "string findLongestWord(string s, vector<string>& d) {         string result = \"\";         for (int index = 0; index < d.size(); index++) {             int i, j;             for (i = 0, j = 0; i < s.length() && j < d[index].length(); i++) {                 if (s[i] == d[index][j]) j++;             }             if (j == d[index].length() && (result.length() < d[index].length() || (result.length() == d[index].length() && result > d[index])))                 result = d[index];         }         return result;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findLongestWord_string_vector_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_findLongestWord_string_vector_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/524. Longest Word in Dictionary through Deleting.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName180362 = new char[2];akaRandomName180362[0] = -107;akaRandomName180362[1] = '\\0';string s=akaRandomName180362;\nvector<string> d;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* VectorDataNode d */\nchar* akaRandomName378413 = new char[2];akaRandomName378413[0] = 20;akaRandomName378413[1] = '\\0';string d_element0=akaRandomName378413;\nd.push_back(d_element0);\nchar* akaRandomName194547 = new char[2];akaRandomName194547[0] = 71;akaRandomName194547[1] = '\\0';string d_element1=akaRandomName194547;\nd.push_back(d_element1);\nchar* akaRandomName503015 = new char[2];akaRandomName503015[0] = 86;akaRandomName503015[1] = '\\0';string d_element2=akaRandomName503015;\nd.push_back(d_element2);\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findLongestWord_string_vector_string_random_3\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findLongestWord(s,d);\nAKA_fCall++;AKA_mark(\"Return from: ./22/524. Longest Word in Dictionary through Deleting.cpp/Solution/findLongestWord(string,vector<string>&)\");\n\n\n\nvector<string> EXPECTED_d;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/524. Longest Word in Dictionary through Deleting.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName317214 = new char[2];akaRandomName317214[0] = -107;akaRandomName317214[1] = '\\0';string s=akaRandomName317214;\nvector<string> d;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* VectorDataNode d */\nchar* akaRandomName694724 = new char[2];akaRandomName694724[0] = 20;akaRandomName694724[1] = '\\0';string d_element0=akaRandomName694724;\nd.push_back(d_element0);\nchar* akaRandomName145651 = new char[2];akaRandomName145651[0] = 71;akaRandomName145651[1] = '\\0';string d_element1=akaRandomName145651;\nd.push_back(d_element1);\nchar* akaRandomName820461 = new char[2];akaRandomName820461[0] = 86;akaRandomName820461[1] = '\\0';string d_element2=akaRandomName820461;\nd.push_back(d_element2);\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     string findLongestWord(string s, vector<string>& d) {         string result = \"\";         for (int index = 0; index < d.size(); index++) {             int i, j;             for (i = 0, j = 0; i < s.length() && j < d[index].length(); i++) {                 if (s[i] == d[index][j]) j++;             }             if (j == d[index].length() && (result.length() < d[index].length() || (result.length() == d[index].length() && result > d[index])))                 result = d[index];         }         return result;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/22/524. Longest Word in Dictionary through Deleting.cpp/Solution/findLongestWord(string,vector<string>&)"
+    },
+    {
+        "f": [],
+        "fm": "int findMaxLength(vector<int>& nums) {         int result = 0, sum = 0;         for (int i = 0; i < nums.size(); i++)             if (nums[i] == 0) nums[i] = -1;         map<int, int> m;         m[0] = -1;         for (int i = 0; i < nums.size(); i++) {             sum += nums[i];             if (m.find(sum) != m.end())                 result = max(result, i - m[sum]);             else                 m[sum] = i;         }         return result;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findMaxLength_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_findMaxLength_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/525. Contiguous Array.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-668672347;\nnums.push_back(nums_element0);\nint nums_element1=2140665714;\nnums.push_back(nums_element1);\nint nums_element2=1167158288;\nnums.push_back(nums_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findMaxLength_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findMaxLength(nums);\nAKA_fCall++;AKA_mark(\"Return from: ./22/525. Contiguous Array.cpp/Solution/findMaxLength(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/525. Contiguous Array.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-668672347;\nnums.push_back(nums_element0);\nint nums_element1=2140665714;\nnums.push_back(nums_element1);\nint nums_element2=1167158288;\nnums.push_back(nums_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int findMaxLength(vector<int>& nums) {         int result = 0, sum = 0;         for (int i = 0; i < nums.size(); i++)             if (nums[i] == 0) nums[i] = -1;         map<int, int> m;         m[0] = -1;         for (int i = 0; i < nums.size(); i++) {             sum += nums[i];             if (m.find(sum) != m.end())                 result = max(result, i - m[sum]);             else                 m[sum] = i;         }         return result;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/22/525. Contiguous Array.cpp/Solution/findMaxLength(vector<int>&)"
+    }
+]

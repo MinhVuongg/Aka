@@ -1,0 +1,206 @@
+[
+    {
+        "f": [],
+        "fm": "int romanToInt(string s) {\r     \r         int res = 0;\r         int n = s.length();\r         \r         unordered_map<char, int> u;\r         \r         // IV - 4, IX - 9, XL - 40, XC - 90, CD - 400, CM - 900\r         // V - 5, X - 10, L - 50, C - 100, D - 500, M - 1000 \r         \r         u['I'] = 1;\r         u['V'] = 5;\r         u['X'] = 10;\r         u['L'] = 50;\r         u['C'] = 100;\r         u['D'] = 500;\r         u['M'] = 1000;\r         \r         char temp;\r         \r         // s[i] temp\r         \r         for(int i=n-1; i>=0; i--) {\r             \r             if((temp == 'V' || temp == 'X') && s[i] == 'I')              res -= u[s[i]];\r             else if((temp == 'L' || temp == 'C') && s[i] == 'X')         res -= u[s[i]];\r             else if((temp == 'D' || temp == 'M') && s[i] == 'C')         res -= u[s[i]];\r             else                                                         res += u[s[i]];\r             \r             temp = s[i];\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_romanToInt_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_romanToInt_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\13-roman-to-integer.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName923896 = new char[2];akaRandomName923896[0] = 1;akaRandomName923896[1] = '\\0';string s=akaRandomName923896;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_romanToInt_string_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->romanToInt(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p24\\\\13-roman-to-integer\\\\13-roman-to-integer.cpp\\\\Solution\\\\romanToInt(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\13-roman-to-integer.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName462247 = new char[2];akaRandomName462247[0] = 1;akaRandomName462247[1] = '\\0';string s=akaRandomName462247;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int romanToInt(string s) {\r     \r         int res = 0;\r         int n = s.length();\r         \r         unordered_map<char, int> u;\r         \r         // IV - 4, IX - 9, XL - 40, XC - 90, CD - 400, CM - 900\r         // V - 5, X - 10, L - 50, C - 100, D - 500, M - 1000 \r         \r         u['I'] = 1;\r         u['V'] = 5;\r         u['X'] = 10;\r         u['L'] = 50;\r         u['C'] = 100;\r         u['D'] = 500;\r         u['M'] = 1000;\r         \r         char temp;\r         \r         // s[i] temp\r         \r         for(int i=n-1; i>=0; i--) {\r             \r             if((temp == 'V' || temp == 'X') && s[i] == 'I')              res -= u[s[i]];\r             else if((temp == 'L' || temp == 'C') && s[i] == 'X')         res -= u[s[i]];\r             else if((temp == 'D' || temp == 'M') && s[i] == 'C')         res -= u[s[i]];\r             else                                                         res += u[s[i]];\r             \r             temp = s[i];\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p24\\13-roman-to-integer\\13-roman-to-integer.cpp\\Solution\\romanToInt(string)"
+    },
+    {
+        "f": [],
+        "fm": "void bfs(TreeNode* root, int &res) {\r         \r         if(root == NULL)                                    return;\r         \r         queue<TreeNode*> q;\r         q.push(root);\r         \r         while(q.empty() == false) {\r             \r             int n = q.size();\r             int sum = 0;\r             \r             for(int i=0; i<n; i++) {\r                 \r                 TreeNode* temp = q.front();\r                 q.pop();\r                 \r                 if(temp->left == NULL && temp->right == NULL) {\r                     sum += temp->val;\r                 }\r                 \r                 if(temp->left != NULL)                      q.push(temp->left);\r                 if(temp->right != NULL)                     q.push(temp->right);\r             }\r             \r             res = sum;\r         }\r         \r         return;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_bfs_TreeNodemul_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_bfs_TreeNodemul_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1302-deepest-leaves-sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode() */\nAKA_mark(\"Calling: .\\\\p24\\\\1302-deepest-leaves-sum\\\\1302-deepest-leaves-sum.cpp\\\\TreeNode\\\\TreeNode()|ROOT\\\\1302-deepest-leaves-sum.cpp\\\\bfs(TreeNode*,int&)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode();\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\n\n\nint res=194216280;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* NormalNumberDataNode res */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_bfs_TreeNodemul_int_random_3\");AKA_INSTANCE___Solution->bfs(root,res);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p24\\\\1302-deepest-leaves-sum\\\\1302-deepest-leaves-sum.cpp\\\\Solution\\\\bfs(TreeNode*,int&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\13-roman-to-integer.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName462247 = new char[2];akaRandomName462247[0] = 1;akaRandomName462247[1] = '\\0';string s=akaRandomName462247;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \r     void bfs(TreeNode* root, int &res) {\r         \r         if(root == NULL)                                    return;\r         \r         queue<TreeNode*> q;\r         q.push(root);\r         \r         while(q.empty() == false) {\r             \r             int n = q.size();\r             int sum = 0;\r             \r             for(int i=0; i<n; i++) {\r                 \r                 TreeNode* temp = q.front();\r                 q.pop();\r                 \r                 if(temp->left == NULL && temp->right == NULL) {\r                     sum += temp->val;\r                 }\r                 \r                 if(temp->left != NULL)                      q.push(temp->left);\r                 if(temp->right != NULL)                     q.push(temp->right);\r             }\r             \r             res = sum;\r         }\r         \r         return;\r     }\r     \r     int deepestLeavesSum(TreeNode* root) {\r     \r         int res = 0;\r         \r         if(root == NULL)                                    return res;\r         \r         bfs(root, res);\r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p24\\1302-deepest-leaves-sum\\1302-deepest-leaves-sum.cpp\\Solution\\bfs(TreeNode*,int&)"
+    },
+    {
+        "f": [],
+        "fm": "int deepestLeavesSum(TreeNode* root) {\r     \r         int res = 0;\r         \r         if(root == NULL)                                    return res;\r         \r         bfs(root, res);\r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_deepestLeavesSum_TreeNodemul_random_3(void) {\n{\nAKA_test_case_name=\"Solution_deepestLeavesSum_TreeNodemul_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1302-deepest-leaves-sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-1371214280;\nAKA_mark(\"Calling: .\\\\p24\\\\1302-deepest-leaves-sum\\\\1302-deepest-leaves-sum.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\1302-deepest-leaves-sum.cpp\\\\deepestLeavesSum(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_deepestLeavesSum_TreeNodemul_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->deepestLeavesSum(root);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p24\\\\1302-deepest-leaves-sum\\\\1302-deepest-leaves-sum.cpp\\\\Solution\\\\deepestLeavesSum(TreeNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\13-roman-to-integer.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName462247 = new char[2];akaRandomName462247[0] = 1;akaRandomName462247[1] = '\\0';string s=akaRandomName462247;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \r     void bfs(TreeNode* root, int &res) {\r         \r         if(root == NULL)                                    return;\r         \r         queue<TreeNode*> q;\r         q.push(root);\r         \r         while(q.empty() == false) {\r             \r             int n = q.size();\r             int sum = 0;\r             \r             for(int i=0; i<n; i++) {\r                 \r                 TreeNode* temp = q.front();\r                 q.pop();\r                 \r                 if(temp->left == NULL && temp->right == NULL) {\r                     sum += temp->val;\r                 }\r                 \r                 if(temp->left != NULL)                      q.push(temp->left);\r                 if(temp->right != NULL)                     q.push(temp->right);\r             }\r             \r             res = sum;\r         }\r         \r         return;\r     }\r     \r     int deepestLeavesSum(TreeNode* root) {\r     \r         int res = 0;\r         \r         if(root == NULL)                                    return res;\r         \r         bfs(root, res);\r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p24\\1302-deepest-leaves-sum\\1302-deepest-leaves-sum.cpp\\Solution\\deepestLeavesSum(TreeNode*)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> decompressRLElist(vector<int>& a) {\r     \r         vector<int> res;\r         int n = a.size();\r         \r         for(int i=0; i + 1 < n; i += 2) {\r             \r             int freq = a[i];\r             int val = a[i + 1];\r             \r             // Push val into res freq times\r             while(freq--)                               res.push_back(val);\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_decompressRLElist_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_decompressRLElist_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1313-decompress-run-length-encoded-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=1168762309;\na.push_back(a_element0);\nint a_element1=-1226612753;\na.push_back(a_element1);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_decompressRLElist_vector_int_random_1\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->decompressRLElist(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p24\\\\1313-decompress-run-length-encoded-list\\\\1313-decompress-run-length-encoded-list.cpp\\\\Solution\\\\decompressRLElist(vector<int>&)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\13-roman-to-integer.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName462247 = new char[2];akaRandomName462247[0] = 1;akaRandomName462247[1] = '\\0';string s=akaRandomName462247;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_decompressRLElist_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_decompressRLElist_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1313-decompress-run-length-encoded-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=-954983206;\na.push_back(a_element0);\nint a_element1=869589339;\na.push_back(a_element1);\nint a_element2=49258006;\na.push_back(a_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_decompressRLElist_vector_int_random_2\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->decompressRLElist(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p24\\\\1313-decompress-run-length-encoded-list\\\\1313-decompress-run-length-encoded-list.cpp\\\\Solution\\\\decompressRLElist(vector<int>&)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1302-deepest-leaves-sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode() */\nAKA_mark(\"Calling: .\\\\p24\\\\1302-deepest-leaves-sum\\\\1302-deepest-leaves-sum.cpp\\\\TreeNode\\\\TreeNode()|ROOT\\\\1302-deepest-leaves-sum.cpp\\\\bfs(TreeNode*,int&)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode();\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\n\n\nint res=194216280;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* NormalNumberDataNode res */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     vector<int> decompressRLElist(vector<int>& a) {\r     \r         vector<int> res;\r         int n = a.size();\r         \r         for(int i=0; i + 1 < n; i += 2) {\r             \r             int freq = a[i];\r             int val = a[i + 1];\r             \r             // Push val into res freq times\r             while(freq--)                               res.push_back(val);\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p24\\1313-decompress-run-length-encoded-list\\1313-decompress-run-length-encoded-list.cpp\\Solution\\decompressRLElist(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "bool isValid(int x, int y, int n, int m) {\r         if(x >= 0 && x < n && y >= 0 && y < m)          return true;\r         else                                            return false;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isValid_int_int_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_isValid_int_int_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1314-matrix-block-sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint x=-826568602;\n\n\nint y=153504458;\n\n\nint n=1166501212;\n\n\nint m=1034332770;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode m */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isValid_int_int_int_int_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isValid(x,y,n,m);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p24\\\\1314-matrix-block-sum\\\\1314-matrix-block-sum.cpp\\\\Solution\\\\isValid(int,int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\13-roman-to-integer.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName462247 = new char[2];akaRandomName462247[0] = 1;akaRandomName462247[1] = '\\0';string s=akaRandomName462247;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isValid_int_int_int_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_isValid_int_int_int_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1314-matrix-block-sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint x=134958604;\n\n\nint y=1123477169;\n\n\nint n=1972165395;\n\n\nint m=-1207948443;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode m */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isValid_int_int_int_int_random_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isValid(x,y,n,m);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p24\\\\1314-matrix-block-sum\\\\1314-matrix-block-sum.cpp\\\\Solution\\\\isValid(int,int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1302-deepest-leaves-sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode() */\nAKA_mark(\"Calling: .\\\\p24\\\\1302-deepest-leaves-sum\\\\1302-deepest-leaves-sum.cpp\\\\TreeNode\\\\TreeNode()|ROOT\\\\1302-deepest-leaves-sum.cpp\\\\bfs(TreeNode*,int&)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode();\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\n\n\nint res=194216280;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* NormalNumberDataNode res */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isValid_int_int_int_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_isValid_int_int_int_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1314-matrix-block-sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint x=256588870;\n\n\nint y=-687139831;\n\n\nint n=-1732910951;\n\n\nint m=963410969;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode m */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isValid_int_int_int_int_random_3\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isValid(x,y,n,m);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p24\\\\1314-matrix-block-sum\\\\1314-matrix-block-sum.cpp\\\\Solution\\\\isValid(int,int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1302-deepest-leaves-sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-1371214280;\nAKA_mark(\"Calling: .\\\\p24\\\\1302-deepest-leaves-sum\\\\1302-deepest-leaves-sum.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\1302-deepest-leaves-sum.cpp\\\\deepestLeavesSum(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \r     bool isValid(int x, int y, int n, int m) {\r         if(x >= 0 && x < n && y >= 0 && y < m)          return true;\r         else                                            return false;\r     }\r     \r     vector<vector<int>> matrixBlockSum(vector<vector<int>>& mat, int k) {\r     \r         vector<vector<int>> res;\r         \r         int n = mat.size();\r         int m = mat[0].size();\r         \r         res.resize(n, vector<int>(m, 0));\r         \r         for(int i=0; i<n; i++) {\r             for(int j=0; j<m; j++) {\r                 \r                 int sum = 0;\r                 \r                 // i = [i-k, i+k], j = [j-k, j+k]\r                 for(int i1=i-k; i1<=i+k; i1++) {\r                     for(int j1=j-k; j1<=j+k; j1++) {\r                         \r                         if(isValid(i1, j1, n, m) == true) {\r                             sum += mat[i1][j1];\r                         }\r                     }\r                 }\r                 \r                 res[i][j] = sum;\r             }\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p24\\1314-matrix-block-sum\\1314-matrix-block-sum.cpp\\Solution\\isValid(int,int,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "vector<vector<int>> matrixBlockSum(vector<vector<int>>& mat, int k) {\r     \r         vector<vector<int>> res;\r         \r         int n = mat.size();\r         int m = mat[0].size();\r         \r         res.resize(n, vector<int>(m, 0));\r         \r         for(int i=0; i<n; i++) {\r             for(int j=0; j<m; j++) {\r                 \r                 int sum = 0;\r                 \r                 // i = [i-k, i+k], j = [j-k, j+k]\r                 for(int i1=i-k; i1<=i+k; i1++) {\r                     for(int j1=j-k; j1<=j+k; j1++) {\r                         \r                         if(isValid(i1, j1, n, m) == true) {\r                             sum += mat[i1][j1];\r                         }\r                     }\r                 }\r                 \r                 res[i][j] = sum;\r             }\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_matrixBlockSum_vector_vector_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_matrixBlockSum_vector_vector_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1314-matrix-block-sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> mat;\n\n\nint k=8;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode mat */\nvector<int> mat_element0;\nint mat_element0_element0=222916566;\nmat_element0.push_back(mat_element0_element0);\nint mat_element0_element1=1211752713;\nmat_element0.push_back(mat_element0_element1);\nmat.push_back(mat_element0);\nvector<int> mat_element1;\nint mat_element1_element0=-1438778199;\nmat_element1.push_back(mat_element1_element0);\nint mat_element1_element1=1400700344;\nmat_element1.push_back(mat_element1_element1);\nmat.push_back(mat_element1);\n/* NormalNumberDataNode k */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_matrixBlockSum_vector_vector_int_int_random_0\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->matrixBlockSum(mat,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p24\\\\1314-matrix-block-sum\\\\1314-matrix-block-sum.cpp\\\\Solution\\\\matrixBlockSum(vector<vector<int>>&,int)\");\n\n\nvector<vector<int>> EXPECTED_mat;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\13-roman-to-integer.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName462247 = new char[2];akaRandomName462247[0] = 1;akaRandomName462247[1] = '\\0';string s=akaRandomName462247;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \r     bool isValid(int x, int y, int n, int m) {\r         if(x >= 0 && x < n && y >= 0 && y < m)          return true;\r         else                                            return false;\r     }\r     \r     vector<vector<int>> matrixBlockSum(vector<vector<int>>& mat, int k) {\r     \r         vector<vector<int>> res;\r         \r         int n = mat.size();\r         int m = mat[0].size();\r         \r         res.resize(n, vector<int>(m, 0));\r         \r         for(int i=0; i<n; i++) {\r             for(int j=0; j<m; j++) {\r                 \r                 int sum = 0;\r                 \r                 // i = [i-k, i+k], j = [j-k, j+k]\r                 for(int i1=i-k; i1<=i+k; i1++) {\r                     for(int j1=j-k; j1<=j+k; j1++) {\r                         \r                         if(isValid(i1, j1, n, m) == true) {\r                             sum += mat[i1][j1];\r                         }\r                     }\r                 }\r                 \r                 res[i][j] = sum;\r             }\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p24\\1314-matrix-block-sum\\1314-matrix-block-sum.cpp\\Solution\\matrixBlockSum(vector<vector<int>>&,int)"
+    }
+]

@@ -1,0 +1,1126 @@
+[
+    {
+        "f": [],
+        "fm": "void open_File(ifstream& fi)\r {\r     if (!fi)\r     {\r         cout << \"Lo^i : Kho^ng the^? thao ta'c vo'i te^p \" << endl;\r         system(\"pause\");\r         exit(1);\r     }\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_open_File_ifstream_directed_0(void) {\n{\nAKA_test_case_name=\"open_File_ifstream_directed_0\";\n\n// set up\n;\n\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test open_File_ifstream_directed_0\");open_File(fi);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\main.cpp\\\\open_File(ifstream&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_open_File_ifstream_random_0(void) {\n{\nAKA_test_case_name=\"open_File_ifstream_random_0\";\n\n// set up\n;\n\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test open_File_ifstream_random_0\");open_File(fi);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\main.cpp\\\\open_File(ifstream&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\main.cpp\\open_File(ifstream&)"
+    },
+    {
+        "f": [],
+        "fm": "void open_File(ofstream& fo) // tham chieu stream\r {\r     if (!fo)\r     {\r         cout << \"Lo^i : Kho^ng the^? thao ta'c vo'i te^p \" << endl;\r         system(\"pause\");\r         exit(1);\r     }\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_open_File_ofstream_random_0(void) {\n{\nAKA_test_case_name=\"open_File_ofstream_random_0\";\n\n// set up\n;\n\nofstream fo;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fo */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test open_File_ofstream_random_0\");open_File(fo);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\main.cpp\\\\open_File(ofstream&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\main.cpp\\open_File(ofstream&)"
+    },
+    {
+        "f": [],
+        "fm": "void close_all_File()\r {\r     fi_TS.close();\r     fo_TS_SapXep.close();\r     fo_TS_Do.close();\r     fi_TS_DiemNgoaiNgu.close();\r     fo_TS_CLC.close();\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_close_all_File_random_0(void) {\n{\nAKA_test_case_name=\"close_all_File_random_0\";\n\n// set up\n;\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test close_all_File_random_0\");close_all_File();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\main.cpp\\\\close_all_File()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\main.cpp\\close_all_File()"
+    },
+    {
+        "f": [],
+        "fm": "void open_all_File()\r {\r     open_File(fi_TS);\r     open_File(fo_TS_SapXep);\r     open_File(fo_TS_Do);\r     open_File(fi_TS_DiemNgoaiNgu);\r     open_File(fo_TS_CLC);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_open_all_File_random_0(void) {\n{\nAKA_test_case_name=\"open_all_File_random_0\";\n\n// set up\n;\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test open_all_File_random_0\");open_all_File();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\main.cpp\\\\open_all_File()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\main.cpp\\open_all_File()"
+    },
+    {
+        "f": [],
+        "fm": "void TS::StrDel(char s[],int k,int h)\r {\r     memmove(s+k,s+k+h,strlen(s)-k+1);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_StrDel_char_int_int_random_0(void) {\n{\nAKA_test_case_name=\"TS_StrDel_char_int_int_random_0\";\n\n// set up\n;\n\nchar s[1];\n\n\n\nint k=1967139701;\n\n\nint h=595370477;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode s */\n/* NormalCharacterDataNode s[0] */\ns[0]=81;\n/* NormalCharacterDataNode s[1] */\ns[1]=-73;\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode h */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_StrDel_char_int_int_random_0\");TS::StrDel(s,k,h);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::StrDel(char[],int,int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::StrDel(char[],int,int)"
+    },
+    {
+        "f": [],
+        "fm": "void TS::StrIns(char s[],int pos, char s1[])\r {\r     memmove(s+strlen(s1)+pos,s+pos,strlen(s)-pos+1);\r     strncpy(s+pos,s1,strlen(s1));\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_StrIns_char_int_char_random_0(void) {\n{\nAKA_test_case_name=\"TS_StrIns_char_int_char_random_0\";\n\n// set up\n;\n\nchar s[1];\n\n\n\nint pos=-895026257;\nchar s1[1];\n\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode s */\n/* NormalCharacterDataNode s[0] */\ns[0]=-97;\n/* NormalCharacterDataNode s[1] */\ns[1]=1;\n/* NormalNumberDataNode pos */\n/* OneDimensionCharacterDataNode s1 */\n/* NormalCharacterDataNode s1[0] */\ns1[0]=-110;\n/* NormalCharacterDataNode s1[1] */\ns1[1]=0;\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_StrIns_char_int_char_random_0\");TS::StrIns(s,pos,s1);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::StrIns(char[],int,char[])\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::StrIns(char[],int,char[])"
+    },
+    {
+        "f": [],
+        "fm": "void TS::xoa_dau_cach_thua(char s[]) //\r {\r     while (s[0] == ' ') StrDel(s, 0, 1);\r     int i = 0;\r     while( i<strlen(s))\r     {\r         if (s[i]==' ')\r             while (s[i+1]==' ' & s[i+1]!='\\0')\r                 StrDel(s, i+1, 1);\r         i++;\r     }\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_xoa_dau_cach_thua_char_random_0(void) {\n{\nAKA_test_case_name=\"TS_xoa_dau_cach_thua_char_random_0\";\n\n// set up\n;\n\nchar s[1];\n\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode s */\n/* NormalCharacterDataNode s[0] */\ns[0]=3;\n/* NormalCharacterDataNode s[1] */\ns[1]=-45;\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_xoa_dau_cach_thua_char_random_0\");TS::xoa_dau_cach_thua(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::xoa_dau_cach_thua(char[])\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::xoa_dau_cach_thua(char[])"
+    },
+    {
+        "f": [],
+        "fm": "void TS::StrIns(char s[],int pos, char ch)\r {\r     memmove(s+1+pos,s+pos,strlen(s)-pos+1);\r     s[pos] = ch;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_StrIns_char_int_char_random_1(void) {\n{\nAKA_test_case_name=\"TS_StrIns_char_int_char_random_1\";\n\n// set up\n;\n\nchar s[1];\n\n\n\nint pos=-1991174134;\n\nchar ch=66;\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode s */\n/* NormalCharacterDataNode s[0] */\ns[0]=-81;\n/* NormalCharacterDataNode s[1] */\ns[1]=85;\n/* NormalNumberDataNode pos */\n/* NormalCharacterDataNode ch */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_StrIns_char_int_char_random_1\");TS::StrIns(s,pos,ch);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::StrIns(char[],int,char)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::StrIns(char[],int,char)"
+    },
+    {
+        "f": [],
+        "fm": "void TS::chuan_hoa(char* s)\r {\r     xoa_dau_cach_thua(s);\r     int i = 0;\r \twhile (i <strlen(s))\r     {\r         if (s[i]==':' || s[i] ==';' || s[i]=='|')\r         {\r             if (s[i+1]==' ')StrDel(s, i+1, 1);\r             if (s[i-1]==' ')StrDel(s, i-1, 1);\r         }\r         i++;\r     }\r     if (s[strlen(s)-1]==' ')\tStrDel(s, strlen(s)-1, 1);\r     for (int i = 0; i < strlen(s); i++)\r         if (s[i]>='A' & s[i]<='z') s[i] = toupper(s[i]) + 32;\r     for (int i = 0; i<strlen(s); i++)\r         if (s[i]=='|' || s[i]==':' || s[i]==';' || s[i]==' ')\r             if (s[i+1]>='a' & s[i+1]<='z')\r                 s[i+1] = s[i+1] - 32;\r     for (int i = 0; i< strlen(s); i++)\r     {\r         if (s[i]=='|'|| s[i]==':' || s[i]==';') break;\r         if(s[i]>='A' & s[i]<='z')s[i] = s[i]-32;\r     }\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_chuan_hoa_charmul_random_0(void) {\n{\nAKA_test_case_name=\"TS_chuan_hoa_charmul_random_0\";\n\n// set up\n;\n\nchar AKA_ARRAY_INIT_s[2];\n\nchar AKA_ARRAY_INIT_s_0=-87;\nAKA_ARRAY_INIT_s[0] = AKA_ARRAY_INIT_s_0;\n\nchar AKA_ARRAY_INIT_s_1=56;\nAKA_ARRAY_INIT_s[1] = AKA_ARRAY_INIT_s_1;\n\nchar* s = AKA_ARRAY_INIT_s;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode s */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_chuan_hoa_charmul_random_0\");TS::chuan_hoa(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::chuan_hoa(char*)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::chuan_hoa(char*)"
+    },
+    {
+        "f": [],
+        "fm": "void TS::gotoxy(short x, short y)\r {\r     HANDLE hCon = GetStdHandle(STD_OUTPUT_HANDLE);\r     COORD pos;\r     pos.X=x-1;\r     pos.Y=y-1;\r     SetConsoleCursorPosition(hCon, pos);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_gotoxy_short_short_random_0(void) {\n{\nAKA_test_case_name=\"TS_gotoxy_short_short_random_0\";\n\n// set up\n;\n\n\n\nshort x=-18060;\n\n\nshort y=-10816;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_gotoxy_short_short_random_0\");TS::gotoxy(x,y);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::gotoxy(short,short)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::gotoxy(short,short)"
+    },
+    {
+        "f": [],
+        "fm": "int TS::choose(int cot, int dong, int n) // n la tong so opitions\r {\r     int opi = 1;\r     char ch;\r     int icot = cot, idong = dong;\r     // phan xu li, dung cac phim len xuong phai trai\r     do\r     {\r         gotoxy(icot, idong);\r         textcolor(9);\r         cout <<char(178);//1\r         ch = getch();\r         if (ch==72) // phim mui ten len\r         {\r             gotoxy(icot, idong);\r             cout <<\" \";\r             opi--;\r             idong--;\r             if(opi<=0) opi = n;\r             if(idong<dong) idong = dong + n - 1;\r         }\r         if (ch==80) // phim mui ten xuong\r         {\r             gotoxy(icot, idong);\r             cout <<\" \";\r             opi++;\r             idong++;\r             if(opi > n) opi = 1;\r             if(idong > dong + n - 1) idong = dong;\r         }\r \r     }\r     while (ch!=13); // ma ASCII Enter\r     textcolor(11);\r     return opi;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_choose_int_int_int_random_0(void) {\n{\nAKA_test_case_name=\"TS_choose_int_int_int_random_0\";\n\n// set up\n;\n\n\n\nint cot=-1433365356;\n\n\nint dong=1266477559;\n\n\nint n=455787688;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode cot */\n/* NormalNumberDataNode dong */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_choose_int_int_int_random_0\");int AKA_ACTUAL_OUTPUT=TS::choose(cot,dong,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::choose(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::choose(int,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "void TS::xoa_dong(int dong)\r {\r     gotoxy(1, dong);\r     for (int i = 0; i < 80; i++) cout << \" \";\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_xoa_dong_int_random_0(void) {\n{\nAKA_test_case_name=\"TS_xoa_dong_int_random_0\";\n\n// set up\n;\n\n\n\nint dong=-1715686793;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode dong */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_xoa_dong_int_random_0\");TS::xoa_dong(dong);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::xoa_dong(int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::xoa_dong(int)"
+    },
+    {
+        "f": [],
+        "fm": "void TS::xoa_dong(int a, int b)\r {\r     for (int i = a; i <= b; i++)\r     {\r         gotoxy(1, i);\r         for (int j = 0; j < 80; j++) cout << \" \";\r     }\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_xoa_dong_int_int_random_0(void) {\n{\nAKA_test_case_name=\"TS_xoa_dong_int_int_random_0\";\n\n// set up\n;\n\n\n\nint a=4;\n\n\nint b=6;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_xoa_dong_int_int_random_0\");TS::xoa_dong(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::xoa_dong(int,int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::xoa_dong(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "void TS::inScreen(TS* student, int opi)\r {\r     char ten[30]=\"\\0\";\r     StrIns(ten,0,student->ten);\r     StrIns(ten, 0, \" \");\r     StrIns(ten,0,student->tendem);\r     StrIns(ten, 0, \" \");\r     StrIns(ten,0,student->ho);\r     cout<<setprecision(1)<<fixed;\r     if (opi==1)\r     {\r \r         textcolor(3);\r         cout<<setw(10)<<student->id;\r         textcolor(7);\r         cout<< setw(24) <<left<<ten;\r         textcolor(3);\r         cout<< student->gt;\r         textcolor(7);\r         cout <<\"   \";\r         cout <<student->ns ;\r         cout <<\"  \";\r         textcolor(3);\r         cout<< setw(17) << student->qq;\r         textcolor(7);\r         cout <<\" \";\r         if (student->toan != 10) cout<< setw(4) << student->toan;\r         else\r         {\r             cout<< setw(4) << \"10\";\r         }\r         cout <<\" \";\r         textcolor(3);\r         if (student->ly != 10) cout<< setw(4) << student->ly;\r         else\r         {\r             cout<< setw(4) << \"10\";\r         }\r         textcolor(7);\r         cout <<\"  \";\r         if (student->hoa != 10) cout<< setw(4) << student->hoa;\r         else\r         {\r             cout<< setw(4) << \"10\";\r         }\r         cout <<\"  \";\r         textcolor(3);\r         cout <<endl;\r     }\r     if (opi==2)\r     {\r         textcolor(3);\r         cout<<setw(9)<<student->id;\r         textcolor(7);\r         cout<< setw(25) <<left<<ten;\r         textcolor(3);\r         cout<< student->gt;\r         textcolor(7);\r         cout <<\"   \";\r         cout <<student->ns ;\r         cout <<\"  \";\r         textcolor(3);\r         cout<< setw(14) << student->qq;\r         textcolor(7);\r         cout <<\" \";\r         if (student->toan != 10) cout<< setw(4) << student->toan;\r         else\r         {\r             cout<< setw(4) << \"10\";\r         }\r         cout <<\" \";\r         textcolor(3);\r         if (student->ly != 10) cout<< setw(4) << student->ly;\r         else\r         {\r             cout<< setw(4) << \"10\";\r         }\r         textcolor(7);\r         cout <<\"  \";\r         if (student->hoa != 10) cout<< setw(4) << student->hoa;\r         else\r         {\r             cout<< setw(4) << \"10\";\r         }\r         cout <<\"  \";\r         textcolor(3);\r         cout<<student->tienganh;\r         cout <<endl;\r     }\r     textcolor(8);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_inScreen_TSmul_int_random_0(void) {\n{\nAKA_test_case_name=\"TS_inScreen_TSmul_int_random_0\";\n\n// set up\n;\n\nstd::vector<thisinh*> AKA_VECTOR_INIT_student;\n\n\n/* SubClassDataNode student */\n/* ConstructorDataNode thisinh() */\nAKA_mark(\"Calling: \\\\thisinh()|ROOT\\\\qlsv.cpp\\\\TS::inScreen(TS*,int)\\\\student\\\\AKA_VECTOR_INIT_student_0\\\\student\\\\thisinh()\");AKA_fCall++;auto AKA_VECTOR_INIT_student_0 = new ::thisinh();\n/* OneDimensionCharacterDataNode id */\n/* NormalCharacterDataNode id[0] */\n/* NormalCharacterDataNode id[1] */\n/* NormalCharacterDataNode id[2] */\n/* NormalCharacterDataNode id[3] */\n/* NormalCharacterDataNode id[4] */\n/* NormalCharacterDataNode id[5] */\n/* NormalCharacterDataNode id[6] */\n/* NormalCharacterDataNode id[7] */\n/* NormalCharacterDataNode id[8] */\n/* NormalCharacterDataNode id[9] */\n/* NormalCharacterDataNode id[10] */\n/* NormalCharacterDataNode id[11] */\n/* NormalCharacterDataNode id[12] */\n/* NormalCharacterDataNode id[13] */\n/* NormalCharacterDataNode id[14] */\n/* NormalCharacterDataNode id[15] */\n/* NormalCharacterDataNode id[16] */\n/* NormalCharacterDataNode id[17] */\n/* NormalCharacterDataNode id[18] */\n/* NormalCharacterDataNode id[19] */\n/* OneDimensionCharacterDataNode ho */\n/* NormalCharacterDataNode ho[0] */\n/* NormalCharacterDataNode ho[1] */\n/* NormalCharacterDataNode ho[2] */\n/* NormalCharacterDataNode ho[3] */\n/* NormalCharacterDataNode ho[4] */\n/* NormalCharacterDataNode ho[5] */\n/* NormalCharacterDataNode ho[6] */\n/* NormalCharacterDataNode ho[7] */\n/* NormalCharacterDataNode ho[8] */\n/* NormalCharacterDataNode ho[9] */\n/* NormalCharacterDataNode ho[10] */\n/* NormalCharacterDataNode ho[11] */\n/* NormalCharacterDataNode ho[12] */\n/* NormalCharacterDataNode ho[13] */\n/* NormalCharacterDataNode ho[14] */\n/* NormalCharacterDataNode ho[15] */\n/* NormalCharacterDataNode ho[16] */\n/* NormalCharacterDataNode ho[17] */\n/* NormalCharacterDataNode ho[18] */\n/* NormalCharacterDataNode ho[19] */\n/* OneDimensionCharacterDataNode ten */\n/* NormalCharacterDataNode ten[0] */\n/* NormalCharacterDataNode ten[1] */\n/* NormalCharacterDataNode ten[2] */\n/* NormalCharacterDataNode ten[3] */\n/* NormalCharacterDataNode ten[4] */\n/* NormalCharacterDataNode ten[5] */\n/* NormalCharacterDataNode ten[6] */\n/* NormalCharacterDataNode ten[7] */\n/* NormalCharacterDataNode ten[8] */\n/* NormalCharacterDataNode ten[9] */\n/* NormalCharacterDataNode ten[10] */\n/* NormalCharacterDataNode ten[11] */\n/* NormalCharacterDataNode ten[12] */\n/* NormalCharacterDataNode ten[13] */\n/* NormalCharacterDataNode ten[14] */\n/* NormalCharacterDataNode ten[15] */\n/* NormalCharacterDataNode ten[16] */\n/* NormalCharacterDataNode ten[17] */\n/* NormalCharacterDataNode ten[18] */\n/* NormalCharacterDataNode ten[19] */\n/* OneDimensionCharacterDataNode tendem */\n/* NormalCharacterDataNode tendem[0] */\n/* NormalCharacterDataNode tendem[1] */\n/* NormalCharacterDataNode tendem[2] */\n/* NormalCharacterDataNode tendem[3] */\n/* NormalCharacterDataNode tendem[4] */\n/* NormalCharacterDataNode tendem[5] */\n/* NormalCharacterDataNode tendem[6] */\n/* NormalCharacterDataNode tendem[7] */\n/* NormalCharacterDataNode tendem[8] */\n/* NormalCharacterDataNode tendem[9] */\n/* NormalCharacterDataNode tendem[10] */\n/* NormalCharacterDataNode tendem[11] */\n/* NormalCharacterDataNode tendem[12] */\n/* NormalCharacterDataNode tendem[13] */\n/* NormalCharacterDataNode tendem[14] */\n/* NormalCharacterDataNode tendem[15] */\n/* NormalCharacterDataNode tendem[16] */\n/* NormalCharacterDataNode tendem[17] */\n/* NormalCharacterDataNode tendem[18] */\n/* NormalCharacterDataNode tendem[19] */\n/* NormalCharacterDataNode gt */\n/* OneDimensionCharacterDataNode ns */\n/* NormalCharacterDataNode ns[0] */\n/* NormalCharacterDataNode ns[1] */\n/* NormalCharacterDataNode ns[2] */\n/* NormalCharacterDataNode ns[3] */\n/* NormalCharacterDataNode ns[4] */\n/* OneDimensionCharacterDataNode qq */\n/* NormalCharacterDataNode qq[0] */\n/* NormalCharacterDataNode qq[1] */\n/* NormalCharacterDataNode qq[2] */\n/* NormalCharacterDataNode qq[3] */\n/* NormalCharacterDataNode qq[4] */\n/* NormalCharacterDataNode qq[5] */\n/* NormalCharacterDataNode qq[6] */\n/* NormalCharacterDataNode qq[7] */\n/* NormalCharacterDataNode qq[8] */\n/* NormalCharacterDataNode qq[9] */\n/* NormalCharacterDataNode qq[10] */\n/* NormalCharacterDataNode qq[11] */\n/* NormalCharacterDataNode qq[12] */\n/* NormalCharacterDataNode qq[13] */\n/* NormalCharacterDataNode qq[14] */\n/* NormalCharacterDataNode qq[15] */\n/* NormalCharacterDataNode qq[16] */\n/* NormalCharacterDataNode qq[17] */\n/* NormalCharacterDataNode qq[18] */\n/* NormalCharacterDataNode qq[19] */\n/* NormalNumberDataNode toan */\n/* toan : null value -> no code */\n/* NormalNumberDataNode ly */\n/* ly : null value -> no code */\n/* NormalNumberDataNode hoa */\n/* hoa : null value -> no code */\n/* NormalNumberDataNode tongdiem */\n/* tongdiem : null value -> no code */\n/* NormalNumberDataNode tienganh */\n/* tienganh : null value -> no code */\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* NormalNumberDataNode kq */\n/* kq : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_student_0).next;\n/* PointerStructureDataNode head */\n(*AKA_VECTOR_INIT_student_0).head;\n/* PointerStructureDataNode last */\n(*AKA_VECTOR_INIT_student_0).last;\n\nAKA_VECTOR_INIT_student.push_back(AKA_VECTOR_INIT_student_0);\n\nthisinh* student = AKA_VECTOR_INIT_student[0];\n\n\nint opi=-576187124;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode student */\n/* NormalNumberDataNode opi */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_inScreen_TSmul_int_random_0\");TS::inScreen(student,opi);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::inScreen(TS*,int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::inScreen(TS*,int)"
+    },
+    {
+        "f": [],
+        "fm": "void TS::trao_doi(int& a, int& b)\r {\r     int tg;\r     tg = a;\r     a = b;\r     b = tg;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_trao_doi_int_int_random_0(void) {\n{\nAKA_test_case_name=\"TS_trao_doi_int_int_random_0\";\n\n// set up\n;\n\n\n\nint a=-950537419;\n\n\nint b=1167920194;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_trao_doi_int_int_random_0\");TS::trao_doi(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::trao_doi(int&,int&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::trao_doi(int&,int&)"
+    },
+    {
+        "f": [],
+        "fm": "void TS::xu_li(TS* student, char* s)\r {\r     char* pch;\r     chuan_hoa(s);\r     // ID\r     pch = strtok(s,\"|;:\");\r     strcpy(student->id, pch);\r     // ten\r     pch = strtok(NULL,\"|:;\");\r     char* ten;\r     ten = new char[40];\r     strcpy(ten, pch);\r     // cout << ten <<endl;\r     int num = 1;\r     for (int i = 0; i < strlen(ten); i++)\r         if (ten[i]==' ')\r             num++;\r     switch (num)\r     {\r     case 2:\r     {\r         student->ten[0]='\\0';\r         student->tendem[0]='\\0';\r         student->ho[0]='\\0';\r \r         int i = 0;\r         while (ten[i]!=' ')\r         {\r             StrIns(student->ho,strlen(student->ho), ten[i] );\r             i++;\r         }\r         i++;\r         while (ten[i]!='\\0')\r         {\r             StrIns(student->ten,strlen(student->ten), ten[i] );\r             i++;\r         }\r         break;\r     }\r     case 3:\r     {\r         student->ten[0]='\\0';\r         student->tendem[0]='\\0';\r         student->ho[0]='\\0';\r \r         int i = 0;\r         while (ten[i]!=' ')\r         {\r             StrIns(student->ho,strlen(student->ho), ten[i] );\r             i++;\r         }\r         i++;\r         while (ten[i]!=' ')\r         {\r             StrIns(student->tendem,strlen(student->tendem), ten[i] );\r             i++;\r         }\r         i++;\r         while (ten[i]!='\\0')\r         {\r             StrIns(student->ten,strlen(student->ten), ten[i] );\r             i++;\r         }\r         break;\r     }\r     case 4:\r     {\r         student->ten[0]='\\0';\r         student->tendem[0]='\\0';\r         student->ho[0]='\\0';\r \r         int i = 0;\r         while (ten[i]!=' ')\r         {\r             StrIns(student->ho,strlen(student->ho), ten[i] );\r             i++;\r         }\r         i++;\r         while (ten[i]!=' ')\r         {\r             StrIns(student->tendem,strlen(student->tendem), ten[i] );\r             i++;\r         }\r         StrIns(student->tendem,strlen(student->tendem), \" \" );\r         i++;\r         while (ten[i]!=' ')\r         {\r             StrIns(student->tendem,strlen(student->tendem), ten[i] );\r             i++;\r         }\r         i++;\r         while (ten[i]!='\\0')\r         {\r             StrIns(student->ten,strlen(student->ten), ten[i] );\r             i++;\r         }\r         break;\r     }\r     };\r     //gioi tinh\r     pch = strtok(NULL,\"|;:\");\r     student->gt = pch[0];\r \r     //nam sinh\r     pch = strtok(NULL,\"|;:\");\r     strcpy(student->ns ,pch);\r \r     // noi sinh\r \r     pch = strtok(NULL,\"|;:\");\r     strcpy(student->qq ,pch);\r \r     // diem thi\r     pch = strtok(NULL,\"|;:\");\r     student->toan = atof(pch);\r     pch = strtok(NULL,\"|;:\");\r     student->ly = atof(pch);\r     pch = strtok(NULL,\"|;: \");\r     student->hoa = atof(pch);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_xu_li_TSmul_charmul_random_0(void) {\n{\nAKA_test_case_name=\"TS_xu_li_TSmul_charmul_random_0\";\n\n// set up\n;\n\nstd::vector<thisinh*> AKA_VECTOR_INIT_student;\n\n\n/* SubClassDataNode student */\n/* ConstructorDataNode thisinh() */\nAKA_mark(\"Calling: \\\\thisinh()|ROOT\\\\qlsv.cpp\\\\TS::xu_li(TS*,char*)\\\\student\\\\AKA_VECTOR_INIT_student_0\\\\student\\\\thisinh()\");AKA_fCall++;auto AKA_VECTOR_INIT_student_0 = new ::thisinh();\n/* OneDimensionCharacterDataNode id */\n/* NormalCharacterDataNode id[0] */\n/* NormalCharacterDataNode id[1] */\n/* NormalCharacterDataNode id[2] */\n/* NormalCharacterDataNode id[3] */\n/* NormalCharacterDataNode id[4] */\n/* NormalCharacterDataNode id[5] */\n/* NormalCharacterDataNode id[6] */\n/* NormalCharacterDataNode id[7] */\n/* NormalCharacterDataNode id[8] */\n/* NormalCharacterDataNode id[9] */\n/* NormalCharacterDataNode id[10] */\n/* NormalCharacterDataNode id[11] */\n/* NormalCharacterDataNode id[12] */\n/* NormalCharacterDataNode id[13] */\n/* NormalCharacterDataNode id[14] */\n/* NormalCharacterDataNode id[15] */\n/* NormalCharacterDataNode id[16] */\n/* NormalCharacterDataNode id[17] */\n/* NormalCharacterDataNode id[18] */\n/* NormalCharacterDataNode id[19] */\n/* OneDimensionCharacterDataNode ho */\n/* NormalCharacterDataNode ho[0] */\n/* NormalCharacterDataNode ho[1] */\n/* NormalCharacterDataNode ho[2] */\n/* NormalCharacterDataNode ho[3] */\n/* NormalCharacterDataNode ho[4] */\n/* NormalCharacterDataNode ho[5] */\n/* NormalCharacterDataNode ho[6] */\n/* NormalCharacterDataNode ho[7] */\n/* NormalCharacterDataNode ho[8] */\n/* NormalCharacterDataNode ho[9] */\n/* NormalCharacterDataNode ho[10] */\n/* NormalCharacterDataNode ho[11] */\n/* NormalCharacterDataNode ho[12] */\n/* NormalCharacterDataNode ho[13] */\n/* NormalCharacterDataNode ho[14] */\n/* NormalCharacterDataNode ho[15] */\n/* NormalCharacterDataNode ho[16] */\n/* NormalCharacterDataNode ho[17] */\n/* NormalCharacterDataNode ho[18] */\n/* NormalCharacterDataNode ho[19] */\n/* OneDimensionCharacterDataNode ten */\n/* NormalCharacterDataNode ten[0] */\n/* NormalCharacterDataNode ten[1] */\n/* NormalCharacterDataNode ten[2] */\n/* NormalCharacterDataNode ten[3] */\n/* NormalCharacterDataNode ten[4] */\n/* NormalCharacterDataNode ten[5] */\n/* NormalCharacterDataNode ten[6] */\n/* NormalCharacterDataNode ten[7] */\n/* NormalCharacterDataNode ten[8] */\n/* NormalCharacterDataNode ten[9] */\n/* NormalCharacterDataNode ten[10] */\n/* NormalCharacterDataNode ten[11] */\n/* NormalCharacterDataNode ten[12] */\n/* NormalCharacterDataNode ten[13] */\n/* NormalCharacterDataNode ten[14] */\n/* NormalCharacterDataNode ten[15] */\n/* NormalCharacterDataNode ten[16] */\n/* NormalCharacterDataNode ten[17] */\n/* NormalCharacterDataNode ten[18] */\n/* NormalCharacterDataNode ten[19] */\n/* OneDimensionCharacterDataNode tendem */\n/* NormalCharacterDataNode tendem[0] */\n/* NormalCharacterDataNode tendem[1] */\n/* NormalCharacterDataNode tendem[2] */\n/* NormalCharacterDataNode tendem[3] */\n/* NormalCharacterDataNode tendem[4] */\n/* NormalCharacterDataNode tendem[5] */\n/* NormalCharacterDataNode tendem[6] */\n/* NormalCharacterDataNode tendem[7] */\n/* NormalCharacterDataNode tendem[8] */\n/* NormalCharacterDataNode tendem[9] */\n/* NormalCharacterDataNode tendem[10] */\n/* NormalCharacterDataNode tendem[11] */\n/* NormalCharacterDataNode tendem[12] */\n/* NormalCharacterDataNode tendem[13] */\n/* NormalCharacterDataNode tendem[14] */\n/* NormalCharacterDataNode tendem[15] */\n/* NormalCharacterDataNode tendem[16] */\n/* NormalCharacterDataNode tendem[17] */\n/* NormalCharacterDataNode tendem[18] */\n/* NormalCharacterDataNode tendem[19] */\n/* NormalCharacterDataNode gt */\n/* OneDimensionCharacterDataNode ns */\n/* NormalCharacterDataNode ns[0] */\n/* NormalCharacterDataNode ns[1] */\n/* NormalCharacterDataNode ns[2] */\n/* NormalCharacterDataNode ns[3] */\n/* NormalCharacterDataNode ns[4] */\n/* OneDimensionCharacterDataNode qq */\n/* NormalCharacterDataNode qq[0] */\n/* NormalCharacterDataNode qq[1] */\n/* NormalCharacterDataNode qq[2] */\n/* NormalCharacterDataNode qq[3] */\n/* NormalCharacterDataNode qq[4] */\n/* NormalCharacterDataNode qq[5] */\n/* NormalCharacterDataNode qq[6] */\n/* NormalCharacterDataNode qq[7] */\n/* NormalCharacterDataNode qq[8] */\n/* NormalCharacterDataNode qq[9] */\n/* NormalCharacterDataNode qq[10] */\n/* NormalCharacterDataNode qq[11] */\n/* NormalCharacterDataNode qq[12] */\n/* NormalCharacterDataNode qq[13] */\n/* NormalCharacterDataNode qq[14] */\n/* NormalCharacterDataNode qq[15] */\n/* NormalCharacterDataNode qq[16] */\n/* NormalCharacterDataNode qq[17] */\n/* NormalCharacterDataNode qq[18] */\n/* NormalCharacterDataNode qq[19] */\n/* NormalNumberDataNode toan */\n/* toan : null value -> no code */\n/* NormalNumberDataNode ly */\n/* ly : null value -> no code */\n/* NormalNumberDataNode hoa */\n/* hoa : null value -> no code */\n/* NormalNumberDataNode tongdiem */\n/* tongdiem : null value -> no code */\n/* NormalNumberDataNode tienganh */\n/* tienganh : null value -> no code */\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* NormalNumberDataNode kq */\n/* kq : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_student_0).next;\n/* PointerStructureDataNode head */\n(*AKA_VECTOR_INIT_student_0).head;\n/* PointerStructureDataNode last */\n(*AKA_VECTOR_INIT_student_0).last;\n\nAKA_VECTOR_INIT_student.push_back(AKA_VECTOR_INIT_student_0);\n\n\n/* SubClassDataNode student */\n/* ConstructorDataNode thisinh() */\nAKA_mark(\"Calling: \\\\thisinh()|ROOT\\\\qlsv.cpp\\\\TS::xu_li(TS*,char*)\\\\student\\\\AKA_VECTOR_INIT_student_1\\\\student\\\\thisinh()\");AKA_fCall++;auto AKA_VECTOR_INIT_student_1 = new ::thisinh();\n/* OneDimensionCharacterDataNode id */\n/* NormalCharacterDataNode id[0] */\n/* NormalCharacterDataNode id[1] */\n/* NormalCharacterDataNode id[2] */\n/* NormalCharacterDataNode id[3] */\n/* NormalCharacterDataNode id[4] */\n/* NormalCharacterDataNode id[5] */\n/* NormalCharacterDataNode id[6] */\n/* NormalCharacterDataNode id[7] */\n/* NormalCharacterDataNode id[8] */\n/* NormalCharacterDataNode id[9] */\n/* NormalCharacterDataNode id[10] */\n/* NormalCharacterDataNode id[11] */\n/* NormalCharacterDataNode id[12] */\n/* NormalCharacterDataNode id[13] */\n/* NormalCharacterDataNode id[14] */\n/* NormalCharacterDataNode id[15] */\n/* NormalCharacterDataNode id[16] */\n/* NormalCharacterDataNode id[17] */\n/* NormalCharacterDataNode id[18] */\n/* NormalCharacterDataNode id[19] */\n/* OneDimensionCharacterDataNode ho */\n/* NormalCharacterDataNode ho[0] */\n/* NormalCharacterDataNode ho[1] */\n/* NormalCharacterDataNode ho[2] */\n/* NormalCharacterDataNode ho[3] */\n/* NormalCharacterDataNode ho[4] */\n/* NormalCharacterDataNode ho[5] */\n/* NormalCharacterDataNode ho[6] */\n/* NormalCharacterDataNode ho[7] */\n/* NormalCharacterDataNode ho[8] */\n/* NormalCharacterDataNode ho[9] */\n/* NormalCharacterDataNode ho[10] */\n/* NormalCharacterDataNode ho[11] */\n/* NormalCharacterDataNode ho[12] */\n/* NormalCharacterDataNode ho[13] */\n/* NormalCharacterDataNode ho[14] */\n/* NormalCharacterDataNode ho[15] */\n/* NormalCharacterDataNode ho[16] */\n/* NormalCharacterDataNode ho[17] */\n/* NormalCharacterDataNode ho[18] */\n/* NormalCharacterDataNode ho[19] */\n/* OneDimensionCharacterDataNode ten */\n/* NormalCharacterDataNode ten[0] */\n/* NormalCharacterDataNode ten[1] */\n/* NormalCharacterDataNode ten[2] */\n/* NormalCharacterDataNode ten[3] */\n/* NormalCharacterDataNode ten[4] */\n/* NormalCharacterDataNode ten[5] */\n/* NormalCharacterDataNode ten[6] */\n/* NormalCharacterDataNode ten[7] */\n/* NormalCharacterDataNode ten[8] */\n/* NormalCharacterDataNode ten[9] */\n/* NormalCharacterDataNode ten[10] */\n/* NormalCharacterDataNode ten[11] */\n/* NormalCharacterDataNode ten[12] */\n/* NormalCharacterDataNode ten[13] */\n/* NormalCharacterDataNode ten[14] */\n/* NormalCharacterDataNode ten[15] */\n/* NormalCharacterDataNode ten[16] */\n/* NormalCharacterDataNode ten[17] */\n/* NormalCharacterDataNode ten[18] */\n/* NormalCharacterDataNode ten[19] */\n/* OneDimensionCharacterDataNode tendem */\n/* NormalCharacterDataNode tendem[0] */\n/* NormalCharacterDataNode tendem[1] */\n/* NormalCharacterDataNode tendem[2] */\n/* NormalCharacterDataNode tendem[3] */\n/* NormalCharacterDataNode tendem[4] */\n/* NormalCharacterDataNode tendem[5] */\n/* NormalCharacterDataNode tendem[6] */\n/* NormalCharacterDataNode tendem[7] */\n/* NormalCharacterDataNode tendem[8] */\n/* NormalCharacterDataNode tendem[9] */\n/* NormalCharacterDataNode tendem[10] */\n/* NormalCharacterDataNode tendem[11] */\n/* NormalCharacterDataNode tendem[12] */\n/* NormalCharacterDataNode tendem[13] */\n/* NormalCharacterDataNode tendem[14] */\n/* NormalCharacterDataNode tendem[15] */\n/* NormalCharacterDataNode tendem[16] */\n/* NormalCharacterDataNode tendem[17] */\n/* NormalCharacterDataNode tendem[18] */\n/* NormalCharacterDataNode tendem[19] */\n/* NormalCharacterDataNode gt */\n/* OneDimensionCharacterDataNode ns */\n/* NormalCharacterDataNode ns[0] */\n/* NormalCharacterDataNode ns[1] */\n/* NormalCharacterDataNode ns[2] */\n/* NormalCharacterDataNode ns[3] */\n/* NormalCharacterDataNode ns[4] */\n/* OneDimensionCharacterDataNode qq */\n/* NormalCharacterDataNode qq[0] */\n/* NormalCharacterDataNode qq[1] */\n/* NormalCharacterDataNode qq[2] */\n/* NormalCharacterDataNode qq[3] */\n/* NormalCharacterDataNode qq[4] */\n/* NormalCharacterDataNode qq[5] */\n/* NormalCharacterDataNode qq[6] */\n/* NormalCharacterDataNode qq[7] */\n/* NormalCharacterDataNode qq[8] */\n/* NormalCharacterDataNode qq[9] */\n/* NormalCharacterDataNode qq[10] */\n/* NormalCharacterDataNode qq[11] */\n/* NormalCharacterDataNode qq[12] */\n/* NormalCharacterDataNode qq[13] */\n/* NormalCharacterDataNode qq[14] */\n/* NormalCharacterDataNode qq[15] */\n/* NormalCharacterDataNode qq[16] */\n/* NormalCharacterDataNode qq[17] */\n/* NormalCharacterDataNode qq[18] */\n/* NormalCharacterDataNode qq[19] */\n/* NormalNumberDataNode toan */\n/* toan : null value -> no code */\n/* NormalNumberDataNode ly */\n/* ly : null value -> no code */\n/* NormalNumberDataNode hoa */\n/* hoa : null value -> no code */\n/* NormalNumberDataNode tongdiem */\n/* tongdiem : null value -> no code */\n/* NormalNumberDataNode tienganh */\n/* tienganh : null value -> no code */\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* NormalNumberDataNode kq */\n/* kq : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_student_1).next;\n/* PointerStructureDataNode head */\n(*AKA_VECTOR_INIT_student_1).head;\n/* PointerStructureDataNode last */\n(*AKA_VECTOR_INIT_student_1).last;\n\nAKA_VECTOR_INIT_student.push_back(AKA_VECTOR_INIT_student_1);\n\n\n/* SubClassDataNode student */\n/* ConstructorDataNode thisinh() */\nAKA_mark(\"Calling: \\\\thisinh()|ROOT\\\\qlsv.cpp\\\\TS::xu_li(TS*,char*)\\\\student\\\\AKA_VECTOR_INIT_student_2\\\\student\\\\thisinh()\");AKA_fCall++;auto AKA_VECTOR_INIT_student_2 = new ::thisinh();\n/* OneDimensionCharacterDataNode id */\n/* NormalCharacterDataNode id[0] */\n/* NormalCharacterDataNode id[1] */\n/* NormalCharacterDataNode id[2] */\n/* NormalCharacterDataNode id[3] */\n/* NormalCharacterDataNode id[4] */\n/* NormalCharacterDataNode id[5] */\n/* NormalCharacterDataNode id[6] */\n/* NormalCharacterDataNode id[7] */\n/* NormalCharacterDataNode id[8] */\n/* NormalCharacterDataNode id[9] */\n/* NormalCharacterDataNode id[10] */\n/* NormalCharacterDataNode id[11] */\n/* NormalCharacterDataNode id[12] */\n/* NormalCharacterDataNode id[13] */\n/* NormalCharacterDataNode id[14] */\n/* NormalCharacterDataNode id[15] */\n/* NormalCharacterDataNode id[16] */\n/* NormalCharacterDataNode id[17] */\n/* NormalCharacterDataNode id[18] */\n/* NormalCharacterDataNode id[19] */\n/* OneDimensionCharacterDataNode ho */\n/* NormalCharacterDataNode ho[0] */\n/* NormalCharacterDataNode ho[1] */\n/* NormalCharacterDataNode ho[2] */\n/* NormalCharacterDataNode ho[3] */\n/* NormalCharacterDataNode ho[4] */\n/* NormalCharacterDataNode ho[5] */\n/* NormalCharacterDataNode ho[6] */\n/* NormalCharacterDataNode ho[7] */\n/* NormalCharacterDataNode ho[8] */\n/* NormalCharacterDataNode ho[9] */\n/* NormalCharacterDataNode ho[10] */\n/* NormalCharacterDataNode ho[11] */\n/* NormalCharacterDataNode ho[12] */\n/* NormalCharacterDataNode ho[13] */\n/* NormalCharacterDataNode ho[14] */\n/* NormalCharacterDataNode ho[15] */\n/* NormalCharacterDataNode ho[16] */\n/* NormalCharacterDataNode ho[17] */\n/* NormalCharacterDataNode ho[18] */\n/* NormalCharacterDataNode ho[19] */\n/* OneDimensionCharacterDataNode ten */\n/* NormalCharacterDataNode ten[0] */\n/* NormalCharacterDataNode ten[1] */\n/* NormalCharacterDataNode ten[2] */\n/* NormalCharacterDataNode ten[3] */\n/* NormalCharacterDataNode ten[4] */\n/* NormalCharacterDataNode ten[5] */\n/* NormalCharacterDataNode ten[6] */\n/* NormalCharacterDataNode ten[7] */\n/* NormalCharacterDataNode ten[8] */\n/* NormalCharacterDataNode ten[9] */\n/* NormalCharacterDataNode ten[10] */\n/* NormalCharacterDataNode ten[11] */\n/* NormalCharacterDataNode ten[12] */\n/* NormalCharacterDataNode ten[13] */\n/* NormalCharacterDataNode ten[14] */\n/* NormalCharacterDataNode ten[15] */\n/* NormalCharacterDataNode ten[16] */\n/* NormalCharacterDataNode ten[17] */\n/* NormalCharacterDataNode ten[18] */\n/* NormalCharacterDataNode ten[19] */\n/* OneDimensionCharacterDataNode tendem */\n/* NormalCharacterDataNode tendem[0] */\n/* NormalCharacterDataNode tendem[1] */\n/* NormalCharacterDataNode tendem[2] */\n/* NormalCharacterDataNode tendem[3] */\n/* NormalCharacterDataNode tendem[4] */\n/* NormalCharacterDataNode tendem[5] */\n/* NormalCharacterDataNode tendem[6] */\n/* NormalCharacterDataNode tendem[7] */\n/* NormalCharacterDataNode tendem[8] */\n/* NormalCharacterDataNode tendem[9] */\n/* NormalCharacterDataNode tendem[10] */\n/* NormalCharacterDataNode tendem[11] */\n/* NormalCharacterDataNode tendem[12] */\n/* NormalCharacterDataNode tendem[13] */\n/* NormalCharacterDataNode tendem[14] */\n/* NormalCharacterDataNode tendem[15] */\n/* NormalCharacterDataNode tendem[16] */\n/* NormalCharacterDataNode tendem[17] */\n/* NormalCharacterDataNode tendem[18] */\n/* NormalCharacterDataNode tendem[19] */\n/* NormalCharacterDataNode gt */\n/* OneDimensionCharacterDataNode ns */\n/* NormalCharacterDataNode ns[0] */\n/* NormalCharacterDataNode ns[1] */\n/* NormalCharacterDataNode ns[2] */\n/* NormalCharacterDataNode ns[3] */\n/* NormalCharacterDataNode ns[4] */\n/* OneDimensionCharacterDataNode qq */\n/* NormalCharacterDataNode qq[0] */\n/* NormalCharacterDataNode qq[1] */\n/* NormalCharacterDataNode qq[2] */\n/* NormalCharacterDataNode qq[3] */\n/* NormalCharacterDataNode qq[4] */\n/* NormalCharacterDataNode qq[5] */\n/* NormalCharacterDataNode qq[6] */\n/* NormalCharacterDataNode qq[7] */\n/* NormalCharacterDataNode qq[8] */\n/* NormalCharacterDataNode qq[9] */\n/* NormalCharacterDataNode qq[10] */\n/* NormalCharacterDataNode qq[11] */\n/* NormalCharacterDataNode qq[12] */\n/* NormalCharacterDataNode qq[13] */\n/* NormalCharacterDataNode qq[14] */\n/* NormalCharacterDataNode qq[15] */\n/* NormalCharacterDataNode qq[16] */\n/* NormalCharacterDataNode qq[17] */\n/* NormalCharacterDataNode qq[18] */\n/* NormalCharacterDataNode qq[19] */\n/* NormalNumberDataNode toan */\n/* toan : null value -> no code */\n/* NormalNumberDataNode ly */\n/* ly : null value -> no code */\n/* NormalNumberDataNode hoa */\n/* hoa : null value -> no code */\n/* NormalNumberDataNode tongdiem */\n/* tongdiem : null value -> no code */\n/* NormalNumberDataNode tienganh */\n/* tienganh : null value -> no code */\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* NormalNumberDataNode kq */\n/* kq : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_student_2).next;\n/* PointerStructureDataNode head */\n(*AKA_VECTOR_INIT_student_2).head;\n/* PointerStructureDataNode last */\n(*AKA_VECTOR_INIT_student_2).last;\n\nAKA_VECTOR_INIT_student.push_back(AKA_VECTOR_INIT_student_2);\n\nthisinh* student = AKA_VECTOR_INIT_student[0];\nchar AKA_ARRAY_INIT_s[2];\n\nchar AKA_ARRAY_INIT_s_0=105;\nAKA_ARRAY_INIT_s[0] = AKA_ARRAY_INIT_s_0;\n\nchar AKA_ARRAY_INIT_s_1=-125;\nAKA_ARRAY_INIT_s[1] = AKA_ARRAY_INIT_s_1;\n\nchar* s = AKA_ARRAY_INIT_s;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode student */\n/* PointerCharacterDataNode s */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_xu_li_TSmul_charmul_random_0\");TS::xu_li(student,s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::xu_li(TS*,char*)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::xu_li(TS*,char*)"
+    },
+    {
+        "f": [],
+        "fm": "void TS::trao_doi(char& a, char& b)\r {\r     char tg;\r     tg = a;\r     a = b;\r     b = tg;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_trao_doi_char_char_random_0(void) {\n{\nAKA_test_case_name=\"TS_trao_doi_char_char_random_0\";\n\n// set up\n;\n\n\nchar a=125;\n\nchar b=-78;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode a */\n/* NormalCharacterDataNode b */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_trao_doi_char_char_random_0\");TS::trao_doi(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::trao_doi(char&,char&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::trao_doi(char&,char&)"
+    },
+    {
+        "f": [],
+        "fm": "void TS::trao_doi(char a[],char b[])\r {\r \r     char tg[20];\r     strcpy( tg, a);\r     strcpy(a, b);\r     strcpy(b, tg);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_trao_doi_char_char_random_1(void) {\n{\nAKA_test_case_name=\"TS_trao_doi_char_char_random_1\";\n\n// set up\n;\n\nchar a[1];\n\nchar b[1];\n\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode a */\n/* NormalCharacterDataNode a[0] */\na[0]=-10;\n/* NormalCharacterDataNode a[1] */\na[1]=39;\n/* OneDimensionCharacterDataNode b */\n/* NormalCharacterDataNode b[0] */\nb[0]=25;\n/* NormalCharacterDataNode b[1] */\nb[1]=113;\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_trao_doi_char_char_random_1\");TS::trao_doi(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::trao_doi(char[],char[])\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::trao_doi(char[],char[])"
+    },
+    {
+        "f": [],
+        "fm": "void TS::trao_doi(float& a, float& b)\r {\r     float tg;\r     tg = a;\r     a = b;\r     b = tg;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_trao_doi_float_float_random_0(void) {\n{\nAKA_test_case_name=\"TS_trao_doi_float_float_random_0\";\n\n// set up\n;\n\n\n\nfloat a=1.4974683794E9;\n\n\nfloat b=1.08412809088E9;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_trao_doi_float_float_random_0\");TS::trao_doi(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::trao_doi(float&,float&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::trao_doi(float&,float&)"
+    },
+    {
+        "f": [],
+        "fm": "void TS::trao_doi(TS* a,TS* b)\r {\r     trao_doi(a->id,b->id);\r     trao_doi(a->ho, b->ho);\r     trao_doi(a->tendem, b->tendem);\r     trao_doi(a->ten, b->ten);\r     trao_doi(a->gt, b->gt);\r     trao_doi(a->ns, b->ns);\r     trao_doi(a->qq, b->qq);\r     trao_doi(a->toan, b->toan);\r     trao_doi(a->ly, b->ly);\r     trao_doi(a->hoa, b->hoa);\r     trao_doi(a->kq, b->kq);\r     trao_doi(a->tongdiem, b->tongdiem);\r     trao_doi(a->tienganh, b->tienganh);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_trao_doi_TSmul_TSmul_random_0(void) {\n{\nAKA_test_case_name=\"TS_trao_doi_TSmul_TSmul_random_0\";\n\n// set up\n;\n\nstd::vector<thisinh*> AKA_VECTOR_INIT_a;\n\n\n/* SubClassDataNode a */\n/* ConstructorDataNode thisinh() */\nAKA_mark(\"Calling: \\\\thisinh()|ROOT\\\\qlsv.cpp\\\\TS::trao_doi(TS*,TS*)\\\\a\\\\AKA_VECTOR_INIT_a_0\\\\a\\\\thisinh()\");AKA_fCall++;auto AKA_VECTOR_INIT_a_0 = new ::thisinh();\n/* OneDimensionCharacterDataNode id */\n/* NormalCharacterDataNode id[0] */\n/* NormalCharacterDataNode id[1] */\n/* NormalCharacterDataNode id[2] */\n/* NormalCharacterDataNode id[3] */\n/* NormalCharacterDataNode id[4] */\n/* NormalCharacterDataNode id[5] */\n/* NormalCharacterDataNode id[6] */\n/* NormalCharacterDataNode id[7] */\n/* NormalCharacterDataNode id[8] */\n/* NormalCharacterDataNode id[9] */\n/* NormalCharacterDataNode id[10] */\n/* NormalCharacterDataNode id[11] */\n/* NormalCharacterDataNode id[12] */\n/* NormalCharacterDataNode id[13] */\n/* NormalCharacterDataNode id[14] */\n/* NormalCharacterDataNode id[15] */\n/* NormalCharacterDataNode id[16] */\n/* NormalCharacterDataNode id[17] */\n/* NormalCharacterDataNode id[18] */\n/* NormalCharacterDataNode id[19] */\n/* OneDimensionCharacterDataNode ho */\n/* NormalCharacterDataNode ho[0] */\n/* NormalCharacterDataNode ho[1] */\n/* NormalCharacterDataNode ho[2] */\n/* NormalCharacterDataNode ho[3] */\n/* NormalCharacterDataNode ho[4] */\n/* NormalCharacterDataNode ho[5] */\n/* NormalCharacterDataNode ho[6] */\n/* NormalCharacterDataNode ho[7] */\n/* NormalCharacterDataNode ho[8] */\n/* NormalCharacterDataNode ho[9] */\n/* NormalCharacterDataNode ho[10] */\n/* NormalCharacterDataNode ho[11] */\n/* NormalCharacterDataNode ho[12] */\n/* NormalCharacterDataNode ho[13] */\n/* NormalCharacterDataNode ho[14] */\n/* NormalCharacterDataNode ho[15] */\n/* NormalCharacterDataNode ho[16] */\n/* NormalCharacterDataNode ho[17] */\n/* NormalCharacterDataNode ho[18] */\n/* NormalCharacterDataNode ho[19] */\n/* OneDimensionCharacterDataNode ten */\n/* NormalCharacterDataNode ten[0] */\n/* NormalCharacterDataNode ten[1] */\n/* NormalCharacterDataNode ten[2] */\n/* NormalCharacterDataNode ten[3] */\n/* NormalCharacterDataNode ten[4] */\n/* NormalCharacterDataNode ten[5] */\n/* NormalCharacterDataNode ten[6] */\n/* NormalCharacterDataNode ten[7] */\n/* NormalCharacterDataNode ten[8] */\n/* NormalCharacterDataNode ten[9] */\n/* NormalCharacterDataNode ten[10] */\n/* NormalCharacterDataNode ten[11] */\n/* NormalCharacterDataNode ten[12] */\n/* NormalCharacterDataNode ten[13] */\n/* NormalCharacterDataNode ten[14] */\n/* NormalCharacterDataNode ten[15] */\n/* NormalCharacterDataNode ten[16] */\n/* NormalCharacterDataNode ten[17] */\n/* NormalCharacterDataNode ten[18] */\n/* NormalCharacterDataNode ten[19] */\n/* OneDimensionCharacterDataNode tendem */\n/* NormalCharacterDataNode tendem[0] */\n/* NormalCharacterDataNode tendem[1] */\n/* NormalCharacterDataNode tendem[2] */\n/* NormalCharacterDataNode tendem[3] */\n/* NormalCharacterDataNode tendem[4] */\n/* NormalCharacterDataNode tendem[5] */\n/* NormalCharacterDataNode tendem[6] */\n/* NormalCharacterDataNode tendem[7] */\n/* NormalCharacterDataNode tendem[8] */\n/* NormalCharacterDataNode tendem[9] */\n/* NormalCharacterDataNode tendem[10] */\n/* NormalCharacterDataNode tendem[11] */\n/* NormalCharacterDataNode tendem[12] */\n/* NormalCharacterDataNode tendem[13] */\n/* NormalCharacterDataNode tendem[14] */\n/* NormalCharacterDataNode tendem[15] */\n/* NormalCharacterDataNode tendem[16] */\n/* NormalCharacterDataNode tendem[17] */\n/* NormalCharacterDataNode tendem[18] */\n/* NormalCharacterDataNode tendem[19] */\n/* NormalCharacterDataNode gt */\n/* OneDimensionCharacterDataNode ns */\n/* NormalCharacterDataNode ns[0] */\n/* NormalCharacterDataNode ns[1] */\n/* NormalCharacterDataNode ns[2] */\n/* NormalCharacterDataNode ns[3] */\n/* NormalCharacterDataNode ns[4] */\n/* OneDimensionCharacterDataNode qq */\n/* NormalCharacterDataNode qq[0] */\n/* NormalCharacterDataNode qq[1] */\n/* NormalCharacterDataNode qq[2] */\n/* NormalCharacterDataNode qq[3] */\n/* NormalCharacterDataNode qq[4] */\n/* NormalCharacterDataNode qq[5] */\n/* NormalCharacterDataNode qq[6] */\n/* NormalCharacterDataNode qq[7] */\n/* NormalCharacterDataNode qq[8] */\n/* NormalCharacterDataNode qq[9] */\n/* NormalCharacterDataNode qq[10] */\n/* NormalCharacterDataNode qq[11] */\n/* NormalCharacterDataNode qq[12] */\n/* NormalCharacterDataNode qq[13] */\n/* NormalCharacterDataNode qq[14] */\n/* NormalCharacterDataNode qq[15] */\n/* NormalCharacterDataNode qq[16] */\n/* NormalCharacterDataNode qq[17] */\n/* NormalCharacterDataNode qq[18] */\n/* NormalCharacterDataNode qq[19] */\n/* NormalNumberDataNode toan */\n/* toan : null value -> no code */\n/* NormalNumberDataNode ly */\n/* ly : null value -> no code */\n/* NormalNumberDataNode hoa */\n/* hoa : null value -> no code */\n/* NormalNumberDataNode tongdiem */\n/* tongdiem : null value -> no code */\n/* NormalNumberDataNode tienganh */\n/* tienganh : null value -> no code */\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* NormalNumberDataNode kq */\n/* kq : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_a_0).next;\n/* PointerStructureDataNode head */\n(*AKA_VECTOR_INIT_a_0).head;\n/* PointerStructureDataNode last */\n(*AKA_VECTOR_INIT_a_0).last;\n\nAKA_VECTOR_INIT_a.push_back(AKA_VECTOR_INIT_a_0);\n\n\n/* SubClassDataNode a */\n/* ConstructorDataNode thisinh() */\nAKA_mark(\"Calling: \\\\thisinh()|ROOT\\\\qlsv.cpp\\\\TS::trao_doi(TS*,TS*)\\\\a\\\\AKA_VECTOR_INIT_a_1\\\\a\\\\thisinh()\");AKA_fCall++;auto AKA_VECTOR_INIT_a_1 = new ::thisinh();\n/* OneDimensionCharacterDataNode id */\n/* NormalCharacterDataNode id[0] */\n/* NormalCharacterDataNode id[1] */\n/* NormalCharacterDataNode id[2] */\n/* NormalCharacterDataNode id[3] */\n/* NormalCharacterDataNode id[4] */\n/* NormalCharacterDataNode id[5] */\n/* NormalCharacterDataNode id[6] */\n/* NormalCharacterDataNode id[7] */\n/* NormalCharacterDataNode id[8] */\n/* NormalCharacterDataNode id[9] */\n/* NormalCharacterDataNode id[10] */\n/* NormalCharacterDataNode id[11] */\n/* NormalCharacterDataNode id[12] */\n/* NormalCharacterDataNode id[13] */\n/* NormalCharacterDataNode id[14] */\n/* NormalCharacterDataNode id[15] */\n/* NormalCharacterDataNode id[16] */\n/* NormalCharacterDataNode id[17] */\n/* NormalCharacterDataNode id[18] */\n/* NormalCharacterDataNode id[19] */\n/* OneDimensionCharacterDataNode ho */\n/* NormalCharacterDataNode ho[0] */\n/* NormalCharacterDataNode ho[1] */\n/* NormalCharacterDataNode ho[2] */\n/* NormalCharacterDataNode ho[3] */\n/* NormalCharacterDataNode ho[4] */\n/* NormalCharacterDataNode ho[5] */\n/* NormalCharacterDataNode ho[6] */\n/* NormalCharacterDataNode ho[7] */\n/* NormalCharacterDataNode ho[8] */\n/* NormalCharacterDataNode ho[9] */\n/* NormalCharacterDataNode ho[10] */\n/* NormalCharacterDataNode ho[11] */\n/* NormalCharacterDataNode ho[12] */\n/* NormalCharacterDataNode ho[13] */\n/* NormalCharacterDataNode ho[14] */\n/* NormalCharacterDataNode ho[15] */\n/* NormalCharacterDataNode ho[16] */\n/* NormalCharacterDataNode ho[17] */\n/* NormalCharacterDataNode ho[18] */\n/* NormalCharacterDataNode ho[19] */\n/* OneDimensionCharacterDataNode ten */\n/* NormalCharacterDataNode ten[0] */\n/* NormalCharacterDataNode ten[1] */\n/* NormalCharacterDataNode ten[2] */\n/* NormalCharacterDataNode ten[3] */\n/* NormalCharacterDataNode ten[4] */\n/* NormalCharacterDataNode ten[5] */\n/* NormalCharacterDataNode ten[6] */\n/* NormalCharacterDataNode ten[7] */\n/* NormalCharacterDataNode ten[8] */\n/* NormalCharacterDataNode ten[9] */\n/* NormalCharacterDataNode ten[10] */\n/* NormalCharacterDataNode ten[11] */\n/* NormalCharacterDataNode ten[12] */\n/* NormalCharacterDataNode ten[13] */\n/* NormalCharacterDataNode ten[14] */\n/* NormalCharacterDataNode ten[15] */\n/* NormalCharacterDataNode ten[16] */\n/* NormalCharacterDataNode ten[17] */\n/* NormalCharacterDataNode ten[18] */\n/* NormalCharacterDataNode ten[19] */\n/* OneDimensionCharacterDataNode tendem */\n/* NormalCharacterDataNode tendem[0] */\n/* NormalCharacterDataNode tendem[1] */\n/* NormalCharacterDataNode tendem[2] */\n/* NormalCharacterDataNode tendem[3] */\n/* NormalCharacterDataNode tendem[4] */\n/* NormalCharacterDataNode tendem[5] */\n/* NormalCharacterDataNode tendem[6] */\n/* NormalCharacterDataNode tendem[7] */\n/* NormalCharacterDataNode tendem[8] */\n/* NormalCharacterDataNode tendem[9] */\n/* NormalCharacterDataNode tendem[10] */\n/* NormalCharacterDataNode tendem[11] */\n/* NormalCharacterDataNode tendem[12] */\n/* NormalCharacterDataNode tendem[13] */\n/* NormalCharacterDataNode tendem[14] */\n/* NormalCharacterDataNode tendem[15] */\n/* NormalCharacterDataNode tendem[16] */\n/* NormalCharacterDataNode tendem[17] */\n/* NormalCharacterDataNode tendem[18] */\n/* NormalCharacterDataNode tendem[19] */\n/* NormalCharacterDataNode gt */\n/* OneDimensionCharacterDataNode ns */\n/* NormalCharacterDataNode ns[0] */\n/* NormalCharacterDataNode ns[1] */\n/* NormalCharacterDataNode ns[2] */\n/* NormalCharacterDataNode ns[3] */\n/* NormalCharacterDataNode ns[4] */\n/* OneDimensionCharacterDataNode qq */\n/* NormalCharacterDataNode qq[0] */\n/* NormalCharacterDataNode qq[1] */\n/* NormalCharacterDataNode qq[2] */\n/* NormalCharacterDataNode qq[3] */\n/* NormalCharacterDataNode qq[4] */\n/* NormalCharacterDataNode qq[5] */\n/* NormalCharacterDataNode qq[6] */\n/* NormalCharacterDataNode qq[7] */\n/* NormalCharacterDataNode qq[8] */\n/* NormalCharacterDataNode qq[9] */\n/* NormalCharacterDataNode qq[10] */\n/* NormalCharacterDataNode qq[11] */\n/* NormalCharacterDataNode qq[12] */\n/* NormalCharacterDataNode qq[13] */\n/* NormalCharacterDataNode qq[14] */\n/* NormalCharacterDataNode qq[15] */\n/* NormalCharacterDataNode qq[16] */\n/* NormalCharacterDataNode qq[17] */\n/* NormalCharacterDataNode qq[18] */\n/* NormalCharacterDataNode qq[19] */\n/* NormalNumberDataNode toan */\n/* toan : null value -> no code */\n/* NormalNumberDataNode ly */\n/* ly : null value -> no code */\n/* NormalNumberDataNode hoa */\n/* hoa : null value -> no code */\n/* NormalNumberDataNode tongdiem */\n/* tongdiem : null value -> no code */\n/* NormalNumberDataNode tienganh */\n/* tienganh : null value -> no code */\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* NormalNumberDataNode kq */\n/* kq : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_a_1).next;\n/* PointerStructureDataNode head */\n(*AKA_VECTOR_INIT_a_1).head;\n/* PointerStructureDataNode last */\n(*AKA_VECTOR_INIT_a_1).last;\n\nAKA_VECTOR_INIT_a.push_back(AKA_VECTOR_INIT_a_1);\n\nthisinh* a = AKA_VECTOR_INIT_a[0];\nstd::vector<thisinh*> AKA_VECTOR_INIT_b;\n\n\n/* SubClassDataNode b */\n/* ConstructorDataNode thisinh() */\nAKA_mark(\"Calling: \\\\thisinh()|ROOT\\\\qlsv.cpp\\\\TS::trao_doi(TS*,TS*)\\\\b\\\\AKA_VECTOR_INIT_b_0\\\\b\\\\thisinh()\");AKA_fCall++;auto AKA_VECTOR_INIT_b_0 = new ::thisinh();\n/* OneDimensionCharacterDataNode id */\n/* NormalCharacterDataNode id[0] */\n/* NormalCharacterDataNode id[1] */\n/* NormalCharacterDataNode id[2] */\n/* NormalCharacterDataNode id[3] */\n/* NormalCharacterDataNode id[4] */\n/* NormalCharacterDataNode id[5] */\n/* NormalCharacterDataNode id[6] */\n/* NormalCharacterDataNode id[7] */\n/* NormalCharacterDataNode id[8] */\n/* NormalCharacterDataNode id[9] */\n/* NormalCharacterDataNode id[10] */\n/* NormalCharacterDataNode id[11] */\n/* NormalCharacterDataNode id[12] */\n/* NormalCharacterDataNode id[13] */\n/* NormalCharacterDataNode id[14] */\n/* NormalCharacterDataNode id[15] */\n/* NormalCharacterDataNode id[16] */\n/* NormalCharacterDataNode id[17] */\n/* NormalCharacterDataNode id[18] */\n/* NormalCharacterDataNode id[19] */\n/* OneDimensionCharacterDataNode ho */\n/* NormalCharacterDataNode ho[0] */\n/* NormalCharacterDataNode ho[1] */\n/* NormalCharacterDataNode ho[2] */\n/* NormalCharacterDataNode ho[3] */\n/* NormalCharacterDataNode ho[4] */\n/* NormalCharacterDataNode ho[5] */\n/* NormalCharacterDataNode ho[6] */\n/* NormalCharacterDataNode ho[7] */\n/* NormalCharacterDataNode ho[8] */\n/* NormalCharacterDataNode ho[9] */\n/* NormalCharacterDataNode ho[10] */\n/* NormalCharacterDataNode ho[11] */\n/* NormalCharacterDataNode ho[12] */\n/* NormalCharacterDataNode ho[13] */\n/* NormalCharacterDataNode ho[14] */\n/* NormalCharacterDataNode ho[15] */\n/* NormalCharacterDataNode ho[16] */\n/* NormalCharacterDataNode ho[17] */\n/* NormalCharacterDataNode ho[18] */\n/* NormalCharacterDataNode ho[19] */\n/* OneDimensionCharacterDataNode ten */\n/* NormalCharacterDataNode ten[0] */\n/* NormalCharacterDataNode ten[1] */\n/* NormalCharacterDataNode ten[2] */\n/* NormalCharacterDataNode ten[3] */\n/* NormalCharacterDataNode ten[4] */\n/* NormalCharacterDataNode ten[5] */\n/* NormalCharacterDataNode ten[6] */\n/* NormalCharacterDataNode ten[7] */\n/* NormalCharacterDataNode ten[8] */\n/* NormalCharacterDataNode ten[9] */\n/* NormalCharacterDataNode ten[10] */\n/* NormalCharacterDataNode ten[11] */\n/* NormalCharacterDataNode ten[12] */\n/* NormalCharacterDataNode ten[13] */\n/* NormalCharacterDataNode ten[14] */\n/* NormalCharacterDataNode ten[15] */\n/* NormalCharacterDataNode ten[16] */\n/* NormalCharacterDataNode ten[17] */\n/* NormalCharacterDataNode ten[18] */\n/* NormalCharacterDataNode ten[19] */\n/* OneDimensionCharacterDataNode tendem */\n/* NormalCharacterDataNode tendem[0] */\n/* NormalCharacterDataNode tendem[1] */\n/* NormalCharacterDataNode tendem[2] */\n/* NormalCharacterDataNode tendem[3] */\n/* NormalCharacterDataNode tendem[4] */\n/* NormalCharacterDataNode tendem[5] */\n/* NormalCharacterDataNode tendem[6] */\n/* NormalCharacterDataNode tendem[7] */\n/* NormalCharacterDataNode tendem[8] */\n/* NormalCharacterDataNode tendem[9] */\n/* NormalCharacterDataNode tendem[10] */\n/* NormalCharacterDataNode tendem[11] */\n/* NormalCharacterDataNode tendem[12] */\n/* NormalCharacterDataNode tendem[13] */\n/* NormalCharacterDataNode tendem[14] */\n/* NormalCharacterDataNode tendem[15] */\n/* NormalCharacterDataNode tendem[16] */\n/* NormalCharacterDataNode tendem[17] */\n/* NormalCharacterDataNode tendem[18] */\n/* NormalCharacterDataNode tendem[19] */\n/* NormalCharacterDataNode gt */\n/* OneDimensionCharacterDataNode ns */\n/* NormalCharacterDataNode ns[0] */\n/* NormalCharacterDataNode ns[1] */\n/* NormalCharacterDataNode ns[2] */\n/* NormalCharacterDataNode ns[3] */\n/* NormalCharacterDataNode ns[4] */\n/* OneDimensionCharacterDataNode qq */\n/* NormalCharacterDataNode qq[0] */\n/* NormalCharacterDataNode qq[1] */\n/* NormalCharacterDataNode qq[2] */\n/* NormalCharacterDataNode qq[3] */\n/* NormalCharacterDataNode qq[4] */\n/* NormalCharacterDataNode qq[5] */\n/* NormalCharacterDataNode qq[6] */\n/* NormalCharacterDataNode qq[7] */\n/* NormalCharacterDataNode qq[8] */\n/* NormalCharacterDataNode qq[9] */\n/* NormalCharacterDataNode qq[10] */\n/* NormalCharacterDataNode qq[11] */\n/* NormalCharacterDataNode qq[12] */\n/* NormalCharacterDataNode qq[13] */\n/* NormalCharacterDataNode qq[14] */\n/* NormalCharacterDataNode qq[15] */\n/* NormalCharacterDataNode qq[16] */\n/* NormalCharacterDataNode qq[17] */\n/* NormalCharacterDataNode qq[18] */\n/* NormalCharacterDataNode qq[19] */\n/* NormalNumberDataNode toan */\n/* toan : null value -> no code */\n/* NormalNumberDataNode ly */\n/* ly : null value -> no code */\n/* NormalNumberDataNode hoa */\n/* hoa : null value -> no code */\n/* NormalNumberDataNode tongdiem */\n/* tongdiem : null value -> no code */\n/* NormalNumberDataNode tienganh */\n/* tienganh : null value -> no code */\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* NormalNumberDataNode kq */\n/* kq : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_b_0).next;\n/* PointerStructureDataNode head */\n(*AKA_VECTOR_INIT_b_0).head;\n/* PointerStructureDataNode last */\n(*AKA_VECTOR_INIT_b_0).last;\n\nAKA_VECTOR_INIT_b.push_back(AKA_VECTOR_INIT_b_0);\n\n\n/* SubClassDataNode b */\n/* ConstructorDataNode thisinh() */\nAKA_mark(\"Calling: \\\\thisinh()|ROOT\\\\qlsv.cpp\\\\TS::trao_doi(TS*,TS*)\\\\b\\\\AKA_VECTOR_INIT_b_1\\\\b\\\\thisinh()\");AKA_fCall++;auto AKA_VECTOR_INIT_b_1 = new ::thisinh();\n/* OneDimensionCharacterDataNode id */\n/* NormalCharacterDataNode id[0] */\n/* NormalCharacterDataNode id[1] */\n/* NormalCharacterDataNode id[2] */\n/* NormalCharacterDataNode id[3] */\n/* NormalCharacterDataNode id[4] */\n/* NormalCharacterDataNode id[5] */\n/* NormalCharacterDataNode id[6] */\n/* NormalCharacterDataNode id[7] */\n/* NormalCharacterDataNode id[8] */\n/* NormalCharacterDataNode id[9] */\n/* NormalCharacterDataNode id[10] */\n/* NormalCharacterDataNode id[11] */\n/* NormalCharacterDataNode id[12] */\n/* NormalCharacterDataNode id[13] */\n/* NormalCharacterDataNode id[14] */\n/* NormalCharacterDataNode id[15] */\n/* NormalCharacterDataNode id[16] */\n/* NormalCharacterDataNode id[17] */\n/* NormalCharacterDataNode id[18] */\n/* NormalCharacterDataNode id[19] */\n/* OneDimensionCharacterDataNode ho */\n/* NormalCharacterDataNode ho[0] */\n/* NormalCharacterDataNode ho[1] */\n/* NormalCharacterDataNode ho[2] */\n/* NormalCharacterDataNode ho[3] */\n/* NormalCharacterDataNode ho[4] */\n/* NormalCharacterDataNode ho[5] */\n/* NormalCharacterDataNode ho[6] */\n/* NormalCharacterDataNode ho[7] */\n/* NormalCharacterDataNode ho[8] */\n/* NormalCharacterDataNode ho[9] */\n/* NormalCharacterDataNode ho[10] */\n/* NormalCharacterDataNode ho[11] */\n/* NormalCharacterDataNode ho[12] */\n/* NormalCharacterDataNode ho[13] */\n/* NormalCharacterDataNode ho[14] */\n/* NormalCharacterDataNode ho[15] */\n/* NormalCharacterDataNode ho[16] */\n/* NormalCharacterDataNode ho[17] */\n/* NormalCharacterDataNode ho[18] */\n/* NormalCharacterDataNode ho[19] */\n/* OneDimensionCharacterDataNode ten */\n/* NormalCharacterDataNode ten[0] */\n/* NormalCharacterDataNode ten[1] */\n/* NormalCharacterDataNode ten[2] */\n/* NormalCharacterDataNode ten[3] */\n/* NormalCharacterDataNode ten[4] */\n/* NormalCharacterDataNode ten[5] */\n/* NormalCharacterDataNode ten[6] */\n/* NormalCharacterDataNode ten[7] */\n/* NormalCharacterDataNode ten[8] */\n/* NormalCharacterDataNode ten[9] */\n/* NormalCharacterDataNode ten[10] */\n/* NormalCharacterDataNode ten[11] */\n/* NormalCharacterDataNode ten[12] */\n/* NormalCharacterDataNode ten[13] */\n/* NormalCharacterDataNode ten[14] */\n/* NormalCharacterDataNode ten[15] */\n/* NormalCharacterDataNode ten[16] */\n/* NormalCharacterDataNode ten[17] */\n/* NormalCharacterDataNode ten[18] */\n/* NormalCharacterDataNode ten[19] */\n/* OneDimensionCharacterDataNode tendem */\n/* NormalCharacterDataNode tendem[0] */\n/* NormalCharacterDataNode tendem[1] */\n/* NormalCharacterDataNode tendem[2] */\n/* NormalCharacterDataNode tendem[3] */\n/* NormalCharacterDataNode tendem[4] */\n/* NormalCharacterDataNode tendem[5] */\n/* NormalCharacterDataNode tendem[6] */\n/* NormalCharacterDataNode tendem[7] */\n/* NormalCharacterDataNode tendem[8] */\n/* NormalCharacterDataNode tendem[9] */\n/* NormalCharacterDataNode tendem[10] */\n/* NormalCharacterDataNode tendem[11] */\n/* NormalCharacterDataNode tendem[12] */\n/* NormalCharacterDataNode tendem[13] */\n/* NormalCharacterDataNode tendem[14] */\n/* NormalCharacterDataNode tendem[15] */\n/* NormalCharacterDataNode tendem[16] */\n/* NormalCharacterDataNode tendem[17] */\n/* NormalCharacterDataNode tendem[18] */\n/* NormalCharacterDataNode tendem[19] */\n/* NormalCharacterDataNode gt */\n/* OneDimensionCharacterDataNode ns */\n/* NormalCharacterDataNode ns[0] */\n/* NormalCharacterDataNode ns[1] */\n/* NormalCharacterDataNode ns[2] */\n/* NormalCharacterDataNode ns[3] */\n/* NormalCharacterDataNode ns[4] */\n/* OneDimensionCharacterDataNode qq */\n/* NormalCharacterDataNode qq[0] */\n/* NormalCharacterDataNode qq[1] */\n/* NormalCharacterDataNode qq[2] */\n/* NormalCharacterDataNode qq[3] */\n/* NormalCharacterDataNode qq[4] */\n/* NormalCharacterDataNode qq[5] */\n/* NormalCharacterDataNode qq[6] */\n/* NormalCharacterDataNode qq[7] */\n/* NormalCharacterDataNode qq[8] */\n/* NormalCharacterDataNode qq[9] */\n/* NormalCharacterDataNode qq[10] */\n/* NormalCharacterDataNode qq[11] */\n/* NormalCharacterDataNode qq[12] */\n/* NormalCharacterDataNode qq[13] */\n/* NormalCharacterDataNode qq[14] */\n/* NormalCharacterDataNode qq[15] */\n/* NormalCharacterDataNode qq[16] */\n/* NormalCharacterDataNode qq[17] */\n/* NormalCharacterDataNode qq[18] */\n/* NormalCharacterDataNode qq[19] */\n/* NormalNumberDataNode toan */\n/* toan : null value -> no code */\n/* NormalNumberDataNode ly */\n/* ly : null value -> no code */\n/* NormalNumberDataNode hoa */\n/* hoa : null value -> no code */\n/* NormalNumberDataNode tongdiem */\n/* tongdiem : null value -> no code */\n/* NormalNumberDataNode tienganh */\n/* tienganh : null value -> no code */\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* NormalNumberDataNode kq */\n/* kq : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_b_1).next;\n/* PointerStructureDataNode head */\n(*AKA_VECTOR_INIT_b_1).head;\n/* PointerStructureDataNode last */\n(*AKA_VECTOR_INIT_b_1).last;\n\nAKA_VECTOR_INIT_b.push_back(AKA_VECTOR_INIT_b_1);\n\n\n/* SubClassDataNode b */\n/* ConstructorDataNode thisinh() */\nAKA_mark(\"Calling: \\\\thisinh()|ROOT\\\\qlsv.cpp\\\\TS::trao_doi(TS*,TS*)\\\\b\\\\AKA_VECTOR_INIT_b_2\\\\b\\\\thisinh()\");AKA_fCall++;auto AKA_VECTOR_INIT_b_2 = new ::thisinh();\n/* OneDimensionCharacterDataNode id */\n/* NormalCharacterDataNode id[0] */\n/* NormalCharacterDataNode id[1] */\n/* NormalCharacterDataNode id[2] */\n/* NormalCharacterDataNode id[3] */\n/* NormalCharacterDataNode id[4] */\n/* NormalCharacterDataNode id[5] */\n/* NormalCharacterDataNode id[6] */\n/* NormalCharacterDataNode id[7] */\n/* NormalCharacterDataNode id[8] */\n/* NormalCharacterDataNode id[9] */\n/* NormalCharacterDataNode id[10] */\n/* NormalCharacterDataNode id[11] */\n/* NormalCharacterDataNode id[12] */\n/* NormalCharacterDataNode id[13] */\n/* NormalCharacterDataNode id[14] */\n/* NormalCharacterDataNode id[15] */\n/* NormalCharacterDataNode id[16] */\n/* NormalCharacterDataNode id[17] */\n/* NormalCharacterDataNode id[18] */\n/* NormalCharacterDataNode id[19] */\n/* OneDimensionCharacterDataNode ho */\n/* NormalCharacterDataNode ho[0] */\n/* NormalCharacterDataNode ho[1] */\n/* NormalCharacterDataNode ho[2] */\n/* NormalCharacterDataNode ho[3] */\n/* NormalCharacterDataNode ho[4] */\n/* NormalCharacterDataNode ho[5] */\n/* NormalCharacterDataNode ho[6] */\n/* NormalCharacterDataNode ho[7] */\n/* NormalCharacterDataNode ho[8] */\n/* NormalCharacterDataNode ho[9] */\n/* NormalCharacterDataNode ho[10] */\n/* NormalCharacterDataNode ho[11] */\n/* NormalCharacterDataNode ho[12] */\n/* NormalCharacterDataNode ho[13] */\n/* NormalCharacterDataNode ho[14] */\n/* NormalCharacterDataNode ho[15] */\n/* NormalCharacterDataNode ho[16] */\n/* NormalCharacterDataNode ho[17] */\n/* NormalCharacterDataNode ho[18] */\n/* NormalCharacterDataNode ho[19] */\n/* OneDimensionCharacterDataNode ten */\n/* NormalCharacterDataNode ten[0] */\n/* NormalCharacterDataNode ten[1] */\n/* NormalCharacterDataNode ten[2] */\n/* NormalCharacterDataNode ten[3] */\n/* NormalCharacterDataNode ten[4] */\n/* NormalCharacterDataNode ten[5] */\n/* NormalCharacterDataNode ten[6] */\n/* NormalCharacterDataNode ten[7] */\n/* NormalCharacterDataNode ten[8] */\n/* NormalCharacterDataNode ten[9] */\n/* NormalCharacterDataNode ten[10] */\n/* NormalCharacterDataNode ten[11] */\n/* NormalCharacterDataNode ten[12] */\n/* NormalCharacterDataNode ten[13] */\n/* NormalCharacterDataNode ten[14] */\n/* NormalCharacterDataNode ten[15] */\n/* NormalCharacterDataNode ten[16] */\n/* NormalCharacterDataNode ten[17] */\n/* NormalCharacterDataNode ten[18] */\n/* NormalCharacterDataNode ten[19] */\n/* OneDimensionCharacterDataNode tendem */\n/* NormalCharacterDataNode tendem[0] */\n/* NormalCharacterDataNode tendem[1] */\n/* NormalCharacterDataNode tendem[2] */\n/* NormalCharacterDataNode tendem[3] */\n/* NormalCharacterDataNode tendem[4] */\n/* NormalCharacterDataNode tendem[5] */\n/* NormalCharacterDataNode tendem[6] */\n/* NormalCharacterDataNode tendem[7] */\n/* NormalCharacterDataNode tendem[8] */\n/* NormalCharacterDataNode tendem[9] */\n/* NormalCharacterDataNode tendem[10] */\n/* NormalCharacterDataNode tendem[11] */\n/* NormalCharacterDataNode tendem[12] */\n/* NormalCharacterDataNode tendem[13] */\n/* NormalCharacterDataNode tendem[14] */\n/* NormalCharacterDataNode tendem[15] */\n/* NormalCharacterDataNode tendem[16] */\n/* NormalCharacterDataNode tendem[17] */\n/* NormalCharacterDataNode tendem[18] */\n/* NormalCharacterDataNode tendem[19] */\n/* NormalCharacterDataNode gt */\n/* OneDimensionCharacterDataNode ns */\n/* NormalCharacterDataNode ns[0] */\n/* NormalCharacterDataNode ns[1] */\n/* NormalCharacterDataNode ns[2] */\n/* NormalCharacterDataNode ns[3] */\n/* NormalCharacterDataNode ns[4] */\n/* OneDimensionCharacterDataNode qq */\n/* NormalCharacterDataNode qq[0] */\n/* NormalCharacterDataNode qq[1] */\n/* NormalCharacterDataNode qq[2] */\n/* NormalCharacterDataNode qq[3] */\n/* NormalCharacterDataNode qq[4] */\n/* NormalCharacterDataNode qq[5] */\n/* NormalCharacterDataNode qq[6] */\n/* NormalCharacterDataNode qq[7] */\n/* NormalCharacterDataNode qq[8] */\n/* NormalCharacterDataNode qq[9] */\n/* NormalCharacterDataNode qq[10] */\n/* NormalCharacterDataNode qq[11] */\n/* NormalCharacterDataNode qq[12] */\n/* NormalCharacterDataNode qq[13] */\n/* NormalCharacterDataNode qq[14] */\n/* NormalCharacterDataNode qq[15] */\n/* NormalCharacterDataNode qq[16] */\n/* NormalCharacterDataNode qq[17] */\n/* NormalCharacterDataNode qq[18] */\n/* NormalCharacterDataNode qq[19] */\n/* NormalNumberDataNode toan */\n/* toan : null value -> no code */\n/* NormalNumberDataNode ly */\n/* ly : null value -> no code */\n/* NormalNumberDataNode hoa */\n/* hoa : null value -> no code */\n/* NormalNumberDataNode tongdiem */\n/* tongdiem : null value -> no code */\n/* NormalNumberDataNode tienganh */\n/* tienganh : null value -> no code */\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* NormalNumberDataNode kq */\n/* kq : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_b_2).next;\n/* PointerStructureDataNode head */\n(*AKA_VECTOR_INIT_b_2).head;\n/* PointerStructureDataNode last */\n(*AKA_VECTOR_INIT_b_2).last;\n\nAKA_VECTOR_INIT_b.push_back(AKA_VECTOR_INIT_b_2);\n\nthisinh* b = AKA_VECTOR_INIT_b[0];\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode a */\n/* PointerStructureDataNode b */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_trao_doi_TSmul_TSmul_random_0\");TS::trao_doi(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::trao_doi(TS*,TS*)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::trao_doi(TS*,TS*)"
+    },
+    {
+        "f": [],
+        "fm": "void TS::inFile(ofstream& fo, TS* student)\r {\r     fo\r     << setprecision(1)<<fixed<<student->id << \" | \"\r     << student->ho <<\" \" << student->tendem <<\" \" << student->ten <<\" | \"\r     << student->gt <<\" | \" << student->ns << \" | \"<< student->qq <<\" | \"\r     << student->toan << \" | \" << student->ly << \" | \"  << student->hoa\r     <<endl;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_inFile_ofstream_TSmul_random_0(void) {\n{\nAKA_test_case_name=\"TS_inFile_ofstream_TSmul_random_0\";\n\n// set up\n;\n\nofstream fo;std::vector<thisinh*> AKA_VECTOR_INIT_student;\n\n\n/* SubClassDataNode student */\n/* ConstructorDataNode thisinh() */\nAKA_mark(\"Calling: \\\\thisinh()|ROOT\\\\qlsv.cpp\\\\TS::inFile(ofstream&,TS*)\\\\student\\\\AKA_VECTOR_INIT_student_0\\\\student\\\\thisinh()\");AKA_fCall++;auto AKA_VECTOR_INIT_student_0 = new ::thisinh();\n/* OneDimensionCharacterDataNode id */\n/* NormalCharacterDataNode id[0] */\n/* NormalCharacterDataNode id[1] */\n/* NormalCharacterDataNode id[2] */\n/* NormalCharacterDataNode id[3] */\n/* NormalCharacterDataNode id[4] */\n/* NormalCharacterDataNode id[5] */\n/* NormalCharacterDataNode id[6] */\n/* NormalCharacterDataNode id[7] */\n/* NormalCharacterDataNode id[8] */\n/* NormalCharacterDataNode id[9] */\n/* NormalCharacterDataNode id[10] */\n/* NormalCharacterDataNode id[11] */\n/* NormalCharacterDataNode id[12] */\n/* NormalCharacterDataNode id[13] */\n/* NormalCharacterDataNode id[14] */\n/* NormalCharacterDataNode id[15] */\n/* NormalCharacterDataNode id[16] */\n/* NormalCharacterDataNode id[17] */\n/* NormalCharacterDataNode id[18] */\n/* NormalCharacterDataNode id[19] */\n/* OneDimensionCharacterDataNode ho */\n/* NormalCharacterDataNode ho[0] */\n/* NormalCharacterDataNode ho[1] */\n/* NormalCharacterDataNode ho[2] */\n/* NormalCharacterDataNode ho[3] */\n/* NormalCharacterDataNode ho[4] */\n/* NormalCharacterDataNode ho[5] */\n/* NormalCharacterDataNode ho[6] */\n/* NormalCharacterDataNode ho[7] */\n/* NormalCharacterDataNode ho[8] */\n/* NormalCharacterDataNode ho[9] */\n/* NormalCharacterDataNode ho[10] */\n/* NormalCharacterDataNode ho[11] */\n/* NormalCharacterDataNode ho[12] */\n/* NormalCharacterDataNode ho[13] */\n/* NormalCharacterDataNode ho[14] */\n/* NormalCharacterDataNode ho[15] */\n/* NormalCharacterDataNode ho[16] */\n/* NormalCharacterDataNode ho[17] */\n/* NormalCharacterDataNode ho[18] */\n/* NormalCharacterDataNode ho[19] */\n/* OneDimensionCharacterDataNode ten */\n/* NormalCharacterDataNode ten[0] */\n/* NormalCharacterDataNode ten[1] */\n/* NormalCharacterDataNode ten[2] */\n/* NormalCharacterDataNode ten[3] */\n/* NormalCharacterDataNode ten[4] */\n/* NormalCharacterDataNode ten[5] */\n/* NormalCharacterDataNode ten[6] */\n/* NormalCharacterDataNode ten[7] */\n/* NormalCharacterDataNode ten[8] */\n/* NormalCharacterDataNode ten[9] */\n/* NormalCharacterDataNode ten[10] */\n/* NormalCharacterDataNode ten[11] */\n/* NormalCharacterDataNode ten[12] */\n/* NormalCharacterDataNode ten[13] */\n/* NormalCharacterDataNode ten[14] */\n/* NormalCharacterDataNode ten[15] */\n/* NormalCharacterDataNode ten[16] */\n/* NormalCharacterDataNode ten[17] */\n/* NormalCharacterDataNode ten[18] */\n/* NormalCharacterDataNode ten[19] */\n/* OneDimensionCharacterDataNode tendem */\n/* NormalCharacterDataNode tendem[0] */\n/* NormalCharacterDataNode tendem[1] */\n/* NormalCharacterDataNode tendem[2] */\n/* NormalCharacterDataNode tendem[3] */\n/* NormalCharacterDataNode tendem[4] */\n/* NormalCharacterDataNode tendem[5] */\n/* NormalCharacterDataNode tendem[6] */\n/* NormalCharacterDataNode tendem[7] */\n/* NormalCharacterDataNode tendem[8] */\n/* NormalCharacterDataNode tendem[9] */\n/* NormalCharacterDataNode tendem[10] */\n/* NormalCharacterDataNode tendem[11] */\n/* NormalCharacterDataNode tendem[12] */\n/* NormalCharacterDataNode tendem[13] */\n/* NormalCharacterDataNode tendem[14] */\n/* NormalCharacterDataNode tendem[15] */\n/* NormalCharacterDataNode tendem[16] */\n/* NormalCharacterDataNode tendem[17] */\n/* NormalCharacterDataNode tendem[18] */\n/* NormalCharacterDataNode tendem[19] */\n/* NormalCharacterDataNode gt */\n/* OneDimensionCharacterDataNode ns */\n/* NormalCharacterDataNode ns[0] */\n/* NormalCharacterDataNode ns[1] */\n/* NormalCharacterDataNode ns[2] */\n/* NormalCharacterDataNode ns[3] */\n/* NormalCharacterDataNode ns[4] */\n/* OneDimensionCharacterDataNode qq */\n/* NormalCharacterDataNode qq[0] */\n/* NormalCharacterDataNode qq[1] */\n/* NormalCharacterDataNode qq[2] */\n/* NormalCharacterDataNode qq[3] */\n/* NormalCharacterDataNode qq[4] */\n/* NormalCharacterDataNode qq[5] */\n/* NormalCharacterDataNode qq[6] */\n/* NormalCharacterDataNode qq[7] */\n/* NormalCharacterDataNode qq[8] */\n/* NormalCharacterDataNode qq[9] */\n/* NormalCharacterDataNode qq[10] */\n/* NormalCharacterDataNode qq[11] */\n/* NormalCharacterDataNode qq[12] */\n/* NormalCharacterDataNode qq[13] */\n/* NormalCharacterDataNode qq[14] */\n/* NormalCharacterDataNode qq[15] */\n/* NormalCharacterDataNode qq[16] */\n/* NormalCharacterDataNode qq[17] */\n/* NormalCharacterDataNode qq[18] */\n/* NormalCharacterDataNode qq[19] */\n/* NormalNumberDataNode toan */\n/* toan : null value -> no code */\n/* NormalNumberDataNode ly */\n/* ly : null value -> no code */\n/* NormalNumberDataNode hoa */\n/* hoa : null value -> no code */\n/* NormalNumberDataNode tongdiem */\n/* tongdiem : null value -> no code */\n/* NormalNumberDataNode tienganh */\n/* tienganh : null value -> no code */\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* NormalNumberDataNode kq */\n/* kq : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_student_0).next;\n/* PointerStructureDataNode head */\n(*AKA_VECTOR_INIT_student_0).head;\n/* PointerStructureDataNode last */\n(*AKA_VECTOR_INIT_student_0).last;\n\nAKA_VECTOR_INIT_student.push_back(AKA_VECTOR_INIT_student_0);\n\n\n/* SubClassDataNode student */\n/* ConstructorDataNode thisinh() */\nAKA_mark(\"Calling: \\\\thisinh()|ROOT\\\\qlsv.cpp\\\\TS::inFile(ofstream&,TS*)\\\\student\\\\AKA_VECTOR_INIT_student_1\\\\student\\\\thisinh()\");AKA_fCall++;auto AKA_VECTOR_INIT_student_1 = new ::thisinh();\n/* OneDimensionCharacterDataNode id */\n/* NormalCharacterDataNode id[0] */\n/* NormalCharacterDataNode id[1] */\n/* NormalCharacterDataNode id[2] */\n/* NormalCharacterDataNode id[3] */\n/* NormalCharacterDataNode id[4] */\n/* NormalCharacterDataNode id[5] */\n/* NormalCharacterDataNode id[6] */\n/* NormalCharacterDataNode id[7] */\n/* NormalCharacterDataNode id[8] */\n/* NormalCharacterDataNode id[9] */\n/* NormalCharacterDataNode id[10] */\n/* NormalCharacterDataNode id[11] */\n/* NormalCharacterDataNode id[12] */\n/* NormalCharacterDataNode id[13] */\n/* NormalCharacterDataNode id[14] */\n/* NormalCharacterDataNode id[15] */\n/* NormalCharacterDataNode id[16] */\n/* NormalCharacterDataNode id[17] */\n/* NormalCharacterDataNode id[18] */\n/* NormalCharacterDataNode id[19] */\n/* OneDimensionCharacterDataNode ho */\n/* NormalCharacterDataNode ho[0] */\n/* NormalCharacterDataNode ho[1] */\n/* NormalCharacterDataNode ho[2] */\n/* NormalCharacterDataNode ho[3] */\n/* NormalCharacterDataNode ho[4] */\n/* NormalCharacterDataNode ho[5] */\n/* NormalCharacterDataNode ho[6] */\n/* NormalCharacterDataNode ho[7] */\n/* NormalCharacterDataNode ho[8] */\n/* NormalCharacterDataNode ho[9] */\n/* NormalCharacterDataNode ho[10] */\n/* NormalCharacterDataNode ho[11] */\n/* NormalCharacterDataNode ho[12] */\n/* NormalCharacterDataNode ho[13] */\n/* NormalCharacterDataNode ho[14] */\n/* NormalCharacterDataNode ho[15] */\n/* NormalCharacterDataNode ho[16] */\n/* NormalCharacterDataNode ho[17] */\n/* NormalCharacterDataNode ho[18] */\n/* NormalCharacterDataNode ho[19] */\n/* OneDimensionCharacterDataNode ten */\n/* NormalCharacterDataNode ten[0] */\n/* NormalCharacterDataNode ten[1] */\n/* NormalCharacterDataNode ten[2] */\n/* NormalCharacterDataNode ten[3] */\n/* NormalCharacterDataNode ten[4] */\n/* NormalCharacterDataNode ten[5] */\n/* NormalCharacterDataNode ten[6] */\n/* NormalCharacterDataNode ten[7] */\n/* NormalCharacterDataNode ten[8] */\n/* NormalCharacterDataNode ten[9] */\n/* NormalCharacterDataNode ten[10] */\n/* NormalCharacterDataNode ten[11] */\n/* NormalCharacterDataNode ten[12] */\n/* NormalCharacterDataNode ten[13] */\n/* NormalCharacterDataNode ten[14] */\n/* NormalCharacterDataNode ten[15] */\n/* NormalCharacterDataNode ten[16] */\n/* NormalCharacterDataNode ten[17] */\n/* NormalCharacterDataNode ten[18] */\n/* NormalCharacterDataNode ten[19] */\n/* OneDimensionCharacterDataNode tendem */\n/* NormalCharacterDataNode tendem[0] */\n/* NormalCharacterDataNode tendem[1] */\n/* NormalCharacterDataNode tendem[2] */\n/* NormalCharacterDataNode tendem[3] */\n/* NormalCharacterDataNode tendem[4] */\n/* NormalCharacterDataNode tendem[5] */\n/* NormalCharacterDataNode tendem[6] */\n/* NormalCharacterDataNode tendem[7] */\n/* NormalCharacterDataNode tendem[8] */\n/* NormalCharacterDataNode tendem[9] */\n/* NormalCharacterDataNode tendem[10] */\n/* NormalCharacterDataNode tendem[11] */\n/* NormalCharacterDataNode tendem[12] */\n/* NormalCharacterDataNode tendem[13] */\n/* NormalCharacterDataNode tendem[14] */\n/* NormalCharacterDataNode tendem[15] */\n/* NormalCharacterDataNode tendem[16] */\n/* NormalCharacterDataNode tendem[17] */\n/* NormalCharacterDataNode tendem[18] */\n/* NormalCharacterDataNode tendem[19] */\n/* NormalCharacterDataNode gt */\n/* OneDimensionCharacterDataNode ns */\n/* NormalCharacterDataNode ns[0] */\n/* NormalCharacterDataNode ns[1] */\n/* NormalCharacterDataNode ns[2] */\n/* NormalCharacterDataNode ns[3] */\n/* NormalCharacterDataNode ns[4] */\n/* OneDimensionCharacterDataNode qq */\n/* NormalCharacterDataNode qq[0] */\n/* NormalCharacterDataNode qq[1] */\n/* NormalCharacterDataNode qq[2] */\n/* NormalCharacterDataNode qq[3] */\n/* NormalCharacterDataNode qq[4] */\n/* NormalCharacterDataNode qq[5] */\n/* NormalCharacterDataNode qq[6] */\n/* NormalCharacterDataNode qq[7] */\n/* NormalCharacterDataNode qq[8] */\n/* NormalCharacterDataNode qq[9] */\n/* NormalCharacterDataNode qq[10] */\n/* NormalCharacterDataNode qq[11] */\n/* NormalCharacterDataNode qq[12] */\n/* NormalCharacterDataNode qq[13] */\n/* NormalCharacterDataNode qq[14] */\n/* NormalCharacterDataNode qq[15] */\n/* NormalCharacterDataNode qq[16] */\n/* NormalCharacterDataNode qq[17] */\n/* NormalCharacterDataNode qq[18] */\n/* NormalCharacterDataNode qq[19] */\n/* NormalNumberDataNode toan */\n/* toan : null value -> no code */\n/* NormalNumberDataNode ly */\n/* ly : null value -> no code */\n/* NormalNumberDataNode hoa */\n/* hoa : null value -> no code */\n/* NormalNumberDataNode tongdiem */\n/* tongdiem : null value -> no code */\n/* NormalNumberDataNode tienganh */\n/* tienganh : null value -> no code */\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* NormalNumberDataNode kq */\n/* kq : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_student_1).next;\n/* PointerStructureDataNode head */\n(*AKA_VECTOR_INIT_student_1).head;\n/* PointerStructureDataNode last */\n(*AKA_VECTOR_INIT_student_1).last;\n\nAKA_VECTOR_INIT_student.push_back(AKA_VECTOR_INIT_student_1);\n\n\n/* SubClassDataNode student */\n/* ConstructorDataNode thisinh() */\nAKA_mark(\"Calling: \\\\thisinh()|ROOT\\\\qlsv.cpp\\\\TS::inFile(ofstream&,TS*)\\\\student\\\\AKA_VECTOR_INIT_student_2\\\\student\\\\thisinh()\");AKA_fCall++;auto AKA_VECTOR_INIT_student_2 = new ::thisinh();\n/* OneDimensionCharacterDataNode id */\n/* NormalCharacterDataNode id[0] */\n/* NormalCharacterDataNode id[1] */\n/* NormalCharacterDataNode id[2] */\n/* NormalCharacterDataNode id[3] */\n/* NormalCharacterDataNode id[4] */\n/* NormalCharacterDataNode id[5] */\n/* NormalCharacterDataNode id[6] */\n/* NormalCharacterDataNode id[7] */\n/* NormalCharacterDataNode id[8] */\n/* NormalCharacterDataNode id[9] */\n/* NormalCharacterDataNode id[10] */\n/* NormalCharacterDataNode id[11] */\n/* NormalCharacterDataNode id[12] */\n/* NormalCharacterDataNode id[13] */\n/* NormalCharacterDataNode id[14] */\n/* NormalCharacterDataNode id[15] */\n/* NormalCharacterDataNode id[16] */\n/* NormalCharacterDataNode id[17] */\n/* NormalCharacterDataNode id[18] */\n/* NormalCharacterDataNode id[19] */\n/* OneDimensionCharacterDataNode ho */\n/* NormalCharacterDataNode ho[0] */\n/* NormalCharacterDataNode ho[1] */\n/* NormalCharacterDataNode ho[2] */\n/* NormalCharacterDataNode ho[3] */\n/* NormalCharacterDataNode ho[4] */\n/* NormalCharacterDataNode ho[5] */\n/* NormalCharacterDataNode ho[6] */\n/* NormalCharacterDataNode ho[7] */\n/* NormalCharacterDataNode ho[8] */\n/* NormalCharacterDataNode ho[9] */\n/* NormalCharacterDataNode ho[10] */\n/* NormalCharacterDataNode ho[11] */\n/* NormalCharacterDataNode ho[12] */\n/* NormalCharacterDataNode ho[13] */\n/* NormalCharacterDataNode ho[14] */\n/* NormalCharacterDataNode ho[15] */\n/* NormalCharacterDataNode ho[16] */\n/* NormalCharacterDataNode ho[17] */\n/* NormalCharacterDataNode ho[18] */\n/* NormalCharacterDataNode ho[19] */\n/* OneDimensionCharacterDataNode ten */\n/* NormalCharacterDataNode ten[0] */\n/* NormalCharacterDataNode ten[1] */\n/* NormalCharacterDataNode ten[2] */\n/* NormalCharacterDataNode ten[3] */\n/* NormalCharacterDataNode ten[4] */\n/* NormalCharacterDataNode ten[5] */\n/* NormalCharacterDataNode ten[6] */\n/* NormalCharacterDataNode ten[7] */\n/* NormalCharacterDataNode ten[8] */\n/* NormalCharacterDataNode ten[9] */\n/* NormalCharacterDataNode ten[10] */\n/* NormalCharacterDataNode ten[11] */\n/* NormalCharacterDataNode ten[12] */\n/* NormalCharacterDataNode ten[13] */\n/* NormalCharacterDataNode ten[14] */\n/* NormalCharacterDataNode ten[15] */\n/* NormalCharacterDataNode ten[16] */\n/* NormalCharacterDataNode ten[17] */\n/* NormalCharacterDataNode ten[18] */\n/* NormalCharacterDataNode ten[19] */\n/* OneDimensionCharacterDataNode tendem */\n/* NormalCharacterDataNode tendem[0] */\n/* NormalCharacterDataNode tendem[1] */\n/* NormalCharacterDataNode tendem[2] */\n/* NormalCharacterDataNode tendem[3] */\n/* NormalCharacterDataNode tendem[4] */\n/* NormalCharacterDataNode tendem[5] */\n/* NormalCharacterDataNode tendem[6] */\n/* NormalCharacterDataNode tendem[7] */\n/* NormalCharacterDataNode tendem[8] */\n/* NormalCharacterDataNode tendem[9] */\n/* NormalCharacterDataNode tendem[10] */\n/* NormalCharacterDataNode tendem[11] */\n/* NormalCharacterDataNode tendem[12] */\n/* NormalCharacterDataNode tendem[13] */\n/* NormalCharacterDataNode tendem[14] */\n/* NormalCharacterDataNode tendem[15] */\n/* NormalCharacterDataNode tendem[16] */\n/* NormalCharacterDataNode tendem[17] */\n/* NormalCharacterDataNode tendem[18] */\n/* NormalCharacterDataNode tendem[19] */\n/* NormalCharacterDataNode gt */\n/* OneDimensionCharacterDataNode ns */\n/* NormalCharacterDataNode ns[0] */\n/* NormalCharacterDataNode ns[1] */\n/* NormalCharacterDataNode ns[2] */\n/* NormalCharacterDataNode ns[3] */\n/* NormalCharacterDataNode ns[4] */\n/* OneDimensionCharacterDataNode qq */\n/* NormalCharacterDataNode qq[0] */\n/* NormalCharacterDataNode qq[1] */\n/* NormalCharacterDataNode qq[2] */\n/* NormalCharacterDataNode qq[3] */\n/* NormalCharacterDataNode qq[4] */\n/* NormalCharacterDataNode qq[5] */\n/* NormalCharacterDataNode qq[6] */\n/* NormalCharacterDataNode qq[7] */\n/* NormalCharacterDataNode qq[8] */\n/* NormalCharacterDataNode qq[9] */\n/* NormalCharacterDataNode qq[10] */\n/* NormalCharacterDataNode qq[11] */\n/* NormalCharacterDataNode qq[12] */\n/* NormalCharacterDataNode qq[13] */\n/* NormalCharacterDataNode qq[14] */\n/* NormalCharacterDataNode qq[15] */\n/* NormalCharacterDataNode qq[16] */\n/* NormalCharacterDataNode qq[17] */\n/* NormalCharacterDataNode qq[18] */\n/* NormalCharacterDataNode qq[19] */\n/* NormalNumberDataNode toan */\n/* toan : null value -> no code */\n/* NormalNumberDataNode ly */\n/* ly : null value -> no code */\n/* NormalNumberDataNode hoa */\n/* hoa : null value -> no code */\n/* NormalNumberDataNode tongdiem */\n/* tongdiem : null value -> no code */\n/* NormalNumberDataNode tienganh */\n/* tienganh : null value -> no code */\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* NormalNumberDataNode kq */\n/* kq : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_student_2).next;\n/* PointerStructureDataNode head */\n(*AKA_VECTOR_INIT_student_2).head;\n/* PointerStructureDataNode last */\n(*AKA_VECTOR_INIT_student_2).last;\n\nAKA_VECTOR_INIT_student.push_back(AKA_VECTOR_INIT_student_2);\n\nthisinh* student = AKA_VECTOR_INIT_student[0];\n\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fo */\n/* PointerStructureDataNode student */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_inFile_ofstream_TSmul_random_0\");TS::inFile(fo,student);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::inFile(ofstream&,TS*)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::inFile(ofstream&,TS*)"
+    },
+    {
+        "f": [],
+        "fm": "void TS::inFileTiengAnh(ofstream& fo, TS* student)\r {\r     char ten[30]=\"\\0\";\r     StrIns(ten,0,student->ten);\r     StrIns(ten, 0, \" \");\r     StrIns(ten,0,student->tendem);\r     StrIns(ten, 0, \" \");\r     StrIns(ten,0,student->ho);\r     fo<<setprecision(1)<<fixed\r     <<setw(9)<<student->id << \" | \"\r     << setw(18) <<left<<ten << \" | \"\r     <<student->gt <<\" | \" << student->ns << \" | \"<< setw(13) <<student->qq <<\" |\"\r     << setw(4)<<student->toan << \" |\" << setw(4)<<student->ly\r     << \" | \"  <<setw(4)<< student->hoa <<\" | \"<<student->tienganh;\r     fo <<endl;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_inFileTiengAnh_ofstream_TSmul_random_0(void) {\n{\nAKA_test_case_name=\"TS_inFileTiengAnh_ofstream_TSmul_random_0\";\n\n// set up\n;\n\nofstream fo;std::vector<thisinh*> AKA_VECTOR_INIT_student;\n\n\n/* SubClassDataNode student */\n/* ConstructorDataNode thisinh() */\nAKA_mark(\"Calling: \\\\thisinh()|ROOT\\\\qlsv.cpp\\\\TS::inFileTiengAnh(ofstream&,TS*)\\\\student\\\\AKA_VECTOR_INIT_student_0\\\\student\\\\thisinh()\");AKA_fCall++;auto AKA_VECTOR_INIT_student_0 = new ::thisinh();\n/* OneDimensionCharacterDataNode id */\n/* NormalCharacterDataNode id[0] */\n/* NormalCharacterDataNode id[1] */\n/* NormalCharacterDataNode id[2] */\n/* NormalCharacterDataNode id[3] */\n/* NormalCharacterDataNode id[4] */\n/* NormalCharacterDataNode id[5] */\n/* NormalCharacterDataNode id[6] */\n/* NormalCharacterDataNode id[7] */\n/* NormalCharacterDataNode id[8] */\n/* NormalCharacterDataNode id[9] */\n/* NormalCharacterDataNode id[10] */\n/* NormalCharacterDataNode id[11] */\n/* NormalCharacterDataNode id[12] */\n/* NormalCharacterDataNode id[13] */\n/* NormalCharacterDataNode id[14] */\n/* NormalCharacterDataNode id[15] */\n/* NormalCharacterDataNode id[16] */\n/* NormalCharacterDataNode id[17] */\n/* NormalCharacterDataNode id[18] */\n/* NormalCharacterDataNode id[19] */\n/* OneDimensionCharacterDataNode ho */\n/* NormalCharacterDataNode ho[0] */\n/* NormalCharacterDataNode ho[1] */\n/* NormalCharacterDataNode ho[2] */\n/* NormalCharacterDataNode ho[3] */\n/* NormalCharacterDataNode ho[4] */\n/* NormalCharacterDataNode ho[5] */\n/* NormalCharacterDataNode ho[6] */\n/* NormalCharacterDataNode ho[7] */\n/* NormalCharacterDataNode ho[8] */\n/* NormalCharacterDataNode ho[9] */\n/* NormalCharacterDataNode ho[10] */\n/* NormalCharacterDataNode ho[11] */\n/* NormalCharacterDataNode ho[12] */\n/* NormalCharacterDataNode ho[13] */\n/* NormalCharacterDataNode ho[14] */\n/* NormalCharacterDataNode ho[15] */\n/* NormalCharacterDataNode ho[16] */\n/* NormalCharacterDataNode ho[17] */\n/* NormalCharacterDataNode ho[18] */\n/* NormalCharacterDataNode ho[19] */\n/* OneDimensionCharacterDataNode ten */\n/* NormalCharacterDataNode ten[0] */\n/* NormalCharacterDataNode ten[1] */\n/* NormalCharacterDataNode ten[2] */\n/* NormalCharacterDataNode ten[3] */\n/* NormalCharacterDataNode ten[4] */\n/* NormalCharacterDataNode ten[5] */\n/* NormalCharacterDataNode ten[6] */\n/* NormalCharacterDataNode ten[7] */\n/* NormalCharacterDataNode ten[8] */\n/* NormalCharacterDataNode ten[9] */\n/* NormalCharacterDataNode ten[10] */\n/* NormalCharacterDataNode ten[11] */\n/* NormalCharacterDataNode ten[12] */\n/* NormalCharacterDataNode ten[13] */\n/* NormalCharacterDataNode ten[14] */\n/* NormalCharacterDataNode ten[15] */\n/* NormalCharacterDataNode ten[16] */\n/* NormalCharacterDataNode ten[17] */\n/* NormalCharacterDataNode ten[18] */\n/* NormalCharacterDataNode ten[19] */\n/* OneDimensionCharacterDataNode tendem */\n/* NormalCharacterDataNode tendem[0] */\n/* NormalCharacterDataNode tendem[1] */\n/* NormalCharacterDataNode tendem[2] */\n/* NormalCharacterDataNode tendem[3] */\n/* NormalCharacterDataNode tendem[4] */\n/* NormalCharacterDataNode tendem[5] */\n/* NormalCharacterDataNode tendem[6] */\n/* NormalCharacterDataNode tendem[7] */\n/* NormalCharacterDataNode tendem[8] */\n/* NormalCharacterDataNode tendem[9] */\n/* NormalCharacterDataNode tendem[10] */\n/* NormalCharacterDataNode tendem[11] */\n/* NormalCharacterDataNode tendem[12] */\n/* NormalCharacterDataNode tendem[13] */\n/* NormalCharacterDataNode tendem[14] */\n/* NormalCharacterDataNode tendem[15] */\n/* NormalCharacterDataNode tendem[16] */\n/* NormalCharacterDataNode tendem[17] */\n/* NormalCharacterDataNode tendem[18] */\n/* NormalCharacterDataNode tendem[19] */\n/* NormalCharacterDataNode gt */\n/* OneDimensionCharacterDataNode ns */\n/* NormalCharacterDataNode ns[0] */\n/* NormalCharacterDataNode ns[1] */\n/* NormalCharacterDataNode ns[2] */\n/* NormalCharacterDataNode ns[3] */\n/* NormalCharacterDataNode ns[4] */\n/* OneDimensionCharacterDataNode qq */\n/* NormalCharacterDataNode qq[0] */\n/* NormalCharacterDataNode qq[1] */\n/* NormalCharacterDataNode qq[2] */\n/* NormalCharacterDataNode qq[3] */\n/* NormalCharacterDataNode qq[4] */\n/* NormalCharacterDataNode qq[5] */\n/* NormalCharacterDataNode qq[6] */\n/* NormalCharacterDataNode qq[7] */\n/* NormalCharacterDataNode qq[8] */\n/* NormalCharacterDataNode qq[9] */\n/* NormalCharacterDataNode qq[10] */\n/* NormalCharacterDataNode qq[11] */\n/* NormalCharacterDataNode qq[12] */\n/* NormalCharacterDataNode qq[13] */\n/* NormalCharacterDataNode qq[14] */\n/* NormalCharacterDataNode qq[15] */\n/* NormalCharacterDataNode qq[16] */\n/* NormalCharacterDataNode qq[17] */\n/* NormalCharacterDataNode qq[18] */\n/* NormalCharacterDataNode qq[19] */\n/* NormalNumberDataNode toan */\n/* toan : null value -> no code */\n/* NormalNumberDataNode ly */\n/* ly : null value -> no code */\n/* NormalNumberDataNode hoa */\n/* hoa : null value -> no code */\n/* NormalNumberDataNode tongdiem */\n/* tongdiem : null value -> no code */\n/* NormalNumberDataNode tienganh */\n/* tienganh : null value -> no code */\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* NormalNumberDataNode kq */\n/* kq : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_student_0).next;\n/* PointerStructureDataNode head */\n(*AKA_VECTOR_INIT_student_0).head;\n/* PointerStructureDataNode last */\n(*AKA_VECTOR_INIT_student_0).last;\n\nAKA_VECTOR_INIT_student.push_back(AKA_VECTOR_INIT_student_0);\n\n\n/* SubClassDataNode student */\n/* ConstructorDataNode thisinh() */\nAKA_mark(\"Calling: \\\\thisinh()|ROOT\\\\qlsv.cpp\\\\TS::inFileTiengAnh(ofstream&,TS*)\\\\student\\\\AKA_VECTOR_INIT_student_1\\\\student\\\\thisinh()\");AKA_fCall++;auto AKA_VECTOR_INIT_student_1 = new ::thisinh();\n/* OneDimensionCharacterDataNode id */\n/* NormalCharacterDataNode id[0] */\n/* NormalCharacterDataNode id[1] */\n/* NormalCharacterDataNode id[2] */\n/* NormalCharacterDataNode id[3] */\n/* NormalCharacterDataNode id[4] */\n/* NormalCharacterDataNode id[5] */\n/* NormalCharacterDataNode id[6] */\n/* NormalCharacterDataNode id[7] */\n/* NormalCharacterDataNode id[8] */\n/* NormalCharacterDataNode id[9] */\n/* NormalCharacterDataNode id[10] */\n/* NormalCharacterDataNode id[11] */\n/* NormalCharacterDataNode id[12] */\n/* NormalCharacterDataNode id[13] */\n/* NormalCharacterDataNode id[14] */\n/* NormalCharacterDataNode id[15] */\n/* NormalCharacterDataNode id[16] */\n/* NormalCharacterDataNode id[17] */\n/* NormalCharacterDataNode id[18] */\n/* NormalCharacterDataNode id[19] */\n/* OneDimensionCharacterDataNode ho */\n/* NormalCharacterDataNode ho[0] */\n/* NormalCharacterDataNode ho[1] */\n/* NormalCharacterDataNode ho[2] */\n/* NormalCharacterDataNode ho[3] */\n/* NormalCharacterDataNode ho[4] */\n/* NormalCharacterDataNode ho[5] */\n/* NormalCharacterDataNode ho[6] */\n/* NormalCharacterDataNode ho[7] */\n/* NormalCharacterDataNode ho[8] */\n/* NormalCharacterDataNode ho[9] */\n/* NormalCharacterDataNode ho[10] */\n/* NormalCharacterDataNode ho[11] */\n/* NormalCharacterDataNode ho[12] */\n/* NormalCharacterDataNode ho[13] */\n/* NormalCharacterDataNode ho[14] */\n/* NormalCharacterDataNode ho[15] */\n/* NormalCharacterDataNode ho[16] */\n/* NormalCharacterDataNode ho[17] */\n/* NormalCharacterDataNode ho[18] */\n/* NormalCharacterDataNode ho[19] */\n/* OneDimensionCharacterDataNode ten */\n/* NormalCharacterDataNode ten[0] */\n/* NormalCharacterDataNode ten[1] */\n/* NormalCharacterDataNode ten[2] */\n/* NormalCharacterDataNode ten[3] */\n/* NormalCharacterDataNode ten[4] */\n/* NormalCharacterDataNode ten[5] */\n/* NormalCharacterDataNode ten[6] */\n/* NormalCharacterDataNode ten[7] */\n/* NormalCharacterDataNode ten[8] */\n/* NormalCharacterDataNode ten[9] */\n/* NormalCharacterDataNode ten[10] */\n/* NormalCharacterDataNode ten[11] */\n/* NormalCharacterDataNode ten[12] */\n/* NormalCharacterDataNode ten[13] */\n/* NormalCharacterDataNode ten[14] */\n/* NormalCharacterDataNode ten[15] */\n/* NormalCharacterDataNode ten[16] */\n/* NormalCharacterDataNode ten[17] */\n/* NormalCharacterDataNode ten[18] */\n/* NormalCharacterDataNode ten[19] */\n/* OneDimensionCharacterDataNode tendem */\n/* NormalCharacterDataNode tendem[0] */\n/* NormalCharacterDataNode tendem[1] */\n/* NormalCharacterDataNode tendem[2] */\n/* NormalCharacterDataNode tendem[3] */\n/* NormalCharacterDataNode tendem[4] */\n/* NormalCharacterDataNode tendem[5] */\n/* NormalCharacterDataNode tendem[6] */\n/* NormalCharacterDataNode tendem[7] */\n/* NormalCharacterDataNode tendem[8] */\n/* NormalCharacterDataNode tendem[9] */\n/* NormalCharacterDataNode tendem[10] */\n/* NormalCharacterDataNode tendem[11] */\n/* NormalCharacterDataNode tendem[12] */\n/* NormalCharacterDataNode tendem[13] */\n/* NormalCharacterDataNode tendem[14] */\n/* NormalCharacterDataNode tendem[15] */\n/* NormalCharacterDataNode tendem[16] */\n/* NormalCharacterDataNode tendem[17] */\n/* NormalCharacterDataNode tendem[18] */\n/* NormalCharacterDataNode tendem[19] */\n/* NormalCharacterDataNode gt */\n/* OneDimensionCharacterDataNode ns */\n/* NormalCharacterDataNode ns[0] */\n/* NormalCharacterDataNode ns[1] */\n/* NormalCharacterDataNode ns[2] */\n/* NormalCharacterDataNode ns[3] */\n/* NormalCharacterDataNode ns[4] */\n/* OneDimensionCharacterDataNode qq */\n/* NormalCharacterDataNode qq[0] */\n/* NormalCharacterDataNode qq[1] */\n/* NormalCharacterDataNode qq[2] */\n/* NormalCharacterDataNode qq[3] */\n/* NormalCharacterDataNode qq[4] */\n/* NormalCharacterDataNode qq[5] */\n/* NormalCharacterDataNode qq[6] */\n/* NormalCharacterDataNode qq[7] */\n/* NormalCharacterDataNode qq[8] */\n/* NormalCharacterDataNode qq[9] */\n/* NormalCharacterDataNode qq[10] */\n/* NormalCharacterDataNode qq[11] */\n/* NormalCharacterDataNode qq[12] */\n/* NormalCharacterDataNode qq[13] */\n/* NormalCharacterDataNode qq[14] */\n/* NormalCharacterDataNode qq[15] */\n/* NormalCharacterDataNode qq[16] */\n/* NormalCharacterDataNode qq[17] */\n/* NormalCharacterDataNode qq[18] */\n/* NormalCharacterDataNode qq[19] */\n/* NormalNumberDataNode toan */\n/* toan : null value -> no code */\n/* NormalNumberDataNode ly */\n/* ly : null value -> no code */\n/* NormalNumberDataNode hoa */\n/* hoa : null value -> no code */\n/* NormalNumberDataNode tongdiem */\n/* tongdiem : null value -> no code */\n/* NormalNumberDataNode tienganh */\n/* tienganh : null value -> no code */\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* NormalNumberDataNode kq */\n/* kq : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_student_1).next;\n/* PointerStructureDataNode head */\n(*AKA_VECTOR_INIT_student_1).head;\n/* PointerStructureDataNode last */\n(*AKA_VECTOR_INIT_student_1).last;\n\nAKA_VECTOR_INIT_student.push_back(AKA_VECTOR_INIT_student_1);\n\n\n/* SubClassDataNode student */\n/* ConstructorDataNode thisinh() */\nAKA_mark(\"Calling: \\\\thisinh()|ROOT\\\\qlsv.cpp\\\\TS::inFileTiengAnh(ofstream&,TS*)\\\\student\\\\AKA_VECTOR_INIT_student_2\\\\student\\\\thisinh()\");AKA_fCall++;auto AKA_VECTOR_INIT_student_2 = new ::thisinh();\n/* OneDimensionCharacterDataNode id */\n/* NormalCharacterDataNode id[0] */\n/* NormalCharacterDataNode id[1] */\n/* NormalCharacterDataNode id[2] */\n/* NormalCharacterDataNode id[3] */\n/* NormalCharacterDataNode id[4] */\n/* NormalCharacterDataNode id[5] */\n/* NormalCharacterDataNode id[6] */\n/* NormalCharacterDataNode id[7] */\n/* NormalCharacterDataNode id[8] */\n/* NormalCharacterDataNode id[9] */\n/* NormalCharacterDataNode id[10] */\n/* NormalCharacterDataNode id[11] */\n/* NormalCharacterDataNode id[12] */\n/* NormalCharacterDataNode id[13] */\n/* NormalCharacterDataNode id[14] */\n/* NormalCharacterDataNode id[15] */\n/* NormalCharacterDataNode id[16] */\n/* NormalCharacterDataNode id[17] */\n/* NormalCharacterDataNode id[18] */\n/* NormalCharacterDataNode id[19] */\n/* OneDimensionCharacterDataNode ho */\n/* NormalCharacterDataNode ho[0] */\n/* NormalCharacterDataNode ho[1] */\n/* NormalCharacterDataNode ho[2] */\n/* NormalCharacterDataNode ho[3] */\n/* NormalCharacterDataNode ho[4] */\n/* NormalCharacterDataNode ho[5] */\n/* NormalCharacterDataNode ho[6] */\n/* NormalCharacterDataNode ho[7] */\n/* NormalCharacterDataNode ho[8] */\n/* NormalCharacterDataNode ho[9] */\n/* NormalCharacterDataNode ho[10] */\n/* NormalCharacterDataNode ho[11] */\n/* NormalCharacterDataNode ho[12] */\n/* NormalCharacterDataNode ho[13] */\n/* NormalCharacterDataNode ho[14] */\n/* NormalCharacterDataNode ho[15] */\n/* NormalCharacterDataNode ho[16] */\n/* NormalCharacterDataNode ho[17] */\n/* NormalCharacterDataNode ho[18] */\n/* NormalCharacterDataNode ho[19] */\n/* OneDimensionCharacterDataNode ten */\n/* NormalCharacterDataNode ten[0] */\n/* NormalCharacterDataNode ten[1] */\n/* NormalCharacterDataNode ten[2] */\n/* NormalCharacterDataNode ten[3] */\n/* NormalCharacterDataNode ten[4] */\n/* NormalCharacterDataNode ten[5] */\n/* NormalCharacterDataNode ten[6] */\n/* NormalCharacterDataNode ten[7] */\n/* NormalCharacterDataNode ten[8] */\n/* NormalCharacterDataNode ten[9] */\n/* NormalCharacterDataNode ten[10] */\n/* NormalCharacterDataNode ten[11] */\n/* NormalCharacterDataNode ten[12] */\n/* NormalCharacterDataNode ten[13] */\n/* NormalCharacterDataNode ten[14] */\n/* NormalCharacterDataNode ten[15] */\n/* NormalCharacterDataNode ten[16] */\n/* NormalCharacterDataNode ten[17] */\n/* NormalCharacterDataNode ten[18] */\n/* NormalCharacterDataNode ten[19] */\n/* OneDimensionCharacterDataNode tendem */\n/* NormalCharacterDataNode tendem[0] */\n/* NormalCharacterDataNode tendem[1] */\n/* NormalCharacterDataNode tendem[2] */\n/* NormalCharacterDataNode tendem[3] */\n/* NormalCharacterDataNode tendem[4] */\n/* NormalCharacterDataNode tendem[5] */\n/* NormalCharacterDataNode tendem[6] */\n/* NormalCharacterDataNode tendem[7] */\n/* NormalCharacterDataNode tendem[8] */\n/* NormalCharacterDataNode tendem[9] */\n/* NormalCharacterDataNode tendem[10] */\n/* NormalCharacterDataNode tendem[11] */\n/* NormalCharacterDataNode tendem[12] */\n/* NormalCharacterDataNode tendem[13] */\n/* NormalCharacterDataNode tendem[14] */\n/* NormalCharacterDataNode tendem[15] */\n/* NormalCharacterDataNode tendem[16] */\n/* NormalCharacterDataNode tendem[17] */\n/* NormalCharacterDataNode tendem[18] */\n/* NormalCharacterDataNode tendem[19] */\n/* NormalCharacterDataNode gt */\n/* OneDimensionCharacterDataNode ns */\n/* NormalCharacterDataNode ns[0] */\n/* NormalCharacterDataNode ns[1] */\n/* NormalCharacterDataNode ns[2] */\n/* NormalCharacterDataNode ns[3] */\n/* NormalCharacterDataNode ns[4] */\n/* OneDimensionCharacterDataNode qq */\n/* NormalCharacterDataNode qq[0] */\n/* NormalCharacterDataNode qq[1] */\n/* NormalCharacterDataNode qq[2] */\n/* NormalCharacterDataNode qq[3] */\n/* NormalCharacterDataNode qq[4] */\n/* NormalCharacterDataNode qq[5] */\n/* NormalCharacterDataNode qq[6] */\n/* NormalCharacterDataNode qq[7] */\n/* NormalCharacterDataNode qq[8] */\n/* NormalCharacterDataNode qq[9] */\n/* NormalCharacterDataNode qq[10] */\n/* NormalCharacterDataNode qq[11] */\n/* NormalCharacterDataNode qq[12] */\n/* NormalCharacterDataNode qq[13] */\n/* NormalCharacterDataNode qq[14] */\n/* NormalCharacterDataNode qq[15] */\n/* NormalCharacterDataNode qq[16] */\n/* NormalCharacterDataNode qq[17] */\n/* NormalCharacterDataNode qq[18] */\n/* NormalCharacterDataNode qq[19] */\n/* NormalNumberDataNode toan */\n/* toan : null value -> no code */\n/* NormalNumberDataNode ly */\n/* ly : null value -> no code */\n/* NormalNumberDataNode hoa */\n/* hoa : null value -> no code */\n/* NormalNumberDataNode tongdiem */\n/* tongdiem : null value -> no code */\n/* NormalNumberDataNode tienganh */\n/* tienganh : null value -> no code */\n/* NormalNumberDataNode n */\n/* n : null value -> no code */\n/* NormalNumberDataNode kq */\n/* kq : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_student_2).next;\n/* PointerStructureDataNode head */\n(*AKA_VECTOR_INIT_student_2).head;\n/* PointerStructureDataNode last */\n(*AKA_VECTOR_INIT_student_2).last;\n\nAKA_VECTOR_INIT_student.push_back(AKA_VECTOR_INIT_student_2);\n\nthisinh* student = AKA_VECTOR_INIT_student[0];\n\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fo */\n/* PointerStructureDataNode student */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_inFileTiengAnh_ofstream_TSmul_random_0\");TS::inFileTiengAnh(fo,student);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::inFileTiengAnh(ofstream&,TS*)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::inFileTiengAnh(ofstream&,TS*)"
+    },
+    {
+        "f": [],
+        "fm": "int TS::nhap_so()\r {\r     int a;\r     do\r     {\r         cin >> a;\r         if (a<=0)\r             cout << endl<<\"Nhap sai. Nhap lai : \";\r     }\r     while (a<=0);\r     return a;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_nhap_so_random_0(void) {\n{\nAKA_test_case_name=\"TS_nhap_so_random_0\";\n\n// set up\n;\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_nhap_so_random_0\");int AKA_ACTUAL_OUTPUT=TS::nhap_so();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::nhap_so()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::nhap_so()"
+    },
+    {
+        "f": [],
+        "fm": "void TS::inFileAll(ofstream& fo)\r {\r     TS* head1=head;\r     do\r     {\r         inFile(fo, head1);\r         head1 = head1->next;\r     }\r     while (head1!= NULL);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_inFileAll_ofstream_random_0(void) {\n{\nAKA_test_case_name=\"TS_inFileAll_ofstream_random_0\";\n\n// set up\n;\n\nofstream fo;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fo */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_inFileAll_ofstream_random_0\");TS::inFileAll(fo);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::inFileAll(ofstream&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::inFileAll(ofstream&)"
+    },
+    {
+        "f": [],
+        "fm": "char* TS::nhap_xau() // dung nhap thong tin thi sinh\r {\r     char* s;\r \r     while (1)\r     {\r         s = new char[200];\r         fflush(stdin);\r         cin.getline(s, 199);\r         int j = 0;\r         for (int i  = 0; i < strlen(s); i++)\r             if (s[i]=='|' || s[i] == ';' || s[i] == ':')\r                 j++;\r         if (j== 7) break;\r         cout << endl<<\" Ban nhap sai thi sinh. Moi nhap lai: \" << endl<<\" \";\r         delete s;\r     }\r     return s;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_nhap_xau_random_0(void) {\n{\nAKA_test_case_name=\"TS_nhap_xau_random_0\";\n\n// set up\n;\n\nchar* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_nhap_xau_random_0\");char* AKA_ACTUAL_OUTPUT=TS::nhap_xau();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::nhap_xau()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::nhap_xau()"
+    },
+    {
+        "f": [],
+        "fm": "void TS::sap_xep_ten() // n la so thi sinh\r {\r \r     TS* head1 = head;\r     TS* head2 = head;\r     // sap xep ten\r     do\r     {\r         head2 = head1;\r         do\r         {\r             if (strcmp(head1->ten, head2->ten) > 0)\r                 trao_doi(head1, head2);\r             head2=head2->next;\r         }\r         while (head2!=NULL);\r \r         head1=head1->next;\r     }\r     while (head1!=NULL);\r     // roi sap xep ho\r     head1=head;\r     do\r     {\r         head2 = head1;\r         do\r         {\r             if ((strcmp(head1->ten, head2->ten) == 0)&&((strcmp(head1->ho, head2->ho) > 0)))\r                 trao_doi(head1, head2);\r             head2=head2->next;\r         }\r         while (head2!=NULL);\r \r         head1=head1->next;\r     }\r     while (head1!=NULL);\r     // sau do sap xep ten dem\r     head1=head;\r     do\r     {\r         head2 = head1;\r         do\r         {\r             if ((strcmp(head1->ten, head2->ten) == 0)&&((strcmp(head1->ho, head2->ho) == 0)))\r                 if (strcmp(head1->tendem, head2->tendem) > 0)\r                     trao_doi(head1, head2);\r             head2=head2->next;\r         }\r         while (head2!=NULL);\r \r         head1=head1->next;\r     }\r     while (head1!=NULL);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_sap_xep_ten_random_0(void) {\n{\nAKA_test_case_name=\"TS_sap_xep_ten_random_0\";\n\n// set up\n;\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_sap_xep_ten_random_0\");TS::sap_xep_ten();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::sap_xep_ten()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::sap_xep_ten()"
+    },
+    {
+        "f": [],
+        "fm": "void TS::sap_xep_diem_thi() // n la so thi sinh\r {\r     TS* head1 = head;\r     TS* head2 = head;\r \r     do\r     {\r         head2 = head1;\r         do\r         {\r             if (head1->tongdiem < head2->tongdiem)\r                 trao_doi(head1, head2);\r             head2=head2->next;\r         }\r         while (head2!=NULL);\r \r         head1=head1->next;\r     }\r     while (head1!=NULL);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_sap_xep_diem_thi_random_0(void) {\n{\nAKA_test_case_name=\"TS_sap_xep_diem_thi_random_0\";\n\n// set up\n;\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_sap_xep_diem_thi_random_0\");TS::sap_xep_diem_thi();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::sap_xep_diem_thi()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::sap_xep_diem_thi()"
+    },
+    {
+        "f": [],
+        "fm": "void TS::tinh_tong_diem()\r {\r     TS* head1=head;\r     do\r     {\r         head1->tongdiem = head1->toan + head1->ly + head1->hoa;\r         if (head1->tongdiem >= 24)\r             head1->kq = 1;\r         else head1->kq = 0;\r         head1 = head1->next;\r     }\r     while (head1!= NULL);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_tinh_tong_diem_random_0(void) {\n{\nAKA_test_case_name=\"TS_tinh_tong_diem_random_0\";\n\n// set up\n;\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_tinh_tong_diem_random_0\");TS::tinh_tong_diem();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::tinh_tong_diem()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::tinh_tong_diem()"
+    },
+    {
+        "f": [],
+        "fm": "void TS::in_TS_do(ofstream& fo)\r {\r     fo<< \"                  \\n\";\r     int iDO = 0;\r     TS* head1 = head;\r     do\r     {\r         if (head1->kq==1)\r         {\r             inFile(fo, head1);\r             iDO++;\r         }\r         head1 = head1->next;\r     }\r     while (head1!= NULL);\r     fo.seekp(0, ios::beg);\r     fo << iDO;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_in_TS_do_ofstream_random_0(void) {\n{\nAKA_test_case_name=\"TS_in_TS_do_ofstream_random_0\";\n\n// set up\n;\n\nofstream fo;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fo */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_in_TS_do_ofstream_random_0\");TS::in_TS_do(fo);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::in_TS_do(ofstream&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_TS_in_TS_do_ofstream_directed_0(void) {\n{\nAKA_test_case_name=\"TS_in_TS_do_ofstream_directed_0\";\n\n// set up\n;\n\nofstream fo;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fo */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_in_TS_do_ofstream_directed_0\");TS::in_TS_do(fo);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::in_TS_do(ofstream&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::in_TS_do(ofstream&)"
+    },
+    {
+        "f": [],
+        "fm": "void TS::in_CLC(ofstream& fo)\r {\r     fo << \"                  \\n\";\r     //in danh sach sinh vien do, so sinh vien <=30\r     TS* head1;\r     sap_xep_diem_thi();\r     int iCLC = 0, iCount;\r     TS* head2 ;\r     head1 = head;\r     while ( head1 != NULL )\r     {\r         //tim so thi sinh cung diem, du tieu chuan vao CLC\r         iCount = 0;\r         head2 = head1;\r         while (head2!=NULL)\r         {\r             if (head1->tongdiem != head2->tongdiem) break;\r             if (head2 -> kq)\r                 if (head2->tienganh >= 6.5 )\r                     iCount++;\r             head2 = head2->next;\r         }\r         if (iCLC + iCount > 30)\r             break;\r         iCLC += iCount;\r         // in cac thi sinh neu duoc chon\r         if (iCount !=0 )\r         {\r             head2 = head1;\r             while ( head2!=NULL)\r             {\r                 if (head1->tongdiem != head2->tongdiem) break;\r                 if (head2 -> kq)\r                     if (head2->tienganh >= 6.5 )\r                         inFileTiengAnh(fo, head2);\r                 head2 = head2->next;\r             }\r         }\r         head1 = head2;\r     }\r     //\r     //in so thi sinh do\r     fo.seekp(0, ios::beg);\r     fo << iCLC;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_in_CLC_ofstream_random_0(void) {\n{\nAKA_test_case_name=\"TS_in_CLC_ofstream_random_0\";\n\n// set up\n;\n\nofstream fo;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fo */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_in_CLC_ofstream_random_0\");TS::in_CLC(fo);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::in_CLC(ofstream&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::in_CLC(ofstream&)"
+    },
+    {
+        "f": [],
+        "fm": "void TS::nhap_qua_ban_phim()\r {\r     // giao dien\r     system(\"cls\");\r     cout << \"                        MENU nhap thi sinh                                   \" << endl<<endl;\r     cout << \"  ===========================================================================\"<< endl;\r     cout << \" |  So thi sinh ban nhap ?                                                   |\" << endl;\r     cout << \"  ===========================================================================\"<< endl;\r     gotoxy(30, 4);\r     n = nhap_so();\r \r     system(\"cls\");\r     fflush(stdin);// su dung cin.ignore() khong hieu qua\r     cout << \"                        MENU nhap thi sinh                                   \" << endl<<endl;\r     cout << \"  ===========================================================================\"<< endl<<endl;\r     for (int iCount = 0; iCount < n; iCount++)\r     {\r         if ( iCount % 5 ==0 & iCount!=0)\r         {\r             xoa_dong(5, 23);\r             gotoxy(1,5);\r         }\r         // chuong trinh\r         char* s;\r         fflush(stdin);\r         cout << \" \" << iCount+1 << \" : \";\r         s = nhap_xau();\r         TS* student;\r         student = new TS;\r         if (iCount == 0)\r         {\r             head = student;\r             student->next = NULL;\r             last = head;\r         }\r         else\r         {\r             last->next = student;\r             student->next = NULL;\r             last = student;\r         }\r         xu_li(student, s);\r     }\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_nhap_qua_ban_phim_random_0(void) {\n{\nAKA_test_case_name=\"TS_nhap_qua_ban_phim_random_0\";\n\n// set up\n;\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_nhap_qua_ban_phim_random_0\");TS::nhap_qua_ban_phim();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::nhap_qua_ban_phim()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::nhap_qua_ban_phim()"
+    },
+    {
+        "f": [],
+        "fm": "void TS::in_danh_sach_sap_xep_ten(ofstream& fo)\r {\r     int iNUM = 0;\r     TS* head1 = head;\r     while (head1!=NULL)\r     {\r         head1 = head1->next;\r         iNUM++;\r     }\r     fo << \"                  \\n\";\r     inFileAll(fo);\r     fo.seekp(0, ios::beg);\r     fo << iNUM;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_in_danh_sach_sap_xep_ten_ofstream_directed_0(void) {\n{\nAKA_test_case_name=\"TS_in_danh_sach_sap_xep_ten_ofstream_directed_0\";\n\n// set up\n;\n\nofstream fo;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fo */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_in_danh_sach_sap_xep_ten_ofstream_directed_0\");TS::in_danh_sach_sap_xep_ten(fo);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::in_danh_sach_sap_xep_ten(ofstream&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_TS_in_danh_sach_sap_xep_ten_ofstream_random_0(void) {\n{\nAKA_test_case_name=\"TS_in_danh_sach_sap_xep_ten_ofstream_random_0\";\n\n// set up\n;\n\nofstream fo;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fo */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_in_danh_sach_sap_xep_ten_ofstream_random_0\");TS::in_danh_sach_sap_xep_ten(fo);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::in_danh_sach_sap_xep_ten(ofstream&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::in_danh_sach_sap_xep_ten(ofstream&)"
+    },
+    {
+        "f": [],
+        "fm": "void TS::nhap_qua_File(ifstream& fi)\r {\r     TS* student;\r     fi >> n;\r     int iCount = 0, length_s = 0;\r     char ch;\r     char s[100];\r     fi.get(ch);\r     while (iCount < n)\r     {\r         student = new TS;\r         if (iCount == 0)\r         {\r             head = student;\r             student->next = NULL;\r             last = head;\r         }\r         else\r         {\r             last->next = student;\r             student->next = NULL;\r             last = student;\r         }\r         fi.get(ch);\r         do\r         {\r             s[length_s++] = ch;\r             fi.get(ch);\r             if (ch==10)   break;\r             if (fi.eof()==1) break;\r         }\r         while (1);\r         s[length_s] = '\\0';\r         // finish\r         xu_li(student, s);\r         length_s = 0;\r         iCount++;\r     }\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_nhap_qua_File_ifstream_random_0(void) {\n{\nAKA_test_case_name=\"TS_nhap_qua_File_ifstream_random_0\";\n\n// set up\n;\n\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_nhap_qua_File_ifstream_random_0\");TS::nhap_qua_File(fi);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::nhap_qua_File(ifstream&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::nhap_qua_File(ifstream&)"
+    },
+    {
+        "f": [],
+        "fm": "void TS::phuc_khao()\r {\r     textcolor(10);\r     cout << \"                             PHUC KHAO THI SINH\" << endl<<endl;\r     cout << \"  ===========================================================================\"<< endl;\r     cout << \" |  MSV thi sinh phuc khao?                                                  |\" << endl;\r     cout << \"  ===========================================================================\"<< endl;\r     textcolor(7);\r     gotoxy(30, 4);\r     char msv[20];\r     cin.getline(msv, 19);\r     fflush(stdin);\r     int opi;\r     TS* head1 = head;\r     float diem_moi;\r     while (stricmp(head1->id, msv)!=0)\r     {\r         head1 = head1->next;\r     }\r     cout << \" \\n\\n Thong tin thi sinh:\\n\" << endl;\r     cout << \"  \";\r     inScreen(head1, 1);\r     cout << endl<<endl;\r     cout << \"    Ban chon phuong an nao?\" << endl;\r     cout << \" ============================================================================\"<< endl;\r     cout << \"|    1 - Thay doi truc tiep diem                                             |\" << endl;\r     cout << \"|    2 - Thay the bang thi sinh khac                                         |\" << endl;\r     cout << \" ============================================================================\"<< endl;\r     opi =choose(4, 15, 2);\r     if (opi==1)\r     {\r         xoa_dong(11, 15);\r         gotoxy(1, 11);\r         cout << endl;\r         cout << \"    Ban thay doi diem nao?    \" << endl;\r         cout << \"  ============================================================================\"<< endl;\r         cout << \" |     1 - Toan                                                               |\"<< endl;\r         cout << \" |     2 - Ly                                                                 |\" << endl;\r         cout << \" |     3 - Hoa                                                                |\" << endl;\r         cout << \"  ============================================================================\"<< endl;\r         opi =choose(4, 14,  3);\r         gotoxy(2,19);\r         switch (opi)\r         {\r         case 1:\r             cout << \"Diem toan moi: \";\r             cin >> diem_moi;\r             head1->toan = diem_moi;\r             break;\r         case 2:\r             cout << \"Diem ly moi: \";\r             cin >> diem_moi;\r             head1->ly = diem_moi;\r             break;\r         case 3:\r             cout << \"Diem hoa moi: \";\r             cin >> diem_moi;\r             head1->hoa = diem_moi;\r             break;\r         };\r     }\r     else\r     {\r         char s[200];\r         xoa_dong(11, 24);\r         gotoxy(1, 11);\r         cout << \" Nhap thi sinh moi: \\n \";\r         fflush(stdin);\r         cin.getline(s, 199);\r         xu_li(head1, s);\r     }\r     xoa_dong(11, 24);\r     gotoxy(1, 11);\r     cout << \" Cap nhat lai diem thi sinh: \\n\\n\";\r     cout << \"  \";\r     inScreen(head1, 1);\r     cout << endl<<endl;\r \r     cout << \"    Ban chon phuong an nao?    \" << endl;\r     cout << \"  ============================================================================\"<< endl;\r     cout << \" |    1 - Tiep tuc thay doi diem thi sinh                                     |\" << endl;\r     cout << \" |    2 - Quay ve menu                                                        |\" << endl;\r     cout << \"  ============================================================================\"<< endl;\r     opi = choose(4, 19, 2);\r     if (opi==1)\r     {\r         system(\"cls\");\r         fflush(stdin);\r         phuc_khao();\r     }\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_phuc_khao_random_0(void) {\n{\nAKA_test_case_name=\"TS_phuc_khao_random_0\";\n\n// set up\n;\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_phuc_khao_random_0\");TS::phuc_khao();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::phuc_khao()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::phuc_khao()"
+    },
+    {
+        "f": [],
+        "fm": "void TS::in_danh_sach_thi_sinh_len_man_hinh()\r {\r     textcolor(10);\r     cout << \"                         DANH SACH THI SINH\" << endl;\r     cout <<\"+============================================================================+\"<<endl;\r     cout <<\"   MSV   |         TEN          |GT |N.SINH|    NOI SINH    | TOAN|  LY | HOA \"<<endl;\r     cout <<\"+============================================================================+\"<<endl;\r     textcolor(7);\r     int khoang_cach = 16;\r     if ( n <= khoang_cach)\r     {\r         TS* head1 = head;\r         gotoxy(70, 24);\r         cout <<\"Trang 1\";\r         gotoxy(1, 5);\r         for (int i = 0; i < n; i++)\r         {\r             inScreen(head1, 1);\r             head1 = head1->next;\r             if (head1==NULL) break;\r         }\r         char ch = getch();\r     }\r     else\r     {\r         TS* head1 = head;\r         char ch;\r         int tong_so_trang = n / khoang_cach;\r         if (tong_so_trang * khoang_cach != n) tong_so_trang++;\r         int k = 1;\r         do\r         {\r             gotoxy(65, 24);\r             cout <<\"Trang \"<<setw(3)<<left << k << \"/ \"<< tong_so_trang;\r             gotoxy(1,5);\r             int dau = (k-1)*khoang_cach + 1;\r             int cuoi = k*khoang_cach;\r             head1 = head;\r             for (int i = 1; i < dau; i++) head1 = head1->next;\r             if (cuoi > n)\r             {\r                 cuoi = n;\r                 xoa_dong(5, 23);\r                 gotoxy(1,5);\r             }\r             for (int i = dau; i <= cuoi; i++)\r             {\r                 inScreen(head1, 1);\r                 head1 = head1->next;\r             }\r             ch = getch();\r             if (ch == 80 || ch == 77 ) k++;\r             if (ch == 72 || ch == 75) k--;\r             if (k <1) k = 1;\r             if (k > tong_so_trang) k = tong_so_trang;\r         }\r         while (ch != 27);\r     }\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_in_danh_sach_thi_sinh_len_man_hinh_random_0(void) {\n{\nAKA_test_case_name=\"TS_in_danh_sach_thi_sinh_len_man_hinh_random_0\";\n\n// set up\n;\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_in_danh_sach_thi_sinh_len_man_hinh_random_0\");TS::in_danh_sach_thi_sinh_len_man_hinh();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::in_danh_sach_thi_sinh_len_man_hinh()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::in_danh_sach_thi_sinh_len_man_hinh()"
+    },
+    {
+        "f": [],
+        "fm": "void TS::nhap_diem_tieng_anh(ifstream& fi)\r {\r     int m;\r     fi >> m;\r     char s[10],s2[10];\r     float diemtienganh;\r     TS* head1=head;\r     fflush(stdin);\r     while (fi >> s >> s2 >> diemtienganh)\r     {\r         head1 = head;\r         do\r         {\r             if (head1 == NULL) break;\r             if (head1->kq == 1 )\r                 if(stricmp(head1->id, s) == 0)\r                 {\r                     head1->tienganh  = diemtienganh;\r                     break;\r                 }\r             head1 = head1 -> next;\r         }\r         while (1);\r     }\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_nhap_diem_tieng_anh_ifstream_random_0(void) {\n{\nAKA_test_case_name=\"TS_nhap_diem_tieng_anh_ifstream_random_0\";\n\n// set up\n;\n\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_nhap_diem_tieng_anh_ifstream_random_0\");TS::nhap_diem_tieng_anh(fi);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::nhap_diem_tieng_anh(ifstream&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_TS_nhap_diem_tieng_anh_ifstream_directed_0(void) {\n{\nAKA_test_case_name=\"TS_nhap_diem_tieng_anh_ifstream_directed_0\";\n\n// set up\n;\n\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_nhap_diem_tieng_anh_ifstream_directed_0\");TS::nhap_diem_tieng_anh(fi);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::nhap_diem_tieng_anh(ifstream&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_TS_nhap_diem_tieng_anh_ifstream_directed_1(void) {\n{\nAKA_test_case_name=\"TS_nhap_diem_tieng_anh_ifstream_directed_1\";\n\n// set up\n;\n\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_nhap_diem_tieng_anh_ifstream_directed_1\");TS::nhap_diem_tieng_anh(fi);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::nhap_diem_tieng_anh(ifstream&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nofstream fo;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fo */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_TS_nhap_diem_tieng_anh_ifstream_directed_2(void) {\n{\nAKA_test_case_name=\"TS_nhap_diem_tieng_anh_ifstream_directed_2\";\n\n// set up\n;\n\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_nhap_diem_tieng_anh_ifstream_directed_2\");TS::nhap_diem_tieng_anh(fi);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::nhap_diem_tieng_anh(ifstream&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* RootDataNode STATIC */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 4,
+                "dt": {},
+                "td": "void AKA_TEST_TS_nhap_diem_tieng_anh_ifstream_directed_3(void) {\n{\nAKA_test_case_name=\"TS_nhap_diem_tieng_anh_ifstream_directed_3\";\n\n// set up\n;\n\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_nhap_diem_tieng_anh_ifstream_directed_3\");TS::nhap_diem_tieng_anh(fi);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::nhap_diem_tieng_anh(ifstream&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* RootDataNode STATIC */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::nhap_diem_tieng_anh(ifstream&)"
+    },
+    {
+        "f": [],
+        "fm": "void TS::in_thi_sinh_do_len_man_hinh()\r {\r     textcolor(10);\r     cout << \"                         DANH SACH THI SINH\" << endl;\r     cout <<\"+============================================================================+\"<<endl;\r     cout <<\"   MSV   |         TEN          |GT |N.SINH|    NOI SINH    | TOAN|  LY | HOA \"<<endl;\r     cout <<\"+============================================================================+\"<<endl;\r     textcolor(7);\r     TS* b[10001];\r     TS* head1 = head;\r     int so_TS_do = 0, khoang_cach = 18;\r \r     while(head1!=NULL)\r     {\r         if (head1->kq==1) b[++so_TS_do] = head1;\r         head1 = head1->next;\r     }\r \r     if (so_TS_do <= khoang_cach)\r     {\r         gotoxy(70, 24);\r         cout <<\"Trang 1\";\r         gotoxy(1, 5);\r         for (int i = 1; i <= so_TS_do; i++)\r             inScreen(b[i], 1);\r         char ch = getch();\r     }\r     else\r     {\r         int so_trang = so_TS_do / khoang_cach;\r         if (so_trang * khoang_cach != n)    so_trang++;\r         int k = 1;\r         do\r         {\r             gotoxy(65, 24);\r             cout <<\"Trang \"<<setw(3)<<left << k << \"/ \"<< so_trang;\r             gotoxy(1,5);\r             int dau = (k-1)*khoang_cach+1;\r             int cuoi = k*khoang_cach;\r             if (cuoi > so_TS_do)\r             {\r                 xoa_dong(5, 23);\r                 gotoxy(1,5);\r                 cuoi = so_TS_do;\r             }\r             for (int i = dau; i<=cuoi; i++)\r                 inScreen(b[i], 1);\r \r             char ch = getch();\r             if (ch==27) break;\r             if (ch == 80 || ch == 77 ) k++;\r             if (ch == 72 || ch == 75) k--;\r             if (k <1) k = 1;\r             if (k > so_trang) k = so_trang;\r         }\r         while (1);\r     }\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_in_thi_sinh_do_len_man_hinh_random_0(void) {\n{\nAKA_test_case_name=\"TS_in_thi_sinh_do_len_man_hinh_random_0\";\n\n// set up\n;\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_in_thi_sinh_do_len_man_hinh_random_0\");TS::in_thi_sinh_do_len_man_hinh();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::in_thi_sinh_do_len_man_hinh()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::in_thi_sinh_do_len_man_hinh()"
+    },
+    {
+        "f": [],
+        "fm": "void TS::in_thi_sinh_CLC_len_man_hinh()\r {\r     textcolor(6);\r     cout << \"                         DANH SACH THI SINH\" << endl;\r     cout <<\"+=============================================================================+\"<<endl;\r     cout <<\"   MSV   |         TEN           |GT|N.SINH|   NOI SINH  | TOAN| LY | HOA|  TA\"<<endl;\r     cout <<\"+=============================================================================+\"<<endl;\r     textcolor(7);\r     int iCLC = 0, iCount, so_TS_CLC =0;\r     TS* head1 = head, *head2 ;\r     TS* b[10001];\r     while ( head1 != NULL )\r     {\r         //tim so thi sinh cung diem, du tieu chuan vao CLC\r         iCount = 0;\r         head2 = head1;\r         while (head2!=NULL)\r         {\r             if (head1->tongdiem != head2->tongdiem) break;\r             if (head2 -> kq)\r                 if (head2->tienganh >= 6.5 )\r                     iCount++;\r             head2 = head2->next;\r         }\r         if (iCLC + iCount > 30) break;\r         iCLC += iCount;\r         // in cac thi sinh neu duoc chon\r         if (iCount !=0 )\r         {\r             head2 = head1;\r             while ( head2!=NULL)\r             {\r                 if (head1->tongdiem != head2->tongdiem) break;\r                 if (head2 -> kq)\r                     if (head2->tienganh >= 6.5 )\r                         b[++so_TS_CLC]= head2;\r                 head2 = head2->next;\r             }\r         }\r         head1 = head2;\r     }\r \r \r     // in ra man hinh\r     int khoang_cach = 18;\r     if (so_TS_CLC <= khoang_cach)\r     {\r         gotoxy(70, 24);\r         cout <<\"Trang 1 / 1\";\r         gotoxy(1, 5);\r         for (int i = 1; i <= so_TS_CLC; i++)\r             inScreen(b[i], 2);\r         char ch = getch();\r     }\r     else\r     {\r         int so_trang = so_TS_CLC / khoang_cach;\r         if (so_trang * khoang_cach != n)    so_trang++;\r         int k = 1;\r         do\r         {\r             gotoxy(65, 24);\r             cout <<\"Trang \"<<setw(3)<<left << k << \"/ \"<< so_trang;\r             gotoxy(1,5);\r             int dau = (k-1)*khoang_cach+1;\r             int cuoi = k*khoang_cach;\r             if (cuoi > so_TS_CLC)\r             {\r                 xoa_dong(5, 23);\r                 gotoxy(1,5);\r                 cuoi = so_TS_CLC;\r \r             }\r             for (int i = dau; i<=cuoi; i++)\r                 inScreen(b[i], 2);\r             char ch = getch();\r             if (ch==27) break;\r             if (ch == 80 || ch == 77 ) k++;\r             if (ch == 72 || ch == 75) k--;\r             if (k <1) k = 1;\r             if (k > so_trang) k = so_trang;\r         }\r         while (1);\r     }\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_in_thi_sinh_CLC_len_man_hinh_random_0(void) {\n{\nAKA_test_case_name=\"TS_in_thi_sinh_CLC_len_man_hinh_random_0\";\n\n// set up\n;\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_in_thi_sinh_CLC_len_man_hinh_random_0\");TS::in_thi_sinh_CLC_len_man_hinh();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::in_thi_sinh_CLC_len_man_hinh()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::in_thi_sinh_CLC_len_man_hinh()"
+    },
+    {
+        "f": [],
+        "fm": "void TS::tac_gia()\r {\r     gotoxy(1, 4);\r     textcolor(11);\r     cout << \"                                 NHOM TAC GIA\" << endl;\r     textcolor(12);\r     cout << \"       +=================================================================+\"<<endl;\r     cout << \"       |       1. Nguyen Duc Anh K56CC       - Bien soan code            |\" << endl;\r     cout << \"       |                                     - Kiem thu chuong trinh     |\" << endl;\r     cout << \"       |       2. Dao Minh Hoa K56CC         - Thiet ke input            |\" << endl;\r     cout << \"       |                                     - Kiem thu chuong trinh     |\" << endl;\r     cout << \"       |       3. Do Ngoc Thuc K56CC         - Thiet ke input            |\" << endl;\r     cout << \"       +=================================================================+\";\r     char s[200] = \"                Phan mem Quan Li Thi Sinh thi Dai Hoc 2012                    \";\r     int l = strlen(s);//cout << l; char ch = getch();\r     int cot = 1, dong = 20;\r     do\r     {\r         textcolor(8);\r         gotoxy(cot, dong);\r         if (80 - cot < l)\r         {\r             for (int i = 0; i <= 80 - cot; i++) cout << s[i];\r             gotoxy(1, dong);\r             for (int j = 80 - cot + 1; j < l; j++) cout << s[j];\r         }\r         else\r             cout << s;\r         Sleep(130);\r         cot ++;\r         if (cot >=80) cot = 1;\r     }\r     while (1);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_tac_gia_random_0(void) {\n{\nAKA_test_case_name=\"TS_tac_gia_random_0\";\n\n// set up\n;\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_tac_gia_random_0\");TS::tac_gia();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::tac_gia()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::tac_gia()"
+    },
+    {
+        "f": [],
+        "fm": "void TS::textcolor(int mau)\r {\r     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), mau);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_TS_textcolor_int_random_0(void) {\n{\nAKA_test_case_name=\"TS_textcolor_int_random_0\";\n\n// set up\n;\n\n\n\nint mau=1359503850;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode mau */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test TS_textcolor_int_random_0\");TS::textcolor(mau);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\BTL\\\\qlsv.cpp\\\\TS::textcolor(int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nifstream fi;\n/* RootDataNode STATIC */\n/* OtherUnresolvedDataNode fi */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\BTL\\qlsv.cpp\\TS::textcolor(int)"
+    }
+]

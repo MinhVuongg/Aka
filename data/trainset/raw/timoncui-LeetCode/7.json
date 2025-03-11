@@ -1,0 +1,854 @@
+[
+    {
+        "f": [],
+        "fm": "string minWindow(string S, string T) {\r     vector<int> need(256, 0), found(256, 0);\r     for (int i = 0; i < T.size(); ++i) need[T[i]]++;\r     string result = \"\";\r     for (int end = 0, begin = 0, L = 0, min_length = INT_MAX; end < S.size(); ++end) {\r       char c = S[end];\r       if (need[c] == 0) continue;\r       found[c] ++;\r       if (found[c] <= need[c]) L ++;\r       if (L == T.size()) {\r \twhile (need[S[begin]] == 0 || need[S[begin]] < found[S[begin]]) {\r \t  if (need[S[begin]]) found[S[begin]] --;\r \t  begin ++;\r \t}\r \tint length = end - begin + 1;\r \tif (length < min_length) {\r \t  min_length = length;\r \t  result = S.substr(begin, length);\r \t}\t\r       }\r     }\r     return result;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_19(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_19\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName192128 = new char[2];akaRandomName192128[0] = 0;akaRandomName192128[1] = '\\0';string S=akaRandomName192128;\nchar* akaRandomName591638 = new char[2];akaRandomName591638[0] = 0;akaRandomName591638[1] = '\\0';string T=akaRandomName591638;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_19\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName112103 = new char[2];akaRandomName112103[0] = 0;akaRandomName112103[1] = '\\0';string S=akaRandomName112103;\nchar* akaRandomName540040 = new char[2];akaRandomName540040[0] = 0;akaRandomName540040[1] = '\\0';string T=akaRandomName540040;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_21(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_21\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName598862 = new char[3];akaRandomName598862[0] = 0;akaRandomName598862[1] = 0;akaRandomName598862[2] = '\\0';string S=akaRandomName598862;\nchar* akaRandomName398108 = new char[2];akaRandomName398108[0] = 0;akaRandomName398108[1] = '\\0';string T=akaRandomName398108;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_21\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName198546 = new char[3];akaRandomName198546[0] = 0;akaRandomName198546[1] = 0;akaRandomName198546[2] = '\\0';string S=akaRandomName198546;\nchar* akaRandomName935026 = new char[2];akaRandomName935026[0] = 0;akaRandomName935026[1] = '\\0';string T=akaRandomName935026;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_20(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_20\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName608196 = new char[2];akaRandomName608196[0] = 0;akaRandomName608196[1] = '\\0';string S=akaRandomName608196;\nchar* akaRandomName253605 = new char[2];akaRandomName253605[0] = 0;akaRandomName253605[1] = '\\0';string T=akaRandomName253605;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_20\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName404364 = new char[2];akaRandomName404364[0] = 0;akaRandomName404364[1] = '\\0';string S=akaRandomName404364;\nchar* akaRandomName713900 = new char[2];akaRandomName713900[0] = 0;akaRandomName713900[1] = '\\0';string T=akaRandomName713900;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_41(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_41\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName616686 = new char[2];akaRandomName616686[0] = 0;akaRandomName616686[1] = '\\0';string S=akaRandomName616686;\nchar* akaRandomName851770 = new char[2];akaRandomName851770[0] = 0;akaRandomName851770[1] = '\\0';string T=akaRandomName851770;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_41\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName876673 = new char[2];akaRandomName876673[0] = 0;akaRandomName876673[1] = '\\0';string S=akaRandomName876673;\nchar* akaRandomName312495 = new char[2];akaRandomName312495[0] = 0;akaRandomName312495[1] = '\\0';string T=akaRandomName312495;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 4,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_40(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_40\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName940333 = new char[3];akaRandomName940333[0] = 0;akaRandomName940333[1] = 0;akaRandomName940333[2] = '\\0';string S=akaRandomName940333;\nchar* akaRandomName4138 = new char[2];akaRandomName4138[0] = 0;akaRandomName4138[1] = '\\0';string T=akaRandomName4138;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_40\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName697215 = new char[3];akaRandomName697215[0] = 0;akaRandomName697215[1] = 0;akaRandomName697215[2] = '\\0';string S=akaRandomName697215;\nchar* akaRandomName202226 = new char[2];akaRandomName202226[0] = 0;akaRandomName202226[1] = '\\0';string T=akaRandomName202226;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 5,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_2(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName590685 = new char[2];akaRandomName590685[0] = 0;akaRandomName590685[1] = '\\0';string S=akaRandomName590685;\nchar* akaRandomName82379 = new char[2];akaRandomName82379[0] = 0;akaRandomName82379[1] = '\\0';string T=akaRandomName82379;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_2\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName537671 = new char[2];akaRandomName537671[0] = 0;akaRandomName537671[1] = '\\0';string S=akaRandomName537671;\nchar* akaRandomName544051 = new char[2];akaRandomName544051[0] = 0;akaRandomName544051[1] = '\\0';string T=akaRandomName544051;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 6,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_25(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_25\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName947416 = new char[2];akaRandomName947416[0] = 0;akaRandomName947416[1] = '\\0';string S=akaRandomName947416;\nchar* akaRandomName898182 = new char[2];akaRandomName898182[0] = 0;akaRandomName898182[1] = '\\0';string T=akaRandomName898182;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_25\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName85991 = new char[2];akaRandomName85991[0] = 0;akaRandomName85991[1] = '\\0';string S=akaRandomName85991;\nchar* akaRandomName866606 = new char[2];akaRandomName866606[0] = 0;akaRandomName866606[1] = '\\0';string T=akaRandomName866606;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 7,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_3(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName18428 = new char[3];akaRandomName18428[0] = 0;akaRandomName18428[1] = 0;akaRandomName18428[2] = '\\0';string S=akaRandomName18428;\nchar* akaRandomName524562 = new char[3];akaRandomName524562[0] = 0;akaRandomName524562[1] = 0;akaRandomName524562[2] = '\\0';string T=akaRandomName524562;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_3\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName98629 = new char[3];akaRandomName98629[0] = 0;akaRandomName98629[1] = 0;akaRandomName98629[2] = '\\0';string S=akaRandomName98629;\nchar* akaRandomName945030 = new char[3];akaRandomName945030[0] = 0;akaRandomName945030[1] = 0;akaRandomName945030[2] = '\\0';string T=akaRandomName945030;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 8,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_24(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_24\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName161429 = new char[2];akaRandomName161429[0] = 0;akaRandomName161429[1] = '\\0';string S=akaRandomName161429;\nchar* akaRandomName362637 = new char[3];akaRandomName362637[0] = 0;akaRandomName362637[1] = 0;akaRandomName362637[2] = '\\0';string T=akaRandomName362637;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_24\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName612874 = new char[2];akaRandomName612874[0] = 0;akaRandomName612874[1] = '\\0';string S=akaRandomName612874;\nchar* akaRandomName164947 = new char[3];akaRandomName164947[0] = 0;akaRandomName164947[1] = 0;akaRandomName164947[2] = '\\0';string T=akaRandomName164947;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 9,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_0(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName106316 = new char[3];akaRandomName106316[0] = 0;akaRandomName106316[1] = 0;akaRandomName106316[2] = '\\0';string S=akaRandomName106316;\nchar* akaRandomName410510 = new char[2];akaRandomName410510[0] = 0;akaRandomName410510[1] = '\\0';string T=akaRandomName410510;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_0\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName290775 = new char[3];akaRandomName290775[0] = 0;akaRandomName290775[1] = 0;akaRandomName290775[2] = '\\0';string S=akaRandomName290775;\nchar* akaRandomName162828 = new char[2];akaRandomName162828[0] = 0;akaRandomName162828[1] = '\\0';string T=akaRandomName162828;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 10,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_23(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_23\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName276537 = new char[2];akaRandomName276537[0] = 0;akaRandomName276537[1] = '\\0';string S=akaRandomName276537;\nchar* akaRandomName635599 = new char[2];akaRandomName635599[0] = 0;akaRandomName635599[1] = '\\0';string T=akaRandomName635599;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_23\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName88938 = new char[2];akaRandomName88938[0] = 0;akaRandomName88938[1] = '\\0';string S=akaRandomName88938;\nchar* akaRandomName424148 = new char[2];akaRandomName424148[0] = 0;akaRandomName424148[1] = '\\0';string T=akaRandomName424148;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 11,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_1(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nstring S=\"\";\nchar* akaRandomName313371 = new char[2];akaRandomName313371[0] = 0;akaRandomName313371[1] = '\\0';string T=akaRandomName313371;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_1\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nstring S=\"\";\nchar* akaRandomName719316 = new char[2];akaRandomName719316[0] = 0;akaRandomName719316[1] = '\\0';string T=akaRandomName719316;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 12,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_22(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_22\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName862886 = new char[2];akaRandomName862886[0] = 0;akaRandomName862886[1] = '\\0';string S=akaRandomName862886;\nchar* akaRandomName697282 = new char[2];akaRandomName697282[0] = 0;akaRandomName697282[1] = '\\0';string T=akaRandomName697282;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_22\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName35852 = new char[2];akaRandomName35852[0] = 0;akaRandomName35852[1] = '\\0';string S=akaRandomName35852;\nchar* akaRandomName686047 = new char[2];akaRandomName686047[0] = 0;akaRandomName686047[1] = '\\0';string T=akaRandomName686047;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 13,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_6(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_6\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName125571 = new char[2];akaRandomName125571[0] = 0;akaRandomName125571[1] = '\\0';string S=akaRandomName125571;\nchar* akaRandomName241605 = new char[2];akaRandomName241605[0] = 0;akaRandomName241605[1] = '\\0';string T=akaRandomName241605;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_6\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName177382 = new char[2];akaRandomName177382[0] = 0;akaRandomName177382[1] = '\\0';string S=akaRandomName177382;\nchar* akaRandomName275280 = new char[2];akaRandomName275280[0] = 0;akaRandomName275280[1] = '\\0';string T=akaRandomName275280;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 14,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_29(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_29\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName316526 = new char[3];akaRandomName316526[0] = 0;akaRandomName316526[1] = 0;akaRandomName316526[2] = '\\0';string S=akaRandomName316526;\nchar* akaRandomName801256 = new char[2];akaRandomName801256[0] = 0;akaRandomName801256[1] = '\\0';string T=akaRandomName801256;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_29\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName221938 = new char[3];akaRandomName221938[0] = 0;akaRandomName221938[1] = 0;akaRandomName221938[2] = '\\0';string S=akaRandomName221938;\nchar* akaRandomName241601 = new char[2];akaRandomName241601[0] = 0;akaRandomName241601[1] = '\\0';string T=akaRandomName241601;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 15,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_7(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_7\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName889705 = new char[3];akaRandomName889705[0] = 0;akaRandomName889705[1] = 0;akaRandomName889705[2] = '\\0';string S=akaRandomName889705;\nchar* akaRandomName242262 = new char[2];akaRandomName242262[0] = 0;akaRandomName242262[1] = '\\0';string T=akaRandomName242262;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_7\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName650935 = new char[3];akaRandomName650935[0] = 0;akaRandomName650935[1] = 0;akaRandomName650935[2] = '\\0';string S=akaRandomName650935;\nchar* akaRandomName26211 = new char[2];akaRandomName26211[0] = 0;akaRandomName26211[1] = '\\0';string T=akaRandomName26211;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 16,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_28(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_28\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nstring S=\"\";\nchar* akaRandomName850994 = new char[3];akaRandomName850994[0] = 0;akaRandomName850994[1] = 0;akaRandomName850994[2] = '\\0';string T=akaRandomName850994;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_28\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nstring S=\"\";\nchar* akaRandomName891533 = new char[3];akaRandomName891533[0] = 0;akaRandomName891533[1] = 0;akaRandomName891533[2] = '\\0';string T=akaRandomName891533;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 17,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_4(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName670665 = new char[3];akaRandomName670665[0] = 0;akaRandomName670665[1] = 0;akaRandomName670665[2] = '\\0';string S=akaRandomName670665;\nchar* akaRandomName350637 = new char[2];akaRandomName350637[0] = 0;akaRandomName350637[1] = '\\0';string T=akaRandomName350637;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_4\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName505932 = new char[3];akaRandomName505932[0] = 0;akaRandomName505932[1] = 0;akaRandomName505932[2] = '\\0';string S=akaRandomName505932;\nchar* akaRandomName454708 = new char[2];akaRandomName454708[0] = 0;akaRandomName454708[1] = '\\0';string T=akaRandomName454708;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 18,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_27(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_27\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nstring S=\"\";\nchar* akaRandomName992392 = new char[2];akaRandomName992392[0] = 0;akaRandomName992392[1] = '\\0';string T=akaRandomName992392;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_27\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nstring S=\"\";\nchar* akaRandomName81477 = new char[2];akaRandomName81477[0] = 0;akaRandomName81477[1] = '\\0';string T=akaRandomName81477;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 19,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_5(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_5\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName702801 = new char[2];akaRandomName702801[0] = 0;akaRandomName702801[1] = '\\0';string S=akaRandomName702801;\nchar* akaRandomName380661 = new char[2];akaRandomName380661[0] = 0;akaRandomName380661[1] = '\\0';string T=akaRandomName380661;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_5\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName356380 = new char[2];akaRandomName356380[0] = 0;akaRandomName356380[1] = '\\0';string S=akaRandomName356380;\nchar* akaRandomName993414 = new char[2];akaRandomName993414[0] = 0;akaRandomName993414[1] = '\\0';string T=akaRandomName993414;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 20,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_26(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_26\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nstring S=\"\";\nchar* akaRandomName853609 = new char[2];akaRandomName853609[0] = 0;akaRandomName853609[1] = '\\0';string T=akaRandomName853609;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_26\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nstring S=\"\";\nchar* akaRandomName623052 = new char[2];akaRandomName623052[0] = 0;akaRandomName623052[1] = '\\0';string T=akaRandomName623052;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 21,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_8(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_8\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName48842 = new char[11];akaRandomName48842[0] = 101;akaRandomName48842[1] = 120;akaRandomName48842[2] = 112;akaRandomName48842[3] = 114;akaRandomName48842[4] = 101;akaRandomName48842[5] = 115;akaRandomName48842[6] = 115;akaRandomName48842[7] = 105;akaRandomName48842[8] = 111;akaRandomName48842[9] = 110;akaRandomName48842[10] = '\\0';string S=akaRandomName48842;\nchar* akaRandomName275789 = new char[2];akaRandomName275789[0] = 0;akaRandomName275789[1] = '\\0';string T=akaRandomName275789;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_8\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName886126 = new char[11];akaRandomName886126[0] = 101;akaRandomName886126[1] = 120;akaRandomName886126[2] = 112;akaRandomName886126[3] = 114;akaRandomName886126[4] = 101;akaRandomName886126[5] = 115;akaRandomName886126[6] = 115;akaRandomName886126[7] = 105;akaRandomName886126[8] = 111;akaRandomName886126[9] = 110;akaRandomName886126[10] = '\\0';string S=akaRandomName886126;\nchar* akaRandomName517508 = new char[2];akaRandomName517508[0] = 0;akaRandomName517508[1] = '\\0';string T=akaRandomName517508;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 22,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_9(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_9\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName88019 = new char[2];akaRandomName88019[0] = 0;akaRandomName88019[1] = '\\0';string S=akaRandomName88019;\nchar* akaRandomName994203 = new char[3];akaRandomName994203[0] = 0;akaRandomName994203[1] = 0;akaRandomName994203[2] = '\\0';string T=akaRandomName994203;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_9\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName709528 = new char[2];akaRandomName709528[0] = 0;akaRandomName709528[1] = '\\0';string S=akaRandomName709528;\nchar* akaRandomName929028 = new char[3];akaRandomName929028[0] = 0;akaRandomName929028[1] = 0;akaRandomName929028[2] = '\\0';string T=akaRandomName929028;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 23,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_random_0(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName452609 = new char[2];akaRandomName452609[0] = -74;akaRandomName452609[1] = '\\0';string S=akaRandomName452609;\nchar* akaRandomName38353 = new char[2];akaRandomName38353[0] = 33;akaRandomName38353[1] = '\\0';string T=akaRandomName38353;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_random_0\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName623118 = new char[2];akaRandomName623118[0] = -74;akaRandomName623118[1] = '\\0';string S=akaRandomName623118;\nchar* akaRandomName970409 = new char[2];akaRandomName970409[0] = 33;akaRandomName970409[1] = '\\0';string T=akaRandomName970409;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 24,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_random_1(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName957259 = new char[2];akaRandomName957259[0] = -1;akaRandomName957259[1] = '\\0';string S=akaRandomName957259;\nchar* akaRandomName673295 = new char[2];akaRandomName673295[0] = 100;akaRandomName673295[1] = '\\0';string T=akaRandomName673295;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_random_1\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName872492 = new char[2];akaRandomName872492[0] = -1;akaRandomName872492[1] = '\\0';string S=akaRandomName872492;\nchar* akaRandomName677811 = new char[2];akaRandomName677811[0] = 100;akaRandomName677811[1] = '\\0';string T=akaRandomName677811;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 25,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_random_2(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName991548 = new char[2];akaRandomName991548[0] = -8;akaRandomName991548[1] = '\\0';string S=akaRandomName991548;\nchar* akaRandomName901692 = new char[2];akaRandomName901692[0] = -80;akaRandomName901692[1] = '\\0';string T=akaRandomName901692;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_random_2\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName200001 = new char[2];akaRandomName200001[0] = -8;akaRandomName200001[1] = '\\0';string S=akaRandomName200001;\nchar* akaRandomName777494 = new char[2];akaRandomName777494[0] = -80;akaRandomName777494[1] = '\\0';string T=akaRandomName777494;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 26,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_10(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_10\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName996472 = new char[3];akaRandomName996472[0] = 0;akaRandomName996472[1] = 0;akaRandomName996472[2] = '\\0';string S=akaRandomName996472;\nchar* akaRandomName647116 = new char[2];akaRandomName647116[0] = 0;akaRandomName647116[1] = '\\0';string T=akaRandomName647116;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_10\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName264493 = new char[3];akaRandomName264493[0] = 0;akaRandomName264493[1] = 0;akaRandomName264493[2] = '\\0';string S=akaRandomName264493;\nchar* akaRandomName556958 = new char[2];akaRandomName556958[0] = 0;akaRandomName556958[1] = '\\0';string T=akaRandomName556958;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 27,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_32(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_32\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName270933 = new char[2];akaRandomName270933[0] = 0;akaRandomName270933[1] = '\\0';string S=akaRandomName270933;\nchar* akaRandomName699203 = new char[2];akaRandomName699203[0] = 0;akaRandomName699203[1] = '\\0';string T=akaRandomName699203;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_32\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName647757 = new char[2];akaRandomName647757[0] = 0;akaRandomName647757[1] = '\\0';string S=akaRandomName647757;\nchar* akaRandomName910762 = new char[2];akaRandomName910762[0] = 0;akaRandomName910762[1] = '\\0';string T=akaRandomName910762;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 28,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_31(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_31\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName154916 = new char[3];akaRandomName154916[0] = 0;akaRandomName154916[1] = 0;akaRandomName154916[2] = '\\0';string S=akaRandomName154916;\nchar* akaRandomName322113 = new char[2];akaRandomName322113[0] = 0;akaRandomName322113[1] = '\\0';string T=akaRandomName322113;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_31\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName412053 = new char[3];akaRandomName412053[0] = 0;akaRandomName412053[1] = 0;akaRandomName412053[2] = '\\0';string S=akaRandomName412053;\nchar* akaRandomName34746 = new char[2];akaRandomName34746[0] = 0;akaRandomName34746[1] = '\\0';string T=akaRandomName34746;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 29,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_30(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_30\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName913601 = new char[3];akaRandomName913601[0] = 0;akaRandomName913601[1] = 0;akaRandomName913601[2] = '\\0';string S=akaRandomName913601;\nchar* akaRandomName496773 = new char[2];akaRandomName496773[0] = 0;akaRandomName496773[1] = '\\0';string T=akaRandomName496773;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_30\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName687095 = new char[3];akaRandomName687095[0] = 0;akaRandomName687095[1] = 0;akaRandomName687095[2] = '\\0';string S=akaRandomName687095;\nchar* akaRandomName951004 = new char[2];akaRandomName951004[0] = 0;akaRandomName951004[1] = '\\0';string T=akaRandomName951004;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 30,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_14(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_14\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName737615 = new char[2];akaRandomName737615[0] = 0;akaRandomName737615[1] = '\\0';string S=akaRandomName737615;\nchar* akaRandomName200120 = new char[2];akaRandomName200120[0] = 0;akaRandomName200120[1] = '\\0';string T=akaRandomName200120;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_14\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName516788 = new char[2];akaRandomName516788[0] = 0;akaRandomName516788[1] = '\\0';string S=akaRandomName516788;\nchar* akaRandomName550708 = new char[2];akaRandomName550708[0] = 0;akaRandomName550708[1] = '\\0';string T=akaRandomName550708;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 31,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_36(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_36\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName390265 = new char[2];akaRandomName390265[0] = 0;akaRandomName390265[1] = '\\0';string S=akaRandomName390265;\nchar* akaRandomName565538 = new char[3];akaRandomName565538[0] = 0;akaRandomName565538[1] = 0;akaRandomName565538[2] = '\\0';string T=akaRandomName565538;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_36\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName89544 = new char[2];akaRandomName89544[0] = 0;akaRandomName89544[1] = '\\0';string S=akaRandomName89544;\nchar* akaRandomName22421 = new char[3];akaRandomName22421[0] = 0;akaRandomName22421[1] = 0;akaRandomName22421[2] = '\\0';string T=akaRandomName22421;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 32,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_13(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_13\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName526860 = new char[2];akaRandomName526860[0] = 0;akaRandomName526860[1] = '\\0';string S=akaRandomName526860;\nchar* akaRandomName864682 = new char[3];akaRandomName864682[0] = 0;akaRandomName864682[1] = 0;akaRandomName864682[2] = '\\0';string T=akaRandomName864682;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_13\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName999563 = new char[2];akaRandomName999563[0] = 0;akaRandomName999563[1] = '\\0';string S=akaRandomName999563;\nchar* akaRandomName896308 = new char[3];akaRandomName896308[0] = 0;akaRandomName896308[1] = 0;akaRandomName896308[2] = '\\0';string T=akaRandomName896308;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 33,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_35(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_35\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName414555 = new char[2];akaRandomName414555[0] = 0;akaRandomName414555[1] = '\\0';string S=akaRandomName414555;\nchar* akaRandomName124820 = new char[2];akaRandomName124820[0] = 0;akaRandomName124820[1] = '\\0';string T=akaRandomName124820;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_35\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName717669 = new char[2];akaRandomName717669[0] = 0;akaRandomName717669[1] = '\\0';string S=akaRandomName717669;\nchar* akaRandomName830406 = new char[2];akaRandomName830406[0] = 0;akaRandomName830406[1] = '\\0';string T=akaRandomName830406;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 34,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_12(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_12\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName398420 = new char[2];akaRandomName398420[0] = 0;akaRandomName398420[1] = '\\0';string S=akaRandomName398420;\nchar* akaRandomName161089 = new char[2];akaRandomName161089[0] = 0;akaRandomName161089[1] = '\\0';string T=akaRandomName161089;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_12\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName381744 = new char[2];akaRandomName381744[0] = 0;akaRandomName381744[1] = '\\0';string S=akaRandomName381744;\nchar* akaRandomName74621 = new char[2];akaRandomName74621[0] = 0;akaRandomName74621[1] = '\\0';string T=akaRandomName74621;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 35,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_34(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_34\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nstring S=\"\";\nchar* akaRandomName39272 = new char[2];akaRandomName39272[0] = 0;akaRandomName39272[1] = '\\0';string T=akaRandomName39272;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_34\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nstring S=\"\";\nchar* akaRandomName316883 = new char[2];akaRandomName316883[0] = 0;akaRandomName316883[1] = '\\0';string T=akaRandomName316883;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 36,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_11(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_11\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nstring S=\"\";\nchar* akaRandomName890936 = new char[2];akaRandomName890936[0] = 0;akaRandomName890936[1] = '\\0';string T=akaRandomName890936;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_11\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nstring S=\"\";\nchar* akaRandomName75854 = new char[2];akaRandomName75854[0] = 0;akaRandomName75854[1] = '\\0';string T=akaRandomName75854;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 37,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_33(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_33\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName505953 = new char[3];akaRandomName505953[0] = 0;akaRandomName505953[1] = 0;akaRandomName505953[2] = '\\0';string S=akaRandomName505953;\nchar* akaRandomName106570 = new char[2];akaRandomName106570[0] = 0;akaRandomName106570[1] = '\\0';string T=akaRandomName106570;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_33\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName226344 = new char[3];akaRandomName226344[0] = 0;akaRandomName226344[1] = 0;akaRandomName226344[2] = '\\0';string S=akaRandomName226344;\nchar* akaRandomName174274 = new char[2];akaRandomName174274[0] = 0;akaRandomName174274[1] = '\\0';string T=akaRandomName174274;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 38,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_18(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_18\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName455934 = new char[2];akaRandomName455934[0] = 0;akaRandomName455934[1] = '\\0';string S=akaRandomName455934;\nchar* akaRandomName335864 = new char[2];akaRandomName335864[0] = 0;akaRandomName335864[1] = '\\0';string T=akaRandomName335864;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_18\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName456521 = new char[2];akaRandomName456521[0] = 0;akaRandomName456521[1] = '\\0';string S=akaRandomName456521;\nchar* akaRandomName773269 = new char[2];akaRandomName773269[0] = 0;akaRandomName773269[1] = '\\0';string T=akaRandomName773269;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 39,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_17(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_17\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName484652 = new char[2];akaRandomName484652[0] = 0;akaRandomName484652[1] = '\\0';string S=akaRandomName484652;\nchar* akaRandomName726617 = new char[2];akaRandomName726617[0] = 0;akaRandomName726617[1] = '\\0';string T=akaRandomName726617;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_17\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName446896 = new char[2];akaRandomName446896[0] = 0;akaRandomName446896[1] = '\\0';string S=akaRandomName446896;\nchar* akaRandomName314331 = new char[2];akaRandomName314331[0] = 0;akaRandomName314331[1] = '\\0';string T=akaRandomName314331;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 40,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_39(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_39\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName549726 = new char[2];akaRandomName549726[0] = 0;akaRandomName549726[1] = '\\0';string S=akaRandomName549726;\nchar* akaRandomName275142 = new char[2];akaRandomName275142[0] = 0;akaRandomName275142[1] = '\\0';string T=akaRandomName275142;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_39\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName941551 = new char[2];akaRandomName941551[0] = 0;akaRandomName941551[1] = '\\0';string S=akaRandomName941551;\nchar* akaRandomName920447 = new char[2];akaRandomName920447[0] = 0;akaRandomName920447[1] = '\\0';string T=akaRandomName920447;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 41,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_16(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_16\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName245246 = new char[3];akaRandomName245246[0] = 0;akaRandomName245246[1] = 0;akaRandomName245246[2] = '\\0';string S=akaRandomName245246;\nchar* akaRandomName120910 = new char[3];akaRandomName120910[0] = 0;akaRandomName120910[1] = 0;akaRandomName120910[2] = '\\0';string T=akaRandomName120910;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_16\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName828352 = new char[3];akaRandomName828352[0] = 0;akaRandomName828352[1] = 0;akaRandomName828352[2] = '\\0';string S=akaRandomName828352;\nchar* akaRandomName57153 = new char[3];akaRandomName57153[0] = 0;akaRandomName57153[1] = 0;akaRandomName57153[2] = '\\0';string T=akaRandomName57153;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 42,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_38(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_38\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName405327 = new char[2];akaRandomName405327[0] = 0;akaRandomName405327[1] = '\\0';string S=akaRandomName405327;\nchar* akaRandomName326908 = new char[2];akaRandomName326908[0] = 0;akaRandomName326908[1] = '\\0';string T=akaRandomName326908;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_38\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName93701 = new char[2];akaRandomName93701[0] = 0;akaRandomName93701[1] = '\\0';string S=akaRandomName93701;\nchar* akaRandomName897260 = new char[2];akaRandomName897260[0] = 0;akaRandomName897260[1] = '\\0';string T=akaRandomName897260;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 43,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_15(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_15\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName34285 = new char[2];akaRandomName34285[0] = 0;akaRandomName34285[1] = '\\0';string S=akaRandomName34285;\nchar* akaRandomName262312 = new char[2];akaRandomName262312[0] = 0;akaRandomName262312[1] = '\\0';string T=akaRandomName262312;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_15\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName509036 = new char[2];akaRandomName509036[0] = 0;akaRandomName509036[1] = '\\0';string S=akaRandomName509036;\nchar* akaRandomName893548 = new char[2];akaRandomName893548[0] = 0;akaRandomName893548[1] = '\\0';string T=akaRandomName893548;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 44,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionStormrage_minWindow_string_string_directed_37(void) {\n{\nAKA_test_case_name=\"SolutionStormrage_minWindow_string_string_directed_37\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName869843 = new char[2];akaRandomName869843[0] = 0;akaRandomName869843[1] = '\\0';string S=akaRandomName869843;\nchar* akaRandomName48826 = new char[2];akaRandomName48826[0] = 0;akaRandomName48826[1] = '\\0';string T=akaRandomName48826;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionStormrage_minWindow_string_string_directed_37\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionStormrage->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\SolutionStormrage\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionStormrage */\n/* ConstructorDataNode SolutionStormrage() */\nAKA_mark(\"Calling: \\\\SolutionStormrage()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionStormrage\\\\AKA_INSTANCE___SolutionStormrage\\\\SolutionStormrage()\");AKA_fCall++;AKA_INSTANCE___SolutionStormrage = new ::SolutionStormrage();\n\n\nchar* akaRandomName704751 = new char[2];akaRandomName704751[0] = 0;akaRandomName704751[1] = '\\0';string S=akaRandomName704751;\nchar* akaRandomName20494 = new char[2];akaRandomName20494[0] = 0;akaRandomName20494[1] = '\\0';string T=akaRandomName20494;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class SolutionStormrage {\r public:\r   string minWindow(string S, string T) {\r     vector<int> need(256, 0), found(256, 0);\r     for (int i = 0; i < T.size(); ++i) need[T[i]]++;\r     string result = \"\";\r     for (int end = 0, begin = 0, L = 0, min_length = INT_MAX; end < S.size(); ++end) {\r       char c = S[end];\r       if (need[c] == 0) continue;\r       found[c] ++;\r       if (found[c] <= need[c]) L ++;\r       if (L == T.size()) {\r \twhile (need[S[begin]] == 0 || need[S[begin]] < found[S[begin]]) {\r \t  if (need[S[begin]]) found[S[begin]] --;\r \t  begin ++;\r \t}\r \tint length = end - begin + 1;\r \tif (length < min_length) {\r \t  min_length = length;\r \t  result = S.substr(begin, length);\r \t}\t\r       }\r     }\r     return result;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\ten\\Minimum_Window_Substring.cpp\\SolutionStormrage\\minWindow(string,string)"
+    },
+    {
+        "f": [],
+        "fm": "string minWindow(string S, string T) {\r     vector<int> need(256, 0), found(256, 0);\r     for (int i = 0; i < T.size(); ++i) need[T[i]]++;\r     string result = \"\";\r     int begin = 0, end = 0, min_length = INT_MAX, L = 0;\r \r     // Advance end until a valid end point\r     while (end < S.size()) {\r       if (++found[S[end]] <= need[S[end]]) L ++;\r       if (L == T.size()) break;\r       end ++;\r     }\r     if (L < T.size()) return \"\";\r     \r     while (end < S.size()) {\r       // Advance begin as long as valid\r       while (need[S[begin]] == 0 || need[S[begin]] < found[S[begin]]) {\r \tfound[S[begin]] --;\r \tbegin ++;\r       }\r       int length = end - begin + 1;\r       if (length < min_length) {\r \tmin_length = length;\r \tresult = S.substr(begin, length);\r       }\r       // Advance end to the next valid location\r       do {\r \tend ++;\r \tfound[S[end]] ++;\r       } while (end < S.length() && S[end] != S[begin]);\r     }\r     return result;      \r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minWindow_string_string_random_4(void) {\n{\nAKA_test_case_name=\"Solution_minWindow_string_string_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName962957 = new char[2];akaRandomName962957[0] = -75;akaRandomName962957[1] = '\\0';string S=akaRandomName962957;\nchar* akaRandomName383200 = new char[2];akaRandomName383200[0] = -121;akaRandomName383200[1] = '\\0';string T=akaRandomName383200;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minWindow_string_string_random_4\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\Solution\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName555563 = new char[2];akaRandomName555563[0] = -75;akaRandomName555563[1] = '\\0';string S=akaRandomName555563;\nchar* akaRandomName307098 = new char[2];akaRandomName307098[0] = -121;akaRandomName307098[1] = '\\0';string T=akaRandomName307098;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minWindow_string_string_random_2(void) {\n{\nAKA_test_case_name=\"Solution_minWindow_string_string_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName382713 = new char[2];akaRandomName382713[0] = 91;akaRandomName382713[1] = '\\0';string S=akaRandomName382713;\nchar* akaRandomName699062 = new char[2];akaRandomName699062[0] = 79;akaRandomName699062[1] = '\\0';string T=akaRandomName699062;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minWindow_string_string_random_2\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\Solution\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName249155 = new char[2];akaRandomName249155[0] = 91;akaRandomName249155[1] = '\\0';string S=akaRandomName249155;\nchar* akaRandomName580029 = new char[2];akaRandomName580029[0] = 79;akaRandomName580029[1] = '\\0';string T=akaRandomName580029;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minWindow_string_string_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_minWindow_string_string_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName86549 = new char[3];akaRandomName86549[0] = 0;akaRandomName86549[1] = 0;akaRandomName86549[2] = '\\0';string S=akaRandomName86549;\nchar* akaRandomName43974 = new char[3];akaRandomName43974[0] = 0;akaRandomName43974[1] = 0;akaRandomName43974[2] = '\\0';string T=akaRandomName43974;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minWindow_string_string_directed_0\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minWindow(S,T);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Minimum_Window_Substring.cpp\\\\Solution\\\\minWindow(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Minimum_Window_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName171816 = new char[3];akaRandomName171816[0] = 0;akaRandomName171816[1] = 0;akaRandomName171816[2] = '\\0';string S=akaRandomName171816;\nchar* akaRandomName613283 = new char[3];akaRandomName613283[0] = 0;akaRandomName613283[1] = 0;akaRandomName613283[2] = '\\0';string T=akaRandomName613283;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode S */\n/* NormalStringDataNode T */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   string minWindow(string S, string T) {\r     vector<int> need(256, 0), found(256, 0);\r     for (int i = 0; i < T.size(); ++i) need[T[i]]++;\r     string result = \"\";\r     int begin = 0, end = 0, min_length = INT_MAX, L = 0;\r \r     // Advance end until a valid end point\r     while (end < S.size()) {\r       if (++found[S[end]] <= need[S[end]]) L ++;\r       if (L == T.size()) break;\r       end ++;\r     }\r     if (L < T.size()) return \"\";\r     \r     while (end < S.size()) {\r       // Advance begin as long as valid\r       while (need[S[begin]] == 0 || need[S[begin]] < found[S[begin]]) {\r \tfound[S[begin]] --;\r \tbegin ++;\r       }\r       int length = end - begin + 1;\r       if (length < min_length) {\r \tmin_length = length;\r \tresult = S.substr(begin, length);\r       }\r       // Advance end to the next valid location\r       do {\r \tend ++;\r \tfound[S[end]] ++;\r       } while (end < S.length() && S[end] != S[begin]);\r     }\r     return result;      \r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\ten\\Minimum_Window_Substring.cpp\\Solution\\minWindow(string,string)"
+    },
+    {
+        "f": [],
+        "fm": "string multiply(string num1, string num2) {\r     string res = \"0\";\r     for (int i = 0; i < num1.size(); ++i) {\r       res = add(res, multiply(num1[i] - '0', num1.size() - i - 1, num2));\r     }\r     // Remove prefix 0\r     int i = 0;\r     while (i < res.size() && res[i] == '0') i ++;\r     res = res.substr(i, res.size());\r     return res.size() ? res : \"0\";\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_multiply_string_string_directed_4(void) {\n{\nAKA_test_case_name=\"Solution_multiply_string_string_directed_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Multiply_Strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring num1=\"\";\nstring num2=\"\";\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num1 */\n/* NormalStringDataNode num2 */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_multiply_string_string_directed_4\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->multiply(num1,num2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Multiply_Strings.cpp\\\\Solution\\\\multiply(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Multiply_Strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring num1=\"\";\nstring num2=\"\";\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num1 */\n/* NormalStringDataNode num2 */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_multiply_string_string_directed_5(void) {\n{\nAKA_test_case_name=\"Solution_multiply_string_string_directed_5\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Multiply_Strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring num1=\"\";\nstring num2=\"\";\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num1 */\n/* NormalStringDataNode num2 */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_multiply_string_string_directed_5\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->multiply(num1,num2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Multiply_Strings.cpp\\\\Solution\\\\multiply(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Multiply_Strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring num1=\"\";\nstring num2=\"\";\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num1 */\n/* NormalStringDataNode num2 */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_multiply_string_string_directed_2(void) {\n{\nAKA_test_case_name=\"Solution_multiply_string_string_directed_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Multiply_Strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring num1=\"\";\nstring num2=\"\";\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num1 */\n/* NormalStringDataNode num2 */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_multiply_string_string_directed_2\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->multiply(num1,num2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Multiply_Strings.cpp\\\\Solution\\\\multiply(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Multiply_Strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring num1=\"\";\nstring num2=\"\";\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num1 */\n/* NormalStringDataNode num2 */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_multiply_string_string_directed_3(void) {\n{\nAKA_test_case_name=\"Solution_multiply_string_string_directed_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Multiply_Strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring num1=\"\";\nstring num2=\"\";\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num1 */\n/* NormalStringDataNode num2 */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_multiply_string_string_directed_3\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->multiply(num1,num2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Multiply_Strings.cpp\\\\Solution\\\\multiply(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Multiply_Strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring num1=\"\";\nstring num2=\"\";\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num1 */\n/* NormalStringDataNode num2 */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 4,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_multiply_string_string_random_1(void) {\n{\nAKA_test_case_name=\"Solution_multiply_string_string_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Multiply_Strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName92599 = new char[2];akaRandomName92599[0] = -17;akaRandomName92599[1] = '\\0';string num1=akaRandomName92599;\nchar* akaRandomName207180 = new char[2];akaRandomName207180[0] = 121;akaRandomName207180[1] = '\\0';string num2=akaRandomName207180;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num1 */\n/* NormalStringDataNode num2 */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_multiply_string_string_random_1\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->multiply(num1,num2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Multiply_Strings.cpp\\\\Solution\\\\multiply(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Multiply_Strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName298849 = new char[2];akaRandomName298849[0] = -17;akaRandomName298849[1] = '\\0';string num1=akaRandomName298849;\nchar* akaRandomName87487 = new char[2];akaRandomName87487[0] = 121;akaRandomName87487[1] = '\\0';string num2=akaRandomName87487;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num1 */\n/* NormalStringDataNode num2 */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 5,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_multiply_string_string_directed_6(void) {\n{\nAKA_test_case_name=\"Solution_multiply_string_string_directed_6\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Multiply_Strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring num1=\"\";\nstring num2=\"\";\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num1 */\n/* NormalStringDataNode num2 */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_multiply_string_string_directed_6\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->multiply(num1,num2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Multiply_Strings.cpp\\\\Solution\\\\multiply(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Multiply_Strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring num1=\"\";\nstring num2=\"\";\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num1 */\n/* NormalStringDataNode num2 */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 6,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_multiply_string_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_multiply_string_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Multiply_Strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName996877 = new char[2];akaRandomName996877[0] = -64;akaRandomName996877[1] = '\\0';string num1=akaRandomName996877;\nchar* akaRandomName985664 = new char[2];akaRandomName985664[0] = 0;akaRandomName985664[1] = '\\0';string num2=akaRandomName985664;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num1 */\n/* NormalStringDataNode num2 */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_multiply_string_string_random_0\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->multiply(num1,num2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Multiply_Strings.cpp\\\\Solution\\\\multiply(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Multiply_Strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName229632 = new char[2];akaRandomName229632[0] = -64;akaRandomName229632[1] = '\\0';string num1=akaRandomName229632;\nchar* akaRandomName837544 = new char[2];akaRandomName837544[0] = 0;akaRandomName837544[1] = '\\0';string num2=akaRandomName837544;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num1 */\n/* NormalStringDataNode num2 */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 7,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_multiply_string_string_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_multiply_string_string_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Multiply_Strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring num1=\"\";\nstring num2=\"\";\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num1 */\n/* NormalStringDataNode num2 */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_multiply_string_string_directed_0\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->multiply(num1,num2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Multiply_Strings.cpp\\\\Solution\\\\multiply(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Multiply_Strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring num1=\"\";\nstring num2=\"\";\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num1 */\n/* NormalStringDataNode num2 */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 8,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_multiply_string_string_directed_1(void) {\n{\nAKA_test_case_name=\"Solution_multiply_string_string_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Multiply_Strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring num1=\"\";\nstring num2=\"\";\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num1 */\n/* NormalStringDataNode num2 */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_multiply_string_string_directed_1\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->multiply(num1,num2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Multiply_Strings.cpp\\\\Solution\\\\multiply(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Multiply_Strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring num1=\"\";\nstring num2=\"\";\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode num1 */\n/* NormalStringDataNode num2 */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   string multiply(string num1, string num2) {\r     string res = \"0\";\r     for (int i = 0; i < num1.size(); ++i) {\r       res = add(res, multiply(num1[i] - '0', num1.size() - i - 1, num2));\r     }\r     // Remove prefix 0\r     int i = 0;\r     while (i < res.size() && res[i] == '0') i ++;\r     res = res.substr(i, res.size());\r     return res.size() ? res : \"0\";\r   }\r private:\r   string multiply(int v, int k, const string& x) {\r     int carry = 0;\r     string p(x.size(), '0');\r     for (int i = x.size() -1; i >= 0; --i) {\r       int sum = carry + v * (x[i] - '0');\r       p[i] = (sum % 10) + '0';\r       carry = sum / 10;\r     }\r     if (carry) p = string(1, carry + '0') + p;\r     return p + string(k, '0');\r   }\r   string add(string a, string b) {\r     if (a.size() < b.size()) swap(a, b);\r     string s(a.size(), '0');\r     int carry = 0, offset = a.size() - b.size();\r     for (int i = a.size() - 1; i >= 0; --i) {\r       int sum = carry + a[i] - '0' + (i >= offset ? b[i - offset] - '0' : 0);\r       s[i] = (sum % 10) + '0';\r       carry = sum / 10;\r     }\r     if (carry) s = string(1, carry + '0') + s;\r     return s;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\ten\\Multiply_Strings.cpp\\Solution\\multiply(string,string)"
+    },
+    {
+        "f": [],
+        "fm": "void nextPermutation(vector<int> &num) {\r     for (int i = num.size() - 2; i >= 0; --i) {\r       if (num[i] < num[i + 1]) {\r \tint j = num.rend() - 1 - upper_bound(num.rbegin(), num.rend() - i - 1, num[i]);\r \tswap(num[i], num[j]);\r \treverse(num.begin() + i + 1, num.end());\r \treturn;\r       }\r     }\r     reverse(num.begin(), num.end());\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_nextPermutation_vector_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_nextPermutation_vector_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Next_Permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_nextPermutation_vector_int_directed_0\");AKA_INSTANCE___Solution->nextPermutation(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Next_Permutation.cpp\\\\Solution\\\\nextPermutation(vector<int>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Next_Permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_nextPermutation_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_nextPermutation_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Next_Permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=438252729;\nnum.push_back(num_element0);\nint num_element1=-1932044532;\nnum.push_back(num_element1);\nint num_element2=-617497368;\nnum.push_back(num_element2);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_nextPermutation_vector_int_random_2\");AKA_INSTANCE___Solution->nextPermutation(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Next_Permutation.cpp\\\\Solution\\\\nextPermutation(vector<int>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Next_Permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=438252729;\nnum.push_back(num_element0);\nint num_element1=-1932044532;\nnum.push_back(num_element1);\nint num_element2=-617497368;\nnum.push_back(num_element2);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_nextPermutation_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_nextPermutation_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Next_Permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=2065936438;\nnum.push_back(num_element0);\nint num_element1=966052299;\nnum.push_back(num_element1);\nint num_element2=-379341856;\nnum.push_back(num_element2);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_nextPermutation_vector_int_random_3\");AKA_INSTANCE___Solution->nextPermutation(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Next_Permutation.cpp\\\\Solution\\\\nextPermutation(vector<int>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Next_Permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=2065936438;\nnum.push_back(num_element0);\nint num_element1=966052299;\nnum.push_back(num_element1);\nint num_element2=-379341856;\nnum.push_back(num_element2);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   void nextPermutation(vector<int> &num) {\r     for (int i = num.size() - 2; i >= 0; --i) {\r       if (num[i] < num[i + 1]) {\r \tint j = num.rend() - 1 - upper_bound(num.rbegin(), num.rend() - i - 1, num[i]);\r \tswap(num[i], num[j]);\r \treverse(num.begin() + i + 1, num.end());\r \treturn;\r       }\r     }\r     reverse(num.begin(), num.end());\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\ten\\Next_Permutation.cpp\\Solution\\nextPermutation(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "bool isPalindrome(int x) {\r         if (x < 0) return false;\r         int base = 1;\r         while (x / base > 10) base *= 10;\r         while (x > 9) {\r             if (x / base != x % 10) return false;\r             x = (x % base) / 10;\r             base /= 10;\r         }\r         return true;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isPalindrome_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_isPalindrome_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Palindrome_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint x=9;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isPalindrome_int_random_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isPalindrome(x);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Palindrome_Number.cpp\\\\Solution\\\\isPalindrome(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Palindrome_Number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint x=9;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     bool isPalindrome(int x) {\r         if (x < 0) return false;\r         int base = 1;\r         while (x / base > 10) base *= 10;\r         while (x > 9) {\r             if (x / base != x % 10) return false;\r             x = (x % base) / 10;\r             base /= 10;\r         }\r         return true;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\ten\\Palindrome_Number.cpp\\Solution\\isPalindrome(int)"
+    },
+    {
+        "f": [],
+        "fm": "ListNode *partition(ListNode *head, int x) {\r     ListNode *new_head[2] = {NULL}, *tail[2] = {NULL};\r     while (head) {\r       int list_index = head->val < x ? 0 : 1;\r       append(new_head[list_index], tail[list_index], head);\r     }\r     append(new_head[0], tail[0], new_head[1], false);\r     return new_head[0];\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_partition_ListNodemul_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_partition_ListNodemul_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Partition_List.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-338398342;\nAKA_mark(\"Calling: .\\\\ten\\\\Partition_List.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\Partition_List.cpp\\\\partition(ListNode*,int)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_0).val=85504031;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head1_x=129630335;\nAKA_mark(\"Calling: .\\\\ten\\\\Partition_List.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\Partition_List.cpp\\\\partition(ListNode*,int)\\\\head\\\\AKA_VECTOR_INIT_head_1\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_1 = new ::ListNode(head1_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_1).val=-1530648873;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_1).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_1);\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head2_x=287174024;\nAKA_mark(\"Calling: .\\\\ten\\\\Partition_List.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\Partition_List.cpp\\\\partition(ListNode*,int)\\\\head\\\\AKA_VECTOR_INIT_head_2\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_2 = new ::ListNode(head2_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_2).val=667172808;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_2).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_2);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\n\n\nint x=-894324997;\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* NormalNumberDataNode x */\n/* PointerStructureDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_partition_ListNodemul_int_random_0\");ListNode* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->partition(head,x);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Partition_List.cpp\\\\Solution\\\\partition(ListNode*,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Partition_List.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-338398342;\nAKA_mark(\"Calling: .\\\\ten\\\\Partition_List.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\Partition_List.cpp\\\\partition(ListNode*,int)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_0).val=85504031;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head1_x=129630335;\nAKA_mark(\"Calling: .\\\\ten\\\\Partition_List.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\Partition_List.cpp\\\\partition(ListNode*,int)\\\\head\\\\AKA_VECTOR_INIT_head_1\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_1 = new ::ListNode(head1_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_1).val=-1530648873;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_1).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_1);\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head2_x=287174024;\nAKA_mark(\"Calling: .\\\\ten\\\\Partition_List.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\Partition_List.cpp\\\\partition(ListNode*,int)\\\\head\\\\AKA_VECTOR_INIT_head_2\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_2 = new ::ListNode(head2_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_2).val=667172808;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_2).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_2);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\n\n\nint x=-894324997;\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* NormalNumberDataNode x */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_partition_ListNodemul_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_partition_ListNodemul_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Partition_List.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=766598519;\nAKA_mark(\"Calling: .\\\\ten\\\\Partition_List.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\Partition_List.cpp\\\\partition(ListNode*,int)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_0).val=-1207391699;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head1_x=1836151101;\nAKA_mark(\"Calling: .\\\\ten\\\\Partition_List.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\Partition_List.cpp\\\\partition(ListNode*,int)\\\\head\\\\AKA_VECTOR_INIT_head_1\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_1 = new ::ListNode(head1_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_1).val=517093625;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_1).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_1);\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head2_x=1313068496;\nAKA_mark(\"Calling: .\\\\ten\\\\Partition_List.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\Partition_List.cpp\\\\partition(ListNode*,int)\\\\head\\\\AKA_VECTOR_INIT_head_2\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_2 = new ::ListNode(head2_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_2).val=883603469;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_2).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_2);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\n\n\nint x=1115615355;\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* NormalNumberDataNode x */\n/* PointerStructureDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_partition_ListNodemul_int_random_3\");ListNode* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->partition(head,x);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\ten\\\\Partition_List.cpp\\\\Solution\\\\partition(ListNode*,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Partition_List.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=766598519;\nAKA_mark(\"Calling: .\\\\ten\\\\Partition_List.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\Partition_List.cpp\\\\partition(ListNode*,int)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_0).val=-1207391699;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head1_x=1836151101;\nAKA_mark(\"Calling: .\\\\ten\\\\Partition_List.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\Partition_List.cpp\\\\partition(ListNode*,int)\\\\head\\\\AKA_VECTOR_INIT_head_1\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_1 = new ::ListNode(head1_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_1).val=517093625;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_1).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_1);\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head2_x=1313068496;\nAKA_mark(\"Calling: .\\\\ten\\\\Partition_List.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\Partition_List.cpp\\\\partition(ListNode*,int)\\\\head\\\\AKA_VECTOR_INIT_head_2\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_2 = new ::ListNode(head2_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_2).val=883603469;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_2).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_2);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\n\n\nint x=1115615355;\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* NormalNumberDataNode x */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   ListNode *partition(ListNode *head, int x) {\r     ListNode *new_head[2] = {NULL}, *tail[2] = {NULL};\r     while (head) {\r       int list_index = head->val < x ? 0 : 1;\r       append(new_head[list_index], tail[list_index], head);\r     }\r     append(new_head[0], tail[0], new_head[1], false);\r     return new_head[0];\r   }\r private:\r   static void append(ListNode *&head, ListNode *&tail, ListNode *&node, bool cut_off = true) {\r     if (node == NULL) return;\r     if (head == NULL) {\r       head = node;\r       tail = node;\r     } else {\r       tail->next = node;\r       tail = node;\r     }\r     node = node->next;\r     if (cut_off) tail->next = NULL;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\ten\\Partition_List.cpp\\Solution\\partition(ListNode*,int)"
+    }
+]

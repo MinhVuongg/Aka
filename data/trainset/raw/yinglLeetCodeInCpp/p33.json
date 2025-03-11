@@ -1,0 +1,58 @@
+[
+    {
+        "f": [],
+        "fm": "int minimumTotal(vector<vector<int> > &triangle) {\r     int min_total = INT_MAX;\r     int levels = triangle.size();\r     vector<int> sums(levels);\r     int i;\r     int j;\r \r     sums[0] = triangle[0][0];\r \r     for (i = 1; i < levels; ++i) {\r       sums[i] = sums[i - 1] + triangle[i][i];\r \r       for (j = i - 1; j > 0; --j) {\r         sums[j] = min(sums[j - 1], sums[j]) + triangle[i][j];\r       }\r \r       sums[0] += triangle[i][0];\r     }\r \r     for (i = 0; i < levels; ++i) {\r       if (sums[i] < min_total) {\r         min_total = sums[i];\r       }\r     }\r \r     return min_total;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minimumTotal_vector_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_minimumTotal_vector_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\triangle.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> triangle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode triangle */\nvector<int> triangle_element0;\nint triangle_element0_element0=-1955672569;\ntriangle_element0.push_back(triangle_element0_element0);\nint triangle_element0_element1=405684938;\ntriangle_element0.push_back(triangle_element0_element1);\nint triangle_element0_element2=-2094503982;\ntriangle_element0.push_back(triangle_element0_element2);\ntriangle.push_back(triangle_element0);\nvector<int> triangle_element1;\nint triangle_element1_element0=-1512503530;\ntriangle_element1.push_back(triangle_element1_element0);\nint triangle_element1_element1=-223891950;\ntriangle_element1.push_back(triangle_element1_element1);\ntriangle.push_back(triangle_element1);\nvector<int> triangle_element2;\nint triangle_element2_element0=1476474306;\ntriangle_element2.push_back(triangle_element2_element0);\ntriangle.push_back(triangle_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minimumTotal_vector_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minimumTotal(triangle);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-27\\\\triangle.cpp\\\\Solution\\\\minimumTotal(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_triangle;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\text_justification.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> words;\n\n\nint L=910120151;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode words */\nchar* akaRandomName183051 = new char[2];akaRandomName183051[0] = 109;akaRandomName183051[1] = '\\0';string words_element0=akaRandomName183051;\nwords.push_back(words_element0);\nchar* akaRandomName325069 = new char[2];akaRandomName325069[0] = -37;akaRandomName325069[1] = '\\0';string words_element1=akaRandomName325069;\nwords.push_back(words_element1);\nchar* akaRandomName499794 = new char[2];akaRandomName499794[0] = -123;akaRandomName499794[1] = '\\0';string words_element2=akaRandomName499794;\nwords.push_back(words_element2);\n/* NormalNumberDataNode L */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int minimumTotal(vector<vector<int> > &triangle) {\r     int min_total = INT_MAX;\r     int levels = triangle.size();\r     vector<int> sums(levels);\r     int i;\r     int j;\r \r     sums[0] = triangle[0][0];\r \r     for (i = 1; i < levels; ++i) {\r       sums[i] = sums[i - 1] + triangle[i][i];\r \r       for (j = i - 1; j > 0; --j) {\r         sums[j] = min(sums[j - 1], sums[j]) + triangle[i][j];\r       }\r \r       sums[0] += triangle[i][0];\r     }\r \r     for (i = 0; i < levels; ++i) {\r       if (sums[i] < min_total) {\r         min_total = sums[i];\r       }\r     }\r \r     return min_total;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-27\\triangle.cpp\\Solution\\minimumTotal(vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> twoSum(vector<int> &numbers, int target) {\r     vector<int> result;\r     map<int, vector<int> > indexes;\r     int i, j, count = numbers.size();\r \r     for (i = 0; i < count; ++i) {\r       indexes[numbers[i]].push_back(i + 1);\r     }\r \r     sort(numbers.begin(), numbers.end());\r       i = 0;\r       j = count - 1;\r \r     while (i < j) {\r       int left_value = numbers[i], right_value = numbers[j];\r \r       if ((left_value + right_value) < target) {\r         ++i;\r       }\r       else if ((left_value + right_value) > target) {\r         --j;\r       }\r       else {\r         vector<int>::iterator left_it = indexes[left_value].begin();\r         vector<int>::iterator right_it = indexes[right_value].begin();\r \r         if (left_it == right_it) {\r           ++right_it;\r         }\r \r         result.push_back((*left_it < *right_it) ? *left_it : *right_it);\r         result.push_back((*left_it < *right_it) ? *right_it : *left_it);\r \r         break;\r       }\r     }\r \r     return result;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_twoSum_vector_int_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_twoSum_vector_int_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\two_sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> numbers;\n\n\nint target=1005058735;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode numbers */\nint numbers_element0=-613509222;\nnumbers.push_back(numbers_element0);\nint numbers_element1=-1533556155;\nnumbers.push_back(numbers_element1);\nint numbers_element2=94579115;\nnumbers.push_back(numbers_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_twoSum_vector_int_int_random_4\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->twoSum(numbers,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-27\\\\two_sum.cpp\\\\Solution\\\\twoSum(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_numbers;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\text_justification.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> words;\n\n\nint L=910120151;\nvector<string> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode words */\nchar* akaRandomName183051 = new char[2];akaRandomName183051[0] = 109;akaRandomName183051[1] = '\\0';string words_element0=akaRandomName183051;\nwords.push_back(words_element0);\nchar* akaRandomName325069 = new char[2];akaRandomName325069[0] = -37;akaRandomName325069[1] = '\\0';string words_element1=akaRandomName325069;\nwords.push_back(words_element1);\nchar* akaRandomName499794 = new char[2];akaRandomName499794[0] = -123;akaRandomName499794[1] = '\\0';string words_element2=akaRandomName499794;\nwords.push_back(words_element2);\n/* NormalNumberDataNode L */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   vector<int> twoSum(vector<int> &numbers, int target) {\r     vector<int> result;\r     map<int, vector<int> > indexes;\r     int i, j, count = numbers.size();\r \r     for (i = 0; i < count; ++i) {\r       indexes[numbers[i]].push_back(i + 1);\r     }\r \r     sort(numbers.begin(), numbers.end());\r       i = 0;\r       j = count - 1;\r \r     while (i < j) {\r       int left_value = numbers[i], right_value = numbers[j];\r \r       if ((left_value + right_value) < target) {\r         ++i;\r       }\r       else if ((left_value + right_value) > target) {\r         --j;\r       }\r       else {\r         vector<int>::iterator left_it = indexes[left_value].begin();\r         vector<int>::iterator right_it = indexes[right_value].begin();\r \r         if (left_it == right_it) {\r           ++right_it;\r         }\r \r         result.push_back((*left_it < *right_it) ? *left_it : *right_it);\r         result.push_back((*left_it < *right_it) ? *right_it : *left_it);\r \r         break;\r       }\r     }\r \r     return result;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-27\\two_sum.cpp\\Solution\\twoSum(vector<int>&,int)"
+    }
+]

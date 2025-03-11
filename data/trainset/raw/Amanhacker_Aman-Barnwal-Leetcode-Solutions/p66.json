@@ -1,0 +1,201 @@
+[
+    {
+        "f": [],
+        "fm": "void dfs(int node, vector<int> &vis, unordered_map<int, vector<int>> &adj, int &countNodes) {\r         \r         vis[node] = 1;\r         countNodes++;\r         \r         for(auto &ch : adj[node]) {\r             if(vis[ch] == 0) {\r                 dfs(ch, vis, adj, countNodes);\r             }\r         }\r         \r         return;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_dfs_int_vector_int_unordered_map_int_vector_int_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_dfs_int_vector_int_unordered_map_int_vector_int_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2101-detonate-the-maximum-bombs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint node=1774909000;\nvector<int> vis;\nunordered_map<int, vector<int>> adj;\n\n\nint countNodes=-2092236253;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode node */\n/* VectorDataNode vis */\nint vis_element0=-43897868;\nvis.push_back(vis_element0);\n/* UnorderedMapDataNode adj */\n/* NormalNumberDataNode countNodes */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_dfs_int_vector_int_unordered_map_int_vector_int_int_random_2\");AKA_INSTANCE___Solution->dfs(node,vis,adj,countNodes);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p66\\\\2101-detonate-the-maximum-bombs\\\\2101-detonate-the-maximum-bombs.cpp\\\\Solution\\\\dfs(int,vector<int>&,unordered_map<int,vector<int>>&,int&)\");\n\n/* error assertion */\nvector<int> EXPECTED_vis;\n\nunordered_map<int, vector<int>> EXPECTED_adj;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \r     void dfs(int node, vector<int> &vis, unordered_map<int, vector<int>> &adj, int &countNodes) {\r         \r         vis[node] = 1;\r         countNodes++;\r         \r         for(auto &ch : adj[node]) {\r             if(vis[ch] == 0) {\r                 dfs(ch, vis, adj, countNodes);\r             }\r         }\r         \r         return;\r     }\r     \r     int maximumDetonation(vector<vector<int>>& bombs) {\r     \r         int res = 0;\r         \r         // Build a graph with bombs as node, and the neighbour of bombs are the nodes which can be detonated by this bomb\r         \r         unordered_map<int, vector<int>> adj;\r         int n = bombs.size();\r         \r         for(int i=0; i<bombs.size()-1; i++) {\r             for(int j=i+1; j<bombs.size(); j++) {\r                         \r                 long long int x1 = bombs[i][0], y1 = bombs[i][1], r1 = bombs[i][2];\r                 long long int x2 = bombs[j][0], y2 = bombs[j][1], r2 = bombs[j][2];\r                 \r                 long long int dSq = (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2);\r                 \r                 // Check whether bomb i can detonate bomb j \r                 // For this, dSq is less than r1 * r1\r                 \r                 if(dSq <= r1 * r1) {\r                     // Bomb i can detonate bomb j\r                     adj[i].push_back(j);\r                 }\r                 \r                 if(dSq <= r2 * r2) {\r                     // Bomb j can detonate bomb i\r                     adj[j].push_back(i);\r                 }\r             }\r         }\r         \r         \r         for(int i=0; i<n; i++) {\r \r             vector<int> vis(n, 0);\r             \r             int countNodes = 0;\r \r             // Maximum no of nodes reachable from node i\r             dfs(i, vis, adj, countNodes);\r             res = max(res, countNodes);\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p66\\2101-detonate-the-maximum-bombs\\2101-detonate-the-maximum-bombs.cpp\\Solution\\dfs(int,vector<int>&,unordered_map<int,vector<int>>&,int&)"
+    },
+    {
+        "f": [],
+        "fm": "int maximumDetonation(vector<vector<int>>& bombs) {\r     \r         int res = 0;\r         \r         // Build a graph with bombs as node, and the neighbour of bombs are the nodes which can be detonated by this bomb\r         \r         unordered_map<int, vector<int>> adj;\r         int n = bombs.size();\r         \r         for(int i=0; i<bombs.size()-1; i++) {\r             for(int j=i+1; j<bombs.size(); j++) {\r                         \r                 long long int x1 = bombs[i][0], y1 = bombs[i][1], r1 = bombs[i][2];\r                 long long int x2 = bombs[j][0], y2 = bombs[j][1], r2 = bombs[j][2];\r                 \r                 long long int dSq = (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2);\r                 \r                 // Check whether bomb i can detonate bomb j \r                 // For this, dSq is less than r1 * r1\r                 \r                 if(dSq <= r1 * r1) {\r                     // Bomb i can detonate bomb j\r                     adj[i].push_back(j);\r                 }\r                 \r                 if(dSq <= r2 * r2) {\r                     // Bomb j can detonate bomb i\r                     adj[j].push_back(i);\r                 }\r             }\r         }\r         \r         \r         for(int i=0; i<n; i++) {\r \r             vector<int> vis(n, 0);\r             \r             int countNodes = 0;\r \r             // Maximum no of nodes reachable from node i\r             dfs(i, vis, adj, countNodes);\r             res = max(res, countNodes);\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maximumDetonation_vector_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_maximumDetonation_vector_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2101-detonate-the-maximum-bombs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> bombs;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode bombs */\nvector<int> bombs_element0;\nint bombs_element0_element0=-75192630;\nbombs_element0.push_back(bombs_element0_element0);\nbombs.push_back(bombs_element0);\nvector<int> bombs_element1;\nint bombs_element1_element0=-1086017795;\nbombs_element1.push_back(bombs_element1_element0);\nint bombs_element1_element1=-210885705;\nbombs_element1.push_back(bombs_element1_element1);\nbombs.push_back(bombs_element1);\nvector<int> bombs_element2;\nint bombs_element2_element0=2118515096;\nbombs_element2.push_back(bombs_element2_element0);\nint bombs_element2_element1=1773125689;\nbombs_element2.push_back(bombs_element2_element1);\nint bombs_element2_element2=-295370344;\nbombs_element2.push_back(bombs_element2_element2);\nbombs.push_back(bombs_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maximumDetonation_vector_vector_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maximumDetonation(bombs);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p66\\\\2101-detonate-the-maximum-bombs\\\\2101-detonate-the-maximum-bombs.cpp\\\\Solution\\\\maximumDetonation(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_bombs;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \r     void dfs(int node, vector<int> &vis, unordered_map<int, vector<int>> &adj, int &countNodes) {\r         \r         vis[node] = 1;\r         countNodes++;\r         \r         for(auto &ch : adj[node]) {\r             if(vis[ch] == 0) {\r                 dfs(ch, vis, adj, countNodes);\r             }\r         }\r         \r         return;\r     }\r     \r     int maximumDetonation(vector<vector<int>>& bombs) {\r     \r         int res = 0;\r         \r         // Build a graph with bombs as node, and the neighbour of bombs are the nodes which can be detonated by this bomb\r         \r         unordered_map<int, vector<int>> adj;\r         int n = bombs.size();\r         \r         for(int i=0; i<bombs.size()-1; i++) {\r             for(int j=i+1; j<bombs.size(); j++) {\r                         \r                 long long int x1 = bombs[i][0], y1 = bombs[i][1], r1 = bombs[i][2];\r                 long long int x2 = bombs[j][0], y2 = bombs[j][1], r2 = bombs[j][2];\r                 \r                 long long int dSq = (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2);\r                 \r                 // Check whether bomb i can detonate bomb j \r                 // For this, dSq is less than r1 * r1\r                 \r                 if(dSq <= r1 * r1) {\r                     // Bomb i can detonate bomb j\r                     adj[i].push_back(j);\r                 }\r                 \r                 if(dSq <= r2 * r2) {\r                     // Bomb j can detonate bomb i\r                     adj[j].push_back(i);\r                 }\r             }\r         }\r         \r         \r         for(int i=0; i<n; i++) {\r \r             vector<int> vis(n, 0);\r             \r             int countNodes = 0;\r \r             // Maximum no of nodes reachable from node i\r             dfs(i, vis, adj, countNodes);\r             res = max(res, countNodes);\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p66\\2101-detonate-the-maximum-bombs\\2101-detonate-the-maximum-bombs.cpp\\Solution\\maximumDetonation(vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "int countPoints(string rings) {\r     \r         int count = 0;\r         unordered_map<int,set<int>> u;\r         \r         for(int i=0; i<rings.size(); i += 2) {\r             \r             char ch = rings[i];\r             int pos = rings[i + 1];\r             \r             u[pos].insert(ch);\r         }\r         \r         for(auto &x : u) {\r             set<int> temp = x.second;\r             if(temp.size() == 3)                                count++;\r         }\r         \r         return count;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countPoints_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_countPoints_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2103-rings-and-rods.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName126445 = new char[2];akaRandomName126445[0] = -43;akaRandomName126445[1] = '\\0';string rings=akaRandomName126445;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode rings */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countPoints_string_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countPoints(rings);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p66\\\\2103-rings-and-rods\\\\2103-rings-and-rods.cpp\\\\Solution\\\\countPoints(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int countPoints(string rings) {\r     \r         int count = 0;\r         unordered_map<int,set<int>> u;\r         \r         for(int i=0; i<rings.size(); i += 2) {\r             \r             char ch = rings[i];\r             int pos = rings[i + 1];\r             \r             u[pos].insert(ch);\r         }\r         \r         for(auto &x : u) {\r             set<int> temp = x.second;\r             if(temp.size() == 3)                                count++;\r         }\r         \r         return count;\r     }\r     \r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p66\\2103-rings-and-rods\\2103-rings-and-rods.cpp\\Solution\\countPoints(string)"
+    },
+    {
+        "f": [],
+        "fm": "bool isPalindrome(string s) {\r         \r         int n = s.length();\r         int i = 0, j = n - 1;\r         \r         while(i < j) {\r            \r             if(s[i] != s[j])                                    return false;\r             else {\r                 i++;\r                 j--;\r             }\r         }\r         \r         return true;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isPalindrome_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_isPalindrome_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2108-find-first-palindromic-string-in-the-array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName377668 = new char[2];akaRandomName377668[0] = 103;akaRandomName377668[1] = '\\0';string s=akaRandomName377668;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isPalindrome_string_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isPalindrome(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p66\\\\2108-find-first-palindromic-string-in-the-array\\\\2108-find-first-palindromic-string-in-the-array.cpp\\\\Solution\\\\isPalindrome(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     bool isPalindrome(string s) {\r         \r         int n = s.length();\r         int i = 0, j = n - 1;\r         \r         while(i < j) {\r            \r             if(s[i] != s[j])                                    return false;\r             else {\r                 i++;\r                 j--;\r             }\r         }\r         \r         return true;\r     }\r     \r     string firstPalindrome(vector<string>& words) {\r     \r         int n = words.size();\r         \r         for(auto &x : words) {\r             if(isPalindrome(x) == true)                             return x;\r         }\r         \r         return \"\";\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p66\\2108-find-first-palindromic-string-in-the-array\\2108-find-first-palindromic-string-in-the-array.cpp\\Solution\\isPalindrome(string)"
+    },
+    {
+        "f": [],
+        "fm": "string firstPalindrome(vector<string>& words) {\r     \r         int n = words.size();\r         \r         for(auto &x : words) {\r             if(isPalindrome(x) == true)                             return x;\r         }\r         \r         return \"\";\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_firstPalindrome_vector_string_random_4(void) {\n{\nAKA_test_case_name=\"Solution_firstPalindrome_vector_string_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2108-find-first-palindromic-string-in-the-array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> words;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* VectorDataNode words */\nchar* akaRandomName188968 = new char[2];akaRandomName188968[0] = 31;akaRandomName188968[1] = '\\0';string words_element0=akaRandomName188968;\nwords.push_back(words_element0);\nchar* akaRandomName660695 = new char[2];akaRandomName660695[0] = -124;akaRandomName660695[1] = '\\0';string words_element1=akaRandomName660695;\nwords.push_back(words_element1);\nchar* akaRandomName786909 = new char[2];akaRandomName786909[0] = -5;akaRandomName786909[1] = '\\0';string words_element2=akaRandomName786909;\nwords.push_back(words_element2);\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_firstPalindrome_vector_string_random_4\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->firstPalindrome(words);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p66\\\\2108-find-first-palindromic-string-in-the-array\\\\2108-find-first-palindromic-string-in-the-array.cpp\\\\Solution\\\\firstPalindrome(vector<string>&)\");\n\n\n\nvector<string> EXPECTED_words;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     bool isPalindrome(string s) {\r         \r         int n = s.length();\r         int i = 0, j = n - 1;\r         \r         while(i < j) {\r            \r             if(s[i] != s[j])                                    return false;\r             else {\r                 i++;\r                 j--;\r             }\r         }\r         \r         return true;\r     }\r     \r     string firstPalindrome(vector<string>& words) {\r     \r         int n = words.size();\r         \r         for(auto &x : words) {\r             if(isPalindrome(x) == true)                             return x;\r         }\r         \r         return \"\";\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p66\\2108-find-first-palindromic-string-in-the-array\\2108-find-first-palindromic-string-in-the-array.cpp\\Solution\\firstPalindrome(vector<string>&)"
+    },
+    {
+        "f": [],
+        "fm": "bool isSameAfterReversals(int n) {\r             \r         if(n == 0)                                          return true;\r         \r         int lastDigit = n % 10;\r     \r         return (lastDigit != 0);\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isSameAfterReversals_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_isSameAfterReversals_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2119-a-number-after-a-double-reversal.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=716091774;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isSameAfterReversals_int_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isSameAfterReversals(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p66\\\\2119-a-number-after-a-double-reversal\\\\2119-a-number-after-a-double-reversal.cpp\\\\Solution\\\\isSameAfterReversals(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     bool isSameAfterReversals(int n) {\r             \r         if(n == 0)                                          return true;\r         \r         int lastDigit = n % 10;\r     \r         return (lastDigit != 0);\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p66\\2119-a-number-after-a-double-reversal\\2119-a-number-after-a-double-reversal.cpp\\Solution\\isSameAfterReversals(int)"
+    },
+    {
+        "f": [
+            "int dx[4] = { 0, 0, -1, 1};",
+            "int dy[4] = {-1, 1,  0, 0};"
+        ],
+        "fm": "vector<int> executeInstructions(int n, vector<int>& startPos, string s) {\r     \r         vector<int> res;\r         int siz = s.length();\r         \r         for(int i=0; i<siz; i++) {\r             \r             vector<int> sP = startPos;\r             int count = 0;\r             \r             // Movement starts from ith index of string\r             for(int j=i; j<siz; j++) {\r                 \r                 int k;\r                 \r                 if(s[j] == 'L')                         k = 0;\r                 else if(s[j] == 'R')                    k = 1;\r                 else if(s[j] == 'U')                    k = 2;\r                 else if(s[j] == 'D')                    k = 3;\r                 \r                 int x1 = sP[0] + dx[k];\r                 int y1 = sP[1] + dy[k];\r                 \r                 \r                 if(x1 >=0 && x1 < n && y1 >=0 && y1 < n) {\r                     \r                     count++;\r                     \r                     // Update startPos\r                     sP[0] = x1;\r                     sP[1] = y1;\r                 }               \r \r                 else                                                    j = siz;\r             }\r             \r             res.push_back(count);\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_executeInstructions_int_vector_int_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_executeInstructions_int_vector_int_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2120-execution-of-all-suffix-instructions-staying-in-a-grid.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\nAKA_INSTANCE___Solution->dx[0]=-559226921;\n/* NormalNumberDataNode dx[1] */\nAKA_INSTANCE___Solution->dx[1]=526185318;\n/* NormalNumberDataNode dx[2] */\nAKA_INSTANCE___Solution->dx[2]=-1564885598;\n/* NormalNumberDataNode dx[3] */\nAKA_INSTANCE___Solution->dx[3]=-843823852;\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\nAKA_INSTANCE___Solution->dy[0]=612674229;\n/* NormalNumberDataNode dy[1] */\nAKA_INSTANCE___Solution->dy[1]=-1387858764;\n/* NormalNumberDataNode dy[2] */\nAKA_INSTANCE___Solution->dy[2]=2011858251;\n/* NormalNumberDataNode dy[3] */\nAKA_INSTANCE___Solution->dy[3]=-1596468020;\n\n\n\n\nint n=-966998756;\nvector<int> startPos;\nchar* akaRandomName60975 = new char[2];akaRandomName60975[0] = -128;akaRandomName60975[1] = '\\0';string s=akaRandomName60975;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode startPos */\nint startPos_element0=-1915801648;\nstartPos.push_back(startPos_element0);\nint startPos_element1=-265150331;\nstartPos.push_back(startPos_element1);\nint startPos_element2=-1187157790;\nstartPos.push_back(startPos_element2);\n/* NormalStringDataNode s */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_executeInstructions_int_vector_int_string_random_0\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->executeInstructions(n,startPos,s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p66\\\\2120-execution-of-all-suffix-instructions-staying-in-a-grid\\\\2120-execution-of-all-suffix-instructions-staying-in-a-grid.cpp\\\\Solution\\\\executeInstructions(int,vector<int>&,string)\");\n\n\nvector<int> EXPECTED_startPos;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     // L, R, U, D\r     // (0, -1), (0, 1), (-1, 0), (1, 0)\r     \r     int dx[4] = { 0, 0, -1, 1};\r     int dy[4] = {-1, 1,  0, 0};\r     \r     vector<int> executeInstructions(int n, vector<int>& startPos, string s) {\r     \r         vector<int> res;\r         int siz = s.length();\r         \r         for(int i=0; i<siz; i++) {\r             \r             vector<int> sP = startPos;\r             int count = 0;\r             \r             // Movement starts from ith index of string\r             for(int j=i; j<siz; j++) {\r                 \r                 int k;\r                 \r                 if(s[j] == 'L')                         k = 0;\r                 else if(s[j] == 'R')                    k = 1;\r                 else if(s[j] == 'U')                    k = 2;\r                 else if(s[j] == 'D')                    k = 3;\r                 \r                 int x1 = sP[0] + dx[k];\r                 int y1 = sP[1] + dy[k];\r                 \r                 \r                 if(x1 >=0 && x1 < n && y1 >=0 && y1 < n) {\r                     \r                     count++;\r                     \r                     // Update startPos\r                     sP[0] = x1;\r                     sP[1] = y1;\r                 }               \r \r                 else                                                    j = siz;\r             }\r             \r             res.push_back(count);\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p66\\2120-execution-of-all-suffix-instructions-staying-in-a-grid\\2120-execution-of-all-suffix-instructions-staying-in-a-grid.cpp\\Solution\\executeInstructions(int,vector<int>&,string)"
+    }
+]

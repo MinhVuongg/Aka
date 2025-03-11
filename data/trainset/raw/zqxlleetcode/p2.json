@@ -1,0 +1,92 @@
+[
+    {
+        "f": [],
+        "fm": "int searchInsert1(int* nums, int numsSize, int target) {\r \tint i;\r \tfor (i = 0; i<numsSize; i++){\r \t\tif (nums[i] >= target){\r \t\t\treturn i;\r \t\t}\r \t}\r \treturn i;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_searchInsert1_intmul_int_int_random_3(void) {\n{\nAKA_test_case_name=\"searchInsert1_intmul_int_int_random_3\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_nums[2];\n\n\nint AKA_ARRAY_INIT_nums_0=899581149;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=1540018823;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint numsSize=5;\n\n\nint target=1076107970;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode numsSize */\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test searchInsert1_intmul_int_int_random_3\");int AKA_ACTUAL_OUTPUT=searchInsert1(nums,numsSize,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-212\\\\_035 Search Insert Position\\\\_035 Search Insert Position.cpp\\\\searchInsert1(int*,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=-89;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=47;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=-49;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=0;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_searchInsert1_intmul_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"searchInsert1_intmul_int_int_directed_0\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_nums[3];\n\n\nint AKA_ARRAY_INIT_nums_0=-1;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=-1;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\n\nint AKA_ARRAY_INIT_nums_2=-1;\nAKA_ARRAY_INIT_nums[2] = AKA_ARRAY_INIT_nums_2;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint numsSize=3;\n\n\nint target=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode numsSize */\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test searchInsert1_intmul_int_int_directed_0\");int AKA_ACTUAL_OUTPUT=searchInsert1(nums,numsSize,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-212\\\\_035 Search Insert Position\\\\_035 Search Insert Position.cpp\\\\searchInsert1(int*,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=0;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=0;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=0;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\zqxl_leetcode\\Leetcode\\com-212\\_035 Search Insert Position\\_035 Search Insert Position.cpp\\searchInsert1(int*,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int searchInsert(int* nums, int numsSize, int target) {\r \tint s=0, e=numsSize;\r \twhile (s != e){\r \t\tif (nums[(s + e) / 2] == target){\r \t\t\treturn (s + e) / 2;\r \t\t}\r \t\telse if (nums[(s + e) / 2] > target){\r \t\t\te = (s + e) / 2;\r \t\t}\r \t\telse{\r \t\t\tif (s == (s + e) / 2)\r \t\t\t\treturn s+1;\r \t\t\telse\r \t\t\t\ts = (s + e) / 2;\r \t\t}\r \t}\r \treturn s;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_searchInsert_intmul_int_int_random_1(void) {\n{\nAKA_test_case_name=\"searchInsert_intmul_int_int_random_1\";\n\n// set up\n;\n\nint* nums;\n\n\nint numsSize=2;\n\n\nint target=-182266092;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode numsSize */\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test searchInsert_intmul_int_int_random_1\");int AKA_ACTUAL_OUTPUT=searchInsert(nums,numsSize,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-212\\\\_035 Search Insert Position\\\\_035 Search Insert Position.cpp\\\\searchInsert(int*,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=-89;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=47;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=-49;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=0;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\zqxl_leetcode\\Leetcode\\com-212\\_035 Search Insert Position\\_035 Search Insert Position.cpp\\searchInsert(int*,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int* plusOne(int* digits, int digitsSize, int* returnSize) {\r \tint* r = (int*)malloc(digitsSize * sizeof(int) );\r \tint c=1, i=0;\r \tfor (i = digitsSize-1; i > -1; i--){\r \t\tr[i] = (digits[i] + c) % 10;\r \t\tc = (digits[i] + c) / 10;\r \t}\r \tif (c){\r \t\tint* r2 = (int*)malloc((digitsSize+1) * sizeof(int));\r \t\tr2[0] = 1;\r \t\tfor (i = 0; i < digitsSize;i++){\r \t\t\tr2[i + 1] = r[i];\r \r \t\t}\r \t\tfree(r);\r \t\t*returnSize = digitsSize + 1;\r \t\treturn r2;\r \t}\r \telse{\r \t\t*returnSize = digitsSize;\r \t\treturn r;\r \t}\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_plusOne_intmul_int_intmul_random_0(void) {\n{\nAKA_test_case_name=\"plusOne_intmul_int_intmul_random_0\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_digits[1];\n\n\nint AKA_ARRAY_INIT_digits_0=1513704544;\nAKA_ARRAY_INIT_digits[0] = AKA_ARRAY_INIT_digits_0;\n\nint* digits = AKA_ARRAY_INIT_digits;\n\n\nint digitsSize=7;\nint AKA_ARRAY_INIT_returnSize[3];\n\n\nint AKA_ARRAY_INIT_returnSize_0=1271141425;\nAKA_ARRAY_INIT_returnSize[0] = AKA_ARRAY_INIT_returnSize_0;\n\n\nint AKA_ARRAY_INIT_returnSize_1=-1649456062;\nAKA_ARRAY_INIT_returnSize[1] = AKA_ARRAY_INIT_returnSize_1;\n\n\nint AKA_ARRAY_INIT_returnSize_2=-1020795415;\nAKA_ARRAY_INIT_returnSize[2] = AKA_ARRAY_INIT_returnSize_2;\n\nint* returnSize = AKA_ARRAY_INIT_returnSize;\nint* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode digits */\n/* NormalNumberDataNode digitsSize */\n/* PointerNumberDataNode returnSize */\n/* PointerNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test plusOne_intmul_int_intmul_random_0\");int* AKA_ACTUAL_OUTPUT=plusOne(digits,digitsSize,returnSize);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-212\\\\_066 Plus One\\\\_066 Plus One.cpp\\\\plusOne(int*,int,int*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_digits[1];\n\n\nint AKA_ARRAY_INIT_digits_0=1513704544;\nAKA_ARRAY_INIT_digits[0] = AKA_ARRAY_INIT_digits_0;\n\nint* digits = AKA_ARRAY_INIT_digits;\n\n\nint digitsSize=7;\nint AKA_ARRAY_INIT_returnSize[3];\n\n\nint AKA_ARRAY_INIT_returnSize_0=1271141425;\nAKA_ARRAY_INIT_returnSize[0] = AKA_ARRAY_INIT_returnSize_0;\n\n\nint AKA_ARRAY_INIT_returnSize_1=-1649456062;\nAKA_ARRAY_INIT_returnSize[1] = AKA_ARRAY_INIT_returnSize_1;\n\n\nint AKA_ARRAY_INIT_returnSize_2=-1020795415;\nAKA_ARRAY_INIT_returnSize[2] = AKA_ARRAY_INIT_returnSize_2;\n\nint* returnSize = AKA_ARRAY_INIT_returnSize;\nint* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode digits */\n/* NormalNumberDataNode digitsSize */\n/* PointerNumberDataNode returnSize */\n/* PointerNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\zqxl_leetcode\\Leetcode\\com-212\\_066 Plus One\\_066 Plus One.cpp\\plusOne(int*,int,int*)"
+    }
+]

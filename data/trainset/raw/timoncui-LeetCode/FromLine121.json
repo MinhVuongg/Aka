@@ -1,0 +1,218 @@
+[
+    {
+        "f": [],
+        "fm": "bool canJump(int A[], int n) {\r         int range = 0;\r         for (int i = 0; i <= range; ++i) {\r             range = max(range, i + A[i]);\r             if (range >= n - 1) return true;\r         }\r         return false;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_canJump_int_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_canJump_int_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Jump_Game.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[2];;\n\n\nint n=1268443659;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=-1378206027;\n/* NormalNumberDataNode A[1] */\nA[1]=-1422222354;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_canJump_int_int_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->canJump(A,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\twelve\\\\Jump_Game.cpp\\\\Solution\\\\canJump(int[],int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Jump_Game.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[2];;\n\n\nint n=1268443659;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=-1378206027;\n/* NormalNumberDataNode A[1] */\nA[1]=-1422222354;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_canJump_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_canJump_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Jump_Game.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[3];;\n\n\nint n=-485776595;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=1293958042;\n/* NormalNumberDataNode A[1] */\nA[1]=487108974;\n/* NormalNumberDataNode A[2] */\nA[2]=-1988640828;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_canJump_int_int_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->canJump(A,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\twelve\\\\Jump_Game.cpp\\\\Solution\\\\canJump(int[],int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Jump_Game.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[3];;\n\n\nint n=-485776595;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=1293958042;\n/* NormalNumberDataNode A[1] */\nA[1]=487108974;\n/* NormalNumberDataNode A[2] */\nA[2]=-1988640828;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     bool canJump(int A[], int n) {\r         int range = 0;\r         for (int i = 0; i <= range; ++i) {\r             range = max(range, i + A[i]);\r             if (range >= n - 1) return true;\r         }\r         return false;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\twelve\\Jump_Game.cpp\\Solution\\canJump(int[],int)"
+    },
+    {
+        "f": [],
+        "fm": "int jump(int A[], int n) {\r         if (n == 1) return 0;\r         vector<int> steps(n, 0);\r         int range = 0;\r         for (int i = 0; i < n; ++i) {\r             for (int pos = range + 1; pos - i <= A[i]; ++pos) {\r                 range = pos;\r                 if (range == n - 1) return steps[i] + 1;\r                 steps[range] = steps[i] + 1;\r             }\r         }\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_jump_int_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_jump_int_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Jump_Game_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[2];;\n\n\nint n=6;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=-1581745151;\n/* NormalNumberDataNode A[1] */\nA[1]=1350249567;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_jump_int_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->jump(A,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\twelve\\\\Jump_Game_II.cpp\\\\Solution\\\\jump(int[],int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Jump_Game_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[2];;\n\n\nint n=6;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=-1581745151;\n/* NormalNumberDataNode A[1] */\nA[1]=1350249567;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_jump_int_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_jump_int_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Jump_Game_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[1];;\n\n\nint n=1;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=1233623037;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_jump_int_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->jump(A,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\twelve\\\\Jump_Game_II.cpp\\\\Solution\\\\jump(int[],int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Jump_Game_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[1];;\n\n\nint n=1;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=1233623037;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int jump(int A[], int n) {\r         if (n == 1) return 0;\r         vector<int> steps(n, 0);\r         int range = 0;\r         for (int i = 0; i < n; ++i) {\r             for (int pos = range + 1; pos - i <= A[i]; ++pos) {\r                 range = pos;\r                 if (range == n - 1) return steps[i] + 1;\r                 steps[range] = steps[i] + 1;\r             }\r         }\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\twelve\\Jump_Game_II.cpp\\Solution\\jump(int[],int)"
+    },
+    {
+        "f": [],
+        "fm": "int largestRectangleArea(vector<int> &height) {\r         int result = 0;\r         stack<pair<int, int> > S;\r         for (int i = 0; i < height.size(); ++i) {\r             int h = height[i];\r             int pos = i;\r             while (!S.empty() && h < S.top().second) {\r                 pos = S.top().first;\r                 result = max(result , S.top().second * (i - pos));\r                 S.pop();\r             }\r             if (S.empty() || h > S.top().second) S.push(make_pair(pos, h));\r         }\r         while (!S.empty()) {\r             result = max(result , S.top().second * ((int)height.size() - S.top().first));\r             S.pop();\r         }\r         return result;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_largestRectangleArea_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_largestRectangleArea_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Largest_Rectangle_In_Histogram.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=264572063;\nheight.push_back(height_element0);\nint height_element1=317116757;\nheight.push_back(height_element1);\nint height_element2=-1350400594;\nheight.push_back(height_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_largestRectangleArea_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->largestRectangleArea(height);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\twelve\\\\Largest_Rectangle_In_Histogram.cpp\\\\Solution\\\\largestRectangleArea(vector<int>&)\");\n\n\nvector<int> EXPECTED_height;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Largest_Rectangle_In_Histogram.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=264572063;\nheight.push_back(height_element0);\nint height_element1=317116757;\nheight.push_back(height_element1);\nint height_element2=-1350400594;\nheight.push_back(height_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int largestRectangleArea(vector<int> &height) {\r         int result = 0;\r         stack<pair<int, int> > S;\r         for (int i = 0; i < height.size(); ++i) {\r             int h = height[i];\r             int pos = i;\r             while (!S.empty() && h < S.top().second) {\r                 pos = S.top().first;\r                 result = max(result , S.top().second * (i - pos));\r                 S.pop();\r             }\r             if (S.empty() || h > S.top().second) S.push(make_pair(pos, h));\r         }\r         while (!S.empty()) {\r             result = max(result , S.top().second * ((int)height.size() - S.top().first));\r             S.pop();\r         }\r         return result;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\twelve\\Largest_Rectangle_In_Histogram.cpp\\Solution\\largestRectangleArea(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int main() {\r   string a, b;\r   cin >> a >> b;\r   cout << longestCommonSubsequence(a, b);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_main_random_0(void) {\n{\nAKA_test_case_name=\"main_random_0\";\n\n// set up\n;\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test main_random_0\");int AKA_ACTUAL_OUTPUT=AKA_MAIN();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\twelve\\\\Longest_Common_Subsequence.cpp\\\\main()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\twelve\\Longest_Common_Subsequence.cpp\\main()"
+    },
+    {
+        "f": [],
+        "fm": "int longestCommonSubsequence(const string& a, const string& b) {\r   int A = a.size(), B = b.size();\r   int L[2][B + 1];\r   for (int i = 0; i <= 1; ++i) L[i][0] = 0;\r   for (int i = 0; i <= B; ++i) L[0][i] = 0;\r   for (int i = 1; i <= A; ++i) {\r     int this_i = i % 2, pre_i = this_i ? 0 : 1;\r     for (int j = 1; j <= B; ++j) {\r       if (a[i - 1] == b[j - 1]) L[this_i][j] = 1 + L[pre_i][j - 1];\r       else L[this_i][j] = max(L[pre_i][j], L[this_i][j - 1]);\r     }\r   }\r   return max(L[0][B], L[1][B]);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_longestCommonSubsequence_string_const_string_const_random_4(void) {\n{\nAKA_test_case_name=\"longestCommonSubsequence_string_const_string_const_random_4\";\n\n// set up\n;\n\nchar* akaRandomName130799 = new char[2];akaRandomName130799[0] = -66;akaRandomName130799[1] = '\\0';string a=akaRandomName130799;\nchar* akaRandomName425359 = new char[2];akaRandomName425359[0] = -17;akaRandomName425359[1] = '\\0';string b=akaRandomName425359;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode a */\n/* NormalStringDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test longestCommonSubsequence_string_const_string_const_random_4\");int AKA_ACTUAL_OUTPUT=longestCommonSubsequence(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\twelve\\\\Longest_Common_Subsequence.cpp\\\\longestCommonSubsequence(string const&,string const&)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar* akaRandomName656403 = new char[2];akaRandomName656403[0] = -66;akaRandomName656403[1] = '\\0';string a=akaRandomName656403;\nchar* akaRandomName688057 = new char[2];akaRandomName688057[0] = -17;akaRandomName688057[1] = '\\0';string b=akaRandomName688057;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode a */\n/* NormalStringDataNode b */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\twelve\\Longest_Common_Subsequence.cpp\\longestCommonSubsequence(string const&,string const&)"
+    },
+    {
+        "f": [],
+        "fm": "string longestPalindrome(string s) {\r     string x(2 * s.length() + 1, '#');\r     for (int i = 0; i < s.length(); ++i) x[i * 2 + 1] = s[i];\r     \r     int N = x.length();\r     vector<int> M(N, 0); // M[i] = valid # of moves to left and right at i\r     // C is the enter of the palindrome that ends furthest down the line of sweeping\r     for (int i = 0, C = 0; i < N; ++i) {\r       int m = C + M[C] > i ? min(M[C] + C - i, M[2 * C - i]) : 0; \r       // Can move at least m steps, try to expand further\r       if (m >= M[C] + C - i) {\r \twhile (i - m - 1 >= 0 && i + m + 1 < N && x[i - m - 1] == x[i + m + 1]) m ++;\r \tM[i] = m;\r \tC = i;\r       }\r     }\r     int i = max_element(M.begin(), M.end()) - M.begin();\r     return s.substr((i - M[i]) / 2, M[i]);      \r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_longestPalindrome_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_longestPalindrome_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Longest_Palindromic_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName982435 = new char[2];akaRandomName982435[0] = -120;akaRandomName982435[1] = '\\0';string s=akaRandomName982435;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_longestPalindrome_string_random_0\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->longestPalindrome(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\twelve\\\\Longest_Palindromic_Substring.cpp\\\\Solution\\\\longestPalindrome(string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Longest_Palindromic_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName715805 = new char[2];akaRandomName715805[0] = -120;akaRandomName715805[1] = '\\0';string s=akaRandomName715805;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   string longestPalindrome(string s) {\r     string x(2 * s.length() + 1, '#');\r     for (int i = 0; i < s.length(); ++i) x[i * 2 + 1] = s[i];\r     \r     int N = x.length();\r     vector<int> M(N, 0); // M[i] = valid # of moves to left and right at i\r     // C is the enter of the palindrome that ends furthest down the line of sweeping\r     for (int i = 0, C = 0; i < N; ++i) {\r       int m = C + M[C] > i ? min(M[C] + C - i, M[2 * C - i]) : 0; \r       // Can move at least m steps, try to expand further\r       if (m >= M[C] + C - i) {\r \twhile (i - m - 1 >= 0 && i + m + 1 < N && x[i - m - 1] == x[i + m + 1]) m ++;\r \tM[i] = m;\r \tC = i;\r       }\r     }\r     int i = max_element(M.begin(), M.end()) - M.begin();\r     return s.substr((i - M[i]) / 2, M[i]);      \r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\twelve\\Longest_Palindromic_Substring.cpp\\Solution\\longestPalindrome(string)"
+    },
+    {
+        "f": [],
+        "fm": "string longestPalindrome(string s) {\r     string x(2 * s.length() + 1, '#');\r     for (int i = 0; i < s.length(); ++i) x[i * 2 + 1] = s[i];\r     int max_length = 0, pos = 0;\r     for (int i = 0; i < x.length(); ++i) {\r       int len = 1;\r       while (i - len >= 0 && i + len < x.length() && x[i - len] == x[i + len]) len ++;\r       len --;\r       if (len > max_length) {\r \tmax_length = len;\r \tpos = i;\r       }\r     }\r     return s.substr((pos - max_length) / 2, max_length);\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_SolutionOn2_longestPalindrome_string_random_3(void) {\n{\nAKA_test_case_name=\"SolutionOn2_longestPalindrome_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___SolutionOn2 */\n/* ConstructorDataNode SolutionOn2() */\nAKA_mark(\"Calling: \\\\SolutionOn2()|ROOT\\\\Longest_Palindromic_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionOn2\\\\AKA_INSTANCE___SolutionOn2\\\\SolutionOn2()\");AKA_fCall++;AKA_INSTANCE___SolutionOn2 = new ::SolutionOn2();\n\n\nchar* akaRandomName363963 = new char[2];akaRandomName363963[0] = -15;akaRandomName363963[1] = '\\0';string s=akaRandomName363963;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test SolutionOn2_longestPalindrome_string_random_3\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___SolutionOn2->longestPalindrome(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\twelve\\\\Longest_Palindromic_Substring.cpp\\\\SolutionOn2\\\\longestPalindrome(string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___SolutionOn2 */\n/* ConstructorDataNode SolutionOn2() */\nAKA_mark(\"Calling: \\\\SolutionOn2()|ROOT\\\\Longest_Palindromic_Substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___SolutionOn2\\\\AKA_INSTANCE___SolutionOn2\\\\SolutionOn2()\");AKA_fCall++;AKA_INSTANCE___SolutionOn2 = new ::SolutionOn2();\n\n\nchar* akaRandomName32254 = new char[2];akaRandomName32254[0] = -15;akaRandomName32254[1] = '\\0';string s=akaRandomName32254;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class SolutionOn2 {\r public:\r   string longestPalindrome(string s) {\r     string x(2 * s.length() + 1, '#');\r     for (int i = 0; i < s.length(); ++i) x[i * 2 + 1] = s[i];\r     int max_length = 0, pos = 0;\r     for (int i = 0; i < x.length(); ++i) {\r       int len = 1;\r       while (i - len >= 0 && i + len < x.length() && x[i - len] == x[i + len]) len ++;\r       len --;\r       if (len > max_length) {\r \tmax_length = len;\r \tpos = i;\r       }\r     }\r     return s.substr((pos - max_length) / 2, max_length);\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\twelve\\Longest_Palindromic_Substring.cpp\\SolutionOn2\\longestPalindrome(string)"
+    }
+]

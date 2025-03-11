@@ -1,0 +1,88 @@
+[
+    {
+        "f": [],
+        "fm": "int minSetSize(vector<int>& v) {\r         \r         int res = 0;\r         int n = v.size();\r         \r         // Form Max Heap\r         priority_queue<pair<int,int>> pq;       // 1st arg - freq, 2nd arg - ele\r         unordered_map<int, int> u;              // 1st arg - element, 2nd arg - freq\r         \r         for(auto &x : v)                        u[x]++;\r         \r         for(auto &x : u) {\r             pq.push({x.second, x.first});\r         }\r         \r         int removedCount = 0;\r         \r         while(pq.empty() == false) {\r             \r             if(removedCount >= n/2)             break;\r             \r             int freq = pq.top().first;\r             pq.pop();\r             \r             removedCount += freq;\r             res++;\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minSetSize_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_minSetSize_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1338-reduce-array-size-to-the-half.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> v;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nint v_element0=1622773763;\nv.push_back(v_element0);\nint v_element1=621014699;\nv.push_back(v_element1);\nint v_element2=677281871;\nv.push_back(v_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minSetSize_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minSetSize(v);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p26\\\\1338-reduce-array-size-to-the-half\\\\1338-reduce-array-size-to-the-half.cpp\\\\Solution\\\\minSetSize(vector<int>&)\");\n\n\nvector<int> EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\13-roman-to-integer.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName462247 = new char[2];akaRandomName462247[0] = 1;akaRandomName462247[1] = '\\0';string s=akaRandomName462247;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int minSetSize(vector<int>& v) {\r         \r         int res = 0;\r         int n = v.size();\r         \r         // Form Max Heap\r         priority_queue<pair<int,int>> pq;       // 1st arg - freq, 2nd arg - ele\r         unordered_map<int, int> u;              // 1st arg - element, 2nd arg - freq\r         \r         for(auto &x : v)                        u[x]++;\r         \r         for(auto &x : u) {\r             pq.push({x.second, x.first});\r         }\r         \r         int removedCount = 0;\r         \r         while(pq.empty() == false) {\r             \r             if(removedCount >= n/2)             break;\r             \r             int freq = pq.top().first;\r             pq.pop();\r             \r             removedCount += freq;\r             res++;\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p26\\1338-reduce-array-size-to-the-half\\1338-reduce-array-size-to-the-half.cpp\\Solution\\minSetSize(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int numberOfSteps(int n) {\r         \r         int count = 0;\r     \r         while(n > 0) {\r             \r             if(n % 2 == 0)                 n = n / 2;\r             else                           n--;\r             \r             count++;\r         }\r         \r         return count;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_numberOfSteps_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_numberOfSteps_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1342-number-of-steps-to-reduce-a-number-to-zero.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_numberOfSteps_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->numberOfSteps(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p26\\\\1342-number-of-steps-to-reduce-a-number-to-zero\\\\1342-number-of-steps-to-reduce-a-number-to-zero.cpp\\\\Solution\\\\numberOfSteps(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\13-roman-to-integer.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName462247 = new char[2];akaRandomName462247[0] = 1;akaRandomName462247[1] = '\\0';string s=akaRandomName462247;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r    \r     int numberOfSteps(int n) {\r         \r         int count = 0;\r     \r         while(n > 0) {\r             \r             if(n % 2 == 0)                 n = n / 2;\r             else                           n--;\r             \r             count++;\r         }\r         \r         return count;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p26\\1342-number-of-steps-to-reduce-a-number-to-zero\\1342-number-of-steps-to-reduce-a-number-to-zero.cpp\\Solution\\numberOfSteps(int)"
+    },
+    {
+        "f": [
+            "vector<int> v = {1};"
+        ],
+        "fm": "int getProduct(int k) {\r         \r         if(k >= v.size())               return 0;\r         else                            return v.back() / v[v.size() - k - 1];\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_ProductOfNumbers_getProduct_int_random_3(void) {\n{\nAKA_test_case_name=\"ProductOfNumbers_getProduct_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___ProductOfNumbers */\n/* ConstructorDataNode ProductOfNumbers() */\nAKA_mark(\"Calling: .\\\\p26\\\\1352-product-of-the-last-k-numbers\\\\1352-product-of-the-last-k-numbers.cpp\\\\ProductOfNumbers\\\\ProductOfNumbers()|ROOT\\\\1352-product-of-the-last-k-numbers.cpp\\\\GLOBAL\\\\AKA_INSTANCE___ProductOfNumbers\\\\AKA_INSTANCE___ProductOfNumbers\\\\ProductOfNumbers()\");AKA_fCall++;AKA_INSTANCE___ProductOfNumbers = new ::ProductOfNumbers();\n/* VectorDataNode v */\nint AKA_INSTANCE___ProductOfNumbers_v_element0=-792981141;\nAKA_INSTANCE___ProductOfNumbers->v.push_back(AKA_INSTANCE___ProductOfNumbers_v_element0);\nint AKA_INSTANCE___ProductOfNumbers_v_element1=1689399009;\nAKA_INSTANCE___ProductOfNumbers->v.push_back(AKA_INSTANCE___ProductOfNumbers_v_element1);\nint AKA_INSTANCE___ProductOfNumbers_v_element2=1703652315;\nAKA_INSTANCE___ProductOfNumbers->v.push_back(AKA_INSTANCE___ProductOfNumbers_v_element2);\n\n\n\n\nint k=1768344737;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test ProductOfNumbers_getProduct_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___ProductOfNumbers->getProduct(k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p26\\\\1352-product-of-the-last-k-numbers\\\\1352-product-of-the-last-k-numbers.cpp\\\\ProductOfNumbers\\\\getProduct(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\13-roman-to-integer.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName462247 = new char[2];akaRandomName462247[0] = 1;akaRandomName462247[1] = '\\0';string s=akaRandomName462247;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class ProductOfNumbers {\r public:\r     \r     // We maintain the runnig product in the Prefix array. To get the product for the last k elements, we divide the last running product by the product that was k - 1 steps ago.\r \r     // v contains the running product in the Prefix array\r     vector<int> v = {1};\r     \r     ProductOfNumbers() {\r         \r     }\r     \r     void add(int num) {\r         \r         if(num == 0)                    v = {1};\r         else                            v.push_back(v.back() * num);\r         \r         return;\r     }\r     \r     int getProduct(int k) {\r         \r         if(k >= v.size())               return 0;\r         else                            return v.back() / v[v.size() - k - 1];\r     }\r };",
+        "c": [
+            "ProductOfNumbers() {\r\n        \r\n    }"
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p26\\1352-product-of-the-last-k-numbers\\1352-product-of-the-last-k-numbers.cpp\\ProductOfNumbers\\getProduct(int)"
+    }
+]

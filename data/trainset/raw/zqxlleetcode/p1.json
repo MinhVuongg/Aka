@@ -1,0 +1,138 @@
+[
+    {
+        "f": [],
+        "fm": "int strStr1(char* haystack, char* needle) {\r \tint i = 0, j = 0;\r \tif (!haystack[0] && !needle[0])\r \t\treturn 0;\r \twhile (1){\r \t\tfor (j = 0; 1; j++){\r \t\t\tif (!haystack[i + j] && needle[j]){\r \t\t\t\treturn -1;\r \t\t\t}\r \t\t\telse if (!needle[j]){\r \t\t\t\treturn i;\r \t\t\t}\r \t\t\telse if (haystack[i + j] != needle[j]){\r \t\t\t\tbreak;\r \t\t\t}\r \t\t}\r \t\ti++;\r \t}\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_strStr1_charmul_charmul_random_3(void) {\n{\nAKA_test_case_name=\"strStr1_charmul_charmul_random_3\";\n\n// set up\n;\n\nchar* haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=-112;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=91;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test strStr1_charmul_charmul_random_3\");int AKA_ACTUAL_OUTPUT=strStr1(haystack,needle);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\com-212\\\\_028 Implement strStr\\\\_028 Implement strStr.cpp\\\\strStr1(char*,char*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar* haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=-112;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=91;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_strStr1_charmul_charmul_directed_0(void) {\n{\nAKA_test_case_name=\"strStr1_charmul_charmul_directed_0\";\n\n// set up\n;\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=0;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=0;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=0;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test strStr1_charmul_charmul_directed_0\");int AKA_ACTUAL_OUTPUT=strStr1(haystack,needle);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\com-212\\\\_028 Implement strStr\\\\_028 Implement strStr.cpp\\\\strStr1(char*,char*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=0;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=0;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=0;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_strStr1_charmul_charmul_random_1(void) {\n{\nAKA_test_case_name=\"strStr1_charmul_charmul_random_1\";\n\n// set up\n;\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=-30;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=-48;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar* needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test strStr1_charmul_charmul_random_1\");int AKA_ACTUAL_OUTPUT=strStr1(haystack,needle);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\com-212\\\\_028 Implement strStr\\\\_028 Implement strStr.cpp\\\\strStr1(char*,char*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=-30;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=-48;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar* needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_strStr1_charmul_charmul_directed_1(void) {\n{\nAKA_test_case_name=\"strStr1_charmul_charmul_directed_1\";\n\n// set up\n;\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=48;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=48;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=0;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test strStr1_charmul_charmul_directed_1\");int AKA_ACTUAL_OUTPUT=strStr1(haystack,needle);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\com-212\\\\_028 Implement strStr\\\\_028 Implement strStr.cpp\\\\strStr1(char*,char*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=48;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=48;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=0;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 4,
+                "dt": {},
+                "td": "void AKA_TEST_strStr1_charmul_charmul_directed_2(void) {\n{\nAKA_test_case_name=\"strStr1_charmul_charmul_directed_2\";\n\n// set up\n;\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=0;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=48;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=0;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test strStr1_charmul_charmul_directed_2\");int AKA_ACTUAL_OUTPUT=strStr1(haystack,needle);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\com-212\\\\_028 Implement strStr\\\\_028 Implement strStr.cpp\\\\strStr1(char*,char*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=0;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=48;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=0;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 5,
+                "dt": {},
+                "td": "void AKA_TEST_strStr1_charmul_charmul_random_4(void) {\n{\nAKA_test_case_name=\"strStr1_charmul_charmul_random_4\";\n\n// set up\n;\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=34;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=-15;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=89;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test strStr1_charmul_charmul_random_4\");int AKA_ACTUAL_OUTPUT=strStr1(haystack,needle);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\com-212\\\\_028 Implement strStr\\\\_028 Implement strStr.cpp\\\\strStr1(char*,char*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=34;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=-15;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=89;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\zqxl_leetcode\\Leetcode\\com-212\\_028 Implement strStr\\_028 Implement strStr.cpp\\strStr1(char*,char*)"
+    },
+    {
+        "f": [],
+        "fm": "int strStr(char* haystack, char* needle)\r {\r \tif (strlen(needle) == 0)\r \t\treturn 0;\r \tint h = strlen(needle);\r \tint k = strlen(haystack);\r \tint i = 0, j = 0;\r \twhile (i != k)\r \t\tif (haystack[i] != needle[j])\r \t\t{\r \t\t\ti = i - j + 1;\r \t\t\tj = 0;\r \t\t}\r \t\telse\r \t\t{\r \t\t\tj += 1;\r \t\t\tif (j == h)\r \t\t\t\treturn i - h + 1;\r \t\t\ti += 1;\r \t\t}\r \treturn -1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_strStr_charmul_charmul_random_2(void) {\n{\nAKA_test_case_name=\"strStr_charmul_charmul_random_2\";\n\n// set up\n;\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=-84;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar* needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test strStr_charmul_charmul_random_2\");int AKA_ACTUAL_OUTPUT=strStr(haystack,needle);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\com-212\\\\_028 Implement strStr\\\\_028 Implement strStr.cpp\\\\strStr(char*,char*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar* haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=-112;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=91;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_strStr_charmul_charmul_random_0(void) {\n{\nAKA_test_case_name=\"strStr_charmul_charmul_random_0\";\n\n// set up\n;\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=-56;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=12;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=-67;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test strStr_charmul_charmul_random_0\");int AKA_ACTUAL_OUTPUT=strStr(haystack,needle);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\com-212\\\\_028 Implement strStr\\\\_028 Implement strStr.cpp\\\\strStr(char*,char*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=0;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=0;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=0;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_strStr_charmul_charmul_directed_0(void) {\n{\nAKA_test_case_name=\"strStr_charmul_charmul_directed_0\";\n\n// set up\n;\n\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=48;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=0;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar AKA_ARRAY_INIT_needle[2];\n\nchar AKA_ARRAY_INIT_needle_0=48;\nAKA_ARRAY_INIT_needle[0] = AKA_ARRAY_INIT_needle_0;\n\nchar AKA_ARRAY_INIT_needle_1=0;\nAKA_ARRAY_INIT_needle[1] = AKA_ARRAY_INIT_needle_1;\n\nchar* needle = AKA_ARRAY_INIT_needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test strStr_charmul_charmul_directed_0\");int AKA_ACTUAL_OUTPUT=strStr(haystack,needle);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\com-212\\\\_028 Implement strStr\\\\_028 Implement strStr.cpp\\\\strStr(char*,char*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nchar AKA_ARRAY_INIT_haystack[2];\n\nchar AKA_ARRAY_INIT_haystack_0=-30;\nAKA_ARRAY_INIT_haystack[0] = AKA_ARRAY_INIT_haystack_0;\n\nchar AKA_ARRAY_INIT_haystack_1=-48;\nAKA_ARRAY_INIT_haystack[1] = AKA_ARRAY_INIT_haystack_1;\n\nchar* haystack = AKA_ARRAY_INIT_haystack;\nchar* needle;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode haystack */\n/* PointerCharacterDataNode needle */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\zqxl_leetcode\\Leetcode\\com-212\\_028 Implement strStr\\_028 Implement strStr.cpp\\strStr(char*,char*)"
+    }
+]

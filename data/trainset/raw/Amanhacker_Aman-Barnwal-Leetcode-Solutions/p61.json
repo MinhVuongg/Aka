@@ -1,0 +1,114 @@
+[
+    {
+        "f": [],
+        "fm": "int minimumMoves(string s) {\r     \r         int move = 0;\r         \r         int n = s.length();\r         int i = 0;\r         \r         while(i < n) {\r             \r             if(s[i] == 'X') {\r                 i += 3;\r                 move++;\r             }\r             \r             else                        i++;\r         }\r         \r         return move;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minimumMoves_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_minimumMoves_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2027-minimum-moves-to-convert-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName210886 = new char[2];akaRandomName210886[0] = -59;akaRandomName210886[1] = '\\0';string s=akaRandomName210886;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minimumMoves_string_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minimumMoves(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p61\\\\2027-minimum-moves-to-convert-string\\\\2027-minimum-moves-to-convert-string.cpp\\\\Solution\\\\minimumMoves(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2027-minimum-moves-to-convert-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName12231 = new char[2];akaRandomName12231[0] = -59;akaRandomName12231[1] = '\\0';string s=akaRandomName12231;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int minimumMoves(string s) {\r     \r         int move = 0;\r         \r         int n = s.length();\r         int i = 0;\r         \r         while(i < n) {\r             \r             if(s[i] == 'X') {\r                 i += 3;\r                 move++;\r             }\r             \r             else                        i++;\r         }\r         \r         return move;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p61\\2027-minimum-moves-to-convert-string\\2027-minimum-moves-to-convert-string.cpp\\Solution\\minimumMoves(string)"
+    },
+    {
+        "f": [],
+        "fm": "ListNode* removeElements(ListNode* head, int val) {\r     \r         if(head == NULL)                            return NULL;\r         \r         ListNode* t1 = head;\r         ListNode* t2 = head->next;\r         \r         while(t1 != NULL && t2 != NULL) {\r             \r             if(t2->val == val) {\r                 t1->next = t2->next;\r                 t2 = t1->next;\r             }\r             \r             else {\r                 t1 = t1->next;\r                 t2 = t2->next;\r             }\r         }\r         \r         if(head->val == val)                        return head->next;\r         \r         return head;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_removeElements_ListNodemul_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_removeElements_ListNodemul_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\203-remove-linked-list-elements.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nListNode* head;\n\n\nint val=1655310195;\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* NormalNumberDataNode val */\n/* PointerStructureDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_removeElements_ListNodemul_int_random_0\");ListNode* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->removeElements(head,val);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p61\\\\203-remove-linked-list-elements\\\\203-remove-linked-list-elements.cpp\\\\Solution\\\\removeElements(ListNode*,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2027-minimum-moves-to-convert-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName12231 = new char[2];akaRandomName12231[0] = -59;akaRandomName12231[1] = '\\0';string s=akaRandomName12231;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     ListNode* removeElements(ListNode* head, int val) {\r     \r         if(head == NULL)                            return NULL;\r         \r         ListNode* t1 = head;\r         ListNode* t2 = head->next;\r         \r         while(t1 != NULL && t2 != NULL) {\r             \r             if(t2->val == val) {\r                 t1->next = t2->next;\r                 t2 = t1->next;\r             }\r             \r             else {\r                 t1 = t1->next;\r                 t2 = t2->next;\r             }\r         }\r         \r         if(head->val == val)                        return head->next;\r         \r         return head;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p61\\203-remove-linked-list-elements\\203-remove-linked-list-elements.cpp\\Solution\\removeElements(ListNode*,int)"
+    },
+    {
+        "f": [],
+        "fm": "int minOperations(vector<vector<int>>& grid, int x) {\r     \r         int res = 0;\r         \r         int n = grid.size();\r         int m = grid[0].size();\r         \r         vector<int> nums;\r         \r         for(int i=0; i<n; i++) {\r             for(int j=0; j<m; j++) {\r                 nums.push_back(grid[i][j]);\r             }\r         }\r         \r         sort(nums.begin(), nums.end());\r         \r         int siz = n * m;\r         int midEle = nums[siz / 2];\r         \r         // Now, we have to make every element equal to midEle\r         \r         for(int i=0; i<siz; i++) {\r             \r             // Convert nums[i] element to midEle by min Operations of either adding or subtrating x\r             int diff = abs(nums[i] - midEle);\r             \r             if(diff % x != 0)                                       return -1;\r             else                                                    res += (diff / x);\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minOperations_vector_vector_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_minOperations_vector_vector_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2033-minimum-operations-to-make-a-uni-value-grid.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> grid;\n\n\nint x=-1298075370;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode grid */\nvector<int> grid_element0;\nint grid_element0_element0=445300029;\ngrid_element0.push_back(grid_element0_element0);\nint grid_element0_element1=-711295888;\ngrid_element0.push_back(grid_element0_element1);\nint grid_element0_element2=-787196320;\ngrid_element0.push_back(grid_element0_element2);\ngrid.push_back(grid_element0);\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minOperations_vector_vector_int_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minOperations(grid,x);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p61\\\\2033-minimum-operations-to-make-a-uni-value-grid\\\\2033-minimum-operations-to-make-a-uni-value-grid.cpp\\\\Solution\\\\minOperations(vector<vector<int>>&,int)\");\n\n\nvector<vector<int>> EXPECTED_grid;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2027-minimum-moves-to-convert-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName12231 = new char[2];akaRandomName12231[0] = -59;akaRandomName12231[1] = '\\0';string s=akaRandomName12231;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \r     int minOperations(vector<vector<int>>& grid, int x) {\r     \r         int res = 0;\r         \r         int n = grid.size();\r         int m = grid[0].size();\r         \r         vector<int> nums;\r         \r         for(int i=0; i<n; i++) {\r             for(int j=0; j<m; j++) {\r                 nums.push_back(grid[i][j]);\r             }\r         }\r         \r         sort(nums.begin(), nums.end());\r         \r         int siz = n * m;\r         int midEle = nums[siz / 2];\r         \r         // Now, we have to make every element equal to midEle\r         \r         for(int i=0; i<siz; i++) {\r             \r             // Convert nums[i] element to midEle by min Operations of either adding or subtrating x\r             int diff = abs(nums[i] - midEle);\r             \r             if(diff % x != 0)                                       return -1;\r             else                                                    res += (diff / x);\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p61\\2033-minimum-operations-to-make-a-uni-value-grid\\2033-minimum-operations-to-make-a-uni-value-grid.cpp\\Solution\\minOperations(vector<vector<int>>&,int)"
+    },
+    {
+        "f": [],
+        "fm": "int minMovesToSeat(vector<int>& seats, vector<int>& students) {\r         \r         int moves = 0;\r         \r         sort(seats.begin(), seats.end());\r         sort(students.begin(), students.end());\r         \r         int n = seats.size();\r         \r         for(int i=0; i<n; i++) {\r             moves += abs(students[i] - seats[i]);\r         }\r         \r         return moves;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_minMovesToSeat_vector_int_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_minMovesToSeat_vector_int_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2037-minimum-number-of-moves-to-seat-everyone.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> seats;\nvector<int> students;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode seats */\nint seats_element0=-1132201252;\nseats.push_back(seats_element0);\nint seats_element1=-2063822495;\nseats.push_back(seats_element1);\n/* VectorDataNode students */\nint students_element0=-74186929;\nstudents.push_back(students_element0);\nint students_element1=1641966071;\nstudents.push_back(students_element1);\nint students_element2=742920003;\nstudents.push_back(students_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_minMovesToSeat_vector_int_vector_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->minMovesToSeat(seats,students);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p61\\\\2037-minimum-number-of-moves-to-seat-everyone\\\\2037-minimum-number-of-moves-to-seat-everyone.cpp\\\\Solution\\\\minMovesToSeat(vector<int>&,vector<int>&)\");\n\n\nvector<int> EXPECTED_seats;\n\nvector<int> EXPECTED_students;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2027-minimum-moves-to-convert-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName12231 = new char[2];akaRandomName12231[0] = -59;akaRandomName12231[1] = '\\0';string s=akaRandomName12231;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r    \r     int minMovesToSeat(vector<int>& seats, vector<int>& students) {\r         \r         int moves = 0;\r         \r         sort(seats.begin(), seats.end());\r         sort(students.begin(), students.end());\r         \r         int n = seats.size();\r         \r         for(int i=0; i<n; i++) {\r             moves += abs(students[i] - seats[i]);\r         }\r         \r         return moves;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p61\\2037-minimum-number-of-moves-to-seat-everyone\\2037-minimum-number-of-moves-to-seat-everyone.cpp\\Solution\\minMovesToSeat(vector<int>&,vector<int>&)"
+    }
+]

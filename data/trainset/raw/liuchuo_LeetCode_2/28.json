@@ -1,0 +1,138 @@
+[
+    {
+        "f": [],
+        "fm": "int countNumbersWithUniqueDigits(int n) {         if(n == 0) return 1;         int result = 10, cnt = 9;         for(int i = 2; i <= n; i++) {             cnt *= (11 - i);             result += cnt;         }         return result;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countNumbersWithUniqueDigits_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_countNumbersWithUniqueDigits_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/357. Count Numbers with Unique Digits.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countNumbersWithUniqueDigits_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countNumbersWithUniqueDigits(n);\nAKA_fCall++;AKA_mark(\"Return from: ./28/357. Count Numbers with Unique Digits.cpp/Solution/countNumbersWithUniqueDigits(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/357. Count Numbers with Unique Digits.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countNumbersWithUniqueDigits_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_countNumbersWithUniqueDigits_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/357. Count Numbers with Unique Digits.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countNumbersWithUniqueDigits_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countNumbersWithUniqueDigits(n);\nAKA_fCall++;AKA_mark(\"Return from: ./28/357. Count Numbers with Unique Digits.cpp/Solution/countNumbersWithUniqueDigits(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/357. Count Numbers with Unique Digits.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int countNumbersWithUniqueDigits(int n) {         if(n == 0) return 1;         int result = 10, cnt = 9;         for(int i = 2; i <= n; i++) {             cnt *= (11 - i);             result += cnt;         }         return result;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/28/357. Count Numbers with Unique Digits.cpp/Solution/countNumbersWithUniqueDigits(int)"
+    },
+    {
+        "f": [],
+        "fm": "bool canMeasureWater(int x, int y, int z) {         return z == 0 || (x + y >= z && z % gcd(x, y) == 0);     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_canMeasureWater_int_int_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_canMeasureWater_int_int_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/365. Water and Jug Problem.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint x=569701052;\n\n\nint y=398380857;\n\n\nint z=-299133856;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode z */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_canMeasureWater_int_int_int_random_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->canMeasureWater(x,y,z);\nAKA_fCall++;AKA_mark(\"Return from: ./28/365. Water and Jug Problem.cpp/Solution/canMeasureWater(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/365. Water and Jug Problem.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint x=569701052;\n\n\nint y=398380857;\n\n\nint z=-299133856;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode z */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_canMeasureWater_int_int_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_canMeasureWater_int_int_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/365. Water and Jug Problem.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint x=251326157;\n\n\nint y=-945105502;\n\n\nint z=-1753011345;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode z */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_canMeasureWater_int_int_int_random_4\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->canMeasureWater(x,y,z);\nAKA_fCall++;AKA_mark(\"Return from: ./28/365. Water and Jug Problem.cpp/Solution/canMeasureWater(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/365. Water and Jug Problem.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint x=251326157;\n\n\nint y=-945105502;\n\n\nint z=-1753011345;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode z */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     bool canMeasureWater(int x, int y, int z) {         return z == 0 || (x + y >= z && z % gcd(x, y) == 0);     } private:     int gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/28/365. Water and Jug Problem.cpp/Solution/canMeasureWater(int,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_gcd_int_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_gcd_int_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/365. Water and Jug Problem.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint a=592861370;\n\n\nint b=-272478670;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_gcd_int_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->gcd(a,b);\nAKA_fCall++;AKA_mark(\"Return from: ./28/365. Water and Jug Problem.cpp/Solution/gcd(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/365. Water and Jug Problem.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint a=592861370;\n\n\nint b=-272478670;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     bool canMeasureWater(int x, int y, int z) {         return z == 0 || (x + y >= z && z % gcd(x, y) == 0);     } private:     int gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/28/365. Water and Jug Problem.cpp/Solution/gcd(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int getSum(int a, int b) {         int carry = (a & b) << 1;         int result = (a ^ b);         while(carry != 0) {             int temp = carry;             carry = (result & temp) << 1;             result = result ^ temp;         };         return result;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_getSum_int_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_getSum_int_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/371. Sum of Two Integers.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint a=7;\n\n\nint b=10;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_getSum_int_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->getSum(a,b);\nAKA_fCall++;AKA_mark(\"Return from: ./28/371. Sum of Two Integers.cpp/Solution/getSum(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/371. Sum of Two Integers.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint a=7;\n\n\nint b=10;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int getSum(int a, int b) {         int carry = (a & b) << 1;         int result = (a ^ b);         while(carry != 0) {             int temp = carry;             carry = (result & temp) << 1;             result = result ^ temp;         };         return result;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/28/371. Sum of Two Integers.cpp/Solution/getSum(int,int)"
+    }
+]

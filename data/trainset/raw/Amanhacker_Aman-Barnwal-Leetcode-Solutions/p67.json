@@ -1,0 +1,194 @@
+[
+    {
+        "f": [],
+        "fm": "bool checkString(string s) {\r     \r         int n = s.length();\r         \r         // Find the rightmost index of A, and leftmost index of B\r         int maxIndexA = INT_MIN, minIndexB = INT_MAX;\r         \r         for(int i=0; i<n; i++) {\r                         \r             if(s[i] == 'a')                                 maxIndexA = max(i, maxIndexA);\r             else                                            minIndexB = min(i, minIndexB);\r         }\r         \r         return (maxIndexA < minIndexB);\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_checkString_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_checkString_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2124-check-if-all-as-appears-before-all-bs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName640876 = new char[2];akaRandomName640876[0] = 57;akaRandomName640876[1] = '\\0';string s=akaRandomName640876;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_checkString_string_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->checkString(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p67\\\\2124-check-if-all-as-appears-before-all-bs\\\\2124-check-if-all-as-appears-before-all-bs.cpp\\\\Solution\\\\checkString(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     bool checkString(string s) {\r     \r         int n = s.length();\r         \r         // Find the rightmost index of A, and leftmost index of B\r         int maxIndexA = INT_MIN, minIndexB = INT_MAX;\r         \r         for(int i=0; i<n; i++) {\r                         \r             if(s[i] == 'a')                                 maxIndexA = max(i, maxIndexA);\r             else                                            minIndexB = min(i, minIndexB);\r         }\r         \r         return (maxIndexA < minIndexB);\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p67\\2124-check-if-all-as-appears-before-all-bs\\2124-check-if-all-as-appears-before-all-bs.cpp\\Solution\\checkString(string)"
+    },
+    {
+        "f": [],
+        "fm": "int numberOfBeams(vector<string>& bank) {\r     \r         int sum = 0;\r         int n = bank.size();\r         \r         if(n == 1)                                                  return 0;\r         \r         vector<int> laserBeamsRowwise;\r        \r         int firstIndex;\r         bool flag = true;\r         \r         for(int i=0; i<n; i++) {\r             \r             string temp = bank[i];\r             \r             int c = count(temp.begin(), temp.end(), '1');\r             \r             if(c > 0 && flag) {\r                 firstIndex = i;\r                 flag = false;\r             }                \r             \r             laserBeamsRowwise.push_back(c);\r         }\r         \r         if(flag == true)                                            return 0;\r         \r         int w = laserBeamsRowwise[firstIndex];\r         \r         for(int i=firstIndex + 1; i<n; i++) {\r             \r             if(laserBeamsRowwise[i] > 0) {\r                 \r                 sum += (w * laserBeamsRowwise[i]);\r                 \r                 // Update w\r                 w = laserBeamsRowwise[i];\r             }\r         }\r         \r         return sum;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_numberOfBeams_vector_string_random_1(void) {\n{\nAKA_test_case_name=\"Solution_numberOfBeams_vector_string_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2125-number-of-laser-beams-in-a-bank.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> bank;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode bank */\nchar* akaRandomName339418 = new char[2];akaRandomName339418[0] = 13;akaRandomName339418[1] = '\\0';string bank_element0=akaRandomName339418;\nbank.push_back(bank_element0);\nchar* akaRandomName267422 = new char[2];akaRandomName267422[0] = -51;akaRandomName267422[1] = '\\0';string bank_element1=akaRandomName267422;\nbank.push_back(bank_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_numberOfBeams_vector_string_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->numberOfBeams(bank);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p67\\\\2125-number-of-laser-beams-in-a-bank\\\\2125-number-of-laser-beams-in-a-bank.cpp\\\\Solution\\\\numberOfBeams(vector<string>&)\");\n\n\nvector<string> EXPECTED_bank;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_numberOfBeams_vector_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_numberOfBeams_vector_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2125-number-of-laser-beams-in-a-bank.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<string> bank;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode bank */\nchar* akaRandomName956620 = new char[2];akaRandomName956620[0] = -43;akaRandomName956620[1] = '\\0';string bank_element0=akaRandomName956620;\nbank.push_back(bank_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_numberOfBeams_vector_string_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->numberOfBeams(bank);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p67\\\\2125-number-of-laser-beams-in-a-bank\\\\2125-number-of-laser-beams-in-a-bank.cpp\\\\Solution\\\\numberOfBeams(vector<string>&)\");\n\n\nvector<string> EXPECTED_bank;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2062-count-vowel-substrings-of-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName921319 = new char[2];akaRandomName921319[0] = 111;akaRandomName921319[1] = '\\0';string word=akaRandomName921319;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int numberOfBeams(vector<string>& bank) {\r     \r         int sum = 0;\r         int n = bank.size();\r         \r         if(n == 1)                                                  return 0;\r         \r         vector<int> laserBeamsRowwise;\r        \r         int firstIndex;\r         bool flag = true;\r         \r         for(int i=0; i<n; i++) {\r             \r             string temp = bank[i];\r             \r             int c = count(temp.begin(), temp.end(), '1');\r             \r             if(c > 0 && flag) {\r                 firstIndex = i;\r                 flag = false;\r             }                \r             \r             laserBeamsRowwise.push_back(c);\r         }\r         \r         if(flag == true)                                            return 0;\r         \r         int w = laserBeamsRowwise[firstIndex];\r         \r         for(int i=firstIndex + 1; i<n; i++) {\r             \r             if(laserBeamsRowwise[i] > 0) {\r                 \r                 sum += (w * laserBeamsRowwise[i]);\r                 \r                 // Update w\r                 w = laserBeamsRowwise[i];\r             }\r         }\r         \r         return sum;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p67\\2125-number-of-laser-beams-in-a-bank\\2125-number-of-laser-beams-in-a-bank.cpp\\Solution\\numberOfBeams(vector<string>&)"
+    },
+    {
+        "f": [],
+        "fm": "bool removeOnes(vector<vector<int>>& grid) {\r     \r         int n = grid.size();\r         int m = grid[0].size();\r         \r         for(int i=0; i<n; i++) {\r             for(int j=0; j<m; j++) {\r                 if(grid[i][j] ^ grid[i][0] ^ grid[0][j] ^ grid[0][0])                       return false;\r             }\r         }\r         \r         return true;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_removeOnes_vector_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_removeOnes_vector_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2128-remove-all-ones-with-row-and-column-flips.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> grid;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode grid */\nvector<int> grid_element0;\nint grid_element0_element0=-1424138039;\ngrid_element0.push_back(grid_element0_element0);\nint grid_element0_element1=1383470040;\ngrid_element0.push_back(grid_element0_element1);\ngrid.push_back(grid_element0);\nvector<int> grid_element1;\nint grid_element1_element0=1659041436;\ngrid_element1.push_back(grid_element1_element0);\ngrid.push_back(grid_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_removeOnes_vector_vector_int_random_3\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->removeOnes(grid);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p67\\\\2128-remove-all-ones-with-row-and-column-flips\\\\2128-remove-all-ones-with-row-and-column-flips.cpp\\\\Solution\\\\removeOnes(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_grid;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_removeOnes_vector_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_removeOnes_vector_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2128-remove-all-ones-with-row-and-column-flips.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> grid;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode grid */\nvector<int> grid_element0;\nint grid_element0_element0=1970962904;\ngrid_element0.push_back(grid_element0_element0);\ngrid.push_back(grid_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_removeOnes_vector_vector_int_random_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->removeOnes(grid);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p67\\\\2128-remove-all-ones-with-row-and-column-flips\\\\2128-remove-all-ones-with-row-and-column-flips.cpp\\\\Solution\\\\removeOnes(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_grid;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2062-count-vowel-substrings-of-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName921319 = new char[2];akaRandomName921319[0] = 111;akaRandomName921319[1] = '\\0';string word=akaRandomName921319;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     bool removeOnes(vector<vector<int>>& grid) {\r     \r         int n = grid.size();\r         int m = grid[0].size();\r         \r         for(int i=0; i<n; i++) {\r             for(int j=0; j<m; j++) {\r                 if(grid[i][j] ^ grid[i][0] ^ grid[0][j] ^ grid[0][0])                       return false;\r             }\r         }\r         \r         return true;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p67\\2128-remove-all-ones-with-row-and-column-flips\\2128-remove-all-ones-with-row-and-column-flips.cpp\\Solution\\removeOnes(vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "string capitalizeTitle(string s) {\r     \r         string res;\r         \r         // If word length <= 2, then change all letters to lowercase, else change 1st letter to uppercase and remaining to lowercase\r         int n = s.length();\r         \r         for(int i=0; i<n; i++) {\r             \r             int k = i;\r             \r             while(k < n && s[k] != ' ') {\r                 k++;\r             }\r             \r             // Substring is from index i to (k - 1) i.e [i, k-1]\r             string temp = s.substr(i, k-1-i+1);\r             \r             if(temp.size() <= 2) {\r                 for(auto &x : temp)                 x = tolower(x);\r             }\r             \r             else{\r                 temp[0] = toupper(temp[0]);\r                 for(int i=1; i<temp.size(); i++)    temp[i] = tolower(temp[i]);\r             }\r             \r             res += temp;\r             \r             i = k;\r             if(i != n)                              res += ' ';\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_capitalizeTitle_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_capitalizeTitle_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2129-capitalize-the-title.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName233944 = new char[2];akaRandomName233944[0] = 96;akaRandomName233944[1] = '\\0';string s=akaRandomName233944;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_capitalizeTitle_string_random_0\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->capitalizeTitle(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p67\\\\2129-capitalize-the-title\\\\2129-capitalize-the-title.cpp\\\\Solution\\\\capitalizeTitle(string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     string capitalizeTitle(string s) {\r     \r         string res;\r         \r         // If word length <= 2, then change all letters to lowercase, else change 1st letter to uppercase and remaining to lowercase\r         int n = s.length();\r         \r         for(int i=0; i<n; i++) {\r             \r             int k = i;\r             \r             while(k < n && s[k] != ' ') {\r                 k++;\r             }\r             \r             // Substring is from index i to (k - 1) i.e [i, k-1]\r             string temp = s.substr(i, k-1-i+1);\r             \r             if(temp.size() <= 2) {\r                 for(auto &x : temp)                 x = tolower(x);\r             }\r             \r             else{\r                 temp[0] = toupper(temp[0]);\r                 for(int i=1; i<temp.size(); i++)    temp[i] = tolower(temp[i]);\r             }\r             \r             res += temp;\r             \r             i = k;\r             if(i != n)                              res += ' ';\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p67\\2129-capitalize-the-title\\2129-capitalize-the-title.cpp\\Solution\\capitalizeTitle(string)"
+    },
+    {
+        "f": [],
+        "fm": "ListNode* reverseList(ListNode* head) {\r         \r         ListNode* cur = head;\r         \r         ListNode* prev = NULL;\r         ListNode* next = NULL;\r         \r         // Reverse the Linked List starting from (n / 2)th node in original Linked List\r         while(cur != NULL) {\r             \r             next = cur->next;\r             cur->next = prev;\r             \r             prev = cur;\r             cur = next;\r         }\r         \r         return prev;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_reverseList_ListNodemul_random_3(void) {\n{\nAKA_test_case_name=\"Solution_reverseList_ListNodemul_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2130-maximum-twin-sum-of-a-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode() */\nAKA_mark(\"Calling: .\\\\p67\\\\2130-maximum-twin-sum-of-a-linked-list\\\\2130-maximum-twin-sum-of-a-linked-list.cpp\\\\ListNode\\\\ListNode()|ROOT\\\\2130-maximum-twin-sum-of-a-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode();\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode() */\nAKA_mark(\"Calling: .\\\\p67\\\\2130-maximum-twin-sum-of-a-linked-list\\\\2130-maximum-twin-sum-of-a-linked-list.cpp\\\\ListNode\\\\ListNode()|ROOT\\\\2130-maximum-twin-sum-of-a-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_1\\\\head\\\\ListNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_head_1 = new ::ListNode();\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_1).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_1);\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode() */\nAKA_mark(\"Calling: .\\\\p67\\\\2130-maximum-twin-sum-of-a-linked-list\\\\2130-maximum-twin-sum-of-a-linked-list.cpp\\\\ListNode\\\\ListNode()|ROOT\\\\2130-maximum-twin-sum-of-a-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_2\\\\head\\\\ListNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_head_2 = new ::ListNode();\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_2).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_2);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_reverseList_ListNodemul_random_3\");ListNode* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->reverseList(head);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p67\\\\2130-maximum-twin-sum-of-a-linked-list\\\\2130-maximum-twin-sum-of-a-linked-list.cpp\\\\Solution\\\\reverseList(ListNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     ListNode* reverseList(ListNode* head) {\r         \r         ListNode* cur = head;\r         \r         ListNode* prev = NULL;\r         ListNode* next = NULL;\r         \r         // Reverse the Linked List starting from (n / 2)th node in original Linked List\r         while(cur != NULL) {\r             \r             next = cur->next;\r             cur->next = prev;\r             \r             prev = cur;\r             cur = next;\r         }\r         \r         return prev;\r     }\r     \r     int pairSum(ListNode* head) {\r     \r         int res = INT_MIN;\r         \r         ListNode* slow = head;\r         ListNode* fast = head;\r         \r         while(fast != NULL && fast->next != NULL) {\r             \r             fast = fast->next->next;\r             slow = slow->next;\r         }\r         \r         // Here, fast becomes NULL and slow is (n/2)th node, considering 0-indexing\r         // Now, reverse the Linked List after half nodes from index [n/2, n)\r         \r         ListNode* otherHead = reverseList(slow);\r         \r         while(otherHead != NULL) {\r             \r             res = max(res, otherHead->val + head->val);\r             \r             otherHead = otherHead->next;\r             head = head->next;\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p67\\2130-maximum-twin-sum-of-a-linked-list\\2130-maximum-twin-sum-of-a-linked-list.cpp\\Solution\\reverseList(ListNode*)"
+    },
+    {
+        "f": [],
+        "fm": "int pairSum(ListNode* head) {\r     \r         int res = INT_MIN;\r         \r         ListNode* slow = head;\r         ListNode* fast = head;\r         \r         while(fast != NULL && fast->next != NULL) {\r             \r             fast = fast->next->next;\r             slow = slow->next;\r         }\r         \r         // Here, fast becomes NULL and slow is (n/2)th node, considering 0-indexing\r         // Now, reverse the Linked List after half nodes from index [n/2, n)\r         \r         ListNode* otherHead = reverseList(slow);\r         \r         while(otherHead != NULL) {\r             \r             res = max(res, otherHead->val + head->val);\r             \r             otherHead = otherHead->next;\r             head = head->next;\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_pairSum_ListNodemul_random_2(void) {\n{\nAKA_test_case_name=\"Solution_pairSum_ListNodemul_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2130-maximum-twin-sum-of-a-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-1076520766;\nAKA_mark(\"Calling: .\\\\p67\\\\2130-maximum-twin-sum-of-a-linked-list\\\\2130-maximum-twin-sum-of-a-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\2130-maximum-twin-sum-of-a-linked-list.cpp\\\\pairSum(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_0).val=-320152743;\n/* PointerStructureDataNode next */\nstd::vector<ListNode*> AKA_VECTOR_INIT_head_0_DOT_next;\n/* SubStructDataNode next */\n/* ConstructorDataNode ListNode() */\nAKA_mark(\"Calling: .\\\\p67\\\\2130-maximum-twin-sum-of-a-linked-list\\\\2130-maximum-twin-sum-of-a-linked-list.cpp\\\\ListNode\\\\ListNode()|ROOT\\\\2130-maximum-twin-sum-of-a-linked-list.cpp\\\\pairSum(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\next\\\\next[0]\\\\next\\\\ListNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0_DOT_next_0 = new ::ListNode();\n/* NormalNumberDataNode val */\n(*AKA_VECTOR_INIT_head_0_DOT_next_0).val=-1540833931;\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0_DOT_next_0).next;\nAKA_VECTOR_INIT_head_0_DOT_next.push_back(AKA_VECTOR_INIT_head_0_DOT_next_0);\n(*AKA_VECTOR_INIT_head_0).next = AKA_VECTOR_INIT_head_0_DOT_next[0];\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_pairSum_ListNodemul_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->pairSum(head);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p67\\\\2130-maximum-twin-sum-of-a-linked-list\\\\2130-maximum-twin-sum-of-a-linked-list.cpp\\\\Solution\\\\pairSum(ListNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\206-reverse-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int) */\n/* NormalNumberDataNode x */\nint head0_x=-150005685;\nAKA_mark(\"Calling: .\\\\p63\\\\206-reverse-linked-list\\\\206-reverse-linked-list.cpp\\\\ListNode\\\\ListNode(int)|ROOT\\\\206-reverse-linked-list.cpp\\\\reverseList(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     ListNode* reverseList(ListNode* head) {\r         \r         ListNode* cur = head;\r         \r         ListNode* prev = NULL;\r         ListNode* next = NULL;\r         \r         // Reverse the Linked List starting from (n / 2)th node in original Linked List\r         while(cur != NULL) {\r             \r             next = cur->next;\r             cur->next = prev;\r             \r             prev = cur;\r             cur = next;\r         }\r         \r         return prev;\r     }\r     \r     int pairSum(ListNode* head) {\r     \r         int res = INT_MIN;\r         \r         ListNode* slow = head;\r         ListNode* fast = head;\r         \r         while(fast != NULL && fast->next != NULL) {\r             \r             fast = fast->next->next;\r             slow = slow->next;\r         }\r         \r         // Here, fast becomes NULL and slow is (n/2)th node, considering 0-indexing\r         // Now, reverse the Linked List after half nodes from index [n/2, n)\r         \r         ListNode* otherHead = reverseList(slow);\r         \r         while(otherHead != NULL) {\r             \r             res = max(res, otherHead->val + head->val);\r             \r             otherHead = otherHead->next;\r             head = head->next;\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p67\\2130-maximum-twin-sum-of-a-linked-list\\2130-maximum-twin-sum-of-a-linked-list.cpp\\Solution\\pairSum(ListNode*)"
+    }
+]

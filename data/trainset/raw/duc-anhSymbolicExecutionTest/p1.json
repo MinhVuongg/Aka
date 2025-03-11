@@ -1,0 +1,138 @@
+[
+    {
+        "f": [
+            "int id;"
+        ],
+        "fm": "int getId(){return id;}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Student_getId_random_0(void) {\n{\nAKA_test_case_name=\"Student_getId_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE_nsTest0__Student */\n/* ConstructorDataNode Student() */\nAKA_mark(\"Calling: .\\\\SymbolicExecutionTest\\\\nsTest0.cpp\\\\nsTest0\\\\Student\\\\Student()|ROOT\\\\nsTest0.cpp\\\\GLOBAL\\\\AKA_INSTANCE_nsTest0__Student\\\\AKA_INSTANCE_nsTest0__Student\\\\Student()\");AKA_fCall++;AKA_INSTANCE_nsTest0__Student = new nsTest0::Student();\n/* NormalNumberDataNode id */\n/* id : null value -> no code */\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Student_getId_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE_nsTest0__Student->getId();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\nsTest0.cpp\\\\nsTest0\\\\Student\\\\getId()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE_nsTest0__Student */\n/* ConstructorDataNode Student() */\nAKA_mark(\"Calling: .\\\\SymbolicExecutionTest\\\\nsTest0.cpp\\\\nsTest0\\\\Student\\\\Student()|ROOT\\\\nsTest0.cpp\\\\GLOBAL\\\\AKA_INSTANCE_nsTest0__Student\\\\AKA_INSTANCE_nsTest0__Student\\\\Student()\");AKA_fCall++;AKA_INSTANCE_nsTest0__Student = new nsTest0::Student();\n/* NormalNumberDataNode id */\n/* id : null value -> no code */\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Student{\r \t\tprivate:\r \t\t\tint id;\r \t\tpublic:\r \t\t\tStudent(){}\r \t\t\tint getId(){return id;}\r \t\t\tvoid setId(int id_){id = id_;}\r \t\t\tint isAvailable(int id);\r \t\t\tint isAvailable2(int id);\r \t};",
+        "c": [
+            "Student(){}"
+        ],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\nsTest0.cpp\\nsTest0\\Student\\getId()"
+    },
+    {
+        "f": [
+            "int id;"
+        ],
+        "fm": "void setId(int id_){id = id_;}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Student_setId_int_random_3(void) {\n{\nAKA_test_case_name=\"Student_setId_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE_nsTest0__Student */\n/* ConstructorDataNode Student() */\nAKA_mark(\"Calling: .\\\\SymbolicExecutionTest\\\\nsTest0.cpp\\\\nsTest0\\\\Student\\\\Student()|ROOT\\\\nsTest0.cpp\\\\GLOBAL\\\\AKA_INSTANCE_nsTest0__Student\\\\AKA_INSTANCE_nsTest0__Student\\\\Student()\");AKA_fCall++;AKA_INSTANCE_nsTest0__Student = new nsTest0::Student();\n/* NormalNumberDataNode id */\n/* id : null value -> no code */\n\n\n\n\nint id_=1880453301;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode id_ */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Student_setId_int_random_3\");AKA_INSTANCE_nsTest0__Student->setId(id_);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\nsTest0.cpp\\\\nsTest0\\\\Student\\\\setId(int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE_nsTest0__Student */\n/* ConstructorDataNode Student() */\nAKA_mark(\"Calling: .\\\\SymbolicExecutionTest\\\\nsTest0.cpp\\\\nsTest0\\\\Student\\\\Student()|ROOT\\\\nsTest0.cpp\\\\GLOBAL\\\\AKA_INSTANCE_nsTest0__Student\\\\AKA_INSTANCE_nsTest0__Student\\\\Student()\");AKA_fCall++;AKA_INSTANCE_nsTest0__Student = new nsTest0::Student();\n/* NormalNumberDataNode id */\n/* id : null value -> no code */\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Student{\r \t\tprivate:\r \t\t\tint id;\r \t\tpublic:\r \t\t\tStudent(){}\r \t\t\tint getId(){return id;}\r \t\t\tvoid setId(int id_){id = id_;}\r \t\t\tint isAvailable(int id);\r \t\t\tint isAvailable2(int id);\r \t};",
+        "c": [
+            "Student(){}"
+        ],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\nsTest0.cpp\\nsTest0\\Student\\setId(int)"
+    },
+    {
+        "f": [],
+        "fm": "int Student::isAvailable(int id){\r \t\tif (id < 9999)\r \t\t\treturn 0;\r \t\telse\r \t\t\treturn 1;\r \t}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Student_isAvailable_int_random_3(void) {\n{\nAKA_test_case_name=\"Student_isAvailable_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE_nsTest0__Student */\n/* ConstructorDataNode Student() */\nAKA_mark(\"Calling: .\\\\SymbolicExecutionTest\\\\nsTest0.cpp\\\\nsTest0\\\\Student\\\\Student()|ROOT\\\\nsTest0.cpp\\\\GLOBAL\\\\AKA_INSTANCE_nsTest0__Student\\\\AKA_INSTANCE_nsTest0__Student\\\\Student()\");AKA_fCall++;AKA_INSTANCE_nsTest0__Student = new nsTest0::Student();\n/* NormalNumberDataNode id */\n/* id : null value -> no code */\n\n\n\n\nint id=994747770;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode id */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Student_isAvailable_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE_nsTest0__Student->isAvailable(id);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\nsTest0.cpp\\\\nsTest0\\\\Student::isAvailable(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE_nsTest0__Student */\n/* ConstructorDataNode Student() */\nAKA_mark(\"Calling: .\\\\SymbolicExecutionTest\\\\nsTest0.cpp\\\\nsTest0\\\\Student\\\\Student()|ROOT\\\\nsTest0.cpp\\\\GLOBAL\\\\AKA_INSTANCE_nsTest0__Student\\\\AKA_INSTANCE_nsTest0__Student\\\\Student()\");AKA_fCall++;AKA_INSTANCE_nsTest0__Student = new nsTest0::Student();\n/* NormalNumberDataNode id */\n/* id : null value -> no code */\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Student_isAvailable_int_random_1(void) {\n{\nAKA_test_case_name=\"Student_isAvailable_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE_nsTest0__Student */\n/* ConstructorDataNode Student() */\nAKA_mark(\"Calling: .\\\\SymbolicExecutionTest\\\\nsTest0.cpp\\\\nsTest0\\\\Student\\\\Student()|ROOT\\\\nsTest0.cpp\\\\GLOBAL\\\\AKA_INSTANCE_nsTest0__Student\\\\AKA_INSTANCE_nsTest0__Student\\\\Student()\");AKA_fCall++;AKA_INSTANCE_nsTest0__Student = new nsTest0::Student();\n/* NormalNumberDataNode id */\n/* id : null value -> no code */\n\n\n\n\nint id=-1048289458;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode id */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Student_isAvailable_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE_nsTest0__Student->isAvailable(id);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\nsTest0.cpp\\\\nsTest0\\\\Student::isAvailable(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE_nsTest0__Student */\n/* ConstructorDataNode Student() */\nAKA_mark(\"Calling: .\\\\SymbolicExecutionTest\\\\nsTest0.cpp\\\\nsTest0\\\\Student\\\\Student()|ROOT\\\\nsTest0.cpp\\\\GLOBAL\\\\AKA_INSTANCE_nsTest0__Student\\\\AKA_INSTANCE_nsTest0__Student\\\\Student()\");AKA_fCall++;AKA_INSTANCE_nsTest0__Student = new nsTest0::Student();\n/* NormalNumberDataNode id */\n/* id : null value -> no code */\n\n\n\n\nint id_=1880453301;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode id_ */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\nsTest0.cpp\\nsTest0\\Student::isAvailable(int)"
+    },
+    {
+        "f": [],
+        "fm": "int Student::isAvailable2(int id){\r \t\tif (id < MINIMUM)\r \t\t\treturn 0;\r \t\telse\r \t\t\treturn 1;\r \t}",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Student_isAvailable2_int_random_4(void) {\n{\nAKA_test_case_name=\"Student_isAvailable2_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE_nsTest0__Student */\n/* ConstructorDataNode Student() */\nAKA_mark(\"Calling: .\\\\SymbolicExecutionTest\\\\nsTest0.cpp\\\\nsTest0\\\\Student\\\\Student()|ROOT\\\\nsTest0.cpp\\\\GLOBAL\\\\AKA_INSTANCE_nsTest0__Student\\\\AKA_INSTANCE_nsTest0__Student\\\\Student()\");AKA_fCall++;AKA_INSTANCE_nsTest0__Student = new nsTest0::Student();\n/* NormalNumberDataNode id */\n/* id : null value -> no code */\n\n\n\n\nint id=-2091229702;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode id */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Student_isAvailable2_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE_nsTest0__Student->isAvailable2(id);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\nsTest0.cpp\\\\nsTest0\\\\Student::isAvailable2(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE_nsTest0__Student */\n/* ConstructorDataNode Student() */\nAKA_mark(\"Calling: .\\\\SymbolicExecutionTest\\\\nsTest0.cpp\\\\nsTest0\\\\Student\\\\Student()|ROOT\\\\nsTest0.cpp\\\\GLOBAL\\\\AKA_INSTANCE_nsTest0__Student\\\\AKA_INSTANCE_nsTest0__Student\\\\Student()\");AKA_fCall++;AKA_INSTANCE_nsTest0__Student = new nsTest0::Student();\n/* NormalNumberDataNode id */\n/* id : null value -> no code */\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Student_isAvailable2_int_random_0(void) {\n{\nAKA_test_case_name=\"Student_isAvailable2_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE_nsTest0__Student */\n/* ConstructorDataNode Student() */\nAKA_mark(\"Calling: .\\\\SymbolicExecutionTest\\\\nsTest0.cpp\\\\nsTest0\\\\Student\\\\Student()|ROOT\\\\nsTest0.cpp\\\\GLOBAL\\\\AKA_INSTANCE_nsTest0__Student\\\\AKA_INSTANCE_nsTest0__Student\\\\Student()\");AKA_fCall++;AKA_INSTANCE_nsTest0__Student = new nsTest0::Student();\n/* NormalNumberDataNode id */\n/* id : null value -> no code */\n\n\n\n\nint id=2017271646;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode id */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Student_isAvailable2_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE_nsTest0__Student->isAvailable2(id);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\nsTest0.cpp\\\\nsTest0\\\\Student::isAvailable2(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE_nsTest0__Student */\n/* ConstructorDataNode Student() */\nAKA_mark(\"Calling: .\\\\SymbolicExecutionTest\\\\nsTest0.cpp\\\\nsTest0\\\\Student\\\\Student()|ROOT\\\\nsTest0.cpp\\\\GLOBAL\\\\AKA_INSTANCE_nsTest0__Student\\\\AKA_INSTANCE_nsTest0__Student\\\\Student()\");AKA_fCall++;AKA_INSTANCE_nsTest0__Student = new nsTest0::Student();\n/* NormalNumberDataNode id */\n/* id : null value -> no code */\n\n\n\n\nint id_=1880453301;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode id_ */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab2\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\nsTest0.cpp\\nsTest0\\Student::isAvailable2(int)"
+    }
+]

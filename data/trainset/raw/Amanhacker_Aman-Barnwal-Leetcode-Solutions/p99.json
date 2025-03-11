@@ -1,0 +1,70 @@
+[
+    {
+        "f": [],
+        "fm": "vector<int> plusOne(vector<int>& digits) {\r     \r         int n = digits.size();\r \r         int carry = 1;\r         \r         for(int i=n-1; i>=0; i--) {\r             \r             int temp = digits[i] + carry;\r             \r             if(temp <= 9) {\r                 digits[i] = temp;\r                 carry = 0;\r             }   \r             else {\r                 digits[i] = (temp) % 10;\r                 carry = temp / 10;\r             }\r         }\r         \r         if(carry == 0)                              return digits;\r         \r         reverse(digits.begin(), digits.end());\r         vector<int> res;\r         \r         while(carry > 0) {\r             \r             int t = carry % 10;\r             carry = carry / 10;\r             \r             res.push_back(t);\r         }\r         \r         int n1 = res.size();\r         \r         for(int i=n1-1; i>=0; i--) {\r             digits.push_back(res[i]);\r         }\r         \r         reverse(digits.begin(), digits.end());\r         return digits;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_plusOne_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_plusOne_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\66-plus-one.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> digits;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode digits */\nint digits_element0=-491005771;\ndigits.push_back(digits_element0);\nint digits_element1=360506968;\ndigits.push_back(digits_element1);\nint digits_element2=1864010464;\ndigits.push_back(digits_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_plusOne_vector_int_random_4\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->plusOne(digits);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p99\\\\66-plus-one\\\\66-plus-one.cpp\\\\Solution\\\\plusOne(vector<int>&)\");\n\n\nvector<int> EXPECTED_digits;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\66-plus-one.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> digits;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode digits */\nint digits_element0=-491005771;\ndigits.push_back(digits_element0);\nint digits_element1=360506968;\ndigits.push_back(digits_element1);\nint digits_element2=1864010464;\ndigits.push_back(digits_element2);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_plusOne_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_plusOne_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\66-plus-one.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> digits;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode digits */\nint digits_element0=2139799691;\ndigits.push_back(digits_element0);\nint digits_element1=-1692733190;\ndigits.push_back(digits_element1);\nint digits_element2=1891069499;\ndigits.push_back(digits_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_plusOne_vector_int_random_0\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->plusOne(digits);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p99\\\\66-plus-one\\\\66-plus-one.cpp\\\\Solution\\\\plusOne(vector<int>&)\");\n\n\nvector<int> EXPECTED_digits;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\66-plus-one.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> digits;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode digits */\nint digits_element0=2139799691;\ndigits.push_back(digits_element0);\nint digits_element1=-1692733190;\ndigits.push_back(digits_element1);\nint digits_element2=1891069499;\ndigits.push_back(digits_element2);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     vector<int> plusOne(vector<int>& digits) {\r     \r         int n = digits.size();\r \r         int carry = 1;\r         \r         for(int i=n-1; i>=0; i--) {\r             \r             int temp = digits[i] + carry;\r             \r             if(temp <= 9) {\r                 digits[i] = temp;\r                 carry = 0;\r             }   \r             else {\r                 digits[i] = (temp) % 10;\r                 carry = temp / 10;\r             }\r         }\r         \r         if(carry == 0)                              return digits;\r         \r         reverse(digits.begin(), digits.end());\r         vector<int> res;\r         \r         while(carry > 0) {\r             \r             int t = carry % 10;\r             carry = carry / 10;\r             \r             res.push_back(t);\r         }\r         \r         int n1 = res.size();\r         \r         for(int i=n1-1; i>=0; i--) {\r             digits.push_back(res[i]);\r         }\r         \r         reverse(digits.begin(), digits.end());\r         return digits;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p99\\66-plus-one\\66-plus-one.cpp\\Solution\\plusOne(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "string addBinary(string a, string b) {\r     \r         string ans = \"\";\r         \r         int i = a.length() - 1;\r         int j = b.length() - 1;\r         \r         int carry = 0;\r         \r         while(i >= 0 || j >= 0 || carry) {\r             \r             if(i >= 0) {\r                 carry += a[i] - '0';\r                 i--;\r             }\r             \r             if(j >= 0) {\r                 carry += b[j] - '0';\r                 j--;\r             }\r             \r             ans += (carry % 2) + '0';\r             carry = carry / 2;\r         }\r         \r         reverse(ans.begin(), ans.end());\r         return ans;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_addBinary_string_string_random_1(void) {\n{\nAKA_test_case_name=\"Solution_addBinary_string_string_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\67-add-binary.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName140568 = new char[2];akaRandomName140568[0] = 2;akaRandomName140568[1] = '\\0';string a=akaRandomName140568;\nchar* akaRandomName887403 = new char[2];akaRandomName887403[0] = 6;akaRandomName887403[1] = '\\0';string b=akaRandomName887403;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode a */\n/* NormalStringDataNode b */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_addBinary_string_string_random_1\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->addBinary(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p99\\\\67-add-binary\\\\67-add-binary.cpp\\\\Solution\\\\addBinary(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\67-add-binary.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName92627 = new char[2];akaRandomName92627[0] = 2;akaRandomName92627[1] = '\\0';string a=akaRandomName92627;\nchar* akaRandomName313479 = new char[2];akaRandomName313479[0] = 6;akaRandomName313479[1] = '\\0';string b=akaRandomName313479;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode a */\n/* NormalStringDataNode b */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     string addBinary(string a, string b) {\r     \r         string ans = \"\";\r         \r         int i = a.length() - 1;\r         int j = b.length() - 1;\r         \r         int carry = 0;\r         \r         while(i >= 0 || j >= 0 || carry) {\r             \r             if(i >= 0) {\r                 carry += a[i] - '0';\r                 i--;\r             }\r             \r             if(j >= 0) {\r                 carry += b[j] - '0';\r                 j--;\r             }\r             \r             ans += (carry % 2) + '0';\r             carry = carry / 2;\r         }\r         \r         reverse(ans.begin(), ans.end());\r         return ans;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p99\\67-add-binary\\67-add-binary.cpp\\Solution\\addBinary(string,string)"
+    }
+]

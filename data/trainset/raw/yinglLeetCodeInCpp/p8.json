@@ -1,0 +1,42 @@
+[
+    {
+        "f": [],
+        "fm": "int canCompleteCircuit(vector<int> &gas, vector<int> &cost) {\r     int number = gas.size();\r \r     for (int i = 0; i < number; ++i) {\r       int j = i;\r       int count = 1;\r       int gas_count = 0;\r \r       while (count <= number) {\r         if ((gas_count + gas[j % number]) >= cost[j % number]) {\r           if (count == number) {\r             return i;\r           }\r \r           gas_count += (gas[j % number] - cost[j % number]);\r           ++j;\r           ++count;\r         }\r         else {\r           i = j;  // 从j后面一个站点开始\r           break;\r         }\r       }\r     }\r \r     return -1;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_canCompleteCircuit_vector_int_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_canCompleteCircuit_vector_int_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\gas_station.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> gas;\nvector<int> cost;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode gas */\nint gas_element0=-2075177378;\ngas.push_back(gas_element0);\nint gas_element1=1779435651;\ngas.push_back(gas_element1);\n/* VectorDataNode cost */\nint cost_element0=-846930036;\ncost.push_back(cost_element0);\nint cost_element1=-1848948593;\ncost.push_back(cost_element1);\nint cost_element2=398420061;\ncost.push_back(cost_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_canCompleteCircuit_vector_int_vector_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->canCompleteCircuit(gas,cost);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-7\\\\gas_station.cpp\\\\Solution\\\\canCompleteCircuit(vector<int>&,vector<int>&)\");\n\n\nvector<int> EXPECTED_gas;\n\nvector<int> EXPECTED_cost;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\gas_station.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> gas;\nvector<int> cost;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode gas */\nint gas_element0=-2075177378;\ngas.push_back(gas_element0);\nint gas_element1=1779435651;\ngas.push_back(gas_element1);\n/* VectorDataNode cost */\nint cost_element0=-846930036;\ncost.push_back(cost_element0);\nint cost_element1=-1848948593;\ncost.push_back(cost_element1);\nint cost_element2=398420061;\ncost.push_back(cost_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_canCompleteCircuit_vector_int_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_canCompleteCircuit_vector_int_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\gas_station.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> gas;\nvector<int> cost;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode gas */\nint gas_element0=-1678098950;\ngas.push_back(gas_element0);\nint gas_element1=-159066136;\ngas.push_back(gas_element1);\nint gas_element2=-628814218;\ngas.push_back(gas_element2);\n/* VectorDataNode cost */\nint cost_element0=-392236304;\ncost.push_back(cost_element0);\nint cost_element1=-1008608808;\ncost.push_back(cost_element1);\nint cost_element2=1216289555;\ncost.push_back(cost_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_canCompleteCircuit_vector_int_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->canCompleteCircuit(gas,cost);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-7\\\\gas_station.cpp\\\\Solution\\\\canCompleteCircuit(vector<int>&,vector<int>&)\");\n\n\nvector<int> EXPECTED_gas;\n\nvector<int> EXPECTED_cost;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\gas_station.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> gas;\nvector<int> cost;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode gas */\nint gas_element0=-1678098950;\ngas.push_back(gas_element0);\nint gas_element1=-159066136;\ngas.push_back(gas_element1);\nint gas_element2=-628814218;\ngas.push_back(gas_element2);\n/* VectorDataNode cost */\nint cost_element0=-392236304;\ncost.push_back(cost_element0);\nint cost_element1=-1008608808;\ncost.push_back(cost_element1);\nint cost_element2=1216289555;\ncost.push_back(cost_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   // 这里有一个重要的假设，如果从某个a点出发到b点失败，\r   // 那么a到b任何一点都不能成功。证明如下：\r   //   1. 如果能从a点加油后先开到a1点，剩余的汽油必定大于等于0。\r   //   2. 如果放弃a点，那么从a1的出发的油量不会更多。\r   //   3. 同理可以一直推理下去。\r   int canCompleteCircuit(vector<int> &gas, vector<int> &cost) {\r     int number = gas.size();\r \r     for (int i = 0; i < number; ++i) {\r       int j = i;\r       int count = 1;\r       int gas_count = 0;\r \r       while (count <= number) {\r         if ((gas_count + gas[j % number]) >= cost[j % number]) {\r           if (count == number) {\r             return i;\r           }\r \r           gas_count += (gas[j % number] - cost[j % number]);\r           ++j;\r           ++count;\r         }\r         else {\r           i = j;  // 从j后面一个站点开始\r           break;\r         }\r       }\r     }\r \r     return -1;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-7\\gas_station.cpp\\Solution\\canCompleteCircuit(vector<int>&,vector<int>&)"
+    }
+]

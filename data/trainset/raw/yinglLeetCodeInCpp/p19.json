@@ -1,0 +1,94 @@
+[
+    {
+        "f": [],
+        "fm": "void nextPermutation(vector<int> &num) {\r     int size =num.size();\r     int first_index = -1;\r     int second_index = -1;\r     int min = INT_MAX;\r     int i;\r \r     if (size <= 1) {\r       return;\r     }\r \r     for (i = 0; i < (size - 1); ++i) {\r       if (num[i] < num[i + 1]) {\r         first_index = i;\r       }\r     }\r \r     if (-1 == first_index) {\r       reverse(num.begin(), num.end());\r     }\r     else {\r       for (i = first_index + 1; i < size; ++i) {\r         if (num[i] > num[first_index]) {\r           if (num[i] < min) {\r             min = num[i];\r             second_index = i;\r           }\r         }\r       }\r \r       swap(num[first_index], num[second_index]);\r       sort(num.begin() + first_index + 1, num.end());\r     }\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_nextPermutation_vector_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_nextPermutation_vector_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\next_permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_nextPermutation_vector_int_directed_0\");AKA_INSTANCE___Solution->nextPermutation(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-15\\\\next_permutation.cpp\\\\Solution\\\\nextPermutation(vector<int>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\next_permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_nextPermutation_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_nextPermutation_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\next_permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=1996984750;\nnum.push_back(num_element0);\nint num_element1=1494981791;\nnum.push_back(num_element1);\nint num_element2=-156524180;\nnum.push_back(num_element2);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_nextPermutation_vector_int_random_4\");AKA_INSTANCE___Solution->nextPermutation(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-15\\\\next_permutation.cpp\\\\Solution\\\\nextPermutation(vector<int>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\next_permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=1996984750;\nnum.push_back(num_element0);\nint num_element1=1494981791;\nnum.push_back(num_element1);\nint num_element2=-156524180;\nnum.push_back(num_element2);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_nextPermutation_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_nextPermutation_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\next_permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-341988958;\nnum.push_back(num_element0);\nint num_element1=576262426;\nnum.push_back(num_element1);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_nextPermutation_vector_int_random_3\");AKA_INSTANCE___Solution->nextPermutation(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-15\\\\next_permutation.cpp\\\\Solution\\\\nextPermutation(vector<int>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\next_permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-341988958;\nnum.push_back(num_element0);\nint num_element1=576262426;\nnum.push_back(num_element1);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_nextPermutation_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_nextPermutation_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\next_permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-1924626816;\nnum.push_back(num_element0);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_nextPermutation_vector_int_random_0\");AKA_INSTANCE___Solution->nextPermutation(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-15\\\\next_permutation.cpp\\\\Solution\\\\nextPermutation(vector<int>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\next_permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=-1924626816;\nnum.push_back(num_element0);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   // 原理分析\r   // 以162543为例，下一个应该是163245\r   // 步骤如下：\r   // 1. 找到最后一个num[i] < num[i + 1]的点。\r   // 2. 如果第一步没找到，说明已经是最后一个排练，直接逆序返回即可。\r   // 3. 从num[i + 1]到num[size - 1]找到大于num[i]的最小的数，并与num[i]交换位置。\r   // 4. 对num[i + 1]到num[size - 1]排序。\r   void nextPermutation(vector<int> &num) {\r     int size =num.size();\r     int first_index = -1;\r     int second_index = -1;\r     int min = INT_MAX;\r     int i;\r \r     if (size <= 1) {\r       return;\r     }\r \r     for (i = 0; i < (size - 1); ++i) {\r       if (num[i] < num[i + 1]) {\r         first_index = i;\r       }\r     }\r \r     if (-1 == first_index) {\r       reverse(num.begin(), num.end());\r     }\r     else {\r       for (i = first_index + 1; i < size; ++i) {\r         if (num[i] > num[first_index]) {\r           if (num[i] < min) {\r             min = num[i];\r             second_index = i;\r           }\r         }\r       }\r \r       swap(num[first_index], num[second_index]);\r       sort(num.begin() + first_index + 1, num.end());\r     }\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-15\\next_permutation.cpp\\Solution\\nextPermutation(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "bool isPalindrome(int x) {\r     if (x < 0) {\r       return false;\r     }\r \r     int y = x;\r     int z = 0;\r \r     while (y > 0) {\r       z = z * 10 + (y % 10);\r       y /= 10;\r     }\r \r     return z == x;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isPalindrome_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_isPalindrome_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\palindrome_number.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint x=10;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isPalindrome_int_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isPalindrome(x);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-15\\\\palindrome_number.cpp\\\\Solution\\\\isPalindrome(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\next_permutation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool isPalindrome(int x) {\r     if (x < 0) {\r       return false;\r     }\r \r     int y = x;\r     int z = 0;\r \r     while (y > 0) {\r       z = z * 10 + (y % 10);\r       y /= 10;\r     }\r \r     return z == x;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-15\\palindrome_number.cpp\\Solution\\isPalindrome(int)"
+    }
+]

@@ -1,0 +1,110 @@
+[
+    {
+        "f": [],
+        "fm": "int numDifferentIntegers(string word) {\r     \r         int count = 0;\r         \r         int n = word.length();\r         set<string> w;\r         \r         for(int i=0; i<n; i++) {\r             \r             if(isdigit(word[i])) {\r                 \r                 int start = i, end;\r                 \r                 while(i >= 0 && isdigit(word[i]))               i++;\r                 \r                 if(i == start)                                  w.insert(to_string(word[start]));\r                 \r                 else {\r                     \r                     while(start < n && word[start] == '0')      start++;\r                     \r                     end = i - 1;                     \r                     string temp = word.substr(start, end - start + 1);\r                     \r                     w.insert(temp);\r                 }   \r             }\r         }\r         \r         count = w.size();\r         return count;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_numDifferentIntegers_string_random_1(void) {\n{\nAKA_test_case_name=\"Solution_numDifferentIntegers_string_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1805-number-of-different-integers-in-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName595846 = new char[2];akaRandomName595846[0] = -126;akaRandomName595846[1] = '\\0';string word=akaRandomName595846;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_numDifferentIntegers_string_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->numDifferentIntegers(word);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p50\\\\1805-number-of-different-integers-in-a-string\\\\1805-number-of-different-integers-in-a-string.cpp\\\\Solution\\\\numDifferentIntegers(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1805-number-of-different-integers-in-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName398746 = new char[2];akaRandomName398746[0] = -126;akaRandomName398746[1] = '\\0';string word=akaRandomName398746;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_numDifferentIntegers_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_numDifferentIntegers_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1805-number-of-different-integers-in-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName716192 = new char[2];akaRandomName716192[0] = 56;akaRandomName716192[1] = '\\0';string word=akaRandomName716192;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_numDifferentIntegers_string_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->numDifferentIntegers(word);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p50\\\\1805-number-of-different-integers-in-a-string\\\\1805-number-of-different-integers-in-a-string.cpp\\\\Solution\\\\numDifferentIntegers(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1805-number-of-different-integers-in-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName732626 = new char[2];akaRandomName732626[0] = 56;akaRandomName732626[1] = '\\0';string word=akaRandomName732626;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int numDifferentIntegers(string word) {\r     \r         int count = 0;\r         \r         int n = word.length();\r         set<string> w;\r         \r         for(int i=0; i<n; i++) {\r             \r             if(isdigit(word[i])) {\r                 \r                 int start = i, end;\r                 \r                 while(i >= 0 && isdigit(word[i]))               i++;\r                 \r                 if(i == start)                                  w.insert(to_string(word[start]));\r                 \r                 else {\r                     \r                     while(start < n && word[start] == '0')      start++;\r                     \r                     end = i - 1;                     \r                     string temp = word.substr(start, end - start + 1);\r                     \r                     w.insert(temp);\r                 }   \r             }\r         }\r         \r         count = w.size();\r         return count;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p50\\1805-number-of-different-integers-in-a-string\\1805-number-of-different-integers-in-a-string.cpp\\Solution\\numDifferentIntegers(string)"
+    },
+    {
+        "f": [],
+        "fm": "int arraySign(vector<int>& v) {\r     \r         int noNegative = 0, noZero = 0;\r         \r         for(auto &x : v) {\r             if(x == 0)                                  noZero++;\r             else if(x < 0)                              noNegative++;\r         }\r         \r         if(noZero >= 1)                                 return 0;\r         \r         else if(noNegative >= 1) {\r             if(noNegative % 2 == 0)                     return 1;\r             else                                        return -1;\r         }\r         \r         return 1;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_arraySign_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_arraySign_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1822-sign-of-the-product-of-an-array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> v;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nint v_element0=41754298;\nv.push_back(v_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_arraySign_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->arraySign(v);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p50\\\\1822-sign-of-the-product-of-an-array\\\\1822-sign-of-the-product-of-an-array.cpp\\\\Solution\\\\arraySign(vector<int>&)\");\n\n\nvector<int> EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1805-number-of-different-integers-in-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName398746 = new char[2];akaRandomName398746[0] = -126;akaRandomName398746[1] = '\\0';string word=akaRandomName398746;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_arraySign_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_arraySign_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1822-sign-of-the-product-of-an-array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> v;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nint v_element0=1200996322;\nv.push_back(v_element0);\nint v_element1=846651553;\nv.push_back(v_element1);\nint v_element2=-1457811371;\nv.push_back(v_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_arraySign_vector_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->arraySign(v);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p50\\\\1822-sign-of-the-product-of-an-array\\\\1822-sign-of-the-product-of-an-array.cpp\\\\Solution\\\\arraySign(vector<int>&)\");\n\n\nvector<int> EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1805-number-of-different-integers-in-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName732626 = new char[2];akaRandomName732626[0] = 56;akaRandomName732626[1] = '\\0';string word=akaRandomName732626;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int arraySign(vector<int>& v) {\r     \r         int noNegative = 0, noZero = 0;\r         \r         for(auto &x : v) {\r             if(x == 0)                                  noZero++;\r             else if(x < 0)                              noNegative++;\r         }\r         \r         if(noZero >= 1)                                 return 0;\r         \r         else if(noNegative >= 1) {\r             if(noNegative % 2 == 0)                     return 1;\r             else                                        return -1;\r         }\r         \r         return 1;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p50\\1822-sign-of-the-product-of-an-array\\1822-sign-of-the-product-of-an-array.cpp\\Solution\\arraySign(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int badSensor(vector<int>& a1, vector<int>& a2) {\r     \r         int res = -1;\r         \r         int n = a1.size();\r         int i = 0;\r         \r         // Increment index i until we find first missmatch.\r         while(i < n && a1[i] == a2[i])                                          i++;\r \r         // From there, keep going if characters alternate s1[i] == s2[i + 1] && s1[i + 1] == s2[i]\r         while(i + 1 < n && a1[i] == a2[i + 1] && a1[i + 1] == a2[i])            i++;\r \r         // If we reach the last character, sensor readings are ambigous - return -1.\r         if(i >= n - 1)                                                          res = -1;\r         \r         // If s1[i] == s2[i + 1], the first sensor if faulty        \r         else if(a1[i] == a2[i+1])                                               res = 1;    \r         \r         // Otherwise, the second sensor is faulty.\r         else                                                                    res = 2;\r \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_badSensor_vector_int_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_badSensor_vector_int_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1826-faulty-sensor.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a1;\nvector<int> a2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a1 */\nint a1_element0=-1487374116;\na1.push_back(a1_element0);\nint a1_element1=-357226964;\na1.push_back(a1_element1);\nint a1_element2=-1745397833;\na1.push_back(a1_element2);\n/* VectorDataNode a2 */\nint a2_element0=-1937472988;\na2.push_back(a2_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_badSensor_vector_int_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->badSensor(a1,a2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p50\\\\1826-faulty-sensor\\\\1826-faulty-sensor.cpp\\\\Solution\\\\badSensor(vector<int>&,vector<int>&)\");\n\n\nvector<int> EXPECTED_a1;\n\nvector<int> EXPECTED_a2;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1805-number-of-different-integers-in-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName398746 = new char[2];akaRandomName398746[0] = -126;akaRandomName398746[1] = '\\0';string word=akaRandomName398746;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int badSensor(vector<int>& a1, vector<int>& a2) {\r     \r         int res = -1;\r         \r         int n = a1.size();\r         int i = 0;\r         \r         // Increment index i until we find first missmatch.\r         while(i < n && a1[i] == a2[i])                                          i++;\r \r         // From there, keep going if characters alternate s1[i] == s2[i + 1] && s1[i + 1] == s2[i]\r         while(i + 1 < n && a1[i] == a2[i + 1] && a1[i + 1] == a2[i])            i++;\r \r         // If we reach the last character, sensor readings are ambigous - return -1.\r         if(i >= n - 1)                                                          res = -1;\r         \r         // If s1[i] == s2[i + 1], the first sensor if faulty        \r         else if(a1[i] == a2[i+1])                                               res = 1;    \r         \r         // Otherwise, the second sensor is faulty.\r         else                                                                    res = 2;\r \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p50\\1826-faulty-sensor\\1826-faulty-sensor.cpp\\Solution\\badSensor(vector<int>&,vector<int>&)"
+    }
+]

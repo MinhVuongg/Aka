@@ -1,0 +1,110 @@
+[
+    {
+        "f": [],
+        "fm": "bool canJump(int A[], int n) {\r     vector<bool> marks(n, false);\r \r     if (1 == n) {\r       return true;\r     }\r \r     marks[0] = (A[0] > 0);\r \r     for (int i = 1; i < n; ++i) {\r       if (!marks[i]) {\r         for (int j = i - 1; j >= 0; --j) {\r           if (marks[j]) {\r             if ((j + A[j]) >= i) {\r               marks[i] = true;\r               break;\r             }\r           }\r         }\r       }\r     }\r \r     return marks[n - 1];\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_canJump_int_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_canJump_int_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\jump_game.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[3];;\n\n\nint n=5;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=-1810973461;\n/* NormalNumberDataNode A[1] */\nA[1]=-2057703049;\n/* NormalNumberDataNode A[2] */\nA[2]=2030134978;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_canJump_int_int_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->canJump(A,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-9\\\\jump_game.cpp\\\\Solution\\\\canJump(int[],int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\jump_game.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[3];;\n\n\nint n=5;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=-1810973461;\n/* NormalNumberDataNode A[1] */\nA[1]=-2057703049;\n/* NormalNumberDataNode A[2] */\nA[2]=2030134978;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_canJump_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_canJump_int_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\jump_game.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[3];;\n\n\nint n=6;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=433843831;\n/* NormalNumberDataNode A[1] */\nA[1]=821461684;\n/* NormalNumberDataNode A[2] */\nA[2]=-1907609563;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_canJump_int_int_random_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->canJump(A,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-9\\\\jump_game.cpp\\\\Solution\\\\canJump(int[],int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\jump_game.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[3];;\n\n\nint n=6;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=433843831;\n/* NormalNumberDataNode A[1] */\nA[1]=821461684;\n/* NormalNumberDataNode A[2] */\nA[2]=-1907609563;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool canJump(int A[], int n) {\r     vector<bool> marks(n, false);\r \r     if (1 == n) {\r       return true;\r     }\r \r     marks[0] = (A[0] > 0);\r \r     for (int i = 1; i < n; ++i) {\r       if (!marks[i]) {\r         for (int j = i - 1; j >= 0; --j) {\r           if (marks[j]) {\r             if ((j + A[j]) >= i) {\r               marks[i] = true;\r               break;\r             }\r           }\r         }\r       }\r     }\r \r     return marks[n - 1];\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-9\\jump_game.cpp\\Solution\\canJump(int[],int)"
+    },
+    {
+        "f": [],
+        "fm": "int calc_steps(int array[], int target, vector<int> &steps) {\r     if (-1 != steps[target]) {\r       return steps[target];\r     }\r \r     int min = INT_MAX;\r \r     for (int i = target - 1; i >= 0; --i) {\r       if ((i + array[i]) >= target) {\r         // 典型的动态规划啊！\r         if ((calc_steps(array, i, steps) + 1) < min) {\r           min = steps[i] + 1;\r         }\r       }\r     }\r \r     steps[target] = min;\r \r     return min;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_calc_steps_int_int_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_calc_steps_int_int_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\jump_game_ii.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint array[2];;\n\n\nint target=0;\nvector<int> steps;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode array */\n/* NormalNumberDataNode array[0] */\narray[0]=874957626;\n/* NormalNumberDataNode array[1] */\narray[1]=-789897092;\n/* NormalNumberDataNode target */\n/* VectorDataNode steps */\nint steps_element0=1815715082;\nsteps.push_back(steps_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_calc_steps_int_int_vector_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->calc_steps(array,target,steps);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-9\\\\jump_game_ii.cpp\\\\Solution\\\\calc_steps(int[],int,vector<int>&)\");\n\n\nvector<int> EXPECTED_steps;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\jump_game.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[3];;\n\n\nint n=5;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=-1810973461;\n/* NormalNumberDataNode A[1] */\nA[1]=-2057703049;\n/* NormalNumberDataNode A[2] */\nA[2]=2030134978;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int calc_steps(int array[], int target, vector<int> &steps) {\r     if (-1 != steps[target]) {\r       return steps[target];\r     }\r \r     int min = INT_MAX;\r \r     for (int i = target - 1; i >= 0; --i) {\r       if ((i + array[i]) >= target) {\r         // 典型的动态规划啊！\r         if ((calc_steps(array, i, steps) + 1) < min) {\r           min = steps[i] + 1;\r         }\r       }\r     }\r \r     steps[target] = min;\r \r     return min;\r   }\r \r   int jump(int A[], int n) {\r     vector<int> steps(n, -1); // 每一个点走几步可以到达\r \r     // 初始化steps\r     steps[0] = 0;\r     for (int i = 1; i <= min(A[0], n - 1); ++i) {\r       steps[i] = 1;\r     }\r \r     calc_steps(A, n - 1, steps);\r \r     return steps[n - 1];\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-9\\jump_game_ii.cpp\\Solution\\calc_steps(int[],int,vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int largestRectangleArea(vector<int> &height) {\r     int size = height.size();\r \r     if (0 == size) {\r       return 0;\r     }\r \r     int result = INT_MIN;\r     int index;\r     stack<int> bars;\r \r     for (int i = 0; i < size; ++i) {\r       if (!bars.empty()) {\r         // 如果堆栈顶部的元素比当前的高度高，弹出并计算可能的面积\r         while ((!bars.empty()) && (height[bars.top()] > height[i])) {\r           index = bars.top();\r           bars.pop();\r \r           if (bars.empty()) {\r             result = max(result, i * height[index]);\r           }\r           else {\r             result = max(result, (i - bars.top() - 1) * height[index]);\r           }\r         }\r       }\r \r       // 前面的元素必须小于等于当前元素\r       bars.push(i);\r     }\r \r     while (!bars.empty()) {\r       index = bars.top();\r       bars.pop();\r \r       if (bars.empty()) {\r         result = max(result, size * height[index]);\r       }\r       else {\r         result = max(result, (size - bars.top() - 1) * height[index]);\r       }\r     }\r \r     return result;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_largestRectangleArea_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_largestRectangleArea_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\largest_rectangle_in_histogram.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=-1464948385;\nheight.push_back(height_element0);\nint height_element1=1915921953;\nheight.push_back(height_element1);\nint height_element2=-532820762;\nheight.push_back(height_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_largestRectangleArea_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->largestRectangleArea(height);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-9\\\\largest_rectangle_in_histogram.cpp\\\\Solution\\\\largestRectangleArea(vector<int>&)\");\n\n\nvector<int> EXPECTED_height;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\jump_game.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[3];;\n\n\nint n=5;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=-1810973461;\n/* NormalNumberDataNode A[1] */\nA[1]=-2057703049;\n/* NormalNumberDataNode A[2] */\nA[2]=2030134978;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_largestRectangleArea_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_largestRectangleArea_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\largest_rectangle_in_histogram.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> height;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode height */\nint height_element0=1003864922;\nheight.push_back(height_element0);\nint height_element1=1179042709;\nheight.push_back(height_element1);\nint height_element2=114558281;\nheight.push_back(height_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_largestRectangleArea_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->largestRectangleArea(height);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-9\\\\largest_rectangle_in_histogram.cpp\\\\Solution\\\\largestRectangleArea(vector<int>&)\");\n\n\nvector<int> EXPECTED_height;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\jump_game.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[3];;\n\n\nint n=6;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=433843831;\n/* NormalNumberDataNode A[1] */\nA[1]=821461684;\n/* NormalNumberDataNode A[2] */\nA[2]=-1907609563;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int largestRectangleArea(vector<int> &height) {\r     int size = height.size();\r \r     if (0 == size) {\r       return 0;\r     }\r \r     int result = INT_MIN;\r     int index;\r     stack<int> bars;\r \r     for (int i = 0; i < size; ++i) {\r       if (!bars.empty()) {\r         // 如果堆栈顶部的元素比当前的高度高，弹出并计算可能的面积\r         while ((!bars.empty()) && (height[bars.top()] > height[i])) {\r           index = bars.top();\r           bars.pop();\r \r           if (bars.empty()) {\r             result = max(result, i * height[index]);\r           }\r           else {\r             result = max(result, (i - bars.top() - 1) * height[index]);\r           }\r         }\r       }\r \r       // 前面的元素必须小于等于当前元素\r       bars.push(i);\r     }\r \r     while (!bars.empty()) {\r       index = bars.top();\r       bars.pop();\r \r       if (bars.empty()) {\r         result = max(result, size * height[index]);\r       }\r       else {\r         result = max(result, (size - bars.top() - 1) * height[index]);\r       }\r     }\r \r     return result;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-9\\largest_rectangle_in_histogram.cpp\\Solution\\largestRectangleArea(vector<int>&)"
+    }
+]

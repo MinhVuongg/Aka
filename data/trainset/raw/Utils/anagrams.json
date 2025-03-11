@@ -1,0 +1,50 @@
+[
+    {
+        "f": [],
+        "fm": "vector< vector<string> > groupAnagrams(vector<string> &strs) {\r         vector< vector<string> > result;\r         map<string, int> m;\r         for(int i=0; i<strs.size(); i++){\r             string word = strs[i];\r             sort(word.begin(), word.end());\r             if (m.find(word)==m.end()){\r                 vector<string> v;\r                 v.push_back(strs[i]);\r                 result.push_back(v);\r                 m[word] = result.size()-1;\r                 \r             }else{\r                 result[m[word]].push_back(strs[i]);\r             }\r         }\r         \r         for(int i=0; i<result.size(); i++){\r             sort(result[i].begin(), result[i].end());\r         }\r         return result;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     vector< vector<string> > groupAnagrams(vector<string> &strs) {\r         vector< vector<string> > result;\r         map<string, int> m;\r         for(int i=0; i<strs.size(); i++){\r             string word = strs[i];\r             sort(word.begin(), word.end());\r             if (m.find(word)==m.end()){\r                 vector<string> v;\r                 v.push_back(strs[i]);\r                 result.push_back(v);\r                 m[word] = result.size()-1;\r                 \r             }else{\r                 result[m[word]].push_back(strs[i]);\r             }\r         }\r         \r         for(int i=0; i<result.size(); i++){\r             sort(result[i].begin(), result[i].end());\r         }\r         return result;\r     }\r      \r     //using multiset \r     vector< vector<string> > groupAnagrams01(vector<string> &strs) {\r         vector< vector<string> > result;\r         map<string, multiset<string>> m;\r         for(int i=0; i<strs.size(); i++){\r             string word = strs[i];\r             sort(word.begin(), word.end());\r             m[word].insert(strs[i]);\r         }\r         \r         for(auto item : m){\r             vector<string> v(item.second.begin(), item.second.end());\r             result.push_back(v);\r         }\r         return result;\r     }\r \r \r     //NOTICE: the below solution has been depracated as the problem has been updated!\r     vector<string> anagrams(vector<string> &strs) {\r         vector<string> result;\r         map<string, int> m;\r         for(int i=0; i<strs.size(); i++){\r             string word = strs[i];\r             //sort it can easy to check they are anagrams or not\r             sort(word.begin(), word.end());  \r             if (m.find(word)==m.end()){\r                 m[word] = i;\r             }else{\r                 if (m[word]>=0){\r                     result.push_back(strs[m[word]]);\r                     m[word]=-1;\r                 }\r                 result.push_back(strs[i]);\r             }\r         }\r         return result;\r     }\r };",
+        "c": [
+            "",
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\anagrams\\GroupAnagrams.cpp\\Solution\\groupAnagrams(vector<string>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector< vector<string> > groupAnagrams01(vector<string> &strs) {\r         vector< vector<string> > result;\r         map<string, multiset<string>> m;\r         for(int i=0; i<strs.size(); i++){\r             string word = strs[i];\r             sort(word.begin(), word.end());\r             m[word].insert(strs[i]);\r         }\r         \r         for(auto item : m){\r             vector<string> v(item.second.begin(), item.second.end());\r             result.push_back(v);\r         }\r         return result;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     vector< vector<string> > groupAnagrams(vector<string> &strs) {\r         vector< vector<string> > result;\r         map<string, int> m;\r         for(int i=0; i<strs.size(); i++){\r             string word = strs[i];\r             sort(word.begin(), word.end());\r             if (m.find(word)==m.end()){\r                 vector<string> v;\r                 v.push_back(strs[i]);\r                 result.push_back(v);\r                 m[word] = result.size()-1;\r                 \r             }else{\r                 result[m[word]].push_back(strs[i]);\r             }\r         }\r         \r         for(int i=0; i<result.size(); i++){\r             sort(result[i].begin(), result[i].end());\r         }\r         return result;\r     }\r      \r     //using multiset \r     vector< vector<string> > groupAnagrams01(vector<string> &strs) {\r         vector< vector<string> > result;\r         map<string, multiset<string>> m;\r         for(int i=0; i<strs.size(); i++){\r             string word = strs[i];\r             sort(word.begin(), word.end());\r             m[word].insert(strs[i]);\r         }\r         \r         for(auto item : m){\r             vector<string> v(item.second.begin(), item.second.end());\r             result.push_back(v);\r         }\r         return result;\r     }\r \r \r     //NOTICE: the below solution has been depracated as the problem has been updated!\r     vector<string> anagrams(vector<string> &strs) {\r         vector<string> result;\r         map<string, int> m;\r         for(int i=0; i<strs.size(); i++){\r             string word = strs[i];\r             //sort it can easy to check they are anagrams or not\r             sort(word.begin(), word.end());  \r             if (m.find(word)==m.end()){\r                 m[word] = i;\r             }else{\r                 if (m[word]>=0){\r                     result.push_back(strs[m[word]]);\r                     m[word]=-1;\r                 }\r                 result.push_back(strs[i]);\r             }\r         }\r         return result;\r     }\r };",
+        "c": [
+            "",
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\anagrams\\GroupAnagrams.cpp\\Solution\\groupAnagrams01(vector<string>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<string> anagrams(vector<string> &strs) {\r         vector<string> result;\r         map<string, int> m;\r         for(int i=0; i<strs.size(); i++){\r             string word = strs[i];\r             //sort it can easy to check they are anagrams or not\r             sort(word.begin(), word.end());  \r             if (m.find(word)==m.end()){\r                 m[word] = i;\r             }else{\r                 if (m[word]>=0){\r                     result.push_back(strs[m[word]]);\r                     m[word]=-1;\r                 }\r                 result.push_back(strs[i]);\r             }\r         }\r         return result;\r     }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     vector< vector<string> > groupAnagrams(vector<string> &strs) {\r         vector< vector<string> > result;\r         map<string, int> m;\r         for(int i=0; i<strs.size(); i++){\r             string word = strs[i];\r             sort(word.begin(), word.end());\r             if (m.find(word)==m.end()){\r                 vector<string> v;\r                 v.push_back(strs[i]);\r                 result.push_back(v);\r                 m[word] = result.size()-1;\r                 \r             }else{\r                 result[m[word]].push_back(strs[i]);\r             }\r         }\r         \r         for(int i=0; i<result.size(); i++){\r             sort(result[i].begin(), result[i].end());\r         }\r         return result;\r     }\r      \r     //using multiset \r     vector< vector<string> > groupAnagrams01(vector<string> &strs) {\r         vector< vector<string> > result;\r         map<string, multiset<string>> m;\r         for(int i=0; i<strs.size(); i++){\r             string word = strs[i];\r             sort(word.begin(), word.end());\r             m[word].insert(strs[i]);\r         }\r         \r         for(auto item : m){\r             vector<string> v(item.second.begin(), item.second.end());\r             result.push_back(v);\r         }\r         return result;\r     }\r \r \r     //NOTICE: the below solution has been depracated as the problem has been updated!\r     vector<string> anagrams(vector<string> &strs) {\r         vector<string> result;\r         map<string, int> m;\r         for(int i=0; i<strs.size(); i++){\r             string word = strs[i];\r             //sort it can easy to check they are anagrams or not\r             sort(word.begin(), word.end());  \r             if (m.find(word)==m.end()){\r                 m[word] = i;\r             }else{\r                 if (m[word]>=0){\r                     result.push_back(strs[m[word]]);\r                     m[word]=-1;\r                 }\r                 result.push_back(strs[i]);\r             }\r         }\r         return result;\r     }\r };",
+        "c": [
+            "",
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Projects\\SQA-LAB\\AKA\\prj-data\\haoel_leetcode\\algorithms\\cpp\\anagrams\\GroupAnagrams.cpp\\Solution\\anagrams(vector<string>&)"
+    }
+]

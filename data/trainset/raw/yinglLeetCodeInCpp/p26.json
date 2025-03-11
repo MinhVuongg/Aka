@@ -1,0 +1,94 @@
+[
+    {
+        "f": [],
+        "fm": "void rotate(vector<vector<int> > &matrix) {\r     int n = matrix.size();\r \r     if (n <= 1) {\r       return;\r     }\r \r     int top = 0;\r     int bottom = n - 1;\r     int left = 0;\r     int right = n - 1;\r \r     while ((top < bottom) && (left < right)) {\r       int steps = right - left + 1;\r \r       for (int i = left; i < right; ++i) {\r         int tmp = matrix[top][i];\r \r         steps = i - left;\r         matrix[top][i] = matrix[bottom - steps][left];\r         matrix[bottom -steps][left] = matrix[bottom][right - steps];\r         matrix[bottom][right - steps] = matrix[top + steps][right];\r         matrix[top + steps][right] = tmp;\r       }\r \r       ++top;\r       --bottom;\r       ++left;\r       --right;\r     }\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_rotate_vector_vector_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_rotate_vector_vector_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_rotate_vector_vector_int_directed_0\");AKA_INSTANCE___Solution->rotate(matrix);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-21\\\\rotate_image.cpp\\\\Solution\\\\rotate(vector<vector<int>>&)\");\n\n/* error assertion */\nvector<vector<int>> EXPECTED_matrix;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_rotate_vector_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_rotate_vector_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-110210008;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=1580515888;\nmatrix_element0.push_back(matrix_element0_element1);\nmatrix.push_back(matrix_element0);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_rotate_vector_vector_int_random_2\");AKA_INSTANCE___Solution->rotate(matrix);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-21\\\\rotate_image.cpp\\\\Solution\\\\rotate(vector<vector<int>>&)\");\n\n/* error assertion */\nvector<vector<int>> EXPECTED_matrix;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-110210008;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=1580515888;\nmatrix_element0.push_back(matrix_element0_element1);\nmatrix.push_back(matrix_element0);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_rotate_vector_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_rotate_vector_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-212762741;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=2070304605;\nmatrix_element0.push_back(matrix_element0_element1);\nmatrix.push_back(matrix_element0);\nvector<int> matrix_element1;\nint matrix_element1_element0=2037744170;\nmatrix_element1.push_back(matrix_element1_element0);\nint matrix_element1_element1=1931361686;\nmatrix_element1.push_back(matrix_element1_element1);\nint matrix_element1_element2=1120640478;\nmatrix_element1.push_back(matrix_element1_element2);\nmatrix.push_back(matrix_element1);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_rotate_vector_vector_int_random_0\");AKA_INSTANCE___Solution->rotate(matrix);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-21\\\\rotate_image.cpp\\\\Solution\\\\rotate(vector<vector<int>>&)\");\n\n/* error assertion */\nvector<vector<int>> EXPECTED_matrix;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-212762741;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=2070304605;\nmatrix_element0.push_back(matrix_element0_element1);\nmatrix.push_back(matrix_element0);\nvector<int> matrix_element1;\nint matrix_element1_element0=2037744170;\nmatrix_element1.push_back(matrix_element1_element0);\nint matrix_element1_element1=1931361686;\nmatrix_element1.push_back(matrix_element1_element1);\nint matrix_element1_element2=1120640478;\nmatrix_element1.push_back(matrix_element1_element2);\nmatrix.push_back(matrix_element1);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   void rotate(vector<vector<int> > &matrix) {\r     int n = matrix.size();\r \r     if (n <= 1) {\r       return;\r     }\r \r     int top = 0;\r     int bottom = n - 1;\r     int left = 0;\r     int right = n - 1;\r \r     while ((top < bottom) && (left < right)) {\r       int steps = right - left + 1;\r \r       for (int i = left; i < right; ++i) {\r         int tmp = matrix[top][i];\r \r         steps = i - left;\r         matrix[top][i] = matrix[bottom - steps][left];\r         matrix[bottom -steps][left] = matrix[bottom][right - steps];\r         matrix[bottom][right - steps] = matrix[top + steps][right];\r         matrix[top + steps][right] = tmp;\r       }\r \r       ++top;\r       --bottom;\r       ++left;\r       --right;\r     }\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-21\\rotate_image.cpp\\Solution\\rotate(vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "bool isScramble(string s1, string s2) {\r     if (s1.length() != s2.length()) {\r       return false;\r     }\r \r     int len = s1.length();\r     vector<vector<vector<bool> > > scramble_status(len, vector<vector<bool> >(len, vector<bool>(len)));\r     int i;\r     int j;\r     int k;\r     int sub_len;\r \r     // 先对长度为1的子串进行判定并保存结果，\r     // 然后对字串长度不断增加，直到等于len，\r     // 利用递推算出结果。\r     for (i = 0; i < len; ++i) {\r       for (j = 0; j < len; ++j) {\r         scramble_status[0][i][j] = (s1[i] == s2[j]);\r       }\r     }\r \r     for (sub_len = 2; sub_len <= len; ++sub_len) {\r       for (i = len - sub_len; i >= 0; --i) {\r         for (j = len - sub_len; j >= 0; --j) {\r           bool scramble = false;\r \r           for (k = 1; (k < sub_len) && !scramble; ++k) {\r             scramble = scramble_status[k - 1][i][j]  && scramble_status[sub_len - k - 1][i + k][j + k];\r             scramble = scramble || (scramble_status[k - 1][i][j + sub_len - k] && scramble_status[sub_len - k - 1][i + k][j]);\r           }\r \r           scramble_status[sub_len - 1][i][j] = scramble;\r         }\r       }\r     }\r \r     return scramble_status[len - 1][0][0];\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isScramble_string_string_random_1(void) {\n{\nAKA_test_case_name=\"Solution_isScramble_string_string_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\scramble_string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName371955 = new char[2];akaRandomName371955[0] = 123;akaRandomName371955[1] = '\\0';string s1=akaRandomName371955;\nchar* akaRandomName344259 = new char[2];akaRandomName344259[0] = 95;akaRandomName344259[1] = '\\0';string s2=akaRandomName344259;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s1 */\n/* NormalStringDataNode s2 */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isScramble_string_string_random_1\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isScramble(s1,s2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-21\\\\scramble_string.cpp\\\\Solution\\\\isScramble(string,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_isScramble_string_string_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_isScramble_string_string_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\scramble_string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring s1=\"\";\nstring s2=\"\";\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s1 */\n/* NormalStringDataNode s2 */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_isScramble_string_string_directed_0\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->isScramble(s1,s2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-21\\\\scramble_string.cpp\\\\Solution\\\\isScramble(string,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\rotate_image.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-110210008;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=1580515888;\nmatrix_element0.push_back(matrix_element0_element1);\nmatrix.push_back(matrix_element0);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool isScramble(string s1, string s2) {\r     if (s1.length() != s2.length()) {\r       return false;\r     }\r \r     int len = s1.length();\r     vector<vector<vector<bool> > > scramble_status(len, vector<vector<bool> >(len, vector<bool>(len)));\r     int i;\r     int j;\r     int k;\r     int sub_len;\r \r     // 先对长度为1的子串进行判定并保存结果，\r     // 然后对字串长度不断增加，直到等于len，\r     // 利用递推算出结果。\r     for (i = 0; i < len; ++i) {\r       for (j = 0; j < len; ++j) {\r         scramble_status[0][i][j] = (s1[i] == s2[j]);\r       }\r     }\r \r     for (sub_len = 2; sub_len <= len; ++sub_len) {\r       for (i = len - sub_len; i >= 0; --i) {\r         for (j = len - sub_len; j >= 0; --j) {\r           bool scramble = false;\r \r           for (k = 1; (k < sub_len) && !scramble; ++k) {\r             scramble = scramble_status[k - 1][i][j]  && scramble_status[sub_len - k - 1][i + k][j + k];\r             scramble = scramble || (scramble_status[k - 1][i][j + sub_len - k] && scramble_status[sub_len - k - 1][i + k][j]);\r           }\r \r           scramble_status[sub_len - 1][i][j] = scramble;\r         }\r       }\r     }\r \r     return scramble_status[len - 1][0][0];\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-21\\scramble_string.cpp\\Solution\\isScramble(string,string)"
+    }
+]

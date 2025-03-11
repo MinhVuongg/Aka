@@ -1,0 +1,254 @@
+[
+    {
+        "f": [],
+        "fm": "vector<vector<int> > twoSumSorted(const vector<int>& v, int L, int H, int S) {\r     vector<vector<int> > result;\r     while (L < H) {\r       int sum = v[L] + v[H];\r       if (sum > S) H --;\r       else if (sum < S) L ++;\r       else {\r \tint p[] = {v[L], v[H]};\r \tresult.push_back(vector<int>(p, p + 2));\r \twhile (L < v.size() && v[L] == p[0]) L ++;\r \twhile (H >= 0 && v[H] == p[1]) H --;\r       }\r     }\r     return result;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_twoSumSorted_vector_int_const_int_int_int_directed_1(void) {\n{\nAKA_test_case_name=\"Solution_twoSumSorted_vector_int_const_int_int_int_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\3Sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int>v;\n\n\nint L=0;\n\n\nint H=6;\n\n\nint S=-1;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\n/* element #0 : null value -> no code */\nv.push_back(v_element0);\n/* NormalNumberDataNode L */\n/* NormalNumberDataNode H */\n/* NormalNumberDataNode S */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_twoSumSorted_vector_int_const_int_int_int_directed_1\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->twoSumSorted(v,L,H,S);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\three\\\\3Sum.cpp\\\\Solution\\\\twoSumSorted(vector<int>const&,int,int,int)\");\n\n\nvector<int>const EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\3Sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int>v;\n\n\nint L=0;\n\n\nint H=6;\n\n\nint S=-1;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\n/* element #0 : null value -> no code */\nv.push_back(v_element0);\n/* NormalNumberDataNode L */\n/* NormalNumberDataNode H */\n/* NormalNumberDataNode S */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_twoSumSorted_vector_int_const_int_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_twoSumSorted_vector_int_const_int_int_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\3Sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int>v;\n\n\nint L=0;\n\n\nint H=9;\n\n\nint S=-1;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\n/* element #0 : null value -> no code */\nv.push_back(v_element0);\n/* NormalNumberDataNode L */\n/* NormalNumberDataNode H */\n/* NormalNumberDataNode S */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_twoSumSorted_vector_int_const_int_int_int_directed_0\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->twoSumSorted(v,L,H,S);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\three\\\\3Sum.cpp\\\\Solution\\\\twoSumSorted(vector<int>const&,int,int,int)\");\n\n\nvector<int>const EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\3Sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int>v;\n\n\nint L=0;\n\n\nint H=9;\n\n\nint S=-1;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\n/* element #0 : null value -> no code */\nv.push_back(v_element0);\n/* NormalNumberDataNode L */\n/* NormalNumberDataNode H */\n/* NormalNumberDataNode S */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_twoSumSorted_vector_int_const_int_int_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_twoSumSorted_vector_int_const_int_int_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\3Sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int>v;\n\n\nint L=5;\n\n\nint H=7;\n\n\nint S=-978623792;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nint v_element0=1049920059;\nv.push_back(v_element0);\nint v_element1=354406649;\nv.push_back(v_element1);\nint v_element2=-1740233129;\nv.push_back(v_element2);\n/* NormalNumberDataNode L */\n/* NormalNumberDataNode H */\n/* NormalNumberDataNode S */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_twoSumSorted_vector_int_const_int_int_int_random_3\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->twoSumSorted(v,L,H,S);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\three\\\\3Sum.cpp\\\\Solution\\\\twoSumSorted(vector<int>const&,int,int,int)\");\n\n\nvector<int>const EXPECTED_v;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\3Sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int>v;\n\n\nint L=5;\n\n\nint H=7;\n\n\nint S=-978623792;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode v */\nint v_element0=1049920059;\nv.push_back(v_element0);\nint v_element1=354406649;\nv.push_back(v_element1);\nint v_element2=-1740233129;\nv.push_back(v_element2);\n/* NormalNumberDataNode L */\n/* NormalNumberDataNode H */\n/* NormalNumberDataNode S */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   vector<vector<int> > twoSumSorted(const vector<int>& v, int L, int H, int S) {\r     vector<vector<int> > result;\r     while (L < H) {\r       int sum = v[L] + v[H];\r       if (sum > S) H --;\r       else if (sum < S) L ++;\r       else {\r \tint p[] = {v[L], v[H]};\r \tresult.push_back(vector<int>(p, p + 2));\r \twhile (L < v.size() && v[L] == p[0]) L ++;\r \twhile (H >= 0 && v[H] == p[1]) H --;\r       }\r     }\r     return result;\r   }\r   vector<vector<int> > threeSum(vector<int> &num) {\r     sort(num.begin(), num.end());\r     vector<vector<int> > result;\r     for (int i = 0; i < num.size(); ++i) {\r       if (i > 0 && num[i] == num[i - 1]) continue;\r       vector<vector<int> > p = twoSumSorted(num, i + 1, num.size() - 1, -num[i]);\r       for (int j = 0; j < p.size(); ++j) {\r \tp[j].insert(p[j].begin(), num[i]);\r \tresult.push_back(p[j]);\r       }\r     }\r     return result;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\three\\3Sum.cpp\\Solution\\twoSumSorted(vector<int>const&,int,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "vector<vector<int> > threeSum(vector<int> &num) {\r     sort(num.begin(), num.end());\r     vector<vector<int> > result;\r     for (int i = 0; i < num.size(); ++i) {\r       if (i > 0 && num[i] == num[i - 1]) continue;\r       vector<vector<int> > p = twoSumSorted(num, i + 1, num.size() - 1, -num[i]);\r       for (int j = 0; j < p.size(); ++j) {\r \tp[j].insert(p[j].begin(), num[i]);\r \tresult.push_back(p[j]);\r       }\r     }\r     return result;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_threeSum_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_threeSum_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\3Sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=1994561205;\nnum.push_back(num_element0);\nint num_element1=-384905884;\nnum.push_back(num_element1);\nint num_element2=-518873049;\nnum.push_back(num_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_threeSum_vector_int_random_3\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->threeSum(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\three\\\\3Sum.cpp\\\\Solution\\\\threeSum(vector<int>&)\");\n\n\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\3Sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=1994561205;\nnum.push_back(num_element0);\nint num_element1=-384905884;\nnum.push_back(num_element1);\nint num_element2=-518873049;\nnum.push_back(num_element2);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_threeSum_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_threeSum_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\3Sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=2077517506;\nnum.push_back(num_element0);\nint num_element1=1633044623;\nnum.push_back(num_element1);\nint num_element2=-2032588108;\nnum.push_back(num_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_threeSum_vector_int_random_1\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->threeSum(num);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\three\\\\3Sum.cpp\\\\Solution\\\\threeSum(vector<int>&)\");\n\n\nvector<int> EXPECTED_num;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\3Sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> num;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode num */\nint num_element0=2077517506;\nnum.push_back(num_element0);\nint num_element1=1633044623;\nnum.push_back(num_element1);\nint num_element2=-2032588108;\nnum.push_back(num_element2);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   vector<vector<int> > twoSumSorted(const vector<int>& v, int L, int H, int S) {\r     vector<vector<int> > result;\r     while (L < H) {\r       int sum = v[L] + v[H];\r       if (sum > S) H --;\r       else if (sum < S) L ++;\r       else {\r \tint p[] = {v[L], v[H]};\r \tresult.push_back(vector<int>(p, p + 2));\r \twhile (L < v.size() && v[L] == p[0]) L ++;\r \twhile (H >= 0 && v[H] == p[1]) H --;\r       }\r     }\r     return result;\r   }\r   vector<vector<int> > threeSum(vector<int> &num) {\r     sort(num.begin(), num.end());\r     vector<vector<int> > result;\r     for (int i = 0; i < num.size(); ++i) {\r       if (i > 0 && num[i] == num[i - 1]) continue;\r       vector<vector<int> > p = twoSumSorted(num, i + 1, num.size() - 1, -num[i]);\r       for (int j = 0; j < p.size(); ++j) {\r \tp[j].insert(p[j].begin(), num[i]);\r \tresult.push_back(p[j]);\r       }\r     }\r     return result;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\three\\3Sum.cpp\\Solution\\threeSum(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int search(int A[], int n, int target) {\r     return search(A, 0, n - 1, target);\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_search_int_int_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_search_int_int_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Search_in_Rotated_Sorted_Array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[3];;\n\n\nint n=-1675785310;\n\n\nint target=-1036365824;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=30708285;\n/* NormalNumberDataNode A[1] */\nA[1]=1772590894;\n/* NormalNumberDataNode A[2] */\nA[2]=-2100475647;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_search_int_int_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->search(A,n,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\three\\\\Search_in_Rotated_Sorted_Array.cpp\\\\Solution\\\\search(int[],int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Search_in_Rotated_Sorted_Array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[3];;\n\n\nint n=-1675785310;\n\n\nint target=-1036365824;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=30708285;\n/* NormalNumberDataNode A[1] */\nA[1]=1772590894;\n/* NormalNumberDataNode A[2] */\nA[2]=-2100475647;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_search_int_int_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_search_int_int_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Search_in_Rotated_Sorted_Array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[2];;\n\n\nint n=744856115;\n\n\nint target=-2070942582;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=1759556578;\n/* NormalNumberDataNode A[1] */\nA[1]=828785956;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_search_int_int_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->search(A,n,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\three\\\\Search_in_Rotated_Sorted_Array.cpp\\\\Solution\\\\search(int[],int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Search_in_Rotated_Sorted_Array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[2];;\n\n\nint n=744856115;\n\n\nint target=-2070942582;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=1759556578;\n/* NormalNumberDataNode A[1] */\nA[1]=828785956;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int search(int A[], int n, int target) {\r     return search(A, 0, n - 1, target);\r   }\r private:\r   int search(int *A, int L, int R, int target) {\r     while (L <= R) {\r       int M = L + (R - L) / 2;\r       if (A[M] == target) return M;\r       if (A[M] > A[L]) { // Left part sorted\r \tif (A[L] <= target && target < A[M]) R = M - 1;\r \telse L = M + 1;\r       } else if (A[M] < A[L]) { // Right part sorted\r \tif (A[M] < target && target <= A[R]) L = M + 1;\r \telse R = M - 1;\r       } else { // A[M] == A[L], need to search both sides\r \treturn max(search(A, L, M - 1, target), search(A, M + 1, R, target));\r       }\r     }\r     return -1;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\three\\Search_in_Rotated_Sorted_Array.cpp\\Solution\\search(int[],int,int)"
+    },
+    {
+        "f": [],
+        "fm": "bool search(int A[], int n, int target) {\r     return search(A, 0, n - 1, target);\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_search_int_int_int_random_7(void) {\n{\nAKA_test_case_name=\"Solution_search_int_int_int_random_7\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Search_in_Rotated_Sorted_Array_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[1];;\n\n\nint n=1107222912;\n\n\nint target=-640799477;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=1903866887;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_search_int_int_int_random_7\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->search(A,n,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\three\\\\Search_in_Rotated_Sorted_Array_II.cpp\\\\Solution\\\\search(int[],int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Search_in_Rotated_Sorted_Array_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[1];;\n\n\nint n=1107222912;\n\n\nint target=-640799477;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=1903866887;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_search_int_int_int_random_9(void) {\n{\nAKA_test_case_name=\"Solution_search_int_int_int_random_9\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Search_in_Rotated_Sorted_Array_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[3];;\n\n\nint n=-395835942;\n\n\nint target=187566865;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=217290638;\n/* NormalNumberDataNode A[1] */\nA[1]=-1013238992;\n/* NormalNumberDataNode A[2] */\nA[2]=1248421102;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_search_int_int_int_random_9\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->search(A,n,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\three\\\\Search_in_Rotated_Sorted_Array_II.cpp\\\\Solution\\\\search(int[],int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Search_in_Rotated_Sorted_Array_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[3];;\n\n\nint n=-395835942;\n\n\nint target=187566865;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=217290638;\n/* NormalNumberDataNode A[1] */\nA[1]=-1013238992;\n/* NormalNumberDataNode A[2] */\nA[2]=1248421102;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode target */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   bool search(int A[], int n, int target) {\r     return search(A, 0, n - 1, target);\r   }\r private:\r   bool search(int *A, int L, int R, int target) {\r     while (L <= R) {\r       int M = L + (R - L) / 2;\r       if (A[M] == target) return true;\r       if (A[M] > A[L]) { // Left part sorted\r \tif (A[L] <= target && target <= A[M]) R = M - 1;\r \telse L = M + 1;\r       } else if (A[M] < A[L]) { // Right part sorted\r \tif (A[M] <= target && target <= A[R]) L = M + 1;\r \telse R = M - 1;\r       } else return search(A, L, M - 1, target) || search(A, M + 1, R, target);\r     }\r     return false;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\three\\Search_in_Rotated_Sorted_Array_II.cpp\\Solution\\search(int[],int,int)"
+    },
+    {
+        "f": [],
+        "fm": "string simplifyPath(string path) {\r     deque<string> Q;\r     int pos = path.find('/');\r     while (pos + 1 < path.size()) {\r       int new_pos = path.find('/', pos + 1);\r       if (new_pos == string::npos) new_pos = path.size();\r       string p = path.substr(pos + 1, new_pos - pos - 1);\r       pos = new_pos;\r       if (p.size()) {\r \tif (p == \"..\") {\r \t  if (!Q.empty()) Q.pop_back();\r \t}\r \telse if (p == \".\") continue;\r \telse Q.push_back(p);\r       }\r     }\r     string res = \"\";\r     while (!Q.empty()) {\r       res += \"/\" + Q.front();\r       Q.pop_front();\r     }\r     return res.size() ? res : \"/\";\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_simplifyPath_string_directed_1(void) {\n{\nAKA_test_case_name=\"Solution_simplifyPath_string_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Simplify_Path.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring path=\"\";\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode path */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_simplifyPath_string_directed_1\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->simplifyPath(path);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\three\\\\Simplify_Path.cpp\\\\Solution\\\\simplifyPath(string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Simplify_Path.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring path=\"\";\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode path */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_simplifyPath_string_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_simplifyPath_string_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Simplify_Path.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring path=\"\";\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode path */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_simplifyPath_string_directed_0\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->simplifyPath(path);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\three\\\\Simplify_Path.cpp\\\\Solution\\\\simplifyPath(string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Simplify_Path.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstring path=\"\";\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode path */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_simplifyPath_string_random_4(void) {\n{\nAKA_test_case_name=\"Solution_simplifyPath_string_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Simplify_Path.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName374042 = new char[2];akaRandomName374042[0] = -4;akaRandomName374042[1] = '\\0';string path=akaRandomName374042;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode path */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_simplifyPath_string_random_4\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->simplifyPath(path);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\three\\\\Simplify_Path.cpp\\\\Solution\\\\simplifyPath(string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Simplify_Path.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName473179 = new char[2];akaRandomName473179[0] = -4;akaRandomName473179[1] = '\\0';string path=akaRandomName473179;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode path */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   string simplifyPath(string path) {\r     deque<string> Q;\r     int pos = path.find('/');\r     while (pos + 1 < path.size()) {\r       int new_pos = path.find('/', pos + 1);\r       if (new_pos == string::npos) new_pos = path.size();\r       string p = path.substr(pos + 1, new_pos - pos - 1);\r       pos = new_pos;\r       if (p.size()) {\r \tif (p == \"..\") {\r \t  if (!Q.empty()) Q.pop_back();\r \t}\r \telse if (p == \".\") continue;\r \telse Q.push_back(p);\r       }\r     }\r     string res = \"\";\r     while (!Q.empty()) {\r       res += \"/\" + Q.front();\r       Q.pop_front();\r     }\r     return res.size() ? res : \"/\";\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\three\\Simplify_Path.cpp\\Solution\\simplifyPath(string)"
+    },
+    {
+        "f": [],
+        "fm": "void sortColors(int A[], int n) {\r     int i0 = 0, i2 = n - 1, i = 0;\r     while (i <= i2) {\r       if (A[i] == 0) swap(A[i0 ++], A[i ++]);\r       else if (A[i] == 1) i ++;\r       else swap(A[i], A[i2 --]);\r     }\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_sortColors_int_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_sortColors_int_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Sort_Colors.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[1];;\n\n\nint n=2;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=2021645828;\n/* NormalNumberDataNode n */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_sortColors_int_int_random_4\");AKA_INSTANCE___Solution->sortColors(A,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\three\\\\Sort_Colors.cpp\\\\Solution\\\\sortColors(int[],int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Sort_Colors.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nint A[1];;\n\n\nint n=2;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode A */\n/* NormalNumberDataNode A[0] */\nA[0]=2021645828;\n/* NormalNumberDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   void sortColors(int A[], int n) {\r     int i0 = 0, i2 = n - 1, i = 0;\r     while (i <= i2) {\r       if (A[i] == 0) swap(A[i0 ++], A[i ++]);\r       else if (A[i] == 1) i ++;\r       else swap(A[i], A[i2 --]);\r     }\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\three\\Sort_Colors.cpp\\Solution\\sortColors(int[],int)"
+    }
+]

@@ -1,0 +1,274 @@
+[
+    {
+        "f": [],
+        "fm": "int countComponents(int n, vector<vector<int>>& edges) {         unordered_map<int, vector<int>> graph;         unordered_map<int, bool> visited;         for (int i = 0; i < n; i++) {             graph[i] = {};             visited[i] = false;         }         for (vector<int> v : edges) {             int from = v[0];             int to = v[1];             graph[from].push_back(to);             graph[to].push_back(from);         }         int result = 0;         int numVisited = 0;                  auto it = graph.begin();                  while (numVisited < n) {             int node = it->first;             if (!visited[node]) {                 queue<int> q;                 q.emplace(node);                 while (!q.empty()) {                     int currNode = q.front();                     q.pop();                     visited[currNode] = true;                     numVisited++;                     for (int neighbor : it->second) {                         if (!visited[neighbor]) {                             q.emplace(neighbor);                         }                     }                 }                 result++;             }             it++;         }         return result;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countComponents_int_vector_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_countComponents_int_vector_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/323-components-in-undirected-graph.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=7;\nvector<vector<int>> edges;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode edges */\nvector<int> edges_element0;\nint edges_element0_element0=2057414196;\nedges_element0.push_back(edges_element0_element0);\nedges.push_back(edges_element0);\nvector<int> edges_element1;\nint edges_element1_element0=503568633;\nedges_element1.push_back(edges_element1_element0);\nint edges_element1_element1=1799212667;\nedges_element1.push_back(edges_element1_element1);\nint edges_element1_element2=288345067;\nedges_element1.push_back(edges_element1_element2);\nedges.push_back(edges_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countComponents_int_vector_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countComponents(n,edges);\nAKA_fCall++;AKA_mark(\"Return from: ./8/323-components-in-undirected-graph.cpp/Solution/countComponents(int,vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_edges;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/323-components-in-undirected-graph.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=7;\nvector<vector<int>> edges;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode edges */\nvector<int> edges_element0;\nint edges_element0_element0=2057414196;\nedges_element0.push_back(edges_element0_element0);\nedges.push_back(edges_element0);\nvector<int> edges_element1;\nint edges_element1_element0=503568633;\nedges_element1.push_back(edges_element1_element0);\nint edges_element1_element1=1799212667;\nedges_element1.push_back(edges_element1_element1);\nint edges_element1_element2=288345067;\nedges_element1.push_back(edges_element1_element2);\nedges.push_back(edges_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int countComponents(int n, vector<vector<int>>& edges) {         unordered_map<int, vector<int>> graph;         unordered_map<int, bool> visited;         for (int i = 0; i < n; i++) {             graph[i] = {};             visited[i] = false;         }         for (vector<int> v : edges) {             int from = v[0];             int to = v[1];             graph[from].push_back(to);             graph[to].push_back(from);         }         int result = 0;         int numVisited = 0;                  auto it = graph.begin();                  while (numVisited < n) {             int node = it->first;             if (!visited[node]) {                 queue<int> q;                 q.emplace(node);                 while (!q.empty()) {                     int currNode = q.front();                     q.pop();                     visited[currNode] = true;                     numVisited++;                     for (int neighbor : it->second) {                         if (!visited[neighbor]) {                             q.emplace(neighbor);                         }                     }                 }                 result++;             }             it++;         }         return result;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/8/323-components-in-undirected-graph.cpp/Solution/countComponents(int,vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> topKFrequent(vector<int>& nums, int k) {                  unordered_map<int, int> counts;                  for (int a : nums) {             auto it = counts.find(a);             if (it != counts.end()) {                 it->second++;             } else {                 counts[a] = 1;             }         }                  priority_queue<KeyWithFreq, vector<KeyWithFreq>, function<bool(KeyWithFreq, KeyWithFreq)>>              min_heap([](const KeyWithFreq &a, const KeyWithFreq &b) { return a.times <= b.times; });                  auto it = counts.begin();         while (it != counts.end()) {             min_heap.emplace(KeyWithFreq(it->first, it->second));             it++;         }                  vector<int> result;                  for (int i = 0; i < k; i++) {             result.push_back(min_heap.top().key);             min_heap.pop();         }         return result;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_topKFrequent_vector_int_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_topKFrequent_vector_int_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/347-top-k-frequent-elements.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint k=2;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-149482343;\nnums.push_back(nums_element0);\n/* NormalNumberDataNode k */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_topKFrequent_vector_int_int_random_1\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->topKFrequent(nums,k);\nAKA_fCall++;AKA_mark(\"Return from: ./8/347-top-k-frequent-elements.cpp/Solution/topKFrequent(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/347-top-k-frequent-elements.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint k=2;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=-149482343;\nnums.push_back(nums_element0);\n/* NormalNumberDataNode k */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     struct KeyWithFreq {         int key;         int times;         KeyWithFreq(int a, int b) : key(a), times(b) {};     };          vector<int> topKFrequent(vector<int>& nums, int k) {                  unordered_map<int, int> counts;                  for (int a : nums) {             auto it = counts.find(a);             if (it != counts.end()) {                 it->second++;             } else {                 counts[a] = 1;             }         }                  priority_queue<KeyWithFreq, vector<KeyWithFreq>, function<bool(KeyWithFreq, KeyWithFreq)>>              min_heap([](const KeyWithFreq &a, const KeyWithFreq &b) { return a.times <= b.times; });                  auto it = counts.begin();         while (it != counts.end()) {             min_heap.emplace(KeyWithFreq(it->first, it->second));             it++;         }                  vector<int> result;                  for (int i = 0; i < k; i++) {             result.push_back(min_heap.top().key);             min_heap.pop();         }         return result;     }  };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/8/347-top-k-frequent-elements.cpp/Solution/topKFrequent(vector<int>&,int)"
+    },
+    {
+        "f": [
+            "unordered_map<string, int> stream;"
+        ],
+        "fm": "bool shouldPrintMessage(int timestamp, string message) {         auto it = stream.find(message);         if (it != stream.end()) {             if (timestamp - it->second >= 10) {                 it->second = timestamp;                 return true;             } else {                 return false;             }         } else {             stream[message] = timestamp;             return true;         }     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Logger_shouldPrintMessage_int_string_random_3(void) {\n{\nAKA_test_case_name=\"Logger_shouldPrintMessage_int_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Logger */\n/* ConstructorDataNode Logger() */\nAKA_mark(\"Calling: ./8/359-logger-rate-limiter.cpp/Logger/Logger()|ROOT/359-logger-rate-limiter.cpp/GLOBAL/AKA_INSTANCE___Logger/AKA_INSTANCE___Logger/Logger()\");AKA_fCall++;AKA_INSTANCE___Logger = new ::Logger();\n/* UnorderedMapDataNode stream */\n\n\n\n\nint timestamp=-1447693699;\nchar* akaRandomName878222 = new char[2];akaRandomName878222[0] = 26;akaRandomName878222[1] = '\\0';string message=akaRandomName878222;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode timestamp */\n/* NormalStringDataNode message */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Logger_shouldPrintMessage_int_string_random_3\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Logger->shouldPrintMessage(timestamp,message);\nAKA_fCall++;AKA_mark(\"Return from: ./8/359-logger-rate-limiter.cpp/Logger/shouldPrintMessage(int,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Logger */\n/* ConstructorDataNode Logger() */\nAKA_mark(\"Calling: ./8/359-logger-rate-limiter.cpp/Logger/Logger()|ROOT/359-logger-rate-limiter.cpp/GLOBAL/AKA_INSTANCE___Logger/AKA_INSTANCE___Logger/Logger()\");AKA_fCall++;AKA_INSTANCE___Logger = new ::Logger();\n/* UnorderedMapDataNode stream */\n\n\n\n\nint timestamp=-1447693699;\nchar* akaRandomName746696 = new char[2];akaRandomName746696[0] = 26;akaRandomName746696[1] = '\\0';string message=akaRandomName746696;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode timestamp */\n/* NormalStringDataNode message */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Logger { public:     /** Initialize your data structure here. */     unordered_map<string, int> stream;          Logger() {              }     /** Returns true if the message should be printed in the given timestamp, otherwise returns false.         If this method returns false, the message will not be printed.         The timestamp is in seconds granularity. */     bool shouldPrintMessage(int timestamp, string message) {         auto it = stream.find(message);         if (it != stream.end()) {             if (timestamp - it->second >= 10) {                 it->second = timestamp;                 return true;             } else {                 return false;             }         } else {             stream[message] = timestamp;             return true;         }     } };",
+        "c": [
+            "Logger() {\n        \n    }"
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/8/359-logger-rate-limiter.cpp/Logger/shouldPrintMessage(int,string)"
+    },
+    {
+        "f": [],
+        "fm": "string decodeString(string s) {         stack<string> decodedStack;         stack<int> numStack;         decodedStack.push(\"\");         int numBegin = -1;         for (int i = 0; i < s.size(); i++) {             if (isdigit(s[i]) && numBegin == -1) {                 numBegin = i;             } else if (s[i] == '[') {                 numStack.push(stoi(s.substr(numBegin, i - numBegin)));                 numBegin = -1;                 decodedStack.push(\"\");             } else if (s[i] == ']') {                 string decodedString;                 for (int j = 0; j < numStack.top(); j++) {                     decodedString += decodedStack.top();                 }                 decodedStack.pop();                 numStack.pop();                 decodedStack.top() += decodedString;             } else if (numBegin == -1) {                 decodedStack.top() += s[i];             }         }         return decodedStack.top();     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_decodeString_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_decodeString_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/394-decode-string.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName764407 = new char[2];akaRandomName764407[0] = 116;akaRandomName764407[1] = '\\0';string s=akaRandomName764407;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_decodeString_string_random_3\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->decodeString(s);\nAKA_fCall++;AKA_mark(\"Return from: ./8/394-decode-string.cpp/Solution/decodeString(string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/394-decode-string.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName162471 = new char[2];akaRandomName162471[0] = 116;akaRandomName162471[1] = '\\0';string s=akaRandomName162471;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:         string decodeString(string s) {         stack<string> decodedStack;         stack<int> numStack;         decodedStack.push(\"\");         int numBegin = -1;         for (int i = 0; i < s.size(); i++) {             if (isdigit(s[i]) && numBegin == -1) {                 numBegin = i;             } else if (s[i] == '[') {                 numStack.push(stoi(s.substr(numBegin, i - numBegin)));                 numBegin = -1;                 decodedStack.push(\"\");             } else if (s[i] == ']') {                 string decodedString;                 for (int j = 0; j < numStack.top(); j++) {                     decodedString += decodedStack.top();                 }                 decodedStack.pop();                 numStack.pop();                 decodedStack.top() += decodedString;             } else if (numBegin == -1) {                 decodedStack.top() += s[i];             }         }         return decodedStack.top();     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/8/394-decode-string.cpp/Solution/decodeString(string)"
+    },
+    {
+        "f": [
+            "unordered_map<string, vector<pair<string, double>>> m;",
+            "unordered_map<string, bool> v;"
+        ],
+        "fm": "double dfs(string start, string end) {         double result = -1.0;         for (auto it = v.begin(); it != v.end(); it++) it->second = false;         stack<pair<string, double>> s;         s.push(make_pair(start, 1.0));         while (!s.empty()) {             pair<string, double> curr = s.top();             s.pop();             v[curr.first] = true;             for (auto& p : m[curr.first]) {                 if (p.first == end) {                     return curr.second * p.second;                 }                 if (!v[p.first]) {                     s.push(make_pair(p.first, curr.second * p.second));                 }             }         }         return result;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_dfs_string_string_random_2(void) {\n{\nAKA_test_case_name=\"Solution_dfs_string_string_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/399-evaluate-division.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* UnorderedMapDataNode m */\n/* UnorderedMapDataNode v */\n\n\nchar* akaRandomName863851 = new char[2];akaRandomName863851[0] = 90;akaRandomName863851[1] = '\\0';string start=akaRandomName863851;\nchar* akaRandomName211015 = new char[2];akaRandomName211015[0] = -16;akaRandomName211015[1] = '\\0';string end=akaRandomName211015;\n\n\ndouble AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode start */\n/* NormalStringDataNode end */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_dfs_string_string_random_2\");double AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->dfs(start,end);\nAKA_fCall++;AKA_mark(\"Return from: ./8/399-evaluate-division.cpp/Solution/dfs(string,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/399-evaluate-division.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* UnorderedMapDataNode m */\n/* UnorderedMapDataNode v */\n\n\nchar* akaRandomName597061 = new char[2];akaRandomName597061[0] = 90;akaRandomName597061[1] = '\\0';string start=akaRandomName597061;\nchar* akaRandomName59933 = new char[2];akaRandomName59933[0] = -16;akaRandomName59933[1] = '\\0';string end=akaRandomName59933;\n\n\ndouble AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode start */\n/* NormalStringDataNode end */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     unordered_map<string, vector<pair<string, double>>> m;     unordered_map<string, bool> v;          double dfs(string start, string end) {         double result = -1.0;         for (auto it = v.begin(); it != v.end(); it++) it->second = false;         stack<pair<string, double>> s;         s.push(make_pair(start, 1.0));         while (!s.empty()) {             pair<string, double> curr = s.top();             s.pop();             v[curr.first] = true;             for (auto& p : m[curr.first]) {                 if (p.first == end) {                     return curr.second * p.second;                 }                 if (!v[p.first]) {                     s.push(make_pair(p.first, curr.second * p.second));                 }             }         }         return result;     }          vector<double> calcEquation(vector<vector<string>>& equations, vector<double>& values, vector<vector<string>>& queries) {                  // Building graph         for (vector<string>& e : equations) {             if (m.find(e[0]) == m.end()) {                 m[e[0]] = {make_pair(e[0], 1.0)};                 v[e[0]] = false;             }             if (m.find(e[1]) == m.end()) {                 m[e[1]] = {make_pair(e[1], 1.0)};                 v[e[1]] = false;             }         }         for (int i = 0; i < equations.size(); i++) {             vector<string>& e = equations[i];             m[e[0]].push_back(make_pair(e[1], values[i]));             m[e[1]].push_back(make_pair(e[0], 1.0 / values[i]));         }                  for (auto it = m.begin(); it != m.end(); it++) {             cout << it->first << \": \";             for (auto p : it->second) {                 cout << p.first << \", \" << p.second << \"; \";             }             cout << endl;         }                  vector<double> result;                  // Iterate over queries         for (vector<string>& q : queries) {             if (m.find(q[0]) != m.end() && m.find(q[1]) != m.end()) {                 double factor = dfs(q[0], q[1]);                 result.push_back(factor);             } else {                 result.push_back(-1.0);             }         }         return result;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/8/399-evaluate-division.cpp/Solution/dfs(string,string)"
+    },
+    {
+        "f": [
+            "unordered_map<string, vector<pair<string, double>>> m;",
+            "unordered_map<string, bool> v;"
+        ],
+        "fm": "vector<double> calcEquation(vector<vector<string>>& equations, vector<double>& values, vector<vector<string>>& queries) {                  // Building graph         for (vector<string>& e : equations) {             if (m.find(e[0]) == m.end()) {                 m[e[0]] = {make_pair(e[0], 1.0)};                 v[e[0]] = false;             }             if (m.find(e[1]) == m.end()) {                 m[e[1]] = {make_pair(e[1], 1.0)};                 v[e[1]] = false;             }         }         for (int i = 0; i < equations.size(); i++) {             vector<string>& e = equations[i];             m[e[0]].push_back(make_pair(e[1], values[i]));             m[e[1]].push_back(make_pair(e[0], 1.0 / values[i]));         }                  for (auto it = m.begin(); it != m.end(); it++) {             cout << it->first << \": \";             for (auto p : it->second) {                 cout << p.first << \", \" << p.second << \"; \";             }             cout << endl;         }                  vector<double> result;                  // Iterate over queries         for (vector<string>& q : queries) {             if (m.find(q[0]) != m.end() && m.find(q[1]) != m.end()) {                 double factor = dfs(q[0], q[1]);                 result.push_back(factor);             } else {                 result.push_back(-1.0);             }         }         return result;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_calcEquation_vector_vector_string_vector_double_vector_vector_string_random_1(void) {\n{\nAKA_test_case_name=\"Solution_calcEquation_vector_vector_string_vector_double_vector_vector_string_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/399-evaluate-division.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* UnorderedMapDataNode m */\n/* UnorderedMapDataNode v */\n\n\nvector<vector<string>> equations;\nvector<double> values;\nvector<vector<string>> queries;\nvector<double> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode equations */\nvector<string> equations_element0;\nchar* akaRandomName810324 = new char[2];akaRandomName810324[0] = -33;akaRandomName810324[1] = '\\0';string equations_element0_element0=akaRandomName810324;\nequations_element0.push_back(equations_element0_element0);\nchar* akaRandomName603272 = new char[2];akaRandomName603272[0] = -19;akaRandomName603272[1] = '\\0';string equations_element0_element1=akaRandomName603272;\nequations_element0.push_back(equations_element0_element1);\nchar* akaRandomName248767 = new char[2];akaRandomName248767[0] = -39;akaRandomName248767[1] = '\\0';string equations_element0_element2=akaRandomName248767;\nequations_element0.push_back(equations_element0_element2);\nequations.push_back(equations_element0);\nvector<string> equations_element1;\nchar* akaRandomName522385 = new char[2];akaRandomName522385[0] = 48;akaRandomName522385[1] = '\\0';string equations_element1_element0=akaRandomName522385;\nequations_element1.push_back(equations_element1_element0);\nchar* akaRandomName285326 = new char[2];akaRandomName285326[0] = 117;akaRandomName285326[1] = '\\0';string equations_element1_element1=akaRandomName285326;\nequations_element1.push_back(equations_element1_element1);\nchar* akaRandomName162213 = new char[2];akaRandomName162213[0] = 7;akaRandomName162213[1] = '\\0';string equations_element1_element2=akaRandomName162213;\nequations_element1.push_back(equations_element1_element2);\nequations.push_back(equations_element1);\n/* VectorDataNode values */\ndouble values_element0=0.82;\nvalues.push_back(values_element0);\ndouble values_element1=0.46;\nvalues.push_back(values_element1);\ndouble values_element2=0.7;\nvalues.push_back(values_element2);\n/* VectorDataNode queries */\nvector<string> queries_element0;\nchar* akaRandomName533749 = new char[2];akaRandomName533749[0] = -103;akaRandomName533749[1] = '\\0';string queries_element0_element0=akaRandomName533749;\nqueries_element0.push_back(queries_element0_element0);\nchar* akaRandomName456985 = new char[2];akaRandomName456985[0] = -90;akaRandomName456985[1] = '\\0';string queries_element0_element1=akaRandomName456985;\nqueries_element0.push_back(queries_element0_element1);\nchar* akaRandomName905684 = new char[2];akaRandomName905684[0] = 61;akaRandomName905684[1] = '\\0';string queries_element0_element2=akaRandomName905684;\nqueries_element0.push_back(queries_element0_element2);\nqueries.push_back(queries_element0);\nvector<string> queries_element1;\nchar* akaRandomName153396 = new char[2];akaRandomName153396[0] = 95;akaRandomName153396[1] = '\\0';string queries_element1_element0=akaRandomName153396;\nqueries_element1.push_back(queries_element1_element0);\nchar* akaRandomName419787 = new char[2];akaRandomName419787[0] = -116;akaRandomName419787[1] = '\\0';string queries_element1_element1=akaRandomName419787;\nqueries_element1.push_back(queries_element1_element1);\nqueries.push_back(queries_element1);\nvector<string> queries_element2;\nchar* akaRandomName963655 = new char[2];akaRandomName963655[0] = 101;akaRandomName963655[1] = '\\0';string queries_element2_element0=akaRandomName963655;\nqueries_element2.push_back(queries_element2_element0);\nqueries.push_back(queries_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_calcEquation_vector_vector_string_vector_double_vector_vector_string_random_1\");vector<double> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->calcEquation(equations,values,queries);\nAKA_fCall++;AKA_mark(\"Return from: ./8/399-evaluate-division.cpp/Solution/calcEquation(vector<vector<string>>&,vector<double>&,vector<vector<string>>&)\");\n\n\nvector<vector<string>> EXPECTED_equations;\n\nvector<double> EXPECTED_values;\n\nvector<vector<string>> EXPECTED_queries;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/399-evaluate-division.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* UnorderedMapDataNode m */\n/* UnorderedMapDataNode v */\n\n\nvector<vector<string>> equations;\nvector<double> values;\nvector<vector<string>> queries;\nvector<double> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode equations */\nvector<string> equations_element0;\nchar* akaRandomName764124 = new char[2];akaRandomName764124[0] = -33;akaRandomName764124[1] = '\\0';string equations_element0_element0=akaRandomName764124;\nequations_element0.push_back(equations_element0_element0);\nchar* akaRandomName706681 = new char[2];akaRandomName706681[0] = -19;akaRandomName706681[1] = '\\0';string equations_element0_element1=akaRandomName706681;\nequations_element0.push_back(equations_element0_element1);\nchar* akaRandomName417663 = new char[2];akaRandomName417663[0] = -39;akaRandomName417663[1] = '\\0';string equations_element0_element2=akaRandomName417663;\nequations_element0.push_back(equations_element0_element2);\nequations.push_back(equations_element0);\nvector<string> equations_element1;\nchar* akaRandomName69327 = new char[2];akaRandomName69327[0] = 48;akaRandomName69327[1] = '\\0';string equations_element1_element0=akaRandomName69327;\nequations_element1.push_back(equations_element1_element0);\nchar* akaRandomName929248 = new char[2];akaRandomName929248[0] = 117;akaRandomName929248[1] = '\\0';string equations_element1_element1=akaRandomName929248;\nequations_element1.push_back(equations_element1_element1);\nchar* akaRandomName190346 = new char[2];akaRandomName190346[0] = 7;akaRandomName190346[1] = '\\0';string equations_element1_element2=akaRandomName190346;\nequations_element1.push_back(equations_element1_element2);\nequations.push_back(equations_element1);\n/* VectorDataNode values */\ndouble values_element0=0.82;\nvalues.push_back(values_element0);\ndouble values_element1=0.46;\nvalues.push_back(values_element1);\ndouble values_element2=0.7;\nvalues.push_back(values_element2);\n/* VectorDataNode queries */\nvector<string> queries_element0;\nchar* akaRandomName435831 = new char[2];akaRandomName435831[0] = -103;akaRandomName435831[1] = '\\0';string queries_element0_element0=akaRandomName435831;\nqueries_element0.push_back(queries_element0_element0);\nchar* akaRandomName494893 = new char[2];akaRandomName494893[0] = -90;akaRandomName494893[1] = '\\0';string queries_element0_element1=akaRandomName494893;\nqueries_element0.push_back(queries_element0_element1);\nchar* akaRandomName142849 = new char[2];akaRandomName142849[0] = 61;akaRandomName142849[1] = '\\0';string queries_element0_element2=akaRandomName142849;\nqueries_element0.push_back(queries_element0_element2);\nqueries.push_back(queries_element0);\nvector<string> queries_element1;\nchar* akaRandomName42489 = new char[2];akaRandomName42489[0] = 95;akaRandomName42489[1] = '\\0';string queries_element1_element0=akaRandomName42489;\nqueries_element1.push_back(queries_element1_element0);\nchar* akaRandomName401321 = new char[2];akaRandomName401321[0] = -116;akaRandomName401321[1] = '\\0';string queries_element1_element1=akaRandomName401321;\nqueries_element1.push_back(queries_element1_element1);\nqueries.push_back(queries_element1);\nvector<string> queries_element2;\nchar* akaRandomName546350 = new char[2];akaRandomName546350[0] = 101;akaRandomName546350[1] = '\\0';string queries_element2_element0=akaRandomName546350;\nqueries_element2.push_back(queries_element2_element0);\nqueries.push_back(queries_element2);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_calcEquation_vector_vector_string_vector_double_vector_vector_string_random_0(void) {\n{\nAKA_test_case_name=\"Solution_calcEquation_vector_vector_string_vector_double_vector_vector_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/399-evaluate-division.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* UnorderedMapDataNode m */\n/* UnorderedMapDataNode v */\n\n\nvector<vector<string>> equations;\nvector<double> values;\nvector<vector<string>> queries;\nvector<double> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode equations */\nvector<string> equations_element0;\nchar* akaRandomName839886 = new char[2];akaRandomName839886[0] = -86;akaRandomName839886[1] = '\\0';string equations_element0_element0=akaRandomName839886;\nequations_element0.push_back(equations_element0_element0);\nchar* akaRandomName632476 = new char[2];akaRandomName632476[0] = 53;akaRandomName632476[1] = '\\0';string equations_element0_element1=akaRandomName632476;\nequations_element0.push_back(equations_element0_element1);\nequations.push_back(equations_element0);\nvector<string> equations_element1;\nchar* akaRandomName789648 = new char[2];akaRandomName789648[0] = 46;akaRandomName789648[1] = '\\0';string equations_element1_element0=akaRandomName789648;\nequations_element1.push_back(equations_element1_element0);\nchar* akaRandomName603315 = new char[2];akaRandomName603315[0] = 106;akaRandomName603315[1] = '\\0';string equations_element1_element1=akaRandomName603315;\nequations_element1.push_back(equations_element1_element1);\nchar* akaRandomName324844 = new char[2];akaRandomName324844[0] = -68;akaRandomName324844[1] = '\\0';string equations_element1_element2=akaRandomName324844;\nequations_element1.push_back(equations_element1_element2);\nequations.push_back(equations_element1);\n/* VectorDataNode values */\ndouble values_element0=0.27;\nvalues.push_back(values_element0);\n/* VectorDataNode queries */\nvector<string> queries_element0;\nchar* akaRandomName371901 = new char[2];akaRandomName371901[0] = -74;akaRandomName371901[1] = '\\0';string queries_element0_element0=akaRandomName371901;\nqueries_element0.push_back(queries_element0_element0);\nchar* akaRandomName865192 = new char[2];akaRandomName865192[0] = 51;akaRandomName865192[1] = '\\0';string queries_element0_element1=akaRandomName865192;\nqueries_element0.push_back(queries_element0_element1);\nchar* akaRandomName298683 = new char[2];akaRandomName298683[0] = -18;akaRandomName298683[1] = '\\0';string queries_element0_element2=akaRandomName298683;\nqueries_element0.push_back(queries_element0_element2);\nqueries.push_back(queries_element0);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_calcEquation_vector_vector_string_vector_double_vector_vector_string_random_0\");vector<double> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->calcEquation(equations,values,queries);\nAKA_fCall++;AKA_mark(\"Return from: ./8/399-evaluate-division.cpp/Solution/calcEquation(vector<vector<string>>&,vector<double>&,vector<vector<string>>&)\");\n\n\nvector<vector<string>> EXPECTED_equations;\n\nvector<double> EXPECTED_values;\n\nvector<vector<string>> EXPECTED_queries;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/399-evaluate-division.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* UnorderedMapDataNode m */\n/* UnorderedMapDataNode v */\n\n\nvector<vector<string>> equations;\nvector<double> values;\nvector<vector<string>> queries;\nvector<double> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode equations */\nvector<string> equations_element0;\nchar* akaRandomName697972 = new char[2];akaRandomName697972[0] = -86;akaRandomName697972[1] = '\\0';string equations_element0_element0=akaRandomName697972;\nequations_element0.push_back(equations_element0_element0);\nchar* akaRandomName406015 = new char[2];akaRandomName406015[0] = 53;akaRandomName406015[1] = '\\0';string equations_element0_element1=akaRandomName406015;\nequations_element0.push_back(equations_element0_element1);\nequations.push_back(equations_element0);\nvector<string> equations_element1;\nchar* akaRandomName4241 = new char[2];akaRandomName4241[0] = 46;akaRandomName4241[1] = '\\0';string equations_element1_element0=akaRandomName4241;\nequations_element1.push_back(equations_element1_element0);\nchar* akaRandomName238538 = new char[2];akaRandomName238538[0] = 106;akaRandomName238538[1] = '\\0';string equations_element1_element1=akaRandomName238538;\nequations_element1.push_back(equations_element1_element1);\nchar* akaRandomName278939 = new char[2];akaRandomName278939[0] = -68;akaRandomName278939[1] = '\\0';string equations_element1_element2=akaRandomName278939;\nequations_element1.push_back(equations_element1_element2);\nequations.push_back(equations_element1);\n/* VectorDataNode values */\ndouble values_element0=0.27;\nvalues.push_back(values_element0);\n/* VectorDataNode queries */\nvector<string> queries_element0;\nchar* akaRandomName322852 = new char[2];akaRandomName322852[0] = -74;akaRandomName322852[1] = '\\0';string queries_element0_element0=akaRandomName322852;\nqueries_element0.push_back(queries_element0_element0);\nchar* akaRandomName370730 = new char[2];akaRandomName370730[0] = 51;akaRandomName370730[1] = '\\0';string queries_element0_element1=akaRandomName370730;\nqueries_element0.push_back(queries_element0_element1);\nchar* akaRandomName47769 = new char[2];akaRandomName47769[0] = -18;akaRandomName47769[1] = '\\0';string queries_element0_element2=akaRandomName47769;\nqueries_element0.push_back(queries_element0_element2);\nqueries.push_back(queries_element0);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     unordered_map<string, vector<pair<string, double>>> m;     unordered_map<string, bool> v;          double dfs(string start, string end) {         double result = -1.0;         for (auto it = v.begin(); it != v.end(); it++) it->second = false;         stack<pair<string, double>> s;         s.push(make_pair(start, 1.0));         while (!s.empty()) {             pair<string, double> curr = s.top();             s.pop();             v[curr.first] = true;             for (auto& p : m[curr.first]) {                 if (p.first == end) {                     return curr.second * p.second;                 }                 if (!v[p.first]) {                     s.push(make_pair(p.first, curr.second * p.second));                 }             }         }         return result;     }          vector<double> calcEquation(vector<vector<string>>& equations, vector<double>& values, vector<vector<string>>& queries) {                  // Building graph         for (vector<string>& e : equations) {             if (m.find(e[0]) == m.end()) {                 m[e[0]] = {make_pair(e[0], 1.0)};                 v[e[0]] = false;             }             if (m.find(e[1]) == m.end()) {                 m[e[1]] = {make_pair(e[1], 1.0)};                 v[e[1]] = false;             }         }         for (int i = 0; i < equations.size(); i++) {             vector<string>& e = equations[i];             m[e[0]].push_back(make_pair(e[1], values[i]));             m[e[1]].push_back(make_pair(e[0], 1.0 / values[i]));         }                  for (auto it = m.begin(); it != m.end(); it++) {             cout << it->first << \": \";             for (auto p : it->second) {                 cout << p.first << \", \" << p.second << \"; \";             }             cout << endl;         }                  vector<double> result;                  // Iterate over queries         for (vector<string>& q : queries) {             if (m.find(q[0]) != m.end() && m.find(q[1]) != m.end()) {                 double factor = dfs(q[0], q[1]);                 result.push_back(factor);             } else {                 result.push_back(-1.0);             }         }         return result;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/8/399-evaluate-division.cpp/Solution/calcEquation(vector<vector<string>>&,vector<double>&,vector<vector<string>>&)"
+    },
+    {
+        "f": [],
+        "fm": "int findLonelyPixel(vector<vector<char>>& picture) {         int rows = picture.size();         if (rows == 0) return 0;         int cols = picture[0].size();         vector<int> blackRows(rows, 0);         vector<int> blackCols(cols, 0);         int result = 0;         for (int i = 0; i < rows; i++) {             for (int j = 0; j < cols; j++) {                 if (picture[i][j] == 'B') {                     blackRows[i]++;                     blackCols[j]++;                 }             }         }         for (int i = 0; i < rows; i++) {             for (int j = 0; j < cols; j++) {                 if (picture[i][j] == 'B' && blackRows[i] == 1 && blackCols[j] == 1) {                     result++;                 }             }         }         return result;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findLonelyPixel_vector_vector_char_random_4(void) {\n{\nAKA_test_case_name=\"Solution_findLonelyPixel_vector_vector_char_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/531-lonely-pixel-i.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<char>> picture;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode picture */\nvector<char> picture_element0;\nchar picture_element0_element0=-53;\npicture_element0.push_back(picture_element0_element0);\npicture.push_back(picture_element0);\nvector<char> picture_element1;\nchar picture_element1_element0=-26;\npicture_element1.push_back(picture_element1_element0);\nchar picture_element1_element1=94;\npicture_element1.push_back(picture_element1_element1);\npicture.push_back(picture_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findLonelyPixel_vector_vector_char_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findLonelyPixel(picture);\nAKA_fCall++;AKA_mark(\"Return from: ./8/531-lonely-pixel-i.cpp/Solution/findLonelyPixel(vector<vector<char>>&)\");\n\n\nvector<vector<char>> EXPECTED_picture;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/531-lonely-pixel-i.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<char>> picture;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode picture */\nvector<char> picture_element0;\nchar picture_element0_element0=-53;\npicture_element0.push_back(picture_element0_element0);\npicture.push_back(picture_element0);\nvector<char> picture_element1;\nchar picture_element1_element0=-26;\npicture_element1.push_back(picture_element1_element0);\nchar picture_element1_element1=94;\npicture_element1.push_back(picture_element1_element1);\npicture.push_back(picture_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     int findLonelyPixel(vector<vector<char>>& picture) {         int rows = picture.size();         if (rows == 0) return 0;         int cols = picture[0].size();         vector<int> blackRows(rows, 0);         vector<int> blackCols(cols, 0);         int result = 0;         for (int i = 0; i < rows; i++) {             for (int j = 0; j < cols; j++) {                 if (picture[i][j] == 'B') {                     blackRows[i]++;                     blackCols[j]++;                 }             }         }         for (int i = 0; i < rows; i++) {             for (int j = 0; j < cols; j++) {                 if (picture[i][j] == 'B' && blackRows[i] == 1 && blackCols[j] == 1) {                     result++;                 }             }         }         return result;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/8/531-lonely-pixel-i.cpp/Solution/findLonelyPixel(vector<vector<char>>&)"
+    },
+    {
+        "f": [],
+        "fm": "string reverseStr(string s, int k) {         if (k == 1) return s;         for (int i = 0; i < s.size(); i += 2*k) {             int firstIdx = i;             int lastIdx = i + k - 1 < s.size() ? i + k - 1 : s.size() - 1;             while (firstIdx < lastIdx) {                 swap(s, firstIdx++, lastIdx--);             }         }         return s;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_reverseStr_string_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_reverseStr_string_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/541-reverse-string-ii.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName227763 = new char[2];akaRandomName227763[0] = 1;akaRandomName227763[1] = '\\0';string s=akaRandomName227763;\n\n\nint k=-890613775;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode k */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_reverseStr_string_int_random_2\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->reverseStr(s,k);\nAKA_fCall++;AKA_mark(\"Return from: ./8/541-reverse-string-ii.cpp/Solution/reverseStr(string,int)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/541-reverse-string-ii.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName764190 = new char[2];akaRandomName764190[0] = 1;akaRandomName764190[1] = '\\0';string s=akaRandomName764190;\n\n\nint k=-890613775;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode k */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     void swap(string& s, int i, int j) {         char tmp = s[i];         s[i] = s[j];         s[j] = tmp;     }          string reverseStr(string s, int k) {         if (k == 1) return s;         for (int i = 0; i < s.size(); i += 2*k) {             int firstIdx = i;             int lastIdx = i + k - 1 < s.size() ? i + k - 1 : s.size() - 1;             while (firstIdx < lastIdx) {                 swap(s, firstIdx++, lastIdx--);             }         }         return s;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/8/541-reverse-string-ii.cpp/Solution/reverseStr(string,int)"
+    },
+    {
+        "f": [],
+        "fm": "bool checkRecord(string s) {         int countA = 0;         int countConsecL = 0;         for (int i = 0; i < s.size(); i++) {             if (s[i] == 'P') {                 countConsecL = 0;                 continue;             }             if (s[i] == 'L') {                 countConsecL++;                 if (countConsecL > 2) return false;             } else if (s[i] == 'A') {                 countA++;                 countConsecL = 0;                 if (countA > 1) return false;             }         }         return true;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_checkRecord_string_random_2(void) {\n{\nAKA_test_case_name=\"Solution_checkRecord_string_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/551-student-attendance-record-i.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName911766 = new char[2];akaRandomName911766[0] = 50;akaRandomName911766[1] = '\\0';string s=akaRandomName911766;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_checkRecord_string_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->checkRecord(s);\nAKA_fCall++;AKA_mark(\"Return from: ./8/551-student-attendance-record-i.cpp/Solution/checkRecord(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: /Solution()|ROOT/551-student-attendance-record-i.cpp/GLOBAL/AKA_INSTANCE___Solution/AKA_INSTANCE___Solution/Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName71433 = new char[2];akaRandomName71433[0] = 50;akaRandomName71433[1] = '\\0';string s=akaRandomName71433;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution { public:     bool checkRecord(string s) {         int countA = 0;         int countConsecL = 0;         for (int i = 0; i < s.size(); i++) {             if (s[i] == 'P') {                 countConsecL = 0;                 continue;             }             if (s[i] == 'L') {                 countConsecL++;                 if (countConsecL > 2) return false;             } else if (s[i] == 'A') {                 countA++;                 countConsecL = 0;                 if (countA > 1) return false;             }         }         return true;     } };",
+        "c": [
+            ""
+        ],
+        "path_fm": "/mnt/sdb2/LAB/test/8/551-student-attendance-record-i.cpp/Solution/checkRecord(string)"
+    }
+]

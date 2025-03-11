@@ -1,0 +1,92 @@
+[
+    {
+        "f": [],
+        "fm": "int trailingZeroes(int n) {\r \tint rs = 0;\r \tint i = 1;\r \twhile (n >= pow(5, i)) {\r \t\trs += n / pow(5, i);\r \t\ti++;\r \t}\r \treturn rs;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_trailingZeroes_int_random_4(void) {\n{\nAKA_test_case_name=\"trailingZeroes_int_random_4\";\n\n// set up\n;\n\n\n\nint n=5;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test trailingZeroes_int_random_4\");int AKA_ACTUAL_OUTPUT=trailingZeroes(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\_172 Factorial Trailing Zeroes\\\\_172 Factorial Trailing Zeroes.cpp\\\\trailingZeroes(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_nums[3];\n\n\nint AKA_ARRAY_INIT_nums_0=667852793;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=-1664520118;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\n\nint AKA_ARRAY_INIT_nums_2=155312978;\nAKA_ARRAY_INIT_nums[2] = AKA_ARRAY_INIT_nums_2;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint s=3;\n\n\nint e=9;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode s */\n/* NormalNumberDataNode e */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\zqxl_leetcode\\Leetcode\\_172 Factorial Trailing Zeroes\\_172 Factorial Trailing Zeroes.cpp\\trailingZeroes(int)"
+    },
+    {
+        "f": [],
+        "fm": "void reverse(int *nums, int s, int e) {\r \twhile (s < e) {\r \t\tint t = nums[s];\r \t\tnums[s++] = nums[e];\r \t\tnums[e--] = t;\r \t}\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_reverse_intmul_int_int_random_0(void) {\n{\nAKA_test_case_name=\"reverse_intmul_int_int_random_0\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_nums[3];\n\n\nint AKA_ARRAY_INIT_nums_0=667852793;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=-1664520118;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\n\nint AKA_ARRAY_INIT_nums_2=155312978;\nAKA_ARRAY_INIT_nums[2] = AKA_ARRAY_INIT_nums_2;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint s=3;\n\n\nint e=9;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode s */\n/* NormalNumberDataNode e */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test reverse_intmul_int_int_random_0\");reverse(nums,s,e);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\_189 Rotate Array\\\\_189 Rotate Array.cpp\\\\reverse(int*,int,int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_nums[3];\n\n\nint AKA_ARRAY_INIT_nums_0=667852793;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=-1664520118;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\n\nint AKA_ARRAY_INIT_nums_2=155312978;\nAKA_ARRAY_INIT_nums[2] = AKA_ARRAY_INIT_nums_2;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint s=3;\n\n\nint e=9;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode s */\n/* NormalNumberDataNode e */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\zqxl_leetcode\\Leetcode\\_189 Rotate Array\\_189 Rotate Array.cpp\\reverse(int*,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "void rotate(int* nums, int numsSize, int k) {\r \tk = k % numsSize;\r \treverse(nums, 0, numsSize - 1);\r \treverse(nums, 0, k - 1);\r \treverse(nums, k, numsSize - 1);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_rotate_intmul_int_int_random_3(void) {\n{\nAKA_test_case_name=\"rotate_intmul_int_int_random_3\";\n\n// set up\n;\n\nint* nums;\n\n\nint numsSize=-356783747;\n\n\nint k=-1919854530;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode numsSize */\n/* NormalNumberDataNode k */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test rotate_intmul_int_int_random_3\");rotate(nums,numsSize,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\_189 Rotate Array\\\\_189 Rotate Array.cpp\\\\rotate(int*,int,int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_nums[3];\n\n\nint AKA_ARRAY_INIT_nums_0=667852793;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=-1664520118;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\n\nint AKA_ARRAY_INIT_nums_2=155312978;\nAKA_ARRAY_INIT_nums[2] = AKA_ARRAY_INIT_nums_2;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint s=3;\n\n\nint e=9;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode s */\n/* NormalNumberDataNode e */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_rotate_intmul_int_int_random_4(void) {\n{\nAKA_test_case_name=\"rotate_intmul_int_int_random_4\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_nums[1];\n\n\nint AKA_ARRAY_INIT_nums_0=457189853;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint numsSize=-1183190739;\n\n\nint k=1712945444;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode numsSize */\n/* NormalNumberDataNode k */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test rotate_intmul_int_int_random_4\");rotate(nums,numsSize,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\_189 Rotate Array\\\\_189 Rotate Array.cpp\\\\rotate(int*,int,int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint* nums;\n\n\nint numsSize=-356783747;\n\n\nint k=-1919854530;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode numsSize */\n/* NormalNumberDataNode k */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\zqxl_leetcode\\Leetcode\\_189 Rotate Array\\_189 Rotate Array.cpp\\rotate(int*,int,int)"
+    }
+]

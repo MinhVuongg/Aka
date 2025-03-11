@@ -1,0 +1,192 @@
+[
+    {
+        "f": [],
+        "fm": "int longestSubsequence(vector<int>& a, int diff) {\r     \r         int res = INT_MIN;\r         \r         // mp[i] is the length of Longest Arithmetic Subsequence till index i from index 0\r         \r         unordered_map<int, int> mp;\r         int n = a.size();\r         \r         for(int i=0; i<n; i++) {\r             \r             int temp = a[i] - diff;\r             mp[a[i]] = mp[temp] + 1;\r             \r             res = max(res, mp[a[i]]);\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_longestSubsequence_vector_int_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_longestSubsequence_vector_int_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1218-longest-arithmetic-subsequence-of-given-difference.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint diff=-1439368828;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=786166365;\na.push_back(a_element0);\nint a_element1=1009350591;\na.push_back(a_element1);\nint a_element2=-238245199;\na.push_back(a_element2);\n/* NormalNumberDataNode diff */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_longestSubsequence_vector_int_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->longestSubsequence(a,diff);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p21\\\\1218-longest-arithmetic-subsequence-of-given-difference\\\\1218-longest-arithmetic-subsequence-of-given-difference.cpp\\\\Solution\\\\longestSubsequence(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1165-single-row-keyboard.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName235633 = new char[2];akaRandomName235633[0] = 105;akaRandomName235633[1] = '\\0';string keyboard=akaRandomName235633;\nchar* akaRandomName469141 = new char[2];akaRandomName469141[0] = -18;akaRandomName469141[1] = '\\0';string word=akaRandomName469141;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode keyboard */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int longestSubsequence(vector<int>& a, int diff) {\r     \r         int res = INT_MIN;\r         \r         // mp[i] is the length of Longest Arithmetic Subsequence till index i from index 0\r         \r         unordered_map<int, int> mp;\r         int n = a.size();\r         \r         for(int i=0; i<n; i++) {\r             \r             int temp = a[i] - diff;\r             mp[a[i]] = mp[temp] + 1;\r             \r             res = max(res, mp[a[i]]);\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p21\\1218-longest-arithmetic-subsequence-of-given-difference\\1218-longest-arithmetic-subsequence-of-given-difference.cpp\\Solution\\longestSubsequence(vector<int>&,int)"
+    },
+    {
+        "f": [],
+        "fm": "int maxProfit(vector<int>& a) {\r     \r         int n = a.size();\r         int sum = 0;\r         \r         if(n <= 1)                              return sum;\r         \r         for(int i=1; i<n; i++) {\r             if(a[i-1] < a[i])                   sum += a[i] - a[i-1];\r         }\r         \r         return sum;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maxProfit_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_maxProfit_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\122-best-time-to-buy-and-sell-stock-ii.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=379926133;\na.push_back(a_element0);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maxProfit_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maxProfit(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p21\\\\122-best-time-to-buy-and-sell-stock-ii\\\\122-best-time-to-buy-and-sell-stock-ii.cpp\\\\Solution\\\\maxProfit(vector<int>&)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1165-single-row-keyboard.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName235633 = new char[2];akaRandomName235633[0] = 105;akaRandomName235633[1] = '\\0';string keyboard=akaRandomName235633;\nchar* akaRandomName469141 = new char[2];akaRandomName469141[0] = -18;akaRandomName469141[1] = '\\0';string word=akaRandomName469141;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode keyboard */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maxProfit_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_maxProfit_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\122-best-time-to-buy-and-sell-stock-ii.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=2091751471;\na.push_back(a_element0);\nint a_element1=-1432960371;\na.push_back(a_element1);\nint a_element2=1290283604;\na.push_back(a_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maxProfit_vector_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maxProfit(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p21\\\\122-best-time-to-buy-and-sell-stock-ii\\\\122-best-time-to-buy-and-sell-stock-ii.cpp\\\\Solution\\\\maxProfit(vector<int>&)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1171-remove-zero-sum-consecutive-nodes-from-linked-list.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int,ListNode*) */\n/* NormalNumberDataNode x */\nint head0_x=-996019834;\n/* PointerStructureDataNode next */\nstd::vector<ListNode*> AKA_VECTOR_INIT_head0_next;\n/* SubStructDataNode next */\n/* ConstructorDataNode ListNode() */\nAKA_mark(\"Calling: .\\\\p19\\\\1171-remove-zero-sum-consecutive-nodes-from-linked-list\\\\1171-remove-zero-sum-consecutive-nodes-from-linked-list.cpp\\\\ListNode\\\\ListNode()|ROOT\\\\1171-remove-zero-sum-consecutive-nodes-from-linked-list.cpp\\\\removeZeroSumSublists(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int,ListNode*)\\\\next\\\\next[0]\\\\next\\\\ListNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_head0_next_0 = new ::ListNode();\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head0_next_0).next;\nAKA_VECTOR_INIT_head0_next.push_back(AKA_VECTOR_INIT_head0_next_0);\nListNode* head0_next = AKA_VECTOR_INIT_head0_next[0];\nAKA_mark(\"Calling: .\\\\p19\\\\1171-remove-zero-sum-consecutive-nodes-from-linked-list\\\\1171-remove-zero-sum-consecutive-nodes-from-linked-list.cpp\\\\ListNode\\\\ListNode(int,ListNode*)|ROOT\\\\1171-remove-zero-sum-consecutive-nodes-from-linked-list.cpp\\\\removeZeroSumSublists(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode(int,ListNode*)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode(head0_x,head0_next);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\nstd::vector<ListNode*> AKA_VECTOR_INIT_head_0_DOT_next;\n/* SubStructDataNode next */\n/* ConstructorDataNode ListNode() */\nAKA_mark(\"Calling: .\\\\p19\\\\1171-remove-zero-sum-consecutive-nodes-from-linked-list\\\\1171-remove-zero-sum-consecutive-nodes-from-linked-list.cpp\\\\ListNode\\\\ListNode()|ROOT\\\\1171-remove-zero-sum-consecutive-nodes-from-linked-list.cpp\\\\removeZeroSumSublists(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\next\\\\next[0]\\\\next\\\\ListNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0_DOT_next_0 = new ::ListNode();\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0_DOT_next_0).next;\nAKA_VECTOR_INIT_head_0_DOT_next.push_back(AKA_VECTOR_INIT_head_0_DOT_next_0);\n(*AKA_VECTOR_INIT_head_0).next = AKA_VECTOR_INIT_head_0_DOT_next[0];\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int,ListNode*) */\n/* NormalNumberDataNode x */\nint head1_x=0;\n/* PointerStructureDataNode next */\nListNode* head1_next;\nAKA_mark(\"Calling: .\\\\p19\\\\1171-remove-zero-sum-consecutive-nodes-from-linked-list\\\\1171-remove-zero-sum-consecutive-nodes-from-linked-list.cpp\\\\ListNode\\\\ListNode(int,ListNode*)|ROOT\\\\1171-remove-zero-sum-consecutive-nodes-from-linked-list.cpp\\\\removeZeroSumSublists(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_1\\\\head\\\\ListNode(int,ListNode*)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_1 = new ::ListNode(head1_x,head1_next);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_1).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_1);\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode(int,ListNode*) */\n/* NormalNumberDataNode x */\nint head2_x=0;\n/* PointerStructureDataNode next */\nListNode* head2_next;\nAKA_mark(\"Calling: .\\\\p19\\\\1171-remove-zero-sum-consecutive-nodes-from-linked-list\\\\1171-remove-zero-sum-consecutive-nodes-from-linked-list.cpp\\\\ListNode\\\\ListNode(int,ListNode*)|ROOT\\\\1171-remove-zero-sum-consecutive-nodes-from-linked-list.cpp\\\\removeZeroSumSublists(ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_2\\\\head\\\\ListNode(int,ListNode*)\");AKA_fCall++;auto AKA_VECTOR_INIT_head_2 = new ::ListNode(head2_x,head2_next);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_2).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_2);\n\nListNode* head = AKA_VECTOR_INIT_head[0];\nListNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* PointerStructureDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int maxProfit(vector<int>& a) {\r     \r         int n = a.size();\r         int sum = 0;\r         \r         if(n <= 1)                              return sum;\r         \r         for(int i=1; i<n; i++) {\r             if(a[i-1] < a[i])                   sum += a[i] - a[i-1];\r         }\r         \r         return sum;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p21\\122-best-time-to-buy-and-sell-stock-ii\\122-best-time-to-buy-and-sell-stock-ii.cpp\\Solution\\maxProfit(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int missingNumber(vector<int>& a) {\r     \r         int res;\r         int n = a.size();\r         \r         int diffMax = INT_MIN, d;\r         int ind;\r         \r         for(int i=1; i<n; i++) {\r             \r             if(diffMax < abs(a[i] - a[i-1])) {\r                 \r                 diffMax = abs(a[i] - a[i-1]);\r                 \r                 d = a[i] - a[i-1];\r                 ind = i;\r             }\r         }\r         \r         res = a[ind] - (d / 2);        \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_missingNumber_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_missingNumber_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1228-missing-number-in-arithmetic-progression.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=-1761889019;\na.push_back(a_element0);\nint a_element1=-1190912654;\na.push_back(a_element1);\nint a_element2=-1656376811;\na.push_back(a_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_missingNumber_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->missingNumber(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p21\\\\1228-missing-number-in-arithmetic-progression\\\\1228-missing-number-in-arithmetic-progression.cpp\\\\Solution\\\\missingNumber(vector<int>&)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1165-single-row-keyboard.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName235633 = new char[2];akaRandomName235633[0] = 105;akaRandomName235633[1] = '\\0';string keyboard=akaRandomName235633;\nchar* akaRandomName469141 = new char[2];akaRandomName469141[0] = -18;akaRandomName469141[1] = '\\0';string word=akaRandomName469141;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode keyboard */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   \r     int missingNumber(vector<int>& a) {\r     \r         int res;\r         int n = a.size();\r         \r         int diffMax = INT_MIN, d;\r         int ind;\r         \r         for(int i=1; i<n; i++) {\r             \r             if(diffMax < abs(a[i] - a[i-1])) {\r                 \r                 diffMax = abs(a[i] - a[i-1]);\r                 \r                 d = a[i] - a[i-1];\r                 ind = i;\r             }\r         }\r         \r         res = a[ind] - (d / 2);        \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p21\\1228-missing-number-in-arithmetic-progression\\1228-missing-number-in-arithmetic-progression.cpp\\Solution\\missingNumber(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> transformArray(vector<int>& a) {\r     \r         vector<int> temp;\r         int n = a.size();\r         \r         for(int k=1; k<=n-2; k++) {\r             \r             temp = a;\r             \r             for(int i=1; i<=n-2; i++) {\r                 if(temp[i-1] > temp[i] && temp[i] < temp[i+1])                          a[i]++;\r                 else if(temp[i-1] < temp[i] && temp[i] > temp[i+1])                     a[i]--;\r              }\r             \r             temp = a;\r         }\r         \r         return temp;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_transformArray_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_transformArray_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1243-array-transformation.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=-75645417;\na.push_back(a_element0);\nint a_element1=-382391673;\na.push_back(a_element1);\nint a_element2=-1794672824;\na.push_back(a_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_transformArray_vector_int_random_3\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->transformArray(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p21\\\\1243-array-transformation\\\\1243-array-transformation.cpp\\\\Solution\\\\transformArray(vector<int>&)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1165-single-row-keyboard.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName235633 = new char[2];akaRandomName235633[0] = 105;akaRandomName235633[1] = '\\0';string keyboard=akaRandomName235633;\nchar* akaRandomName469141 = new char[2];akaRandomName469141[0] = -18;akaRandomName469141[1] = '\\0';string word=akaRandomName469141;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode keyboard */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   \r     vector<int> transformArray(vector<int>& a) {\r     \r         vector<int> temp;\r         int n = a.size();\r         \r         for(int k=1; k<=n-2; k++) {\r             \r             temp = a;\r             \r             for(int i=1; i<=n-2; i++) {\r                 if(temp[i-1] > temp[i] && temp[i] < temp[i+1])                          a[i]++;\r                 else if(temp[i-1] < temp[i] && temp[i] > temp[i+1])                     a[i]--;\r              }\r             \r             temp = a;\r         }\r         \r         return temp;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p21\\1243-array-transformation\\1243-array-transformation.cpp\\Solution\\transformArray(vector<int>&)"
+    },
+    {
+        "f": [
+            "unordered_map<int, vector<int>> adj;",
+            "vector<int> vis;",
+            "int maxD;",
+            "int maxNode;"
+        ],
+        "fm": "void dfs(int node, int d) {\r         \r         vis[node] = 1;\r         \r         if(maxD < d) {\r             maxD = d;\r             maxNode = node;\r         }\r         \r         for(int i=0; i<adj[node].size(); i++) {\r             \r             int child = adj[node][i];\r             \r             if(vis[child] == 0) {\r                 dfs(child, d + 1);\r             }\r         }\r         \r         return;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_dfs_int_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_dfs_int_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1245-tree-diameter.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* UnorderedMapDataNode adj */\n/* VectorDataNode vis */\nint AKA_INSTANCE___Solution_vis_element0=892342062;\nAKA_INSTANCE___Solution->vis.push_back(AKA_INSTANCE___Solution_vis_element0);\nint AKA_INSTANCE___Solution_vis_element1=1120990873;\nAKA_INSTANCE___Solution->vis.push_back(AKA_INSTANCE___Solution_vis_element1);\n/* NormalNumberDataNode maxD */\nAKA_INSTANCE___Solution->maxD=-1331266560;\n/* NormalNumberDataNode maxNode */\nAKA_INSTANCE___Solution->maxNode=-104961089;\n\n\n\n\nint node=1055489381;\n\n\nint d=2140975329;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode node */\n/* NormalNumberDataNode d */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_dfs_int_int_random_3\");AKA_INSTANCE___Solution->dfs(node,d);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p21\\\\1245-tree-diameter\\\\1245-tree-diameter.cpp\\\\Solution\\\\dfs(int,int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1165-single-row-keyboard.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName235633 = new char[2];akaRandomName235633[0] = 105;akaRandomName235633[1] = '\\0';string keyboard=akaRandomName235633;\nchar* akaRandomName469141 = new char[2];akaRandomName469141[0] = -18;akaRandomName469141[1] = '\\0';string word=akaRandomName469141;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode keyboard */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     unordered_map<int, vector<int>> adj;\r     vector<int> vis;\r     \r     int maxD, maxNode;\r     \r     void dfs(int node, int d) {\r         \r         vis[node] = 1;\r         \r         if(maxD < d) {\r             maxD = d;\r             maxNode = node;\r         }\r         \r         for(int i=0; i<adj[node].size(); i++) {\r             \r             int child = adj[node][i];\r             \r             if(vis[child] == 0) {\r                 dfs(child, d + 1);\r             }\r         }\r         \r         return;\r     }\r     \r     int treeDiameter(vector<vector<int>>& edges) {\r     \r         // Find the longest path in this graph\r         \r         int e = edges.size();               // No.of edges\r         int n = e + 1;                      // No. of nodes from [0, n-1]\r         \r         vis.resize(n, 0);\r         \r         // Form the graph\r         for(int i=0; i<edges.size(); i++) {\r             \r             int u = edges[i][0];\r             int v = edges[i][1];\r             \r             adj[u].push_back(v);\r             adj[v].push_back(u);\r         }\r         \r         maxD = -1;\r         \r         // Run two dfs, first dfs at source 0 and second dfs at source maxNode\r         dfs(0, 0);\r         \r         maxD = -1;\r         for(int i=0; i<n; i++)               vis[i] = 0;\r         \r         dfs(maxNode, 0);\r         \r         return maxD;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p21\\1245-tree-diameter\\1245-tree-diameter.cpp\\Solution\\dfs(int,int)"
+    },
+    {
+        "f": [
+            "unordered_map<int, vector<int>> adj;",
+            "vector<int> vis;",
+            "int maxD;",
+            "int maxNode;"
+        ],
+        "fm": "int treeDiameter(vector<vector<int>>& edges) {\r     \r         // Find the longest path in this graph\r         \r         int e = edges.size();               // No.of edges\r         int n = e + 1;                      // No. of nodes from [0, n-1]\r         \r         vis.resize(n, 0);\r         \r         // Form the graph\r         for(int i=0; i<edges.size(); i++) {\r             \r             int u = edges[i][0];\r             int v = edges[i][1];\r             \r             adj[u].push_back(v);\r             adj[v].push_back(u);\r         }\r         \r         maxD = -1;\r         \r         // Run two dfs, first dfs at source 0 and second dfs at source maxNode\r         dfs(0, 0);\r         \r         maxD = -1;\r         for(int i=0; i<n; i++)               vis[i] = 0;\r         \r         dfs(maxNode, 0);\r         \r         return maxD;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_treeDiameter_vector_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_treeDiameter_vector_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1245-tree-diameter.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* UnorderedMapDataNode adj */\n/* VectorDataNode vis */\nint AKA_INSTANCE___Solution_vis_element0=-174384651;\nAKA_INSTANCE___Solution->vis.push_back(AKA_INSTANCE___Solution_vis_element0);\nint AKA_INSTANCE___Solution_vis_element1=694182628;\nAKA_INSTANCE___Solution->vis.push_back(AKA_INSTANCE___Solution_vis_element1);\n/* NormalNumberDataNode maxD */\nAKA_INSTANCE___Solution->maxD=1888403568;\n/* NormalNumberDataNode maxNode */\nAKA_INSTANCE___Solution->maxNode=1904750723;\n\n\nvector<vector<int>> edges;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode edges */\nvector<int> edges_element0;\nint edges_element0_element0=-2016669027;\nedges_element0.push_back(edges_element0_element0);\nedges.push_back(edges_element0);\nvector<int> edges_element1;\nint edges_element1_element0=927817564;\nedges_element1.push_back(edges_element1_element0);\nint edges_element1_element1=31011025;\nedges_element1.push_back(edges_element1_element1);\nedges.push_back(edges_element1);\nvector<int> edges_element2;\nint edges_element2_element0=1917683215;\nedges_element2.push_back(edges_element2_element0);\nedges.push_back(edges_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_treeDiameter_vector_vector_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->treeDiameter(edges);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p21\\\\1245-tree-diameter\\\\1245-tree-diameter.cpp\\\\Solution\\\\treeDiameter(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_edges;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1165-single-row-keyboard.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName235633 = new char[2];akaRandomName235633[0] = 105;akaRandomName235633[1] = '\\0';string keyboard=akaRandomName235633;\nchar* akaRandomName469141 = new char[2];akaRandomName469141[0] = -18;akaRandomName469141[1] = '\\0';string word=akaRandomName469141;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode keyboard */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     unordered_map<int, vector<int>> adj;\r     vector<int> vis;\r     \r     int maxD, maxNode;\r     \r     void dfs(int node, int d) {\r         \r         vis[node] = 1;\r         \r         if(maxD < d) {\r             maxD = d;\r             maxNode = node;\r         }\r         \r         for(int i=0; i<adj[node].size(); i++) {\r             \r             int child = adj[node][i];\r             \r             if(vis[child] == 0) {\r                 dfs(child, d + 1);\r             }\r         }\r         \r         return;\r     }\r     \r     int treeDiameter(vector<vector<int>>& edges) {\r     \r         // Find the longest path in this graph\r         \r         int e = edges.size();               // No.of edges\r         int n = e + 1;                      // No. of nodes from [0, n-1]\r         \r         vis.resize(n, 0);\r         \r         // Form the graph\r         for(int i=0; i<edges.size(); i++) {\r             \r             int u = edges[i][0];\r             int v = edges[i][1];\r             \r             adj[u].push_back(v);\r             adj[v].push_back(u);\r         }\r         \r         maxD = -1;\r         \r         // Run two dfs, first dfs at source 0 and second dfs at source maxNode\r         dfs(0, 0);\r         \r         maxD = -1;\r         for(int i=0; i<n; i++)               vis[i] = 0;\r         \r         dfs(maxNode, 0);\r         \r         return maxD;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p21\\1245-tree-diameter\\1245-tree-diameter.cpp\\Solution\\treeDiameter(vector<vector<int>>&)"
+    }
+]

@@ -1,0 +1,90 @@
+[
+    {
+        "f": [],
+        "fm": "void moveZeroes(int* nums, int numsSize)\r {\r \tint i;\r \tint temp;\r \tint nonZeroCount = 0;\r \tfor (i = 0; i<numsSize; i++)\r \t{\r \t\tif (nums[i] != 0)\r \t\t{\r \t\t\tnums[nonZeroCount] = nums[i];\r \t\t\t//nums[i]=0;\r \t\t\tnonZeroCount++;\r \t\t}\r \t\tif (nums[i] == 0)\r \t\t\tcontinue;\r \t}\r \tfor (i = nonZeroCount; i<numsSize; i++)\r \t{\r \t\tnums[i] = 0;\r \t}\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\zqxl_leetcode\\Leetcode\\_283 Move Zeroes\\_283 Move Zeroes.cpp\\moveZeroes(int*,int)"
+    },
+    {
+        "f": [],
+        "fm": "int findMaxLength1(int* nums, int numsSize) {\r \tint diff = 0, maxLength = 0;\r \tfor (int start = 0; start < numsSize; start++) {\r \t\tdiff = 0;\r \t\tfor (int i = start; i < numsSize; i++) {\r \t\t\tdiff += (nums[i] == 1 ? 1 : -1);\r \t\t\tif (diff == 0) {\r \t\t\t\tint length = i - start + 1;\r \t\t\t\tmaxLength = length > maxLength ? length : maxLength;\r \t\t\t}\r \t\t}\r \t}\r \treturn maxLength;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\zqxl_leetcode\\Leetcode\\_525 Contiguous Array\\_525 Contiguous Array.cpp\\findMaxLength1(int*,int)"
+    },
+    {
+        "f": [],
+        "fm": "int findMaxLength2(int* nums, int numsSize) {\r \tint diff = 0, maxLength = 0;\r \tfor (int start = 0; start < numsSize; start++) {\r \t\tint iStart = start;\r \t\tif (maxLength) {\r \t\t\tdiff = (nums[start - 1] == 0 ? 1 : -1);\r \t\t\tiStart = start + maxLength - 1;\r \t\t}\r \t\telse {\r \t\t\tdiff = 0;\r \t\t}\r \t\tfor (int i = iStart; i < numsSize; i++) {\r \t\t\tdiff += (nums[i] == 1 ? 1 : -1);\r \t\t\tif (diff == 0) {\r \t\t\t\tmaxLength += i - iStart + 1;\r \t\t\t}\r \t\t}\r \t}\r \treturn maxLength;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\zqxl_leetcode\\Leetcode\\_525 Contiguous Array\\_525 Contiguous Array.cpp\\findMaxLength2(int*,int)"
+    },
+    {
+        "f": [],
+        "fm": "int findMaxLength(int* nums, int numsSize) {\r \tint *sumMap = (int*)calloc(2*numsSize+1, sizeof(int));\r \tfor(int i=0;i<2 * numsSize + 1;i++){\r \t\tsumMap[i] = numsSize + 1;\r \t}\r \tsumMap[0 + numsSize] = -1;\r \r \tint sum = 0, maxLength = 0;\r \tfor (int i = 0; i < numsSize; i++) {\r \t\tsum += (nums[i] == 1 ? 1 : -1);\r \t\tif (sumMap[sum + numsSize] == numsSize + 1) {\r \t\t\tsumMap[sum + numsSize] = i;\r \t\t}\r \t\telse {\r \t\t\tint curLength = i - sumMap[sum + numsSize];\r \t\t\tmaxLength = maxLength > curLength ? maxLength : curLength;\r \t\t}\r \t}\r \r \treturn maxLength;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\zqxl_leetcode\\Leetcode\\_525 Contiguous Array\\_525 Contiguous Array.cpp\\findMaxLength(int*,int)"
+    },
+    {
+        "f": [
+            "vector<vector<char>> original_map;",
+            "vector<vector<char>> status_map;"
+        ],
+        "fm": "vector<vector<char>> updateBoard(vector<vector<char>>& board, vector<int>& click) {\r \t\tif (board[click[0]][click[1]] == 'M') {\r \t\t\tboard[click[0]][click[1]] = 'X';\r \t\t\treturn board;\r \t\t}\r \r \t\t// ʼԱ\r \t\toriginal_map.assign(board.begin(), board.end());\r \t\tvector<char> t(board[0].size(), 0);\r \t\tfor (int i = 0; i < board.size(); i++) {\r \t\t\tstatus_map.push_back(t);\r \t\t}\r \t\tupdatestatus_map();\r \t\t// ӡ\r \t\t//print2Dvector(status_map);\r \r \t\tif (status_map[click[0]][click[1]] > 0 ) {\r \t\t\toriginal_map[click[0]][click[1]] = status_map[click[0]][click[1]] + 0x30;\r \t\t\treturn original_map;\r \t\t}\r \r \t\tdfs(click[0], click[1]);\r \r \t\treturn original_map;\r \t}",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \tvector<vector<char>> updateBoard(vector<vector<char>>& board, vector<int>& click) {\r \t\tif (board[click[0]][click[1]] == 'M') {\r \t\t\tboard[click[0]][click[1]] = 'X';\r \t\t\treturn board;\r \t\t}\r \r \t\t// ʼԱ\r \t\toriginal_map.assign(board.begin(), board.end());\r \t\tvector<char> t(board[0].size(), 0);\r \t\tfor (int i = 0; i < board.size(); i++) {\r \t\t\tstatus_map.push_back(t);\r \t\t}\r \t\tupdatestatus_map();\r \t\t// ӡ\r \t\t//print2Dvector(status_map);\r \r \t\tif (status_map[click[0]][click[1]] > 0 ) {\r \t\t\toriginal_map[click[0]][click[1]] = status_map[click[0]][click[1]] + 0x30;\r \t\t\treturn original_map;\r \t\t}\r \r \t\tdfs(click[0], click[1]);\r \r \t\treturn original_map;\r \t}\r private:\r \tvector<vector<char>> original_map;\r \tvector<vector<char>> status_map;\r \r \tvoid updatestatus_map() {\r \t\tfor (int i = 0; i < original_map.size(); i++) {\r \t\t\tfor (int j = 0; j < original_map[i].size(); j++) {\r \t\t\t\tif (original_map[i][j] == 'M') {\r \t\t\t\t\tsetNumsAroundMine(i, j);\r \t\t\t\t}\r \t\t\t}\r \t\t}\r \t}\r \tvoid setNumsAroundMine(int x, int y) {\r \t\tfor (int i = max(0, x - 1); i < min(status_map.size(), x + 2); i++) {\r \t\t\tfor (int j = max(0, y - 1); j < min(status_map[i].size(), y + 2); j++) {\r \t\t\t\tstatus_map[i][j]++;\r \t\t\t}\r \t\t}\r \t\tstatus_map[x][y] = -9;\r \t}\r \r \tvoid dfs(int x, int y) {\r \t\tif (status_map[x][y] > 0) {\r \t\t\toriginal_map[x][y] = status_map[x][y] + 0x30;\r \t\t\treturn;\r \t\t}\r \t\telse if (status_map[x][y] < 0) {\r \t\t\treturn;\r \t\t}\r \r \t\toriginal_map[x][y] = 'B';\r \t\t// ӡ\r \t\t//print2Dvector(original_map);\r \r \t\tfor (int i = max(0, x - 1); i < min(status_map.size(), x + 2); i++) {\r \t\t\tfor (int j = max(0, y - 1); j < min(status_map[i].size(), y + 2); j++) {\r \t\t\t\tif ((x == i && y == j) || original_map[i][j]!='E')\r \t\t\t\t\tcontinue;\r \t\t\t\tdfs(i,j);\r \t\t\t}\r \t\t}\r \t}\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\admin\\zqxl_leetcode\\Leetcode\\_529_Minesweeper\\_529_Minesweeper.cpp\\Solution\\updateBoard(vector<vector<char>>&,vector<int>&)"
+    },
+    {
+        "f": [
+            "vector<vector<char>> original_map;",
+            "vector<vector<char>> status_map;"
+        ],
+        "fm": "void updatestatus_map() {\r \t\tfor (int i = 0; i < original_map.size(); i++) {\r \t\t\tfor (int j = 0; j < original_map[i].size(); j++) {\r \t\t\t\tif (original_map[i][j] == 'M') {\r \t\t\t\t\tsetNumsAroundMine(i, j);\r \t\t\t\t}\r \t\t\t}\r \t\t}\r \t}",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \tvector<vector<char>> updateBoard(vector<vector<char>>& board, vector<int>& click) {\r \t\tif (board[click[0]][click[1]] == 'M') {\r \t\t\tboard[click[0]][click[1]] = 'X';\r \t\t\treturn board;\r \t\t}\r \r \t\t// ʼԱ\r \t\toriginal_map.assign(board.begin(), board.end());\r \t\tvector<char> t(board[0].size(), 0);\r \t\tfor (int i = 0; i < board.size(); i++) {\r \t\t\tstatus_map.push_back(t);\r \t\t}\r \t\tupdatestatus_map();\r \t\t// ӡ\r \t\t//print2Dvector(status_map);\r \r \t\tif (status_map[click[0]][click[1]] > 0 ) {\r \t\t\toriginal_map[click[0]][click[1]] = status_map[click[0]][click[1]] + 0x30;\r \t\t\treturn original_map;\r \t\t}\r \r \t\tdfs(click[0], click[1]);\r \r \t\treturn original_map;\r \t}\r private:\r \tvector<vector<char>> original_map;\r \tvector<vector<char>> status_map;\r \r \tvoid updatestatus_map() {\r \t\tfor (int i = 0; i < original_map.size(); i++) {\r \t\t\tfor (int j = 0; j < original_map[i].size(); j++) {\r \t\t\t\tif (original_map[i][j] == 'M') {\r \t\t\t\t\tsetNumsAroundMine(i, j);\r \t\t\t\t}\r \t\t\t}\r \t\t}\r \t}\r \tvoid setNumsAroundMine(int x, int y) {\r \t\tfor (int i = max(0, x - 1); i < min(status_map.size(), x + 2); i++) {\r \t\t\tfor (int j = max(0, y - 1); j < min(status_map[i].size(), y + 2); j++) {\r \t\t\t\tstatus_map[i][j]++;\r \t\t\t}\r \t\t}\r \t\tstatus_map[x][y] = -9;\r \t}\r \r \tvoid dfs(int x, int y) {\r \t\tif (status_map[x][y] > 0) {\r \t\t\toriginal_map[x][y] = status_map[x][y] + 0x30;\r \t\t\treturn;\r \t\t}\r \t\telse if (status_map[x][y] < 0) {\r \t\t\treturn;\r \t\t}\r \r \t\toriginal_map[x][y] = 'B';\r \t\t// ӡ\r \t\t//print2Dvector(original_map);\r \r \t\tfor (int i = max(0, x - 1); i < min(status_map.size(), x + 2); i++) {\r \t\t\tfor (int j = max(0, y - 1); j < min(status_map[i].size(), y + 2); j++) {\r \t\t\t\tif ((x == i && y == j) || original_map[i][j]!='E')\r \t\t\t\t\tcontinue;\r \t\t\t\tdfs(i,j);\r \t\t\t}\r \t\t}\r \t}\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\admin\\zqxl_leetcode\\Leetcode\\_529_Minesweeper\\_529_Minesweeper.cpp\\Solution\\updatestatus_map()"
+    }
+]

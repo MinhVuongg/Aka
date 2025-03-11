@@ -1,0 +1,394 @@
+[
+    {
+        "f": [],
+        "fm": "int find_minimum(int a[], int n) {\r \tint c, min, index;\r \t\r \tmin = a[0];\r \tindex = 0;\r \t\r \tfor (c = 1; c < n; c++) {\r \t\tif (a[c] < min) {\r \t\t\tindex = c;\r \t\t\tmin = a[c];\r \t\t}\r \t}\r \t\r \treturn index;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_find_minimum_int_int_random_2(void) {\n{\nAKA_test_case_name=\"find_minimum_int_int_random_2\";\n\n// set up\n;\n\nint a[1];;\n\n\nint n=1;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode a */\n/* NormalNumberDataNode a[0] */\na[0]=-78547912;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test find_minimum_int_int_random_2\");int AKA_ACTUAL_OUTPUT=find_minimum(a,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\find_minimum(int[],int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-605155238;\n/* NormalNumberDataNode t1[1] */\nt1[1]=987958873;\n/* NormalNumberDataNode t1[2] */\nt1[2]=626883816;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=2099910918;\n/* NormalNumberDataNode t2[1] */\nt2[1]=-678482422;\n/* NormalNumberDataNode t2[2] */\nt2[2]=320492475;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=2078413405;\n/* NormalNumberDataNode t3[1] */\nt3[1]=-634233642;\n/* NormalNumberDataNode t3[2] */\nt3[2]=-223969313;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1884835743;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1559648688;\n/* NormalNumberDataNode t3[5] */\nt3[5]=-1796546684;\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\praticalTest.cpp\\find_minimum(int[],int)"
+    },
+    {
+        "f": [],
+        "fm": "long linear_search1(long a[], long n, long find) {\r \tlong c;\r \t\r \tfor (c = 0 ;c < n ; c++ ) {\r \t\tif (a[c] == find)\r \t\t\treturn c;\r \t}\r \t\r \treturn -1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_linear_search1_long_long_long_random_0(void) {\n{\nAKA_test_case_name=\"linear_search1_long_long_long_random_0\";\n\n// set up\n;\n\nlong a[3];;\n\n\nlong n=1;\n\n\nlong find=-1331504455;\n\n\nlong AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode a */\n/* NormalNumberDataNode a[0] */\na[0]=-1698443243;\n/* NormalNumberDataNode a[1] */\na[1]=1536630055;\n/* NormalNumberDataNode a[2] */\na[2]=1822435383;\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode find */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test linear_search1_long_long_long_random_0\");long AKA_ACTUAL_OUTPUT=linear_search1(a,n,find);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\linear_search1(long[],long,long)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-605155238;\n/* NormalNumberDataNode t1[1] */\nt1[1]=987958873;\n/* NormalNumberDataNode t1[2] */\nt1[2]=626883816;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=2099910918;\n/* NormalNumberDataNode t2[1] */\nt2[1]=-678482422;\n/* NormalNumberDataNode t2[2] */\nt2[2]=320492475;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=2078413405;\n/* NormalNumberDataNode t3[1] */\nt3[1]=-634233642;\n/* NormalNumberDataNode t3[2] */\nt3[2]=-223969313;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1884835743;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1559648688;\n/* NormalNumberDataNode t3[5] */\nt3[5]=-1796546684;\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\praticalTest.cpp\\linear_search1(long[],long,long)"
+    },
+    {
+        "f": [],
+        "fm": "long linear_search2(long *pointer, long n, long find){\r \tlong c;\r \t\r \tfor (c = 0; c < n; c++) {\r \t\tif (*(pointer+c) == find)\r \t\treturn c;\r \t}\r \t\r \treturn -1;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_linear_search2_longmul_long_long_random_2(void) {\n{\nAKA_test_case_name=\"linear_search2_longmul_long_long_random_2\";\n\n// set up\n;\n\nlong AKA_ARRAY_INIT_pointer[1];\n\n\nlong AKA_ARRAY_INIT_pointer_0=1761326073;\nAKA_ARRAY_INIT_pointer[0] = AKA_ARRAY_INIT_pointer_0;\n\nlong* pointer = AKA_ARRAY_INIT_pointer;\n\n\nlong n=2;\n\n\nlong find=648953861;\n\n\nlong AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode pointer */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode find */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test linear_search2_longmul_long_long_random_2\");long AKA_ACTUAL_OUTPUT=linear_search2(pointer,n,find);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\linear_search2(long*,long,long)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-605155238;\n/* NormalNumberDataNode t1[1] */\nt1[1]=987958873;\n/* NormalNumberDataNode t1[2] */\nt1[2]=626883816;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=2099910918;\n/* NormalNumberDataNode t2[1] */\nt2[1]=-678482422;\n/* NormalNumberDataNode t2[2] */\nt2[2]=320492475;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=2078413405;\n/* NormalNumberDataNode t3[1] */\nt3[1]=-634233642;\n/* NormalNumberDataNode t3[2] */\nt3[2]=-223969313;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1884835743;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1559648688;\n/* NormalNumberDataNode t3[5] */\nt3[5]=-1796546684;\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_linear_search2_longmul_long_long_random_4(void) {\n{\nAKA_test_case_name=\"linear_search2_longmul_long_long_random_4\";\n\n// set up\n;\n\nlong AKA_ARRAY_INIT_pointer[3];\n\n\nlong AKA_ARRAY_INIT_pointer_0=353011814;\nAKA_ARRAY_INIT_pointer[0] = AKA_ARRAY_INIT_pointer_0;\n\n\nlong AKA_ARRAY_INIT_pointer_1=-1027815753;\nAKA_ARRAY_INIT_pointer[1] = AKA_ARRAY_INIT_pointer_1;\n\n\nlong AKA_ARRAY_INIT_pointer_2=-694135035;\nAKA_ARRAY_INIT_pointer[2] = AKA_ARRAY_INIT_pointer_2;\n\nlong* pointer = AKA_ARRAY_INIT_pointer;\n\n\nlong n=5;\n\n\nlong find=-1110874951;\n\n\nlong AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode pointer */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode find */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test linear_search2_longmul_long_long_random_4\");long AKA_ACTUAL_OUTPUT=linear_search2(pointer,n,find);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\linear_search2(long*,long,long)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-1396110145;\n/* NormalNumberDataNode t1[1] */\nt1[1]=-1282454838;\n/* NormalNumberDataNode t1[2] */\nt1[2]=1441174696;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=-1066829771;\n/* NormalNumberDataNode t2[1] */\nt2[1]=381202093;\n/* NormalNumberDataNode t2[2] */\nt2[2]=-1779954914;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=225073196;\n/* NormalNumberDataNode t3[1] */\nt3[1]=1599959271;\n/* NormalNumberDataNode t3[2] */\nt3[2]=752772368;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1349563781;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1458551060;\n/* NormalNumberDataNode t3[5] */\nt3[5]=893745875;\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\praticalTest.cpp\\linear_search2(long*,long,long)"
+    },
+    {
+        "f": [],
+        "fm": "void reverse_array(int *pointer, int n){\r \tint *s, c, d;\r \t\r \ts = (int*)malloc(sizeof(int)*n);\r \t\r \tif( s == NULL )\r \t\texit(EXIT_FAILURE);\r \td = 0 ;\r \tfor ( c = n - 1; c >= 0 ; c-- ){\r \t\t*(s+d) = *(pointer+c);\r \t\td++;\r \t}\r \t\r \tfor ( c = 0 ; c < n ; c++ )\r \t\t*(pointer+c) = *(s+c);\r \t\r \tfree(s);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_reverse_array_intmul_int_random_0(void) {\n{\nAKA_test_case_name=\"reverse_array_intmul_int_random_0\";\n\n// set up\n;\n\nint* pointer;\n\n\nint n=6;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode pointer */\n/* NormalNumberDataNode n */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test reverse_array_intmul_int_random_0\");reverse_array(pointer,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\reverse_array(int*,int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-605155238;\n/* NormalNumberDataNode t1[1] */\nt1[1]=987958873;\n/* NormalNumberDataNode t1[2] */\nt1[2]=626883816;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=2099910918;\n/* NormalNumberDataNode t2[1] */\nt2[1]=-678482422;\n/* NormalNumberDataNode t2[2] */\nt2[2]=320492475;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=2078413405;\n/* NormalNumberDataNode t3[1] */\nt3[1]=-634233642;\n/* NormalNumberDataNode t3[2] */\nt3[2]=-223969313;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1884835743;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1559648688;\n/* NormalNumberDataNode t3[5] */\nt3[5]=-1796546684;\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\praticalTest.cpp\\reverse_array(int*,int)"
+    },
+    {
+        "f": [],
+        "fm": "void concatenate(char p[], char q[]) {\r \tint c, d;\r \tc = 0;\r \t\r \twhile (p[c] != '\\0') {\r \t\tc++;  \t\r \t}\r \t\r \td = 0;\r \t\r \twhile (q[d] != '\\0') {\r \t\tp[c] = q[d];\r \t\td++;\r \t\tc++;\t\r \t}\r \t\r \tp[c] = '\\0';\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_concatenate_char_char_random_2(void) {\n{\nAKA_test_case_name=\"concatenate_char_char_random_2\";\n\n// set up\n;\n\nchar p[1];\n\nchar q[1];\n\n\n/* RootDataNode STATIC */\n/* OneDimensionCharacterDataNode p */\n/* NormalCharacterDataNode p[0] */\np[0]=-12;\n/* NormalCharacterDataNode p[1] */\np[1]=50;\n/* OneDimensionCharacterDataNode q */\n/* NormalCharacterDataNode q[0] */\nq[0]=-76;\n/* NormalCharacterDataNode q[1] */\nq[1]=41;\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test concatenate_char_char_random_2\");concatenate(p,q);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\concatenate(char[],char[])\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-605155238;\n/* NormalNumberDataNode t1[1] */\nt1[1]=987958873;\n/* NormalNumberDataNode t1[2] */\nt1[2]=626883816;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=2099910918;\n/* NormalNumberDataNode t2[1] */\nt2[1]=-678482422;\n/* NormalNumberDataNode t2[2] */\nt2[2]=320492475;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=2078413405;\n/* NormalNumberDataNode t3[1] */\nt3[1]=-634233642;\n/* NormalNumberDataNode t3[2] */\nt3[2]=-223969313;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1884835743;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1559648688;\n/* NormalNumberDataNode t3[5] */\nt3[5]=-1796546684;\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\praticalTest.cpp\\concatenate(char[],char[])"
+    },
+    {
+        "f": [],
+        "fm": "void merge(int a[], int m, int b[], int n, int sorted[]) {\r \tint i, j, k;\r \t\r \tj = 0;\r \tk = 0;\r \t\r \tfor (i = 0; i < m + n;i++) {\r \t\tif (j < m && k < n) {\r \t\t\tif (a[j] < b[k]) {\r \t\t\t\tsorted[i] = a[j];\r \t\t\t\tj++;\r \t\t\t}else {\r \t\t\t\tsorted[i] = b[k];\r \t\t\t\tk++;\r \t\t\t}\r \t\t\ti++;\r \t\t}else if (j == m) {\r \t\t\tfor (; i < m + n;) {\r \t\t\t\tsorted[i] = b[k];\r \t\t\t\tk++;\r \t\t\t\ti++;\r \t\t\t}\r \t\t}else {\r \t\t\tfor (; i < m + n;) {\r \t\t\t\tsorted[i] = a[j];\r \t\t\t\tj++;\r \t\t\t\ti++;\r \t\t\t}\r \t\t}\r \t}\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_merge_int_int_int_int_int_directed_1(void) {\n{\nAKA_test_case_name=\"merge_int_int_int_int_int_directed_1\";\n\n// set up\n;\n\nint a[1];;\n\n\nint m=0;\nint b[3];;\n\n\nint n=3;\nint sorted[3];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode a */\n/* NormalNumberDataNode a[0] */\n/* a[0] : null value -> no code */\n/* NormalNumberDataNode m */\n/* OneDimensionNumberDataNode b */\n/* NormalNumberDataNode b[0] */\nb[0]=0;\n/* NormalNumberDataNode b[1] */\nb[1]=0;\n/* NormalNumberDataNode b[2] */\nb[2]=0;\n/* NormalNumberDataNode n */\n/* OneDimensionNumberDataNode sorted */\n/* NormalNumberDataNode sorted[0] */\nsorted[0]=0;\n/* NormalNumberDataNode sorted[1] */\nsorted[1]=0;\n/* NormalNumberDataNode sorted[2] */\nsorted[2]=0;\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test merge_int_int_int_int_int_directed_1\");merge(a,m,b,n,sorted);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\merge(int[],int,int[],int,int[])\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-605155238;\n/* NormalNumberDataNode t1[1] */\nt1[1]=987958873;\n/* NormalNumberDataNode t1[2] */\nt1[2]=626883816;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=2099910918;\n/* NormalNumberDataNode t2[1] */\nt2[1]=-678482422;\n/* NormalNumberDataNode t2[2] */\nt2[2]=320492475;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=2078413405;\n/* NormalNumberDataNode t3[1] */\nt3[1]=-634233642;\n/* NormalNumberDataNode t3[2] */\nt3[2]=-223969313;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1884835743;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1559648688;\n/* NormalNumberDataNode t3[5] */\nt3[5]=-1796546684;\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_merge_int_int_int_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"merge_int_int_int_int_int_directed_0\";\n\n// set up\n;\n\nint a[3];;\n\n\nint m=3;\nint b[1];;\n\n\nint n=0;\nint sorted[3];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode a */\n/* NormalNumberDataNode a[0] */\na[0]=0;\n/* NormalNumberDataNode a[1] */\na[1]=0;\n/* NormalNumberDataNode a[2] */\na[2]=0;\n/* NormalNumberDataNode m */\n/* OneDimensionNumberDataNode b */\n/* NormalNumberDataNode b[0] */\n/* b[0] : null value -> no code */\n/* NormalNumberDataNode n */\n/* OneDimensionNumberDataNode sorted */\n/* NormalNumberDataNode sorted[0] */\nsorted[0]=0;\n/* NormalNumberDataNode sorted[1] */\nsorted[1]=0;\n/* NormalNumberDataNode sorted[2] */\nsorted[2]=0;\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test merge_int_int_int_int_int_directed_0\");merge(a,m,b,n,sorted);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\merge(int[],int,int[],int,int[])\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-1396110145;\n/* NormalNumberDataNode t1[1] */\nt1[1]=-1282454838;\n/* NormalNumberDataNode t1[2] */\nt1[2]=1441174696;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=-1066829771;\n/* NormalNumberDataNode t2[1] */\nt2[1]=381202093;\n/* NormalNumberDataNode t2[2] */\nt2[2]=-1779954914;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=225073196;\n/* NormalNumberDataNode t3[1] */\nt3[1]=1599959271;\n/* NormalNumberDataNode t3[2] */\nt3[2]=752772368;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1349563781;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1458551060;\n/* NormalNumberDataNode t3[5] */\nt3[5]=893745875;\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_merge_int_int_int_int_int_random_0(void) {\n{\nAKA_test_case_name=\"merge_int_int_int_int_int_random_0\";\n\n// set up\n;\n\nint a[2];;\n\n\nint m=9;\nint b[2];;\n\n\nint n=3;\nint sorted[1];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode a */\n/* NormalNumberDataNode a[0] */\na[0]=-1696713305;\n/* NormalNumberDataNode a[1] */\na[1]=778621375;\n/* NormalNumberDataNode m */\n/* OneDimensionNumberDataNode b */\n/* NormalNumberDataNode b[0] */\nb[0]=-1973226678;\n/* NormalNumberDataNode b[1] */\nb[1]=1701904296;\n/* NormalNumberDataNode n */\n/* OneDimensionNumberDataNode sorted */\n/* NormalNumberDataNode sorted[0] */\nsorted[0]=32344624;\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test merge_int_int_int_int_int_random_0\");merge(a,m,b,n,sorted);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\merge(int[],int,int[],int,int[])\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint i=-1294778855;\n\n\nint j=-869478841;\n\n\nint k=-1822484014;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\praticalTest.cpp\\merge(int[],int,int[],int,int[])"
+    },
+    {
+        "f": [],
+        "fm": "int string_length1(char *pointer){\r \tint c = 0;\r \t\r \twhile( *(pointer + c) != '\\0' )\r \t\tc++;\r \t\r \treturn c;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_string_length1_charmul_random_0(void) {\n{\nAKA_test_case_name=\"string_length1_charmul_random_0\";\n\n// set up\n;\n\nchar AKA_ARRAY_INIT_pointer[2];\n\nchar AKA_ARRAY_INIT_pointer_0=75;\nAKA_ARRAY_INIT_pointer[0] = AKA_ARRAY_INIT_pointer_0;\n\nchar AKA_ARRAY_INIT_pointer_1=24;\nAKA_ARRAY_INIT_pointer[1] = AKA_ARRAY_INIT_pointer_1;\n\nchar* pointer = AKA_ARRAY_INIT_pointer;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode pointer */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test string_length1_charmul_random_0\");int AKA_ACTUAL_OUTPUT=string_length1(pointer);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\string_length1(char*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-605155238;\n/* NormalNumberDataNode t1[1] */\nt1[1]=987958873;\n/* NormalNumberDataNode t1[2] */\nt1[2]=626883816;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=2099910918;\n/* NormalNumberDataNode t2[1] */\nt2[1]=-678482422;\n/* NormalNumberDataNode t2[2] */\nt2[2]=320492475;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=2078413405;\n/* NormalNumberDataNode t3[1] */\nt3[1]=-634233642;\n/* NormalNumberDataNode t3[2] */\nt3[2]=-223969313;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1884835743;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1559648688;\n/* NormalNumberDataNode t3[5] */\nt3[5]=-1796546684;\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\praticalTest.cpp\\string_length1(char*)"
+    },
+    {
+        "f": [],
+        "fm": "void reverse2(char *x, int begin, int end){\r \tchar c;\r \t\r \tif (begin >= end)\r \t\treturn;\r \t\r \tc          = *(x+begin);\r \t*(x+begin) = *(x+end);\r \t*(x+end)   = c;\r \t\r \treverse2(x, ++begin, --end);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_reverse2_charmul_int_int_random_2(void) {\n{\nAKA_test_case_name=\"reverse2_charmul_int_int_random_2\";\n\n// set up\n;\n\nchar AKA_ARRAY_INIT_x[2];\n\nchar AKA_ARRAY_INIT_x_0=104;\nAKA_ARRAY_INIT_x[0] = AKA_ARRAY_INIT_x_0;\n\nchar AKA_ARRAY_INIT_x_1=0;\nAKA_ARRAY_INIT_x[1] = AKA_ARRAY_INIT_x_1;\n\nchar* x = AKA_ARRAY_INIT_x;\n\n\nint begin=1891901682;\n\n\nint end=-2053419005;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode x */\n/* NormalNumberDataNode begin */\n/* NormalNumberDataNode end */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test reverse2_charmul_int_int_random_2\");reverse2(x,begin,end);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\reverse2(char*,int,int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-605155238;\n/* NormalNumberDataNode t1[1] */\nt1[1]=987958873;\n/* NormalNumberDataNode t1[2] */\nt1[2]=626883816;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=2099910918;\n/* NormalNumberDataNode t2[1] */\nt2[1]=-678482422;\n/* NormalNumberDataNode t2[2] */\nt2[2]=320492475;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=2078413405;\n/* NormalNumberDataNode t3[1] */\nt3[1]=-634233642;\n/* NormalNumberDataNode t3[2] */\nt3[2]=-223969313;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1884835743;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1559648688;\n/* NormalNumberDataNode t3[5] */\nt3[5]=-1796546684;\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_reverse2_charmul_int_int_random_0(void) {\n{\nAKA_test_case_name=\"reverse2_charmul_int_int_random_0\";\n\n// set up\n;\n\nchar* x;\n\n\nint begin=-1628842552;\n\n\nint end=182167764;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode x */\n/* NormalNumberDataNode begin */\n/* NormalNumberDataNode end */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test reverse2_charmul_int_int_random_0\");reverse2(x,begin,end);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\reverse2(char*,int,int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-1396110145;\n/* NormalNumberDataNode t1[1] */\nt1[1]=-1282454838;\n/* NormalNumberDataNode t1[2] */\nt1[2]=1441174696;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=-1066829771;\n/* NormalNumberDataNode t2[1] */\nt2[1]=381202093;\n/* NormalNumberDataNode t2[2] */\nt2[2]=-1779954914;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=225073196;\n/* NormalNumberDataNode t3[1] */\nt3[1]=1599959271;\n/* NormalNumberDataNode t3[2] */\nt3[2]=752772368;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1349563781;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1458551060;\n/* NormalNumberDataNode t3[5] */\nt3[5]=893745875;\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\praticalTest.cpp\\reverse2(char*,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "void copy_string(char *target, char *source){\r \twhile(*source){\r \t\t*target = *source;\r \t\tsource++;\r \t\ttarget++;\r \t}\r \t*target = '\\0';\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_copy_string_charmul_charmul_random_3(void) {\n{\nAKA_test_case_name=\"copy_string_charmul_charmul_random_3\";\n\n// set up\n;\n\nchar AKA_ARRAY_INIT_target[2];\n\nchar AKA_ARRAY_INIT_target_0=-112;\nAKA_ARRAY_INIT_target[0] = AKA_ARRAY_INIT_target_0;\n\nchar AKA_ARRAY_INIT_target_1=-64;\nAKA_ARRAY_INIT_target[1] = AKA_ARRAY_INIT_target_1;\n\nchar* target = AKA_ARRAY_INIT_target;\nchar AKA_ARRAY_INIT_source[2];\n\nchar AKA_ARRAY_INIT_source_0=-12;\nAKA_ARRAY_INIT_source[0] = AKA_ARRAY_INIT_source_0;\n\nchar AKA_ARRAY_INIT_source_1=0;\nAKA_ARRAY_INIT_source[1] = AKA_ARRAY_INIT_source_1;\n\nchar* source = AKA_ARRAY_INIT_source;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode target */\n/* PointerCharacterDataNode source */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test copy_string_charmul_charmul_random_3\");copy_string(target,source);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\copy_string(char*,char*)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-605155238;\n/* NormalNumberDataNode t1[1] */\nt1[1]=987958873;\n/* NormalNumberDataNode t1[2] */\nt1[2]=626883816;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=2099910918;\n/* NormalNumberDataNode t2[1] */\nt2[1]=-678482422;\n/* NormalNumberDataNode t2[2] */\nt2[2]=320492475;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=2078413405;\n/* NormalNumberDataNode t3[1] */\nt3[1]=-634233642;\n/* NormalNumberDataNode t3[2] */\nt3[2]=-223969313;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1884835743;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1559648688;\n/* NormalNumberDataNode t3[5] */\nt3[5]=-1796546684;\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\praticalTest.cpp\\copy_string(char*,char*)"
+    },
+    {
+        "f": [],
+        "fm": "int check_vowel(char a){\r \tif ( a >= 'A' && a <= 'Z' )\r \t\ta = a + 'a' - 'A';\r \t\r \tif ( a == 'a' || a == 'e' || a == 'i' || a == 'o' || a == 'u')\r \t\treturn 1;\r \t\r \treturn 0;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_check_vowel_char_directed_2(void) {\n{\nAKA_test_case_name=\"check_vowel_char_directed_2\";\n\n// set up\n;\n\n\nchar a=117;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode a */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test check_vowel_char_directed_2\");int AKA_ACTUAL_OUTPUT=check_vowel(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\check_vowel(char)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-605155238;\n/* NormalNumberDataNode t1[1] */\nt1[1]=987958873;\n/* NormalNumberDataNode t1[2] */\nt1[2]=626883816;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=2099910918;\n/* NormalNumberDataNode t2[1] */\nt2[1]=-678482422;\n/* NormalNumberDataNode t2[2] */\nt2[2]=320492475;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=2078413405;\n/* NormalNumberDataNode t3[1] */\nt3[1]=-634233642;\n/* NormalNumberDataNode t3[2] */\nt3[2]=-223969313;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1884835743;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1559648688;\n/* NormalNumberDataNode t3[5] */\nt3[5]=-1796546684;\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_check_vowel_char_directed_1(void) {\n{\nAKA_test_case_name=\"check_vowel_char_directed_1\";\n\n// set up\n;\n\n\nchar a=101;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode a */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test check_vowel_char_directed_1\");int AKA_ACTUAL_OUTPUT=check_vowel(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\check_vowel(char)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-1396110145;\n/* NormalNumberDataNode t1[1] */\nt1[1]=-1282454838;\n/* NormalNumberDataNode t1[2] */\nt1[2]=1441174696;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=-1066829771;\n/* NormalNumberDataNode t2[1] */\nt2[1]=381202093;\n/* NormalNumberDataNode t2[2] */\nt2[2]=-1779954914;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=225073196;\n/* NormalNumberDataNode t3[1] */\nt3[1]=1599959271;\n/* NormalNumberDataNode t3[2] */\nt3[2]=752772368;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1349563781;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1458551060;\n/* NormalNumberDataNode t3[5] */\nt3[5]=893745875;\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_check_vowel_char_directed_0(void) {\n{\nAKA_test_case_name=\"check_vowel_char_directed_0\";\n\n// set up\n;\n\n\nchar a=105;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode a */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test check_vowel_char_directed_0\");int AKA_ACTUAL_OUTPUT=check_vowel(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\check_vowel(char)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint i=-1294778855;\n\n\nint j=-869478841;\n\n\nint k=-1822484014;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_check_vowel_char_random_4(void) {\n{\nAKA_test_case_name=\"check_vowel_char_random_4\";\n\n// set up\n;\n\n\nchar a=111;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode a */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test check_vowel_char_random_4\");int AKA_ACTUAL_OUTPUT=check_vowel(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\check_vowel(char)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint i=0;\n\n\nint j=1;\n\n\nint k=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 4,
+                "dt": {},
+                "td": "void AKA_TEST_check_vowel_char_directed_4(void) {\n{\nAKA_test_case_name=\"check_vowel_char_directed_4\";\n\n// set up\n;\n\n\nchar a=65;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode a */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test check_vowel_char_directed_4\");int AKA_ACTUAL_OUTPUT=check_vowel(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\check_vowel(char)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint i=0;\n\n\nint j=0;\n\n\nint k=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 5,
+                "dt": {},
+                "td": "void AKA_TEST_check_vowel_char_directed_3(void) {\n{\nAKA_test_case_name=\"check_vowel_char_directed_3\";\n\n// set up\n;\n\n\nchar a=97;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode a */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test check_vowel_char_directed_3\");int AKA_ACTUAL_OUTPUT=check_vowel(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\check_vowel(char)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint i=2;\n\n\nint j=1;\n\n\nint k=2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 6,
+                "dt": {},
+                "td": "void AKA_TEST_check_vowel_char_random_0(void) {\n{\nAKA_test_case_name=\"check_vowel_char_random_0\";\n\n// set up\n;\n\n\nchar a=-8;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode a */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test check_vowel_char_random_0\");int AKA_ACTUAL_OUTPUT=check_vowel(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\check_vowel(char)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint i=1375529110;\n\n\nint j=957233961;\n\n\nint k=-421647236;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 7,
+                "dt": {},
+                "td": "void AKA_TEST_check_vowel_char_random_2(void) {\n{\nAKA_test_case_name=\"check_vowel_char_random_2\";\n\n// set up\n;\n\n\nchar a=114;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode a */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test check_vowel_char_random_2\");int AKA_ACTUAL_OUTPUT=check_vowel(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\check_vowel(char)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint i=1;\n\n\nint j=1;\n\n\nint k=1;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\praticalTest.cpp\\check_vowel(char)"
+    }
+]

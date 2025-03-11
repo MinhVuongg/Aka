@@ -1,0 +1,98 @@
+[
+    {
+        "f": [],
+        "fm": "int fixedPoint(vector<int>& a) {\r     \r         int res = -1;\r         \r         // Find the smallest index i such that a[i] = i\r         int n = a.size();\r         \r         int start = 0, end = n - 1;\r         \r         while(start <= end) {\r             \r             int mid = start + (end - start) / 2;\r             \r             if(a[mid] == mid) {\r                 res = mid;\r                 end = mid - 1;\r             }\r             \r             else if(a[mid] < mid)                               start = mid + 1;\r             else                                                end = mid - 1;\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_fixedPoint_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_fixedPoint_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1064-fixed-point.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=854532874;\na.push_back(a_element0);\nint a_element1=2018516586;\na.push_back(a_element1);\nint a_element2=1888601579;\na.push_back(a_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_fixedPoint_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->fixedPoint(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p13\\\\1064-fixed-point\\\\1064-fixed-point.cpp\\\\Solution\\\\fixedPoint(vector<int>&)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1064-fixed-point.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=854532874;\na.push_back(a_element0);\nint a_element1=2018516586;\na.push_back(a_element1);\nint a_element2=1888601579;\na.push_back(a_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_fixedPoint_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_fixedPoint_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1064-fixed-point.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=428445076;\na.push_back(a_element0);\nint a_element1=-1266959751;\na.push_back(a_element1);\nint a_element2=-368676682;\na.push_back(a_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_fixedPoint_vector_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->fixedPoint(a);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p13\\\\1064-fixed-point\\\\1064-fixed-point.cpp\\\\Solution\\\\fixedPoint(vector<int>&)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1064-fixed-point.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=428445076;\na.push_back(a_element0);\nint a_element1=-1266959751;\na.push_back(a_element1);\nint a_element2=-368676682;\na.push_back(a_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r    \r     int fixedPoint(vector<int>& a) {\r     \r         int res = -1;\r         \r         // Find the smallest index i such that a[i] = i\r         int n = a.size();\r         \r         int start = 0, end = n - 1;\r         \r         while(start <= end) {\r             \r             int mid = start + (end - start) / 2;\r             \r             if(a[mid] == mid) {\r                 res = mid;\r                 end = mid - 1;\r             }\r             \r             else if(a[mid] < mid)                               start = mid + 1;\r             else                                                end = mid - 1;\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p13\\1064-fixed-point\\1064-fixed-point.cpp\\Solution\\fixedPoint(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<vector<int>> indexPairs(string text, vector<string>& words) {\r     \r         vector<vector<int>> res;\r         vector<int> path;\r         \r         int n = text.size();\r         \r         for(auto &x : words) {\r             \r             string temp = x;\r             int stRange = 0;\r \r             int n1 = temp.size();\r          \r             // Find the starting index and ending index of word \"temp\" in text\r             \r             while(stRange + n1 - 1 < n) {\r                 \r                 int stIndex = text.substr(stRange, n - stRange).find(temp);\r                 \r                 if(stIndex == string :: npos)                                       break;\r                 \r                 // Here, stIndex = stRange + stIndex, since substr got updated here in range search\r                 stIndex = stRange + stIndex;\r                 \r                 path.push_back(stIndex);\r                 path.push_back(stIndex + n1 - 1);\r \r                 res.push_back(path);\r                 path.clear();\r \r                 stRange = stIndex + 1;\r             }\r         }\r         \r         sort(res.begin(), res.end());\r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_indexPairs_string_vector_string_random_2(void) {\n{\nAKA_test_case_name=\"Solution_indexPairs_string_vector_string_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1065-index-pairs-of-a-string.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName854317 = new char[2];akaRandomName854317[0] = -39;akaRandomName854317[1] = '\\0';string text=akaRandomName854317;\nvector<string> words;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode text */\n/* VectorDataNode words */\nchar* akaRandomName552586 = new char[2];akaRandomName552586[0] = 89;akaRandomName552586[1] = '\\0';string words_element0=akaRandomName552586;\nwords.push_back(words_element0);\nchar* akaRandomName994071 = new char[2];akaRandomName994071[0] = 70;akaRandomName994071[1] = '\\0';string words_element1=akaRandomName994071;\nwords.push_back(words_element1);\nchar* akaRandomName501920 = new char[2];akaRandomName501920[0] = -40;akaRandomName501920[1] = '\\0';string words_element2=akaRandomName501920;\nwords.push_back(words_element2);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_indexPairs_string_vector_string_random_2\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->indexPairs(text,words);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p13\\\\1065-index-pairs-of-a-string\\\\1065-index-pairs-of-a-string.cpp\\\\Solution\\\\indexPairs(string,vector<string>&)\");\n\n\nvector<string> EXPECTED_words;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1064-fixed-point.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=854532874;\na.push_back(a_element0);\nint a_element1=2018516586;\na.push_back(a_element1);\nint a_element2=1888601579;\na.push_back(a_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     vector<vector<int>> indexPairs(string text, vector<string>& words) {\r     \r         vector<vector<int>> res;\r         vector<int> path;\r         \r         int n = text.size();\r         \r         for(auto &x : words) {\r             \r             string temp = x;\r             int stRange = 0;\r \r             int n1 = temp.size();\r          \r             // Find the starting index and ending index of word \"temp\" in text\r             \r             while(stRange + n1 - 1 < n) {\r                 \r                 int stIndex = text.substr(stRange, n - stRange).find(temp);\r                 \r                 if(stIndex == string :: npos)                                       break;\r                 \r                 // Here, stIndex = stRange + stIndex, since substr got updated here in range search\r                 stIndex = stRange + stIndex;\r                 \r                 path.push_back(stIndex);\r                 path.push_back(stIndex + n1 - 1);\r \r                 res.push_back(path);\r                 path.clear();\r \r                 stRange = stIndex + 1;\r             }\r         }\r         \r         sort(res.begin(), res.end());\r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p13\\1065-index-pairs-of-a-string\\1065-index-pairs-of-a-string.cpp\\Solution\\indexPairs(string,vector<string>&)"
+    },
+    {
+        "f": [],
+        "fm": "string gcdOfStrings(string s1, string s2) {\r      \r         string res = \"\";\r         \r         int n1 = s1.length();\r         int n2 = s2.length();\r         \r         // Here, gcd exists\r         if(s1 + s2 == s2 + s1) {\r             int len = __gcd(n1, n2);\r             res = s1.substr(0, len);\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_gcdOfStrings_string_string_random_2(void) {\n{\nAKA_test_case_name=\"Solution_gcdOfStrings_string_string_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1071-greatest-common-divisor-of-strings.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName918748 = new char[2];akaRandomName918748[0] = -47;akaRandomName918748[1] = '\\0';string s1=akaRandomName918748;\nchar* akaRandomName374175 = new char[2];akaRandomName374175[0] = 44;akaRandomName374175[1] = '\\0';string s2=akaRandomName374175;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s1 */\n/* NormalStringDataNode s2 */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_gcdOfStrings_string_string_random_2\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->gcdOfStrings(s1,s2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p13\\\\1071-greatest-common-divisor-of-strings\\\\1071-greatest-common-divisor-of-strings.cpp\\\\Solution\\\\gcdOfStrings(string,string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1064-fixed-point.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=854532874;\na.push_back(a_element0);\nint a_element1=2018516586;\na.push_back(a_element1);\nint a_element2=1888601579;\na.push_back(a_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     string gcdOfStrings(string s1, string s2) {\r      \r         string res = \"\";\r         \r         int n1 = s1.length();\r         int n2 = s2.length();\r         \r         // Here, gcd exists\r         if(s1 + s2 == s2 + s1) {\r             int len = __gcd(n1, n2);\r             res = s1.substr(0, len);\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p13\\1071-greatest-common-divisor-of-strings\\1071-greatest-common-divisor-of-strings.cpp\\Solution\\gcdOfStrings(string,string)"
+    }
+]

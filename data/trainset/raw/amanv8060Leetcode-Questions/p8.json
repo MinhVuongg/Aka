@@ -1,0 +1,154 @@
+[
+    {
+        "f": [],
+        "fm": "int maxIceCream(vector<int>& costs, int coins) {\r     sort(costs.begin(), costs.end());\r \r     int able_to_buy = 0;\r \r     for (int i = 0; i < costs.size(); i++) {\r       if (coins - costs[i] >= 0) {\r         able_to_buy++;\r         coins -= costs[i];\r       }\r     }\r \r     return able_to_buy;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maxIceCream_vector_int_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_maxIceCream_vector_int_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1833.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> costs;\n\n\nint coins=-588606742;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode costs */\nint costs_element0=2014781764;\ncosts.push_back(costs_element0);\nint costs_element1=1183684930;\ncosts.push_back(costs_element1);\nint costs_element2=1527195074;\ncosts.push_back(costs_element2);\n/* NormalNumberDataNode coins */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maxIceCream_vector_int_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maxIceCream(costs,coins);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p8\\\\1833.cpp\\\\Solution\\\\maxIceCream(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_costs;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r  public:\r   int maxIceCream(vector<int>& costs, int coins) {\r     sort(costs.begin(), costs.end());\r \r     int able_to_buy = 0;\r \r     for (int i = 0; i < costs.size(); i++) {\r       if (coins - costs[i] >= 0) {\r         able_to_buy++;\r         coins -= costs[i];\r       }\r     }\r \r     return able_to_buy;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p8\\1833.cpp\\Solution\\maxIceCream(vector<int>&,int)"
+    },
+    {
+        "f": [],
+        "fm": "int countGoodSubstrings(string s) {\r     int count = 0;\r     vector<char> v;\r \r     if (s.length() < 3) {\r       return 0;\r     } else {\r       for (int i = 0; i < s.length() - 2; i++) {\r         for (int j = i; j < i + 3; j++) {\r           v.push_back(s[j]);\r         }\r \r         sort(v.begin(), v.end());\r \r         auto ip = unique(v.begin(), v.begin() + v.size());\r \r         v.resize(distance(v.begin(), ip));\r \r         if (v.size() == 3) {\r           count++;\r         }\r         v.clear();\r       }\r       return count;\r     }\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countGoodSubstrings_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_countGoodSubstrings_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1876.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName276922 = new char[2];akaRandomName276922[0] = 126;akaRandomName276922[1] = '\\0';string s=akaRandomName276922;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countGoodSubstrings_string_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countGoodSubstrings(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p8\\\\1876.cpp\\\\Solution\\\\countGoodSubstrings(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r  public:\r   int countGoodSubstrings(string s) {\r     int count = 0;\r     vector<char> v;\r \r     if (s.length() < 3) {\r       return 0;\r     } else {\r       for (int i = 0; i < s.length() - 2; i++) {\r         for (int j = i; j < i + 3; j++) {\r           v.push_back(s[j]);\r         }\r \r         sort(v.begin(), v.end());\r \r         auto ip = unique(v.begin(), v.begin() + v.size());\r \r         v.resize(distance(v.begin(), ip));\r \r         if (v.size() == 3) {\r           count++;\r         }\r         v.clear();\r       }\r       return count;\r     }\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p8\\1876.cpp\\Solution\\countGoodSubstrings(string)"
+    },
+    {
+        "f": [],
+        "fm": "string maxValue(string n, int x) {\r     if (n[0] == '-') {\r       bool gg = false;\r       for (int i = 1; i < n.size(); i++) {\r         if (n[i] > x + '0') {\r           n.insert(n.begin() + i, x + '0');\r           gg = true;\r           break;\r         }\r       }\r       if (gg == false) {\r         n.push_back(x + '0');\r       }\r     } else {\r       bool gg = false;\r       for (int i = 0; i < n.size(); i++) {\r         if (n[i] < x + '0') {\r           n.insert(n.begin() + i, x + '0');\r           gg = true;\r           break;\r         }\r       }\r       if (gg == false) {\r         n.push_back(x + '0');\r       }\r     }\r     return n;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maxValue_string_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_maxValue_string_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1881.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName913844 = new char[2];akaRandomName913844[0] = 97;akaRandomName913844[1] = '\\0';string n=akaRandomName913844;\n\n\nint x=1488420540;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode n */\n/* NormalNumberDataNode x */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maxValue_string_int_random_2\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maxValue(n,x);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p8\\\\1881.cpp\\\\Solution\\\\maxValue(string,int)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maxValue_string_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_maxValue_string_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1881.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName227219 = new char[2];akaRandomName227219[0] = -88;akaRandomName227219[1] = '\\0';string n=akaRandomName227219;\n\n\nint x=-2133328444;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode n */\n/* NormalNumberDataNode x */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maxValue_string_int_random_1\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maxValue(n,x);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p8\\\\1881.cpp\\\\Solution\\\\maxValue(string,int)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=641482278;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=-712205251;\narr.push_back(arr_element0);\nint arr_element1=1818276528;\narr.push_back(arr_element1);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r  public:\r   string maxValue(string n, int x) {\r     if (n[0] == '-') {\r       bool gg = false;\r       for (int i = 1; i < n.size(); i++) {\r         if (n[i] > x + '0') {\r           n.insert(n.begin() + i, x + '0');\r           gg = true;\r           break;\r         }\r       }\r       if (gg == false) {\r         n.push_back(x + '0');\r       }\r     } else {\r       bool gg = false;\r       for (int i = 0; i < n.size(); i++) {\r         if (n[i] < x + '0') {\r           n.insert(n.begin() + i, x + '0');\r           gg = true;\r           break;\r         }\r       }\r       if (gg == false) {\r         n.push_back(x + '0');\r       }\r     }\r     return n;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p8\\1881.cpp\\Solution\\maxValue(string,int)"
+    },
+    {
+        "f": [],
+        "fm": "long long wonderfulSubstrings(string s) {\r     int n = s.size();\r     map<long long, long long> mp;\r     mp[0] = 1;\r     long long count = 0;\r     long long mask = 0;\r     for (int i = 0; i < n; i++) {\r       mask = mask ^ (1 << (s[i] - 'a'));\r       if (mp.count(mask)) {\r         count += mp[mask];\r       }\r       for (char j = 'a'; j <= 'j'; j++) {\r         long long x = mask ^ (1 << (j - 'a'));\r         if (mp.count(x)) {\r           count += mp[x];\r         }\r       }\r       mp[mask]++;\r     }\r     return count;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_wonderfulSubstrings_string_random_4(void) {\n{\nAKA_test_case_name=\"Solution_wonderfulSubstrings_string_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1915.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName206482 = new char[2];akaRandomName206482[0] = 105;akaRandomName206482[1] = '\\0';string s=akaRandomName206482;\n\n\nlong long AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_wonderfulSubstrings_string_random_4\");long long AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->wonderfulSubstrings(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p8\\\\1915.cpp\\\\Solution\\\\wonderfulSubstrings(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r  public:\r   long long wonderfulSubstrings(string s) {\r     int n = s.size();\r     map<long long, long long> mp;\r     mp[0] = 1;\r     long long count = 0;\r     long long mask = 0;\r     for (int i = 0; i < n; i++) {\r       mask = mask ^ (1 << (s[i] - 'a'));\r       if (mp.count(mask)) {\r         count += mp[mask];\r       }\r       for (char j = 'a'; j <= 'j'; j++) {\r         long long x = mask ^ (1 << (j - 'a'));\r         if (mp.count(x)) {\r           count += mp[x];\r         }\r       }\r       mp[mask]++;\r     }\r     return count;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p8\\1915.cpp\\Solution\\wonderfulSubstrings(string)"
+    },
+    {
+        "f": [],
+        "fm": "bool areOccurrencesEqual(string s) {\r     int character;\r     int arr[26] = {};\r     for (int i = 0; i < s.length(); i++) {\r       character = s[i];\r       arr[character - 97]++;\r     }\r \r     for (int i = 0; i < 26; i++) {\r       if (arr[i] == *max_element(arr, arr + 26) || arr[i] == 0) continue;\r \r       if (arr[i] < *max_element(arr, arr + 26) ||\r           arr[i] > *max_element(arr, arr + 26))\r         return false;\r     }\r     return true;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_areOccurrencesEqual_string_random_2(void) {\n{\nAKA_test_case_name=\"Solution_areOccurrencesEqual_string_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1941.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName668466 = new char[2];akaRandomName668466[0] = -82;akaRandomName668466[1] = '\\0';string s=akaRandomName668466;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_areOccurrencesEqual_string_random_2\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->areOccurrencesEqual(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p8\\\\1941.cpp\\\\Solution\\\\areOccurrencesEqual(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> arr;\n\n\nint target=-1962261778;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode arr */\nint arr_element0=1510033079;\narr.push_back(arr_element0);\nint arr_element1=-910313955;\narr.push_back(arr_element1);\nint arr_element2=-644911661;\narr.push_back(arr_element2);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r  public:\r   bool areOccurrencesEqual(string s) {\r     int character;\r     int arr[26] = {};\r     for (int i = 0; i < s.length(); i++) {\r       character = s[i];\r       arr[character - 97]++;\r     }\r \r     for (int i = 0; i < 26; i++) {\r       if (arr[i] == *max_element(arr, arr + 26) || arr[i] == 0) continue;\r \r       if (arr[i] < *max_element(arr, arr + 26) ||\r           arr[i] > *max_element(arr, arr + 26))\r         return false;\r     }\r     return true;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\amanv8060_Leetcode-Questions\\solutions\\p8\\1941.cpp\\Solution\\areOccurrencesEqual(string)"
+    }
+]

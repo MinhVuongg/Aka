@@ -1,0 +1,232 @@
+[
+    {
+        "f": [
+            "vector<string> v;"
+        ],
+        "fm": "void addWord(string word) {\r         v.push_back(word);\r         return;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_WordDictionary_addWord_string_random_0(void) {\n{\nAKA_test_case_name=\"WordDictionary_addWord_string_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___WordDictionary */\n/* ConstructorDataNode WordDictionary() */\nAKA_mark(\"Calling: .\\\\p4\\\\0211-design-add-and-search-words-data-structure\\\\0211-design-add-and-search-words-data-structure.cpp\\\\WordDictionary\\\\WordDictionary()|ROOT\\\\0211-design-add-and-search-words-data-structure.cpp\\\\GLOBAL\\\\AKA_INSTANCE___WordDictionary\\\\AKA_INSTANCE___WordDictionary\\\\WordDictionary()\");AKA_fCall++;AKA_INSTANCE___WordDictionary = new ::WordDictionary();\n/* VectorDataNode v */\nchar* akaRandomName477583 = new char[2];akaRandomName477583[0] = -48;akaRandomName477583[1] = '\\0';string AKA_INSTANCE___WordDictionary_v_element0=akaRandomName477583;\nAKA_INSTANCE___WordDictionary->v.push_back(AKA_INSTANCE___WordDictionary_v_element0);\n\n\nchar* akaRandomName112270 = new char[2];akaRandomName112270[0] = -71;akaRandomName112270[1] = '\\0';string word=akaRandomName112270;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test WordDictionary_addWord_string_random_0\");AKA_INSTANCE___WordDictionary->addWord(word);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p4\\\\0211-design-add-and-search-words-data-structure\\\\0211-design-add-and-search-words-data-structure.cpp\\\\WordDictionary\\\\addWord(string)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\0096-unique-binary-search-trees.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=9;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class WordDictionary {\r public:\r     \r     vector<string> v;\r \r     WordDictionary() {\r     \r     }\r     \r     void addWord(string word) {\r         v.push_back(word);\r         return;\r     }\r     \r     bool search(string word) {\r        \r         // Regex Expression\r         \r         int len = word.length();\r         \r         for(auto &str : v) {\r             \r             if(str.length() == len) {\r                 \r                 bool flag = true;\r \r                 for(int i=0; i<len; i++) {\r                 \r                     if(word[i] != '.') {\r                         \r                         if(str[i] != word[i]) {\r                             flag = false;\r                             i = len;\r                         }\r                     }\r                 }\r                 \r                 if(flag == true)                        return true;\r             }\r         }\r         \r         return false;\r     }\r };",
+        "c": [
+            "WordDictionary() {\r\n    \r\n    }"
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p4\\0211-design-add-and-search-words-data-structure\\0211-design-add-and-search-words-data-structure.cpp\\WordDictionary\\addWord(string)"
+    },
+    {
+        "f": [
+            "vector<string> v;"
+        ],
+        "fm": "bool search(string word) {\r        \r         // Regex Expression\r         \r         int len = word.length();\r         \r         for(auto &str : v) {\r             \r             if(str.length() == len) {\r                 \r                 bool flag = true;\r \r                 for(int i=0; i<len; i++) {\r                 \r                     if(word[i] != '.') {\r                         \r                         if(str[i] != word[i]) {\r                             flag = false;\r                             i = len;\r                         }\r                     }\r                 }\r                 \r                 if(flag == true)                        return true;\r             }\r         }\r         \r         return false;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_WordDictionary_search_string_random_4(void) {\n{\nAKA_test_case_name=\"WordDictionary_search_string_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___WordDictionary */\n/* ConstructorDataNode WordDictionary() */\nAKA_mark(\"Calling: .\\\\p4\\\\0211-design-add-and-search-words-data-structure\\\\0211-design-add-and-search-words-data-structure.cpp\\\\WordDictionary\\\\WordDictionary()|ROOT\\\\0211-design-add-and-search-words-data-structure.cpp\\\\GLOBAL\\\\AKA_INSTANCE___WordDictionary\\\\AKA_INSTANCE___WordDictionary\\\\WordDictionary()\");AKA_fCall++;AKA_INSTANCE___WordDictionary = new ::WordDictionary();\n/* VectorDataNode v */\nchar* akaRandomName369560 = new char[2];akaRandomName369560[0] = -93;akaRandomName369560[1] = '\\0';string AKA_INSTANCE___WordDictionary_v_element0=akaRandomName369560;\nAKA_INSTANCE___WordDictionary->v.push_back(AKA_INSTANCE___WordDictionary_v_element0);\nchar* akaRandomName599761 = new char[2];akaRandomName599761[0] = 3;akaRandomName599761[1] = '\\0';string AKA_INSTANCE___WordDictionary_v_element1=akaRandomName599761;\nAKA_INSTANCE___WordDictionary->v.push_back(AKA_INSTANCE___WordDictionary_v_element1);\n\n\nchar* akaRandomName750839 = new char[2];akaRandomName750839[0] = 83;akaRandomName750839[1] = '\\0';string word=akaRandomName750839;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode word */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test WordDictionary_search_string_random_4\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___WordDictionary->search(word);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p4\\\\0211-design-add-and-search-words-data-structure\\\\0211-design-add-and-search-words-data-structure.cpp\\\\WordDictionary\\\\search(string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\0096-unique-binary-search-trees.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=9;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class WordDictionary {\r public:\r     \r     vector<string> v;\r \r     WordDictionary() {\r     \r     }\r     \r     void addWord(string word) {\r         v.push_back(word);\r         return;\r     }\r     \r     bool search(string word) {\r        \r         // Regex Expression\r         \r         int len = word.length();\r         \r         for(auto &str : v) {\r             \r             if(str.length() == len) {\r                 \r                 bool flag = true;\r \r                 for(int i=0; i<len; i++) {\r                 \r                     if(word[i] != '.') {\r                         \r                         if(str[i] != word[i]) {\r                             flag = false;\r                             i = len;\r                         }\r                     }\r                 }\r                 \r                 if(flag == true)                        return true;\r             }\r         }\r         \r         return false;\r     }\r };",
+        "c": [
+            "WordDictionary() {\r\n    \r\n    }"
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p4\\0211-design-add-and-search-words-data-structure\\0211-design-add-and-search-words-data-structure.cpp\\WordDictionary\\search(string)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> countBits(int n) {\r     \r         vector<int> res;\r         \r         if(n == 0)                          return {0};\r         if(n == 1)                          return {0, 1};\r         \r         res.push_back(0);\r         res.push_back(1);\r         \r         for(int i=2; i<=n; i++) {\r             \r             // Binary Representation of number i\r             // No.of 1's bits in number i\r             \r             int num = i, count = 0;\r             \r             while(num > 0) {\r                 count += (num % 2);\r                 num = num / 2;\r             }\r             \r             res.push_back(count);\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countBits_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_countBits_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\0338-counting-bits.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=5;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countBits_int_random_2\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countBits(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p4\\\\0338-counting-bits\\\\0338-counting-bits.cpp\\\\Solution\\\\countBits(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\0096-unique-binary-search-trees.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=9;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countBits_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_countBits_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\0338-counting-bits.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=1;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countBits_int_random_0\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countBits(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p4\\\\0338-counting-bits\\\\0338-counting-bits.cpp\\\\Solution\\\\countBits(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\0096-unique-binary-search-trees.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     vector<int> countBits(int n) {\r     \r         vector<int> res;\r         \r         if(n == 0)                          return {0};\r         if(n == 1)                          return {0, 1};\r         \r         res.push_back(0);\r         res.push_back(1);\r         \r         for(int i=2; i<=n; i++) {\r             \r             // Binary Representation of number i\r             // No.of 1's bits in number i\r             \r             int num = i, count = 0;\r             \r             while(num > 0) {\r                 count += (num % 2);\r                 num = num / 2;\r             }\r             \r             res.push_back(count);\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p4\\0338-counting-bits\\0338-counting-bits.cpp\\Solution\\countBits(int)"
+    },
+    {
+        "f": [],
+        "fm": "void dfs(int i, int n, vector<int> &res) {\r         \r         if(i > n)                       return;\r         \r         res.push_back(i);\r         \r         for(int j=0; j<=9; j++) {\r             dfs(10 * i + j, n, res);    \r         }\r         \r         return;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_dfs_int_int_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_dfs_int_int_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\0386-lexicographical-numbers.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint i=-1376186352;\n\n\nint n=-596962754;\nvector<int> res;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode n */\n/* VectorDataNode res */\nint res_element0=770753123;\nres.push_back(res_element0);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_dfs_int_int_vector_int_random_4\");AKA_INSTANCE___Solution->dfs(i,n,res);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p4\\\\0386-lexicographical-numbers\\\\0386-lexicographical-numbers.cpp\\\\Solution\\\\dfs(int,int,vector<int>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_res;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\0096-unique-binary-search-trees.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=9;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     void dfs(int i, int n, vector<int> &res) {\r         \r         if(i > n)                       return;\r         \r         res.push_back(i);\r         \r         for(int j=0; j<=9; j++) {\r             dfs(10 * i + j, n, res);    \r         }\r         \r         return;\r     }\r     \r     vector<int> lexicalOrder(int n) {\r     \r         vector<int> res;\r \r         for(int i=1; i<=9; i++) {\r             dfs(i, n, res);\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p4\\0386-lexicographical-numbers\\0386-lexicographical-numbers.cpp\\Solution\\dfs(int,int,vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> lexicalOrder(int n) {\r     \r         vector<int> res;\r \r         for(int i=1; i<=9; i++) {\r             dfs(i, n, res);\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_lexicalOrder_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_lexicalOrder_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\0386-lexicographical-numbers.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=1454017968;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_lexicalOrder_int_random_0\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->lexicalOrder(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p4\\\\0386-lexicographical-numbers\\\\0386-lexicographical-numbers.cpp\\\\Solution\\\\lexicalOrder(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\0096-unique-binary-search-trees.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=9;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     void dfs(int i, int n, vector<int> &res) {\r         \r         if(i > n)                       return;\r         \r         res.push_back(i);\r         \r         for(int j=0; j<=9; j++) {\r             dfs(10 * i + j, n, res);    \r         }\r         \r         return;\r     }\r     \r     vector<int> lexicalOrder(int n) {\r     \r         vector<int> res;\r \r         for(int i=1; i<=9; i++) {\r             dfs(i, n, res);\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p4\\0386-lexicographical-numbers\\0386-lexicographical-numbers.cpp\\Solution\\lexicalOrder(int)"
+    },
+    {
+        "f": [
+            "int dx[4] = {0, 1};",
+            "int dy[4] = {1, 0};"
+        ],
+        "fm": "void dfs(int x, int y, int n, int m, vector<vector<char>> &board) {\r         \r         if(x < 0 || x >= n || y < 0 || y >= m || board[x][y] != 'X')            return;    \r         \r         board[x][y] = '.';\r         \r         for(int i=0; i<4; i++) {\r             \r             int x1 = x + dx[i];\r             int y1 = y + dy[i];\r             \r             dfs(x1, y1, n, m, board);\r         }\r         \r         return;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_dfs_int_int_int_int_vector_vector_char_random_3(void) {\n{\nAKA_test_case_name=\"Solution_dfs_int_int_int_int_vector_vector_char_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\0419-battleships-in-a-board.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\nAKA_INSTANCE___Solution->dx[0]=493225613;\n/* NormalNumberDataNode dx[1] */\nAKA_INSTANCE___Solution->dx[1]=2083466010;\n/* NormalNumberDataNode dx[2] */\nAKA_INSTANCE___Solution->dx[2]=467283950;\n/* NormalNumberDataNode dx[3] */\nAKA_INSTANCE___Solution->dx[3]=1117244068;\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\nAKA_INSTANCE___Solution->dy[0]=-674240171;\n/* NormalNumberDataNode dy[1] */\nAKA_INSTANCE___Solution->dy[1]=1217070412;\n/* NormalNumberDataNode dy[2] */\nAKA_INSTANCE___Solution->dy[2]=-1206514716;\n/* NormalNumberDataNode dy[3] */\nAKA_INSTANCE___Solution->dy[3]=-509032287;\n\n\n\n\nint x=1295279724;\n\n\nint y=-133834443;\n\n\nint n=441931204;\n\n\nint m=39353158;\nvector<vector<char>> board;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode m */\n/* VectorDataNode board */\nvector<char> board_element0;\nchar board_element0_element0=-43;\nboard_element0.push_back(board_element0_element0);\nchar board_element0_element1=-69;\nboard_element0.push_back(board_element0_element1);\nchar board_element0_element2=88;\nboard_element0.push_back(board_element0_element2);\nboard.push_back(board_element0);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_dfs_int_int_int_int_vector_vector_char_random_3\");AKA_INSTANCE___Solution->dfs(x,y,n,m,board);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p4\\\\0419-battleships-in-a-board\\\\0419-battleships-in-a-board.cpp\\\\Solution\\\\dfs(int,int,int,int,vector<vector<char>>&)\");\n\n/* error assertion */\nvector<vector<char>> EXPECTED_board;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\0096-unique-binary-search-trees.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=9;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_dfs_int_int_int_int_vector_vector_char_random_4(void) {\n{\nAKA_test_case_name=\"Solution_dfs_int_int_int_int_vector_vector_char_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\0419-battleships-in-a-board.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\nAKA_INSTANCE___Solution->dx[0]=-1180710833;\n/* NormalNumberDataNode dx[1] */\nAKA_INSTANCE___Solution->dx[1]=1167803646;\n/* NormalNumberDataNode dx[2] */\nAKA_INSTANCE___Solution->dx[2]=-1651353319;\n/* NormalNumberDataNode dx[3] */\nAKA_INSTANCE___Solution->dx[3]=1539519443;\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\nAKA_INSTANCE___Solution->dy[0]=1047711781;\n/* NormalNumberDataNode dy[1] */\nAKA_INSTANCE___Solution->dy[1]=-1716343048;\n/* NormalNumberDataNode dy[2] */\nAKA_INSTANCE___Solution->dy[2]=1643413033;\n/* NormalNumberDataNode dy[3] */\nAKA_INSTANCE___Solution->dy[3]=-358124192;\n\n\n\n\nint x=-799940575;\n\n\nint y=-578743411;\n\n\nint n=1457957239;\n\n\nint m=-1429408500;\nvector<vector<char>> board;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalNumberDataNode y */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode m */\n/* VectorDataNode board */\nvector<char> board_element0;\nchar board_element0_element0=-70;\nboard_element0.push_back(board_element0_element0);\nchar board_element0_element1=23;\nboard_element0.push_back(board_element0_element1);\nchar board_element0_element2=90;\nboard_element0.push_back(board_element0_element2);\nboard.push_back(board_element0);\nvector<char> board_element1;\nchar board_element1_element0=-37;\nboard_element1.push_back(board_element1_element0);\nboard.push_back(board_element1);\nvector<char> board_element2;\nchar board_element2_element0=-61;\nboard_element2.push_back(board_element2_element0);\nchar board_element2_element1=78;\nboard_element2.push_back(board_element2_element1);\nboard.push_back(board_element2);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_dfs_int_int_int_int_vector_vector_char_random_4\");AKA_INSTANCE___Solution->dfs(x,y,n,m,board);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p4\\\\0419-battleships-in-a-board\\\\0419-battleships-in-a-board.cpp\\\\Solution\\\\dfs(int,int,int,int,vector<vector<char>>&)\");\n\n/* error assertion */\nvector<vector<char>> EXPECTED_board;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\0096-unique-binary-search-trees.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \r     // Top, right, down, left\r     // (-1, 0), (0, 1), (1, 0), (0, -1)\r     \r     // Only right, and down direction will work\r     int dx[4] = {0, 1};\r     int dy[4] = {1, 0};\r     \r     void dfs(int x, int y, int n, int m, vector<vector<char>> &board) {\r         \r         if(x < 0 || x >= n || y < 0 || y >= m || board[x][y] != 'X')            return;    \r         \r         board[x][y] = '.';\r         \r         for(int i=0; i<4; i++) {\r             \r             int x1 = x + dx[i];\r             int y1 = y + dy[i];\r             \r             dfs(x1, y1, n, m, board);\r         }\r         \r         return;\r     }\r     \r     int countBattleships(vector<vector<char>>& board) {\r     \r         int count = 0;\r         \r         int n = board.size();\r         int m = board[0].size();\r         \r         for(int i=0; i<n; i++) {\r             for(int j=0; j<m; j++) {\r             \r                 if(board[i][j] == 'X') {\r                    dfs(i, j, n, m, board);\r                    count++;\r                 }\r             }\r         }\r         \r         return count;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p4\\0419-battleships-in-a-board\\0419-battleships-in-a-board.cpp\\Solution\\dfs(int,int,int,int,vector<vector<char>>&)"
+    },
+    {
+        "f": [
+            "int dx[4] = {0, 1};",
+            "int dy[4] = {1, 0};"
+        ],
+        "fm": "int countBattleships(vector<vector<char>>& board) {\r     \r         int count = 0;\r         \r         int n = board.size();\r         int m = board[0].size();\r         \r         for(int i=0; i<n; i++) {\r             for(int j=0; j<m; j++) {\r             \r                 if(board[i][j] == 'X') {\r                    dfs(i, j, n, m, board);\r                    count++;\r                 }\r             }\r         }\r         \r         return count;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countBattleships_vector_vector_char_random_0(void) {\n{\nAKA_test_case_name=\"Solution_countBattleships_vector_vector_char_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\0419-battleships-in-a-board.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n/* OneDimensionNumberDataNode dx */\n;\n/* NormalNumberDataNode dx[0] */\n/* dx[0] : null value -> no code */\n/* NormalNumberDataNode dx[1] */\n/* dx[1] : null value -> no code */\n/* NormalNumberDataNode dx[2] */\n/* dx[2] : null value -> no code */\n/* NormalNumberDataNode dx[3] */\n/* dx[3] : null value -> no code */\n/* OneDimensionNumberDataNode dy */\n;\n/* NormalNumberDataNode dy[0] */\n/* dy[0] : null value -> no code */\n/* NormalNumberDataNode dy[1] */\n/* dy[1] : null value -> no code */\n/* NormalNumberDataNode dy[2] */\n/* dy[2] : null value -> no code */\n/* NormalNumberDataNode dy[3] */\n/* dy[3] : null value -> no code */\n\n\nvector<vector<char>> board;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode board */\nvector<char> board_element0;\nchar board_element0_element0=-123;\nboard_element0.push_back(board_element0_element0);\nboard.push_back(board_element0);\nvector<char> board_element1;\nchar board_element1_element0=-86;\nboard_element1.push_back(board_element1_element0);\nchar board_element1_element1=-73;\nboard_element1.push_back(board_element1_element1);\nboard.push_back(board_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countBattleships_vector_vector_char_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countBattleships(board);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p4\\\\0419-battleships-in-a-board\\\\0419-battleships-in-a-board.cpp\\\\Solution\\\\countBattleships(vector<vector<char>>&)\");\n\n\nvector<vector<char>> EXPECTED_board;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\0096-unique-binary-search-trees.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=9;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \r     // Top, right, down, left\r     // (-1, 0), (0, 1), (1, 0), (0, -1)\r     \r     // Only right, and down direction will work\r     int dx[4] = {0, 1};\r     int dy[4] = {1, 0};\r     \r     void dfs(int x, int y, int n, int m, vector<vector<char>> &board) {\r         \r         if(x < 0 || x >= n || y < 0 || y >= m || board[x][y] != 'X')            return;    \r         \r         board[x][y] = '.';\r         \r         for(int i=0; i<4; i++) {\r             \r             int x1 = x + dx[i];\r             int y1 = y + dy[i];\r             \r             dfs(x1, y1, n, m, board);\r         }\r         \r         return;\r     }\r     \r     int countBattleships(vector<vector<char>>& board) {\r     \r         int count = 0;\r         \r         int n = board.size();\r         int m = board[0].size();\r         \r         for(int i=0; i<n; i++) {\r             for(int j=0; j<m; j++) {\r             \r                 if(board[i][j] == 'X') {\r                    dfs(i, j, n, m, board);\r                    count++;\r                 }\r             }\r         }\r         \r         return count;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p4\\0419-battleships-in-a-board\\0419-battleships-in-a-board.cpp\\Solution\\countBattleships(vector<vector<char>>&)"
+    }
+]

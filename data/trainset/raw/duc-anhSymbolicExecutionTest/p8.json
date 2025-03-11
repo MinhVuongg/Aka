@@ -1,0 +1,324 @@
+[
+    {
+        "f": [],
+        "fm": "void switchCase1(char grade){\r    switch(grade){\r \t\tcase 'A' :\r \t\t  cout << \"Excellent!\" << endl;  \r \t\t  break;\r    }\r    cout << \"Your grade is \" << grade << endl;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_switchCase1_char_random_2(void) {\n{\nAKA_test_case_name=\"switchCase1_char_random_2\";\n\n// set up\n;\n\n\nchar grade=-82;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode grade */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test switchCase1_char_random_2\");switchCase1(grade);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\switchCaseTest.cpp\\\\switchCase1(char)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1756772476;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\switchCaseTest.cpp\\switchCase1(char)"
+    },
+    {
+        "f": [],
+        "fm": "double switchCase0(int a, int b){\r    if(b == 0 ){\r       throw \"Division by zero condition!\";\r    }else{\r    \t\tswitchCase1('A');\r    \t\tif (b==1){}   \t\t\t\r    \t}\r    return (a/b);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_switchCase0_int_int_random_3(void) {\n{\nAKA_test_case_name=\"switchCase0_int_int_random_3\";\n\n// set up\n;\n\n\n\nint a=255961248;\n\n\nint b=-988879563;\n\n\ndouble AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test switchCase0_int_int_random_3\");double AKA_ACTUAL_OUTPUT=switchCase0(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\switchCaseTest.cpp\\\\switchCase0(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1756772476;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\switchCaseTest.cpp\\switchCase0(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "void switchCase2(char grade){\r    switch(grade){\r \t\tcase 'A' :\r \t\tcase 'F':\r \t\tcase 'U':{\r \t\t  cout << \"Excellent!\" << endl; \r \t\t  break;\r \t\t}\r \t\tcase 'B' :\r \t\t  cout << \"Well done\" << endl;\r \t\t  return;\r \t\tcase 'D' :\r \t\t  cout << \"You passed\" << endl;\r \t\t  break;\r \t\tdefault :\r \t\t  cout << \"Invalid grade\" << endl;\r    }\r    cout << \"Your grade is \" << grade << endl;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_switchCase2_char_random_0(void) {\n{\nAKA_test_case_name=\"switchCase2_char_random_0\";\n\n// set up\n;\n\n\nchar grade=-90;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode grade */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test switchCase2_char_random_0\");switchCase2(grade);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\switchCaseTest.cpp\\\\switchCase2(char)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1756772476;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\switchCaseTest.cpp\\switchCase2(char)"
+    },
+    {
+        "f": [],
+        "fm": "void switchCase4(char grade, int x){\r    switch(grade){\r \t\tcase 'A' :\r \t\tcase 'B' :{\r \t\t\t/*Inner switch-case*/\r \t\t\tswitch (x){\r \t\t\t\tcase 1: \r \t\t\t\t\tx++;\r \t\t\t\t\tbreak;\r \t\t\t\tcase -1: \r \t\t\t\t\tx--;\r \t\t\t\t\tbreak;\r \t\t\t}\r \t\t\tbreak;\r \t\t}\r \t\tdefault :\r \t\t  cout << \"Invalid grade\" << endl;\r    }\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_switchCase4_char_int_random_2(void) {\n{\nAKA_test_case_name=\"switchCase4_char_int_random_2\";\n\n// set up\n;\n\n\nchar grade=102;\n\n\nint x=-756542332;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode grade */\n/* NormalNumberDataNode x */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test switchCase4_char_int_random_2\");switchCase4(grade,x);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\switchCaseTest.cpp\\\\switchCase4(char,int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1756772476;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\switchCaseTest.cpp\\switchCase4(char,int)"
+    },
+    {
+        "f": [],
+        "fm": "const char * what () const throw ()\r   {\r     return \"Division by zero exception\";\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_what_random_0(void) {\n{\nAKA_test_case_name=\"what_random_0\";\n\n// set up\n;\n\n\n/* SubStructDataNode AKA_INSTANCE___DivisionByZero */\n/* ConstructorDataNode DivisionByZero() */\nAKA_mark(\"Calling: \\\\DivisionByZero()|ROOT\\\\tryCatchTest.cpp\\\\GLOBAL\\\\AKA_INSTANCE___DivisionByZero\\\\AKA_INSTANCE___DivisionByZero\\\\DivisionByZero()\");AKA_fCall++;AKA_INSTANCE___DivisionByZero = new ::DivisionByZero();\n\n\nchar const* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test what_random_0\");char const* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___DivisionByZero->what();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\tryCatchTest.cpp\\\\DivisionByZero\\\\what()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1756772476;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\tryCatchTest.cpp\\DivisionByZero\\what()"
+    },
+    {
+        "f": [],
+        "fm": "int tryCatch0(int a, int b){\r \tfloat x = 0;\r \ttry{\r \t\tif (b==0)\r \t\t\tthrow DivisionByZero();\r \t\tx = a/b;\r \t}catch (exception& e){\r \t\tcout << \"Standard exception: \" << e.what() << endl;\r \t\tx = -1;\r \t}\r \treturn x;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_tryCatch0_int_int_random_3(void) {\n{\nAKA_test_case_name=\"tryCatch0_int_int_random_3\";\n\n// set up\n;\n\n\n\nint a=238852816;\n\n\nint b=1625245125;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test tryCatch0_int_int_random_3\");int AKA_ACTUAL_OUTPUT=tryCatch0(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\tryCatchTest.cpp\\\\tryCatch0(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1756772476;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\tryCatchTest.cpp\\tryCatch0(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int tryCatch1(int a, int b){\r \ttry{\r \t\tif (a>0)\r \t\t\tthrow 1;\r \t\telse if (a<-4)\r \t\t\tthrow 'a';\r \t\tb = a;\r \t}catch(int param){\r \t\tb = -1;\r \t}catch(char param){\r \t\tb = -2;\r \t}\r \tint result = a * b;\r \treturn result;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_tryCatch1_int_int_random_3(void) {\n{\nAKA_test_case_name=\"tryCatch1_int_int_random_3\";\n\n// set up\n;\n\n\n\nint a=-1898311598;\n\n\nint b=224203549;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test tryCatch1_int_int_random_3\");int AKA_ACTUAL_OUTPUT=tryCatch1(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\tryCatchTest.cpp\\\\tryCatch1(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1756772476;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_tryCatch1_int_int_random_0(void) {\n{\nAKA_test_case_name=\"tryCatch1_int_int_random_0\";\n\n// set up\n;\n\n\n\nint a=414047430;\n\n\nint b=-731888649;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test tryCatch1_int_int_random_0\");int AKA_ACTUAL_OUTPUT=tryCatch1(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\tryCatchTest.cpp\\\\tryCatch1(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=1218881918;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\tryCatchTest.cpp\\tryCatch1(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int tryCatch2(int a, int b){\r \ttry{\r \t\tif (a>0)\r \t\t\tthrow 1;\r \t\telse if (a<-4)\r \t\t\tthrow 'a';\r \t\tb = a;\r \t}catch(int param){\r \t\tb = -1;\r \t}catch(char param){\r \t\tb = -2;\r \t}catch(...){\r \t\t// default catch\r \t\tb = -3;\r \t}\r \tint result = a * b;\r \treturn result;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_tryCatch2_int_int_random_0(void) {\n{\nAKA_test_case_name=\"tryCatch2_int_int_random_0\";\n\n// set up\n;\n\n\n\nint a=666382118;\n\n\nint b=-236104353;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test tryCatch2_int_int_random_0\");int AKA_ACTUAL_OUTPUT=tryCatch2(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\tryCatchTest.cpp\\\\tryCatch2(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1756772476;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_tryCatch2_int_int_random_3(void) {\n{\nAKA_test_case_name=\"tryCatch2_int_int_random_3\";\n\n// set up\n;\n\n\n\nint a=-5871135;\n\n\nint b=-1207029179;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test tryCatch2_int_int_random_3\");int AKA_ACTUAL_OUTPUT=tryCatch2(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\tryCatchTest.cpp\\\\tryCatch2(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=1218881918;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\tryCatchTest.cpp\\tryCatch2(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int tryCatch3(int a, int b){\r \tint result = 0;\r \t\r \ttry{\r \t\tresult = throw0(a, b);\r \t\tint a = 0; \r \t}catch (...){\t\r \t\tcout << \"default exception\" << endl; \r \t}\r \treturn result;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_tryCatch3_int_int_random_1(void) {\n{\nAKA_test_case_name=\"tryCatch3_int_int_random_1\";\n\n// set up\n;\n\n\n\nint a=1234396447;\n\n\nint b=-1223212295;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test tryCatch3_int_int_random_1\");int AKA_ACTUAL_OUTPUT=tryCatch3(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\tryCatchTest.cpp\\\\tryCatch3(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1756772476;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\tryCatchTest.cpp\\tryCatch3(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "void tryCatch5(int a, int b){\r \t// try-catch block 1\r \ttry{\r \t\ta--;\r \t\tb--;\r \t}catch (...){\t\r \t\tcout << \"default exception\" << endl; \r \t}\r \t// try-catch block 1\r \ttry{\r \t\ta++;\r \t\tb++;\r \t}catch (...){\t\r \t\tcout << \"default exception\" << endl; \r \t}\r \t\r \tcout << \"Done\";\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_tryCatch5_int_int_random_0(void) {\n{\nAKA_test_case_name=\"tryCatch5_int_int_random_0\";\n\n// set up\n;\n\n\n\nint a=-2089903044;\n\n\nint b=-710265239;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test tryCatch5_int_int_random_0\");tryCatch5(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\tryCatchTest.cpp\\\\tryCatch5(int,int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1756772476;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\tryCatchTest.cpp\\tryCatch5(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int tryCatch4(int a, int b){\r \tint ERROR = -9999;\r \tint result = 0;\r \ttry{\r \t\tif (a>0){\r \t\t\ttry{\r \t\t\t\tif (b<=0)\r \t\t\t\t\tthrow \"All parameters must be positive!\";\r \t\t\t}catch(const char* param){\r \t\t\t\tcout << param << endl;\r \t\t\t\tresult = ERROR;\r \t\t\t}\r \t\t}else \r \t\t\tresult = a * b + 1;\t\t\r \t}catch(int param){\r \t\tresult = ERROR;\r \t}catch(char param){\r \t\tresult = ERROR;\r \t}\r \treturn result;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_tryCatch4_int_int_random_2(void) {\n{\nAKA_test_case_name=\"tryCatch4_int_int_random_2\";\n\n// set up\n;\n\n\n\nint a=419516876;\n\n\nint b=1608199874;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test tryCatch4_int_int_random_2\");int AKA_ACTUAL_OUTPUT=tryCatch4(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\tryCatchTest.cpp\\\\tryCatch4(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=-1756772476;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_tryCatch4_int_int_random_4(void) {\n{\nAKA_test_case_name=\"tryCatch4_int_int_random_4\";\n\n// set up\n;\n\n\n\nint a=-23372530;\n\n\nint b=927726007;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode b */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test tryCatch4_int_int_random_4\");int AKA_ACTUAL_OUTPUT=tryCatch4(a,b);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\tryCatchTest.cpp\\\\tryCatch4(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint a=1218881918;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode a */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\tryCatchTest.cpp\\tryCatch4(int,int)"
+    }
+]

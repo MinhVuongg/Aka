@@ -1,0 +1,174 @@
+[
+    {
+        "f": [],
+        "fm": "void Merge1(int t1[3], int t2[3], int t3[6]) {\r \tint i = 0, j = 0, k = 0 ;\r \twhile (i < 3 && j < 3) {\r \t\tif (t1[i] < t2[j]) {   \r \t\t\tt3[k] = t1[i];\r \t\t\ti++;\r \t\t}else {\r \t\t\tt3[k] = t2[j];\r \t\t\tj++;\r \t\t}\r \t\tk++ ;\r \t}\r \twhile (i < 3) {      \r \t\tt3[k] = t1[i];\r \t\ti++;\r \t\tk++;\r \t}\r \twhile (j < 3) {        \r \t\tt3[k] = t2[j];\r \t\tj++;\r \t\tk++;\r \t}\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Merge1_int_3_int_3_int_6_random_3(void) {\n{\nAKA_test_case_name=\"Merge1_int_3_int_3_int_6_random_3\";\n\n// set up\n;\n\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-605155238;\n/* NormalNumberDataNode t1[1] */\nt1[1]=987958873;\n/* NormalNumberDataNode t1[2] */\nt1[2]=626883816;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=2099910918;\n/* NormalNumberDataNode t2[1] */\nt2[1]=-678482422;\n/* NormalNumberDataNode t2[2] */\nt2[2]=320492475;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=2078413405;\n/* NormalNumberDataNode t3[1] */\nt3[1]=-634233642;\n/* NormalNumberDataNode t3[2] */\nt3[2]=-223969313;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1884835743;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1559648688;\n/* NormalNumberDataNode t3[5] */\nt3[5]=-1796546684;\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Merge1_int_3_int_3_int_6_random_3\");Merge1(t1,t2,t3);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\Merge1(int[3],int[3],int[6])\");\n\n/* error assertion */\n\nint EXPECTED_t1[3];;\n/* NormalNumberDataNode t1[0] */\n/* t1[0] : null value -> no code */\n/* NormalNumberDataNode t1[1] */\n/* t1[1] : null value -> no code */\n/* NormalNumberDataNode t1[2] */\n/* t1[2] : null value -> no code */\n\n\n\nint EXPECTED_t2[3];;\n/* NormalNumberDataNode t2[0] */\n/* t2[0] : null value -> no code */\n/* NormalNumberDataNode t2[1] */\n/* t2[1] : null value -> no code */\n/* NormalNumberDataNode t2[2] */\n/* t2[2] : null value -> no code */\n\n\n\nint EXPECTED_t3[6];;\n/* NormalNumberDataNode t3[0] */\n/* t3[0] : null value -> no code */\n/* NormalNumberDataNode t3[1] */\n/* t3[1] : null value -> no code */\n/* NormalNumberDataNode t3[2] */\n/* t3[2] : null value -> no code */\n/* NormalNumberDataNode t3[3] */\n/* t3[3] : null value -> no code */\n/* NormalNumberDataNode t3[4] */\n/* t3[4] : null value -> no code */\n/* NormalNumberDataNode t3[5] */\n/* t3[5] : null value -> no code */\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-605155238;\n/* NormalNumberDataNode t1[1] */\nt1[1]=987958873;\n/* NormalNumberDataNode t1[2] */\nt1[2]=626883816;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=2099910918;\n/* NormalNumberDataNode t2[1] */\nt2[1]=-678482422;\n/* NormalNumberDataNode t2[2] */\nt2[2]=320492475;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=2078413405;\n/* NormalNumberDataNode t3[1] */\nt3[1]=-634233642;\n/* NormalNumberDataNode t3[2] */\nt3[2]=-223969313;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1884835743;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1559648688;\n/* NormalNumberDataNode t3[5] */\nt3[5]=-1796546684;\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Merge1_int_3_int_3_int_6_random_2(void) {\n{\nAKA_test_case_name=\"Merge1_int_3_int_3_int_6_random_2\";\n\n// set up\n;\n\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-1396110145;\n/* NormalNumberDataNode t1[1] */\nt1[1]=-1282454838;\n/* NormalNumberDataNode t1[2] */\nt1[2]=1441174696;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=-1066829771;\n/* NormalNumberDataNode t2[1] */\nt2[1]=381202093;\n/* NormalNumberDataNode t2[2] */\nt2[2]=-1779954914;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=225073196;\n/* NormalNumberDataNode t3[1] */\nt3[1]=1599959271;\n/* NormalNumberDataNode t3[2] */\nt3[2]=752772368;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1349563781;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1458551060;\n/* NormalNumberDataNode t3[5] */\nt3[5]=893745875;\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Merge1_int_3_int_3_int_6_random_2\");Merge1(t1,t2,t3);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\Merge1(int[3],int[3],int[6])\");\n\n/* error assertion */\n\nint EXPECTED_t1[3];;\n/* NormalNumberDataNode t1[0] */\n/* t1[0] : null value -> no code */\n/* NormalNumberDataNode t1[1] */\n/* t1[1] : null value -> no code */\n/* NormalNumberDataNode t1[2] */\n/* t1[2] : null value -> no code */\n\n\n\nint EXPECTED_t2[3];;\n/* NormalNumberDataNode t2[0] */\n/* t2[0] : null value -> no code */\n/* NormalNumberDataNode t2[1] */\n/* t2[1] : null value -> no code */\n/* NormalNumberDataNode t2[2] */\n/* t2[2] : null value -> no code */\n\n\n\nint EXPECTED_t3[6];;\n/* NormalNumberDataNode t3[0] */\n/* t3[0] : null value -> no code */\n/* NormalNumberDataNode t3[1] */\n/* t3[1] : null value -> no code */\n/* NormalNumberDataNode t3[2] */\n/* t3[2] : null value -> no code */\n/* NormalNumberDataNode t3[3] */\n/* t3[3] : null value -> no code */\n/* NormalNumberDataNode t3[4] */\n/* t3[4] : null value -> no code */\n/* NormalNumberDataNode t3[5] */\n/* t3[5] : null value -> no code */\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-1396110145;\n/* NormalNumberDataNode t1[1] */\nt1[1]=-1282454838;\n/* NormalNumberDataNode t1[2] */\nt1[2]=1441174696;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=-1066829771;\n/* NormalNumberDataNode t2[1] */\nt2[1]=381202093;\n/* NormalNumberDataNode t2[2] */\nt2[2]=-1779954914;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=225073196;\n/* NormalNumberDataNode t3[1] */\nt3[1]=1599959271;\n/* NormalNumberDataNode t3[2] */\nt3[2]=752772368;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1349563781;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1458551060;\n/* NormalNumberDataNode t3[5] */\nt3[5]=893745875;\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\praticalTest.cpp\\Merge1(int[3],int[3],int[6])"
+    },
+    {
+        "f": [],
+        "fm": "int Tritype(int i, int j, int k){\r \tint trityp = 0;\r \tif (i < 0 || j < 0 || k < 0)    \r \t\treturn 3;\r \tif (i + j <= k || j + k <= i || k + i <= j)\r \t\treturn 3;    \r \tif (i == j) \r \t\ttrityp = trityp + 1;           \r \tif (i == k) \r \t\ttrityp = trityp + 1;           \r \tif (j == k) \r \t\ttrityp = trityp + 1;           \r \tif (trityp >= 2)                          \r \t\ttrityp = 2;\r \treturn trityp;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Tritype_int_int_int_random_0(void) {\n{\nAKA_test_case_name=\"Tritype_int_int_int_random_0\";\n\n// set up\n;\n\n\n\nint i=-1294778855;\n\n\nint j=-869478841;\n\n\nint k=-1822484014;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Tritype_int_int_int_random_0\");int AKA_ACTUAL_OUTPUT=Tritype(i,j,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\Tritype(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-605155238;\n/* NormalNumberDataNode t1[1] */\nt1[1]=987958873;\n/* NormalNumberDataNode t1[2] */\nt1[2]=626883816;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=2099910918;\n/* NormalNumberDataNode t2[1] */\nt2[1]=-678482422;\n/* NormalNumberDataNode t2[2] */\nt2[2]=320492475;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=2078413405;\n/* NormalNumberDataNode t3[1] */\nt3[1]=-634233642;\n/* NormalNumberDataNode t3[2] */\nt3[2]=-223969313;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1884835743;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1559648688;\n/* NormalNumberDataNode t3[5] */\nt3[5]=-1796546684;\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Tritype_int_int_int_directed_5(void) {\n{\nAKA_test_case_name=\"Tritype_int_int_int_directed_5\";\n\n// set up\n;\n\n\n\nint i=0;\n\n\nint j=1;\n\n\nint k=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Tritype_int_int_int_directed_5\");int AKA_ACTUAL_OUTPUT=Tritype(i,j,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\Tritype(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint t1[3];;\nint t2[3];;\nint t3[6];;\n\n/* RootDataNode STATIC */\n/* OneDimensionNumberDataNode t1 */\n/* NormalNumberDataNode t1[0] */\nt1[0]=-1396110145;\n/* NormalNumberDataNode t1[1] */\nt1[1]=-1282454838;\n/* NormalNumberDataNode t1[2] */\nt1[2]=1441174696;\n/* OneDimensionNumberDataNode t2 */\n/* NormalNumberDataNode t2[0] */\nt2[0]=-1066829771;\n/* NormalNumberDataNode t2[1] */\nt2[1]=381202093;\n/* NormalNumberDataNode t2[2] */\nt2[2]=-1779954914;\n/* OneDimensionNumberDataNode t3 */\n/* NormalNumberDataNode t3[0] */\nt3[0]=225073196;\n/* NormalNumberDataNode t3[1] */\nt3[1]=1599959271;\n/* NormalNumberDataNode t3[2] */\nt3[2]=752772368;\n/* NormalNumberDataNode t3[3] */\nt3[3]=-1349563781;\n/* NormalNumberDataNode t3[4] */\nt3[4]=-1458551060;\n/* NormalNumberDataNode t3[5] */\nt3[5]=893745875;\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Tritype_int_int_int_directed_6(void) {\n{\nAKA_test_case_name=\"Tritype_int_int_int_directed_6\";\n\n// set up\n;\n\n\n\nint i=0;\n\n\nint j=0;\n\n\nint k=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Tritype_int_int_int_directed_6\");int AKA_ACTUAL_OUTPUT=Tritype(i,j,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\Tritype(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint i=-1294778855;\n\n\nint j=-869478841;\n\n\nint k=-1822484014;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_Tritype_int_int_int_directed_3(void) {\n{\nAKA_test_case_name=\"Tritype_int_int_int_directed_3\";\n\n// set up\n;\n\n\n\nint i=2;\n\n\nint j=1;\n\n\nint k=2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Tritype_int_int_int_directed_3\");int AKA_ACTUAL_OUTPUT=Tritype(i,j,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\Tritype(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint i=0;\n\n\nint j=1;\n\n\nint k=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 4,
+                "dt": {},
+                "td": "void AKA_TEST_Tritype_int_int_int_random_4(void) {\n{\nAKA_test_case_name=\"Tritype_int_int_int_random_4\";\n\n// set up\n;\n\n\n\nint i=1375529110;\n\n\nint j=957233961;\n\n\nint k=-421647236;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Tritype_int_int_int_random_4\");int AKA_ACTUAL_OUTPUT=Tritype(i,j,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\Tritype(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint i=0;\n\n\nint j=0;\n\n\nint k=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 5,
+                "dt": {},
+                "td": "void AKA_TEST_Tritype_int_int_int_directed_4(void) {\n{\nAKA_test_case_name=\"Tritype_int_int_int_directed_4\";\n\n// set up\n;\n\n\n\nint i=1;\n\n\nint j=1;\n\n\nint k=1;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Tritype_int_int_int_directed_4\");int AKA_ACTUAL_OUTPUT=Tritype(i,j,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\Tritype(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint i=2;\n\n\nint j=1;\n\n\nint k=2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 6,
+                "dt": {},
+                "td": "void AKA_TEST_Tritype_int_int_int_directed_1(void) {\n{\nAKA_test_case_name=\"Tritype_int_int_int_directed_1\";\n\n// set up\n;\n\n\n\nint i=1;\n\n\nint j=2;\n\n\nint k=2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Tritype_int_int_int_directed_1\");int AKA_ACTUAL_OUTPUT=Tritype(i,j,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\Tritype(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint i=1375529110;\n\n\nint j=957233961;\n\n\nint k=-421647236;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 7,
+                "dt": {},
+                "td": "void AKA_TEST_Tritype_int_int_int_random_2(void) {\n{\nAKA_test_case_name=\"Tritype_int_int_int_random_2\";\n\n// set up\n;\n\n\n\nint i=484606289;\n\n\nint j=-559389803;\n\n\nint k=-722953131;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Tritype_int_int_int_random_2\");int AKA_ACTUAL_OUTPUT=Tritype(i,j,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\Tritype(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint i=1;\n\n\nint j=1;\n\n\nint k=1;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 8,
+                "dt": {},
+                "td": "void AKA_TEST_Tritype_int_int_int_directed_2(void) {\n{\nAKA_test_case_name=\"Tritype_int_int_int_directed_2\";\n\n// set up\n;\n\n\n\nint i=1;\n\n\nint j=0;\n\n\nint k=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Tritype_int_int_int_directed_2\");int AKA_ACTUAL_OUTPUT=Tritype(i,j,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\Tritype(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint i=1;\n\n\nint j=2;\n\n\nint k=2;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 9,
+                "dt": {},
+                "td": "void AKA_TEST_Tritype_int_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"Tritype_int_int_int_directed_0\";\n\n// set up\n;\n\n\n\nint i=2;\n\n\nint j=3;\n\n\nint k=4;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Tritype_int_int_int_directed_0\");int AKA_ACTUAL_OUTPUT=Tritype(i,j,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\SymbolicExecutionTest\\\\praticalTest.cpp\\\\Tritype(int,int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n\nint i=484606289;\n\n\nint j=-559389803;\n\n\nint k=-722953131;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* NormalNumberDataNode j */\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\akautauto\\datatest\\duc-anh\\SymbolicExecutionTest\\praticalTest.cpp\\Tritype(int,int,int)"
+    }
+]

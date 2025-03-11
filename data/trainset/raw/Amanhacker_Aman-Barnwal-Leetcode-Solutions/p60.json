@@ -1,0 +1,30 @@
+[
+    {
+        "f": [],
+        "fm": "vector<vector<int>> construct2DArray(vector<int>& a, int m, int n) {\r     \r         vector<vector<int>> res;\r         \r         int siz = a.size();\r         vector<int> temp;\r         \r         if(siz != m * n)                                        return res;\r         \r         for(int i=0; i<siz; i += n) {\r             \r             for(int k=i; k<i+n; k++)                            temp.push_back(a[k]);\r             \r             res.push_back(temp);\r             temp.clear();\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_construct2DArray_vector_int_int_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_construct2DArray_vector_int_int_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2022-convert-1d-array-into-2d-array.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint m=1995394297;\n\n\nint n=5;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=1825470762;\na.push_back(a_element0);\nint a_element1=-1079762690;\na.push_back(a_element1);\n/* NormalNumberDataNode m */\n/* NormalNumberDataNode n */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_construct2DArray_vector_int_int_int_random_3\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->construct2DArray(a,m,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p60\\\\2022-convert-1d-array-into-2d-array\\\\2022-convert-1d-array-into-2d-array.cpp\\\\Solution\\\\construct2DArray(vector<int>&,int,int)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\1952-three-divisors.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     vector<vector<int>> construct2DArray(vector<int>& a, int m, int n) {\r     \r         vector<vector<int>> res;\r         \r         int siz = a.size();\r         vector<int> temp;\r         \r         if(siz != m * n)                                        return res;\r         \r         for(int i=0; i<siz; i += n) {\r             \r             for(int k=i; k<i+n; k++)                            temp.push_back(a[k]);\r             \r             res.push_back(temp);\r             temp.clear();\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p60\\2022-convert-1d-array-into-2d-array\\2022-convert-1d-array-into-2d-array.cpp\\Solution\\construct2DArray(vector<int>&,int,int)"
+    }
+]

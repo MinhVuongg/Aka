@@ -1,0 +1,182 @@
+[
+    {
+        "f": [],
+        "fm": "bool hasCycle(struct ListNode *head) {\r \tstruct ListNode *f = head, *l = head;\r \tif (head == NULL) return false;\r \twhile (f->next != NULL && f->next->next != NULL) {\r \t\tf = f->next->next;\r \t\tl = l->next;\r \t\tif (f == l)\r \t\t\treturn true;\r \t}\r \treturn false;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_hasCycle_struct_ListNodemul_random_1(void) {\n{\nAKA_test_case_name=\"hasCycle_struct_ListNodemul_random_1\";\n\n// set up\n;\n\nstruct ListNode* head;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test hasCycle_struct_ListNodemul_random_1\");bool AKA_ACTUAL_OUTPUT=hasCycle(head);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\_141 Linked List Cycle\\\\_141 Linked List Cycle.cpp\\\\hasCycle(struct ListNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_nums[3];\n\n\nint AKA_ARRAY_INIT_nums_0=667852793;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=-1664520118;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\n\nint AKA_ARRAY_INIT_nums_2=155312978;\nAKA_ARRAY_INIT_nums[2] = AKA_ARRAY_INIT_nums_2;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint s=3;\n\n\nint e=9;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode s */\n/* NormalNumberDataNode e */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_hasCycle_struct_ListNodemul_random_2(void) {\n{\nAKA_test_case_name=\"hasCycle_struct_ListNodemul_random_2\";\n\n// set up\n;\n\nstd::vector<struct ListNode*> AKA_VECTOR_INIT_head;\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode() */\nAKA_mark(\"Calling: \\\\ListNode()|ROOT\\\\_141 Linked List Cycle.cpp\\\\hasCycle(struct ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_0\\\\head\\\\ListNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_head_0 = new ::ListNode();\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_0).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_0);\n\n\n/* SubStructDataNode head */\n/* ConstructorDataNode ListNode() */\nAKA_mark(\"Calling: \\\\ListNode()|ROOT\\\\_141 Linked List Cycle.cpp\\\\hasCycle(struct ListNode*)\\\\head\\\\AKA_VECTOR_INIT_head_1\\\\head\\\\ListNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_head_1 = new ::ListNode();\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode next */\n(*AKA_VECTOR_INIT_head_1).next;\n\nAKA_VECTOR_INIT_head.push_back(AKA_VECTOR_INIT_head_1);\n\nstruct ListNode* head = AKA_VECTOR_INIT_head[0];\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode head */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test hasCycle_struct_ListNodemul_random_2\");bool AKA_ACTUAL_OUTPUT=hasCycle(head);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\_141 Linked List Cycle\\\\_141 Linked List Cycle.cpp\\\\hasCycle(struct ListNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint* nums;\n\n\nint numsSize=-356783747;\n\n\nint k=-1919854530;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode numsSize */\n/* NormalNumberDataNode k */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\zqxl_leetcode\\Leetcode\\_141 Linked List Cycle\\_141 Linked List Cycle.cpp\\hasCycle(struct ListNode*)"
+    },
+    {
+        "f": [],
+        "fm": "int minElement(int* nums, int size) {\r \tif (size == 0) return 0x7fffffff;\r \tint min = nums[0];\r \tfor (int i = 1; i < size; i++) {\r \t\tif (min > nums[i]) min = nums[i];\r \t}\r \treturn min;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_minElement_intmul_int_random_1(void) {\n{\nAKA_test_case_name=\"minElement_intmul_int_random_1\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_nums[3];\n\n\nint AKA_ARRAY_INIT_nums_0=960409313;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=463944160;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\n\nint AKA_ARRAY_INIT_nums_2=-1326253567;\nAKA_ARRAY_INIT_nums[2] = AKA_ARRAY_INIT_nums_2;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint size=3;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode size */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test minElement_intmul_int_random_1\");int AKA_ACTUAL_OUTPUT=minElement(nums,size);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\_155 Min Stack\\\\_155 Min Stack.cpp\\\\minElement(int*,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_nums[3];\n\n\nint AKA_ARRAY_INIT_nums_0=667852793;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=-1664520118;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\n\nint AKA_ARRAY_INIT_nums_2=155312978;\nAKA_ARRAY_INIT_nums[2] = AKA_ARRAY_INIT_nums_2;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint s=3;\n\n\nint e=9;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode s */\n/* NormalNumberDataNode e */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_minElement_intmul_int_random_3(void) {\n{\nAKA_test_case_name=\"minElement_intmul_int_random_3\";\n\n// set up\n;\n\nint AKA_ARRAY_INIT_nums[1];\n\n\nint AKA_ARRAY_INIT_nums_0=-1560620256;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint size=4;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode size */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test minElement_intmul_int_random_3\");int AKA_ACTUAL_OUTPUT=minElement(nums,size);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\_155 Min Stack\\\\_155 Min Stack.cpp\\\\minElement(int*,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint* nums;\n\n\nint numsSize=-356783747;\n\n\nint k=-1919854530;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode numsSize */\n/* NormalNumberDataNode k */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\zqxl_leetcode\\Leetcode\\_155 Min Stack\\_155 Min Stack.cpp\\minElement(int*,int)"
+    },
+    {
+        "f": [],
+        "fm": "MinStack* minStackCreate(int maxSize) {\r \tMinStack *s = (MinStack*)malloc(sizeof(MinStack));\r \ts->hot = -1;\r \ts->min = (int)0x7fffffff;\r \ts->st = (int*)malloc(sizeof(int) * maxSize);\r \treturn s;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_minStackCreate_int_random_3(void) {\n{\nAKA_test_case_name=\"minStackCreate_int_random_3\";\n\n// set up\n;\n\n\n\nint maxSize=-1522672154;\nMinStack* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode maxSize */\n/* PointerStructureDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test minStackCreate_int_random_3\");MinStack* AKA_ACTUAL_OUTPUT=minStackCreate(maxSize);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\_155 Min Stack\\\\_155 Min Stack.cpp\\\\minStackCreate(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_nums[3];\n\n\nint AKA_ARRAY_INIT_nums_0=667852793;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=-1664520118;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\n\nint AKA_ARRAY_INIT_nums_2=155312978;\nAKA_ARRAY_INIT_nums[2] = AKA_ARRAY_INIT_nums_2;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint s=3;\n\n\nint e=9;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode s */\n/* NormalNumberDataNode e */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\zqxl_leetcode\\Leetcode\\_155 Min Stack\\_155 Min Stack.cpp\\minStackCreate(int)"
+    },
+    {
+        "f": [],
+        "fm": "void minStackPop(MinStack* obj) {\r \tif (obj->st[obj->hot] == obj->min) {\r \t\tobj->min = minElement(obj->st, obj->hot);\r \t}\r \t\r \tobj->hot--;\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_minStackPop_MinStackmul_random_0(void) {\n{\nAKA_test_case_name=\"minStackPop_MinStackmul_random_0\";\n\n// set up\n;\n\nMinStack* obj;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode obj */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test minStackPop_MinStackmul_random_0\");minStackPop(obj);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\_155 Min Stack\\\\_155 Min Stack.cpp\\\\minStackPop(MinStack*)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_nums[3];\n\n\nint AKA_ARRAY_INIT_nums_0=667852793;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=-1664520118;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\n\nint AKA_ARRAY_INIT_nums_2=155312978;\nAKA_ARRAY_INIT_nums[2] = AKA_ARRAY_INIT_nums_2;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint s=3;\n\n\nint e=9;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode s */\n/* NormalNumberDataNode e */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\zqxl_leetcode\\Leetcode\\_155 Min Stack\\_155 Min Stack.cpp\\minStackPop(MinStack*)"
+    },
+    {
+        "f": [],
+        "fm": "void minStackPush(MinStack* obj, int x) {\r \tobj->hot++;\r \tobj->st[obj->hot] = x;\r \tif (obj->min > x) {\r \t\tobj->min = x;\r \t}\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_minStackPush_MinStackmul_int_random_3(void) {\n{\nAKA_test_case_name=\"minStackPush_MinStackmul_int_random_3\";\n\n// set up\n;\n\nstd::vector<MinStack*> AKA_VECTOR_INIT_obj;\n\n\n/* SubStructDataNode obj */\n/* ConstructorDataNode MinStack() */\nAKA_mark(\"Calling: \\\\MinStack()|ROOT\\\\_155 Min Stack.cpp\\\\minStackPush(MinStack*,int)\\\\obj\\\\AKA_VECTOR_INIT_obj_0\\\\obj\\\\MinStack()\");AKA_fCall++;auto AKA_VECTOR_INIT_obj_0 = new ::MinStack();\n/* PointerNumberDataNode st */\n(*AKA_VECTOR_INIT_obj_0).st;\n/* NormalNumberDataNode hot */\n(*AKA_VECTOR_INIT_obj_0).hot=-1262737571;\n/* NormalNumberDataNode min */\n(*AKA_VECTOR_INIT_obj_0).min=1579154219;\n\nAKA_VECTOR_INIT_obj.push_back(AKA_VECTOR_INIT_obj_0);\n\n\n/* SubStructDataNode obj */\n/* ConstructorDataNode MinStack() */\nAKA_mark(\"Calling: \\\\MinStack()|ROOT\\\\_155 Min Stack.cpp\\\\minStackPush(MinStack*,int)\\\\obj\\\\AKA_VECTOR_INIT_obj_1\\\\obj\\\\MinStack()\");AKA_fCall++;auto AKA_VECTOR_INIT_obj_1 = new ::MinStack();\n/* PointerNumberDataNode st */\n(*AKA_VECTOR_INIT_obj_1).st;\n/* NormalNumberDataNode hot */\n(*AKA_VECTOR_INIT_obj_1).hot=-304086074;\n/* NormalNumberDataNode min */\n(*AKA_VECTOR_INIT_obj_1).min=-1656982385;\n\nAKA_VECTOR_INIT_obj.push_back(AKA_VECTOR_INIT_obj_1);\n\n\n/* SubStructDataNode obj */\n/* ConstructorDataNode MinStack() */\nAKA_mark(\"Calling: \\\\MinStack()|ROOT\\\\_155 Min Stack.cpp\\\\minStackPush(MinStack*,int)\\\\obj\\\\AKA_VECTOR_INIT_obj_2\\\\obj\\\\MinStack()\");AKA_fCall++;auto AKA_VECTOR_INIT_obj_2 = new ::MinStack();\n/* PointerNumberDataNode st */\nint AKA_ARRAY_INIT_obj_2_DOT_st[1];\nint AKA_ARRAY_INIT_obj_2_DOT_st_0=-1352636444;\nAKA_ARRAY_INIT_obj_2_DOT_st[0] = AKA_ARRAY_INIT_obj_2_DOT_st_0;\n(*AKA_VECTOR_INIT_obj_2).st = AKA_ARRAY_INIT_obj_2_DOT_st;\n/* NormalNumberDataNode hot */\n(*AKA_VECTOR_INIT_obj_2).hot=-19525827;\n/* NormalNumberDataNode min */\n(*AKA_VECTOR_INIT_obj_2).min=662427235;\n\nAKA_VECTOR_INIT_obj.push_back(AKA_VECTOR_INIT_obj_2);\n\nMinStack* obj = AKA_VECTOR_INIT_obj[0];\n\n\nint x=2120285549;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode obj */\n/* NormalNumberDataNode x */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test minStackPush_MinStackmul_int_random_3\");minStackPush(obj,x);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\_155 Min Stack\\\\_155 Min Stack.cpp\\\\minStackPush(MinStack*,int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_nums[3];\n\n\nint AKA_ARRAY_INIT_nums_0=667852793;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=-1664520118;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\n\nint AKA_ARRAY_INIT_nums_2=155312978;\nAKA_ARRAY_INIT_nums[2] = AKA_ARRAY_INIT_nums_2;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint s=3;\n\n\nint e=9;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode s */\n/* NormalNumberDataNode e */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\zqxl_leetcode\\Leetcode\\_155 Min Stack\\_155 Min Stack.cpp\\minStackPush(MinStack*,int)"
+    },
+    {
+        "f": [],
+        "fm": "void minStackFree(MinStack* obj) {\r \tfree(obj->st);\r }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_minStackFree_MinStackmul_random_3(void) {\n{\nAKA_test_case_name=\"minStackFree_MinStackmul_random_3\";\n\n// set up\n;\n\nstd::vector<MinStack*> AKA_VECTOR_INIT_obj;\n\n\n/* SubStructDataNode obj */\n/* ConstructorDataNode MinStack() */\nAKA_mark(\"Calling: \\\\MinStack()|ROOT\\\\_155 Min Stack.cpp\\\\minStackFree(MinStack*)\\\\obj\\\\AKA_VECTOR_INIT_obj_0\\\\obj\\\\MinStack()\");AKA_fCall++;auto AKA_VECTOR_INIT_obj_0 = new ::MinStack();\n/* PointerNumberDataNode st */\nint AKA_ARRAY_INIT_obj_0_DOT_st[2];\nint AKA_ARRAY_INIT_obj_0_DOT_st_0=74457451;\nAKA_ARRAY_INIT_obj_0_DOT_st[0] = AKA_ARRAY_INIT_obj_0_DOT_st_0;\nint AKA_ARRAY_INIT_obj_0_DOT_st_1=-567233118;\nAKA_ARRAY_INIT_obj_0_DOT_st[1] = AKA_ARRAY_INIT_obj_0_DOT_st_1;\n(*AKA_VECTOR_INIT_obj_0).st = AKA_ARRAY_INIT_obj_0_DOT_st;\n/* NormalNumberDataNode hot */\n/* hot : null value -> no code */\n/* NormalNumberDataNode min */\n/* min : null value -> no code */\n\nAKA_VECTOR_INIT_obj.push_back(AKA_VECTOR_INIT_obj_0);\n\n\n/* SubStructDataNode obj */\n/* ConstructorDataNode MinStack() */\nAKA_mark(\"Calling: \\\\MinStack()|ROOT\\\\_155 Min Stack.cpp\\\\minStackFree(MinStack*)\\\\obj\\\\AKA_VECTOR_INIT_obj_1\\\\obj\\\\MinStack()\");AKA_fCall++;auto AKA_VECTOR_INIT_obj_1 = new ::MinStack();\n/* PointerNumberDataNode st */\n(*AKA_VECTOR_INIT_obj_1).st;\n/* NormalNumberDataNode hot */\n/* hot : null value -> no code */\n/* NormalNumberDataNode min */\n/* min : null value -> no code */\n\nAKA_VECTOR_INIT_obj.push_back(AKA_VECTOR_INIT_obj_1);\n\nMinStack* obj = AKA_VECTOR_INIT_obj[0];\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode obj */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test minStackFree_MinStackmul_random_3\");minStackFree(obj);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\Leetcode\\\\_155 Min Stack\\\\_155 Min Stack.cpp\\\\minStackFree(MinStack*)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\nint AKA_ARRAY_INIT_nums[3];\n\n\nint AKA_ARRAY_INIT_nums_0=667852793;\nAKA_ARRAY_INIT_nums[0] = AKA_ARRAY_INIT_nums_0;\n\n\nint AKA_ARRAY_INIT_nums_1=-1664520118;\nAKA_ARRAY_INIT_nums[1] = AKA_ARRAY_INIT_nums_1;\n\n\nint AKA_ARRAY_INIT_nums_2=155312978;\nAKA_ARRAY_INIT_nums[2] = AKA_ARRAY_INIT_nums_2;\n\nint* nums = AKA_ARRAY_INIT_nums;\n\n\nint s=3;\n\n\nint e=9;\n\n/* RootDataNode STATIC */\n/* PointerNumberDataNode nums */\n/* NormalNumberDataNode s */\n/* NormalNumberDataNode e */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\zqxl_leetcode\\Leetcode\\_155 Min Stack\\_155 Min Stack.cpp\\minStackFree(MinStack*)"
+    }
+]

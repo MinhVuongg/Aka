@@ -1,0 +1,145 @@
+[
+    {
+        "f": [],
+        "fm": "int check_vowel(char a) {\r \tif ( a >= 'A' && a <= 'Z' )\r \t\ta = a + 'a' - 'A';\r \r \tif ( a == 'a' || a == 'e' || a == 'i' || a == 'o' || a == 'u')\r \t\treturn 1;\r \r \treturn 0;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\check_vowel(char)"
+    },
+    {
+        "f": [],
+        "fm": "int compare_string(char *first, char *second) {\r \twhile(*first==*second) {\r \t\tif ( *first == '\\0' || *second == '\\0' )\r \t\t\tbreak;\r \r \t\tfirst++;\r \t\tsecond++;\r \t}\r \tif( *first == '\\0' && *second == '\\0' )\r \t\treturn 0;\r \telse\r \t\treturn -1;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\compare_string(char*,char*)"
+    },
+    {
+        "f": [],
+        "fm": "int check_subsequence (char a[], char b[]) {\r \tint c, d;\r \r \tc = 0;\r \td = 0;\r \r \twhile (a[c] != '\\0') {\r \t\twhile ((a[c] != b[d]) && b[d] != '\\0') {\r \t\t\td++;\r \t\t}\r \t\tif (b[d] == '\\0')\r \t\t\tbreak;\r \t\td++;\r \t\tc++;\r \t}\r \tif (a[c] == '\\0')\r \t\treturn 1;\r \telse\r \t\treturn 0;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\check_subsequence(char[],char[])"
+    },
+    {
+        "f": [],
+        "fm": "int check_anagram(char a[], char b[]) {\r \tint first[26], second[26], c = 0;\r \tfirst[20] = 0;\r \tsecond[26]=0;\r \twhile (a[c] != '\\0') {\r \t\tfirst[a[c]-'a']++;\r \t\tc++;\r \t}\r \r \tc = 0;\r \r \twhile (b[c] != '\\0') {\r \t\tsecond[b[c]-'a']++;\r \t\tc++;\r \t}\r \r \tfor (c = 0; c < 26; c++) {\r \t\tif (first[c] != second[c])\r \t\t\treturn 0;\r \t}\r \r \treturn 1;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\check_anagram(char[],char[])"
+    },
+    {
+        "f": [],
+        "fm": "void find_frequency(char s[], int count[]) {\r \tint c = 0;\r \r \twhile (s[c] != '\\0') {\r \t\tif (s[c] >= 'a' && s[c] <= 'z' )\r \t\t\tcount[s[c]-'a']++;\r \t\tc++;\r \t}\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\find_frequency(char[],int[])"
+    },
+    {
+        "f": [],
+        "fm": "int frequencyDigits(int n, int d)\r {   \r     // Counter variable to store\r     // the frequency\r     int c = 0;\r      \r     // iterate till number reduces to zero\r     while (n > 0) {\r          \r         // check for equality\r         if (n % 10 == d)\r             c++;\r         // reduce the number\r         n = n / 10;\r     }\r      \r     return c;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\frequencyDigits(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int largestNum(int a, int b)\r {\r     return a * (bool)(a / b) + b * (bool)(b / a);\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\largestNum(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int lds(int arr[], int n)\r {\r     int lds[n];\r     int i, j, max = 0;\r  \r     // Initialize LDS with 1 for all index\r     // The minimum LDS starting with any\r     // element is always 1\r     for (i = 0; i < n; i++)\r         lds[i] = 1;\r  \r     // Compute LDS from every index\r     // in bottom up manner\r     for (i = 1; i < n; i++)\r         for (j = 0; j < i; j++)\r             if (arr[i] < arr[j] && lds[i] < lds[j] + 1)\r                 lds[i] = lds[j] + 1;\r  \r     // Select the maximum \r     // of all the LDS values\r     for (i = 0; i < n; i++)\r         if (max < lds[i])\r             max = lds[i];\r  \r     // returns the length of the LDS\r     return max;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\lds(int[],int)"
+    },
+    {
+        "f": [],
+        "fm": "int getPriority(char C)\r {\r     if (C == '-' || C == '+')\r         return 1;\r     else if (C == '*' || C == '/')\r         return 2;\r     else if (C == '^')\r         return 3;\r     return 0;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\getPriority(char)"
+    },
+    {
+        "f": [],
+        "fm": "void printDistinctPFs(int n)\r {\r    // array to store the number of distinct primes\r     long long factorCount[n + 1];\r  \r     // true if index 'i' is a prime\r     bool prime[n + 1];\r  \r     // initializing the number of factors to 0 and\r     for (int i = 0; i <= n; i++) {\r         factorCount[i] = 0;\r         prime[i] = true;  // Used in Sieve\r     }\r  \r     for (int i = 2; i <= n; i++) {\r   \r         // condition works only when 'i' is prime, \r         // hence for factors of all prime number, \r         // the prime status is changed to false\r         if (prime[i] == true) { \r              \r             // Number is prime\r             factorCount[i] = 1; \r              \r             // number of factor of a prime number is 1\r             for (int j = i * 2; j <= n; j += i) {\r  \r                 // incrementing factorCount all \r                 // the factors of i\r                 factorCount[j]++; \r  \r                 // and changing prime status to false\r                 prime[j] = false; \r             }\r         }\r     }\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\printDistinctPFs(int)"
+    },
+    {
+        "f": [],
+        "fm": "int steps(int N, int M)\r {\r     // Corner Case 1: When N = 1\r     if (N == 1)\r         return 0;\r  \r     // Corner Case 2: When N = 2\r     else if (N == 2) // corner case 2\r         return M;\r  \r     return 2 * M + (N - 3);\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Utils.cpp\\steps(int,int)"
+    }
+]

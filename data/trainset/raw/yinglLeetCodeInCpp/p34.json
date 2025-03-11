@@ -1,0 +1,86 @@
+[
+    {
+        "f": [],
+        "fm": "int uniquePaths(int m, int n) {\r     vector<vector<int> > paths(m, vector<int>(n, 0));\r \r     paths[0][0] = 1;\r \r     return unique_paths(m - 1, n - 1, paths);\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_uniquePaths_int_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_uniquePaths_int_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\unique_paths.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint m=621275768;\n\n\nint n=1769790665;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode m */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_uniquePaths_int_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->uniquePaths(m,n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-28\\\\unique_paths.cpp\\\\Solution\\\\uniquePaths(int,int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\unique_paths.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint m=621275768;\n\n\nint n=1769790665;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode m */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int unique_paths(int x, int y, vector<vector<int> > &paths) {\r     if (0 == paths[x][y]) {\r       if ((x - 1) >= 0) {\r         paths[x][y] += unique_paths(x - 1, y, paths);\r       }\r \r       if ((y - 1) >= 0) {\r         paths[x][y] += unique_paths(x, y - 1, paths);\r       }\r     }\r     \r     return paths[x][y];\r   }\r   int uniquePaths(int m, int n) {\r     vector<vector<int> > paths(m, vector<int>(n, 0));\r \r     paths[0][0] = 1;\r \r     return unique_paths(m - 1, n - 1, paths);\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-28\\unique_paths.cpp\\Solution\\uniquePaths(int,int)"
+    },
+    {
+        "f": [],
+        "fm": "int unique_paths_with_obstacles(const vector<vector<int> > &grid,\r       int row,\r       int col,\r       vector<vector<int> > &paths) {\r     if (0 == paths[row][col]) {\r       if (0 == grid[row][col]) {\r         if ((row - 1) >= 0) {\r           paths[row][col] = unique_paths_with_obstacles(grid,\r               row - 1,\r               col,\r               paths);\r         }\r \r         if ((col - 1) >= 0) {\r           paths[row][col] += unique_paths_with_obstacles(grid,\r               row,\r               col - 1,\r               paths);\r         }\r       }\r     }\r     \r     return paths[row][col];\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_unique_paths_with_obstacles_vector_vector_int_const_int_int_vector_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_unique_paths_with_obstacles_vector_vector_int_const_int_int_vector_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\unique_paths_ii.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>>grid;\n\n\nint row=-1507827022;\n\n\nint col=1593331251;\nvector<vector<int>> paths;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode grid */\nvector<int> grid_element0;\nint grid_element0_element0=884059788;\ngrid_element0.push_back(grid_element0_element0);\nint grid_element0_element1=-950771273;\ngrid_element0.push_back(grid_element0_element1);\nint grid_element0_element2=-1067534634;\ngrid_element0.push_back(grid_element0_element2);\ngrid.push_back(grid_element0);\n/* NormalNumberDataNode row */\n/* NormalNumberDataNode col */\n/* VectorDataNode paths */\nvector<int> paths_element0;\nint paths_element0_element0=499059745;\npaths_element0.push_back(paths_element0_element0);\nint paths_element0_element1=1993411995;\npaths_element0.push_back(paths_element0_element1);\npaths.push_back(paths_element0);\nvector<int> paths_element1;\nint paths_element1_element0=1781505436;\npaths_element1.push_back(paths_element1_element0);\nint paths_element1_element1=4255749;\npaths_element1.push_back(paths_element1_element1);\npaths.push_back(paths_element1);\nvector<int> paths_element2;\nint paths_element2_element0=1332999697;\npaths_element2.push_back(paths_element2_element0);\nint paths_element2_element1=1038267172;\npaths_element2.push_back(paths_element2_element1);\npaths.push_back(paths_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_unique_paths_with_obstacles_vector_vector_int_const_int_int_vector_vector_int_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->unique_paths_with_obstacles(grid,row,col,paths);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-28\\\\unique_paths_ii.cpp\\\\Solution\\\\unique_paths_with_obstacles(vector<vector<int>>const&,int,int,vector<vector<int>>&)\");\n\n\nvector<vector<int>>const EXPECTED_grid;\n\nvector<vector<int>> EXPECTED_paths;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\unique_paths.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint m=621275768;\n\n\nint n=1769790665;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode m */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int unique_paths_with_obstacles(const vector<vector<int> > &grid,\r       int row,\r       int col,\r       vector<vector<int> > &paths) {\r     if (0 == paths[row][col]) {\r       if (0 == grid[row][col]) {\r         if ((row - 1) >= 0) {\r           paths[row][col] = unique_paths_with_obstacles(grid,\r               row - 1,\r               col,\r               paths);\r         }\r \r         if ((col - 1) >= 0) {\r           paths[row][col] += unique_paths_with_obstacles(grid,\r               row,\r               col - 1,\r               paths);\r         }\r       }\r     }\r     \r     return paths[row][col];\r   }\r \r   int uniquePathsWithObstacles(vector<vector<int> > &obstacleGrid) {\r     int rows = obstacleGrid.size();\r     int cols = obstacleGrid[0].size();\r     vector<vector<int> > paths(rows, vector<int>(cols, 0));\r \r     paths[0][0] = (0 == obstacleGrid[0][0]) ? 1 : 0;\r \r     return unique_paths_with_obstacles(obstacleGrid,\r       rows - 1,\r       cols - 1,\r       paths);\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-28\\unique_paths_ii.cpp\\Solution\\unique_paths_with_obstacles(vector<vector<int>>const&,int,int,vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "int uniquePathsWithObstacles(vector<vector<int> > &obstacleGrid) {\r     int rows = obstacleGrid.size();\r     int cols = obstacleGrid[0].size();\r     vector<vector<int> > paths(rows, vector<int>(cols, 0));\r \r     paths[0][0] = (0 == obstacleGrid[0][0]) ? 1 : 0;\r \r     return unique_paths_with_obstacles(obstacleGrid,\r       rows - 1,\r       cols - 1,\r       paths);\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_uniquePathsWithObstacles_vector_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_uniquePathsWithObstacles_vector_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\unique_paths_ii.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> obstacleGrid;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode obstacleGrid */\nvector<int> obstacleGrid_element0;\nint obstacleGrid_element0_element0=-1559638615;\nobstacleGrid_element0.push_back(obstacleGrid_element0_element0);\nint obstacleGrid_element0_element1=-1785198254;\nobstacleGrid_element0.push_back(obstacleGrid_element0_element1);\nint obstacleGrid_element0_element2=876714535;\nobstacleGrid_element0.push_back(obstacleGrid_element0_element2);\nobstacleGrid.push_back(obstacleGrid_element0);\nvector<int> obstacleGrid_element1;\nint obstacleGrid_element1_element0=474852487;\nobstacleGrid_element1.push_back(obstacleGrid_element1_element0);\nobstacleGrid.push_back(obstacleGrid_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_uniquePathsWithObstacles_vector_vector_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->uniquePathsWithObstacles(obstacleGrid);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-28\\\\unique_paths_ii.cpp\\\\Solution\\\\uniquePathsWithObstacles(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_obstacleGrid;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\unique_paths.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint m=621275768;\n\n\nint n=1769790665;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode m */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int unique_paths_with_obstacles(const vector<vector<int> > &grid,\r       int row,\r       int col,\r       vector<vector<int> > &paths) {\r     if (0 == paths[row][col]) {\r       if (0 == grid[row][col]) {\r         if ((row - 1) >= 0) {\r           paths[row][col] = unique_paths_with_obstacles(grid,\r               row - 1,\r               col,\r               paths);\r         }\r \r         if ((col - 1) >= 0) {\r           paths[row][col] += unique_paths_with_obstacles(grid,\r               row,\r               col - 1,\r               paths);\r         }\r       }\r     }\r     \r     return paths[row][col];\r   }\r \r   int uniquePathsWithObstacles(vector<vector<int> > &obstacleGrid) {\r     int rows = obstacleGrid.size();\r     int cols = obstacleGrid[0].size();\r     vector<vector<int> > paths(rows, vector<int>(cols, 0));\r \r     paths[0][0] = (0 == obstacleGrid[0][0]) ? 1 : 0;\r \r     return unique_paths_with_obstacles(obstacleGrid,\r       rows - 1,\r       cols - 1,\r       paths);\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-28\\unique_paths_ii.cpp\\Solution\\uniquePathsWithObstacles(vector<vector<int>>&)"
+    }
+]

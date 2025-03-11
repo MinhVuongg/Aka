@@ -1,0 +1,250 @@
+[
+    {
+        "f": [],
+        "fm": "int findPoisonedDuration(vector<int>& timeSeries, int duration) {\r     \r         int time = 0;\r         int n = timeSeries.size();\r         \r         if(n == 0)                                      return 0;\r         \r         int total = 0;\r         \r         for(int i=0; i<n-1; i++)                        total += min(timeSeries[i+1] - timeSeries[i], duration);\r         \r         time = total + duration;\r         return time;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findPoisonedDuration_vector_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_findPoisonedDuration_vector_int_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\495-teemo-attacking.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> timeSeries;\n\n\nint duration=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode timeSeries */\n/* NormalNumberDataNode duration */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findPoisonedDuration_vector_int_int_directed_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findPoisonedDuration(timeSeries,duration);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p90\\\\495-teemo-attacking\\\\495-teemo-attacking.cpp\\\\Solution\\\\findPoisonedDuration(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_timeSeries;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\495-teemo-attacking.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> timeSeries;\n\n\nint duration=0;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode timeSeries */\n/* NormalNumberDataNode duration */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findPoisonedDuration_vector_int_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_findPoisonedDuration_vector_int_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\495-teemo-attacking.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> timeSeries;\n\n\nint duration=-596316311;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode timeSeries */\nint timeSeries_element0=774440873;\ntimeSeries.push_back(timeSeries_element0);\nint timeSeries_element1=1869005615;\ntimeSeries.push_back(timeSeries_element1);\nint timeSeries_element2=1334993034;\ntimeSeries.push_back(timeSeries_element2);\n/* NormalNumberDataNode duration */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findPoisonedDuration_vector_int_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findPoisonedDuration(timeSeries,duration);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p90\\\\495-teemo-attacking\\\\495-teemo-attacking.cpp\\\\Solution\\\\findPoisonedDuration(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_timeSeries;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\495-teemo-attacking.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> timeSeries;\n\n\nint duration=-596316311;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode timeSeries */\nint timeSeries_element0=774440873;\ntimeSeries.push_back(timeSeries_element0);\nint timeSeries_element1=1869005615;\ntimeSeries.push_back(timeSeries_element1);\nint timeSeries_element2=1334993034;\ntimeSeries.push_back(timeSeries_element2);\n/* NormalNumberDataNode duration */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     int findPoisonedDuration(vector<int>& timeSeries, int duration) {\r     \r         int time = 0;\r         int n = timeSeries.size();\r         \r         if(n == 0)                                      return 0;\r         \r         int total = 0;\r         \r         for(int i=0; i<n-1; i++)                        total += min(timeSeries[i+1] - timeSeries[i], duration);\r         \r         time = total + duration;\r         return time;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p90\\495-teemo-attacking\\495-teemo-attacking.cpp\\Solution\\findPoisonedDuration(vector<int>&,int)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> nextGreaterElement(vector<int>& a1, vector<int>& a2) {\r     \r         vector<int> res;\r         \r         int n1 = a1.size();\r         int n2 = a2.size();\r         \r         // Find the next greater element array of vector a2\r         stack<int> w;\r         vector<int> v2;             // NGR vector of a2 \r         \r         for(int i=n2-1; i>=0; i--) {\r             \r             if(w.empty() == true)           v2.push_back(-1);\r             else if(w.top() >= a2[i])        v2.push_back(w.top());\r             else if(w.top() < a2[i]) {\r                 \r                 while(w.empty() == false && w.top() < a2[i])         w.pop();\r                 \r                 if(w.empty() == true)       v2.push_back(-1);\r                 else                        v2.push_back(w.top());\r             }\r                 \r             w.push(a2[i]);\r         }\r         \r         reverse(v2.begin(), v2.end());\r         \r         // Now, v2 contains NGR of array a2\r         for(auto &x : a1) {\r             \r             // Find the index j in a2 where a2[j] = x\r             auto it = find(a2.begin(), a2.end(), x);\r             int ind = it - a2.begin();\r             \r             if(it != a2.end()) {\r                 res.push_back(v2[ind]);\r             }\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_nextGreaterElement_vector_int_vector_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_nextGreaterElement_vector_int_vector_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\496-next-greater-element-i.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a1;\nvector<int> a2;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a1 */\nint a1_element0=611269868;\na1.push_back(a1_element0);\nint a1_element1=1140832173;\na1.push_back(a1_element1);\n/* VectorDataNode a2 */\nint a2_element0=-1376929557;\na2.push_back(a2_element0);\nint a2_element1=-2067091106;\na2.push_back(a2_element1);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_nextGreaterElement_vector_int_vector_int_random_3\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->nextGreaterElement(a1,a2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p90\\\\496-next-greater-element-i\\\\496-next-greater-element-i.cpp\\\\Solution\\\\nextGreaterElement(vector<int>&,vector<int>&)\");\n\n\nvector<int> EXPECTED_a1;\n\nvector<int> EXPECTED_a2;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\496-next-greater-element-i.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a1;\nvector<int> a2;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a1 */\nint a1_element0=611269868;\na1.push_back(a1_element0);\nint a1_element1=1140832173;\na1.push_back(a1_element1);\n/* VectorDataNode a2 */\nint a2_element0=-1376929557;\na2.push_back(a2_element0);\nint a2_element1=-2067091106;\na2.push_back(a2_element1);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_nextGreaterElement_vector_int_vector_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_nextGreaterElement_vector_int_vector_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\496-next-greater-element-i.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a1;\nvector<int> a2;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a1 */\n/* VectorDataNode a2 */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_nextGreaterElement_vector_int_vector_int_directed_0\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->nextGreaterElement(a1,a2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p90\\\\496-next-greater-element-i\\\\496-next-greater-element-i.cpp\\\\Solution\\\\nextGreaterElement(vector<int>&,vector<int>&)\");\n\n\nvector<int> EXPECTED_a1;\n\nvector<int> EXPECTED_a2;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\496-next-greater-element-i.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a1;\nvector<int> a2;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a1 */\n/* VectorDataNode a2 */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_nextGreaterElement_vector_int_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_nextGreaterElement_vector_int_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\496-next-greater-element-i.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a1;\nvector<int> a2;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a1 */\nint a1_element0=-674738997;\na1.push_back(a1_element0);\n/* VectorDataNode a2 */\nint a2_element0=-1671060825;\na2.push_back(a2_element0);\nint a2_element1=1136388560;\na2.push_back(a2_element1);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_nextGreaterElement_vector_int_vector_int_random_0\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->nextGreaterElement(a1,a2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p90\\\\496-next-greater-element-i\\\\496-next-greater-element-i.cpp\\\\Solution\\\\nextGreaterElement(vector<int>&,vector<int>&)\");\n\n\nvector<int> EXPECTED_a1;\n\nvector<int> EXPECTED_a2;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\496-next-greater-element-i.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a1;\nvector<int> a2;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a1 */\nint a1_element0=-674738997;\na1.push_back(a1_element0);\n/* VectorDataNode a2 */\nint a2_element0=-1671060825;\na2.push_back(a2_element0);\nint a2_element1=1136388560;\na2.push_back(a2_element1);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_nextGreaterElement_vector_int_vector_int_directed_1(void) {\n{\nAKA_test_case_name=\"Solution_nextGreaterElement_vector_int_vector_int_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\496-next-greater-element-i.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a1;\nvector<int> a2;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a1 */\n/* VectorDataNode a2 */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_nextGreaterElement_vector_int_vector_int_directed_1\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->nextGreaterElement(a1,a2);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p90\\\\496-next-greater-element-i\\\\496-next-greater-element-i.cpp\\\\Solution\\\\nextGreaterElement(vector<int>&,vector<int>&)\");\n\n\nvector<int> EXPECTED_a1;\n\nvector<int> EXPECTED_a2;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\496-next-greater-element-i.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a1;\nvector<int> a2;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a1 */\n/* VectorDataNode a2 */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     vector<int> nextGreaterElement(vector<int>& a1, vector<int>& a2) {\r     \r         vector<int> res;\r         \r         int n1 = a1.size();\r         int n2 = a2.size();\r         \r         // Find the next greater element array of vector a2\r         stack<int> w;\r         vector<int> v2;             // NGR vector of a2 \r         \r         for(int i=n2-1; i>=0; i--) {\r             \r             if(w.empty() == true)           v2.push_back(-1);\r             else if(w.top() >= a2[i])        v2.push_back(w.top());\r             else if(w.top() < a2[i]) {\r                 \r                 while(w.empty() == false && w.top() < a2[i])         w.pop();\r                 \r                 if(w.empty() == true)       v2.push_back(-1);\r                 else                        v2.push_back(w.top());\r             }\r                 \r             w.push(a2[i]);\r         }\r         \r         reverse(v2.begin(), v2.end());\r         \r         // Now, v2 contains NGR of array a2\r         for(auto &x : a1) {\r             \r             // Find the index j in a2 where a2[j] = x\r             auto it = find(a2.begin(), a2.end(), x);\r             int ind = it - a2.begin();\r             \r             if(it != a2.end()) {\r                 res.push_back(v2[ind]);\r             }\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p90\\496-next-greater-element-i\\496-next-greater-element-i.cpp\\Solution\\nextGreaterElement(vector<int>&,vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<int> findDiagonalOrder(vector<vector<int>>& mat) {\r     \r         vector<int> res;\r         \r         int n = mat.size();\r         int m = mat[0].size();\r         \r         unordered_map<int, vector<int>> u;\r         \r         // Diagonal Traverse of the matrix\r         \r         for(int i=0; i<n; i++) {\r             for(int j=0; j<m; j++) {\r                 u[i + j].push_back(mat[i][j]);\r             }\r         }\r     \r         vector<pair<int, vector<int>>> v;\r         for(auto &x : u)                                                        v.push_back({x.first, x.second});\r         \r         sort(v.begin(), v.end());\r         \r         // Now, when index is even, then push the vector in reverse order\r         for(auto &x : v) {\r             \r             if(x.first % 2 == 1) {\r                 for(auto &t : x.second)                                         res.push_back(t);\r             }                     \r             else {\r                 \r                 vector<int> temp = x.second;\r                 for(auto it=temp.rbegin(); it!=temp.rend(); it++)               res.push_back(*it);\r             }\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findDiagonalOrder_vector_vector_int_directed_1(void) {\n{\nAKA_test_case_name=\"Solution_findDiagonalOrder_vector_vector_int_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\498-diagonal-traverse.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> mat;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode mat */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findDiagonalOrder_vector_vector_int_directed_1\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findDiagonalOrder(mat);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p90\\\\498-diagonal-traverse\\\\498-diagonal-traverse.cpp\\\\Solution\\\\findDiagonalOrder(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_mat;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\498-diagonal-traverse.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> mat;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode mat */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findDiagonalOrder_vector_vector_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_findDiagonalOrder_vector_vector_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\498-diagonal-traverse.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> mat;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode mat */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findDiagonalOrder_vector_vector_int_directed_0\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findDiagonalOrder(mat);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p90\\\\498-diagonal-traverse\\\\498-diagonal-traverse.cpp\\\\Solution\\\\findDiagonalOrder(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_mat;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\498-diagonal-traverse.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> mat;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode mat */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_findDiagonalOrder_vector_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_findDiagonalOrder_vector_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\498-diagonal-traverse.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> mat;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode mat */\nvector<int> mat_element0;\nint mat_element0_element0=1571814227;\nmat_element0.push_back(mat_element0_element0);\nint mat_element0_element1=-1251713003;\nmat_element0.push_back(mat_element0_element1);\nint mat_element0_element2=1052132147;\nmat_element0.push_back(mat_element0_element2);\nmat.push_back(mat_element0);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findDiagonalOrder_vector_vector_int_random_0\");vector<int> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findDiagonalOrder(mat);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p90\\\\498-diagonal-traverse\\\\498-diagonal-traverse.cpp\\\\Solution\\\\findDiagonalOrder(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_mat;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\498-diagonal-traverse.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> mat;\nvector<int> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode mat */\nvector<int> mat_element0;\nint mat_element0_element0=1571814227;\nmat_element0.push_back(mat_element0_element0);\nint mat_element0_element1=-1251713003;\nmat_element0.push_back(mat_element0_element1);\nint mat_element0_element2=1052132147;\nmat_element0.push_back(mat_element0_element2);\nmat.push_back(mat_element0);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     vector<int> findDiagonalOrder(vector<vector<int>>& mat) {\r     \r         vector<int> res;\r         \r         int n = mat.size();\r         int m = mat[0].size();\r         \r         unordered_map<int, vector<int>> u;\r         \r         // Diagonal Traverse of the matrix\r         \r         for(int i=0; i<n; i++) {\r             for(int j=0; j<m; j++) {\r                 u[i + j].push_back(mat[i][j]);\r             }\r         }\r     \r         vector<pair<int, vector<int>>> v;\r         for(auto &x : u)                                                        v.push_back({x.first, x.second});\r         \r         sort(v.begin(), v.end());\r         \r         // Now, when index is even, then push the vector in reverse order\r         for(auto &x : v) {\r             \r             if(x.first % 2 == 1) {\r                 for(auto &t : x.second)                                         res.push_back(t);\r             }                     \r             else {\r                 \r                 vector<int> temp = x.second;\r                 for(auto it=temp.rbegin(); it!=temp.rend(); it++)               res.push_back(*it);\r             }\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p90\\498-diagonal-traverse\\498-diagonal-traverse.cpp\\Solution\\findDiagonalOrder(vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<vector<int>> fourSum(vector<int>& a, int tar) {\r     \r         vector<vector<int>> res;\r         vector<int> path;\r         \r         int n = a.size();\r         sort(a.begin(), a.end());\r         \r         for(int i=0; i<n-3; i++) {\r             for(int j=i+1; j<n-2; j++) {\r                 \r                 // Using Two Pointers method\r                 int start = j + 1, end = n - 1;\r                 \r                 while(start < end) {\r                     \r                     if(a[start] + a[end] == tar - a[i] - a[j]) {\r     \r                         path.push_back(a[i]);\r                         path.push_back(a[j]);\r                         path.push_back(a[start]);\r                         path.push_back(a[end]);\r                             \r                         if(find(res.begin(), res.end(), path) == res.end()) {\r                             res.push_back(path);\r                         }\r                         \r                         path.clear();\r \r                         start++;\r                         end--;\r                     }\r                     \r                     else if(a[start] + a[end] < tar - a[i] - a[j])              start++;\r                     else if(a[start] + a[end] > tar - a[i] - a[j])              end--;\r                 }\r                 \r             }\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_fourSum_vector_int_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_fourSum_vector_int_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\4sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint tar=-1166890657;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=-402880129;\na.push_back(a_element0);\n/* NormalNumberDataNode tar */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_fourSum_vector_int_int_random_1\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->fourSum(a,tar);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p90\\\\4sum\\\\4sum.cpp\\\\Solution\\\\fourSum(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\4sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint tar=-1166890657;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\nint a_element0=-402880129;\na.push_back(a_element0);\n/* NormalNumberDataNode tar */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_fourSum_vector_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_fourSum_vector_int_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\4sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint tar=0;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\n/* NormalNumberDataNode tar */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_fourSum_vector_int_int_directed_0\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->fourSum(a,tar);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p90\\\\4sum\\\\4sum.cpp\\\\Solution\\\\fourSum(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\4sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint tar=0;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\n/* NormalNumberDataNode tar */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_fourSum_vector_int_int_directed_1(void) {\n{\nAKA_test_case_name=\"Solution_fourSum_vector_int_int_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\4sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint tar;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\n/* NormalNumberDataNode tar */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_fourSum_vector_int_int_directed_1\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->fourSum(a,tar);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p90\\\\4sum\\\\4sum.cpp\\\\Solution\\\\fourSum(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_a;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\4sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> a;\n\n\nint tar;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode a */\n/* NormalNumberDataNode tar */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     vector<vector<int>> fourSum(vector<int>& a, int tar) {\r     \r         vector<vector<int>> res;\r         vector<int> path;\r         \r         int n = a.size();\r         sort(a.begin(), a.end());\r         \r         for(int i=0; i<n-3; i++) {\r             for(int j=i+1; j<n-2; j++) {\r                 \r                 // Using Two Pointers method\r                 int start = j + 1, end = n - 1;\r                 \r                 while(start < end) {\r                     \r                     if(a[start] + a[end] == tar - a[i] - a[j]) {\r     \r                         path.push_back(a[i]);\r                         path.push_back(a[j]);\r                         path.push_back(a[start]);\r                         path.push_back(a[end]);\r                             \r                         if(find(res.begin(), res.end(), path) == res.end()) {\r                             res.push_back(path);\r                         }\r                         \r                         path.clear();\r \r                         start++;\r                         end--;\r                     }\r                     \r                     else if(a[start] + a[end] < tar - a[i] - a[j])              start++;\r                     else if(a[start] + a[end] > tar - a[i] - a[j])              end--;\r                 }\r                 \r             }\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p90\\4sum\\4sum.cpp\\Solution\\fourSum(vector<int>&,int)"
+    },
+    {
+        "f": [],
+        "fm": "string longestPalindrome(string s) {\r     \r         string res = \"\";\r         \r         int maxLen = 1;\r         int n = s.length();\r         \r         vector<vector<int>> dp;\r         dp.resize(n, vector<int>(n, -1));\r         \r         // Every single char is a palindrome\r         for(int i=0; i<n; i++)                      dp[i][i] = 1;\r         \r         res += s[0];\r         \r         for(int i=n-1; i>=0; i--) {\r             for(int j=i+1; j<n; j++) {\r                 \r                 // Check whether the substring from index from [i, j] is a palindrome\r                 if(s[i] == s[j]) {\r                 \r                     // If it is of 2 char or if the substring from [i+1, j-1] is a palindrome\r                     if(j - i + 1 == 2 || dp[i + 1][j - 1] == 1) {\r                        \r                         // If substring from [i+1, j-1] is a palindrome and if s[i] == s[j], then substring from [i, j] is also a palindrome\r                         dp[i][j] = 1;                  \r                         int len = j - i + 1;\r \r                         if(maxLen < len) {\r                             maxLen = len;\r                             res = s.substr(i, len);\r                         }\r                     }\r                 }\r                 \r             }\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_longestPalindrome_string_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_longestPalindrome_string_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\5-longest-palindromic-substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName571344 = new char[2];akaRandomName571344[0] = 0;akaRandomName571344[1] = '\\0';string s=akaRandomName571344;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_longestPalindrome_string_directed_0\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->longestPalindrome(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p90\\\\5-longest-palindromic-substring\\\\5-longest-palindromic-substring.cpp\\\\Solution\\\\longestPalindrome(string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\5-longest-palindromic-substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName882399 = new char[2];akaRandomName882399[0] = 0;akaRandomName882399[1] = '\\0';string s=akaRandomName882399;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_longestPalindrome_string_random_3(void) {\n{\nAKA_test_case_name=\"Solution_longestPalindrome_string_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\5-longest-palindromic-substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName481390 = new char[2];akaRandomName481390[0] = -112;akaRandomName481390[1] = '\\0';string s=akaRandomName481390;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_longestPalindrome_string_random_3\");string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->longestPalindrome(s);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p90\\\\5-longest-palindromic-substring\\\\5-longest-palindromic-substring.cpp\\\\Solution\\\\longestPalindrome(string)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\5-longest-palindromic-substring.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName719241 = new char[2];akaRandomName719241[0] = -112;akaRandomName719241[1] = '\\0';string s=akaRandomName719241;\nstring AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     string longestPalindrome(string s) {\r     \r         string res = \"\";\r         \r         int maxLen = 1;\r         int n = s.length();\r         \r         vector<vector<int>> dp;\r         dp.resize(n, vector<int>(n, -1));\r         \r         // Every single char is a palindrome\r         for(int i=0; i<n; i++)                      dp[i][i] = 1;\r         \r         res += s[0];\r         \r         for(int i=n-1; i>=0; i--) {\r             for(int j=i+1; j<n; j++) {\r                 \r                 // Check whether the substring from index from [i, j] is a palindrome\r                 if(s[i] == s[j]) {\r                 \r                     // If it is of 2 char or if the substring from [i+1, j-1] is a palindrome\r                     if(j - i + 1 == 2 || dp[i + 1][j - 1] == 1) {\r                        \r                         // If substring from [i+1, j-1] is a palindrome and if s[i] == s[j], then substring from [i, j] is also a palindrome\r                         dp[i][j] = 1;                  \r                         int len = j - i + 1;\r \r                         if(maxLen < len) {\r                             maxLen = len;\r                             res = s.substr(i, len);\r                         }\r                     }\r                 }\r                 \r             }\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p90\\5-longest-palindromic-substring\\5-longest-palindromic-substring.cpp\\Solution\\longestPalindrome(string)"
+    }
+]

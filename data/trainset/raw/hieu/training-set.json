@@ -1,0 +1,142 @@
+[
+    {
+        "f": [],
+        "fm": "void bigNum::print() {     if (!positive) {std::cout << '-';}     for (int i = this->size()-1; i >= 0; i--){         std::cout << digits[i];     }     std::cout << std::endl; }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_bigNum_print_random_4(void) {\n{\nAKA_test_case_name=\"bigNum_print_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___bigNum */\n/* ConstructorDataNode bigNum::bigNum(bigNum const&) */\n/* ClassDataNode other */\n/* SubClassDataNode other */\n/* ConstructorDataNode bigNum::bigNum() */\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum()|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)/other/other/bigNum::bigNum()\");AKA_fCall++;::bigNum AKA_INSTANCE___bigNum_other = ::bigNum();\n/* VectorDataNode digits */\nint AKA_INSTANCE___bigNum_other_digits_element0=1353373579;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element0);\nint AKA_INSTANCE___bigNum_other_digits_element1=1119713049;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element1);\nint AKA_INSTANCE___bigNum_other_digits_element2=-984112372;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element2);\n/* NormalNumberDataNode positive */\nAKA_INSTANCE___bigNum_other.positive=true;\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(bigNum const&)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)\");AKA_fCall++;AKA_INSTANCE___bigNum = new ::bigNum(AKA_INSTANCE___bigNum_other);\n/* VectorDataNode digits */\nint AKA_INSTANCE___bigNum_digits_element0=-265827497;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element0);\nint AKA_INSTANCE___bigNum_digits_element1=1544927406;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element1);\n/* NormalNumberDataNode positive */\nAKA_INSTANCE___bigNum->positive=true;\n\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test bigNum_print_random_4\");AKA_INSTANCE___bigNum->print();\nAKA_fCall++;AKA_mark(\"Return from: ./big-numbers/bigNum.cpp/bigNum::print()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___bigNum */\n/* ConstructorDataNode bigNum::bigNum(bigNum const&) */\n/* ClassDataNode other */\n/* SubClassDataNode other */\n/* ConstructorDataNode bigNum::bigNum() */\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum()|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)/other/other/bigNum::bigNum()\");AKA_fCall++;::bigNum AKA_INSTANCE___bigNum_other = ::bigNum();\n/* VectorDataNode digits */\nint AKA_INSTANCE___bigNum_other_digits_element0=1353373579;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element0);\nint AKA_INSTANCE___bigNum_other_digits_element1=1119713049;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element1);\nint AKA_INSTANCE___bigNum_other_digits_element2=-984112372;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element2);\n/* NormalNumberDataNode positive */\nAKA_INSTANCE___bigNum_other.positive=true;\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(bigNum const&)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)\");AKA_fCall++;AKA_INSTANCE___bigNum = new ::bigNum(AKA_INSTANCE___bigNum_other);\n/* VectorDataNode digits */\nint AKA_INSTANCE___bigNum_digits_element0=-265827497;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element0);\nint AKA_INSTANCE___bigNum_digits_element1=1544927406;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element1);\n/* NormalNumberDataNode positive */\nAKA_INSTANCE___bigNum->positive=true;\n\n\n\n/* RootDataNode STATIC */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_bigNum_print_random_3(void) {\n{\nAKA_test_case_name=\"bigNum_print_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___bigNum */\n/* ConstructorDataNode bigNum::bigNum(int) */\n/* NormalNumberDataNode i */\nint AKA_INSTANCE___bigNum_i=1728211216;\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(int)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(int)\");AKA_fCall++;AKA_INSTANCE___bigNum = new ::bigNum(AKA_INSTANCE___bigNum_i);\n/* VectorDataNode digits */\nint AKA_INSTANCE___bigNum_digits_element0=-1861491040;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element0);\nint AKA_INSTANCE___bigNum_digits_element1=-540408503;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element1);\n/* NormalNumberDataNode positive */\nAKA_INSTANCE___bigNum->positive=true;\n\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test bigNum_print_random_3\");AKA_INSTANCE___bigNum->print();\nAKA_fCall++;AKA_mark(\"Return from: ./big-numbers/bigNum.cpp/bigNum::print()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___bigNum */\n/* ConstructorDataNode bigNum::bigNum(int) */\n/* NormalNumberDataNode i */\nint AKA_INSTANCE___bigNum_i=1728211216;\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(int)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(int)\");AKA_fCall++;AKA_INSTANCE___bigNum = new ::bigNum(AKA_INSTANCE___bigNum_i);\n/* VectorDataNode digits */\nint AKA_INSTANCE___bigNum_digits_element0=-1861491040;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element0);\nint AKA_INSTANCE___bigNum_digits_element1=-540408503;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element1);\n/* NormalNumberDataNode positive */\nAKA_INSTANCE___bigNum->positive=true;\n\n\n\n/* RootDataNode STATIC */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_bigNum_print_random_0(void) {\n{\nAKA_test_case_name=\"bigNum_print_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___bigNum */\n/* ConstructorDataNode bigNum::bigNum(bigNum const&) */\n/* ClassDataNode other */\n/* SubClassDataNode other */\n/* ConstructorDataNode bigNum::bigNum(std::string) */\n/* NormalStringDataNode str */\nchar* akaRandomName898437 = new char[2];akaRandomName898437[0] = -69;akaRandomName898437[1] = '\\0';std::string AKA_INSTANCE___bigNum_other_str=akaRandomName898437;\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(std::string)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)/other/other/bigNum::bigNum(std::string)\");AKA_fCall++;::bigNum AKA_INSTANCE___bigNum_other = ::bigNum(AKA_INSTANCE___bigNum_other_str);\n/* VectorDataNode digits */\nint AKA_INSTANCE___bigNum_other_digits_element0=-1497113484;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element0);\nint AKA_INSTANCE___bigNum_other_digits_element1=655878536;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element1);\nint AKA_INSTANCE___bigNum_other_digits_element2=-496981621;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element2);\n/* NormalNumberDataNode positive */\nAKA_INSTANCE___bigNum_other.positive=false;\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(bigNum const&)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)\");AKA_fCall++;AKA_INSTANCE___bigNum = new ::bigNum(AKA_INSTANCE___bigNum_other);\n/* VectorDataNode digits */\nint AKA_INSTANCE___bigNum_digits_element0=-168422545;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element0);\nint AKA_INSTANCE___bigNum_digits_element1=521966919;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element1);\nint AKA_INSTANCE___bigNum_digits_element2=-1716580443;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element2);\n/* NormalNumberDataNode positive */\nAKA_INSTANCE___bigNum->positive=false;\n\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test bigNum_print_random_0\");AKA_INSTANCE___bigNum->print();\nAKA_fCall++;AKA_mark(\"Return from: ./big-numbers/bigNum.cpp/bigNum::print()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___bigNum */\n/* ConstructorDataNode bigNum::bigNum(bigNum const&) */\n/* ClassDataNode other */\n/* SubClassDataNode other */\n/* ConstructorDataNode bigNum::bigNum(std::string) */\n/* NormalStringDataNode str */\nchar* akaRandomName638633 = new char[2];akaRandomName638633[0] = -69;akaRandomName638633[1] = '\\0';std::string AKA_INSTANCE___bigNum_other_str=akaRandomName638633;\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(std::string)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)/other/other/bigNum::bigNum(std::string)\");AKA_fCall++;::bigNum AKA_INSTANCE___bigNum_other = ::bigNum(AKA_INSTANCE___bigNum_other_str);\n/* VectorDataNode digits */\nint AKA_INSTANCE___bigNum_other_digits_element0=-1497113484;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element0);\nint AKA_INSTANCE___bigNum_other_digits_element1=655878536;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element1);\nint AKA_INSTANCE___bigNum_other_digits_element2=-496981621;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element2);\n/* NormalNumberDataNode positive */\nAKA_INSTANCE___bigNum_other.positive=false;\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(bigNum const&)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)\");AKA_fCall++;AKA_INSTANCE___bigNum = new ::bigNum(AKA_INSTANCE___bigNum_other);\n/* VectorDataNode digits */\nint AKA_INSTANCE___bigNum_digits_element0=-168422545;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element0);\nint AKA_INSTANCE___bigNum_digits_element1=521966919;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element1);\nint AKA_INSTANCE___bigNum_digits_element2=-1716580443;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element2);\n/* NormalNumberDataNode positive */\nAKA_INSTANCE___bigNum->positive=false;\n\n\n\n/* RootDataNode STATIC */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "/Users/huyhieu/cpp-mini-projects/big-numbers/bigNum.cpp/bigNum::print()"
+    },
+    {
+        "f": [],
+        "fm": "std::string bigNum::toStr(long long x) {     std::string result;     while (x > 0){         result = char('0' + (x % 10)) + result;         x /= 10;     }     return result; }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_bigNum_toStr_long_long_random_2(void) {\n{\nAKA_test_case_name=\"bigNum_toStr_long_long_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___bigNum */\n/* ConstructorDataNode bigNum::bigNum(bigNum const&) */\n/* ClassDataNode other */\n/* SubClassDataNode other */\n/* ConstructorDataNode bigNum::bigNum(std::string) */\n/* NormalStringDataNode str */\nchar* akaRandomName444106 = new char[2];akaRandomName444106[0] = -122;akaRandomName444106[1] = '\\0';std::string AKA_INSTANCE___bigNum_other_str=akaRandomName444106;\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(std::string)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)/other/other/bigNum::bigNum(std::string)\");AKA_fCall++;::bigNum AKA_INSTANCE___bigNum_other = ::bigNum(AKA_INSTANCE___bigNum_other_str);\n/* VectorDataNode digits */\n/* NormalNumberDataNode positive */\n/* positive : null value -> no code */\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(bigNum const&)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)\");AKA_fCall++;AKA_INSTANCE___bigNum = new ::bigNum(AKA_INSTANCE___bigNum_other);\n/* VectorDataNode digits */\n/* NormalNumberDataNode positive */\n/* positive : null value -> no code */\n\n\n\n\nlong long x=9;\nstd::string AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test bigNum_toStr_long_long_random_2\");std::string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___bigNum->toStr(x);\nAKA_fCall++;AKA_mark(\"Return from: ./big-numbers/bigNum.cpp/bigNum::toStr(long long)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___bigNum */\n/* ConstructorDataNode bigNum::bigNum(bigNum const&) */\n/* ClassDataNode other */\n/* SubClassDataNode other */\n/* ConstructorDataNode bigNum::bigNum() */\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum()|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)/other/other/bigNum::bigNum()\");AKA_fCall++;::bigNum AKA_INSTANCE___bigNum_other = ::bigNum();\n/* VectorDataNode digits */\nint AKA_INSTANCE___bigNum_other_digits_element0=1353373579;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element0);\nint AKA_INSTANCE___bigNum_other_digits_element1=1119713049;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element1);\nint AKA_INSTANCE___bigNum_other_digits_element2=-984112372;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element2);\n/* NormalNumberDataNode positive */\nAKA_INSTANCE___bigNum_other.positive=true;\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(bigNum const&)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)\");AKA_fCall++;AKA_INSTANCE___bigNum = new ::bigNum(AKA_INSTANCE___bigNum_other);\n/* VectorDataNode digits */\nint AKA_INSTANCE___bigNum_digits_element0=-265827497;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element0);\nint AKA_INSTANCE___bigNum_digits_element1=1544927406;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element1);\n/* NormalNumberDataNode positive */\nAKA_INSTANCE___bigNum->positive=true;\n\n\n\n/* RootDataNode STATIC */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_bigNum_toStr_long_long_random_0(void) {\n{\nAKA_test_case_name=\"bigNum_toStr_long_long_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___bigNum */\n/* ConstructorDataNode bigNum::bigNum(bigNum const&) */\n/* ClassDataNode other */\n/* SubClassDataNode other */\n/* ConstructorDataNode bigNum::bigNum(int) */\n/* NormalNumberDataNode i */\nint AKA_INSTANCE___bigNum_other_i=1212144227;\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(int)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)/other/other/bigNum::bigNum(int)\");AKA_fCall++;::bigNum AKA_INSTANCE___bigNum_other = ::bigNum(AKA_INSTANCE___bigNum_other_i);\n/* VectorDataNode digits */\n/* NormalNumberDataNode positive */\n/* positive : null value -> no code */\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(bigNum const&)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)\");AKA_fCall++;AKA_INSTANCE___bigNum = new ::bigNum(AKA_INSTANCE___bigNum_other);\n/* VectorDataNode digits */\n/* NormalNumberDataNode positive */\n/* positive : null value -> no code */\n\n\n\n\nlong long x=2;\nstd::string AKA_EXPECTED_OUTPUT=\"\";\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode x */\n/* NormalStringDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test bigNum_toStr_long_long_random_0\");std::string AKA_ACTUAL_OUTPUT=AKA_INSTANCE___bigNum->toStr(x);\nAKA_fCall++;AKA_mark(\"Return from: ./big-numbers/bigNum.cpp/bigNum::toStr(long long)\");\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___bigNum */\n/* ConstructorDataNode bigNum::bigNum(int) */\n/* NormalNumberDataNode i */\nint AKA_INSTANCE___bigNum_i=1728211216;\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(int)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(int)\");AKA_fCall++;AKA_INSTANCE___bigNum = new ::bigNum(AKA_INSTANCE___bigNum_i);\n/* VectorDataNode digits */\nint AKA_INSTANCE___bigNum_digits_element0=-1861491040;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element0);\nint AKA_INSTANCE___bigNum_digits_element1=-540408503;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element1);\n/* NormalNumberDataNode positive */\nAKA_INSTANCE___bigNum->positive=true;\n\n\n\n/* RootDataNode STATIC */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "/Users/huyhieu/cpp-mini-projects/big-numbers/bigNum.cpp/bigNum::toStr(long long)"
+    },
+    {
+        "f": [],
+        "fm": "bigNum bigNum::toBN(std::string str) {     bigNum res(str);     return res; }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_bigNum_toBN_std_string_random_1(void) {\n{\nAKA_test_case_name=\"bigNum_toBN_std_string_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___bigNum */\n/* ConstructorDataNode bigNum::bigNum(int) */\n/* NormalNumberDataNode i */\nint AKA_INSTANCE___bigNum_i=271263463;\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(int)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(int)\");AKA_fCall++;AKA_INSTANCE___bigNum = new ::bigNum(AKA_INSTANCE___bigNum_i);\n/* VectorDataNode digits */\n/* NormalNumberDataNode positive */\n/* positive : null value -> no code */\n\n\nchar* akaRandomName99712 = new char[2];akaRandomName99712[0] = 16;akaRandomName99712[1] = '\\0';std::string str=akaRandomName99712;\n\n\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode str */\n/* ClassDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test bigNum_toBN_std_string_random_1\");bigNum AKA_ACTUAL_OUTPUT=AKA_INSTANCE___bigNum->toBN(str);\nAKA_fCall++;AKA_mark(\"Return from: ./big-numbers/bigNum.cpp/bigNum::toBN(std::string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___bigNum */\n/* ConstructorDataNode bigNum::bigNum(bigNum const&) */\n/* ClassDataNode other */\n/* SubClassDataNode other */\n/* ConstructorDataNode bigNum::bigNum() */\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum()|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)/other/other/bigNum::bigNum()\");AKA_fCall++;::bigNum AKA_INSTANCE___bigNum_other = ::bigNum();\n/* VectorDataNode digits */\nint AKA_INSTANCE___bigNum_other_digits_element0=1353373579;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element0);\nint AKA_INSTANCE___bigNum_other_digits_element1=1119713049;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element1);\nint AKA_INSTANCE___bigNum_other_digits_element2=-984112372;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element2);\n/* NormalNumberDataNode positive */\nAKA_INSTANCE___bigNum_other.positive=true;\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(bigNum const&)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)\");AKA_fCall++;AKA_INSTANCE___bigNum = new ::bigNum(AKA_INSTANCE___bigNum_other);\n/* VectorDataNode digits */\nint AKA_INSTANCE___bigNum_digits_element0=-265827497;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element0);\nint AKA_INSTANCE___bigNum_digits_element1=1544927406;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element1);\n/* NormalNumberDataNode positive */\nAKA_INSTANCE___bigNum->positive=true;\n\n\n\n/* RootDataNode STATIC */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "/Users/huyhieu/cpp-mini-projects/big-numbers/bigNum.cpp/bigNum::toBN(std::string)"
+    },
+    {
+        "f": [],
+        "fm": "bigNum bigNum::toBN(int i) {     bigNum res(i);     return res; }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_bigNum_toBN_int_random_4(void) {\n{\nAKA_test_case_name=\"bigNum_toBN_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___bigNum */\n/* ConstructorDataNode bigNum::bigNum(bigNum const&) */\n/* ClassDataNode other */\n/* SubClassDataNode other */\n/* ConstructorDataNode bigNum::bigNum(bigNum const&) */\n/* ClassDataNode other */\n/* SubClassDataNode other */\n/* ConstructorDataNode bigNum::bigNum(bigNum const&) */\n/* ClassDataNode other */\n/* SubClassDataNode other */\n/* ConstructorDataNode bigNum::bigNum(std::string) */\n/* NormalStringDataNode str */\nchar* akaRandomName426429 = new char[2];akaRandomName426429[0] = 46;akaRandomName426429[1] = '\\0';std::string AKA_INSTANCE___bigNum_other_other_other_str=akaRandomName426429;\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(std::string)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)/other/other/bigNum::bigNum(bigNum const&)/other/other/bigNum::bigNum(bigNum const&)/other/other/bigNum::bigNum(std::string)\");AKA_fCall++;::bigNum AKA_INSTANCE___bigNum_other_other_other = ::bigNum(AKA_INSTANCE___bigNum_other_other_other_str);\n/* VectorDataNode digits */\n/* NormalNumberDataNode positive */\n/* positive : null value -> no code */\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(bigNum const&)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)/other/other/bigNum::bigNum(bigNum const&)/other/other/bigNum::bigNum(bigNum const&)\");AKA_fCall++;::bigNum AKA_INSTANCE___bigNum_other_other = ::bigNum(AKA_INSTANCE___bigNum_other_other_other);\n/* VectorDataNode digits */\n/* NormalNumberDataNode positive */\n/* positive : null value -> no code */\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(bigNum const&)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)/other/other/bigNum::bigNum(bigNum const&)\");AKA_fCall++;::bigNum AKA_INSTANCE___bigNum_other = ::bigNum(AKA_INSTANCE___bigNum_other_other);\n/* VectorDataNode digits */\n/* NormalNumberDataNode positive */\n/* positive : null value -> no code */\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(bigNum const&)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)\");AKA_fCall++;AKA_INSTANCE___bigNum = new ::bigNum(AKA_INSTANCE___bigNum_other);\n/* VectorDataNode digits */\n/* NormalNumberDataNode positive */\n/* positive : null value -> no code */\n\n\n\n\nint i=1875676487;\n\n\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode i */\n/* ClassDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test bigNum_toBN_int_random_4\");bigNum AKA_ACTUAL_OUTPUT=AKA_INSTANCE___bigNum->toBN(i);\nAKA_fCall++;AKA_mark(\"Return from: ./big-numbers/bigNum.cpp/bigNum::toBN(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___bigNum */\n/* ConstructorDataNode bigNum::bigNum(bigNum const&) */\n/* ClassDataNode other */\n/* SubClassDataNode other */\n/* ConstructorDataNode bigNum::bigNum() */\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum()|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)/other/other/bigNum::bigNum()\");AKA_fCall++;::bigNum AKA_INSTANCE___bigNum_other = ::bigNum();\n/* VectorDataNode digits */\nint AKA_INSTANCE___bigNum_other_digits_element0=1353373579;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element0);\nint AKA_INSTANCE___bigNum_other_digits_element1=1119713049;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element1);\nint AKA_INSTANCE___bigNum_other_digits_element2=-984112372;\nAKA_INSTANCE___bigNum_other.digits.push_back(AKA_INSTANCE___bigNum_other_digits_element2);\n/* NormalNumberDataNode positive */\nAKA_INSTANCE___bigNum_other.positive=true;\nAKA_mark(\"Calling: ./big-numbers/bigNum.cpp/bigNum::bigNum(bigNum const&)|ROOT/bigNum.cpp/GLOBAL/AKA_INSTANCE___bigNum/AKA_INSTANCE___bigNum/bigNum::bigNum(bigNum const&)\");AKA_fCall++;AKA_INSTANCE___bigNum = new ::bigNum(AKA_INSTANCE___bigNum_other);\n/* VectorDataNode digits */\nint AKA_INSTANCE___bigNum_digits_element0=-265827497;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element0);\nint AKA_INSTANCE___bigNum_digits_element1=1544927406;\nAKA_INSTANCE___bigNum->digits.push_back(AKA_INSTANCE___bigNum_digits_element1);\n/* NormalNumberDataNode positive */\nAKA_INSTANCE___bigNum->positive=true;\n\n\n\n/* RootDataNode STATIC */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "/Users/huyhieu/cpp-mini-projects/big-numbers/bigNum.cpp/bigNum::toBN(int)"
+    }
+]

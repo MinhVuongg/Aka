@@ -1,0 +1,54 @@
+[
+    {
+        "f": [],
+        "fm": "int candy(vector<int> &ratings) {\r     int sum = 0;\r     int number = ratings.size();\r     vector<int> candies(number, 1); // 每人至少1粒糖\r \r     for (int i = 1; i < number; ++i) {\r       if (ratings[i] > ratings[i - 1]) {\r         candies[i] = candies[i - 1] + 1;\r       }\r     }\r \r     for (int i = number - 2; i >= 0; --i) {\r       if (ratings[i] > ratings[i + 1]) {\r         if (candies[i] <= candies[i + 1]) {\r           candies[i] = candies[i + 1] + 1;\r         }\r       }\r     }\r \r     for (int i = 0; i < number; ++i) {\r       sum += candies[i];\r     }\r \r     return sum;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_candy_vector_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_candy_vector_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\candy.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> ratings;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode ratings */\nint ratings_element0=470119181;\nratings.push_back(ratings_element0);\nint ratings_element1=-1918116090;\nratings.push_back(ratings_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_candy_vector_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->candy(ratings);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-4\\\\candy.cpp\\\\Solution\\\\candy(vector<int>&)\");\n\n\nvector<int> EXPECTED_ratings;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\best_time_to_buy_and_sell_stock_ii.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> prices;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode prices */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_candy_vector_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_candy_vector_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\candy.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> ratings;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode ratings */\nint ratings_element0=-1053451534;\nratings.push_back(ratings_element0);\nint ratings_element1=1933955626;\nratings.push_back(ratings_element1);\nint ratings_element2=-418882839;\nratings.push_back(ratings_element2);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_candy_vector_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->candy(ratings);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-4\\\\candy.cpp\\\\Solution\\\\candy(vector<int>&)\");\n\n\nvector<int> EXPECTED_ratings;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\best_time_to_buy_and_sell_stock_ii.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> prices;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode prices */\nint prices_element0=1905272755;\nprices.push_back(prices_element0);\nint prices_element1=-1587472013;\nprices.push_back(prices_element1);\nint prices_element2=-1625165271;\nprices.push_back(prices_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_candy_vector_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_candy_vector_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\candy.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> ratings;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode ratings */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_candy_vector_int_directed_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->candy(ratings);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\com-4\\\\candy.cpp\\\\Solution\\\\candy(vector<int>&)\");\n\n\nvector<int> EXPECTED_ratings;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\best_time_to_buy_and_sell_stock_ii.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> prices;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode prices */\nint prices_element0=-1733332494;\nprices.push_back(prices_element0);\nint prices_element1=1141720061;\nprices.push_back(prices_element1);\nint prices_element2=1229527842;\nprices.push_back(prices_element2);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int candy(vector<int> &ratings) {\r     int sum = 0;\r     int number = ratings.size();\r     vector<int> candies(number, 1); // 每人至少1粒糖\r \r     for (int i = 1; i < number; ++i) {\r       if (ratings[i] > ratings[i - 1]) {\r         candies[i] = candies[i - 1] + 1;\r       }\r     }\r \r     for (int i = number - 2; i >= 0; --i) {\r       if (ratings[i] > ratings[i + 1]) {\r         if (candies[i] <= candies[i + 1]) {\r           candies[i] = candies[i + 1] + 1;\r         }\r       }\r     }\r \r     for (int i = 0; i < number; ++i) {\r       sum += candies[i];\r     }\r \r     return sum;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\Lab\\test-cpp\\leetcode\\prj-data\\yingl_LeetCodeInCpp\\com-4\\candy.cpp\\Solution\\candy(vector<int>&)"
+    }
+]

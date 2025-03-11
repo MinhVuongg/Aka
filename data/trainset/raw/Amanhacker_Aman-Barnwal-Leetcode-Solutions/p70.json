@@ -1,0 +1,222 @@
+[
+    {
+        "f": [],
+        "fm": "bool containsDuplicate(vector<int>& nums) {\r     \r         map<int, int> mp;\r         \r         for(auto &x : nums) {\r             mp[x]++;\r             if(mp[x] == 2)                      return true;\r         }\r         \r         return false;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_containsDuplicate_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_containsDuplicate_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\217-contains-duplicate.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=159705345;\nnums.push_back(nums_element0);\nint nums_element1=-1573578704;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_containsDuplicate_vector_int_random_4\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->containsDuplicate(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p70\\\\217-contains-duplicate\\\\217-contains-duplicate.cpp\\\\Solution\\\\containsDuplicate(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\217-contains-duplicate.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=159705345;\nnums.push_back(nums_element0);\nint nums_element1=-1573578704;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     bool containsDuplicate(vector<int>& nums) {\r     \r         map<int, int> mp;\r         \r         for(auto &x : nums) {\r             mp[x]++;\r             if(mp[x] == 2)                      return true;\r         }\r         \r         return false;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p70\\217-contains-duplicate\\217-contains-duplicate.cpp\\Solution\\containsDuplicate(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "void dfs(int node, int nodeAnc, vector<int> &vis, unordered_map<int, vector<int>> &adj, vector<vector<int>> &res) {\r         \r         vis[node] = 1;\r         \r         for(auto &x : adj[node]) {\r             \r             if(vis[x] == 0) {\r                 res[x].push_back(nodeAnc);\r                 dfs(x, nodeAnc, vis, adj, res);\r             }\r         }\r         \r         return;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_dfs_int_int_vector_int_unordered_map_int_vector_int_vector_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_dfs_int_int_vector_int_unordered_map_int_vector_int_vector_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2192-all-ancestors-of-a-node-in-a-directed-acyclic-graph.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint node=1818142195;\n\n\nint nodeAnc=39642624;\nvector<int> vis;\nunordered_map<int, vector<int>> adj;\nvector<vector<int>> res;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode node */\n/* NormalNumberDataNode nodeAnc */\n/* VectorDataNode vis */\nint vis_element0=-815256668;\nvis.push_back(vis_element0);\nint vis_element1=1487153710;\nvis.push_back(vis_element1);\n/* UnorderedMapDataNode adj */\n/* VectorDataNode res */\nvector<int> res_element0;\nint res_element0_element0=56291472;\nres_element0.push_back(res_element0_element0);\nint res_element0_element1=-774382459;\nres_element0.push_back(res_element0_element1);\nint res_element0_element2=1734870064;\nres_element0.push_back(res_element0_element2);\nres.push_back(res_element0);\nvector<int> res_element1;\nint res_element1_element0=1376401717;\nres_element1.push_back(res_element1_element0);\nres.push_back(res_element1);\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_dfs_int_int_vector_int_unordered_map_int_vector_int_vector_vector_int_random_0\");AKA_INSTANCE___Solution->dfs(node,nodeAnc,vis,adj,res);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p70\\\\2192-all-ancestors-of-a-node-in-a-directed-acyclic-graph\\\\2192-all-ancestors-of-a-node-in-a-directed-acyclic-graph.cpp\\\\Solution\\\\dfs(int,int,vector<int>&,unordered_map<int,vector<int>>&,vector<vector<int>>&)\");\n\n/* error assertion */\nvector<int> EXPECTED_vis;\n\nunordered_map<int, vector<int>> EXPECTED_adj;\n\nvector<vector<int>> EXPECTED_res;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\217-contains-duplicate.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=159705345;\nnums.push_back(nums_element0);\nint nums_element1=-1573578704;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     void dfs(int node, int nodeAnc, vector<int> &vis, unordered_map<int, vector<int>> &adj, vector<vector<int>> &res) {\r         \r         vis[node] = 1;\r         \r         for(auto &x : adj[node]) {\r             \r             if(vis[x] == 0) {\r                 res[x].push_back(nodeAnc);\r                 dfs(x, nodeAnc, vis, adj, res);\r             }\r         }\r         \r         return;\r     }\r     \r     vector<vector<int>> getAncestors(int n, vector<vector<int>>& edges) {\r     \r         vector<vector<int>> res(n);\r         unordered_map<int, vector<int>> adj;\r         \r         for(auto &x : edges) {\r             adj[x[0]].push_back(x[1]);\r         }\r         \r         for(int i=0; i<n; i++) {\r             vector<int> vis(n);\r             dfs(i, i, vis, adj, res);\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p70\\2192-all-ancestors-of-a-node-in-a-directed-acyclic-graph\\2192-all-ancestors-of-a-node-in-a-directed-acyclic-graph.cpp\\Solution\\dfs(int,int,vector<int>&,unordered_map<int,vector<int>>&,vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "vector<vector<int>> getAncestors(int n, vector<vector<int>>& edges) {\r     \r         vector<vector<int>> res(n);\r         unordered_map<int, vector<int>> adj;\r         \r         for(auto &x : edges) {\r             adj[x[0]].push_back(x[1]);\r         }\r         \r         for(int i=0; i<n; i++) {\r             vector<int> vis(n);\r             dfs(i, i, vis, adj, res);\r         }\r         \r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_getAncestors_int_vector_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_getAncestors_int_vector_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2192-all-ancestors-of-a-node-in-a-directed-acyclic-graph.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=5;\nvector<vector<int>> edges;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode edges */\nvector<int> edges_element0;\nint edges_element0_element0=11234292;\nedges_element0.push_back(edges_element0_element0);\nint edges_element0_element1=-617552863;\nedges_element0.push_back(edges_element0_element1);\nint edges_element0_element2=-375530775;\nedges_element0.push_back(edges_element0_element2);\nedges.push_back(edges_element0);\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_getAncestors_int_vector_vector_int_random_0\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->getAncestors(n,edges);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p70\\\\2192-all-ancestors-of-a-node-in-a-directed-acyclic-graph\\\\2192-all-ancestors-of-a-node-in-a-directed-acyclic-graph.cpp\\\\Solution\\\\getAncestors(int,vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_edges;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\217-contains-duplicate.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=159705345;\nnums.push_back(nums_element0);\nint nums_element1=-1573578704;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     void dfs(int node, int nodeAnc, vector<int> &vis, unordered_map<int, vector<int>> &adj, vector<vector<int>> &res) {\r         \r         vis[node] = 1;\r         \r         for(auto &x : adj[node]) {\r             \r             if(vis[x] == 0) {\r                 res[x].push_back(nodeAnc);\r                 dfs(x, nodeAnc, vis, adj, res);\r             }\r         }\r         \r         return;\r     }\r     \r     vector<vector<int>> getAncestors(int n, vector<vector<int>>& edges) {\r     \r         vector<vector<int>> res(n);\r         unordered_map<int, vector<int>> adj;\r         \r         for(auto &x : edges) {\r             adj[x[0]].push_back(x[1]);\r         }\r         \r         for(int i=0; i<n; i++) {\r             vector<int> vis(n);\r             dfs(i, i, vis, adj, res);\r         }\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p70\\2192-all-ancestors-of-a-node-in-a-directed-acyclic-graph\\2192-all-ancestors-of-a-node-in-a-directed-acyclic-graph.cpp\\Solution\\getAncestors(int,vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "TreeNode* createBinaryTree(vector<vector<int>>& descriptions) {\r     \r         TreeNode* root = NULL;\r         \r         unordered_map<int, TreeNode*> u;\r         set<int> children;\r         \r         for(auto &x : descriptions) {\r             \r             int par = x[0];\r             int child = x[1];\r             int isLeft = x[2];\r             \r             if(u[par] == NULL)                      u[par] = new TreeNode(par);\r             if(u[child] == NULL)                    u[child] = new TreeNode(child);\r             \r             // p -> ch\r             \r             // ch is left child of node p\r             if(isLeft == 1)                         u[par]->left = u[child];\r             else                                    u[par]->right = u[child];\r             \r             children.insert(child);\r         }\r         \r         for(auto &x : descriptions) {\r             if(children.find(x[0]) == children.end())         return u[x[0]];\r         }\r             \r         return root;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_createBinaryTree_vector_vector_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_createBinaryTree_vector_vector_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2196-create-binary-tree-from-descriptions.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> descriptions;\nTreeNode* AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode descriptions */\nvector<int> descriptions_element0;\nint descriptions_element0_element0=-2134122821;\ndescriptions_element0.push_back(descriptions_element0_element0);\nint descriptions_element0_element1=1809741543;\ndescriptions_element0.push_back(descriptions_element0_element1);\nint descriptions_element0_element2=1932100459;\ndescriptions_element0.push_back(descriptions_element0_element2);\ndescriptions.push_back(descriptions_element0);\nvector<int> descriptions_element1;\nint descriptions_element1_element0=1551736282;\ndescriptions_element1.push_back(descriptions_element1_element0);\ndescriptions.push_back(descriptions_element1);\n/* PointerStructureDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_createBinaryTree_vector_vector_int_random_0\");TreeNode* AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->createBinaryTree(descriptions);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p70\\\\2196-create-binary-tree-from-descriptions\\\\2196-create-binary-tree-from-descriptions.cpp\\\\Solution\\\\createBinaryTree(vector<vector<int>>&)\");\n\n\nvector<vector<int>> EXPECTED_descriptions;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\217-contains-duplicate.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=159705345;\nnums.push_back(nums_element0);\nint nums_element1=-1573578704;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     TreeNode* createBinaryTree(vector<vector<int>>& descriptions) {\r     \r         TreeNode* root = NULL;\r         \r         unordered_map<int, TreeNode*> u;\r         set<int> children;\r         \r         for(auto &x : descriptions) {\r             \r             int par = x[0];\r             int child = x[1];\r             int isLeft = x[2];\r             \r             if(u[par] == NULL)                      u[par] = new TreeNode(par);\r             if(u[child] == NULL)                    u[child] = new TreeNode(child);\r             \r             // p -> ch\r             \r             // ch is left child of node p\r             if(isLeft == 1)                         u[par]->left = u[child];\r             else                                    u[par]->right = u[child];\r             \r             children.insert(child);\r         }\r         \r         for(auto &x : descriptions) {\r             if(children.find(x[0]) == children.end())         return u[x[0]];\r         }\r             \r         return root;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p70\\2196-create-binary-tree-from-descriptions\\2196-create-binary-tree-from-descriptions.cpp\\Solution\\createBinaryTree(vector<vector<int>>&)"
+    },
+    {
+        "f": [],
+        "fm": "void generateHelper(string temp, vector<string> &res, int n, int noOpenB, int noCloseB) {\r         \r         // Base Condition i.e n pairs\r         if(temp.length() == n * 2) {\r             \r             res.push_back(temp);\r             temp = \"\";\r             \r             return;\r         }\r         \r         // Here, the idea is to only add '(' and ')' that we know will guarantee us a solution.\r         \r         // Once we add a '(' we will then discard it and try a ')' which can only close a valid '('. \r         // Each of these steps are recursively called.\r         \r         if(noOpenB < n)               generateHelper(temp + '(', res, n, noOpenB + 1, noCloseB);\r         if(noCloseB < noOpenB)        generateHelper(temp + ')', res, n, noOpenB, noCloseB + 1);\r         \r         return;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_generateHelper_string_vector_string_int_int_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_generateHelper_string_vector_string_int_int_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\22-generate-parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName498388 = new char[2];akaRandomName498388[0] = -122;akaRandomName498388[1] = '\\0';string temp=akaRandomName498388;\nvector<string> res;\n\n\nint n=1705459723;\n\n\nint noOpenB=1194338406;\n\n\nint noCloseB=-490295697;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode temp */\n/* VectorDataNode res */\nchar* akaRandomName396112 = new char[2];akaRandomName396112[0] = 28;akaRandomName396112[1] = '\\0';string res_element0=akaRandomName396112;\nres.push_back(res_element0);\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode noOpenB */\n/* NormalNumberDataNode noCloseB */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_generateHelper_string_vector_string_int_int_int_random_3\");AKA_INSTANCE___Solution->generateHelper(temp,res,n,noOpenB,noCloseB);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p70\\\\22-generate-parentheses\\\\22-generate-parentheses.cpp\\\\Solution\\\\generateHelper(string,vector<string>&,int,int,int)\");\n\n/* error assertion */\nvector<string> EXPECTED_res;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\217-contains-duplicate.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=159705345;\nnums.push_back(nums_element0);\nint nums_element1=-1573578704;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_generateHelper_string_vector_string_int_int_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_generateHelper_string_vector_string_int_int_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\22-generate-parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName181723 = new char[2];akaRandomName181723[0] = 87;akaRandomName181723[1] = '\\0';string temp=akaRandomName181723;\nvector<string> res;\n\n\nint n=508094929;\n\n\nint noOpenB=714935340;\n\n\nint noCloseB=1451506221;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode temp */\n/* VectorDataNode res */\nchar* akaRandomName268502 = new char[2];akaRandomName268502[0] = -81;akaRandomName268502[1] = '\\0';string res_element0=akaRandomName268502;\nres.push_back(res_element0);\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode noOpenB */\n/* NormalNumberDataNode noCloseB */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_generateHelper_string_vector_string_int_int_int_random_4\");AKA_INSTANCE___Solution->generateHelper(temp,res,n,noOpenB,noCloseB);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p70\\\\22-generate-parentheses\\\\22-generate-parentheses.cpp\\\\Solution\\\\generateHelper(string,vector<string>&,int,int,int)\");\n\n/* error assertion */\nvector<string> EXPECTED_res;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2192-all-ancestors-of-a-node-in-a-directed-acyclic-graph.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint node=1818142195;\n\n\nint nodeAnc=39642624;\nvector<int> vis;\nunordered_map<int, vector<int>> adj;\nvector<vector<int>> res;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode node */\n/* NormalNumberDataNode nodeAnc */\n/* VectorDataNode vis */\nint vis_element0=-815256668;\nvis.push_back(vis_element0);\nint vis_element1=1487153710;\nvis.push_back(vis_element1);\n/* UnorderedMapDataNode adj */\n/* VectorDataNode res */\nvector<int> res_element0;\nint res_element0_element0=56291472;\nres_element0.push_back(res_element0_element0);\nint res_element0_element1=-774382459;\nres_element0.push_back(res_element0_element1);\nint res_element0_element2=1734870064;\nres_element0.push_back(res_element0_element2);\nres.push_back(res_element0);\nvector<int> res_element1;\nint res_element1_element0=1376401717;\nres_element1.push_back(res_element1_element0);\nres.push_back(res_element1);\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_generateHelper_string_vector_string_int_int_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_generateHelper_string_vector_string_int_int_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\22-generate-parentheses.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName302223 = new char[2];akaRandomName302223[0] = -54;akaRandomName302223[1] = '\\0';string temp=akaRandomName302223;\nvector<string> res;\n\n\nint n=-1335351211;\n\n\nint noOpenB=-139007318;\n\n\nint noCloseB=-1426437538;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode temp */\n/* VectorDataNode res */\nchar* akaRandomName792770 = new char[2];akaRandomName792770[0] = 109;akaRandomName792770[1] = '\\0';string res_element0=akaRandomName792770;\nres.push_back(res_element0);\nchar* akaRandomName404190 = new char[2];akaRandomName404190[0] = -111;akaRandomName404190[1] = '\\0';string res_element1=akaRandomName404190;\nres.push_back(res_element1);\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode noOpenB */\n/* NormalNumberDataNode noCloseB */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_generateHelper_string_vector_string_int_int_int_random_1\");AKA_INSTANCE___Solution->generateHelper(temp,res,n,noOpenB,noCloseB);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p70\\\\22-generate-parentheses\\\\22-generate-parentheses.cpp\\\\Solution\\\\generateHelper(string,vector<string>&,int,int,int)\");\n\n/* error assertion */\nvector<string> EXPECTED_res;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\2192-all-ancestors-of-a-node-in-a-directed-acyclic-graph.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=5;\nvector<vector<int>> edges;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* VectorDataNode edges */\nvector<int> edges_element0;\nint edges_element0_element0=11234292;\nedges_element0.push_back(edges_element0_element0);\nint edges_element0_element1=-617552863;\nedges_element0.push_back(edges_element0_element1);\nint edges_element0_element2=-375530775;\nedges_element0.push_back(edges_element0_element2);\nedges.push_back(edges_element0);\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r \r     // Using Recursion\r     \r     void generateHelper(string temp, vector<string> &res, int n, int noOpenB, int noCloseB) {\r         \r         // Base Condition i.e n pairs\r         if(temp.length() == n * 2) {\r             \r             res.push_back(temp);\r             temp = \"\";\r             \r             return;\r         }\r         \r         // Here, the idea is to only add '(' and ')' that we know will guarantee us a solution.\r         \r         // Once we add a '(' we will then discard it and try a ')' which can only close a valid '('. \r         // Each of these steps are recursively called.\r         \r         if(noOpenB < n)               generateHelper(temp + '(', res, n, noOpenB + 1, noCloseB);\r         if(noCloseB < noOpenB)        generateHelper(temp + ')', res, n, noOpenB, noCloseB + 1);\r         \r         return;\r     }\r     \r     vector<string> generateParenthesis(int n) {\r \r         vector<string> res;\r         \r         string temp = \"\";\r         int noOpenB = 0, noCloseB = 0;\r         \r         generateHelper(temp, res, n, noOpenB, noCloseB);\r         \r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p70\\22-generate-parentheses\\22-generate-parentheses.cpp\\Solution\\generateHelper(string,vector<string>&,int,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "void dfs(TreeNode* root, int &res) {\r         \r         if(root == NULL)                        return;\r         \r         res++;\r         \r         dfs(root->left, res);\r         dfs(root->right, res);\r         \r         return;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_dfs_TreeNodemul_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_dfs_TreeNodemul_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\222-count-complete-tree-nodes.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode() */\nAKA_mark(\"Calling: .\\\\p70\\\\222-count-complete-tree-nodes\\\\222-count-complete-tree-nodes.cpp\\\\TreeNode\\\\TreeNode()|ROOT\\\\222-count-complete-tree-nodes.cpp\\\\dfs(TreeNode*,int&)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode();\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root_0_DOT_right;\n/* SubStructDataNode right */\n/* ConstructorDataNode TreeNode() */\nAKA_mark(\"Calling: .\\\\p70\\\\222-count-complete-tree-nodes\\\\222-count-complete-tree-nodes.cpp\\\\TreeNode\\\\TreeNode()|ROOT\\\\222-count-complete-tree-nodes.cpp\\\\dfs(TreeNode*,int&)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\right\\\\right[0]\\\\right\\\\TreeNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_right_0 = new ::TreeNode();\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_right_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_right_0).right;\nAKA_VECTOR_INIT_root_0_DOT_right.push_back(AKA_VECTOR_INIT_root_0_DOT_right_0);\n/* SubStructDataNode right */\n/* ConstructorDataNode TreeNode(int,TreeNode*,TreeNode*) */\n/* NormalNumberDataNode x */\nint root0_right1_x=0;\n/* PointerStructureDataNode left */\nTreeNode* root0_right1_left;\n/* PointerStructureDataNode right */\nTreeNode* root0_right1_right;\nAKA_mark(\"Calling: .\\\\p70\\\\222-count-complete-tree-nodes\\\\222-count-complete-tree-nodes.cpp\\\\TreeNode\\\\TreeNode(int,TreeNode*,TreeNode*)|ROOT\\\\222-count-complete-tree-nodes.cpp\\\\dfs(TreeNode*,int&)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\right\\\\right[1]\\\\right\\\\TreeNode(int,TreeNode*,TreeNode*)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0_DOT_right_1 = new ::TreeNode(root0_right1_x,root0_right1_left,root0_right1_right);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0_DOT_right_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0_DOT_right_1).right;\nAKA_VECTOR_INIT_root_0_DOT_right.push_back(AKA_VECTOR_INIT_root_0_DOT_right_1);\n(*AKA_VECTOR_INIT_root_0).right = AKA_VECTOR_INIT_root_0_DOT_right[0];\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode() */\nAKA_mark(\"Calling: .\\\\p70\\\\222-count-complete-tree-nodes\\\\222-count-complete-tree-nodes.cpp\\\\TreeNode\\\\TreeNode()|ROOT\\\\222-count-complete-tree-nodes.cpp\\\\dfs(TreeNode*,int&)\\\\root\\\\AKA_VECTOR_INIT_root_1\\\\root\\\\TreeNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode();\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\n\n\nint res=-288696690;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* NormalNumberDataNode res */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_dfs_TreeNodemul_int_random_2\");AKA_INSTANCE___Solution->dfs(root,res);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p70\\\\222-count-complete-tree-nodes\\\\222-count-complete-tree-nodes.cpp\\\\Solution\\\\dfs(TreeNode*,int&)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\217-contains-duplicate.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=159705345;\nnums.push_back(nums_element0);\nint nums_element1=-1573578704;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     void dfs(TreeNode* root, int &res) {\r         \r         if(root == NULL)                        return;\r         \r         res++;\r         \r         dfs(root->left, res);\r         dfs(root->right, res);\r         \r         return;\r     }\r     \r     int countNodes(TreeNode* root) {\r     \r         int res = 0;\r         \r         if(root == NULL)                        return res;\r         \r         dfs(root, res);\r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p70\\222-count-complete-tree-nodes\\222-count-complete-tree-nodes.cpp\\Solution\\dfs(TreeNode*,int&)"
+    },
+    {
+        "f": [],
+        "fm": "int countNodes(TreeNode* root) {\r     \r         int res = 0;\r         \r         if(root == NULL)                        return res;\r         \r         dfs(root, res);\r         return res;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_countNodes_TreeNodemul_random_1(void) {\n{\nAKA_test_case_name=\"Solution_countNodes_TreeNodemul_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\222-count-complete-tree-nodes.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode() */\nAKA_mark(\"Calling: .\\\\p70\\\\222-count-complete-tree-nodes\\\\222-count-complete-tree-nodes.cpp\\\\TreeNode\\\\TreeNode()|ROOT\\\\222-count-complete-tree-nodes.cpp\\\\countNodes(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeNode()\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode();\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_countNodes_TreeNodemul_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->countNodes(root);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\p70\\\\222-count-complete-tree-nodes\\\\222-count-complete-tree-nodes.cpp\\\\Solution\\\\countNodes(TreeNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\217-contains-duplicate.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=159705345;\nnums.push_back(nums_element0);\nint nums_element1=-1573578704;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     \r     void dfs(TreeNode* root, int &res) {\r         \r         if(root == NULL)                        return;\r         \r         res++;\r         \r         dfs(root->left, res);\r         dfs(root->right, res);\r         \r         return;\r     }\r     \r     int countNodes(TreeNode* root) {\r     \r         int res = 0;\r         \r         if(root == NULL)                        return res;\r         \r         dfs(root, res);\r         return res;\r     }\r     \r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\daidu\\Desktop\\Projects\\AKAUT\\prj-data\\Amanhacker_Aman-Barnwal-Leetcode-Solutions\\p70\\222-count-complete-tree-nodes\\222-count-complete-tree-nodes.cpp\\Solution\\countNodes(TreeNode*)"
+    }
+]

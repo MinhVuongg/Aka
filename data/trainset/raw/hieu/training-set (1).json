@@ -1,0 +1,492 @@
+[
+    {
+        "f": [
+            "char name;",
+            "int y;"
+        ],
+        "fm": "void setName(char n)     {         name = n;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Animal_setName_char_random_3(void) {\n{\nAKA_test_case_name=\"Animal_setName_char_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=114;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar n=71;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode n */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Animal_setName_char_random_3\");AKA_INSTANCE___Animal->setName(n);\nAKA_fCall++;AKA_mark(\"Return from: ./inheritance/animal.cpp/Animal/setName(char)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=114;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar n=71;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Animal { private:     char name;     int y;  public:     Animal(){      };      Animal(char n)     {         this->name = n;     }      Animal(char n, int y)     {         name = n;         this->y = y;     }      void setName(char n)     {         name = n;     }      char getName()     {         return name;     }      void setY(int y)     {         this->y = y;     }      int getY()     {         return y;     }      ~Animal() {} };",
+        "c": [
+            "Animal(){\n\n    }",
+            "Animal(char n)\n    {\n        this->name = n;\n    }",
+            "Animal(char n, int y)\n    {\n        name = n;\n        this->y = y;\n    }"
+        ],
+        "path_fm": "/Users/huyhieu/akautauto/datatest/vupham/cpp/inheritance/animal.cpp/Animal/setName(char)"
+    },
+    {
+        "f": [
+            "char name;",
+            "int y;"
+        ],
+        "fm": "char getName()     {         return name;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Animal_getName_random_0(void) {\n{\nAKA_test_case_name=\"Animal_getName_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=1;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Animal_getName_random_0\");char AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Animal->getName();\nAKA_fCall++;AKA_mark(\"Return from: ./inheritance/animal.cpp/Animal/getName()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=114;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar n=71;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Animal { private:     char name;     int y;  public:     Animal(){      };      Animal(char n)     {         this->name = n;     }      Animal(char n, int y)     {         name = n;         this->y = y;     }      void setName(char n)     {         name = n;     }      char getName()     {         return name;     }      void setY(int y)     {         this->y = y;     }      int getY()     {         return y;     }      ~Animal() {} };",
+        "c": [
+            "Animal(){\n\n    }",
+            "Animal(char n)\n    {\n        this->name = n;\n    }",
+            "Animal(char n, int y)\n    {\n        name = n;\n        this->y = y;\n    }"
+        ],
+        "path_fm": "/Users/huyhieu/akautauto/datatest/vupham/cpp/inheritance/animal.cpp/Animal/getName()"
+    },
+    {
+        "f": [
+            "char name;",
+            "int y;"
+        ],
+        "fm": "void setY(int y)     {         this->y = y;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Animal_setY_int_random_0(void) {\n{\nAKA_test_case_name=\"Animal_setY_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=28;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\n\nint y=1285122240;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode y */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Animal_setY_int_random_0\");AKA_INSTANCE___Animal->setY(y);\nAKA_fCall++;AKA_mark(\"Return from: ./inheritance/animal.cpp/Animal/setY(int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=114;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar n=71;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Animal { private:     char name;     int y;  public:     Animal(){      };      Animal(char n)     {         this->name = n;     }      Animal(char n, int y)     {         name = n;         this->y = y;     }      void setName(char n)     {         name = n;     }      char getName()     {         return name;     }      void setY(int y)     {         this->y = y;     }      int getY()     {         return y;     }      ~Animal() {} };",
+        "c": [
+            "Animal(){\n\n    }",
+            "Animal(char n)\n    {\n        this->name = n;\n    }",
+            "Animal(char n, int y)\n    {\n        name = n;\n        this->y = y;\n    }"
+        ],
+        "path_fm": "/Users/huyhieu/akautauto/datatest/vupham/cpp/inheritance/animal.cpp/Animal/setY(int)"
+    },
+    {
+        "f": [
+            "char name;",
+            "int y;"
+        ],
+        "fm": "int getY()     {         return y;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Animal_getY_random_3(void) {\n{\nAKA_test_case_name=\"Animal_getY_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char,int) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=29;\n/* NormalNumberDataNode y */\nint AKA_INSTANCE___Animal_y=1120974852;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char,int)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char,int)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n,AKA_INSTANCE___Animal_y);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\nAKA_INSTANCE___Animal->y=1120974852;\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Animal_getY_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Animal->getY();\nAKA_fCall++;AKA_mark(\"Return from: ./inheritance/animal.cpp/Animal/getY()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=114;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar n=71;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Animal { private:     char name;     int y;  public:     Animal(){      };      Animal(char n)     {         this->name = n;     }      Animal(char n, int y)     {         name = n;         this->y = y;     }      void setName(char n)     {         name = n;     }      char getName()     {         return name;     }      void setY(int y)     {         this->y = y;     }      int getY()     {         return y;     }      ~Animal() {} };",
+        "c": [
+            "Animal(){\n\n    }",
+            "Animal(char n)\n    {\n        this->name = n;\n    }",
+            "Animal(char n, int y)\n    {\n        name = n;\n        this->y = y;\n    }"
+        ],
+        "path_fm": "/Users/huyhieu/akautauto/datatest/vupham/cpp/inheritance/animal.cpp/Animal/getY()"
+    },
+    {
+        "f": [
+            "char name;",
+            "int y;"
+        ],
+        "fm": "void setName(char n)     {         name = n;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Animal_setName_char_random_3(void) {\n{\nAKA_test_case_name=\"Animal_setName_char_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=114;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar n=71;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode n */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Animal_setName_char_random_3\");AKA_INSTANCE___Animal->setName(n);\nAKA_fCall++;AKA_mark(\"Return from: ./inheritance/animal.cpp/Animal/setName(char)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=114;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar n=71;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Animal { private:     char name;     int y;  public:     Animal(){      };      Animal(char n)     {         this->name = n;     }      Animal(char n, int y)     {         name = n;         this->y = y;     }      void setName(char n)     {         name = n;     }      char getName()     {         return name;     }      void setY(int y)     {         this->y = y;     }      int getY()     {         return y;     }      ~Animal() {} };",
+        "c": [
+            "Animal(){\n\n    }",
+            "Animal(char n)\n    {\n        this->name = n;\n    }",
+            "Animal(char n, int y)\n    {\n        name = n;\n        this->y = y;\n    }"
+        ],
+        "path_fm": "/Users/huyhieu/akautauto/datatest/vupham/cpp/inheritance/animal.cpp/Animal/setName(char)"
+    },
+    {
+        "f": [
+            "char name;",
+            "int y;"
+        ],
+        "fm": "char getName()     {         return name;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Animal_getName_random_0(void) {\n{\nAKA_test_case_name=\"Animal_getName_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=1;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Animal_getName_random_0\");char AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Animal->getName();\nAKA_fCall++;AKA_mark(\"Return from: ./inheritance/animal.cpp/Animal/getName()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=114;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar n=71;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Animal { private:     char name;     int y;  public:     Animal(){      };      Animal(char n)     {         this->name = n;     }      Animal(char n, int y)     {         name = n;         this->y = y;     }      void setName(char n)     {         name = n;     }      char getName()     {         return name;     }      void setY(int y)     {         this->y = y;     }      int getY()     {         return y;     }      ~Animal() {} };",
+        "c": [
+            "Animal(){\n\n    }",
+            "Animal(char n)\n    {\n        this->name = n;\n    }",
+            "Animal(char n, int y)\n    {\n        name = n;\n        this->y = y;\n    }"
+        ],
+        "path_fm": "/Users/huyhieu/akautauto/datatest/vupham/cpp/inheritance/animal.cpp/Animal/getName()"
+    },
+    {
+        "f": [
+            "char name;",
+            "int y;"
+        ],
+        "fm": "void setY(int y)     {         this->y = y;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Animal_setY_int_random_0(void) {\n{\nAKA_test_case_name=\"Animal_setY_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=28;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\n\nint y=1285122240;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode y */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Animal_setY_int_random_0\");AKA_INSTANCE___Animal->setY(y);\nAKA_fCall++;AKA_mark(\"Return from: ./inheritance/animal.cpp/Animal/setY(int)\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=114;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar n=71;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Animal { private:     char name;     int y;  public:     Animal(){      };      Animal(char n)     {         this->name = n;     }      Animal(char n, int y)     {         name = n;         this->y = y;     }      void setName(char n)     {         name = n;     }      char getName()     {         return name;     }      void setY(int y)     {         this->y = y;     }      int getY()     {         return y;     }      ~Animal() {} };",
+        "c": [
+            "Animal(){\n\n    }",
+            "Animal(char n)\n    {\n        this->name = n;\n    }",
+            "Animal(char n, int y)\n    {\n        name = n;\n        this->y = y;\n    }"
+        ],
+        "path_fm": "/Users/huyhieu/akautauto/datatest/vupham/cpp/inheritance/animal.cpp/Animal/setY(int)"
+    },
+    {
+        "f": [
+            "char name;",
+            "int y;"
+        ],
+        "fm": "int getY()     {         return y;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Animal_getY_random_3(void) {\n{\nAKA_test_case_name=\"Animal_getY_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char,int) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=29;\n/* NormalNumberDataNode y */\nint AKA_INSTANCE___Animal_y=1120974852;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char,int)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char,int)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n,AKA_INSTANCE___Animal_y);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\nAKA_INSTANCE___Animal->y=1120974852;\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Animal_getY_random_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Animal->getY();\nAKA_fCall++;AKA_mark(\"Return from: ./inheritance/animal.cpp/Animal/getY()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=114;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar n=71;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Animal { private:     char name;     int y;  public:     Animal(){      };      Animal(char n)     {         this->name = n;     }      Animal(char n, int y)     {         name = n;         this->y = y;     }      void setName(char n)     {         name = n;     }      char getName()     {         return name;     }      void setY(int y)     {         this->y = y;     }      int getY()     {         return y;     }      ~Animal() {} };",
+        "c": [
+            "Animal(){\n\n    }",
+            "Animal(char n)\n    {\n        this->name = n;\n    }",
+            "Animal(char n, int y)\n    {\n        name = n;\n        this->y = y;\n    }"
+        ],
+        "path_fm": "/Users/huyhieu/akautauto/datatest/vupham/cpp/inheritance/animal.cpp/Animal/getY()"
+    },
+    {
+        "f": [],
+        "fm": "virtual void virtualFn(){         std::cout<<\"virtual fn\"<<std::endl;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Flyable_virtualFn_random_1(void) {\n{\nAKA_test_case_name=\"Flyable_virtualFn_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Flyable */\n/* ConstructorDataNode Flyable() */\nAKA_mark(\"Calling: /Flyable()|ROOT/flyable.cpp/GLOBAL/AKA_INSTANCE___Flyable/AKA_INSTANCE___Flyable/Flyable()\");AKA_fCall++;AKA_INSTANCE___Flyable = new ::Flyable();\n\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Flyable_virtualFn_random_1\");AKA_INSTANCE___Flyable->virtualFn();\nAKA_fCall++;AKA_mark(\"Return from: ./inheritance/flyable.cpp/Flyable/virtualFn()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=114;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar n=71;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Flyable { public:     virtual void virtualFn(){         std::cout<<\"virtual fn\"<<std::endl;     }      void fly(){         std::cout<<\"fly\"<<std::endl;     } };",
+        "c": [],
+        "path_fm": "/Users/huyhieu/akautauto/datatest/vupham/cpp/inheritance/flyable.cpp/Flyable/virtualFn()"
+    },
+    {
+        "f": [],
+        "fm": "void fly(){         std::cout<<\"fly\"<<std::endl;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Flyable_fly_random_1(void) {\n{\nAKA_test_case_name=\"Flyable_fly_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Flyable */\n/* ConstructorDataNode Flyable() */\nAKA_mark(\"Calling: /Flyable()|ROOT/flyable.cpp/GLOBAL/AKA_INSTANCE___Flyable/AKA_INSTANCE___Flyable/Flyable()\");AKA_fCall++;AKA_INSTANCE___Flyable = new ::Flyable();\n\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Flyable_fly_random_1\");AKA_INSTANCE___Flyable->fly();\nAKA_fCall++;AKA_mark(\"Return from: ./inheritance/flyable.cpp/Flyable/fly()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=114;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar n=71;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Flyable { public:     virtual void virtualFn(){         std::cout<<\"virtual fn\"<<std::endl;     }      void fly(){         std::cout<<\"fly\"<<std::endl;     } };",
+        "c": [],
+        "path_fm": "/Users/huyhieu/akautauto/datatest/vupham/cpp/inheritance/flyable.cpp/Flyable/fly()"
+    },
+    {
+        "f": [],
+        "fm": "virtual void virtualFn(){         std::cout<<\"virtual fn\"<<std::endl;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Flyable_virtualFn_random_1(void) {\n{\nAKA_test_case_name=\"Flyable_virtualFn_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Flyable */\n/* ConstructorDataNode Flyable() */\nAKA_mark(\"Calling: /Flyable()|ROOT/flyable.cpp/GLOBAL/AKA_INSTANCE___Flyable/AKA_INSTANCE___Flyable/Flyable()\");AKA_fCall++;AKA_INSTANCE___Flyable = new ::Flyable();\n\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Flyable_virtualFn_random_1\");AKA_INSTANCE___Flyable->virtualFn();\nAKA_fCall++;AKA_mark(\"Return from: ./inheritance/flyable.cpp/Flyable/virtualFn()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=114;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar n=71;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Flyable { public:     virtual void virtualFn(){         std::cout<<\"virtual fn\"<<std::endl;     }      void fly(){         std::cout<<\"fly\"<<std::endl;     } };",
+        "c": [
+            "",
+            ""
+        ],
+        "path_fm": "/Users/huyhieu/akautauto/datatest/vupham/cpp/inheritance/flyable.cpp/Flyable/virtualFn()"
+    },
+    {
+        "f": [],
+        "fm": "void fly(){         std::cout<<\"fly\"<<std::endl;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Flyable_fly_random_1(void) {\n{\nAKA_test_case_name=\"Flyable_fly_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Flyable */\n/* ConstructorDataNode Flyable() */\nAKA_mark(\"Calling: /Flyable()|ROOT/flyable.cpp/GLOBAL/AKA_INSTANCE___Flyable/AKA_INSTANCE___Flyable/Flyable()\");AKA_fCall++;AKA_INSTANCE___Flyable = new ::Flyable();\n\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Flyable_fly_random_1\");AKA_INSTANCE___Flyable->fly();\nAKA_fCall++;AKA_mark(\"Return from: ./inheritance/flyable.cpp/Flyable/fly()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=114;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar n=71;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Flyable { public:     virtual void virtualFn(){         std::cout<<\"virtual fn\"<<std::endl;     }      void fly(){         std::cout<<\"fly\"<<std::endl;     } };",
+        "c": [
+            "",
+            ""
+        ],
+        "path_fm": "/Users/huyhieu/akautauto/datatest/vupham/cpp/inheritance/flyable.cpp/Flyable/fly()"
+    },
+    {
+        "f": [
+            "int type;"
+        ],
+        "fm": "void swim() override {         std::cout<<\"Dog: swim\"<<std::endl;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Dog_swim_random_1(void) {\n{\nAKA_test_case_name=\"Dog_swim_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Dog */\n/* ConstructorDataNode Dog(char,int,int) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Dog_n=-30;\n/* NormalNumberDataNode y */\nint AKA_INSTANCE___Dog_y=1788396190;\n/* NormalNumberDataNode t */\nint AKA_INSTANCE___Dog_t=-908021145;\nAKA_mark(\"Calling: ./inheritance/dog.cpp/Dog/Dog(char,int,int)|ROOT/dog.cpp/GLOBAL/AKA_INSTANCE___Dog/AKA_INSTANCE___Dog/Dog(char,int,int)\");AKA_fCall++;AKA_INSTANCE___Dog = new ::Dog(AKA_INSTANCE___Dog_n,AKA_INSTANCE___Dog_y,AKA_INSTANCE___Dog_t);\n/* NormalNumberDataNode type */\n/* type : null value -> no code */\n\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Dog_swim_random_1\");AKA_INSTANCE___Dog->swim();\nAKA_fCall++;AKA_mark(\"Return from: ./inheritance/dog.cpp/Dog/swim()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=114;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar n=71;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Dog : public Animal, public Swimable, public Flyable { private:     int type; public:     Dog(char n, int y, int t) : Animal(n,y){         type = t;     };      void swim() override {         std::cout<<\"Dog: swim\"<<std::endl;     };     void virtualFn() override {         std::cout<<\"Dog: virtual fn\"<<std::endl;     };      void fly() {         std::cout<<\"Dog:: fly\"<<std::endl;     } };",
+        "c": [
+            "Dog(char n, int y, int t) : Animal(n,y){\n        type = t;\n    }"
+        ],
+        "path_fm": "/Users/huyhieu/akautauto/datatest/vupham/cpp/inheritance/dog.cpp/Dog/swim()"
+    },
+    {
+        "f": [
+            "int type;"
+        ],
+        "fm": "void virtualFn() override {         std::cout<<\"Dog: virtual fn\"<<std::endl;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Dog_virtualFn_random_4(void) {\n{\nAKA_test_case_name=\"Dog_virtualFn_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Dog */\n/* ConstructorDataNode Dog(char,int,int) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Dog_n=80;\n/* NormalNumberDataNode y */\nint AKA_INSTANCE___Dog_y=-130730497;\n/* NormalNumberDataNode t */\nint AKA_INSTANCE___Dog_t=-309931266;\nAKA_mark(\"Calling: ./inheritance/dog.cpp/Dog/Dog(char,int,int)|ROOT/dog.cpp/GLOBAL/AKA_INSTANCE___Dog/AKA_INSTANCE___Dog/Dog(char,int,int)\");AKA_fCall++;AKA_INSTANCE___Dog = new ::Dog(AKA_INSTANCE___Dog_n,AKA_INSTANCE___Dog_y,AKA_INSTANCE___Dog_t);\n/* NormalNumberDataNode type */\n/* type : null value -> no code */\n\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Dog_virtualFn_random_4\");AKA_INSTANCE___Dog->virtualFn();\nAKA_fCall++;AKA_mark(\"Return from: ./inheritance/dog.cpp/Dog/virtualFn()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=114;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar n=71;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Dog : public Animal, public Swimable, public Flyable { private:     int type; public:     Dog(char n, int y, int t) : Animal(n,y){         type = t;     };      void swim() override {         std::cout<<\"Dog: swim\"<<std::endl;     };     void virtualFn() override {         std::cout<<\"Dog: virtual fn\"<<std::endl;     };      void fly() {         std::cout<<\"Dog:: fly\"<<std::endl;     } };",
+        "c": [
+            "Dog(char n, int y, int t) : Animal(n,y){\n        type = t;\n    }"
+        ],
+        "path_fm": "/Users/huyhieu/akautauto/datatest/vupham/cpp/inheritance/dog.cpp/Dog/virtualFn()"
+    },
+    {
+        "f": [
+            "int type;"
+        ],
+        "fm": "void fly() {         std::cout<<\"Dog:: fly\"<<std::endl;     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Dog_fly_random_2(void) {\n{\nAKA_test_case_name=\"Dog_fly_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Dog */\n/* ConstructorDataNode Dog(char,int,int) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Dog_n=-102;\n/* NormalNumberDataNode y */\nint AKA_INSTANCE___Dog_y=919738965;\n/* NormalNumberDataNode t */\nint AKA_INSTANCE___Dog_t=2001713948;\nAKA_mark(\"Calling: ./inheritance/dog.cpp/Dog/Dog(char,int,int)|ROOT/dog.cpp/GLOBAL/AKA_INSTANCE___Dog/AKA_INSTANCE___Dog/Dog(char,int,int)\");AKA_fCall++;AKA_INSTANCE___Dog = new ::Dog(AKA_INSTANCE___Dog_n,AKA_INSTANCE___Dog_y,AKA_INSTANCE___Dog_t);\n/* NormalNumberDataNode type */\n/* type : null value -> no code */\n\n\n\n/* RootDataNode STATIC */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Dog_fly_random_2\");AKA_INSTANCE___Dog->fly();\nAKA_fCall++;AKA_mark(\"Return from: ./inheritance/dog.cpp/Dog/fly()\");\n\n/* error assertion */\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=114;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar n=71;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Dog : public Animal, public Swimable, public Flyable { private:     int type; public:     Dog(char n, int y, int t) : Animal(n,y){         type = t;     };      void swim() override {         std::cout<<\"Dog: swim\"<<std::endl;     };     void virtualFn() override {         std::cout<<\"Dog: virtual fn\"<<std::endl;     };      void fly() {         std::cout<<\"Dog:: fly\"<<std::endl;     } };",
+        "c": [
+            "Dog(char n, int y, int t) : Animal(n,y){\n        type = t;\n    }"
+        ],
+        "path_fm": "/Users/huyhieu/akautauto/datatest/vupham/cpp/inheritance/dog.cpp/Dog/fly()"
+    },
+    {
+        "f": [],
+        "fm": "int main() {     Flyable *d = new Dog('c',1,2);     d->fly();     d->virtualFn();     return 0; }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_main_random_0(void) {\n{\nAKA_test_case_name=\"main_random_0\";\n\n// set up\n;\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test main_random_0\");int AKA_ACTUAL_OUTPUT=AKA_MAIN();\nAKA_fCall++;AKA_mark(\"Return from: ./inheritance/dog.cpp/main()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Animal */\n/* ConstructorDataNode Animal(char) */\n/* NormalCharacterDataNode n */\nchar AKA_INSTANCE___Animal_n=114;\nAKA_mark(\"Calling: ./inheritance/animal.cpp/Animal/Animal(char)|ROOT/animal.cpp/GLOBAL/AKA_INSTANCE___Animal/AKA_INSTANCE___Animal/Animal(char)\");AKA_fCall++;AKA_INSTANCE___Animal = new ::Animal(AKA_INSTANCE___Animal_n);\n/* NormalCharacterDataNode name */\n/* NormalNumberDataNode y */\n/* y : null value -> no code */\n\n\n\nchar n=71;\n\n/* RootDataNode STATIC */\n/* NormalCharacterDataNode n */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "/Users/huyhieu/akautauto/datatest/vupham/cpp/inheritance/dog.cpp/main()"
+    }
+]

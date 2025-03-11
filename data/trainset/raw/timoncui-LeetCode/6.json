@@ -1,0 +1,304 @@
+[
+    {
+        "f": [],
+        "fm": "vector<vector<int> > levelOrder(TreeNode *root) {\r         vector<vector<int> > result;\r         vector<int> cur;\r         queue<TreeNode*> Q;\r         if (root) {\r             Q.push(root);\r             Q.push(NULL);\r         }\r         while (!Q.empty()) {\r             TreeNode *top = Q.front();\r             Q.pop();\r             if (top == NULL) {\r                 result.push_back(cur);\r                 cur.clear();\r                 if (!Q.empty()) Q.push(NULL);\r             } else {\r                 cur.push_back(top->val);\r                 if (top->left) Q.push(top->left);\r                 if (top->right) Q.push(top->right);\r             }\r         }\r         return result;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_levelOrder_TreeNodemul_random_0(void) {\n{\nAKA_test_case_name=\"Solution_levelOrder_TreeNodemul_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-866816443;\nAKA_mark(\"Calling: .\\\\eight\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\levelOrder(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=1368991174;\nAKA_mark(\"Calling: .\\\\eight\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\levelOrder(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_1\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_levelOrder_TreeNodemul_random_0\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->levelOrder(root);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\eight\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\Solution\\\\levelOrder(TreeNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-866816443;\nAKA_mark(\"Calling: .\\\\eight\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\levelOrder(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=1368991174;\nAKA_mark(\"Calling: .\\\\eight\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\levelOrder(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_1\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_levelOrder_TreeNodemul_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_levelOrder_TreeNodemul_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\nTreeNode* root = nullptr;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_levelOrder_TreeNodemul_directed_0\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->levelOrder(root);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\eight\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\Solution\\\\levelOrder(TreeNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\nTreeNode* root = nullptr;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_levelOrder_TreeNodemul_random_2(void) {\n{\nAKA_test_case_name=\"Solution_levelOrder_TreeNodemul_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nTreeNode* root;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_levelOrder_TreeNodemul_random_2\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->levelOrder(root);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\eight\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\Solution\\\\levelOrder(TreeNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nTreeNode* root;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_levelOrder_TreeNodemul_directed_1(void) {\n{\nAKA_test_case_name=\"Solution_levelOrder_TreeNodemul_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\nTreeNode* root = nullptr;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_levelOrder_TreeNodemul_directed_1\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->levelOrder(root);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\eight\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\Solution\\\\levelOrder(TreeNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\nTreeNode* root = nullptr;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     vector<vector<int> > levelOrder(TreeNode *root) {\r         vector<vector<int> > result;\r         vector<int> cur;\r         queue<TreeNode*> Q;\r         if (root) {\r             Q.push(root);\r             Q.push(NULL);\r         }\r         while (!Q.empty()) {\r             TreeNode *top = Q.front();\r             Q.pop();\r             if (top == NULL) {\r                 result.push_back(cur);\r                 cur.clear();\r                 if (!Q.empty()) Q.push(NULL);\r             } else {\r                 cur.push_back(top->val);\r                 if (top->left) Q.push(top->left);\r                 if (top->right) Q.push(top->right);\r             }\r         }\r         return result;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\eight\\Binary_Tree_Level_Order_Traversal.cpp\\Solution\\levelOrder(TreeNode*)"
+    },
+    {
+        "f": [],
+        "fm": "vector<vector<int> > levelOrderBottom(TreeNode *root) {\r     vector<vector<int> > res;\r     queue<TreeNode*> Q[2];\r     vector<int> one_level;\r     int level = 0;\r     if (root) Q[0].push(root);\r     while (!Q[level].empty()) {\r       TreeNode *n = Q[level].front();\r       one_level.push_back(n->val);\r       Q[level].pop();\r       if (n->left) Q[!level].push(n->left);\r       if (n->right) Q[!level].push(n->right);\r       if (Q[level].empty()) {\r \tres.push_back(one_level);\r \tone_level.clear();\r \tlevel = !level;\r       }\r     }\r     reverse(res.begin(), res.end());\r     return res;\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_levelOrderBottom_TreeNodemul_random_0(void) {\n{\nAKA_test_case_name=\"Solution_levelOrderBottom_TreeNodemul_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Binary_Tree_Level_Order_Traversal_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-1260662190;\nAKA_mark(\"Calling: .\\\\eight\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Binary_Tree_Level_Order_Traversal_II.cpp\\\\levelOrderBottom(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=322579069;\nAKA_mark(\"Calling: .\\\\eight\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Binary_Tree_Level_Order_Traversal_II.cpp\\\\levelOrderBottom(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_1\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_levelOrderBottom_TreeNodemul_random_0\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->levelOrderBottom(root);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\eight\\\\Binary_Tree_Level_Order_Traversal_II.cpp\\\\Solution\\\\levelOrderBottom(TreeNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Binary_Tree_Level_Order_Traversal_II.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-1260662190;\nAKA_mark(\"Calling: .\\\\eight\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Binary_Tree_Level_Order_Traversal_II.cpp\\\\levelOrderBottom(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=322579069;\nAKA_mark(\"Calling: .\\\\eight\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Binary_Tree_Level_Order_Traversal_II.cpp\\\\levelOrderBottom(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_1\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   vector<vector<int> > levelOrderBottom(TreeNode *root) {\r     vector<vector<int> > res;\r     queue<TreeNode*> Q[2];\r     vector<int> one_level;\r     int level = 0;\r     if (root) Q[0].push(root);\r     while (!Q[level].empty()) {\r       TreeNode *n = Q[level].front();\r       one_level.push_back(n->val);\r       Q[level].pop();\r       if (n->left) Q[!level].push(n->left);\r       if (n->right) Q[!level].push(n->right);\r       if (Q[level].empty()) {\r \tres.push_back(one_level);\r \tone_level.clear();\r \tlevel = !level;\r       }\r     }\r     reverse(res.begin(), res.end());\r     return res;\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\eight\\Binary_Tree_Level_Order_Traversal_II.cpp\\Solution\\levelOrderBottom(TreeNode*)"
+    },
+    {
+        "f": [],
+        "fm": "int maxPathSum(TreeNode *root) {\r     int dummy;\r     return maxPathSum(root, &dummy);\r   }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_maxPathSum_TreeNodemul_random_0(void) {\n{\nAKA_test_case_name=\"Solution_maxPathSum_TreeNodemul_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Binary_Tree_Maximum_Path_Sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-2027664931;\nAKA_mark(\"Calling: .\\\\eight\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Binary_Tree_Maximum_Path_Sum.cpp\\\\maxPathSum(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=-2116978858;\nAKA_mark(\"Calling: .\\\\eight\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Binary_Tree_Maximum_Path_Sum.cpp\\\\maxPathSum(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_1\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root2_x=0;\nAKA_mark(\"Calling: .\\\\eight\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Binary_Tree_Maximum_Path_Sum.cpp\\\\maxPathSum(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_2\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_2 = new ::TreeNode(root2_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_2).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_2).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_2);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_maxPathSum_TreeNodemul_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->maxPathSum(root);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\eight\\\\Binary_Tree_Maximum_Path_Sum.cpp\\\\Solution\\\\maxPathSum(TreeNode*)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Binary_Tree_Maximum_Path_Sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nstd::vector<TreeNode*> AKA_VECTOR_INIT_root;\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root0_x=-2027664931;\nAKA_mark(\"Calling: .\\\\eight\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Binary_Tree_Maximum_Path_Sum.cpp\\\\maxPathSum(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_0\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_0 = new ::TreeNode(root0_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_0).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_0).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_0);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root1_x=-2116978858;\nAKA_mark(\"Calling: .\\\\eight\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Binary_Tree_Maximum_Path_Sum.cpp\\\\maxPathSum(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_1\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_1 = new ::TreeNode(root1_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_1).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_1).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_1);\n\n\n/* SubStructDataNode root */\n/* ConstructorDataNode TreeNode(int) */\n/* NormalNumberDataNode x */\nint root2_x=0;\nAKA_mark(\"Calling: .\\\\eight\\\\Binary_Tree_Level_Order_Traversal.cpp\\\\TreeNode\\\\TreeNode(int)|ROOT\\\\Binary_Tree_Maximum_Path_Sum.cpp\\\\maxPathSum(TreeNode*)\\\\root\\\\AKA_VECTOR_INIT_root_2\\\\root\\\\TreeNode(int)\");AKA_fCall++;auto AKA_VECTOR_INIT_root_2 = new ::TreeNode(root2_x);\n/* NormalNumberDataNode val */\n/* val : null value -> no code */\n/* PointerStructureDataNode left */\n(*AKA_VECTOR_INIT_root_2).left;\n/* PointerStructureDataNode right */\n(*AKA_VECTOR_INIT_root_2).right;\n\nAKA_VECTOR_INIT_root.push_back(AKA_VECTOR_INIT_root_2);\n\nTreeNode* root = AKA_VECTOR_INIT_root[0];\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* PointerStructureDataNode root */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int maxPathSum(TreeNode *root) {\r     int dummy;\r     return maxPathSum(root, &dummy);\r   }\r private:\r   int pos(int v) { return v > 0 ? v : 0; }\r   int maxPathSum(TreeNode *root, int *max_ending_here) {\r     if (root == NULL) {\r       *max_ending_here = INT_MIN;\r       return INT_MIN;\r     }\r     int max_ending_left, max_ending_right;\r     int max_left = maxPathSum(root->left, &max_ending_left);\r     int max_right = maxPathSum(root->right, &max_ending_right);\r     *max_ending_here = root->val + pos(max(max_ending_left, max_ending_right));\r     return max(max(max_left, max_right), root->val + pos(max_ending_left) + pos(max_ending_right));\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\eight\\Binary_Tree_Maximum_Path_Sum.cpp\\Solution\\maxPathSum(TreeNode*)"
+    },
+    {
+        "f": [],
+        "fm": "int pos(int v) { return v > 0 ? v : 0; }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int maxPathSum(TreeNode *root) {\r     int dummy;\r     return maxPathSum(root, &dummy);\r   }\r private:\r   int pos(int v) { return v > 0 ? v : 0; }\r   int maxPathSum(TreeNode *root, int *max_ending_here) {\r     if (root == NULL) {\r       *max_ending_here = INT_MIN;\r       return INT_MIN;\r     }\r     int max_ending_left, max_ending_right;\r     int max_left = maxPathSum(root->left, &max_ending_left);\r     int max_right = maxPathSum(root->right, &max_ending_right);\r     *max_ending_here = root->val + pos(max(max_ending_left, max_ending_right));\r     return max(max(max_left, max_right), root->val + pos(max_ending_left) + pos(max_ending_right));\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\eight\\Binary_Tree_Maximum_Path_Sum.cpp\\Solution\\pos(int)"
+    },
+    {
+        "f": [],
+        "fm": "int maxPathSum(TreeNode *root, int *max_ending_here) {\r     if (root == NULL) {\r       *max_ending_here = INT_MIN;\r       return INT_MIN;\r     }\r     int max_ending_left, max_ending_right;\r     int max_left = maxPathSum(root->left, &max_ending_left);\r     int max_right = maxPathSum(root->right, &max_ending_right);\r     *max_ending_here = root->val + pos(max(max_ending_left, max_ending_right));\r     return max(max(max_left, max_right), root->val + pos(max_ending_left) + pos(max_ending_right));\r   }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r   int maxPathSum(TreeNode *root) {\r     int dummy;\r     return maxPathSum(root, &dummy);\r   }\r private:\r   int pos(int v) { return v > 0 ? v : 0; }\r   int maxPathSum(TreeNode *root, int *max_ending_here) {\r     if (root == NULL) {\r       *max_ending_here = INT_MIN;\r       return INT_MIN;\r     }\r     int max_ending_left, max_ending_right;\r     int max_left = maxPathSum(root->left, &max_ending_left);\r     int max_right = maxPathSum(root->right, &max_ending_right);\r     *max_ending_here = root->val + pos(max(max_ending_left, max_ending_right));\r     return max(max(max_left, max_right), root->val + pos(max_ending_left) + pos(max_ending_right));\r   }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\eight\\Binary_Tree_Maximum_Path_Sum.cpp\\Solution\\maxPathSum(TreeNode*,int*)"
+    },
+    {
+        "f": [],
+        "fm": "int climbStairs(int n) {\r         vector<int> N(n + 1);\r         N[0] = 1;\r         N[1] = 1;\r         for (int i = 2; i <= n; ++i) {\r             N[i] = N[i - 1] + N[i - 2];\r         }\r         return N.back();\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_climbStairs_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_climbStairs_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Climbing_Stairs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=5;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_climbStairs_int_directed_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->climbStairs(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\eight\\\\Climbing_Stairs.cpp\\\\Solution\\\\climbStairs(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Climbing_Stairs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=5;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_climbStairs_int_directed_6(void) {\n{\nAKA_test_case_name=\"Solution_climbStairs_int_directed_6\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Climbing_Stairs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=4;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_climbStairs_int_directed_6\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->climbStairs(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\eight\\\\Climbing_Stairs.cpp\\\\Solution\\\\climbStairs(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Climbing_Stairs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=4;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 2,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_climbStairs_int_directed_5(void) {\n{\nAKA_test_case_name=\"Solution_climbStairs_int_directed_5\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Climbing_Stairs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=7;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_climbStairs_int_directed_5\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->climbStairs(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\eight\\\\Climbing_Stairs.cpp\\\\Solution\\\\climbStairs(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Climbing_Stairs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=7;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 3,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_climbStairs_int_random_1(void) {\n{\nAKA_test_case_name=\"Solution_climbStairs_int_random_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Climbing_Stairs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_climbStairs_int_random_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->climbStairs(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\eight\\\\Climbing_Stairs.cpp\\\\Solution\\\\climbStairs(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Climbing_Stairs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 4,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_climbStairs_int_directed_2(void) {\n{\nAKA_test_case_name=\"Solution_climbStairs_int_directed_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Climbing_Stairs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=6;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_climbStairs_int_directed_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->climbStairs(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\eight\\\\Climbing_Stairs.cpp\\\\Solution\\\\climbStairs(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Climbing_Stairs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=6;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 5,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_climbStairs_int_directed_1(void) {\n{\nAKA_test_case_name=\"Solution_climbStairs_int_directed_1\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Climbing_Stairs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=9;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_climbStairs_int_directed_1\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->climbStairs(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\eight\\\\Climbing_Stairs.cpp\\\\Solution\\\\climbStairs(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Climbing_Stairs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=9;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 6,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_climbStairs_int_directed_4(void) {\n{\nAKA_test_case_name=\"Solution_climbStairs_int_directed_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Climbing_Stairs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=10;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_climbStairs_int_directed_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->climbStairs(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\eight\\\\Climbing_Stairs.cpp\\\\Solution\\\\climbStairs(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Climbing_Stairs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=10;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 7,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_climbStairs_int_directed_3(void) {\n{\nAKA_test_case_name=\"Solution_climbStairs_int_directed_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Climbing_Stairs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_climbStairs_int_directed_3\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->climbStairs(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\eight\\\\Climbing_Stairs.cpp\\\\Solution\\\\climbStairs(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Climbing_Stairs.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=8;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     int climbStairs(int n) {\r         vector<int> N(n + 1);\r         N[0] = 1;\r         N[1] = 1;\r         for (int i = 2; i <= n; ++i) {\r             N[i] = N[i - 1] + N[i - 2];\r         }\r         return N.back();\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\eight\\Climbing_Stairs.cpp\\Solution\\climbStairs(int)"
+    },
+    {
+        "f": [],
+        "fm": "vector<vector<int> > combinationSum(vector<int> &candidates, int target) {\r         sort(candidates.begin(), candidates.end());\r         vector<vector<int> > results;\r         if (candidates.empty()) return results;\r         \r         // Use last element\r         int last = candidates.back();\r         if (target == last) results.push_back(vector<int>(1, last));\r         else if (target > last) {\r             vector<vector<int> > rest = combinationSum(candidates, target - last);\r             for (int i = 0; i < rest.size(); ++i) {\r                 rest[i].push_back(last);\r                 results.push_back(rest[i]);\r             }\r         }\r         \r         // Not use last element\r         vector<int> candidates_leave_one(candidates.begin(), candidates.end() - 1);\r         vector<vector<int> > rest = combinationSum(candidates_leave_one, target);\r         results.insert(results.end(), rest.begin(), rest.end());\r         return results;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_combinationSum_vector_int_int_directed_0(void) {\n{\nAKA_test_case_name=\"Solution_combinationSum_vector_int_int_directed_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Combination_Sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> candidates;\n\n\nint target=0;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode candidates */\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_combinationSum_vector_int_int_directed_0\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->combinationSum(candidates,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\eight\\\\Combination_Sum.cpp\\\\Solution\\\\combinationSum(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_candidates;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Combination_Sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> candidates;\n\n\nint target=0;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode candidates */\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            },
+            {
+                "id": 1,
+                "dt": {},
+                "td": "void AKA_TEST_Solution_combinationSum_vector_int_int_random_3(void) {\n{\nAKA_test_case_name=\"Solution_combinationSum_vector_int_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Combination_Sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> candidates;\n\n\nint target=139571250;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode candidates */\nint candidates_element0=123324152;\ncandidates.push_back(candidates_element0);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_combinationSum_vector_int_int_random_3\");vector<vector<int>> AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->combinationSum(candidates,target);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\eight\\\\Combination_Sum.cpp\\\\Solution\\\\combinationSum(vector<int>&,int)\");\n\n\nvector<int> EXPECTED_candidates;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\Combination_Sum.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> candidates;\n\n\nint target=139571250;\nvector<vector<int>> AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode candidates */\nint candidates_element0=123324152;\ncandidates.push_back(candidates_element0);\n/* NormalNumberDataNode target */\n/* VectorDataNode RETURN */\n\n",
+                "isAutomated": false,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "class Solution {\r public:\r     vector<vector<int> > combinationSum(vector<int> &candidates, int target) {\r         sort(candidates.begin(), candidates.end());\r         vector<vector<int> > results;\r         if (candidates.empty()) return results;\r         \r         // Use last element\r         int last = candidates.back();\r         if (target == last) results.push_back(vector<int>(1, last));\r         else if (target > last) {\r             vector<vector<int> > rest = combinationSum(candidates, target - last);\r             for (int i = 0; i < rest.size(); ++i) {\r                 rest[i].push_back(last);\r                 results.push_back(rest[i]);\r             }\r         }\r         \r         // Not use last element\r         vector<int> candidates_leave_one(candidates.begin(), candidates.end() - 1);\r         vector<vector<int> > rest = combinationSum(candidates_leave_one, target);\r         results.insert(results.end(), rest.begin(), rest.end());\r         return results;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "D:\\prj-data\\timoncui_LeetCode\\eight\\Combination_Sum.cpp\\Solution\\combinationSum(vector<int>&,int)"
+    }
+]

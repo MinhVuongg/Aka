@@ -1,0 +1,80 @@
+[
+    {
+        "f": [],
+        "fm": "long linear_search1(long a[], long n, long find) {\r \tlong c;\r \r \tfor (c = 0; c < n; c++) {\r \t\tif (a[c] == find)\r \t\t\treturn c;\r \t}\r \r \treturn -1;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Search.cpp\\Algorithm\\Search\\linear_search1(long[],long,long)"
+    },
+    {
+        "f": [],
+        "fm": "long linear_search2(long *pointer, long n, long find) {\r \tlong c;\r \r \tfor (c = 0; c < n; c++) {\r \t\tif (*(pointer + c) == find)\r \t\t\treturn c;\r \t}\r \r \treturn -1;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Search.cpp\\Algorithm\\Search\\linear_search2(long*,long,long)"
+    },
+    {
+        "f": [],
+        "fm": "int binarySearch(int arr[], int l, int r, int x) {\r \tif (r >= l) {\r \t\tint mid = l + (r - l) / 2;\r \r \t\t// If the element is present at the middle itself\r \t\tif (arr[mid] == x)\r \t\t\treturn mid;\r \r \t\t// If element is smaller than mid, then it can only be present\r \t\t// in left subarray\r \t\tif (arr[mid] > x)\r \t\t\treturn binarySearch(arr, l, mid - 1, x);\r \r \t\t// Else the element can only be present in right subarray\r \t\treturn binarySearch(arr, mid + 1, r, x);\r \t}\r \r \t// We reach here when element is not present in array\r \treturn -1;\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Search.cpp\\Algorithm\\Search\\binarySearch(int[],int,int,int)"
+    },
+    {
+        "f": [],
+        "fm": "void NaivePatternSearch(char *pat, char *txt) {\r \tint M = strlen(pat);\r \tint N = strlen(txt);\r \r \t/* A loop to slide pat[] one by one */\r \tfor (int i = 0; i <= N - M; i++) {\r \t\tint j;\r \r \t\t/* For current index i, check for pattern match */\r \t\tfor (j = 0; j < M; j++)\r \t\t\tif (txt[i + j] != pat[j])\r \t\t\t\tbreak;\r \r \t\tif (j == M)  // if pat[0...M-1] = txt[i, i+1, ...i+M-1]\r \t\t\tprintf(\"Pattern found at index %d n\", i);\r \t}\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Search.cpp\\Algorithm\\Search\\NaivePatternSearch(char*,char*)"
+    },
+    {
+        "f": [],
+        "fm": "void computeLPSArray(char *pat, int M, int *lps) {\r \t// length of the previous longest prefix suffix\r \tint len = 0;\r \r \tlps[0] = 0;  // lps[0] is always 0\r \r \t// the loop calculates lps[i] for i = 1 to M-1\r \tint i = 1;\r \twhile (i < M) {\r \t\tif (pat[i] == pat[len]) {\r \t\t\tlen++;\r \t\t\tlps[i] = len;\r \t\t\ti++;\r \t\t} else { // (pat[i] != pat[len])\r \t\t\t// This is tricky. Consider the example.\r \t\t\t// AAACAAAA and i = 7. The idea is similar\r \t\t\t// to search step.\r \t\t\tif (len != 0) {\r \t\t\t\tlen = lps[len - 1];\r \r \t\t\t\t// Also, note that we do not increment\r \t\t\t\t// i here\r \t\t\t} else { // if (len == 0)\r \t\t\t\tlps[i] = 0;\r \t\t\t\ti++;\r \t\t\t}\r \t\t}\r \t}\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Search.cpp\\Algorithm\\Search\\computeLPSArray(char*,int,int*)"
+    },
+    {
+        "f": [],
+        "fm": "void KMPSearch(char *pat, char *txt) {\r \tint M = strlen(pat);\r \tint N = strlen(txt);\r \r \t// create lps[] that will hold the longest prefix suffix\r \t// values for pattern\r \tint lps[M];\r \r \t// Preprocess the pattern (calculate lps[] array)\r \tcomputeLPSArray(pat, M, lps);\r \r \tint i = 0;\t\t// index for txt[]\r \tint j = 0;\t\t// index for pat[]\r \twhile (i < N) {\r \t\tif (pat[j] == txt[i]) {\r \t\t\tj++;\r \t\t\ti++;\r \t\t}\r \r \t\tif (j == M) {\r \t\t\tprintf(\"Found pattern at index %d n\", i - j);\r \t\t\tj = lps[j - 1];\r \t\t}\r \r \t\t// mismatch after j matches\r \t\telse if (i < N && pat[j] != txt[i]) {\r \t\t\t// Do not match lps[0..lps[j-1]] characters,\r \t\t\t// they will match anyway\r \t\t\tif (j != 0)\r \t\t\t\tj = lps[j - 1];\r \t\t\telse\r \t\t\t\ti = i + 1;\r \t\t}\r \t}\r }",
+        "datatest": [],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
+        },
+        "fc": "",
+        "c": [],
+        "path_fm": "C:\\Users\\admin\\akautauto\\datatest\\duc-anh\\Algorithm\\Search.cpp\\Algorithm\\Search\\KMPSearch(char*,char*)"
+    }
+]
