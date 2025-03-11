@@ -1,1200 +1,1470 @@
 [
-  {
-    "fc": "class Solution {\r public:\r     int guessNumber(int n) {\r         long i = 1, j = n, &&mid = 0, &&res = 0;\r         while (i <= j) {\r             mid = (i + j) / 2;\r             res = guess(mid);\r             if (res == 0)\r                 return mid;\r             else if (res == 1)\r                 i = mid + 1;\r             else\r                 j = mid - 1;\r         }\r         return mid;\r     }\r };",
-    "m": [ ],
-    "datatest": [
-      {
-        "id" : 0,
-        "dt" : {
-          "type" : "com.dse.testdata.object.UnitUnderTestNode",
-          "name" : "374.cpp",
-          "virtual_name" : "NON_VALUE",
-          "sourceNode" : ".\\folder_37\\374.cpp",
-          "children" : [ {
-            "type" : "com.dse.testdata.object.GlobalRootDataNode",
-            "name" : "GLOBAL",
-            "virtual_name" : "NON_VALUE",
-            "functionNode" : ".\\folder_37\\374.cpp\\Solution\\guessNumber(int)",
-            "paramExpectedOuputs" : [ {
-              "type" : "com.dse.testdata.object.ClassDataNode",
-              "name" : "AKA_INSTANCE___Solution",
-              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
-              "dataType" : "::Solution",
-              "realType" : "::Solution",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\374.cpp\\Solution\\AKA_INSTANCE___Solution",
-              "correspondingType" : ".\\folder_37\\374.cpp\\Solution"
-            } ],
-            "level" : "GLOBAL",
-            "children" : [ {
-              "type" : "com.dse.testdata.object.ClassDataNode",
-              "name" : "AKA_INSTANCE___Solution",
-              "virtual_name" : "AKA_INSTANCE___Solution",
-              "dataType" : "::Solution",
-              "realType" : "::Solution",
-              "external" : true,
-              "correspondingVar" : ".\\folder_37\\374.cpp\\Solution\\AKA_INSTANCE___Solution",
-              "correspondingType" : ".\\folder_37\\374.cpp\\Solution",
-              "children" : [ {
-                "type" : "com.dse.testdata.object.SubClassDataNode",
-                "name" : "AKA_INSTANCE___Solution",
-                "virtual_name" : "AKA_INSTANCE___Solution",
-                "dataType" : "::Solution",
-                "realType" : "::Solution",
-                "external" : false,
-                "correspondingVar" : ".\\folder_37\\374.cpp\\Solution\\AKA_INSTANCE___Solution",
-                "correspondingType" : ".\\folder_37\\374.cpp\\Solution",
-                "rawType" : "::Solution",
-                "selectedConstructor" : "Solution()",
-                "variableType" : "::Solution",
-                "children" : [ {
-                  "type" : "com.dse.testdata.object.ConstructorDataNode",
-                  "name" : "Solution()",
-                  "virtual_name" : "AKA_INSTANCE___Solution",
-                  "dataType" : "::Solution",
-                  "realType" : "::Solution",
-                  "functionNode" : "\\Solution()"
-                } ]
-              } ]
-            } ]
-          }, {
-            "type" : "com.dse.testdata.object.SubprogramNode",
-            "name" : "guessNumber(int)",
-            "virtual_name" : "NON_VALUE",
-            "dataType" : "int",
-            "realType" : "int",
-            "functionNode" : ".\\folder_37\\374.cpp\\Solution\\guessNumber(int)",
-            "paramExpectedOuputs" : [ {
-              "type" : "com.dse.testdata.object.NormalNumberDataNode",
-              "name" : "n",
-              "virtual_name" : "EXPECTED_n",
-              "dataType" : "int",
-              "realType" : "int",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\374.cpp\\Solution\\guessNumber(int)\\n",
-              "correspondingType" : "int",
-              "value" : "null"
-            } ],
-            "children" : [ {
-              "type" : "com.dse.testdata.object.RootDataNode",
-              "name" : "STATIC",
-              "virtual_name" : "NON_VALUE",
-              "functionNode" : ".\\folder_37\\374.cpp\\Solution\\guessNumber(int)",
-              "level" : "STATIC"
-            }, {
-              "type" : "com.dse.testdata.object.NormalNumberDataNode",
-              "name" : "n",
-              "virtual_name" : "n",
-              "dataType" : "int",
-              "realType" : "int",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\374.cpp\\Solution\\guessNumber(int)\\n",
-              "correspondingType" : "int",
-              "value" : "9"
-            }, {
-              "type" : "com.dse.testdata.object.NormalNumberDataNode",
-              "name" : "RETURN",
-              "virtual_name" : "AKA_EXPECTED_OUTPUT",
-              "dataType" : "int",
-              "realType" : "int",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\374.cpp\\Solution\\guessNumber(int)\\RETURN",
-              "correspondingType" : "int",
-              "value" : "null"
-            } ]
-          } ]
+    {
+        "f": [],
+        "fm": "int guessNumber(int n) {\r         long i = 1, j = n, &&mid = 0, &&res = 0;\r         while (i <= j) {\r             mid = (i + j) / 2;\r             res = guess(mid);\r             if (res == 0)\r                 return mid;\r             else if (res == 1)\r                 i = mid + 1;\r             else\r                 j = mid - 1;\r         }\r         return mid;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {
+                    "type": "com.dse.testdata.object.UnitUnderTestNode",
+                    "name": "374.cpp",
+                    "virtual_name": "NON_VALUE",
+                    "sourceNode": ".\\folder_37\\374.cpp",
+                    "children": [
+                        {
+                            "type": "com.dse.testdata.object.GlobalRootDataNode",
+                            "name": "GLOBAL",
+                            "virtual_name": "NON_VALUE",
+                            "functionNode": ".\\folder_37\\374.cpp\\Solution\\guessNumber(int)",
+                            "paramExpectedOuputs": [
+                                {
+                                    "type": "com.dse.testdata.object.ClassDataNode",
+                                    "name": "AKA_INSTANCE___Solution",
+                                    "virtual_name": "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+                                    "dataType": "::Solution",
+                                    "realType": "::Solution",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\374.cpp\\Solution\\AKA_INSTANCE___Solution",
+                                    "correspondingType": ".\\folder_37\\374.cpp\\Solution"
+                                }
+                            ],
+                            "level": "GLOBAL",
+                            "children": [
+                                {
+                                    "type": "com.dse.testdata.object.ClassDataNode",
+                                    "name": "AKA_INSTANCE___Solution",
+                                    "virtual_name": "AKA_INSTANCE___Solution",
+                                    "dataType": "::Solution",
+                                    "realType": "::Solution",
+                                    "external": true,
+                                    "correspondingVar": ".\\folder_37\\374.cpp\\Solution\\AKA_INSTANCE___Solution",
+                                    "correspondingType": ".\\folder_37\\374.cpp\\Solution",
+                                    "children": [
+                                        {
+                                            "type": "com.dse.testdata.object.SubClassDataNode",
+                                            "name": "AKA_INSTANCE___Solution",
+                                            "virtual_name": "AKA_INSTANCE___Solution",
+                                            "dataType": "::Solution",
+                                            "realType": "::Solution",
+                                            "external": false,
+                                            "correspondingVar": ".\\folder_37\\374.cpp\\Solution\\AKA_INSTANCE___Solution",
+                                            "correspondingType": ".\\folder_37\\374.cpp\\Solution",
+                                            "rawType": "::Solution",
+                                            "selectedConstructor": "Solution()",
+                                            "variableType": "::Solution",
+                                            "children": [
+                                                {
+                                                    "type": "com.dse.testdata.object.ConstructorDataNode",
+                                                    "name": "Solution()",
+                                                    "virtual_name": "AKA_INSTANCE___Solution",
+                                                    "dataType": "::Solution",
+                                                    "realType": "::Solution",
+                                                    "functionNode": "\\Solution()"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "com.dse.testdata.object.SubprogramNode",
+                            "name": "guessNumber(int)",
+                            "virtual_name": "NON_VALUE",
+                            "dataType": "int",
+                            "realType": "int",
+                            "functionNode": ".\\folder_37\\374.cpp\\Solution\\guessNumber(int)",
+                            "paramExpectedOuputs": [
+                                {
+                                    "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                    "name": "n",
+                                    "virtual_name": "EXPECTED_n",
+                                    "dataType": "int",
+                                    "realType": "int",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\374.cpp\\Solution\\guessNumber(int)\\n",
+                                    "correspondingType": "int",
+                                    "value": "null"
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "type": "com.dse.testdata.object.RootDataNode",
+                                    "name": "STATIC",
+                                    "virtual_name": "NON_VALUE",
+                                    "functionNode": ".\\folder_37\\374.cpp\\Solution\\guessNumber(int)",
+                                    "level": "STATIC"
+                                },
+                                {
+                                    "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                    "name": "n",
+                                    "virtual_name": "n",
+                                    "dataType": "int",
+                                    "realType": "int",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\374.cpp\\Solution\\guessNumber(int)\\n",
+                                    "correspondingType": "int",
+                                    "value": "9"
+                                },
+                                {
+                                    "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                    "name": "RETURN",
+                                    "virtual_name": "AKA_EXPECTED_OUTPUT",
+                                    "dataType": "int",
+                                    "realType": "int",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\374.cpp\\Solution\\guessNumber(int)\\RETURN",
+                                    "correspondingType": "int",
+                                    "value": "null"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "td": "void AKA_TEST_Solution_guessNumber_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_guessNumber_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\374.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=9;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_guessNumber_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->guessNumber(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_37\\\\374.cpp\\\\Solution\\\\guessNumber(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\374.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=9;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": true,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
         },
-        "td" : "void AKA_TEST_Solution_guessNumber_int_random_0(void) {\n{\nAKA_test_case_name=\"Solution_guessNumber_int_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\374.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=9;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_guessNumber_int_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->guessNumber(n);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_37\\\\374.cpp\\\\Solution\\\\guessNumber(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
-        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\374.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\n\n\nint n=9;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode n */\n/* NormalNumberDataNode RETURN */\n\n",
-        "isAutomated" : true
-      }
-    ],
-    "fm": "int guessNumber(int n) {\r         long i = 1, j = n, &&mid = 0, &&res = 0;\r         while (i <= j) {\r             mid = (i + j) / 2;\r             res = guess(mid);\r             if (res == 0)\r                 return mid;\r             else if (res == 1)\r                 i = mid + 1;\r             else\r                 j = mid - 1;\r         }\r         return mid;\r     }",
-    "f": [ ],
-    "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_37\\374.cpp\\Solution\\guessNumber(int)",
-    "c": [ "" ]
-  },
-  {
-    "fc": "class Solution {\r public:\r     int wiggleMaxLength(vector<int> &nums) {\r         int n = nums.size();\r         if (n == 0) return 0;\r         int i = 1, max = 1;\r         int pre;\r         while (nums[i] - nums[i - 1] == 0 && i < n)\r             ++i;\r         if (i == n)\r             return max;\r         pre = (nums[i] - nums[i - 1] > 0 ? 1 : -1);\r         ++max;\r         for (i = i + 1; i < n; ++i) {\r             if (nums[i] == nums[i - 1])\r                 continue;\r             int cur = (nums[i] - nums[i - 1] > 0 ? 1 : -1);\r             if (pre != cur) {\r                 ++max;\r                 pre = cur;\r             }\r         }\r         return max;\r     }\r };",
-    "m": [ ],
-    "datatest": [
-      {
-        "id" : 0,
-        "dt" : {
-          "type" : "com.dse.testdata.object.UnitUnderTestNode",
-          "name" : "376.cpp",
-          "virtual_name" : "NON_VALUE",
-          "sourceNode" : ".\\folder_37\\376.cpp",
-          "children" : [ {
-            "type" : "com.dse.testdata.object.GlobalRootDataNode",
-            "name" : "GLOBAL",
-            "virtual_name" : "NON_VALUE",
-            "functionNode" : ".\\folder_37\\376.cpp\\Solution\\wiggleMaxLength(vector<int>&)",
-            "paramExpectedOuputs" : [ {
-              "type" : "com.dse.testdata.object.ClassDataNode",
-              "name" : "AKA_INSTANCE___Solution",
-              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
-              "dataType" : "::Solution",
-              "realType" : "::Solution",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\376.cpp\\Solution\\AKA_INSTANCE___Solution",
-              "correspondingType" : ".\\folder_37\\376.cpp\\Solution"
-            } ],
-            "level" : "GLOBAL",
-            "children" : [ {
-              "type" : "com.dse.testdata.object.ClassDataNode",
-              "name" : "AKA_INSTANCE___Solution",
-              "virtual_name" : "AKA_INSTANCE___Solution",
-              "dataType" : "::Solution",
-              "realType" : "::Solution",
-              "external" : true,
-              "correspondingVar" : ".\\folder_37\\376.cpp\\Solution\\AKA_INSTANCE___Solution",
-              "correspondingType" : ".\\folder_37\\376.cpp\\Solution",
-              "children" : [ {
-                "type" : "com.dse.testdata.object.SubClassDataNode",
-                "name" : "AKA_INSTANCE___Solution",
-                "virtual_name" : "AKA_INSTANCE___Solution",
-                "dataType" : "::Solution",
-                "realType" : "::Solution",
-                "external" : false,
-                "correspondingVar" : ".\\folder_37\\376.cpp\\Solution\\AKA_INSTANCE___Solution",
-                "correspondingType" : ".\\folder_37\\376.cpp\\Solution",
-                "rawType" : "::Solution",
-                "selectedConstructor" : "Solution()",
-                "variableType" : "::Solution",
-                "children" : [ {
-                  "type" : "com.dse.testdata.object.ConstructorDataNode",
-                  "name" : "Solution()",
-                  "virtual_name" : "AKA_INSTANCE___Solution",
-                  "dataType" : "::Solution",
-                  "realType" : "::Solution",
-                  "functionNode" : "\\Solution()"
-                } ]
-              } ]
-            } ]
-          }, {
-            "type" : "com.dse.testdata.object.SubprogramNode",
-            "name" : "wiggleMaxLength(vector<int>&)",
-            "virtual_name" : "NON_VALUE",
-            "dataType" : "int",
-            "realType" : "int",
-            "functionNode" : ".\\folder_37\\376.cpp\\Solution\\wiggleMaxLength(vector<int>&)",
-            "paramExpectedOuputs" : [ {
-              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
-              "name" : "nums",
-              "virtual_name" : "EXPECTED_nums",
-              "dataType" : "vector<int>",
-              "realType" : "vector<int>&",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\376.cpp\\Solution\\wiggleMaxLength(vector<int>&)\\nums",
-              "correspondingType" : "STLListBaseType",
-              "templateArg" : "int"
-            } ],
-            "children" : [ {
-              "type" : "com.dse.testdata.object.RootDataNode",
-              "name" : "STATIC",
-              "virtual_name" : "NON_VALUE",
-              "functionNode" : ".\\folder_37\\376.cpp\\Solution\\wiggleMaxLength(vector<int>&)",
-              "level" : "STATIC"
-            }, {
-              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
-              "name" : "nums",
-              "virtual_name" : "nums",
-              "dataType" : "vector<int>",
-              "realType" : "vector<int>&",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\376.cpp\\Solution\\wiggleMaxLength(vector<int>&)\\nums",
-              "correspondingType" : "STLListBaseType",
-              "templateArg" : "int",
-              "size" : 2,
-              "children" : [ {
-                "type" : "com.dse.testdata.object.NormalNumberDataNode",
-                "name" : "element #0",
-                "virtual_name" : "nums_element0",
-                "dataType" : "int",
-                "realType" : "int",
-                "external" : false,
-                "correspondingVar" : ".\\folder_37\\376.cpp\\Solution\\wiggleMaxLength(vector<int>&)\\nums\\element #0",
-                "correspondingType" : "int",
-                "value" : "1330184830"
-              }, {
-                "type" : "com.dse.testdata.object.NormalNumberDataNode",
-                "name" : "element #1",
-                "virtual_name" : "nums_element1",
-                "dataType" : "int",
-                "realType" : "int",
-                "external" : false,
-                "correspondingVar" : ".\\folder_37\\376.cpp\\Solution\\wiggleMaxLength(vector<int>&)\\nums\\element #1",
-                "correspondingType" : "int",
-                "value" : "-1553076628"
-              } ]
-            }, {
-              "type" : "com.dse.testdata.object.NormalNumberDataNode",
-              "name" : "RETURN",
-              "virtual_name" : "AKA_EXPECTED_OUTPUT",
-              "dataType" : "int",
-              "realType" : "int",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\376.cpp\\Solution\\wiggleMaxLength(vector<int>&)\\RETURN",
-              "correspondingType" : "int",
-              "value" : "null"
-            } ]
-          } ]
+        "fc": "class Solution {\r public:\r     int guessNumber(int n) {\r         long i = 1, j = n, &&mid = 0, &&res = 0;\r         while (i <= j) {\r             mid = (i + j) / 2;\r             res = guess(mid);\r             if (res == 0)\r                 return mid;\r             else if (res == 1)\r                 i = mid + 1;\r             else\r                 j = mid - 1;\r         }\r         return mid;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_37\\374.cpp\\Solution\\guessNumber(int)"
+    },
+    {
+        "f": [],
+        "fm": "int wiggleMaxLength(vector<int> &nums) {\r         int n = nums.size();\r         if (n == 0) return 0;\r         int i = 1, max = 1;\r         int pre;\r         while (nums[i] - nums[i - 1] == 0 && i < n)\r             ++i;\r         if (i == n)\r             return max;\r         pre = (nums[i] - nums[i - 1] > 0 ? 1 : -1);\r         ++max;\r         for (i = i + 1; i < n; ++i) {\r             if (nums[i] == nums[i - 1])\r                 continue;\r             int cur = (nums[i] - nums[i - 1] > 0 ? 1 : -1);\r             if (pre != cur) {\r                 ++max;\r                 pre = cur;\r             }\r         }\r         return max;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {
+                    "type": "com.dse.testdata.object.UnitUnderTestNode",
+                    "name": "376.cpp",
+                    "virtual_name": "NON_VALUE",
+                    "sourceNode": ".\\folder_37\\376.cpp",
+                    "children": [
+                        {
+                            "type": "com.dse.testdata.object.GlobalRootDataNode",
+                            "name": "GLOBAL",
+                            "virtual_name": "NON_VALUE",
+                            "functionNode": ".\\folder_37\\376.cpp\\Solution\\wiggleMaxLength(vector<int>&)",
+                            "paramExpectedOuputs": [
+                                {
+                                    "type": "com.dse.testdata.object.ClassDataNode",
+                                    "name": "AKA_INSTANCE___Solution",
+                                    "virtual_name": "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+                                    "dataType": "::Solution",
+                                    "realType": "::Solution",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\376.cpp\\Solution\\AKA_INSTANCE___Solution",
+                                    "correspondingType": ".\\folder_37\\376.cpp\\Solution"
+                                }
+                            ],
+                            "level": "GLOBAL",
+                            "children": [
+                                {
+                                    "type": "com.dse.testdata.object.ClassDataNode",
+                                    "name": "AKA_INSTANCE___Solution",
+                                    "virtual_name": "AKA_INSTANCE___Solution",
+                                    "dataType": "::Solution",
+                                    "realType": "::Solution",
+                                    "external": true,
+                                    "correspondingVar": ".\\folder_37\\376.cpp\\Solution\\AKA_INSTANCE___Solution",
+                                    "correspondingType": ".\\folder_37\\376.cpp\\Solution",
+                                    "children": [
+                                        {
+                                            "type": "com.dse.testdata.object.SubClassDataNode",
+                                            "name": "AKA_INSTANCE___Solution",
+                                            "virtual_name": "AKA_INSTANCE___Solution",
+                                            "dataType": "::Solution",
+                                            "realType": "::Solution",
+                                            "external": false,
+                                            "correspondingVar": ".\\folder_37\\376.cpp\\Solution\\AKA_INSTANCE___Solution",
+                                            "correspondingType": ".\\folder_37\\376.cpp\\Solution",
+                                            "rawType": "::Solution",
+                                            "selectedConstructor": "Solution()",
+                                            "variableType": "::Solution",
+                                            "children": [
+                                                {
+                                                    "type": "com.dse.testdata.object.ConstructorDataNode",
+                                                    "name": "Solution()",
+                                                    "virtual_name": "AKA_INSTANCE___Solution",
+                                                    "dataType": "::Solution",
+                                                    "realType": "::Solution",
+                                                    "functionNode": "\\Solution()"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "com.dse.testdata.object.SubprogramNode",
+                            "name": "wiggleMaxLength(vector<int>&)",
+                            "virtual_name": "NON_VALUE",
+                            "dataType": "int",
+                            "realType": "int",
+                            "functionNode": ".\\folder_37\\376.cpp\\Solution\\wiggleMaxLength(vector<int>&)",
+                            "paramExpectedOuputs": [
+                                {
+                                    "type": "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                                    "name": "nums",
+                                    "virtual_name": "EXPECTED_nums",
+                                    "dataType": "vector<int>",
+                                    "realType": "vector<int>&",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\376.cpp\\Solution\\wiggleMaxLength(vector<int>&)\\nums",
+                                    "correspondingType": "STLListBaseType",
+                                    "templateArg": "int"
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "type": "com.dse.testdata.object.RootDataNode",
+                                    "name": "STATIC",
+                                    "virtual_name": "NON_VALUE",
+                                    "functionNode": ".\\folder_37\\376.cpp\\Solution\\wiggleMaxLength(vector<int>&)",
+                                    "level": "STATIC"
+                                },
+                                {
+                                    "type": "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                                    "name": "nums",
+                                    "virtual_name": "nums",
+                                    "dataType": "vector<int>",
+                                    "realType": "vector<int>&",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\376.cpp\\Solution\\wiggleMaxLength(vector<int>&)\\nums",
+                                    "correspondingType": "STLListBaseType",
+                                    "templateArg": "int",
+                                    "size": 2,
+                                    "children": [
+                                        {
+                                            "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                            "name": "element #0",
+                                            "virtual_name": "nums_element0",
+                                            "dataType": "int",
+                                            "realType": "int",
+                                            "external": false,
+                                            "correspondingVar": ".\\folder_37\\376.cpp\\Solution\\wiggleMaxLength(vector<int>&)\\nums\\element #0",
+                                            "correspondingType": "int",
+                                            "value": "1330184830"
+                                        },
+                                        {
+                                            "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                            "name": "element #1",
+                                            "virtual_name": "nums_element1",
+                                            "dataType": "int",
+                                            "realType": "int",
+                                            "external": false,
+                                            "correspondingVar": ".\\folder_37\\376.cpp\\Solution\\wiggleMaxLength(vector<int>&)\\nums\\element #1",
+                                            "correspondingType": "int",
+                                            "value": "-1553076628"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                    "name": "RETURN",
+                                    "virtual_name": "AKA_EXPECTED_OUTPUT",
+                                    "dataType": "int",
+                                    "realType": "int",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\376.cpp\\Solution\\wiggleMaxLength(vector<int>&)\\RETURN",
+                                    "correspondingType": "int",
+                                    "value": "null"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "td": "void AKA_TEST_Solution_wiggleMaxLength_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_wiggleMaxLength_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\376.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1330184830;\nnums.push_back(nums_element0);\nint nums_element1=-1553076628;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_wiggleMaxLength_vector_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->wiggleMaxLength(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_37\\\\376.cpp\\\\Solution\\\\wiggleMaxLength(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\376.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1330184830;\nnums.push_back(nums_element0);\nint nums_element1=-1553076628;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": true,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
         },
-        "td" : "void AKA_TEST_Solution_wiggleMaxLength_vector_int_random_4(void) {\n{\nAKA_test_case_name=\"Solution_wiggleMaxLength_vector_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\376.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1330184830;\nnums.push_back(nums_element0);\nint nums_element1=-1553076628;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_wiggleMaxLength_vector_int_random_4\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->wiggleMaxLength(nums);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_37\\\\376.cpp\\\\Solution\\\\wiggleMaxLength(vector<int>&)\");\n\n\nvector<int> EXPECTED_nums;\n\n\n\n// tear down\n;\n}\n}\n",
-        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\376.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<int> nums;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode nums */\nint nums_element0=1330184830;\nnums.push_back(nums_element0);\nint nums_element1=-1553076628;\nnums.push_back(nums_element1);\n/* NormalNumberDataNode RETURN */\n\n",
-        "isAutomated" : true
-      }
-    ],
-    "fm": "int wiggleMaxLength(vector<int> &nums) {\r         int n = nums.size();\r         if (n == 0) return 0;\r         int i = 1, max = 1;\r         int pre;\r         while (nums[i] - nums[i - 1] == 0 && i < n)\r             ++i;\r         if (i == n)\r             return max;\r         pre = (nums[i] - nums[i - 1] > 0 ? 1 : -1);\r         ++max;\r         for (i = i + 1; i < n; ++i) {\r             if (nums[i] == nums[i - 1])\r                 continue;\r             int cur = (nums[i] - nums[i - 1] > 0 ? 1 : -1);\r             if (pre != cur) {\r                 ++max;\r                 pre = cur;\r             }\r         }\r         return max;\r     }",
-    "f": [ ],
-    "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_37\\376.cpp\\Solution\\wiggleMaxLength(vector<int>&)",
-    "c": [ "" ]
-  },
-  {
-    "fc": "class Solution {\r public:\r     int kthSmallest(vector<vector<int>> &matrix, int k) {\r         int n = matrix.size();\r         if (n == 0)\r             return 0;\r         priority_queue<int> heap;\r         for (auto &m: matrix) {\r             for (auto &num: m) {\r                 if (heap.size() > k)\r                     heap.pop();\r                 if (heap.size() < k || num < heap.top())\r                     heap.push(num);\r                 else\r                     break;\r             }\r         }\r         return heap.top();\r     }\r };",
-    "m": [ ],
-    "datatest": [
-      {
-        "id" : 0,
-        "dt" : {
-          "type" : "com.dse.testdata.object.UnitUnderTestNode",
-          "name" : "378.cpp",
-          "virtual_name" : "NON_VALUE",
-          "sourceNode" : ".\\folder_37\\378.cpp",
-          "children" : [ {
-            "type" : "com.dse.testdata.object.GlobalRootDataNode",
-            "name" : "GLOBAL",
-            "virtual_name" : "NON_VALUE",
-            "functionNode" : ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)",
-            "paramExpectedOuputs" : [ {
-              "type" : "com.dse.testdata.object.ClassDataNode",
-              "name" : "AKA_INSTANCE___Solution",
-              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
-              "dataType" : "::Solution",
-              "realType" : "::Solution",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\378.cpp\\Solution\\AKA_INSTANCE___Solution",
-              "correspondingType" : ".\\folder_37\\378.cpp\\Solution"
-            } ],
-            "level" : "GLOBAL",
-            "children" : [ {
-              "type" : "com.dse.testdata.object.ClassDataNode",
-              "name" : "AKA_INSTANCE___Solution",
-              "virtual_name" : "AKA_INSTANCE___Solution",
-              "dataType" : "::Solution",
-              "realType" : "::Solution",
-              "external" : true,
-              "correspondingVar" : ".\\folder_37\\378.cpp\\Solution\\AKA_INSTANCE___Solution",
-              "correspondingType" : ".\\folder_37\\378.cpp\\Solution",
-              "children" : [ {
-                "type" : "com.dse.testdata.object.SubClassDataNode",
-                "name" : "AKA_INSTANCE___Solution",
-                "virtual_name" : "AKA_INSTANCE___Solution",
-                "dataType" : "::Solution",
-                "realType" : "::Solution",
-                "external" : false,
-                "correspondingVar" : ".\\folder_37\\378.cpp\\Solution\\AKA_INSTANCE___Solution",
-                "correspondingType" : ".\\folder_37\\378.cpp\\Solution",
-                "rawType" : "::Solution",
-                "selectedConstructor" : "Solution()",
-                "variableType" : "::Solution",
-                "children" : [ {
-                  "type" : "com.dse.testdata.object.ConstructorDataNode",
-                  "name" : "Solution()",
-                  "virtual_name" : "AKA_INSTANCE___Solution",
-                  "dataType" : "::Solution",
-                  "realType" : "::Solution",
-                  "functionNode" : "\\Solution()"
-                } ]
-              } ]
-            } ]
-          }, {
-            "type" : "com.dse.testdata.object.SubprogramNode",
-            "name" : "kthSmallest(vector<vector<int>>&,int)",
-            "virtual_name" : "NON_VALUE",
-            "dataType" : "int",
-            "realType" : "int",
-            "functionNode" : ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)",
-            "paramExpectedOuputs" : [ {
-              "type" : "com.dse.testdata.object.NormalNumberDataNode",
-              "name" : "k",
-              "virtual_name" : "EXPECTED_k",
-              "dataType" : "int",
-              "realType" : "int",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)\\k",
-              "correspondingType" : "int",
-              "value" : "null"
-            }, {
-              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
-              "name" : "matrix",
-              "virtual_name" : "EXPECTED_matrix",
-              "dataType" : "vector<vector<int>>",
-              "realType" : "vector<vector<int>>&",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)\\matrix",
-              "correspondingType" : "STLListBaseType",
-              "templateArg" : "vector<int>"
-            } ],
-            "children" : [ {
-              "type" : "com.dse.testdata.object.RootDataNode",
-              "name" : "STATIC",
-              "virtual_name" : "NON_VALUE",
-              "functionNode" : ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)",
-              "level" : "STATIC"
-            }, {
-              "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
-              "name" : "matrix",
-              "virtual_name" : "matrix",
-              "dataType" : "vector<vector<int>>",
-              "realType" : "vector<vector<int>>&",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)\\matrix",
-              "correspondingType" : "STLListBaseType",
-              "templateArg" : "vector<int>",
-              "size" : 1,
-              "children" : [ {
-                "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
-                "name" : "element #0",
-                "virtual_name" : "matrix_element0",
-                "dataType" : "vector<int>",
-                "realType" : "vector<int>",
-                "external" : false,
-                "correspondingVar" : ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)\\matrix\\element #0",
-                "correspondingType" : "STLListBaseType",
-                "templateArg" : "int",
-                "size" : 3,
-                "children" : [ {
-                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
-                  "name" : "element #0",
-                  "virtual_name" : "matrix_element0_element0",
-                  "dataType" : "int",
-                  "realType" : "int",
-                  "external" : false,
-                  "correspondingVar" : ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)\\matrix\\element #0\\element #0",
-                  "correspondingType" : "int",
-                  "value" : "-204528368"
-                }, {
-                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
-                  "name" : "element #1",
-                  "virtual_name" : "matrix_element0_element1",
-                  "dataType" : "int",
-                  "realType" : "int",
-                  "external" : false,
-                  "correspondingVar" : ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)\\matrix\\element #0\\element #1",
-                  "correspondingType" : "int",
-                  "value" : "1371231117"
-                }, {
-                  "type" : "com.dse.testdata.object.NormalNumberDataNode",
-                  "name" : "element #2",
-                  "virtual_name" : "matrix_element0_element2",
-                  "dataType" : "int",
-                  "realType" : "int",
-                  "external" : false,
-                  "correspondingVar" : ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)\\matrix\\element #0\\element #2",
-                  "correspondingType" : "int",
-                  "value" : "-1989574137"
-                } ]
-              } ]
-            }, {
-              "type" : "com.dse.testdata.object.NormalNumberDataNode",
-              "name" : "k",
-              "virtual_name" : "k",
-              "dataType" : "int",
-              "realType" : "int",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)\\k",
-              "correspondingType" : "int",
-              "value" : "-485183634"
-            }, {
-              "type" : "com.dse.testdata.object.NormalNumberDataNode",
-              "name" : "RETURN",
-              "virtual_name" : "AKA_EXPECTED_OUTPUT",
-              "dataType" : "int",
-              "realType" : "int",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)\\RETURN",
-              "correspondingType" : "int",
-              "value" : "null"
-            } ]
-          } ]
+        "fc": "class Solution {\r public:\r     int wiggleMaxLength(vector<int> &nums) {\r         int n = nums.size();\r         if (n == 0) return 0;\r         int i = 1, max = 1;\r         int pre;\r         while (nums[i] - nums[i - 1] == 0 && i < n)\r             ++i;\r         if (i == n)\r             return max;\r         pre = (nums[i] - nums[i - 1] > 0 ? 1 : -1);\r         ++max;\r         for (i = i + 1; i < n; ++i) {\r             if (nums[i] == nums[i - 1])\r                 continue;\r             int cur = (nums[i] - nums[i - 1] > 0 ? 1 : -1);\r             if (pre != cur) {\r                 ++max;\r                 pre = cur;\r             }\r         }\r         return max;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_37\\376.cpp\\Solution\\wiggleMaxLength(vector<int>&)"
+    },
+    {
+        "f": [],
+        "fm": "int kthSmallest(vector<vector<int>> &matrix, int k) {\r         int n = matrix.size();\r         if (n == 0)\r             return 0;\r         priority_queue<int> heap;\r         for (auto &m: matrix) {\r             for (auto &num: m) {\r                 if (heap.size() > k)\r                     heap.pop();\r                 if (heap.size() < k || num < heap.top())\r                     heap.push(num);\r                 else\r                     break;\r             }\r         }\r         return heap.top();\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {
+                    "type": "com.dse.testdata.object.UnitUnderTestNode",
+                    "name": "378.cpp",
+                    "virtual_name": "NON_VALUE",
+                    "sourceNode": ".\\folder_37\\378.cpp",
+                    "children": [
+                        {
+                            "type": "com.dse.testdata.object.GlobalRootDataNode",
+                            "name": "GLOBAL",
+                            "virtual_name": "NON_VALUE",
+                            "functionNode": ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)",
+                            "paramExpectedOuputs": [
+                                {
+                                    "type": "com.dse.testdata.object.ClassDataNode",
+                                    "name": "AKA_INSTANCE___Solution",
+                                    "virtual_name": "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+                                    "dataType": "::Solution",
+                                    "realType": "::Solution",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\378.cpp\\Solution\\AKA_INSTANCE___Solution",
+                                    "correspondingType": ".\\folder_37\\378.cpp\\Solution"
+                                }
+                            ],
+                            "level": "GLOBAL",
+                            "children": [
+                                {
+                                    "type": "com.dse.testdata.object.ClassDataNode",
+                                    "name": "AKA_INSTANCE___Solution",
+                                    "virtual_name": "AKA_INSTANCE___Solution",
+                                    "dataType": "::Solution",
+                                    "realType": "::Solution",
+                                    "external": true,
+                                    "correspondingVar": ".\\folder_37\\378.cpp\\Solution\\AKA_INSTANCE___Solution",
+                                    "correspondingType": ".\\folder_37\\378.cpp\\Solution",
+                                    "children": [
+                                        {
+                                            "type": "com.dse.testdata.object.SubClassDataNode",
+                                            "name": "AKA_INSTANCE___Solution",
+                                            "virtual_name": "AKA_INSTANCE___Solution",
+                                            "dataType": "::Solution",
+                                            "realType": "::Solution",
+                                            "external": false,
+                                            "correspondingVar": ".\\folder_37\\378.cpp\\Solution\\AKA_INSTANCE___Solution",
+                                            "correspondingType": ".\\folder_37\\378.cpp\\Solution",
+                                            "rawType": "::Solution",
+                                            "selectedConstructor": "Solution()",
+                                            "variableType": "::Solution",
+                                            "children": [
+                                                {
+                                                    "type": "com.dse.testdata.object.ConstructorDataNode",
+                                                    "name": "Solution()",
+                                                    "virtual_name": "AKA_INSTANCE___Solution",
+                                                    "dataType": "::Solution",
+                                                    "realType": "::Solution",
+                                                    "functionNode": "\\Solution()"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "com.dse.testdata.object.SubprogramNode",
+                            "name": "kthSmallest(vector<vector<int>>&,int)",
+                            "virtual_name": "NON_VALUE",
+                            "dataType": "int",
+                            "realType": "int",
+                            "functionNode": ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)",
+                            "paramExpectedOuputs": [
+                                {
+                                    "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                    "name": "k",
+                                    "virtual_name": "EXPECTED_k",
+                                    "dataType": "int",
+                                    "realType": "int",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)\\k",
+                                    "correspondingType": "int",
+                                    "value": "null"
+                                },
+                                {
+                                    "type": "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                                    "name": "matrix",
+                                    "virtual_name": "EXPECTED_matrix",
+                                    "dataType": "vector<vector<int>>",
+                                    "realType": "vector<vector<int>>&",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)\\matrix",
+                                    "correspondingType": "STLListBaseType",
+                                    "templateArg": "vector<int>"
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "type": "com.dse.testdata.object.RootDataNode",
+                                    "name": "STATIC",
+                                    "virtual_name": "NON_VALUE",
+                                    "functionNode": ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)",
+                                    "level": "STATIC"
+                                },
+                                {
+                                    "type": "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                                    "name": "matrix",
+                                    "virtual_name": "matrix",
+                                    "dataType": "vector<vector<int>>",
+                                    "realType": "vector<vector<int>>&",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)\\matrix",
+                                    "correspondingType": "STLListBaseType",
+                                    "templateArg": "vector<int>",
+                                    "size": 1,
+                                    "children": [
+                                        {
+                                            "type": "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                                            "name": "element #0",
+                                            "virtual_name": "matrix_element0",
+                                            "dataType": "vector<int>",
+                                            "realType": "vector<int>",
+                                            "external": false,
+                                            "correspondingVar": ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)\\matrix\\element #0",
+                                            "correspondingType": "STLListBaseType",
+                                            "templateArg": "int",
+                                            "size": 3,
+                                            "children": [
+                                                {
+                                                    "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                                    "name": "element #0",
+                                                    "virtual_name": "matrix_element0_element0",
+                                                    "dataType": "int",
+                                                    "realType": "int",
+                                                    "external": false,
+                                                    "correspondingVar": ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)\\matrix\\element #0\\element #0",
+                                                    "correspondingType": "int",
+                                                    "value": "-204528368"
+                                                },
+                                                {
+                                                    "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                                    "name": "element #1",
+                                                    "virtual_name": "matrix_element0_element1",
+                                                    "dataType": "int",
+                                                    "realType": "int",
+                                                    "external": false,
+                                                    "correspondingVar": ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)\\matrix\\element #0\\element #1",
+                                                    "correspondingType": "int",
+                                                    "value": "1371231117"
+                                                },
+                                                {
+                                                    "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                                    "name": "element #2",
+                                                    "virtual_name": "matrix_element0_element2",
+                                                    "dataType": "int",
+                                                    "realType": "int",
+                                                    "external": false,
+                                                    "correspondingVar": ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)\\matrix\\element #0\\element #2",
+                                                    "correspondingType": "int",
+                                                    "value": "-1989574137"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                    "name": "k",
+                                    "virtual_name": "k",
+                                    "dataType": "int",
+                                    "realType": "int",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)\\k",
+                                    "correspondingType": "int",
+                                    "value": "-485183634"
+                                },
+                                {
+                                    "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                    "name": "RETURN",
+                                    "virtual_name": "AKA_EXPECTED_OUTPUT",
+                                    "dataType": "int",
+                                    "realType": "int",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)\\RETURN",
+                                    "correspondingType": "int",
+                                    "value": "null"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "td": "void AKA_TEST_Solution_kthSmallest_vector_vector_int_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_kthSmallest_vector_vector_int_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\378.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n\nint k=-485183634;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-204528368;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=1371231117;\nmatrix_element0.push_back(matrix_element0_element1);\nint matrix_element0_element2=-1989574137;\nmatrix_element0.push_back(matrix_element0_element2);\nmatrix.push_back(matrix_element0);\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_kthSmallest_vector_vector_int_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->kthSmallest(matrix,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_37\\\\378.cpp\\\\Solution\\\\kthSmallest(vector<vector<int>>&,int)\");\n\n\nvector<vector<int>> EXPECTED_matrix;\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\378.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n\nint k=-485183634;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-204528368;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=1371231117;\nmatrix_element0.push_back(matrix_element0_element1);\nint matrix_element0_element2=-1989574137;\nmatrix_element0.push_back(matrix_element0_element2);\nmatrix.push_back(matrix_element0);\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": true,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
         },
-        "td" : "void AKA_TEST_Solution_kthSmallest_vector_vector_int_int_random_2(void) {\n{\nAKA_test_case_name=\"Solution_kthSmallest_vector_vector_int_int_random_2\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\378.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n\nint k=-485183634;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-204528368;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=1371231117;\nmatrix_element0.push_back(matrix_element0_element1);\nint matrix_element0_element2=-1989574137;\nmatrix_element0.push_back(matrix_element0_element2);\nmatrix.push_back(matrix_element0);\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_kthSmallest_vector_vector_int_int_random_2\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->kthSmallest(matrix,k);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_37\\\\378.cpp\\\\Solution\\\\kthSmallest(vector<vector<int>>&,int)\");\n\n\nvector<vector<int>> EXPECTED_matrix;\n\n\n\n// tear down\n;\n}\n}\n",
-        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\378.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nvector<vector<int>> matrix;\n\n\nint k=-485183634;\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* VectorDataNode matrix */\nvector<int> matrix_element0;\nint matrix_element0_element0=-204528368;\nmatrix_element0.push_back(matrix_element0_element0);\nint matrix_element0_element1=1371231117;\nmatrix_element0.push_back(matrix_element0_element1);\nint matrix_element0_element2=-1989574137;\nmatrix_element0.push_back(matrix_element0_element2);\nmatrix.push_back(matrix_element0);\n/* NormalNumberDataNode k */\n/* NormalNumberDataNode RETURN */\n\n",
-        "isAutomated" : true
-      }
-    ],
-    "fm": "int kthSmallest(vector<vector<int>> &matrix, int k) {\r         int n = matrix.size();\r         if (n == 0)\r             return 0;\r         priority_queue<int> heap;\r         for (auto &m: matrix) {\r             for (auto &num: m) {\r                 if (heap.size() > k)\r                     heap.pop();\r                 if (heap.size() < k || num < heap.top())\r                     heap.push(num);\r                 else\r                     break;\r             }\r         }\r         return heap.top();\r     }",
-    "f": [ ],
-    "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)",
-    "c": [ "" ]
-  },
-  {
-    "fc": "class RandomizedSet {\r public:\r     unordered_map<int, int> M;\r     vector<int> V;\r \r     /** Initialize your data structure here. */\r     RandomizedSet() {\r         M = unordered_map<int, int>();\r         V = vector<int>();\r     }\r \r     /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */\r     bool insert(int val) {\r         if (M.find(val) != M.end())\r             return false;\r         V.push_back(val);\r         M.insert(std::pair<int, int>(val, V.size() - 1));\r         return true;\r     }\r \r     /** Removes a value from the set. Returns true if the set contained the specified element. */\r     bool remove(int val) {\r         if (M.find(val) == M.end())\r             return false;\r         int last = V.back();\r         M[last] = M[val];\r         V[M[last]] = last;\r         V.pop_back();\r         M.erase(val);\r         return true;\r     }\r \r     /** Get a random element from the set. */\r     int getRandom() {\r         return V[rand() % V.size()];\r     }\r };",
-    "m": [ ],
-    "datatest": [
-      {
-        "id" : 0,
-        "dt" : {
-          "type" : "com.dse.testdata.object.UnitUnderTestNode",
-          "name" : "380.cpp",
-          "virtual_name" : "NON_VALUE",
-          "sourceNode" : ".\\folder_37\\380.cpp",
-          "children" : [ {
-            "type" : "com.dse.testdata.object.GlobalRootDataNode",
-            "name" : "GLOBAL",
-            "virtual_name" : "NON_VALUE",
-            "functionNode" : ".\\folder_37\\380.cpp\\RandomizedSet\\RandomizedSet()",
-            "paramExpectedOuputs" : [ {
-              "type" : "com.dse.testdata.object.ClassDataNode",
-              "name" : "AKA_INSTANCE___RandomizedSet",
-              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___RandomizedSet",
-              "dataType" : "::RandomizedSet",
-              "realType" : "::RandomizedSet",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
-              "correspondingType" : ".\\folder_37\\380.cpp\\RandomizedSet",
-              "children" : [ {
-                "type" : "com.dse.testdata.object.SubClassDataNode",
-                "name" : "AKA_INSTANCE___RandomizedSet",
-                "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___RandomizedSet",
-                "dataType" : "::RandomizedSet",
-                "realType" : "::RandomizedSet",
-                "external" : false,
-                "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
-                "correspondingType" : ".\\folder_37\\380.cpp\\RandomizedSet",
-                "rawType" : "::RandomizedSet",
-                "selectedConstructor" : "RandomizedSet()",
-                "variableType" : "::RandomizedSet",
-                "children" : [ {
-                  "type" : "com.dse.testdata.object.ConstructorDataNode",
-                  "name" : "RandomizedSet()",
-                  "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___RandomizedSet",
-                  "dataType" : "::RandomizedSet",
-                  "realType" : "::RandomizedSet",
-                  "functionNode" : ".\\folder_37\\380.cpp\\RandomizedSet\\RandomizedSet()"
-                }, {
-                  "type" : "com.dse.testdata.object.stl.containers.unordered.UnorderedMapDataNode",
-                  "name" : "M",
-                  "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___RandomizedSet->M",
-                  "dataType" : "unordered_map<int,int>",
-                  "realType" : "unordered_map<int,int>",
-                  "external" : false,
-                  "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\M",
-                  "correspondingType" : "STLListBaseType",
-                  "templateArg" : "std::pair<int, int>"
-                }, {
-                  "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
-                  "name" : "V",
-                  "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___RandomizedSet->V",
-                  "dataType" : "vector<int>",
-                  "realType" : "vector<int>",
-                  "external" : false,
-                  "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\V",
-                  "correspondingType" : "STLListBaseType",
-                  "templateArg" : "int"
-                } ]
-              } ]
-            } ],
-            "level" : "GLOBAL",
-            "children" : [ {
-              "type" : "com.dse.testdata.object.ClassDataNode",
-              "name" : "AKA_INSTANCE___RandomizedSet",
-              "virtual_name" : "AKA_INSTANCE___RandomizedSet",
-              "dataType" : "::RandomizedSet",
-              "realType" : "::RandomizedSet",
-              "external" : true,
-              "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
-              "correspondingType" : ".\\folder_37\\380.cpp\\RandomizedSet",
-              "children" : [ {
-                "type" : "com.dse.testdata.object.SubClassDataNode",
-                "name" : "AKA_INSTANCE___RandomizedSet",
-                "virtual_name" : "AKA_INSTANCE___RandomizedSet",
-                "dataType" : "::RandomizedSet",
-                "realType" : "::RandomizedSet",
-                "external" : false,
-                "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
-                "correspondingType" : ".\\folder_37\\380.cpp\\RandomizedSet",
-                "rawType" : "::RandomizedSet",
-                "selectedConstructor" : "RandomizedSet()",
-                "variableType" : "::RandomizedSet",
-                "children" : [ {
-                  "type" : "com.dse.testdata.object.ConstructorDataNode",
-                  "name" : "RandomizedSet()",
-                  "virtual_name" : "AKA_INSTANCE___RandomizedSet",
-                  "dataType" : "::RandomizedSet",
-                  "realType" : "::RandomizedSet",
-                  "functionNode" : ".\\folder_37\\380.cpp\\RandomizedSet\\RandomizedSet()"
-                }, {
-                  "type" : "com.dse.testdata.object.stl.containers.unordered.UnorderedMapDataNode",
-                  "name" : "M",
-                  "virtual_name" : "AKA_INSTANCE___RandomizedSet->M",
-                  "dataType" : "unordered_map<int,int>",
-                  "realType" : "unordered_map<int,int>",
-                  "external" : false,
-                  "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\M",
-                  "correspondingType" : "STLListBaseType",
-                  "templateArg" : "std::pair<int, int>"
-                }, {
-                  "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
-                  "name" : "V",
-                  "virtual_name" : "AKA_INSTANCE___RandomizedSet->V",
-                  "dataType" : "vector<int>",
-                  "realType" : "vector<int>",
-                  "external" : false,
-                  "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\V",
-                  "correspondingType" : "STLListBaseType",
-                  "templateArg" : "int",
-                  "size" : 2,
-                  "children" : [ {
-                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
-                    "name" : "element #0",
-                    "virtual_name" : "AKA_INSTANCE___RandomizedSet_V_element0",
-                    "dataType" : "int",
-                    "realType" : "int",
-                    "external" : false,
-                    "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\V\\element #0",
-                    "correspondingType" : "int",
-                    "value" : "1182525244"
-                  }, {
-                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
-                    "name" : "element #1",
-                    "virtual_name" : "AKA_INSTANCE___RandomizedSet_V_element1",
-                    "dataType" : "int",
-                    "realType" : "int",
-                    "external" : false,
-                    "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\V\\element #1",
-                    "correspondingType" : "int",
-                    "value" : "-1087047805"
-                  } ]
-                } ]
-              } ]
-            } ]
-          }, {
-            "type" : "com.dse.testdata.object.SubprogramNode",
-            "name" : "RandomizedSet()",
-            "virtual_name" : "NON_VALUE",
-            "dataType" : "",
-            "realType" : "",
-            "functionNode" : ".\\folder_37\\380.cpp\\RandomizedSet\\RandomizedSet()"
-          } ]
+        "fc": "class Solution {\r public:\r     int kthSmallest(vector<vector<int>> &matrix, int k) {\r         int n = matrix.size();\r         if (n == 0)\r             return 0;\r         priority_queue<int> heap;\r         for (auto &m: matrix) {\r             for (auto &num: m) {\r                 if (heap.size() > k)\r                     heap.pop();\r                 if (heap.size() < k || num < heap.top())\r                     heap.push(num);\r                 else\r                     break;\r             }\r         }\r         return heap.top();\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_37\\378.cpp\\Solution\\kthSmallest(vector<vector<int>>&,int)"
+    },
+    {
+        "f": [
+            "unordered_map<int, int> M;",
+            "vector<int> V;"
+        ],
+        "fm": "RandomizedSet() {\r         M = unordered_map<int, int>();\r         V = vector<int>();\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {
+                    "type": "com.dse.testdata.object.UnitUnderTestNode",
+                    "name": "380.cpp",
+                    "virtual_name": "NON_VALUE",
+                    "sourceNode": ".\\folder_37\\380.cpp",
+                    "children": [
+                        {
+                            "type": "com.dse.testdata.object.GlobalRootDataNode",
+                            "name": "GLOBAL",
+                            "virtual_name": "NON_VALUE",
+                            "functionNode": ".\\folder_37\\380.cpp\\RandomizedSet\\RandomizedSet()",
+                            "paramExpectedOuputs": [
+                                {
+                                    "type": "com.dse.testdata.object.ClassDataNode",
+                                    "name": "AKA_INSTANCE___RandomizedSet",
+                                    "virtual_name": "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___RandomizedSet",
+                                    "dataType": "::RandomizedSet",
+                                    "realType": "::RandomizedSet",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
+                                    "correspondingType": ".\\folder_37\\380.cpp\\RandomizedSet",
+                                    "children": [
+                                        {
+                                            "type": "com.dse.testdata.object.SubClassDataNode",
+                                            "name": "AKA_INSTANCE___RandomizedSet",
+                                            "virtual_name": "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___RandomizedSet",
+                                            "dataType": "::RandomizedSet",
+                                            "realType": "::RandomizedSet",
+                                            "external": false,
+                                            "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
+                                            "correspondingType": ".\\folder_37\\380.cpp\\RandomizedSet",
+                                            "rawType": "::RandomizedSet",
+                                            "selectedConstructor": "RandomizedSet()",
+                                            "variableType": "::RandomizedSet",
+                                            "children": [
+                                                {
+                                                    "type": "com.dse.testdata.object.ConstructorDataNode",
+                                                    "name": "RandomizedSet()",
+                                                    "virtual_name": "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___RandomizedSet",
+                                                    "dataType": "::RandomizedSet",
+                                                    "realType": "::RandomizedSet",
+                                                    "functionNode": ".\\folder_37\\380.cpp\\RandomizedSet\\RandomizedSet()"
+                                                },
+                                                {
+                                                    "type": "com.dse.testdata.object.stl.containers.unordered.UnorderedMapDataNode",
+                                                    "name": "M",
+                                                    "virtual_name": "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___RandomizedSet->M",
+                                                    "dataType": "unordered_map<int,int>",
+                                                    "realType": "unordered_map<int,int>",
+                                                    "external": false,
+                                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\M",
+                                                    "correspondingType": "STLListBaseType",
+                                                    "templateArg": "std::pair<int, int>"
+                                                },
+                                                {
+                                                    "type": "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                                                    "name": "V",
+                                                    "virtual_name": "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___RandomizedSet->V",
+                                                    "dataType": "vector<int>",
+                                                    "realType": "vector<int>",
+                                                    "external": false,
+                                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\V",
+                                                    "correspondingType": "STLListBaseType",
+                                                    "templateArg": "int"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "level": "GLOBAL",
+                            "children": [
+                                {
+                                    "type": "com.dse.testdata.object.ClassDataNode",
+                                    "name": "AKA_INSTANCE___RandomizedSet",
+                                    "virtual_name": "AKA_INSTANCE___RandomizedSet",
+                                    "dataType": "::RandomizedSet",
+                                    "realType": "::RandomizedSet",
+                                    "external": true,
+                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
+                                    "correspondingType": ".\\folder_37\\380.cpp\\RandomizedSet",
+                                    "children": [
+                                        {
+                                            "type": "com.dse.testdata.object.SubClassDataNode",
+                                            "name": "AKA_INSTANCE___RandomizedSet",
+                                            "virtual_name": "AKA_INSTANCE___RandomizedSet",
+                                            "dataType": "::RandomizedSet",
+                                            "realType": "::RandomizedSet",
+                                            "external": false,
+                                            "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
+                                            "correspondingType": ".\\folder_37\\380.cpp\\RandomizedSet",
+                                            "rawType": "::RandomizedSet",
+                                            "selectedConstructor": "RandomizedSet()",
+                                            "variableType": "::RandomizedSet",
+                                            "children": [
+                                                {
+                                                    "type": "com.dse.testdata.object.ConstructorDataNode",
+                                                    "name": "RandomizedSet()",
+                                                    "virtual_name": "AKA_INSTANCE___RandomizedSet",
+                                                    "dataType": "::RandomizedSet",
+                                                    "realType": "::RandomizedSet",
+                                                    "functionNode": ".\\folder_37\\380.cpp\\RandomizedSet\\RandomizedSet()"
+                                                },
+                                                {
+                                                    "type": "com.dse.testdata.object.stl.containers.unordered.UnorderedMapDataNode",
+                                                    "name": "M",
+                                                    "virtual_name": "AKA_INSTANCE___RandomizedSet->M",
+                                                    "dataType": "unordered_map<int,int>",
+                                                    "realType": "unordered_map<int,int>",
+                                                    "external": false,
+                                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\M",
+                                                    "correspondingType": "STLListBaseType",
+                                                    "templateArg": "std::pair<int, int>"
+                                                },
+                                                {
+                                                    "type": "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                                                    "name": "V",
+                                                    "virtual_name": "AKA_INSTANCE___RandomizedSet->V",
+                                                    "dataType": "vector<int>",
+                                                    "realType": "vector<int>",
+                                                    "external": false,
+                                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\V",
+                                                    "correspondingType": "STLListBaseType",
+                                                    "templateArg": "int",
+                                                    "size": 2,
+                                                    "children": [
+                                                        {
+                                                            "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                                            "name": "element #0",
+                                                            "virtual_name": "AKA_INSTANCE___RandomizedSet_V_element0",
+                                                            "dataType": "int",
+                                                            "realType": "int",
+                                                            "external": false,
+                                                            "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\V\\element #0",
+                                                            "correspondingType": "int",
+                                                            "value": "1182525244"
+                                                        },
+                                                        {
+                                                            "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                                            "name": "element #1",
+                                                            "virtual_name": "AKA_INSTANCE___RandomizedSet_V_element1",
+                                                            "dataType": "int",
+                                                            "realType": "int",
+                                                            "external": false,
+                                                            "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\V\\element #1",
+                                                            "correspondingType": "int",
+                                                            "value": "-1087047805"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "com.dse.testdata.object.SubprogramNode",
+                            "name": "RandomizedSet()",
+                            "virtual_name": "NON_VALUE",
+                            "dataType": "",
+                            "realType": "",
+                            "functionNode": ".\\folder_37\\380.cpp\\RandomizedSet\\RandomizedSet()"
+                        }
+                    ]
+                },
+                "td": "void AKA_TEST_RandomizedSet_RandomizedSet_random_4(void) {\n{\nAKA_test_case_name=\"RandomizedSet_RandomizedSet_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___RandomizedSet */\n/* ConstructorDataNode RandomizedSet() */\nAKA_mark(\"<<PRE-CALLING>> Test RandomizedSet_RandomizedSet_random_4\");AKA_mark(\"Calling: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\RandomizedSet()|ROOT\\\\380.cpp\\\\GLOBAL\\\\AKA_INSTANCE___RandomizedSet\\\\AKA_INSTANCE___RandomizedSet\\\\RandomizedSet()\");AKA_fCall++;AKA_INSTANCE___RandomizedSet = new ::RandomizedSet();\n/* UnorderedMapDataNode M */\n/* VectorDataNode V */\nint AKA_INSTANCE___RandomizedSet_V_element0=1182525244;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element0);\nint AKA_INSTANCE___RandomizedSet_V_element1=-1087047805;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element1);\n\n\n\n\n\n\n\n/* error assertion */\n\n\n/* SubClassDataNode AKA_INSTANCE___RandomizedSet */\n/* ConstructorDataNode RandomizedSet() */\nAKA_mark(\"<<PRE-CALLING>>\");AKA_mark(\"Calling: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\RandomizedSet()|ROOT\\\\380.cpp\\\\GLOBAL\\\\AKA_INSTANCE___RandomizedSet\\\\AKA_INSTANCE___RandomizedSet\\\\RandomizedSet()\");AKA_fCall++;auto EXPECTED_AKA_GLOBAL_AKA_INSTANCE___RandomizedSet = new ::RandomizedSet();\n/* UnorderedMapDataNode M */\n/* VectorDataNode V */\n\n\n\n\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___RandomizedSet */\n/* ConstructorDataNode RandomizedSet() */\nAKA_mark(\"<<PRE-CALLING>> Test RandomizedSet_RandomizedSet_random_4\");AKA_mark(\"Calling: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\RandomizedSet()|ROOT\\\\380.cpp\\\\GLOBAL\\\\AKA_INSTANCE___RandomizedSet\\\\AKA_INSTANCE___RandomizedSet\\\\RandomizedSet()\");AKA_fCall++;AKA_INSTANCE___RandomizedSet = new ::RandomizedSet();\n/* UnorderedMapDataNode M */\n/* VectorDataNode V */\nint AKA_INSTANCE___RandomizedSet_V_element0=1182525244;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element0);\nint AKA_INSTANCE___RandomizedSet_V_element1=-1087047805;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element1);\n\n\n",
+                "isAutomated": true,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
         },
-        "td" : "void AKA_TEST_RandomizedSet_RandomizedSet_random_4(void) {\n{\nAKA_test_case_name=\"RandomizedSet_RandomizedSet_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___RandomizedSet */\n/* ConstructorDataNode RandomizedSet() */\nAKA_mark(\"<<PRE-CALLING>> Test RandomizedSet_RandomizedSet_random_4\");AKA_mark(\"Calling: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\RandomizedSet()|ROOT\\\\380.cpp\\\\GLOBAL\\\\AKA_INSTANCE___RandomizedSet\\\\AKA_INSTANCE___RandomizedSet\\\\RandomizedSet()\");AKA_fCall++;AKA_INSTANCE___RandomizedSet = new ::RandomizedSet();\n/* UnorderedMapDataNode M */\n/* VectorDataNode V */\nint AKA_INSTANCE___RandomizedSet_V_element0=1182525244;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element0);\nint AKA_INSTANCE___RandomizedSet_V_element1=-1087047805;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element1);\n\n\n\n\n\n\n\n/* error assertion */\n\n\n/* SubClassDataNode AKA_INSTANCE___RandomizedSet */\n/* ConstructorDataNode RandomizedSet() */\nAKA_mark(\"<<PRE-CALLING>>\");AKA_mark(\"Calling: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\RandomizedSet()|ROOT\\\\380.cpp\\\\GLOBAL\\\\AKA_INSTANCE___RandomizedSet\\\\AKA_INSTANCE___RandomizedSet\\\\RandomizedSet()\");AKA_fCall++;auto EXPECTED_AKA_GLOBAL_AKA_INSTANCE___RandomizedSet = new ::RandomizedSet();\n/* UnorderedMapDataNode M */\n/* VectorDataNode V */\n\n\n\n\n\n\n\n\n// tear down\n;\n}\n}\n",
-        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___RandomizedSet */\n/* ConstructorDataNode RandomizedSet() */\nAKA_mark(\"<<PRE-CALLING>> Test RandomizedSet_RandomizedSet_random_4\");AKA_mark(\"Calling: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\RandomizedSet()|ROOT\\\\380.cpp\\\\GLOBAL\\\\AKA_INSTANCE___RandomizedSet\\\\AKA_INSTANCE___RandomizedSet\\\\RandomizedSet()\");AKA_fCall++;AKA_INSTANCE___RandomizedSet = new ::RandomizedSet();\n/* UnorderedMapDataNode M */\n/* VectorDataNode V */\nint AKA_INSTANCE___RandomizedSet_V_element0=1182525244;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element0);\nint AKA_INSTANCE___RandomizedSet_V_element1=-1087047805;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element1);\n\n\n",
-        "isAutomated" : true
-      }
-    ],
-    "fm": "RandomizedSet() {\r         M = unordered_map<int, int>();\r         V = vector<int>();\r     }",
-    "f": [ "unordered_map<int, int> M;", "vector<int> V;" ],
-    "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_37\\380.cpp\\RandomizedSet\\RandomizedSet()",
-    "c": [ "RandomizedSet() {\r\n        M = unordered_map<int, int>();\r\n        V = vector<int>();\r\n    }" ]
-  },
-  {
-    "fc": "class RandomizedSet {\r public:\r     unordered_map<int, int> M;\r     vector<int> V;\r \r     /** Initialize your data structure here. */\r     RandomizedSet() {\r         M = unordered_map<int, int>();\r         V = vector<int>();\r     }\r \r     /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */\r     bool insert(int val) {\r         if (M.find(val) != M.end())\r             return false;\r         V.push_back(val);\r         M.insert(std::pair<int, int>(val, V.size() - 1));\r         return true;\r     }\r \r     /** Removes a value from the set. Returns true if the set contained the specified element. */\r     bool remove(int val) {\r         if (M.find(val) == M.end())\r             return false;\r         int last = V.back();\r         M[last] = M[val];\r         V[M[last]] = last;\r         V.pop_back();\r         M.erase(val);\r         return true;\r     }\r \r     /** Get a random element from the set. */\r     int getRandom() {\r         return V[rand() % V.size()];\r     }\r };",
-    "m": [ ],
-    "datatest": [
-      {
-        "id" : 0,
-        "dt" : {
-          "type" : "com.dse.testdata.object.UnitUnderTestNode",
-          "name" : "380.cpp",
-          "virtual_name" : "NON_VALUE",
-          "sourceNode" : ".\\folder_37\\380.cpp",
-          "children" : [ {
-            "type" : "com.dse.testdata.object.GlobalRootDataNode",
-            "name" : "GLOBAL",
-            "virtual_name" : "NON_VALUE",
-            "functionNode" : ".\\folder_37\\380.cpp\\RandomizedSet\\insert(int)",
-            "paramExpectedOuputs" : [ {
-              "type" : "com.dse.testdata.object.ClassDataNode",
-              "name" : "AKA_INSTANCE___RandomizedSet",
-              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___RandomizedSet",
-              "dataType" : "::RandomizedSet",
-              "realType" : "::RandomizedSet",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
-              "correspondingType" : ".\\folder_37\\380.cpp\\RandomizedSet"
-            } ],
-            "level" : "GLOBAL",
-            "children" : [ {
-              "type" : "com.dse.testdata.object.ClassDataNode",
-              "name" : "AKA_INSTANCE___RandomizedSet",
-              "virtual_name" : "AKA_INSTANCE___RandomizedSet",
-              "dataType" : "::RandomizedSet",
-              "realType" : "::RandomizedSet",
-              "external" : true,
-              "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
-              "correspondingType" : ".\\folder_37\\380.cpp\\RandomizedSet",
-              "children" : [ {
-                "type" : "com.dse.testdata.object.SubClassDataNode",
-                "name" : "AKA_INSTANCE___RandomizedSet",
-                "virtual_name" : "AKA_INSTANCE___RandomizedSet",
-                "dataType" : "::RandomizedSet",
-                "realType" : "::RandomizedSet",
-                "external" : false,
-                "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
-                "correspondingType" : ".\\folder_37\\380.cpp\\RandomizedSet",
-                "rawType" : "::RandomizedSet",
-                "selectedConstructor" : "RandomizedSet()",
-                "variableType" : "::RandomizedSet",
-                "children" : [ {
-                  "type" : "com.dse.testdata.object.ConstructorDataNode",
-                  "name" : "RandomizedSet()",
-                  "virtual_name" : "AKA_INSTANCE___RandomizedSet",
-                  "dataType" : "::RandomizedSet",
-                  "realType" : "::RandomizedSet",
-                  "functionNode" : ".\\folder_37\\380.cpp\\RandomizedSet\\RandomizedSet()"
-                }, {
-                  "type" : "com.dse.testdata.object.stl.containers.unordered.UnorderedMapDataNode",
-                  "name" : "M",
-                  "virtual_name" : "AKA_INSTANCE___RandomizedSet->M",
-                  "dataType" : "unordered_map<int,int>",
-                  "realType" : "unordered_map<int,int>",
-                  "external" : false,
-                  "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\M",
-                  "correspondingType" : "STLListBaseType",
-                  "templateArg" : "std::pair<int, int>"
-                }, {
-                  "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
-                  "name" : "V",
-                  "virtual_name" : "AKA_INSTANCE___RandomizedSet->V",
-                  "dataType" : "vector<int>",
-                  "realType" : "vector<int>",
-                  "external" : false,
-                  "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\V",
-                  "correspondingType" : "STLListBaseType",
-                  "templateArg" : "int",
-                  "size" : 3,
-                  "children" : [ {
-                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
-                    "name" : "element #0",
-                    "virtual_name" : "AKA_INSTANCE___RandomizedSet_V_element0",
-                    "dataType" : "int",
-                    "realType" : "int",
-                    "external" : false,
-                    "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\V\\element #0",
-                    "correspondingType" : "int",
-                    "value" : "-360364804"
-                  }, {
-                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
-                    "name" : "element #1",
-                    "virtual_name" : "AKA_INSTANCE___RandomizedSet_V_element1",
-                    "dataType" : "int",
-                    "realType" : "int",
-                    "external" : false,
-                    "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\V\\element #1",
-                    "correspondingType" : "int",
-                    "value" : "1287687883"
-                  }, {
-                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
-                    "name" : "element #2",
-                    "virtual_name" : "AKA_INSTANCE___RandomizedSet_V_element2",
-                    "dataType" : "int",
-                    "realType" : "int",
-                    "external" : false,
-                    "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\V\\element #2",
-                    "correspondingType" : "int",
-                    "value" : "353351768"
-                  } ]
-                } ]
-              } ]
-            } ]
-          }, {
-            "type" : "com.dse.testdata.object.SubprogramNode",
-            "name" : "insert(int)",
-            "virtual_name" : "NON_VALUE",
-            "dataType" : "bool",
-            "realType" : "bool",
-            "functionNode" : ".\\folder_37\\380.cpp\\RandomizedSet\\insert(int)",
-            "paramExpectedOuputs" : [ {
-              "type" : "com.dse.testdata.object.NormalNumberDataNode",
-              "name" : "val",
-              "virtual_name" : "EXPECTED_val",
-              "dataType" : "int",
-              "realType" : "int",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\insert(int)\\val",
-              "correspondingType" : "int",
-              "value" : "null"
-            } ],
-            "children" : [ {
-              "type" : "com.dse.testdata.object.RootDataNode",
-              "name" : "STATIC",
-              "virtual_name" : "NON_VALUE",
-              "functionNode" : ".\\folder_37\\380.cpp\\RandomizedSet\\insert(int)",
-              "level" : "STATIC"
-            }, {
-              "type" : "com.dse.testdata.object.NormalNumberDataNode",
-              "name" : "val",
-              "virtual_name" : "val",
-              "dataType" : "int",
-              "realType" : "int",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\insert(int)\\val",
-              "correspondingType" : "int",
-              "value" : "-539406586"
-            }, {
-              "type" : "com.dse.testdata.object.NormalNumberDataNode",
-              "name" : "RETURN",
-              "virtual_name" : "AKA_EXPECTED_OUTPUT",
-              "dataType" : "bool",
-              "realType" : "bool",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\insert(int)\\RETURN",
-              "correspondingType" : "bool",
-              "value" : "null"
-            } ]
-          } ]
+        "fc": "class RandomizedSet {\r public:\r     unordered_map<int, int> M;\r     vector<int> V;\r \r     /** Initialize your data structure here. */\r     RandomizedSet() {\r         M = unordered_map<int, int>();\r         V = vector<int>();\r     }\r \r     /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */\r     bool insert(int val) {\r         if (M.find(val) != M.end())\r             return false;\r         V.push_back(val);\r         M.insert(std::pair<int, int>(val, V.size() - 1));\r         return true;\r     }\r \r     /** Removes a value from the set. Returns true if the set contained the specified element. */\r     bool remove(int val) {\r         if (M.find(val) == M.end())\r             return false;\r         int last = V.back();\r         M[last] = M[val];\r         V[M[last]] = last;\r         V.pop_back();\r         M.erase(val);\r         return true;\r     }\r \r     /** Get a random element from the set. */\r     int getRandom() {\r         return V[rand() % V.size()];\r     }\r };",
+        "c": [
+            "RandomizedSet() {\r\n        M = unordered_map<int, int>();\r\n        V = vector<int>();\r\n    }"
+        ],
+        "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_37\\380.cpp\\RandomizedSet\\RandomizedSet()"
+    },
+    {
+        "f": [
+            "unordered_map<int, int> M;",
+            "vector<int> V;"
+        ],
+        "fm": "bool insert(int val) {\r         if (M.find(val) != M.end())\r             return false;\r         V.push_back(val);\r         M.insert(std::pair<int, int>(val, V.size() - 1));\r         return true;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {
+                    "type": "com.dse.testdata.object.UnitUnderTestNode",
+                    "name": "380.cpp",
+                    "virtual_name": "NON_VALUE",
+                    "sourceNode": ".\\folder_37\\380.cpp",
+                    "children": [
+                        {
+                            "type": "com.dse.testdata.object.GlobalRootDataNode",
+                            "name": "GLOBAL",
+                            "virtual_name": "NON_VALUE",
+                            "functionNode": ".\\folder_37\\380.cpp\\RandomizedSet\\insert(int)",
+                            "paramExpectedOuputs": [
+                                {
+                                    "type": "com.dse.testdata.object.ClassDataNode",
+                                    "name": "AKA_INSTANCE___RandomizedSet",
+                                    "virtual_name": "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___RandomizedSet",
+                                    "dataType": "::RandomizedSet",
+                                    "realType": "::RandomizedSet",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
+                                    "correspondingType": ".\\folder_37\\380.cpp\\RandomizedSet"
+                                }
+                            ],
+                            "level": "GLOBAL",
+                            "children": [
+                                {
+                                    "type": "com.dse.testdata.object.ClassDataNode",
+                                    "name": "AKA_INSTANCE___RandomizedSet",
+                                    "virtual_name": "AKA_INSTANCE___RandomizedSet",
+                                    "dataType": "::RandomizedSet",
+                                    "realType": "::RandomizedSet",
+                                    "external": true,
+                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
+                                    "correspondingType": ".\\folder_37\\380.cpp\\RandomizedSet",
+                                    "children": [
+                                        {
+                                            "type": "com.dse.testdata.object.SubClassDataNode",
+                                            "name": "AKA_INSTANCE___RandomizedSet",
+                                            "virtual_name": "AKA_INSTANCE___RandomizedSet",
+                                            "dataType": "::RandomizedSet",
+                                            "realType": "::RandomizedSet",
+                                            "external": false,
+                                            "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
+                                            "correspondingType": ".\\folder_37\\380.cpp\\RandomizedSet",
+                                            "rawType": "::RandomizedSet",
+                                            "selectedConstructor": "RandomizedSet()",
+                                            "variableType": "::RandomizedSet",
+                                            "children": [
+                                                {
+                                                    "type": "com.dse.testdata.object.ConstructorDataNode",
+                                                    "name": "RandomizedSet()",
+                                                    "virtual_name": "AKA_INSTANCE___RandomizedSet",
+                                                    "dataType": "::RandomizedSet",
+                                                    "realType": "::RandomizedSet",
+                                                    "functionNode": ".\\folder_37\\380.cpp\\RandomizedSet\\RandomizedSet()"
+                                                },
+                                                {
+                                                    "type": "com.dse.testdata.object.stl.containers.unordered.UnorderedMapDataNode",
+                                                    "name": "M",
+                                                    "virtual_name": "AKA_INSTANCE___RandomizedSet->M",
+                                                    "dataType": "unordered_map<int,int>",
+                                                    "realType": "unordered_map<int,int>",
+                                                    "external": false,
+                                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\M",
+                                                    "correspondingType": "STLListBaseType",
+                                                    "templateArg": "std::pair<int, int>"
+                                                },
+                                                {
+                                                    "type": "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                                                    "name": "V",
+                                                    "virtual_name": "AKA_INSTANCE___RandomizedSet->V",
+                                                    "dataType": "vector<int>",
+                                                    "realType": "vector<int>",
+                                                    "external": false,
+                                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\V",
+                                                    "correspondingType": "STLListBaseType",
+                                                    "templateArg": "int",
+                                                    "size": 3,
+                                                    "children": [
+                                                        {
+                                                            "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                                            "name": "element #0",
+                                                            "virtual_name": "AKA_INSTANCE___RandomizedSet_V_element0",
+                                                            "dataType": "int",
+                                                            "realType": "int",
+                                                            "external": false,
+                                                            "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\V\\element #0",
+                                                            "correspondingType": "int",
+                                                            "value": "-360364804"
+                                                        },
+                                                        {
+                                                            "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                                            "name": "element #1",
+                                                            "virtual_name": "AKA_INSTANCE___RandomizedSet_V_element1",
+                                                            "dataType": "int",
+                                                            "realType": "int",
+                                                            "external": false,
+                                                            "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\V\\element #1",
+                                                            "correspondingType": "int",
+                                                            "value": "1287687883"
+                                                        },
+                                                        {
+                                                            "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                                            "name": "element #2",
+                                                            "virtual_name": "AKA_INSTANCE___RandomizedSet_V_element2",
+                                                            "dataType": "int",
+                                                            "realType": "int",
+                                                            "external": false,
+                                                            "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\V\\element #2",
+                                                            "correspondingType": "int",
+                                                            "value": "353351768"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "com.dse.testdata.object.SubprogramNode",
+                            "name": "insert(int)",
+                            "virtual_name": "NON_VALUE",
+                            "dataType": "bool",
+                            "realType": "bool",
+                            "functionNode": ".\\folder_37\\380.cpp\\RandomizedSet\\insert(int)",
+                            "paramExpectedOuputs": [
+                                {
+                                    "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                    "name": "val",
+                                    "virtual_name": "EXPECTED_val",
+                                    "dataType": "int",
+                                    "realType": "int",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\insert(int)\\val",
+                                    "correspondingType": "int",
+                                    "value": "null"
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "type": "com.dse.testdata.object.RootDataNode",
+                                    "name": "STATIC",
+                                    "virtual_name": "NON_VALUE",
+                                    "functionNode": ".\\folder_37\\380.cpp\\RandomizedSet\\insert(int)",
+                                    "level": "STATIC"
+                                },
+                                {
+                                    "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                    "name": "val",
+                                    "virtual_name": "val",
+                                    "dataType": "int",
+                                    "realType": "int",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\insert(int)\\val",
+                                    "correspondingType": "int",
+                                    "value": "-539406586"
+                                },
+                                {
+                                    "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                    "name": "RETURN",
+                                    "virtual_name": "AKA_EXPECTED_OUTPUT",
+                                    "dataType": "bool",
+                                    "realType": "bool",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\insert(int)\\RETURN",
+                                    "correspondingType": "bool",
+                                    "value": "null"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "td": "void AKA_TEST_RandomizedSet_insert_int_random_3(void) {\n{\nAKA_test_case_name=\"RandomizedSet_insert_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___RandomizedSet */\n/* ConstructorDataNode RandomizedSet() */\nAKA_mark(\"Calling: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\RandomizedSet()|ROOT\\\\380.cpp\\\\GLOBAL\\\\AKA_INSTANCE___RandomizedSet\\\\AKA_INSTANCE___RandomizedSet\\\\RandomizedSet()\");AKA_fCall++;AKA_INSTANCE___RandomizedSet = new ::RandomizedSet();\n/* UnorderedMapDataNode M */\n/* VectorDataNode V */\nint AKA_INSTANCE___RandomizedSet_V_element0=-360364804;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element0);\nint AKA_INSTANCE___RandomizedSet_V_element1=1287687883;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element1);\nint AKA_INSTANCE___RandomizedSet_V_element2=353351768;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element2);\n\n\n\n\nint val=-539406586;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode val */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test RandomizedSet_insert_int_random_3\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___RandomizedSet->insert(val);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\insert(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___RandomizedSet */\n/* ConstructorDataNode RandomizedSet() */\nAKA_mark(\"Calling: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\RandomizedSet()|ROOT\\\\380.cpp\\\\GLOBAL\\\\AKA_INSTANCE___RandomizedSet\\\\AKA_INSTANCE___RandomizedSet\\\\RandomizedSet()\");AKA_fCall++;AKA_INSTANCE___RandomizedSet = new ::RandomizedSet();\n/* UnorderedMapDataNode M */\n/* VectorDataNode V */\nint AKA_INSTANCE___RandomizedSet_V_element0=-360364804;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element0);\nint AKA_INSTANCE___RandomizedSet_V_element1=1287687883;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element1);\nint AKA_INSTANCE___RandomizedSet_V_element2=353351768;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element2);\n\n\n\n\nint val=-539406586;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode val */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": true,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
         },
-        "td" : "void AKA_TEST_RandomizedSet_insert_int_random_3(void) {\n{\nAKA_test_case_name=\"RandomizedSet_insert_int_random_3\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___RandomizedSet */\n/* ConstructorDataNode RandomizedSet() */\nAKA_mark(\"Calling: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\RandomizedSet()|ROOT\\\\380.cpp\\\\GLOBAL\\\\AKA_INSTANCE___RandomizedSet\\\\AKA_INSTANCE___RandomizedSet\\\\RandomizedSet()\");AKA_fCall++;AKA_INSTANCE___RandomizedSet = new ::RandomizedSet();\n/* UnorderedMapDataNode M */\n/* VectorDataNode V */\nint AKA_INSTANCE___RandomizedSet_V_element0=-360364804;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element0);\nint AKA_INSTANCE___RandomizedSet_V_element1=1287687883;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element1);\nint AKA_INSTANCE___RandomizedSet_V_element2=353351768;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element2);\n\n\n\n\nint val=-539406586;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode val */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test RandomizedSet_insert_int_random_3\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___RandomizedSet->insert(val);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\insert(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
-        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___RandomizedSet */\n/* ConstructorDataNode RandomizedSet() */\nAKA_mark(\"Calling: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\RandomizedSet()|ROOT\\\\380.cpp\\\\GLOBAL\\\\AKA_INSTANCE___RandomizedSet\\\\AKA_INSTANCE___RandomizedSet\\\\RandomizedSet()\");AKA_fCall++;AKA_INSTANCE___RandomizedSet = new ::RandomizedSet();\n/* UnorderedMapDataNode M */\n/* VectorDataNode V */\nint AKA_INSTANCE___RandomizedSet_V_element0=-360364804;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element0);\nint AKA_INSTANCE___RandomizedSet_V_element1=1287687883;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element1);\nint AKA_INSTANCE___RandomizedSet_V_element2=353351768;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element2);\n\n\n\n\nint val=-539406586;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode val */\n/* NormalNumberDataNode RETURN */\n\n",
-        "isAutomated" : true
-      }
-    ],
-    "fm": "bool insert(int val) {\r         if (M.find(val) != M.end())\r             return false;\r         V.push_back(val);\r         M.insert(std::pair<int, int>(val, V.size() - 1));\r         return true;\r     }",
-    "f": [ "unordered_map<int, int> M;", "vector<int> V;" ],
-    "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_37\\380.cpp\\RandomizedSet\\insert(int)",
-    "c": [ "RandomizedSet() {\r\n        M = unordered_map<int, int>();\r\n        V = vector<int>();\r\n    }" ]
-  },
-  {
-    "fc": "class RandomizedSet {\r public:\r     unordered_map<int, int> M;\r     vector<int> V;\r \r     /** Initialize your data structure here. */\r     RandomizedSet() {\r         M = unordered_map<int, int>();\r         V = vector<int>();\r     }\r \r     /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */\r     bool insert(int val) {\r         if (M.find(val) != M.end())\r             return false;\r         V.push_back(val);\r         M.insert(std::pair<int, int>(val, V.size() - 1));\r         return true;\r     }\r \r     /** Removes a value from the set. Returns true if the set contained the specified element. */\r     bool remove(int val) {\r         if (M.find(val) == M.end())\r             return false;\r         int last = V.back();\r         M[last] = M[val];\r         V[M[last]] = last;\r         V.pop_back();\r         M.erase(val);\r         return true;\r     }\r \r     /** Get a random element from the set. */\r     int getRandom() {\r         return V[rand() % V.size()];\r     }\r };",
-    "m": [ ],
-    "datatest": [
-      {
-        "id" : 0,
-        "dt" : {
-          "type" : "com.dse.testdata.object.UnitUnderTestNode",
-          "name" : "380.cpp",
-          "virtual_name" : "NON_VALUE",
-          "sourceNode" : ".\\folder_37\\380.cpp",
-          "children" : [ {
-            "type" : "com.dse.testdata.object.GlobalRootDataNode",
-            "name" : "GLOBAL",
-            "virtual_name" : "NON_VALUE",
-            "functionNode" : ".\\folder_37\\380.cpp\\RandomizedSet\\remove(int)",
-            "paramExpectedOuputs" : [ {
-              "type" : "com.dse.testdata.object.ClassDataNode",
-              "name" : "AKA_INSTANCE___RandomizedSet",
-              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___RandomizedSet",
-              "dataType" : "::RandomizedSet",
-              "realType" : "::RandomizedSet",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
-              "correspondingType" : ".\\folder_37\\380.cpp\\RandomizedSet"
-            } ],
-            "level" : "GLOBAL",
-            "children" : [ {
-              "type" : "com.dse.testdata.object.ClassDataNode",
-              "name" : "AKA_INSTANCE___RandomizedSet",
-              "virtual_name" : "AKA_INSTANCE___RandomizedSet",
-              "dataType" : "::RandomizedSet",
-              "realType" : "::RandomizedSet",
-              "external" : true,
-              "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
-              "correspondingType" : ".\\folder_37\\380.cpp\\RandomizedSet",
-              "children" : [ {
-                "type" : "com.dse.testdata.object.SubClassDataNode",
-                "name" : "AKA_INSTANCE___RandomizedSet",
-                "virtual_name" : "AKA_INSTANCE___RandomizedSet",
-                "dataType" : "::RandomizedSet",
-                "realType" : "::RandomizedSet",
-                "external" : false,
-                "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
-                "correspondingType" : ".\\folder_37\\380.cpp\\RandomizedSet",
-                "rawType" : "::RandomizedSet",
-                "selectedConstructor" : "RandomizedSet()",
-                "variableType" : "::RandomizedSet",
-                "children" : [ {
-                  "type" : "com.dse.testdata.object.ConstructorDataNode",
-                  "name" : "RandomizedSet()",
-                  "virtual_name" : "AKA_INSTANCE___RandomizedSet",
-                  "dataType" : "::RandomizedSet",
-                  "realType" : "::RandomizedSet",
-                  "functionNode" : ".\\folder_37\\380.cpp\\RandomizedSet\\RandomizedSet()"
-                }, {
-                  "type" : "com.dse.testdata.object.stl.containers.unordered.UnorderedMapDataNode",
-                  "name" : "M",
-                  "virtual_name" : "AKA_INSTANCE___RandomizedSet->M",
-                  "dataType" : "unordered_map<int,int>",
-                  "realType" : "unordered_map<int,int>",
-                  "external" : false,
-                  "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\M",
-                  "correspondingType" : "STLListBaseType",
-                  "templateArg" : "std::pair<int, int>"
-                }, {
-                  "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
-                  "name" : "V",
-                  "virtual_name" : "AKA_INSTANCE___RandomizedSet->V",
-                  "dataType" : "vector<int>",
-                  "realType" : "vector<int>",
-                  "external" : false,
-                  "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\V",
-                  "correspondingType" : "STLListBaseType",
-                  "templateArg" : "int",
-                  "size" : 1,
-                  "children" : [ {
-                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
-                    "name" : "element #0",
-                    "virtual_name" : "AKA_INSTANCE___RandomizedSet_V_element0",
-                    "dataType" : "int",
-                    "realType" : "int",
-                    "external" : false,
-                    "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\V\\element #0",
-                    "correspondingType" : "int",
-                    "value" : "820759069"
-                  } ]
-                } ]
-              } ]
-            } ]
-          }, {
-            "type" : "com.dse.testdata.object.SubprogramNode",
-            "name" : "remove(int)",
-            "virtual_name" : "NON_VALUE",
-            "dataType" : "bool",
-            "realType" : "bool",
-            "functionNode" : ".\\folder_37\\380.cpp\\RandomizedSet\\remove(int)",
-            "paramExpectedOuputs" : [ {
-              "type" : "com.dse.testdata.object.NormalNumberDataNode",
-              "name" : "val",
-              "virtual_name" : "EXPECTED_val",
-              "dataType" : "int",
-              "realType" : "int",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\remove(int)\\val",
-              "correspondingType" : "int",
-              "value" : "null"
-            } ],
-            "children" : [ {
-              "type" : "com.dse.testdata.object.RootDataNode",
-              "name" : "STATIC",
-              "virtual_name" : "NON_VALUE",
-              "functionNode" : ".\\folder_37\\380.cpp\\RandomizedSet\\remove(int)",
-              "level" : "STATIC"
-            }, {
-              "type" : "com.dse.testdata.object.NormalNumberDataNode",
-              "name" : "val",
-              "virtual_name" : "val",
-              "dataType" : "int",
-              "realType" : "int",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\remove(int)\\val",
-              "correspondingType" : "int",
-              "value" : "-2002688362"
-            }, {
-              "type" : "com.dse.testdata.object.NormalNumberDataNode",
-              "name" : "RETURN",
-              "virtual_name" : "AKA_EXPECTED_OUTPUT",
-              "dataType" : "bool",
-              "realType" : "bool",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\remove(int)\\RETURN",
-              "correspondingType" : "bool",
-              "value" : "null"
-            } ]
-          } ]
+        "fc": "class RandomizedSet {\r public:\r     unordered_map<int, int> M;\r     vector<int> V;\r \r     /** Initialize your data structure here. */\r     RandomizedSet() {\r         M = unordered_map<int, int>();\r         V = vector<int>();\r     }\r \r     /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */\r     bool insert(int val) {\r         if (M.find(val) != M.end())\r             return false;\r         V.push_back(val);\r         M.insert(std::pair<int, int>(val, V.size() - 1));\r         return true;\r     }\r \r     /** Removes a value from the set. Returns true if the set contained the specified element. */\r     bool remove(int val) {\r         if (M.find(val) == M.end())\r             return false;\r         int last = V.back();\r         M[last] = M[val];\r         V[M[last]] = last;\r         V.pop_back();\r         M.erase(val);\r         return true;\r     }\r \r     /** Get a random element from the set. */\r     int getRandom() {\r         return V[rand() % V.size()];\r     }\r };",
+        "c": [
+            "RandomizedSet() {\r\n        M = unordered_map<int, int>();\r\n        V = vector<int>();\r\n    }"
+        ],
+        "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_37\\380.cpp\\RandomizedSet\\insert(int)"
+    },
+    {
+        "f": [
+            "unordered_map<int, int> M;",
+            "vector<int> V;"
+        ],
+        "fm": "bool remove(int val) {\r         if (M.find(val) == M.end())\r             return false;\r         int last = V.back();\r         M[last] = M[val];\r         V[M[last]] = last;\r         V.pop_back();\r         M.erase(val);\r         return true;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {
+                    "type": "com.dse.testdata.object.UnitUnderTestNode",
+                    "name": "380.cpp",
+                    "virtual_name": "NON_VALUE",
+                    "sourceNode": ".\\folder_37\\380.cpp",
+                    "children": [
+                        {
+                            "type": "com.dse.testdata.object.GlobalRootDataNode",
+                            "name": "GLOBAL",
+                            "virtual_name": "NON_VALUE",
+                            "functionNode": ".\\folder_37\\380.cpp\\RandomizedSet\\remove(int)",
+                            "paramExpectedOuputs": [
+                                {
+                                    "type": "com.dse.testdata.object.ClassDataNode",
+                                    "name": "AKA_INSTANCE___RandomizedSet",
+                                    "virtual_name": "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___RandomizedSet",
+                                    "dataType": "::RandomizedSet",
+                                    "realType": "::RandomizedSet",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
+                                    "correspondingType": ".\\folder_37\\380.cpp\\RandomizedSet"
+                                }
+                            ],
+                            "level": "GLOBAL",
+                            "children": [
+                                {
+                                    "type": "com.dse.testdata.object.ClassDataNode",
+                                    "name": "AKA_INSTANCE___RandomizedSet",
+                                    "virtual_name": "AKA_INSTANCE___RandomizedSet",
+                                    "dataType": "::RandomizedSet",
+                                    "realType": "::RandomizedSet",
+                                    "external": true,
+                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
+                                    "correspondingType": ".\\folder_37\\380.cpp\\RandomizedSet",
+                                    "children": [
+                                        {
+                                            "type": "com.dse.testdata.object.SubClassDataNode",
+                                            "name": "AKA_INSTANCE___RandomizedSet",
+                                            "virtual_name": "AKA_INSTANCE___RandomizedSet",
+                                            "dataType": "::RandomizedSet",
+                                            "realType": "::RandomizedSet",
+                                            "external": false,
+                                            "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
+                                            "correspondingType": ".\\folder_37\\380.cpp\\RandomizedSet",
+                                            "rawType": "::RandomizedSet",
+                                            "selectedConstructor": "RandomizedSet()",
+                                            "variableType": "::RandomizedSet",
+                                            "children": [
+                                                {
+                                                    "type": "com.dse.testdata.object.ConstructorDataNode",
+                                                    "name": "RandomizedSet()",
+                                                    "virtual_name": "AKA_INSTANCE___RandomizedSet",
+                                                    "dataType": "::RandomizedSet",
+                                                    "realType": "::RandomizedSet",
+                                                    "functionNode": ".\\folder_37\\380.cpp\\RandomizedSet\\RandomizedSet()"
+                                                },
+                                                {
+                                                    "type": "com.dse.testdata.object.stl.containers.unordered.UnorderedMapDataNode",
+                                                    "name": "M",
+                                                    "virtual_name": "AKA_INSTANCE___RandomizedSet->M",
+                                                    "dataType": "unordered_map<int,int>",
+                                                    "realType": "unordered_map<int,int>",
+                                                    "external": false,
+                                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\M",
+                                                    "correspondingType": "STLListBaseType",
+                                                    "templateArg": "std::pair<int, int>"
+                                                },
+                                                {
+                                                    "type": "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                                                    "name": "V",
+                                                    "virtual_name": "AKA_INSTANCE___RandomizedSet->V",
+                                                    "dataType": "vector<int>",
+                                                    "realType": "vector<int>",
+                                                    "external": false,
+                                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\V",
+                                                    "correspondingType": "STLListBaseType",
+                                                    "templateArg": "int",
+                                                    "size": 1,
+                                                    "children": [
+                                                        {
+                                                            "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                                            "name": "element #0",
+                                                            "virtual_name": "AKA_INSTANCE___RandomizedSet_V_element0",
+                                                            "dataType": "int",
+                                                            "realType": "int",
+                                                            "external": false,
+                                                            "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\V\\element #0",
+                                                            "correspondingType": "int",
+                                                            "value": "820759069"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "com.dse.testdata.object.SubprogramNode",
+                            "name": "remove(int)",
+                            "virtual_name": "NON_VALUE",
+                            "dataType": "bool",
+                            "realType": "bool",
+                            "functionNode": ".\\folder_37\\380.cpp\\RandomizedSet\\remove(int)",
+                            "paramExpectedOuputs": [
+                                {
+                                    "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                    "name": "val",
+                                    "virtual_name": "EXPECTED_val",
+                                    "dataType": "int",
+                                    "realType": "int",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\remove(int)\\val",
+                                    "correspondingType": "int",
+                                    "value": "null"
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "type": "com.dse.testdata.object.RootDataNode",
+                                    "name": "STATIC",
+                                    "virtual_name": "NON_VALUE",
+                                    "functionNode": ".\\folder_37\\380.cpp\\RandomizedSet\\remove(int)",
+                                    "level": "STATIC"
+                                },
+                                {
+                                    "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                    "name": "val",
+                                    "virtual_name": "val",
+                                    "dataType": "int",
+                                    "realType": "int",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\remove(int)\\val",
+                                    "correspondingType": "int",
+                                    "value": "-2002688362"
+                                },
+                                {
+                                    "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                    "name": "RETURN",
+                                    "virtual_name": "AKA_EXPECTED_OUTPUT",
+                                    "dataType": "bool",
+                                    "realType": "bool",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\remove(int)\\RETURN",
+                                    "correspondingType": "bool",
+                                    "value": "null"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "td": "void AKA_TEST_RandomizedSet_remove_int_random_4(void) {\n{\nAKA_test_case_name=\"RandomizedSet_remove_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___RandomizedSet */\n/* ConstructorDataNode RandomizedSet() */\nAKA_mark(\"Calling: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\RandomizedSet()|ROOT\\\\380.cpp\\\\GLOBAL\\\\AKA_INSTANCE___RandomizedSet\\\\AKA_INSTANCE___RandomizedSet\\\\RandomizedSet()\");AKA_fCall++;AKA_INSTANCE___RandomizedSet = new ::RandomizedSet();\n/* UnorderedMapDataNode M */\n/* VectorDataNode V */\nint AKA_INSTANCE___RandomizedSet_V_element0=820759069;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element0);\n\n\n\n\nint val=-2002688362;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode val */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test RandomizedSet_remove_int_random_4\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___RandomizedSet->remove(val);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\remove(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___RandomizedSet */\n/* ConstructorDataNode RandomizedSet() */\nAKA_mark(\"Calling: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\RandomizedSet()|ROOT\\\\380.cpp\\\\GLOBAL\\\\AKA_INSTANCE___RandomizedSet\\\\AKA_INSTANCE___RandomizedSet\\\\RandomizedSet()\");AKA_fCall++;AKA_INSTANCE___RandomizedSet = new ::RandomizedSet();\n/* UnorderedMapDataNode M */\n/* VectorDataNode V */\nint AKA_INSTANCE___RandomizedSet_V_element0=820759069;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element0);\n\n\n\n\nint val=-2002688362;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode val */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": true,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
         },
-        "td" : "void AKA_TEST_RandomizedSet_remove_int_random_4(void) {\n{\nAKA_test_case_name=\"RandomizedSet_remove_int_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___RandomizedSet */\n/* ConstructorDataNode RandomizedSet() */\nAKA_mark(\"Calling: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\RandomizedSet()|ROOT\\\\380.cpp\\\\GLOBAL\\\\AKA_INSTANCE___RandomizedSet\\\\AKA_INSTANCE___RandomizedSet\\\\RandomizedSet()\");AKA_fCall++;AKA_INSTANCE___RandomizedSet = new ::RandomizedSet();\n/* UnorderedMapDataNode M */\n/* VectorDataNode V */\nint AKA_INSTANCE___RandomizedSet_V_element0=820759069;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element0);\n\n\n\n\nint val=-2002688362;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode val */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test RandomizedSet_remove_int_random_4\");bool AKA_ACTUAL_OUTPUT=AKA_INSTANCE___RandomizedSet->remove(val);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\remove(int)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
-        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___RandomizedSet */\n/* ConstructorDataNode RandomizedSet() */\nAKA_mark(\"Calling: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\RandomizedSet()|ROOT\\\\380.cpp\\\\GLOBAL\\\\AKA_INSTANCE___RandomizedSet\\\\AKA_INSTANCE___RandomizedSet\\\\RandomizedSet()\");AKA_fCall++;AKA_INSTANCE___RandomizedSet = new ::RandomizedSet();\n/* UnorderedMapDataNode M */\n/* VectorDataNode V */\nint AKA_INSTANCE___RandomizedSet_V_element0=820759069;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element0);\n\n\n\n\nint val=-2002688362;\n\n\nbool AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode val */\n/* NormalNumberDataNode RETURN */\n\n",
-        "isAutomated" : true
-      }
-    ],
-    "fm": "bool remove(int val) {\r         if (M.find(val) == M.end())\r             return false;\r         int last = V.back();\r         M[last] = M[val];\r         V[M[last]] = last;\r         V.pop_back();\r         M.erase(val);\r         return true;\r     }",
-    "f": [ "unordered_map<int, int> M;", "vector<int> V;" ],
-    "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_37\\380.cpp\\RandomizedSet\\remove(int)",
-    "c": [ "RandomizedSet() {\r\n        M = unordered_map<int, int>();\r\n        V = vector<int>();\r\n    }" ]
-  },
-  {
-    "fc": "class RandomizedSet {\r public:\r     unordered_map<int, int> M;\r     vector<int> V;\r \r     /** Initialize your data structure here. */\r     RandomizedSet() {\r         M = unordered_map<int, int>();\r         V = vector<int>();\r     }\r \r     /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */\r     bool insert(int val) {\r         if (M.find(val) != M.end())\r             return false;\r         V.push_back(val);\r         M.insert(std::pair<int, int>(val, V.size() - 1));\r         return true;\r     }\r \r     /** Removes a value from the set. Returns true if the set contained the specified element. */\r     bool remove(int val) {\r         if (M.find(val) == M.end())\r             return false;\r         int last = V.back();\r         M[last] = M[val];\r         V[M[last]] = last;\r         V.pop_back();\r         M.erase(val);\r         return true;\r     }\r \r     /** Get a random element from the set. */\r     int getRandom() {\r         return V[rand() % V.size()];\r     }\r };",
-    "m": [ ],
-    "datatest": [
-      {
-        "id" : 0,
-        "dt" : {
-          "type" : "com.dse.testdata.object.UnitUnderTestNode",
-          "name" : "380.cpp",
-          "virtual_name" : "NON_VALUE",
-          "sourceNode" : ".\\folder_37\\380.cpp",
-          "children" : [ {
-            "type" : "com.dse.testdata.object.GlobalRootDataNode",
-            "name" : "GLOBAL",
-            "virtual_name" : "NON_VALUE",
-            "functionNode" : ".\\folder_37\\380.cpp\\RandomizedSet\\getRandom()",
-            "paramExpectedOuputs" : [ {
-              "type" : "com.dse.testdata.object.ClassDataNode",
-              "name" : "AKA_INSTANCE___RandomizedSet",
-              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___RandomizedSet",
-              "dataType" : "::RandomizedSet",
-              "realType" : "::RandomizedSet",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
-              "correspondingType" : ".\\folder_37\\380.cpp\\RandomizedSet"
-            } ],
-            "level" : "GLOBAL",
-            "children" : [ {
-              "type" : "com.dse.testdata.object.ClassDataNode",
-              "name" : "AKA_INSTANCE___RandomizedSet",
-              "virtual_name" : "AKA_INSTANCE___RandomizedSet",
-              "dataType" : "::RandomizedSet",
-              "realType" : "::RandomizedSet",
-              "external" : true,
-              "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
-              "correspondingType" : ".\\folder_37\\380.cpp\\RandomizedSet",
-              "children" : [ {
-                "type" : "com.dse.testdata.object.SubClassDataNode",
-                "name" : "AKA_INSTANCE___RandomizedSet",
-                "virtual_name" : "AKA_INSTANCE___RandomizedSet",
-                "dataType" : "::RandomizedSet",
-                "realType" : "::RandomizedSet",
-                "external" : false,
-                "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
-                "correspondingType" : ".\\folder_37\\380.cpp\\RandomizedSet",
-                "rawType" : "::RandomizedSet",
-                "selectedConstructor" : "RandomizedSet()",
-                "variableType" : "::RandomizedSet",
-                "children" : [ {
-                  "type" : "com.dse.testdata.object.ConstructorDataNode",
-                  "name" : "RandomizedSet()",
-                  "virtual_name" : "AKA_INSTANCE___RandomizedSet",
-                  "dataType" : "::RandomizedSet",
-                  "realType" : "::RandomizedSet",
-                  "functionNode" : ".\\folder_37\\380.cpp\\RandomizedSet\\RandomizedSet()"
-                }, {
-                  "type" : "com.dse.testdata.object.stl.containers.unordered.UnorderedMapDataNode",
-                  "name" : "M",
-                  "virtual_name" : "AKA_INSTANCE___RandomizedSet->M",
-                  "dataType" : "unordered_map<int,int>",
-                  "realType" : "unordered_map<int,int>",
-                  "external" : false,
-                  "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\M",
-                  "correspondingType" : "STLListBaseType",
-                  "templateArg" : "std::pair<int, int>"
-                }, {
-                  "type" : "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
-                  "name" : "V",
-                  "virtual_name" : "AKA_INSTANCE___RandomizedSet->V",
-                  "dataType" : "vector<int>",
-                  "realType" : "vector<int>",
-                  "external" : false,
-                  "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\V",
-                  "correspondingType" : "STLListBaseType",
-                  "templateArg" : "int",
-                  "size" : 2,
-                  "children" : [ {
-                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
-                    "name" : "element #0",
-                    "virtual_name" : "AKA_INSTANCE___RandomizedSet_V_element0",
-                    "dataType" : "int",
-                    "realType" : "int",
-                    "external" : false,
-                    "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\V\\element #0",
-                    "correspondingType" : "int",
-                    "value" : "-32957574"
-                  }, {
-                    "type" : "com.dse.testdata.object.NormalNumberDataNode",
-                    "name" : "element #1",
-                    "virtual_name" : "AKA_INSTANCE___RandomizedSet_V_element1",
-                    "dataType" : "int",
-                    "realType" : "int",
-                    "external" : false,
-                    "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\V\\element #1",
-                    "correspondingType" : "int",
-                    "value" : "869389143"
-                  } ]
-                } ]
-              } ]
-            } ]
-          }, {
-            "type" : "com.dse.testdata.object.SubprogramNode",
-            "name" : "getRandom()",
-            "virtual_name" : "NON_VALUE",
-            "dataType" : "int",
-            "realType" : "int",
-            "functionNode" : ".\\folder_37\\380.cpp\\RandomizedSet\\getRandom()",
-            "children" : [ {
-              "type" : "com.dse.testdata.object.RootDataNode",
-              "name" : "STATIC",
-              "virtual_name" : "NON_VALUE",
-              "functionNode" : ".\\folder_37\\380.cpp\\RandomizedSet\\getRandom()",
-              "level" : "STATIC"
-            }, {
-              "type" : "com.dse.testdata.object.NormalNumberDataNode",
-              "name" : "RETURN",
-              "virtual_name" : "AKA_EXPECTED_OUTPUT",
-              "dataType" : "int",
-              "realType" : "int",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\380.cpp\\RandomizedSet\\getRandom()\\RETURN",
-              "correspondingType" : "int",
-              "value" : "null"
-            } ]
-          } ]
+        "fc": "class RandomizedSet {\r public:\r     unordered_map<int, int> M;\r     vector<int> V;\r \r     /** Initialize your data structure here. */\r     RandomizedSet() {\r         M = unordered_map<int, int>();\r         V = vector<int>();\r     }\r \r     /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */\r     bool insert(int val) {\r         if (M.find(val) != M.end())\r             return false;\r         V.push_back(val);\r         M.insert(std::pair<int, int>(val, V.size() - 1));\r         return true;\r     }\r \r     /** Removes a value from the set. Returns true if the set contained the specified element. */\r     bool remove(int val) {\r         if (M.find(val) == M.end())\r             return false;\r         int last = V.back();\r         M[last] = M[val];\r         V[M[last]] = last;\r         V.pop_back();\r         M.erase(val);\r         return true;\r     }\r \r     /** Get a random element from the set. */\r     int getRandom() {\r         return V[rand() % V.size()];\r     }\r };",
+        "c": [
+            "RandomizedSet() {\r\n        M = unordered_map<int, int>();\r\n        V = vector<int>();\r\n    }"
+        ],
+        "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_37\\380.cpp\\RandomizedSet\\remove(int)"
+    },
+    {
+        "f": [
+            "unordered_map<int, int> M;",
+            "vector<int> V;"
+        ],
+        "fm": "int getRandom() {\r         return V[rand() % V.size()];\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {
+                    "type": "com.dse.testdata.object.UnitUnderTestNode",
+                    "name": "380.cpp",
+                    "virtual_name": "NON_VALUE",
+                    "sourceNode": ".\\folder_37\\380.cpp",
+                    "children": [
+                        {
+                            "type": "com.dse.testdata.object.GlobalRootDataNode",
+                            "name": "GLOBAL",
+                            "virtual_name": "NON_VALUE",
+                            "functionNode": ".\\folder_37\\380.cpp\\RandomizedSet\\getRandom()",
+                            "paramExpectedOuputs": [
+                                {
+                                    "type": "com.dse.testdata.object.ClassDataNode",
+                                    "name": "AKA_INSTANCE___RandomizedSet",
+                                    "virtual_name": "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___RandomizedSet",
+                                    "dataType": "::RandomizedSet",
+                                    "realType": "::RandomizedSet",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
+                                    "correspondingType": ".\\folder_37\\380.cpp\\RandomizedSet"
+                                }
+                            ],
+                            "level": "GLOBAL",
+                            "children": [
+                                {
+                                    "type": "com.dse.testdata.object.ClassDataNode",
+                                    "name": "AKA_INSTANCE___RandomizedSet",
+                                    "virtual_name": "AKA_INSTANCE___RandomizedSet",
+                                    "dataType": "::RandomizedSet",
+                                    "realType": "::RandomizedSet",
+                                    "external": true,
+                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
+                                    "correspondingType": ".\\folder_37\\380.cpp\\RandomizedSet",
+                                    "children": [
+                                        {
+                                            "type": "com.dse.testdata.object.SubClassDataNode",
+                                            "name": "AKA_INSTANCE___RandomizedSet",
+                                            "virtual_name": "AKA_INSTANCE___RandomizedSet",
+                                            "dataType": "::RandomizedSet",
+                                            "realType": "::RandomizedSet",
+                                            "external": false,
+                                            "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\AKA_INSTANCE___RandomizedSet",
+                                            "correspondingType": ".\\folder_37\\380.cpp\\RandomizedSet",
+                                            "rawType": "::RandomizedSet",
+                                            "selectedConstructor": "RandomizedSet()",
+                                            "variableType": "::RandomizedSet",
+                                            "children": [
+                                                {
+                                                    "type": "com.dse.testdata.object.ConstructorDataNode",
+                                                    "name": "RandomizedSet()",
+                                                    "virtual_name": "AKA_INSTANCE___RandomizedSet",
+                                                    "dataType": "::RandomizedSet",
+                                                    "realType": "::RandomizedSet",
+                                                    "functionNode": ".\\folder_37\\380.cpp\\RandomizedSet\\RandomizedSet()"
+                                                },
+                                                {
+                                                    "type": "com.dse.testdata.object.stl.containers.unordered.UnorderedMapDataNode",
+                                                    "name": "M",
+                                                    "virtual_name": "AKA_INSTANCE___RandomizedSet->M",
+                                                    "dataType": "unordered_map<int,int>",
+                                                    "realType": "unordered_map<int,int>",
+                                                    "external": false,
+                                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\M",
+                                                    "correspondingType": "STLListBaseType",
+                                                    "templateArg": "std::pair<int, int>"
+                                                },
+                                                {
+                                                    "type": "com.dse.testdata.object.stl.containers.sequence.VectorDataNode",
+                                                    "name": "V",
+                                                    "virtual_name": "AKA_INSTANCE___RandomizedSet->V",
+                                                    "dataType": "vector<int>",
+                                                    "realType": "vector<int>",
+                                                    "external": false,
+                                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\V",
+                                                    "correspondingType": "STLListBaseType",
+                                                    "templateArg": "int",
+                                                    "size": 2,
+                                                    "children": [
+                                                        {
+                                                            "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                                            "name": "element #0",
+                                                            "virtual_name": "AKA_INSTANCE___RandomizedSet_V_element0",
+                                                            "dataType": "int",
+                                                            "realType": "int",
+                                                            "external": false,
+                                                            "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\V\\element #0",
+                                                            "correspondingType": "int",
+                                                            "value": "-32957574"
+                                                        },
+                                                        {
+                                                            "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                                            "name": "element #1",
+                                                            "virtual_name": "AKA_INSTANCE___RandomizedSet_V_element1",
+                                                            "dataType": "int",
+                                                            "realType": "int",
+                                                            "external": false,
+                                                            "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\V\\element #1",
+                                                            "correspondingType": "int",
+                                                            "value": "869389143"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "com.dse.testdata.object.SubprogramNode",
+                            "name": "getRandom()",
+                            "virtual_name": "NON_VALUE",
+                            "dataType": "int",
+                            "realType": "int",
+                            "functionNode": ".\\folder_37\\380.cpp\\RandomizedSet\\getRandom()",
+                            "children": [
+                                {
+                                    "type": "com.dse.testdata.object.RootDataNode",
+                                    "name": "STATIC",
+                                    "virtual_name": "NON_VALUE",
+                                    "functionNode": ".\\folder_37\\380.cpp\\RandomizedSet\\getRandom()",
+                                    "level": "STATIC"
+                                },
+                                {
+                                    "type": "com.dse.testdata.object.NormalNumberDataNode",
+                                    "name": "RETURN",
+                                    "virtual_name": "AKA_EXPECTED_OUTPUT",
+                                    "dataType": "int",
+                                    "realType": "int",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\380.cpp\\RandomizedSet\\getRandom()\\RETURN",
+                                    "correspondingType": "int",
+                                    "value": "null"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "td": "void AKA_TEST_RandomizedSet_getRandom_random_0(void) {\n{\nAKA_test_case_name=\"RandomizedSet_getRandom_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___RandomizedSet */\n/* ConstructorDataNode RandomizedSet() */\nAKA_mark(\"Calling: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\RandomizedSet()|ROOT\\\\380.cpp\\\\GLOBAL\\\\AKA_INSTANCE___RandomizedSet\\\\AKA_INSTANCE___RandomizedSet\\\\RandomizedSet()\");AKA_fCall++;AKA_INSTANCE___RandomizedSet = new ::RandomizedSet();\n/* UnorderedMapDataNode M */\n/* VectorDataNode V */\nint AKA_INSTANCE___RandomizedSet_V_element0=-32957574;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element0);\nint AKA_INSTANCE___RandomizedSet_V_element1=869389143;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element1);\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test RandomizedSet_getRandom_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___RandomizedSet->getRandom();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\getRandom()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___RandomizedSet */\n/* ConstructorDataNode RandomizedSet() */\nAKA_mark(\"Calling: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\RandomizedSet()|ROOT\\\\380.cpp\\\\GLOBAL\\\\AKA_INSTANCE___RandomizedSet\\\\AKA_INSTANCE___RandomizedSet\\\\RandomizedSet()\");AKA_fCall++;AKA_INSTANCE___RandomizedSet = new ::RandomizedSet();\n/* UnorderedMapDataNode M */\n/* VectorDataNode V */\nint AKA_INSTANCE___RandomizedSet_V_element0=-32957574;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element0);\nint AKA_INSTANCE___RandomizedSet_V_element1=869389143;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element1);\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n",
+                "isAutomated": true,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
         },
-        "td" : "void AKA_TEST_RandomizedSet_getRandom_random_0(void) {\n{\nAKA_test_case_name=\"RandomizedSet_getRandom_random_0\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___RandomizedSet */\n/* ConstructorDataNode RandomizedSet() */\nAKA_mark(\"Calling: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\RandomizedSet()|ROOT\\\\380.cpp\\\\GLOBAL\\\\AKA_INSTANCE___RandomizedSet\\\\AKA_INSTANCE___RandomizedSet\\\\RandomizedSet()\");AKA_fCall++;AKA_INSTANCE___RandomizedSet = new ::RandomizedSet();\n/* UnorderedMapDataNode M */\n/* VectorDataNode V */\nint AKA_INSTANCE___RandomizedSet_V_element0=-32957574;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element0);\nint AKA_INSTANCE___RandomizedSet_V_element1=869389143;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element1);\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test RandomizedSet_getRandom_random_0\");int AKA_ACTUAL_OUTPUT=AKA_INSTANCE___RandomizedSet->getRandom();\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\getRandom()\");\n\n\n\n\n// tear down\n;\n}\n}\n",
-        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___RandomizedSet */\n/* ConstructorDataNode RandomizedSet() */\nAKA_mark(\"Calling: .\\\\folder_37\\\\380.cpp\\\\RandomizedSet\\\\RandomizedSet()|ROOT\\\\380.cpp\\\\GLOBAL\\\\AKA_INSTANCE___RandomizedSet\\\\AKA_INSTANCE___RandomizedSet\\\\RandomizedSet()\");AKA_fCall++;AKA_INSTANCE___RandomizedSet = new ::RandomizedSet();\n/* UnorderedMapDataNode M */\n/* VectorDataNode V */\nint AKA_INSTANCE___RandomizedSet_V_element0=-32957574;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element0);\nint AKA_INSTANCE___RandomizedSet_V_element1=869389143;\nAKA_INSTANCE___RandomizedSet->V.push_back(AKA_INSTANCE___RandomizedSet_V_element1);\n\n\n\n\nint AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalNumberDataNode RETURN */\n\n",
-        "isAutomated" : true
-      }
-    ],
-    "fm": "int getRandom() {\r         return V[rand() % V.size()];\r     }",
-    "f": [ "unordered_map<int, int> M;", "vector<int> V;" ],
-    "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_37\\380.cpp\\RandomizedSet\\getRandom()",
-    "c": [ "RandomizedSet() {\r\n        M = unordered_map<int, int>();\r\n        V = vector<int>();\r\n    }" ]
-  },
-  {
-    "fc": "class Solution {\r public:\r     char findTheDifference(string s, string t) {\r         char sumS = 0, sumT = 0;\r         for(int i = 0; i < s.size(); ++i) {\r             sumS += s[i];\r             sumT += t[i];\r         }\r         return sumT + t[s.size()] -sumS;\r     }\r };",
-    "m": [ ],
-    "datatest": [
-      {
-        "id" : 0,
-        "dt" : {
-          "type" : "com.dse.testdata.object.UnitUnderTestNode",
-          "name" : "389.cpp",
-          "virtual_name" : "NON_VALUE",
-          "sourceNode" : ".\\folder_37\\389.cpp",
-          "children" : [ {
-            "type" : "com.dse.testdata.object.GlobalRootDataNode",
-            "name" : "GLOBAL",
-            "virtual_name" : "NON_VALUE",
-            "functionNode" : ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)",
-            "paramExpectedOuputs" : [ {
-              "type" : "com.dse.testdata.object.ClassDataNode",
-              "name" : "AKA_INSTANCE___Solution",
-              "virtual_name" : "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
-              "dataType" : "::Solution",
-              "realType" : "::Solution",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\389.cpp\\Solution\\AKA_INSTANCE___Solution",
-              "correspondingType" : ".\\folder_37\\389.cpp\\Solution"
-            } ],
-            "level" : "GLOBAL",
-            "children" : [ {
-              "type" : "com.dse.testdata.object.ClassDataNode",
-              "name" : "AKA_INSTANCE___Solution",
-              "virtual_name" : "AKA_INSTANCE___Solution",
-              "dataType" : "::Solution",
-              "realType" : "::Solution",
-              "external" : true,
-              "correspondingVar" : ".\\folder_37\\389.cpp\\Solution\\AKA_INSTANCE___Solution",
-              "correspondingType" : ".\\folder_37\\389.cpp\\Solution",
-              "children" : [ {
-                "type" : "com.dse.testdata.object.SubClassDataNode",
-                "name" : "AKA_INSTANCE___Solution",
-                "virtual_name" : "AKA_INSTANCE___Solution",
-                "dataType" : "::Solution",
-                "realType" : "::Solution",
-                "external" : false,
-                "correspondingVar" : ".\\folder_37\\389.cpp\\Solution\\AKA_INSTANCE___Solution",
-                "correspondingType" : ".\\folder_37\\389.cpp\\Solution",
-                "rawType" : "::Solution",
-                "selectedConstructor" : "Solution()",
-                "variableType" : "::Solution",
-                "children" : [ {
-                  "type" : "com.dse.testdata.object.ConstructorDataNode",
-                  "name" : "Solution()",
-                  "virtual_name" : "AKA_INSTANCE___Solution",
-                  "dataType" : "::Solution",
-                  "realType" : "::Solution",
-                  "functionNode" : "\\Solution()"
-                } ]
-              } ]
-            } ]
-          }, {
-            "type" : "com.dse.testdata.object.SubprogramNode",
-            "name" : "findTheDifference(string,string)",
-            "virtual_name" : "NON_VALUE",
-            "dataType" : "char",
-            "realType" : "char",
-            "functionNode" : ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)",
-            "paramExpectedOuputs" : [ {
-              "type" : "com.dse.testdata.object.NormalStringDataNode",
-              "name" : "s",
-              "virtual_name" : "EXPECTED_s",
-              "dataType" : "string",
-              "realType" : "string",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)\\s",
-              "correspondingType" : "string",
-              "value" : "null"
-            }, {
-              "type" : "com.dse.testdata.object.NormalStringDataNode",
-              "name" : "t",
-              "virtual_name" : "EXPECTED_t",
-              "dataType" : "string",
-              "realType" : "string",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)\\t",
-              "correspondingType" : "string",
-              "value" : "null"
-            } ],
-            "children" : [ {
-              "type" : "com.dse.testdata.object.RootDataNode",
-              "name" : "STATIC",
-              "virtual_name" : "NON_VALUE",
-              "functionNode" : ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)",
-              "level" : "STATIC"
-            }, {
-              "type" : "com.dse.testdata.object.NormalStringDataNode",
-              "name" : "s",
-              "virtual_name" : "s",
-              "dataType" : "string",
-              "realType" : "string",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)\\s",
-              "correspondingType" : "string",
-              "value" : "1",
-              "children" : [ {
-                "type" : "com.dse.testdata.object.NormalCharacterDataNode",
-                "name" : "s[0]",
-                "virtual_name" : "s[0]",
-                "dataType" : "char",
-                "realType" : "char",
-                "external" : false,
-                "correspondingVar" : ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)\\s\\s[0]",
-                "correspondingType" : "char",
-                "value" : "52"
-              } ]
-            }, {
-              "type" : "com.dse.testdata.object.NormalStringDataNode",
-              "name" : "t",
-              "virtual_name" : "t",
-              "dataType" : "string",
-              "realType" : "string",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)\\t",
-              "correspondingType" : "string",
-              "value" : "3",
-              "children" : [ {
-                "type" : "com.dse.testdata.object.NormalCharacterDataNode",
-                "name" : "t[0]",
-                "virtual_name" : "t[0]",
-                "dataType" : "char",
-                "realType" : "char",
-                "external" : false,
-                "correspondingVar" : ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)\\t\\t[0]",
-                "correspondingType" : "char",
-                "value" : "54"
-              } ]
-            }, {
-              "type" : "com.dse.testdata.object.NormalCharacterDataNode",
-              "name" : "RETURN",
-              "virtual_name" : "AKA_EXPECTED_OUTPUT",
-              "dataType" : "char",
-              "realType" : "char",
-              "external" : false,
-              "correspondingVar" : ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)\\RETURN",
-              "correspondingType" : "char",
-              "value" : "null"
-            } ]
-          } ]
+        "fc": "class RandomizedSet {\r public:\r     unordered_map<int, int> M;\r     vector<int> V;\r \r     /** Initialize your data structure here. */\r     RandomizedSet() {\r         M = unordered_map<int, int>();\r         V = vector<int>();\r     }\r \r     /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */\r     bool insert(int val) {\r         if (M.find(val) != M.end())\r             return false;\r         V.push_back(val);\r         M.insert(std::pair<int, int>(val, V.size() - 1));\r         return true;\r     }\r \r     /** Removes a value from the set. Returns true if the set contained the specified element. */\r     bool remove(int val) {\r         if (M.find(val) == M.end())\r             return false;\r         int last = V.back();\r         M[last] = M[val];\r         V[M[last]] = last;\r         V.pop_back();\r         M.erase(val);\r         return true;\r     }\r \r     /** Get a random element from the set. */\r     int getRandom() {\r         return V[rand() % V.size()];\r     }\r };",
+        "c": [
+            "RandomizedSet() {\r\n        M = unordered_map<int, int>();\r\n        V = vector<int>();\r\n    }"
+        ],
+        "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_37\\380.cpp\\RandomizedSet\\getRandom()"
+    },
+    {
+        "f": [],
+        "fm": "char findTheDifference(string s, string t) {\r         char sumS = 0, sumT = 0;\r         for(int i = 0; i < s.size(); ++i) {\r             sumS += s[i];\r             sumT += t[i];\r         }\r         return sumT + t[s.size()] -sumS;\r     }",
+        "datatest": [
+            {
+                "id": 0,
+                "dt": {
+                    "type": "com.dse.testdata.object.UnitUnderTestNode",
+                    "name": "389.cpp",
+                    "virtual_name": "NON_VALUE",
+                    "sourceNode": ".\\folder_37\\389.cpp",
+                    "children": [
+                        {
+                            "type": "com.dse.testdata.object.GlobalRootDataNode",
+                            "name": "GLOBAL",
+                            "virtual_name": "NON_VALUE",
+                            "functionNode": ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)",
+                            "paramExpectedOuputs": [
+                                {
+                                    "type": "com.dse.testdata.object.ClassDataNode",
+                                    "name": "AKA_INSTANCE___Solution",
+                                    "virtual_name": "EXPECTED_AKA_GLOBAL_AKA_INSTANCE___Solution",
+                                    "dataType": "::Solution",
+                                    "realType": "::Solution",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\389.cpp\\Solution\\AKA_INSTANCE___Solution",
+                                    "correspondingType": ".\\folder_37\\389.cpp\\Solution"
+                                }
+                            ],
+                            "level": "GLOBAL",
+                            "children": [
+                                {
+                                    "type": "com.dse.testdata.object.ClassDataNode",
+                                    "name": "AKA_INSTANCE___Solution",
+                                    "virtual_name": "AKA_INSTANCE___Solution",
+                                    "dataType": "::Solution",
+                                    "realType": "::Solution",
+                                    "external": true,
+                                    "correspondingVar": ".\\folder_37\\389.cpp\\Solution\\AKA_INSTANCE___Solution",
+                                    "correspondingType": ".\\folder_37\\389.cpp\\Solution",
+                                    "children": [
+                                        {
+                                            "type": "com.dse.testdata.object.SubClassDataNode",
+                                            "name": "AKA_INSTANCE___Solution",
+                                            "virtual_name": "AKA_INSTANCE___Solution",
+                                            "dataType": "::Solution",
+                                            "realType": "::Solution",
+                                            "external": false,
+                                            "correspondingVar": ".\\folder_37\\389.cpp\\Solution\\AKA_INSTANCE___Solution",
+                                            "correspondingType": ".\\folder_37\\389.cpp\\Solution",
+                                            "rawType": "::Solution",
+                                            "selectedConstructor": "Solution()",
+                                            "variableType": "::Solution",
+                                            "children": [
+                                                {
+                                                    "type": "com.dse.testdata.object.ConstructorDataNode",
+                                                    "name": "Solution()",
+                                                    "virtual_name": "AKA_INSTANCE___Solution",
+                                                    "dataType": "::Solution",
+                                                    "realType": "::Solution",
+                                                    "functionNode": "\\Solution()"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "com.dse.testdata.object.SubprogramNode",
+                            "name": "findTheDifference(string,string)",
+                            "virtual_name": "NON_VALUE",
+                            "dataType": "char",
+                            "realType": "char",
+                            "functionNode": ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)",
+                            "paramExpectedOuputs": [
+                                {
+                                    "type": "com.dse.testdata.object.NormalStringDataNode",
+                                    "name": "s",
+                                    "virtual_name": "EXPECTED_s",
+                                    "dataType": "string",
+                                    "realType": "string",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)\\s",
+                                    "correspondingType": "string",
+                                    "value": "null"
+                                },
+                                {
+                                    "type": "com.dse.testdata.object.NormalStringDataNode",
+                                    "name": "t",
+                                    "virtual_name": "EXPECTED_t",
+                                    "dataType": "string",
+                                    "realType": "string",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)\\t",
+                                    "correspondingType": "string",
+                                    "value": "null"
+                                }
+                            ],
+                            "children": [
+                                {
+                                    "type": "com.dse.testdata.object.RootDataNode",
+                                    "name": "STATIC",
+                                    "virtual_name": "NON_VALUE",
+                                    "functionNode": ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)",
+                                    "level": "STATIC"
+                                },
+                                {
+                                    "type": "com.dse.testdata.object.NormalStringDataNode",
+                                    "name": "s",
+                                    "virtual_name": "s",
+                                    "dataType": "string",
+                                    "realType": "string",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)\\s",
+                                    "correspondingType": "string",
+                                    "value": "1",
+                                    "children": [
+                                        {
+                                            "type": "com.dse.testdata.object.NormalCharacterDataNode",
+                                            "name": "s[0]",
+                                            "virtual_name": "s[0]",
+                                            "dataType": "char",
+                                            "realType": "char",
+                                            "external": false,
+                                            "correspondingVar": ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)\\s\\s[0]",
+                                            "correspondingType": "char",
+                                            "value": "52"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "com.dse.testdata.object.NormalStringDataNode",
+                                    "name": "t",
+                                    "virtual_name": "t",
+                                    "dataType": "string",
+                                    "realType": "string",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)\\t",
+                                    "correspondingType": "string",
+                                    "value": "3",
+                                    "children": [
+                                        {
+                                            "type": "com.dse.testdata.object.NormalCharacterDataNode",
+                                            "name": "t[0]",
+                                            "virtual_name": "t[0]",
+                                            "dataType": "char",
+                                            "realType": "char",
+                                            "external": false,
+                                            "correspondingVar": ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)\\t\\t[0]",
+                                            "correspondingType": "char",
+                                            "value": "54"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "com.dse.testdata.object.NormalCharacterDataNode",
+                                    "name": "RETURN",
+                                    "virtual_name": "AKA_EXPECTED_OUTPUT",
+                                    "dataType": "char",
+                                    "realType": "char",
+                                    "external": false,
+                                    "correspondingVar": ".\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)\\RETURN",
+                                    "correspondingType": "char",
+                                    "value": "null"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "td": "void AKA_TEST_Solution_findTheDifference_string_string_random_4(void) {\n{\nAKA_test_case_name=\"Solution_findTheDifference_string_string_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\389.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName563802 = new char[2];akaRandomName563802[0] = 52;akaRandomName563802[1] = '\\0';string s=akaRandomName563802;\nchar* akaRandomName873114 = new char[2];akaRandomName873114[0] = 54;akaRandomName873114[1] = '\\0';string t=akaRandomName873114;\n\nchar AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode t */\n/* NormalCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findTheDifference_string_string_random_4\");char AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findTheDifference(s,t);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_37\\\\389.cpp\\\\Solution\\\\findTheDifference(string,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
+                "simplified_t": "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\389.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName471297 = new char[2];akaRandomName471297[0] = 52;akaRandomName471297[1] = '\\0';string s=akaRandomName471297;\nchar* akaRandomName896921 = new char[2];akaRandomName896921[0] = 54;akaRandomName896921[1] = '\\0';string t=akaRandomName896921;\n\nchar AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode t */\n/* NormalCharacterDataNode RETURN */\n\n",
+                "isAutomated": true,
+                "testpath": [],
+                "executed_fm": "",
+                "executed_fm_masked": "",
+                "executed_m": "",
+                "executed_m_masked": ""
+            }
+        ],
+        "m": {
+            "called_m": [],
+            "stub_called_m": [],
+            "callee_m": []
         },
-        "td" : "void AKA_TEST_Solution_findTheDifference_string_string_random_4(void) {\n{\nAKA_test_case_name=\"Solution_findTheDifference_string_string_random_4\";\n\n// set up\n;\n\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\389.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName563802 = new char[2];akaRandomName563802[0] = 52;akaRandomName563802[1] = '\\0';string s=akaRandomName563802;\nchar* akaRandomName873114 = new char[2];akaRandomName873114[0] = 54;akaRandomName873114[1] = '\\0';string t=akaRandomName873114;\n\nchar AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode t */\n/* NormalCharacterDataNode RETURN */\n\n\n\nAKA_mark(\"<<PRE-CALLING>> Test Solution_findTheDifference_string_string_random_4\");char AKA_ACTUAL_OUTPUT=AKA_INSTANCE___Solution->findTheDifference(s,t);\nAKA_fCall++;AKA_mark(\"Return from: .\\\\folder_37\\\\389.cpp\\\\Solution\\\\findTheDifference(string,string)\");\n\n\n\n\n// tear down\n;\n}\n}\n",
-        "simplified_t" : "\n\n/* SubClassDataNode AKA_INSTANCE___Solution */\n/* ConstructorDataNode Solution() */\nAKA_mark(\"Calling: \\\\Solution()|ROOT\\\\389.cpp\\\\GLOBAL\\\\AKA_INSTANCE___Solution\\\\AKA_INSTANCE___Solution\\\\Solution()\");AKA_fCall++;AKA_INSTANCE___Solution = new ::Solution();\n\n\nchar* akaRandomName471297 = new char[2];akaRandomName471297[0] = 52;akaRandomName471297[1] = '\\0';string s=akaRandomName471297;\nchar* akaRandomName896921 = new char[2];akaRandomName896921[0] = 54;akaRandomName896921[1] = '\\0';string t=akaRandomName896921;\n\nchar AKA_EXPECTED_OUTPUT;\n\n/* RootDataNode STATIC */\n/* NormalStringDataNode s */\n/* NormalStringDataNode t */\n/* NormalCharacterDataNode RETURN */\n\n",
-        "isAutomated" : true
-      }
-    ],
-    "fm": "char findTheDifference(string s, string t) {\r         char sumS = 0, sumT = 0;\r         for(int i = 0; i < s.size(); ++i) {\r             sumS += s[i];\r             sumT += t[i];\r         }\r         return sumT + t[s.size()] -sumS;\r     }",
-    "f": [ ],
-    "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)",
-    "c": [ "" ]
-  }
+        "fc": "class Solution {\r public:\r     char findTheDifference(string s, string t) {\r         char sumS = 0, sumT = 0;\r         for(int i = 0; i < s.size(); ++i) {\r             sumS += s[i];\r             sumT += t[i];\r         }\r         return sumT + t[s.size()] -sumS;\r     }\r };",
+        "c": [
+            ""
+        ],
+        "path_fm": "C:\\Users\\min\\OneDrive - vnu.edu.vn\\test\\folder_37\\389.cpp\\Solution\\findTheDifference(string,string)"
+    }
 ]
