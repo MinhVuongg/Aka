@@ -12,15 +12,16 @@ class LoRATrainer_StarCoder2(LoRATrainer):
         quantization_config = BitsAndBytesConfig(load_in_8bit=True)
         model = AutoModelForCausalLM.from_pretrained(
             model_name,
-            device_map="auto" if torch.cuda.is_available() else None,
             quantization_config=quantization_config
         )
         tokenizer = AutoTokenizer.from_pretrained(model_name)
+        tokenizer.pad_token = tokenizer.eos_token
         return model, tokenizer
 
     def add_lora(self):
         lora_config = peft.LoraConfig(
-            r=8, lora_alpha=32, target_modules=["q", "v"],
+            r=8, lora_alpha=32,
+            target_modules=["c_proj", "c_attn", "q_attn"],
             lora_dropout=0.05,
             bias="none",
             task_type="CAUSAL_LM"
