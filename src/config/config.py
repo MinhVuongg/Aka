@@ -32,6 +32,7 @@ class MODEL_TYPES(Enum):
     CODET5_SMALL = "Salesforce/codet5-small"
     CODET5_BASE = "Salesforce/codet5-base"
     CODET5_LARGE = "Salesforce/codet5-large"
+    STARCODER2_3B = "bigcode/starcoder2-3b"
 
 
 class TARGET_SELETCTION_STRATEGIES: # Cấu hình tiền xử lý thuộc tính TD.

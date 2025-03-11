@@ -25,10 +25,10 @@ def load_model(datapath, model_name):
 
     logger.info(f"[UET] Download model and tokenizerfrom %s - done", model_name)
 
-    logger.info(f"[UET] Moving model to GPU/CPU - start")
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = model.to(device)
-    logger.info(f"[UET] Moving model to GPU/CPU - done, using: {device}")
+    # logger.info(f"[UET] Moving model to GPU/CPU - start")
+    # device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    # model = model.to(device)
+    # logger.info(f"[UET] Moving model to GPU/CPU - done, using: {device}")
 
     logger.info(f"[UET] Run model.eval() - start")
     model.eval()
