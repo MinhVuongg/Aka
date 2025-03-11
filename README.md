@@ -71,3 +71,83 @@ VALIDATIONSET_REPORT_LIMIT = 10  # Số lượng mẫu đánh giá trên tập v
 
 REMOVE_COMMENT_MODE = COMMENT_REMOVAL.REGREX  # Phương thức xóa comment
 ```
+
+# Cấu trúc JSON Training Sets
+
+## 1. JSON Training Set Thô (AKA)
+
+Dữ liệu thô được sinh ra từ AKA có cấu trúc chi tiết như sau:
+
+```json
+[
+  {
+    "f": [],                          // DANH SÁCH THUỘC TÍNH
+    "fm": "",                         // HÀM ĐANG KIỂM THỬ
+    
+    "datatest": [
+      {
+        "id": 0,
+        "dt": {},                     // DATA TREE
+        "td": "",                     // TEST DRIVER TƯƠNG ỨNG (CẦN ĐẢM BẢO PARSE ĐƯỢC AST)
+        "simplified_t": "...",        // TEST DRIVER RÚT GỌN
+        "isAutomated": false,         // SINH TỰ ĐỘNG HAY THỦ CÔNG
+        "testpath": [],               // TEST PATH
+        "executed_fm": "",            // FM VỚI ĐÁNH DẤU /*EXECUTED*/ Ở CUỐI DÒNG ĐƯỢC THỰC THI
+        "executed_fm_masked": "",     // FM NHƯNG CHỈ HIỂN THỊ CODE ĐƯỢC THỰC THI
+        "executed_m": "",             // M VỚI ĐÁNH DẤU /*EXECUTED*/ Ở CUỐI DÒNG ĐƯỢC THỰC THI
+        "executed_m_masked": ""       // M NHƯNG CHỈ HIỂN THỊ CODE ĐƯỢC THỰC THI
+      }
+    ],
+    "m": {                           // DANH SÁCH HÀM LIÊN QUAN
+      "called_m": [                  // CHỨA CÁC HÀM ĐƯỢC GỌI BỞI FM VÀ KHÔNG STUB
+        {
+          "path_fm": "",             // ĐỊA CHỈ
+          "fm": ""                   // CODE (CẦN ĐẢM BẢO PARSE ĐƯỢC AST)
+        }
+      ],     
+      "stub_called_m": [],           // CHỨA CÁC HÀM ĐƯỢC GỌI VÀ STUB (CẦN ĐẢM BẢO PARSE ĐƯỢC AST)
+      "callee_m": []                 // CHỨA CÁC HÀM GỌI ĐẾN FM (CẦN ĐẢM BẢO PARSE ĐƯỢC AST)
+    },        
+    "fc": "",                        // CLASS ĐƯỢC KIỂM THỬ
+    "c": [],                         // DANH SÁCH CONSTRUCTOR (CẦN ĐẢM BẢO PARSE ĐƯỢC AST)
+    "path_fm": ""                    // ĐƯỜNG DẪN ĐẾN HÀM KIỂM THỬ
+  }
+]
+```
+
+### Giải thích chi tiết
+- **f**: Mảng chứa danh sách các thuộc tính
+- **fm**: Hàm đang được kiểm thử
+- **datatest**: Mảng chứa các test case
+  - **id**: ID của test case
+  - **dt**: Data tree
+  - **td**: Test driver
+  - **simplified_t**: Test driver đã được rút gọn
+  - **executed_fm/executed_m**: Code với annotation /*EXECUTED*/ ở cuối dòng đã thực thi
+  - **executed_fm_masked/executed_m_masked**: Chỉ hiển thị code đã thực thi
+- **m**: Các phương thức liên quan
+  - **called_m**: Hàm được gọi bởi FM và không stub
+  - **stub_called_m**: Hàm được gọi và stub
+  - **callee_m**: Hàm gọi đến FM
+- **fc**: Class được kiểm thử
+- **c**: Danh sách constructor
+- **path_fm**: Đường dẫn đến hàm kiểm thử
+
+## 2. JSON Training Set Mịn
+
+Dữ liệu mịn được sinh ra từ training set thô, có cấu trúc đơn giản hơn:
+
+```json
+[
+  {
+    "source": "...",
+    "target": "..."
+  }
+]
+```
+
+### Giải thích
+- **source**: Dữ liệu nguồn dùng làm input cho model
+- **target**: Dữ liệu đích dùng làm output mong muốn của model
+
+Dataset mịn được tối ưu hóa để huấn luyện các mô hình Machine Learning, trong khi dataset thô chứa thông tin chi tiết hơn về cấu trúc code và quá trình kiểm thử.

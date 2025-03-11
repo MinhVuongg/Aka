@@ -163,43 +163,116 @@ def preprocess_dataset2(input_folder, output_file, tokenizer, optimize_target_st
 
             for entry_idx, entry in enumerate(file_data):
                 try:
-                    focal_method = clean_code(remove_comments(entry.get("fm", "")))
+                    # Lấy focal method (fm)
+                    focal_method = ""
+                    if "fm" in entry and entry["fm"]:
+                        focal_method = clean_code(remove_comments(entry["fm"]))
+
+                    # Lấy focal class
                     focal_class = entry.get("fc", "")
                     focal_class_name = ""
                     if focal_class != "":
                         focal_class_name = extract_class_declaration(focal_class)
 
-                    # lay thong tin
+                    # Parse constructor signatures - c là một mảng các String
                     constructor_signatures = ""
-                    if "c" in entry:
+                    if "c" in entry and entry["c"]:
                         if isinstance(entry["c"], list):
-                            constructor_signatures = clean_code(remove_comments(" ".join(map(str, entry["c"]))))
-                        else:
-                            constructor_signatures = clean_code(remove_comments(entry["c"]))
+                            constructor_list = []
+                            for constructor in entry["c"]:
+                                if isinstance(constructor, str):
+                                    constructor_list.append(constructor)
+                                else:
+                                    # Chuyển đổi bất kỳ kiểu dữ liệu nào khác sang string
+                                    constructor_list.append(str(constructor))
+                            constructor_signatures = clean_code(remove_comments(" ".join(constructor_list)))
 
+                    # Parse method signatures - m là một đối tượng chứa ba mảng string
                     method_signatures = ""
-                    if "m" in entry:
-                        if isinstance(entry["m"], list):
-                            method_signatures = clean_code(remove_comments(" ".join(map(str, entry["m"]))))
-                        else:
-                            method_signatures = clean_code(remove_comments(entry["m"]))
+                    if "m" in entry and entry["m"]:
+                        all_methods = []
 
+                        # m là một đối tượng với ba thuộc tính mảng
+                        if isinstance(entry["m"], dict):
+                            # Xử lý called_m (luôn là mảng string)
+                            if "called_m" in entry["m"] and entry["m"]["called_m"]:
+                                for method in entry["m"]["called_m"]:
+                                    if isinstance(method, str):
+                                        all_methods.append(method)
+                                    else:
+                                        all_methods.append(str(method))
+
+                            # Xử lý stub_called_m (luôn là mảng string)
+                            if "stub_called_m" in entry["m"] and entry["m"]["stub_called_m"]:
+                                for method in entry["m"]["stub_called_m"]:
+                                    if isinstance(method, str):
+                                        all_methods.append(method)
+                                    else:
+                                        all_methods.append(str(method))
+
+                            # Xử lý callee_m (luôn là mảng string)
+                            if "callee_m" in entry["m"] and entry["m"]["callee_m"]:
+                                for method in entry["m"]["callee_m"]:
+                                    if isinstance(method, str):
+                                        all_methods.append(method)
+                                    else:
+                                        all_methods.append(str(method))
+
+                        method_signatures = clean_code(remove_comments(" ".join(map(str, all_methods))))
+
+                    # Parse fields - f là một mảng các String
                     fields = ""
-                    if "f" in entry:
+                    if "f" in entry and entry["f"]:
                         if isinstance(entry["f"], list):
-                            fields = clean_code(remove_comments(" ".join(map(str, entry["f"]))))
-                        else:
-                            fields = clean_code(remove_comments(entry["f"]))
+                            field_list = []
+                            for field in entry["f"]:
+                                if isinstance(field, str):
+                                    field_list.append(field)
+                                else:
+                                    # Chuyển đổi bất kỳ kiểu dữ liệu nào khác sang string
+                                    field_list.append(str(field))
+                            fields = clean_code(remove_comments(" ".join(field_list)))
 
+                    # Parse targets from datatest
                     targets = []
                     if "datatest" in entry and entry["datatest"]:
                         total_target_items += len(entry["datatest"])
-
                         for test_case in entry["datatest"]:
                             if isinstance(test_case, dict) and "td" in test_case and test_case["td"]:
                                 test_target = clean_code(remove_comments(extract_target_range(test_case["td"])))
                                 if test_target:  # Chỉ thêm nếu target không rỗng
                                     targets.append(test_target)
+
+                            # Xử lý các trường thông tin thực thi
+                            executed_fm = ""
+                            executed_fm_masked = ""
+                            executed_m = ""
+                            executed_m_masked = ""
+                            testpath = []
+
+                            if isinstance(test_case, dict):
+                                if "executed_fm" in test_case and test_case["executed_fm"]:
+                                    executed_fm = clean_code(remove_comments(test_case["executed_fm"]))
+
+                                if "executed_fm_masked" in test_case and test_case["executed_fm_masked"]:
+                                    executed_fm_masked = clean_code(remove_comments(test_case["executed_fm_masked"]))
+
+                                if "executed_m" in test_case and test_case["executed_m"]:
+                                    executed_m = clean_code(remove_comments(test_case["executed_m"]))
+
+                                if "executed_m_masked" in test_case and test_case["executed_m_masked"]:
+                                    executed_m_masked = clean_code(remove_comments(test_case["executed_m_masked"]))
+
+                                # Xử lý testpath là một mảng string
+                                if "testpath" in test_case and test_case["testpath"]:
+                                    if isinstance(test_case["testpath"], list):
+                                        for path in test_case["testpath"]:
+                                            if isinstance(path, str):
+                                                testpath.append(path)
+                                            else:
+                                                testpath.append(str(path))
+
+                            # Tại đây bạn có thể sử dụng các biến này cho mục đích phân tích
 
                         # Sắp xếp targets theo độ dài tăng dần
                         targets.sort(key=len)
@@ -284,73 +357,3 @@ def preprocess_dataset2(input_folder, output_file, tokenizer, optimize_target_st
     logger.info(f"[UET] Data successfully saved to {output_file}")
 
     return new_data
-
-
-def preprocess_dataset(input_folder, output_file, overwrite=False):
-    """
-    Xử lý tập dữ liệu từ thư mục đầu vào và lưu kết quả vào file JSON đầu ra.
-    Xử lý với format cũ
-    """
-    try:
-        json_files = glob.glob(os.path.join(input_folder, "**", "*.json"), recursive=True)
-        # logger.info(os.path.join(input_folder, "**", "*.json"))
-        logger.info("[UET] Total json files: {}".format(len(json_files)))
-        new_data = []
-
-        # Kiểm tra nếu file đầu ra đã tồn tại
-        all_data = []
-        if not overwrite and os.path.exists(os.path.join("../..", output_file)):
-            with open(os.path.join("../..", output_file), "r", encoding="utf-8") as f:
-                try:
-                    all_data = json.load(f)
-                except json.JSONDecodeError as e:
-                    logger.error(f"[UET] [ERROR] JSONDecodeError in {output_file}: {e}")
-                    logger.error("[UET] Warning: Output file contains invalid JSON, starting fresh.")
-
-        existing_entries = {(entry["source"], entry["target"]) for entry in all_data}
-
-        for file in json_files:
-            try:
-                with open(file, "r", encoding="utf-8") as f:
-                    raw_data = json.load(f)
-            except json.JSONDecodeError as e:
-                logger.error(f"[UET] [ERROR] JSONDecodeError in {file}: {e}")
-                continue
-            except Exception as e:
-                logger.error(f"[UET] [ERROR] Failed to read file {file}: {e}")
-                continue
-
-            for entry in raw_data:
-                try:
-                    focal_method = clean_code(remove_comments(entry.get("fm", "")))
-                    focal_class = entry.get("fc", "")
-                    focal_class_name = ""
-                    if focal_class != "":
-                        focal_class_name = extract_class_declaration(focal_class)
-
-                    constructor_signatures = clean_code(remove_comments(entry.get("c", "")))
-                    method_signatures = clean_code(remove_comments(entry.get("m", "")))
-                    fields = clean_code(remove_comments(entry.get("f", "")))
-                    source = "\n".join(
-                        ["FC:", focal_class_name, "FM:", focal_method, "C:", constructor_signatures, "M:",
-                         method_signatures,
-                         "F:", fields])
-                    target = clean_code(remove_comments(extract_target_range(entry.get("t", ""))))
-
-                    if (source, target) and (source, target) not in existing_entries:
-                        new_data.append({"source": source, "target": target})
-                        existing_entries.add((source, target))
-                except Exception as e:
-                    logger.error(f"[UET] [ERROR] Processing entry in {file}: {e}")
-                    continue
-
-        if new_data:
-            all_data = new_data if overwrite else all_data + new_data
-            with open(os.path.join("../..", output_file), "w", encoding="utf-8") as f:
-                json.dump(all_data, f, ensure_ascii=False, indent=4)
-            logging.info(f"[UET] Processed {len(new_data)} new samples. Total samples: {len(all_data)}")
-        else:
-            logging.info("[UET] No new data added.")
-
-    except Exception as e:
-        logger.error(f"[UET] [ERROR] preprocess_dataset: {e}")
