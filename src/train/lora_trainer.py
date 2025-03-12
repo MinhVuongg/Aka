@@ -2,7 +2,7 @@ from src.config.config import BATCH_SIZE, EPOCHS, LEARNING_RATE, MODEL_SAVE_PATH
 from src.train.base_trainer import BaseTrainer
 from transformers import Trainer, TrainingArguments
 from abc import ABC, abstractmethod
-
+import torch
 
 class LoRATrainer(BaseTrainer, ABC):
     def __init__(self, model_name):
@@ -20,15 +20,16 @@ class LoRATrainer(BaseTrainer, ABC):
         """
         training_args = self._create_training_args()
 
+
         def custom_data_collator(batch):
             if not batch:
                 raise ValueError(" Lỗi: Batch đầu vào rỗng!")
 
             if isinstance(batch, list):
                 if not isinstance(batch[0], dict):
-                    raise TypeError(f" Dữ liệu batch không hợp lệ: {batch[0]}")
+                    raise TypeError(f"Dữ liệu batch không hợp lệ: {batch[0]}")
 
-                batch_dict = {key: [d[key] for d in batch if key in d] for key in batch[0].keys()}
+                batch_dict = {key: torch.tensor([d[key] for d in batch if key in d]) for key in batch[0].keys()}
             else:
                 batch_dict = batch  # Nếu batch đã là dict thì giữ nguyên
 
