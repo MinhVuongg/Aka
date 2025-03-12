@@ -36,51 +36,21 @@ class MODEL_TYPES(Enum):
     CODET5P_2B = "Salesforce/codet5p-2b"
 
 
-class TARGET_SELETCTION_STRATEGIES: # Cấu hình tiền xử lý thuộc tính TD.
-    NONE = "Không " # Không xử lý
+class TARGET_SELECTION_STRATEGIES:
+    NONE = "Không "  # Không xử lý
     SORT_BY_TOKEN_AND_CUTOFF = "SORT_BY_TOKEN_AND_CUTOFF"  # Khi tiền xử lý, với một danh sách test case -> sort theo số token tăng dần, và lấy n test case để tổng token <= max_target_length
 
 # --------------------------------------------------------------------------------
-# 
-#                           Môi trường & Tham số huấn luyện (MODIFY HERE)
-# 
+# Môi trường & Tham số huấn luyện
 # --------------------------------------------------------------------------------
 
-# -----          ---------------------          -------------          -------------          ----------------------
-# EXAMPLE 1: GIÁ TRỊ SOURCE VÀ LENGTH KHÁ LỚN => CẦN GIẢM BATCH_SIZE THÌ MỚI TRAIN ĐƯỢC TRÊN A100 80GB
-# mode = Mode.VAST
-# MODEL_NAME = "Salesforce/codet5-base"
-# MASKING_SOURCE = MASKING.NONE
-# MODEL_TYPE = ModelType.SEQ2SEQ
-# max_source_length = 512
-# max_target_length = 1028 
-# EPOCHS = 100
-# BATCH_SIZE = 2
-# FP16 = False
-# TRAIN_TYPE = "lora"  # full hoặc lora
-
-# -----          ---------------------          -------------          -------------          ----------------------
-# EXAMPLE 2: GIÁ TRỊ SOURCE VÀ LENGTH KHÁ NHỎ => CẦN TĂNG BATCH_SIZE ĐỂ TỐI ƯU TÀI NGUYÊN TRÊN A100 80GB
-# mode = Mode.VAST
-# MODEL_NAME = "Salesforce/codet5-base"
-# MASKING_SOURCE = MASKING.NONE
-# MODEL_TYPE = ModelType.SEQ2SEQ
-# max_source_length = 256
-# max_target_length = 256
-# EPOCHS = 100
-# BATCH_SIZE = 64
-# FP16 = False
-# TRAIN_TYPE = "lora"  # full hoặc lora
-
-mode = Mode.VAST # <= --------------------------------- CHOOSE DEPLOYMENT HERE ---------------------------------
+mode = Mode.VAST  # <= CHOOSE DEPLOYMENT HERE
 TRAIN_TYPE = TRAIN_MODES.LORA
-
 MODEL_TYPE = MODEL_TYPES.CODET5P_2B
 MODEL_NAME = str(MODEL_TYPE.value)
 
 MASKING_SOURCE = MASKING_STRATEGIES.NONE
-
-OPTIMIZE_TARGET_STRATEGY = TARGET_SELETCTION_STRATEGIES.SORT_BY_TOKEN_AND_CUTOFF
+OPTIMIZE_TARGET_STRATEGY = TARGET_SELECTION_STRATEGIES.SORT_BY_TOKEN_AND_CUTOFF
 max_source_length = 512
 max_target_length = 512
 EPOCHS = 1
@@ -90,51 +60,35 @@ LOGGING_STEP = 50
 
 SAVE_TOTAL_LIMIT = 1
 LOGGING_DIR = "./logs"
-
-# Khi train mô hình xong, ta sẽ đánh giá trên tập training set. Nếu set None thì đánh giá toàn bộ. Nếu không, hãy set một số cụ thể.
 TRAININGSET_REPORT_LIMIT = 10
-
-# Khi train mô hình xong, ta sẽ đánh giá trên tập validation set. Nếu set None thì đánh giá toàn bộ. Nếu không, hãy set một số cụ thể.
 VALIDATIONSET_REPORT_LIMIT = 10
-
-# Mot vai machine ko chay duoc AST option. Neu chay duoc AST thi remove comment tot hon.
-REMOVE_COMMENT_MODE = COMMENT_REMOVAL.REGREX  # <= --------------------------------- CHOOSE COMMENT REMOVAL ---------------------------------
+REMOVE_COMMENT_MODE = COMMENT_REMOVAL.REGREX  # CHOOSE COMMENT REMOVAL
 
 # --------------------------------------------------------------------------------
-# Đường dẫn (SHOULD NOT MODIFY)
+# Đường dẫn
 # --------------------------------------------------------------------------------
 PROJECT_PATH = "/root/Aka"
 
-# Tạo đường dẫn aka-output
 MAIN_OUTPUT_PATH = normalize_path(f"{PROJECT_PATH}/aka-output")
-if not os.path.exists(MAIN_OUTPUT_PATH):
-    os.makedirs(MAIN_OUTPUT_PATH)
+os.makedirs(MAIN_OUTPUT_PATH, exist_ok=True)
 
 timestamp = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M")
 OUTPUT_PATH = normalize_path(f"{MAIN_OUTPUT_PATH}/{timestamp}")
-
-if not os.path.exists(OUTPUT_PATH):
-    os.makedirs(OUTPUT_PATH)
+os.makedirs(OUTPUT_PATH, exist_ok=True)
 
 TRAINSET_RAW = normalize_path(f"{PROJECT_PATH}/data/trainset/raw")
 TRAINSET_DATA_PATH_PROCESS = normalize_path(f"{OUTPUT_PATH}/processed_trainset.json")
-
 VALIDATIONSET_RAW = normalize_path(f"{PROJECT_PATH}/data/validation/raw")
 VALIDATIONSET_DATA_PATH_PROCESS = normalize_path(f"{OUTPUT_PATH}/processed_validationset.json")
 
-# 'Salesforce/codet5-small' => 'Salesforce-codet5-small'
-model_name_only = str(MODEL_TYPE.value).replace("/", "-")  # Lấy ten model sau dấu "/"
-
-# Ten model duoc luu cung voi thong tin lien quan.
+model_name_only = str(MODEL_TYPE.value).replace("/", "-")
 MODEL_SAVE_PATH = normalize_path(
-    f"{OUTPUT_PATH}/model{model_name_only}_ep{EPOCHS}_sour{max_source_length}_tar{max_target_length}_bat{BATCH_SIZE}_train{TRAIN_TYPE.name}")
+    f"{OUTPUT_PATH}/model{model_name_only}_ep{EPOCHS}_sour{max_source_length}_tar{max_target_length}_bat{BATCH_SIZE}_train{TRAIN_TYPE.name}"
+)
 
 OUTPUT_VALIDATIONSET_CSV = normalize_path(f"{OUTPUT_PATH}/output_validationset.csv")
 OUTPUT_TRAINSET_CSV = normalize_path(f"{OUTPUT_PATH}/output_trainingset.csv")
-
 LOG_DIR = normalize_path(f"{OUTPUT_PATH}/training_history.json")
-
 OUTPUT_VALIDATIONSET_HTML = normalize_path(f"{OUTPUT_PATH}/output_validationset_compare.html")
 OUTPUT_TRAINSET_HTML = normalize_path(f"{OUTPUT_PATH}/output_trainingset_compare.html")
-
 LOGGER_OUTPUT = normalize_path(f"{OUTPUT_PATH}/log.txt")
