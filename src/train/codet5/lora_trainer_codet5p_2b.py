@@ -25,6 +25,11 @@ class LoRATrainer_CodeT5P_2B(LoRATrainer):
                 torch_dtype=torch.float16
             )
             tokenizer = AutoTokenizer.from_pretrained(model_name, safe_serialization=True)
+            if tokenizer.pad_token is None:
+                tokenizer.pad_token = tokenizer.eos_token  # Dùng EOS nếu PAD không tồn tại
+
+            model.config.pad_token_id = tokenizer.pad_token_id  # Gán pad_token_id cho model
+            print(f"✅ pad_token_id: {model.config.pad_token_id}")
 
             if tokenizer.pad_token_id is None:
                 tokenizer.pad_token = tokenizer.eos_token  # Thiết lập pad token nếu chưa có
