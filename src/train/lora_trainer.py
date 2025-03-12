@@ -20,14 +20,13 @@ class LoRATrainer(BaseTrainer, ABC):
         """
         training_args = self._create_training_args()
 
-
         def custom_data_collator(batch):
             if not batch:
-                raise ValueError(" Lỗi: Batch đầu vào rỗng!")
+                raise ValueError("❌ Lỗi: Batch đầu vào rỗng!")
 
             if isinstance(batch, list):
                 if not isinstance(batch[0], dict):
-                    raise TypeError(f"Dữ liệu batch không hợp lệ: {batch[0]}")
+                    raise TypeError(f"❌ Dữ liệu batch không hợp lệ: {batch[0]}")
 
                 batch_dict = {key: torch.tensor([d[key] for d in batch if key in d]) for key in batch[0].keys()}
             else:
@@ -36,8 +35,14 @@ class LoRATrainer(BaseTrainer, ABC):
             batch_dict.pop("num_items_in_batch", None)  # Xóa key nếu tồn tại
             return batch_dict
 
+        class CustomTrainer(Trainer):
+            def compute_loss(self, model, inputs, return_outputs=False):
+                inputs.pop("num_items_in_batch", None)  # Xóa tham số lỗi
+                outputs = model(**inputs)
+                loss = outputs.loss
+                return (loss, outputs) if return_outputs else loss
 
-        trainer = Trainer(
+        trainer = CustomTrainer(
             model=self.model,
             args=training_args,
             train_dataset=self.train_dataset,
