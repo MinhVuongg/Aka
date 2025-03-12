@@ -33,6 +33,7 @@ class MODEL_TYPES(Enum):
     CODET5_BASE = "Salesforce/codet5-base"
     CODET5_LARGE = "Salesforce/codet5-large"
     STARCODER2_3B = "bigcode/starcoder2-3b"
+    CODET5P_2B = "Salesforce/codet5p-2b"
 
 
 class TARGET_SELETCTION_STRATEGIES: # Cấu hình tiền xử lý thuộc tính TD.
@@ -71,10 +72,10 @@ class TARGET_SELETCTION_STRATEGIES: # Cấu hình tiền xử lý thuộc tính 
 # FP16 = False
 # TRAIN_TYPE = "lora"  # full hoặc lora
 
-mode = Mode.DA_LOCAL  # <= --------------------------------- CHOOSE DEPLOYMENT HERE ---------------------------------
+mode = Mode.VAST # <= --------------------------------- CHOOSE DEPLOYMENT HERE ---------------------------------
 TRAIN_TYPE = TRAIN_MODES.LORA
 
-MODEL_TYPE = MODEL_TYPES.CODET5_SMALL
+MODEL_TYPE = MODEL_TYPES.CODET5P_2B
 MODEL_NAME = str(MODEL_TYPE.value)
 
 MASKING_SOURCE = MASKING_STRATEGIES.NONE
