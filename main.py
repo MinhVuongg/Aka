@@ -69,7 +69,7 @@ def main():
     elif TRAIN_TYPE == TRAIN_MODES.LORA and MODEL_TYPE == MODEL_TYPES.STARCODER2_3B:
         trainer = LoRATrainer_StarCoder2(MODEL_NAME)
     elif TRAIN_TYPE == TRAIN_MODES.LORA and MODEL_TYPE == MODEL_TYPES.CODET5P_2B:
-        model, tokenizer = LoRATrainer_CodeT5P_2B.load_model(MODEL_NAME)
+        trainer = LoRATrainer_CodeT5P_2B(MODEL_NAME)
 
     trainer.train()
     logger.info("[UET] Huấn luyện hoàn tất!")
