@@ -19,7 +19,7 @@ class LoRATrainer_CodeT5P_2B(LoRATrainer):
             model = AutoModelForSeq2SeqLM.from_pretrained(
                 model_name,
                 device_map="auto",  # Tự động nhận diện thiết bị
-                trust_remote_code=True  # Bắt buộc cho CodeT5p
+                trust_remote_code=True,  # Bắt buộc cho CodeT5p
                 torch_dtype=torch.float16
             )
             tokenizer = AutoTokenizer.from_pretrained(model_name, safe_serialization=True)
