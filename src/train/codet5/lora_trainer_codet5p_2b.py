@@ -20,8 +20,9 @@ class LoRATrainer_CodeT5P_2B(LoRATrainer):
                 model_name,
                 device_map="auto",  # Tự động nhận diện thiết bị
                 trust_remote_code=True  # Bắt buộc cho CodeT5p
+                torch_dtype=torch.float16
             )
-            tokenizer = AutoTokenizer.from_pretrained(model_name)
+            tokenizer = AutoTokenizer.from_pretrained(model_name, safe_serialization=True)
             print(f" Đã tải mô hình {model_name} thành công.")
             return model, tokenizer
         except Exception as e:
