@@ -13,6 +13,7 @@ from src.train.codet5.lora_trainer_codet5base import LoRATrainer_CodeT5Base
 from src.train.codet5.lora_trainer_codet5large import LoRATrainer_CodeT5Large
 from src.train.codet5.lora_trainer_codet5small import LoRATrainer_CodeT5Small
 from src.train.starcoder.lora_trainer_starcoder2 import LoRATrainer_StarCoder2
+from src.train.codet5.lora_trainer_codet5p_2b import LoRATrainer_CodeT5P_2B
 from src.utils.model_utils import load_model_by_type
 from src.utils.mylogger import logger, GREEN, BLUE
 from src.utils.token_statistics import count_tokens
@@ -67,6 +68,8 @@ def main():
         trainer = LoRATrainer_CodeT5Large(MODEL_NAME)
     elif TRAIN_TYPE == TRAIN_MODES.LORA and MODEL_TYPE == MODEL_TYPES.STARCODER2_3B:
         trainer = LoRATrainer_StarCoder2(MODEL_NAME)
+    elif TRAIN_TYPE == TRAIN_MODES.LORA and MODEL_TYPE == MODEL_TYPES.CODET5P_2B:
+        model, tokenizer = LoRATrainer_CodeT5P_2B.load_model(MODEL_NAME)
 
     trainer.train()
     logger.info("[UET] Huấn luyện hoàn tất!")
