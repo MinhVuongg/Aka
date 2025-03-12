@@ -103,14 +103,7 @@ REMOVE_COMMENT_MODE = COMMENT_REMOVAL.REGREX  # <= -----------------------------
 # --------------------------------------------------------------------------------
 # Đường dẫn (SHOULD NOT MODIFY)
 # --------------------------------------------------------------------------------
-if mode == Mode.VAST:
-    PROJECT_PATH = "/workspace/aka-llm"
-elif mode == Mode.DA_LOCAL:
-    PROJECT_PATH = "/Users/ducanhnguyen/Documents/aka-llm"
-elif mode == Mode.LINH_LOCAL:
-    PROJECT_PATH = "D:/Workspace/AKA/March04/aka-llm"
-elif mode == Mode.FSOFT_SERVER:
-    PROJECT_PATH = r"C:\Users\CuongPN8.IVI\Documents\uet-llm\version0703"
+PROJECT_PATH = "/root/Aka"
 
 # Tạo đường dẫn aka-output
 MAIN_OUTPUT_PATH = normalize_path(f"{PROJECT_PATH}/aka-output")
