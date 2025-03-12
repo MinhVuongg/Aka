@@ -98,6 +98,7 @@ class LoRATrainer_CodeT5P_2B(LoRATrainer):
 
         # Lưu mô hình và tokenizer
         self.model.save_pretrained(save_path, safe_serialization=True)
+        self.model.config.decoder_start_token_id = self.tokenizer.cls_token_id 
         self.tokenizer.save_pretrained(save_path)
 
         print(f"Mô hình đã được lưu tại: {save_path}")
