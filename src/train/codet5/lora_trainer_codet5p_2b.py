@@ -4,7 +4,9 @@ from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 import os
 from src.config.config import MODEL_NAME
 from src.train.lora_trainer import LoRATrainer
-
+import transformers
+transformers.utils.logging.enable_explicit_format()
+transformers.trainer.USE_TF = False 
 
 class LoRATrainer_CodeT5P_2B(LoRATrainer):
     def __init__(self, model_name):
@@ -95,7 +97,7 @@ class LoRATrainer_CodeT5P_2B(LoRATrainer):
         os.makedirs(save_path, exist_ok=True)
 
         # Lưu mô hình và tokenizer
-        self.model.save_pretrained(save_path)
+        self.model.save_pretrained(save_path, safe_serialization=True)
         self.tokenizer.save_pretrained(save_path)
 
         print(f"Mô hình đã được lưu tại: {save_path}")
