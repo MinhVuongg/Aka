@@ -36,7 +36,7 @@ class MODEL_TYPES(Enum):
     CODET5P_2B = "Salesforce/codet5p-2b"
 
 
-class TARGET_SELECTION_STRATEGIES:
+class TARGET_SELETCTION_STRATEGIES:
     NONE = "Không "  # Không xử lý
     SORT_BY_TOKEN_AND_CUTOFF = "SORT_BY_TOKEN_AND_CUTOFF"  # Khi tiền xử lý, với một danh sách test case -> sort theo số token tăng dần, và lấy n test case để tổng token <= max_target_length
 
@@ -50,7 +50,7 @@ MODEL_TYPE = MODEL_TYPES.CODET5P_2B
 MODEL_NAME = str(MODEL_TYPE.value)
 
 MASKING_SOURCE = MASKING_STRATEGIES.NONE
-OPTIMIZE_TARGET_STRATEGY = TARGET_SELECTION_STRATEGIES.SORT_BY_TOKEN_AND_CUTOFF
+OPTIMIZE_TARGET_STRATEGY = TARGET_SELETCTION_STRATEGIES.SORT_BY_TOKEN_AND_CUTOFF
 max_source_length = 512
 max_target_length = 512
 EPOCHS = 1
