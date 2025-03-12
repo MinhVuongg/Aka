@@ -40,8 +40,43 @@ def count_tokens(json_path, tokenizer):
         all_target_tokens.append(target_tokens)
 
     # Chuyển sang numpy array để tính toán thống kê
+    # Chuyển sang numpy array để tính toán thống kê
     source_tokens_np = np.array(all_source_tokens)
     target_tokens_np = np.array(all_target_tokens)
+
+    source_stats = {}
+    target_stats = {}
+
+    if source_tokens_np.size > 0:
+        source_stats = {
+            "min": np.min(source_tokens_np),
+            "max": np.max(source_tokens_np),
+            "avg": np.mean(source_tokens_np),
+            "q25": np.percentile(source_tokens_np, 25),
+            "q50": np.percentile(source_tokens_np, 50),
+            "q75": np.percentile(source_tokens_np, 75),
+            "q90": np.percentile(source_tokens_np, 90),
+            "q95": np.percentile(source_tokens_np, 95),
+            "q99": np.percentile(source_tokens_np, 99)
+        }
+    else:
+        logging.warning("⚠️ Không có token nào trong dữ liệu source!")
+
+    if target_tokens_np.size > 0:
+        target_stats = {
+            "min": np.min(target_tokens_np),
+            "max": np.max(target_tokens_np),
+            "avg": np.mean(target_tokens_np),
+            "q25": np.percentile(target_tokens_np, 25),
+            "q50": np.percentile(target_tokens_np, 50),
+            "q75": np.percentile(target_tokens_np, 75),
+            "q90": np.percentile(target_tokens_np, 90),
+            "q95": np.percentile(target_tokens_np, 95),
+            "q99": np.percentile(target_tokens_np, 99)
+        }
+    else:
+        logging.warning("⚠️ Không có token nào trong dữ liệu target!")
+
 
     # Tính các chỉ số thống kê cơ bản
     source_stats = {
