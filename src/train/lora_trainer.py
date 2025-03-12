@@ -36,8 +36,8 @@ class LoRATrainer(BaseTrainer, ABC):
             return batch_dict
 
         class CustomTrainer(Trainer):
-            def compute_loss(self, model, inputs, return_outputs=False):
-                inputs.pop("num_items_in_batch", None)  # Xóa tham số lỗi
+            def compute_loss(self, model, inputs, *args, return_outputs=False, **kwargs):
+                inputs.pop("num_items_in_batch", None)  # Loại bỏ tham số lỗi nếu tồn tại
                 outputs = model(**inputs)
                 loss = outputs.loss
                 return (loss, outputs) if return_outputs else loss
