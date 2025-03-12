@@ -20,15 +20,30 @@ class LoRATrainer(BaseTrainer, ABC):
         """
         training_args = self._create_training_args()
 
+        def custom_data_collator(batch):
+            if not batch:
+                raise ValueError(" Lỗi: Batch đầu vào rỗng!")
+
+            if isinstance(batch, list):
+                if not isinstance(batch[0], dict):
+                    raise TypeError(f" Dữ liệu batch không hợp lệ: {batch[0]}")
+
+                batch_dict = {key: [d[key] for d in batch if key in d] for key in batch[0].keys()}
+            else:
+                batch_dict = batch  # Nếu batch đã là dict thì giữ nguyên
+
+            batch_dict.pop("num_items_in_batch", None)  # Xóa key nếu tồn tại
+            return batch_dict
+
+
         trainer = Trainer(
             model=self.model,
             args=training_args,
             train_dataset=self.train_dataset,
             eval_dataset=self.val_dataset,
             tokenizer=self.tokenizer,
-            data_collator=lambda data: {k: v for k, v in data.items() if k != "num_items_in_batch"}
+            data_collator=custom_data_collator
         )
-
 
         trainer.train()
         self.train_loss_history = [log["loss"] for log in trainer.state.log_history if "loss" in log]
