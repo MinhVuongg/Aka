@@ -25,6 +25,14 @@ class LoRATrainer_CodeT5P_2B(LoRATrainer):
                 torch_dtype=torch.float16
             )
             tokenizer = AutoTokenizer.from_pretrained(model_name, safe_serialization=True)
+
+            if tokenizer.pad_token_id is None:
+                tokenizer.pad_token = tokenizer.eos_token  # Thiết lập pad token nếu chưa có
+
+            model.config.decoder_start_token_id = tokenizer.pad_token_id  # Sử dụng pad_token_id thay vì cls_token_id
+
+            print(f"✅ decoder_start_token_id: {model.config.decoder_start_token_id}")
+
             print(f" Đã tải mô hình {model_name} thành công.")
             return model, tokenizer
         except Exception as e:
@@ -98,7 +106,7 @@ class LoRATrainer_CodeT5P_2B(LoRATrainer):
 
         # Lưu mô hình và tokenizer
         self.model.save_pretrained(save_path, safe_serialization=True)
-        self.model.config.decoder_start_token_id = self.tokenizer.cls_token_id 
+        self.model.config.decoder_start_token_id = self.tokenizer.pad_token_id  # Dùng pad_token_id
         self.tokenizer.save_pretrained(save_path)
 
         print(f"Mô hình đã được lưu tại: {save_path}")
