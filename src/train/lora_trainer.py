@@ -25,8 +25,10 @@ class LoRATrainer(BaseTrainer, ABC):
             args=training_args,
             train_dataset=self.train_dataset,
             eval_dataset=self.val_dataset,
-            tokenizer=self.tokenizer
+            tokenizer=self.tokenizer,
+            data_collator=lambda data: {k: v for k, v in data.items() if k != "num_items_in_batch"}
         )
+
 
         trainer.train()
         self.train_loss_history = [log["loss"] for log in trainer.state.log_history if "loss" in log]
